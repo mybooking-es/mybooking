@@ -7,10 +7,6 @@ Mybooking Child Theme for UnderStrap Theme Framework: https://github.com/underst
 Mybooking Understrap Child Theme shares with the parent theme all PHP files and adds its own
 funtions.php on top of the Understrap parent theme's functions.php.
 
-IT DOES NOT LOAD THE PARENT THEMES CSS FILE(S)! Instead it uses the UnderStrap Parent Theme as a dependency via npm and compiles its own CSS file from it.
-
-Mybooking Understrap Child Theme uses the Enqueue method to load and sort the CSS file the right way instead of the old @import method.
-
 ## Installation
 
 1. Install the parent theme Understrap first. https://github.com/understrap/understrap
@@ -25,8 +21,10 @@ Mybooking Understrap Child Theme uses the Enqueue method to load and sort the CS
 
 ### Installing dependencies
 
-Execute yarn
+- Make sure you have installed Node.js and Gulp on your computer globally
+- Open your terminal and browse to the location of the Mybooking Understrap Child Theme
+- Run $ yarn
 
 ### Build
 
-gulp styles
+- To build styles run $ gulp styles
