@@ -23,8 +23,8 @@ funtions.php on top of the Understrap parent theme's functions.php.
 
 - Make sure you have installed Node.js and Gulp on your computer globally
 - Open your terminal and browse to the location of the Mybooking Understrap Child Theme
-- Run $ yarn
+- Run `$ yarn`
 
 ### Build
 
-- To build styles run $ gulp styles
+- To build styles run `$ gulp styles`
