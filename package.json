@@ -1,0 +1,34 @@
+{
+  "name": "mybooking-wp-theme",
+  "version": "1.0.0",
+  "description": "Mybooking Understrap Child Theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --production"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",  
+    "bootstrap",
+    "gulp",
+    "understrap",
+    "underscores"
+  ],
+  "author": "@mybooking_es",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0"
+  },  
+  "devDependencies": {  
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",    
+    "gulp-rimraf": "^0.2.2",    
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}  
