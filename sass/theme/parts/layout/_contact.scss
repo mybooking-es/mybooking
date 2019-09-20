@@ -1,0 +1,143 @@
+/* ========== Contact ============== */
+.bg-contact {
+  background-image: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #faf6f5;
+  background-blend-mode: multiply;
+  padding-bottom: 100px;
+}
+
+.contact-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 50px auto;
+  width: calc(100% -30px);
+  color: #fff;
+}
+
+.contact-content hr {
+  width: 50px;
+  margin: auto 0 30px 0;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.contact-left {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.contact-left-info {
+  width: 100%;
+  background-color: #2a1d39;
+  padding: 20px 10% 20px 20px;
+}
+
+.contact-left-map {
+  background-color: #fff;
+  width: 100%;
+}
+
+.contact-right {
+  width: 100%;
+}
+
+.contact-form {
+  padding: 20px;
+  background-color: #774cfd;
+}
+
+.contact-form input,
+.contact-form form textarea {
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 2em;
+  color: #acb7ee;
+}
+
+ul.social-links,
+.social-links li {
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+.social-links li {
+  float: left;
+  margin-left: 20px;
+  list-style: none;
+  font-size: 1.8em;
+}
+
+.social-links > li:first-child {
+  margin-left: 0;
+}
+
+.social-links a {
+  color: rgba(255, 255, 255, 0.2);
+  -webkit-transition: ease-in-out 0.5ms;
+  transition: ease-in-out 0.5ms;
+}
+
+.social-links a:hover {
+  color: #acb7ee;
+}
+
+@media (min-width: 768px) {
+  .contact-left {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .contact-left-info {
+    width: 50%;
+  }
+  .contact-left-map {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 50px 10% 0 10%;
+    height: 553px;
+  }
+  .contact-left {
+    width: 80%;
+  }
+  .contact-right {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-left {
+    width: 70%;
+  }
+  .contact-right {
+    width: 30%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .contact-left-map {
+    display: none;
+  }
+}

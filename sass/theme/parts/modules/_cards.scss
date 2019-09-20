@@ -1,0 +1,74 @@
+// Cards for product list
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card {
+  margin: 2em 0;
+  text-align: center;
+  flex-basis: 300px;
+  flex-grow: 1;
+  margin: 0 5px 10px;
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+}
+
+.header-card {
+  h1 {
+    color: #fff;
+    height: 150px;
+  }
+
+  box-sizing: border-box;
+  padding: 2em 3em 7em;
+  background: #5f2c82;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #49a09d, #5f2c82);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.separator {
+  height: 125px;
+  margin-top: calc(125px * -1);
+  background-image: linear-gradient(
+    to bottom right,
+    transparent,
+    transparent 50%,
+    #f3efe4 50%,
+    #f3efe4
+  );
+  /* Using transparent for top of the gradient allows for a background image on the header. Alternatively you can just use a solid color that matches the header color. */
+}
+
+.footer-card {
+  background: #f3efe4;
+}
+
+.product-wrapper {
+  width: 150px;
+  position: relative;
+}
+
+.product-image {
+  height: 150px;
+  position: absolute;
+  top: -100px;
+}
+
+.footer-card {
+  .product-price {
+    margin: 0;
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+
+  .short-description {
+    margin: 0;
+    font-size: 0.8em;
+    padding-top: 5em;
+  }
+}
