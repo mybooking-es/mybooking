@@ -9,7 +9,7 @@
   },
   "keywords": [
     "wordpress",
-    "theme",  
+    "theme",
     "bootstrap",
     "gulp",
     "understrap",
@@ -20,15 +20,15 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0"
-  },  
-  "devDependencies": {  
-    "gulp": "^4.0.0",
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^1.4.0",    
-    "gulp-rimraf": "^0.2.2",    
+    "gulp-rename": "^1.4.0",
+    "gulp-rimraf": "^0.2.2",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
   }
-}  
+}

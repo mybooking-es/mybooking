@@ -1,0 +1,64 @@
+//==============================================
+// Module/inputs, forms, textarea
+//==============================================
+
+// Formularios
+select {
+  border-radius: 0px;
+  padding: 0 0.8rem;
+  text-indent: 1px;
+  text-overflow: "";
+  border: solid 1px $gray-400;
+  font-size: 1rem;
+  height: 48px;
+  appearance: none;
+  -moz-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border: solid 1px $gray-400;
+  }
+}
+.input-group > .form-control {
+  height: 48px;
+}
+.input-group-prepend > .input-group-text {
+  border-radius: 0;
+}
+label {
+  position: relative;
+}
+.custom-icon {
+  position: absolute;
+  font-size: 18px;
+  color: $gray-700;
+  right: 8px;
+  top: 36px;
+}
+.custom-icon-select {
+  @extend .custom-icon;
+  top: 16px;
+}
+/* remove rounding from cards, buttons and inputs */
+.card,
+// .btn,
+.form-control {
+  border-radius: 0;
+}
+// Overriding jQuery UI styles
+input[type="text"],
+input[type="password"],
+.ui-autocomplete-input,
+textarea,
+.uneditable-input {
+  display: inline-block;
+  padding: 0 0.8rem;
+  font-size: 13px;
+  line-height: 18px;
+  color: $gray-700;
+  border: solid 1px $gray-400;
+  border-radius: 0;
+  height: 48px;
+}

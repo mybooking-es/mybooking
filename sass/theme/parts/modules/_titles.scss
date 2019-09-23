@@ -1,0 +1,39 @@
+//==============================================
+// Module/titles
+//==============================================
+
+.flex-block-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.centered-flex-block {
+  z-index: 2;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  max-width: 40%;
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
+.hr {
+  background-image: url(../images/hr.png);
+  background-repeat: no-repeat;
+  width: 156px;
+  height: 7px;
+  margin: 10px auto 30px auto;
+}
+
+.hr-white {
+  background-image: url(../images/hr-white.png);
+  background-repeat: no-repeat;
+  width: 156px;
+  height: 7px;
+  margin: 10px auto 30px auto;
+}
