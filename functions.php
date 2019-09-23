@@ -23,31 +23,15 @@ function theme_enqueue_styles() {
 	$the_theme = wp_get_theme();
 
     wp_enqueue_style( 'parent-theme', get_template_directory_uri() . '/css/theme.min.css', array(), $the_theme->get( 'Version' ) );
-
     wp_enqueue_style( 'child-understrap-mybooking-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
-    //wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
+
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-////////////////////////////////////////////////////////////////////////////////
-// ZONA DE PRUEBAS (TODO: Aislar en archivos separados )
-////////////////////////////////////////////////////////////////////////////////
-
 /**
- * Registramos las áreas para widgets
+ * Templates
  *
  */
-function mybooking_widgets_init() {
-
-	register_sidebar( array(
-		'name'          => 'MyBooking Home Hero',
-		'id'            => 'mybooking_home_hero',
-    'descripion'    => 'Esta es el área de widgets que aparece en el hero de la plantilla MyBooking Home',
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-	) );
-
-}
-add_action( 'widgets_init', 'mybooking_widgets_init' );
+require_once('mybooking-options/mybooking-home-options.php');
 
 ?>
