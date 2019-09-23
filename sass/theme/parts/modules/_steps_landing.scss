@@ -1,0 +1,97 @@
+//==============================================
+//  Steps Landing
+//==============================================
+
+.gradient-section {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: $gradient-end;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, $gradient-start, $gradient-end);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $gradient-start, $gradient-end);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Features section */
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 0 10% 100px;
+  position: relative;
+}
+.feature > hr {
+  color: $blue;
+  width: 20%;
+  top: 17px;
+}
+
+.features__item {
+  margin: 0 10px;
+  padding: 0 30px;
+  width: 100%;
+  color: $white;
+  position: relative;
+}
+
+.features__item > hr {
+  width: 20%;
+  border-top-width: 2px;
+}
+
+span.stopa {
+  border: 1px solid $transparent-white;
+  border-radius: 1.8em;
+  color: $transparent-white;
+  display: inline-block;
+  line-height: 2.6em;
+  text-align: center;
+  width: 2.6em;
+}
+.stopa-1::before,
+.stopa-1::after,
+.stopa-2::before,
+.stopa-2::after,
+.stopa-3::before,
+.stopa-3::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 21px;
+  background-color: $transparent-white;
+  height: 1px;
+  width: calc(100% - 20px);
+}
+.stopa-1::before,
+.stopa-2::before,
+.stopa-3::before {
+  right: calc(50% + 20px);
+}
+.stopa-1::after,
+.stopa-2::after,
+.stopa-3::after {
+  left: calc(50% + 20px);
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  /* Features section */
+  .feature {
+    flex-direction: row;
+  }
+
+  .stopa-1::before,
+  .stopa-1::after,
+  .stopa-3::before,
+  .stopa-3::after {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+}

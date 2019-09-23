@@ -1,3 +1,7 @@
+//==============================================
+// Module/steps
+//==============================================
+
 $blue: hsl(206, 72%, 68%);
 $green: hsl(120, 42%, 54%);
 $white: hsl(0, 0%, 100%);
@@ -66,4 +70,11 @@ $disa: hsl(226, 15%, 83%);
 }
 .step.done:before {
   background-color: $green;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  #steps {
+    display: none;
+  }
 }

@@ -3,3 +3,32 @@
 //==============================================
 
 // Here you can styling other small modules
+
+// Icons Landing
+.icons-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 200px;
+  flex-wrap: wrap;
+}
+
+.icon-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 50%;
+  i {
+    font-size: 4em;
+    color: $blue;
+  }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .icon-panel {
+    width: 25%;
+  }
+}

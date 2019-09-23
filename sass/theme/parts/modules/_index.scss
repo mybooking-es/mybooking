@@ -16,11 +16,12 @@
 // Read more - https://smacss.com/book/type-module
 //
 
-@import "helpers";
 @import "buttons";
-@import "input";
+@import "forms";
 @import "nav";
-@import "logo";
 @import "modules";
-@import "cards";
+@import "magic_cards";
 @import "steps";
+@import "steps_landing";
+@import "titles";
+@import "product_detail";

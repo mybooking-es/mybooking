@@ -2,3 +2,12 @@
 // Module/buttons
 //==============================================
 
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: $blue;
+  border-color: $blue;
+  &:hover {
+    background-color: darken($blue, 10%);
+    border-color: darken($blue, 10%);
+  }
+}
