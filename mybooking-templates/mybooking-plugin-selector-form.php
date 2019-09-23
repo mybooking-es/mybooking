@@ -1,15 +1,15 @@
   <section class="widget widget_mybooking_rent_engine_selector reservation-step">
     <div class="p-3 bg-transparen-white mx-3">
-        <form name="search_form" method="get" enctype="application/x-www-form-urlencoded">
+        <form name="widget_search_form" method="get" enctype="application/x-www-form-urlencoded">
           <div class="form-group w-100">
             <label class="control-label w-100">Lugar Entrega <i class="fa custom-icon fa-angle-down"></i>
-              <select class="w-100" id="pickup_place" name="pickup_place">
+              <select class="w-100" id="widget_pickup_place" name="pickup_place">
               </select>
             </label>
           </div>
           <div class="form-group w-100">
             <label class="control-label w-100">Lugar Devolución <i class="fa custom-icon fa-angle-down"></i>
-              <select class="w-100" id="return_place" name="return_place">
+              <select class="w-100" id="widget_return_place" name="return_place">
               </select>
             </label>
           </div>
@@ -24,8 +24,8 @@
                         <i class="fa fa-calendar" aria-hidden="true"></i>
                       </div>
                     </div>
-                    <input type="text" class="form-control" id="date_from" name="date_from" />
-                    <select class="input-group-field ml-1" id="time_from" name="time_from">
+                    <input type="text" class="form-control" id="widget_date_from" name="date_from" />
+                    <select class="input-group-field ml-1" id="widget_time_from" name="time_from">
                     </select>
                   </div>
                 </label>
@@ -39,8 +39,8 @@
                       </div>
                     </div>
 
-                    <input type="text" class="form-control" id="date_to" name="date_to" />
-                    <select class="input-group-field ml-1" id="time_to" name="time_to">
+                    <input type="text" class="form-control" id="widget_date_to" name="date_to" />
+                    <select class="input-group-field ml-1" id="widget_time_to" name="time_to">
                     </select>
                   </div>
                 </label>
@@ -48,7 +48,7 @@
             </div>
           </div>
 
-          <input type="submit" class="btn btn-primary float-right" href="choose_product.html" value="Buscar" />
+          <input type="submit" class="btn btn-primary float-right" value="Buscar" />
         </form>
       </div>
   </section>
