@@ -170,20 +170,6 @@ if ($highlight_ver !== 1) { ?>
 <?php } ?>
 
 
-<!-- EL CONTENIDO ------------------------------------------------------------->
-
-<div class="content flex-block-wrapper">
-  <div class="centered-flex-block">
-
-    <?php while ( have_posts() ) : the_post(); ?>
-      <!-- TODO: Insertar aquí un separador que actue cuando se activa esta condición -->
-      <?php the_content(); ?>
-    <?php endwhile;?>
-
-  </div>
-</div>
-
-
 <!-- SECCION CARACTERISTICAS -------------------------------------------------->
 
 <?php $features_ver = get_option("home_features_visibilidad");
@@ -317,4 +303,18 @@ if ($features_ver !== 1) { ?>
 
 <?php } ?>
 
-<?php get_footer();
+
+<!-- EL CONTENIDO ------------------------------------------------------------->
+
+<div class="content flex-block-wrapper">
+  <div class="centered-flex-block">
+
+    <?php while ( have_posts() ) : the_post(); ?>
+      <!-- TODO: Insertar aquí un separador que actue cuando se activa esta condición -->
+      <?php the_content(); ?>
+    <?php endwhile;?>
+
+  </div>
+</div>
+
+<?php get_footer(); ?>

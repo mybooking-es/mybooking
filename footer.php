@@ -13,9 +13,31 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
-
 <div class="wrapper-footer" id="wrapper-footer">
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-sm">
+				<?php if ( is_active_sidebar( 'mybooking_global_footer' ) ) : ?>
+					<?php dynamic_sidebar( 'mybooking_global_footer_1' ); ?>
+				<?php endif; ?>
+			</div>
+
+			<div class="col-sm">
+				<?php if ( is_active_sidebar( 'mybooking_global_footer' ) ) : ?>
+					<?php dynamic_sidebar( 'mybooking_global_footer_2' ); ?>
+				<?php endif; ?>
+			</div>
+
+			<div class="col-sm">
+				<?php if ( is_active_sidebar( 'mybooking_global_footer' ) ) : ?>
+					<?php dynamic_sidebar( 'mybooking_global_footer_3' ); ?>
+				<?php endif; ?>
+			</div>
+
+		</div>
+	</div>
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
