@@ -14,7 +14,7 @@ function understrap_remove_scripts() {
 add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
 
 /**
- * Encolamos los CSS y scripts necesarios
+ * CSS y scripts a la cola
  *
  */
 function theme_enqueue_styles() {
@@ -34,9 +34,10 @@ function theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
 /**
- * Templates
+ * Páginas de configuración
  *
  */
 require_once('mybooking-options/mybooking-home-options.php');
+require_once('mybooking-options/mybooking-contact-options.php');
 
 ?>

@@ -37,7 +37,7 @@ function mybookinges_registra_opciones_home() {
   add_option("home_hero_title","","","yes");
   add_option("home_hero_text","","","yes");
 
-  add_option("home_higlight_visibilidad","","","yes");
+  add_option("home_highlight_visibilidad","","","yes");
   add_option("home_highlight_cabecera_title","","","yes");
   add_option("home_highlight_cabecera_text","","","yes");
   add_option("home_punto_uno_image","","","yes");
@@ -57,6 +57,8 @@ function mybookinges_registra_opciones_home() {
   add_option("home_features_dos_text","","","yes");
   add_option("home_features_tres_title","","","yes");
   add_option("home_features_tres_text","","","yes");
+
+  add_option("home_carrusel_visibilidad","","","yes");
 
   // Registro de opciones
   register_setting("opciones_home", "home_hero_title");
@@ -82,6 +84,8 @@ function mybookinges_registra_opciones_home() {
   register_setting("opciones_home", "home_features_dos_text");
   register_setting("opciones_home", "home_features_tres_title");
   register_setting("opciones_home", "home_features_tres_text");
+
+  register_setting("opciones_home", "home_carrusel_visibilidad");
 
 }
 
@@ -140,7 +144,7 @@ function mybookinges_configuracion_home() {
           <th scope="row">Visibilidad</th>
           <td>
           <?php $options = get_option( "home_highlight_visibilidad" ); ?>
-          <input type="checkbox" name="home_highlight_visibilidad" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para ocultar la sección</span>
+          <input type="checkbox" name="home_highlight_visibilidad" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
         </tr>
       </table>
 
@@ -203,7 +207,7 @@ function mybookinges_configuracion_home() {
           <th scope="row">Visibilidad</th>
           <td>
           <?php $options = get_option( "home_features_visibilidad" ); ?>
-          <input type="checkbox" name="home_features_visibilidad" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para ocultar la sección</span>
+          <input type="checkbox" name="home_features_visibilidad" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
         </tr>
       </table>
 
@@ -253,6 +257,22 @@ function mybookinges_configuracion_home() {
         <tr valign="top">
           <th scope="row">Texto de Feature tres</th>
           <td><textarea name="home_features_tres_text" cols="37" rows="10"><?php echo get_option('home_features_tres_text'); ?></textarea></td>
+        </tr>
+      </table>
+
+      <hr>
+
+      <!-- Seccion Carrusel -->
+
+      <h2>Carrusel</h2>
+      <p>Configura la visibilidad del carrusel de artículos de la portada.</p>
+
+      <table class="form-table">
+        <tr valign="top">
+          <th scope="row">Visibilidad</th>
+          <td>
+          <?php $options = get_option( "home_carrusel_visibilidad" ); ?>
+          <input type="checkbox" name="home_carrusel_visibilidad" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
         </tr>
       </table>
 

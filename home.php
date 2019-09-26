@@ -68,7 +68,7 @@ get_header();
 <!-- SECCION DESTACADA -------------------------------------------------------->
 
 <?php $highlight_ver = get_option("home_highlight_visibilidad");
-if ($highlight_ver !== 1) { ?>
+if ($highlight_ver == 1) { ?>
 
   <!-- Cabecera -->
 
@@ -307,65 +307,6 @@ if ($features_ver !== 1) { ?>
 <?php } ?>
 
 
-<!-- CARRUSEL ----------------------------------------------------------------->
-
-<?php $carrusel_ver = get_option("home_carrusel_visibilidad");
-if ($carrusel_ver == 1) { ?>
-
-    <div class="carrusel portada-carrusel -carrusel-un-item">
-
-      <?php
-      $noticias_args = array(
-        'post_type' => 'post',
-        'category_name' => 'portada',
-        'posts_per_page'=> 3,
-      );
-      $noticias_item = new WP_Query($noticias_args);
-      if( $noticias_item->have_posts() ) { ?>
-        <?php  while ( $noticias_item->have_posts() ) : $noticias_item->the_post(); ?>
-          <div class="carrusel-item">
-            <?php the_post_thumbnail(); ?>
-            <div class="carrusel-seccion">
-              <h1 class="carrusel-titulo"><?php the_title(); ?></h1>
-              <a class="carrusel-enlace button invertido" href="<?php the_permalink(); ?>" title="<?php esc_attr__('Llegir','podemospress'); ?> <?php the_title(); ?>">
-                  <?php _e('Llegir','podemospress'); ?>
-                </a>
-            </div>
-          </div>
-        <?php endwhile; ?>
-      <?php } ?>
-
-    </div>
-
-<?php } ?>
-
-<div class="content flex-block-wrapper">
-  <div class="centered-flex-block">
-    <div class="-carrusel-un-item carrusel-de-uno">
-
-      <?php
-      $noticias_args = array(
-        'post_type' => 'post',
-        'category_name' => 'portada',
-        'posts_per_page'=> 6,
-      );
-      $noticias_item = new WP_Query($noticias_args); ?>
-      <?php  while ( $noticias_item->have_posts() ) : $noticias_item->the_post(); ?>
-        <div class="carrusel-item banner">
-          <?php the_post_thumbnail(); ?>
-          <div class="banner-franja">
-            <h2 class="banner-titulo"><?php the_title(); ?></h2>
-            <a class="banner-enlace button tiny" href="<?php the_permalink(); ?>" title="<?php esc_attr__('Llegir','caritaspress'); ?> <?php the_title(); ?>">
-              <?php _e('Llegir','mybookinges'); ?>
-            </a>
-          </div>
-        </div>
-      <?php endwhile; ?>
-
-    </div>
-  </div>
-</div>
-
 <!-- EL CONTENIDO ------------------------------------------------------------->
 
 <div class="content flex-block-wrapper">
@@ -378,5 +319,40 @@ if ($carrusel_ver == 1) { ?>
 
   </div>
 </div>
+
+
+<!-- CARRUSEL ----------------------------------------------------------------->
+
+<?php $carrusel_ver = get_option("home_carrusel_visibilidad");
+if ($carrusel_ver == 1) { ?>
+
+  <div class="content flex-block-wrapper">
+    <div class="centered-flex-block">
+      <div class="-carrusel-un-item carrusel-de-uno">
+
+        <?php
+        $noticias_args = array(
+          'post_type' => 'post',
+          'category_name' => 'portada',
+          'posts_per_page'=> 6,
+        );
+        $noticias_item = new WP_Query($noticias_args); ?>
+        <?php  while ( $noticias_item->have_posts() ) : $noticias_item->the_post(); ?>
+          <div class="carrusel-item banner">
+            <?php the_post_thumbnail(); ?>
+            <div class="banner-franja">
+              <h2 class="banner-titulo"><?php the_title(); ?></h2>
+              <a class="banner-enlace button tiny" href="<?php the_permalink(); ?>" title="<?php esc_attr__('Llegir','caritaspress'); ?> <?php the_title(); ?>">
+                <?php _e('Llegir','mybookinges'); ?>
+              </a>
+            </div>
+          </div>
+        <?php endwhile; ?>
+
+      </div>
+    </div>
+  </div>
+
+<?php } ?>
 
 <?php get_footer(); ?>
