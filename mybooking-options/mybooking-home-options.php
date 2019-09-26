@@ -7,11 +7,10 @@
 *  	@package Understrap Mybooking Child
 */
 
+add_action('admin_menu', 'mybookinges_crea_menu_home');
+add_action('admin_init', 'mybookinges_registra_opciones_home');
 
-add_action('admin_menu', 'mybookinges_crea_menu_configuracion');
-add_action('admin_init', 'mybookinges_registra_opciones_configuracion');
-
-function mybookinges_crea_menu_configuracion() {
+function mybookinges_crea_menu_home() {
   if (!current_user_can('manage_options') || current_user_can('administrator'))
     add_menu_page(
     	__("MyBooking"),
@@ -24,15 +23,15 @@ function mybookinges_crea_menu_configuracion() {
     	);
     add_submenu_page(
     	"configuracion",
-    	__("Configuración de portada"),
-    	__("Configuración de portada"),
+    	__("Configurar Home"),
+    	__("Configurar Home"),
     	"edit_pages",
-    	"configuracion",
+    	"home",
     	"mybookinges_configuracion_home"
     	);
 }
 
-function mybookinges_registra_opciones_configuracion() {
+function mybookinges_registra_opciones_home() {
 
   // Definición de opciones
   add_option("home_hero_title","","","yes");

@@ -24,6 +24,11 @@ function theme_enqueue_styles() {
 
     wp_enqueue_style( 'parent-theme', get_template_directory_uri() . '/css/theme.min.css', array(), $the_theme->get( 'Version' ) );
     wp_enqueue_style( 'child-understrap-mybooking-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
+    wp_enqueue_style( 'child-understrap-mybooking-owl-styles', get_stylesheet_directory_uri() . '/css/vendor/owl.carousel.css', array(), $the_theme->get( 'Version' ) );
+    wp_enqueue_style( 'child-understrap-mybooking-owl-theme-styles', get_stylesheet_directory_uri() . '/css/vendor/owl.theme.css', array(), $the_theme->get( 'Version' ) );
+    wp_enqueue_style( 'child-understrap-mybooking-owl-transitions-styles', get_stylesheet_directory_uri() . '/css/vendor/owl.transitions.css', array(), $the_theme->get( 'Version' ) );
+    wp_enqueue_style( 'child-understrap-mybooking-carousel', get_stylesheet_directory_uri() . '/javascript/vendor/owl.carousel.min.js', array(), $the_theme->get( 'Version' ) );
+    wp_enqueue_style( 'child-understrap-mybooking-scripts', get_stylesheet_directory_uri() . '/javascript/app.js', array(), $the_theme->get( 'Version' ) );
 
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );

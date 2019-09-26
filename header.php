@@ -12,6 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

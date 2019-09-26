@@ -8,6 +8,9 @@
 * @since Understrap Mybooking Child 0.0.1
 */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 get_header();
 ?>
 
