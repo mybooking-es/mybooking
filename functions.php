@@ -22,13 +22,18 @@ function theme_enqueue_styles() {
 	// Get the theme data
 	$the_theme = wp_get_theme();
 
+    // == Load CSS
+    
+    // Load parent theme CSS
     wp_enqueue_style( 'parent-theme', get_template_directory_uri() . '/css/theme.min.css', array(), $the_theme->get( 'Version' ) );
+    // Load child theme CSS
     wp_enqueue_style( 'child-understrap-mybooking-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
-    wp_enqueue_style( 'child-understrap-mybooking-owl-styles', get_stylesheet_directory_uri() . '/css/vendor/owl.carousel.css', array(), $the_theme->get( 'Version' ) );
-    wp_enqueue_style( 'child-understrap-mybooking-owl-theme-styles', get_stylesheet_directory_uri() . '/css/vendor/owl.theme.css', array(), $the_theme->get( 'Version' ) );
-    wp_enqueue_style( 'child-understrap-mybooking-owl-transitions-styles', get_stylesheet_directory_uri() . '/css/vendor/owl.transitions.css', array(), $the_theme->get( 'Version' ) );
-    wp_enqueue_style( 'child-understrap-mybooking-carousel', get_stylesheet_directory_uri() . '/javascript/vendor/owl.carousel.min.js', array(), $the_theme->get( 'Version' ) );
-    wp_enqueue_style( 'child-understrap-mybooking-scripts', get_stylesheet_directory_uri() . '/javascript/app.js', array(), $the_theme->get( 'Version' ) );
+    
+    // == Load JS
+    // Load parent theme JS
+    wp_enqueue_script( 'parent-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $the_theme->get( 'Version' ), true );
+    // Load child theme JS
+    wp_enqueue_script( 'child-understrap-mybooking-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
 
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
