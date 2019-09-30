@@ -80,7 +80,7 @@ gulp.task("styles", gulp.series("sass", "minifycss"));
 gulp.task( 'scripts', function() {
     var scripts = [
 
-        `${paths.dev}/js/vendor/owl/owl.carousel.js`,
+        `${paths.dev}/js/vendor/owl.carousel/owl.carousel.js`,
 
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
