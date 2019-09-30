@@ -1,3 +1,4 @@
+// Add your custom JS here.
 $(document).ready( function() {
 
   // CARRUSELES
