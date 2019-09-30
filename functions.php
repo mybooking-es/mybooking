@@ -38,6 +38,6 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
  *
  */
 require_once('mybooking-options/mybooking-home-options.php');
-require_once('mybooking-options/mybooking-contact-options.php');
+require_once('mybooking-options/mybooking-bussiness-options.php');
 
 ?>

@@ -53,7 +53,7 @@ get_header();
     <div class="hero-header-right">
 
       <?php if ( is_active_sidebar( 'mybooking_home_hero' ) ) : ?>
-      <?php dynamic_sidebar( 'mybooking_home_hero' ); ?>
+        <?php dynamic_sidebar( 'mybooking_home_hero' ); ?>
       <?php endif; ?>
 
     </div>
@@ -61,6 +61,18 @@ get_header();
 
   <div class="diagonal-section"></div>
 
+</div>
+
+<!-- Test widgets area -->
+
+<div class="row">
+  <div class="col-md-12">
+
+    <?php if ( is_active_sidebar( 'mybooking_top_bar' ) ) : ?>
+      <?php dynamic_sidebar( 'mybooking_top_bar' ); ?>
+    <?php endif; ?>
+
+  </div>
 </div>
 
 
