@@ -23,8 +23,8 @@ function mybookinges_crea_menu_home() {
     	);
     add_submenu_page(
     	"configuracion",
-    	__("Configurar Home"),
-    	__("Configurar Home"),
+    	__("Configuración de la página de inicio"),
+    	__("Configuración de la página de inicio"),
     	"edit_pages",
     	"home",
     	"mybookinges_configuracion_home"

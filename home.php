@@ -187,7 +187,7 @@ if ($highlight_ver == 1) { ?>
 <!-- SECCION CARACTERISTICAS -------------------------------------------------->
 
 <?php $features_ver = get_option("home_features_visibilidad");
-if ($features_ver !== 1) { ?>
+if ($features_ver == 1) { ?>
 
 <div class="gradient-section">
   <div class="centered-flex-block mt150">

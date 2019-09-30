@@ -18,13 +18,6 @@ get_header();
 
 <section class="bg-contact">
 
-  <div class="flex-block-wrapper py-5">
-    <div class="centered-flex-block">
-        <h2>Contacto</h2>
-    </div>
-    <!-- TODO: Cambiar por el page-title de WordPress -->
-  </div>
-
   <div class="contact-content">
     <div class="contact-left">
       <div class="contact-left-info">
@@ -34,7 +27,7 @@ get_header();
 
           <div class="about">
 
-            <?php $titulo_contacto = get_option("contact_title");
+            <?php $titulo_contacto = get_option("contacto_seccion_titulo");
         	    if ($titulo_contacto !== '') { ?>
         	    	<h1><?php echo $titulo_contacto ?></h1>
         	    <?php }
@@ -44,7 +37,7 @@ get_header();
 
             <hr />
 
-            <?php $texto_contacto = get_option("contact_title");
+            <?php $texto_contacto = get_option("contacto_seccion_subtitulo");
         	    if ($texto_contacto !== '') { ?>
         	    	<h1><?php echo $texto_contacto ?></h1>
         	    <?php }
@@ -63,22 +56,30 @@ get_header();
               <?php _e("Localización",'mybookinges'); ?>
             </h4>
 
-            <?php $texto_contacto = get_option("contact_title");
-        	    if ($texto_contacto !== '') { ?>
-        	    	<h1><?php echo $texto_contacto ?></h1>
-        	    <?php } ?>
+            <?php $direccion_contacto = get_option("info_negocio_direccion");
+        	    if ($direccion_contacto !== '') { ?>
+        	    	<p><?php echo $direccion_contacto ?></p>
+        	  <?php } ?>
 
             <h4 class="color-blue-light">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <?php _e("Teléfono",'mybookinges'); ?>
             </h4>
-            <p>+34 888 88 88 88</p>
+
+            <?php $telefono_contacto = get_option("info_negocio_telefono");
+        	    if ($telefono_contacto !== '') { ?>
+        	    	<p><?php echo $telefono_contacto ?></p>
+        	  <?php } ?>
 
             <h4 class="color-blue-light">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <?php _e("Correo electrónico",'mybookinges'); ?>
             </h4>
-            <p>johndoe@gmail.com</p>
+
+            <?php $email_contacto = get_option("info_negocio_email");
+        	    if ($email_contacto !== '') { ?>
+        	    	<p><?php echo $email_contacto ?></p>
+        	  <?php } ?>
 
           </div>
         </div>
@@ -86,24 +87,47 @@ get_header();
         <!-- Enlaces sociales -->
 
         <ul class="social-links mt50">
+
           <li class="social__item">
-            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+            <?php $twitter_contacto = get_option("info_negocio_twitter_url");
+        	    if ($twitter_contacto !== '') { ?>
+                <a href="<?php echo $twitter_contacto ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+        	  <?php } ?>
           </li>
+
           <li class="social__item">
-            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+            <?php $facebook_contacto = get_option("info_negocio_facebook_url");
+        	    if ($facebook_contacto !== '') { ?>
+                <a href="<?php echo $facebook_contacto ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+        	  <?php } ?>
           </li>
+
           <li class="social__item">
-            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            <?php $instagram_contacto = get_option("info_negocio_instagram_url");
+        	    if ($instagram_contacto !== '') { ?>
+                <a href="<?php echo $instagram_contacto ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+        	  <?php } ?>
           </li>
+
+          <li class="social__item">
+            <?php $linkedin_contacto = get_option("info_negocio_linkedin_url");
+        	    if ($linkedin_contacto !== '') { ?>
+                <a href="<?php echo $linkedin_contacto ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+        	  <?php } ?>
+          </li>
+
         </ul>
       </div>
 
       <!-- Mapa -->
 
       <div class="contact-left-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.338384896538!2d4.147550115478896!3d39.933819992790625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12be21b9ec7e3359%3A0x4958a4bbdab1ed23!2smybooking!5e0!3m2!1ses!2ses!4v1546868592476"
-          width="100%" height="553" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <?php $mapa_contacto = get_option("contacto_mapa_url");
+    	    if ($mapa_contacto !== '') { ?>
+            <iframe
+              src="<?php echo $mapa_contacto ?>"
+              width="100%" height="553" frameborder="0" style="border:0" allowfullscreen></iframe>
+    	  <?php } ?>
       </div>
     </div>
 
