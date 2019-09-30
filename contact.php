@@ -8,6 +8,9 @@
 * @since Understrap Mybooking Child 0.0.1
 */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 get_header();
 ?>
 
@@ -19,34 +22,69 @@ get_header();
     <div class="centered-flex-block">
         <h2>Contacto</h2>
     </div>
+    <!-- TODO: Cambiar por el page-title de WordPress -->
   </div>
 
   <div class="contact-content">
     <div class="contact-left">
       <div class="contact-left-info">
         <div class="contact_details">
+
+          <!-- Cabecera -->
+
           <div class="about">
-            <h4>Contacto</h4>
+
+            <?php $titulo_contacto = get_option("contact_title");
+        	    if ($titulo_contacto !== '') { ?>
+        	    	<h1><?php echo $titulo_contacto ?></h1>
+        	    <?php }
+        	  	else { ?>
+        	  		<h4><?php _e("Contacto",'mybookinges'); ?></h4>
+            <?php } ?>
+
             <hr />
-            <p>
-              Estaré encantado de atenderte en:
-            </p>
+
+            <?php $texto_contacto = get_option("contact_title");
+        	    if ($texto_contacto !== '') { ?>
+        	    	<h1><?php echo $texto_contacto ?></h1>
+        	    <?php }
+        	  	else { ?>
+        	  		<p><?php _e("Estaré encantado de atenderte en:",'mybookinges'); ?></p>
+            <?php } ?>
+
           </div>
+
+          <!-- Información de contacto -->
+
           <div class="info">
+
             <h4 class="color-blue-light">
-              <i class="fa fa-map-marker" aria-hidden="true"></i> Localización
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <?php _e("Localización",'mybookinges'); ?>
             </h4>
-            <p>Avinguda des Camp Verd P37, 46, 07730 Alaior, Islas Baleares</p>
+
+            <?php $texto_contacto = get_option("contact_title");
+        	    if ($texto_contacto !== '') { ?>
+        	    	<h1><?php echo $texto_contacto ?></h1>
+        	    <?php } ?>
+
             <h4 class="color-blue-light">
-              <i class="fa fa-phone" aria-hidden="true"></i> Teléfono
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <?php _e("Teléfono",'mybookinges'); ?>
             </h4>
             <p>+34 888 88 88 88</p>
+
             <h4 class="color-blue-light">
-              <i class="fa fa-envelope" aria-hidden="true"></i> Email
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <?php _e("Correo electrónico",'mybookinges'); ?>
             </h4>
             <p>johndoe@gmail.com</p>
+
           </div>
         </div>
+
+        <!-- Enlaces sociales -->
+
         <ul class="social-links mt50">
           <li class="social__item">
             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -59,6 +97,9 @@ get_header();
           </li>
         </ul>
       </div>
+
+      <!-- Mapa -->
+
       <div class="contact-left-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.338384896538!2d4.147550115478896!3d39.933819992790625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12be21b9ec7e3359%3A0x4958a4bbdab1ed23!2smybooking!5e0!3m2!1ses!2ses!4v1546868592476"
@@ -66,8 +107,11 @@ get_header();
       </div>
     </div>
 
+    <!-- Formulario -->
+
     <div class="contact-form contact-right">
       <h4>Form</h4>
+
       <hr />
 
       <form action="https://formspree.io/johndoe@gmail.com" method="POST">
@@ -92,6 +136,7 @@ get_header();
         </div>
       </form>
     </div>
+
   </div>
 </section>
 
