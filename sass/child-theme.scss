@@ -1,3 +1,9 @@
 @import "theme/child_theme_variables";    // <------- Add your variables into this file
 
+
+// Vendor libraries
+@import "vendor/owl/owl.carousel";
+@import "vendor/owl/owl.theme";
+@import "vendor/owl/owl.transitions";
+
 @import "theme/child_theme"; 

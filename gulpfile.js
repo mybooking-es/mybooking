@@ -3,6 +3,8 @@ var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sass = require("gulp-sass");
 var rename = require("gulp-rename");
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 var rimraf = require("gulp-rimraf");
 var sourcemaps = require("gulp-sourcemaps");
 var cleanCSS = require("gulp-clean-css");
@@ -17,7 +19,10 @@ var paths = cfg.paths;
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task("watch", function() {
   gulp.watch(`${paths.sass}/**/*.scss`, gulp.series("styles"));
+  gulp.watch( [`${paths.dev}/js/**/*.js`, 'js/**/*.js', '!js/child-theme.js', '!js/child-theme.min.js'], gulp.series('scripts') );
 });
+
+// ---------- SASS + CSS MANAGEMENT ---------------------------
 
 // Run:
 // gulp sass
@@ -66,3 +71,27 @@ gulp.task("minifycss", function() {
 // gulp styles
 // Compile Sass and minify css
 gulp.task("styles", gulp.series("sass", "minifycss"));
+
+// ----------------------------- JS MANAGEMENT --------------------------------
+
+// Run:
+// gulp scripts.
+// Uglifies and concat all JS files into one
+gulp.task( 'scripts', function() {
+    var scripts = [
+
+        `${paths.dev}/js/vendor/owl/owl.carousel.js`,
+
+        // Adding currently empty javascript file to add on for your own themes´ customizations
+        // Please add any customizations to this .js file only!
+        `${paths.dev}/js/custom-javascript.js`,
+    ];
+  gulp.src( scripts, { allowEmpty: true } )
+    .pipe( concat( 'child-theme.min.js' ) )
+    .pipe( uglify() )
+    .pipe( gulp.dest( paths.js ) );
+
+  return gulp.src( scripts, { allowEmpty: true } )
+    .pipe( concat( 'child-theme.js' ) )
+    .pipe( gulp.dest( paths.js ) );
+});
