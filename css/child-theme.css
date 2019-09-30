@@ -1212,45 +1212,56 @@ ul.social-links,
     background-color: #2c3f76;
     border-color: #2c3f76; }
 
+/*
 .carrusel-de-uno .owl-item {
-  padding: 0; }
-
+	padding: 0;
+}
 .carrusel-item {
-  overflow: hidden; }
-
+  // max-height: 600px;
+  overflow: hidden;
+}
 .carrusel-item .wp-post-image {
-  width: 100%; }
-
+  width: 100%;
+}
 @media screen and (min-width: 0em) and (max-width: 39.9375em) {
   .carrusel-item .wp-post-image {
-    max-height: 180px; } }
-
-.owl-theme {
-  position: relative; }
-
-.owl-theme .owl-controls {
-  position: absolute;
+    max-height: 180px;
+  }
+}
+*/
+.carrusel-item img {
   width: 100%;
-  top: -10px;
-  right: 0;
-  overflow: hidden; }
+  height: auto;
+  display: block; }
 
+/*
+.owl-theme {
+  position: relative;
+}
+.owl-theme .owl-controls {
+	position: absolute;
+	width: 100%;
+	top: -10px;
+	right: 0;
+	overflow: hidden;
+}
 .owl-theme .owl-controls .owl-buttons div {
   color: #fff;
   display: inline-block;
   *display: inline;
   padding: 5px 20px;
   font-size: 1.8rem;
-  line-height: 3rem;
+	line-height: 3rem;
   background: #D51834;
-  margin: 0; }
-
+  margin: 0;
+}
 .owl-theme .owl-controls .owl-buttons .owl-prev {
-  float: left; }
-
+  float: left;
+}
 .owl-theme .owl-controls .owl-buttons .owl-next {
-  float: right; }
-
+  float: right;
+}
+*/
 /* BANNER */
 .banner {
   position: relative; }

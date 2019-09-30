@@ -343,9 +343,9 @@ if ($features_ver !== 1) { ?>
 <?php $carrusel_ver = get_option("home_carrusel_visibilidad");
 if ($carrusel_ver == 1) { ?>
 
-  <div class="content flex-block-wrapper">
+  <div class="content">
     <div class="centered-flex-block">
-      <div class="-carrusel-un-item carrusel-de-uno">
+      <div class="-carrusel-un-item carrusel-de-uno owl-carousel owl-theme">
 
         <?php
         $noticias_args = array(
