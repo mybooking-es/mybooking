@@ -88,6 +88,8 @@ function mybookinges_configuracion_info_negocio() {
 
       <!-- Información corporativa -->
 
+      <h2>Información corporativa</h2>
+
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Denominación del negocio</th>
@@ -106,6 +108,8 @@ function mybookinges_configuracion_info_negocio() {
       <hr>
 
       <!-- Información de contacto -->
+
+      <h2>Información de contacto</h2>
 
       <table class="form-table">
         <tr valign="top">
@@ -126,24 +130,26 @@ function mybookinges_configuracion_info_negocio() {
 
       <!-- Redes sociales -->
 
+      <h2>Enlaces sociales</h2>
+
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Perfil de Twitter</th>
+          <th scope="row">Twitter</th>
           <td><input type="text" name="info_negocio_twitter_url" size="40" value="<?php echo get_option('info_negocio_twitter_url'); ?>" />
           <br><span class="description">Pega aquí la URL del perfil de Twitter</span></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Perfil de Facebook</th>
-          <td><input type="text" name="info_negocio_telefono" size="40" value="<?php echo get_option('info_negocio_telefono'); ?>" />
+          <th scope="row">Facebook</th>
+          <td><input type="text" name="info_negocio_facebook_url" size="40" value="<?php echo get_option('info_negocio_facebook_url'); ?>" />
           <br><span class="description">Pega aquí la URL del perfil de Facebook</span></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Perfil de Instagram</th>
+          <th scope="row">Instagram</th>
           <td><input type="text" name="info_negocio_instagram_url" size="40" value="<?php echo get_option('info_negocio_instagram_url'); ?>" />
           <br><span class="description">Pega aquí la URL del perfil de Instagram</span></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Perfil de LinkedIn</th>
+          <th scope="row">LinkedIn</th>
           <td><input type="text" name="info_negocio_linkedin_url" size="40" value="<?php echo get_option('info_negocio_linkedin_url'); ?>" />
           <br><span class="description">Pega aquí la URL del perfil de LinkedIn</span></td>
         </tr>
@@ -152,6 +158,8 @@ function mybookinges_configuracion_info_negocio() {
       <hr>
 
       <!-- Ajustes del template Contacto -->
+
+      <h2>Página Contacto</h2>
 
       <table class="form-table">
         <tr valign="top">

@@ -39,10 +39,10 @@ get_header();
 
             <?php $texto_contacto = get_option("contacto_seccion_subtitulo");
         	    if ($texto_contacto !== '') { ?>
-        	    	<h1><?php echo $texto_contacto ?></h1>
+        	    	<h3><?php echo $texto_contacto ?></h3>
         	    <?php }
         	  	else { ?>
-        	  		<p><?php _e("Estaré encantado de atenderte en:",'mybookinges'); ?></p>
+        	  		<h3><?php _e("Estaré encantado de atenderte en:",'mybookinges'); ?></h3>
             <?php } ?>
 
           </div>
@@ -149,7 +149,7 @@ get_header();
         </div>
         <div class="form-group">
           <label for="comment">Commentario:</label>
-          <textarea name="message" placeholder="Mensage" class="form-control" rows="4" id="comment"></textarea>
+          <textarea name="message" placeholder="Mensaje" class="form-control" rows="4" id="comment"></textarea>
         </div>
         <div class="form-group">
           <label>
