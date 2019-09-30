@@ -7,17 +7,17 @@
 *  	@package Understrap Mybooking Child
 */
 
-add_action('admin_menu', 'mybookinges_crea_menu_home');
-add_action('admin_init', 'mybookinges_registra_opciones_home');
+add_action('admin_menu', 'mybookinges_create_menu_home');
+add_action('admin_init', 'mybookinges_register_options_home');
 
-function mybookinges_crea_menu_home() {
+function mybookinges_create_menu_home() {
   if (!current_user_can('manage_options') || current_user_can('administrator'))
     add_menu_page(
     	__("MyBooking"),
     	__("MyBooking"),
     	"edit_pages",
     	"configuracion",
-    	"mybookinges_configuracion_home",
+    	"mybookinges_configuration_home",
     	"dashicons-admin-generic",
     	4.1
     	);
@@ -27,77 +27,77 @@ function mybookinges_crea_menu_home() {
     	__("Configuración de la página de inicio"),
     	"edit_pages",
     	"home",
-    	"mybookinges_configuracion_home"
+    	"mybookinges_configuration_home"
     	);
 }
 
-function mybookinges_registra_opciones_home() {
+function mybookinges_register_options_home() {
 
-  // Definición de opciones
+  // Define options
   add_option("home_hero_title","","","yes");
   add_option("home_hero_text","","","yes");
 
-  add_option("home_highlight_visibilidad","","","yes");
-  add_option("home_highlight_cabecera_title","","","yes");
-  add_option("home_highlight_cabecera_text","","","yes");
-  add_option("home_punto_uno_image","","","yes");
-  add_option("home_punto_uno_text","","","yes");
-  add_option("home_punto_dos_image","","","yes");
-  add_option("home_punto_dos_text","","","yes");
-  add_option("home_punto_tres_image","","","yes");
-  add_option("home_punto_tres_text","","","yes");
+  add_option("home_highlight_visibility","","","yes");
+  add_option("home_highlight_header_title","","","yes");
+  add_option("home_highlight_header_text","","","yes");
+  add_option("home_fact_one_image","","","yes");
+  add_option("home_fact_one_text","","","yes");
+  add_option("home_fact_two_image","","","yes");
+  add_option("home_fact_two_text","","","yes");
+  add_option("home_fact_three_image","","","yes");
+  add_option("home_fact_three_text","","","yes");
 
-  add_option("home_features_visibilidad","","","yes");
-  add_option("home_features_cabecera_title","","","yes");
-  add_option("home_features_cabecera_text","","","yes");
-  add_option("home_features_cabecera_image","","","yes");
-  add_option("home_features_uno_title","","","yes");
-  add_option("home_features_uno_text","","","yes");
-  add_option("home_features_dos_title","","","yes");
-  add_option("home_features_dos_text","","","yes");
-  add_option("home_features_tres_title","","","yes");
-  add_option("home_features_tres_text","","","yes");
+  add_option("home_features_visibility","","","yes");
+  add_option("home_features_header_title","","","yes");
+  add_option("home_features_header_text","","","yes");
+  add_option("home_features_header_image","","","yes");
+  add_option("home_features_one_title","","","yes");
+  add_option("home_features_one_text","","","yes");
+  add_option("home_features_two_title","","","yes");
+  add_option("home_features_two_text","","","yes");
+  add_option("home_features_three_title","","","yes");
+  add_option("home_features_three_text","","","yes");
 
-  add_option("home_carrusel_visibilidad","","","yes");
+  add_option("home_carousel_visibility","","","yes");
 
-  // Registro de opciones
-  register_setting("opciones_home", "home_hero_title");
-  register_setting("opciones_home", "home_hero_text");
+  // Register options
+  register_setting("options_home", "home_hero_title");
+  register_setting("options_home", "home_hero_text");
 
-  register_setting("opciones_home", "home_highlight_visibilidad");
-  register_setting("opciones_home", "home_highlight_cabecera_title");
-  register_setting("opciones_home", "home_highlight_cabecera_text");
-  register_setting("opciones_home", "home_punto_uno_image");
-  register_setting("opciones_home", "home_punto_uno_text");
-  register_setting("opciones_home", "home_punto_dos_image");
-  register_setting("opciones_home", "home_punto_dos_text");
-  register_setting("opciones_home", "home_punto_tres_image");
-  register_setting("opciones_home", "home_punto_tres_text");
+  register_setting("options_home", "home_highlight_visibility");
+  register_setting("options_home", "home_highlight_header_title");
+  register_setting("options_home", "home_highlight_header_text");
+  register_setting("options_home", "home_fact_one_image");
+  register_setting("options_home", "home_fact_one_text");
+  register_setting("options_home", "home_fact_two_image");
+  register_setting("options_home", "home_fact_two_text");
+  register_setting("options_home", "home_fact_three_image");
+  register_setting("options_home", "home_fact_three_text");
 
-  register_setting("opciones_home", "home_features_visibilidad");
-  register_setting("opciones_home", "home_features_cabecera_title");
-  register_setting("opciones_home", "home_features_cabecera_text");
-  register_setting("opciones_home", "home_features_cabecera_image");
-  register_setting("opciones_home", "home_features_uno_title");
-  register_setting("opciones_home", "home_features_uno_text");
-  register_setting("opciones_home", "home_features_dos_title");
-  register_setting("opciones_home", "home_features_dos_text");
-  register_setting("opciones_home", "home_features_tres_title");
-  register_setting("opciones_home", "home_features_tres_text");
+  register_setting("options_home", "home_features_visibility");
+  register_setting("options_home", "home_features_header_title");
+  register_setting("options_home", "home_features_header_text");
+  register_setting("options_home", "home_features_header_image");
+  register_setting("options_home", "home_features_one_title");
+  register_setting("options_home", "home_features_one_text");
+  register_setting("options_home", "home_features_two_title");
+  register_setting("options_home", "home_features_two_text");
+  register_setting("options_home", "home_features_three_title");
+  register_setting("options_home", "home_features_three_text");
 
-  register_setting("opciones_home", "home_carrusel_visibilidad");
+  register_setting("options_home", "home_carousel_visibility");
 
 }
 
 
-function mybookinges_configuracion_home() {
+function mybookinges_configuration_home() {
   if (!current_user_can('edit_pages'))
       wp_die(__("No tienes acceso a esta página."));
   ?>
 
   <div class="wrap">
 
-    <!-- Titulo de la página -->
+    <!-- Page header -->
 
     <h1>
       Configuración de la página de inicio <br>
@@ -108,16 +108,15 @@ function mybookinges_configuracion_home() {
 
     <?php settings_errors(); ?>
 
-    <!-- Formulario ----------------------------------------------------------->
+    <!-- Options form ----------------------------------------------------------->
 
     <form method="post" action="options.php">
 
-      <?php settings_fields('opciones_home'); ?>
+      <?php settings_fields('options_home'); ?>
 
-      <!-- Seccion Cabecera -->
+      <!-- Section hero -->
 
       <h2>Cabecera de la página de inicio</h2>
-      <p>Configura el título y texto por defecto en la cabecera de la página de inicio.</p>
 
       <table class="form-table">
         <tr valign="top">
@@ -134,95 +133,93 @@ function mybookinges_configuracion_home() {
 
       <hr>
 
-      <!-- Seccion Destacada -->
+      <!-- Section highlight -->
 
       <h2>Destacada</h2>
-      <p>Configura el contenido de la sección destacada bajo la cabecera.</p>
 
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Visibilidad</th>
           <td>
-          <?php $options = get_option( "home_highlight_visibilidad" ); ?>
-          <input type="checkbox" name="home_highlight_visibilidad" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
+          <?php $options = get_option( "home_highlight_visibility" ); ?>
+          <input type="checkbox" name="home_highlight_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Título de la sección destacada</th>
-          <td><input type="text" name="home_highlight_cabecera_title" size="40" value="<?php echo get_option('home_highlight_cabecera_title'); ?>" /></td>
+          <td><input type="text" name="home_highlight_header_title" size="40" value="<?php echo get_option('home_highlight_header_title'); ?>" /></td>
         </tr>
         <tr valign="top">
           <th scope="row">Texto de la sección destacada</th>
-          <td><textarea name="home_highlight_cabecera_text" cols="37" rows="10"><?php echo get_option('home_highlight_cabecera_text'); ?></textarea></td>
+          <td><textarea name="home_highlight_header_text" cols="37" rows="10"><?php echo get_option('home_highlight_header_text'); ?></textarea></td>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Imagen punto 1</th>
-          <td><input type="text" name="home_punto_uno_image" size="40" value="<?php echo get_option('home_punto_uno_image'); ?>" />
+          <td><input type="text" name="home_fact_one_image" size="40" value="<?php echo get_option('home_fact_one_image'); ?>" />
           <br><span class="description">Inserta la URL para la imagen del punto 1</span></td>
         </tr>
         <tr valign="top">
           <th scope="row">Texto del punto 1</th>
-          <td><textarea name="home_punto_uno_text" cols="37" rows="10"><?php echo get_option('home_punto_uno_text'); ?></textarea></td>
+          <td><textarea name="home_fact_one_text" cols="37" rows="10"><?php echo get_option('home_fact_one_text'); ?></textarea></td>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Imagen punto 2</th>
-          <td><input type="text" name="home_punto_dos_image" size="40" value="<?php echo get_option('home_punto_dos_image'); ?>" />
+          <td><input type="text" name="home_fact_two_image" size="40" value="<?php echo get_option('home_fact_two_image'); ?>" />
           <br><span class="description">Inserta la URL para la imagen del punto 2</span></td>
         </tr>
         <tr valign="top">
           <th scope="row">Texto del punto 2</th>
-          <td><textarea name="home_punto_dos_text" cols="37" rows="10"><?php echo get_option('home_punto_dos_text'); ?></textarea></td>
+          <td><textarea name="home_fact_two_text" cols="37" rows="10"><?php echo get_option('home_fact_two_text'); ?></textarea></td>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Imagen punto 3</th>
-          <td><input type="text" name="home_punto_tres_image" size="40" value="<?php echo get_option('home_punto_tres_image'); ?>" />
+          <td><input type="text" name="home_fact_three_image" size="40" value="<?php echo get_option('home_fact_three_image'); ?>" />
           <br><span class="description">Inserta la URL para la imagen del punto 3</span></td>
         </tr>
         <tr valign="top">
           <th scope="row">Texto del punto 3</th>
-          <td><textarea name="home_punto_tres_text" cols="37" rows="10"><?php echo get_option('home_punto_tres_text'); ?></textarea></td>
+          <td><textarea name="home_fact_three_text" cols="37" rows="10"><?php echo get_option('home_fact_three_text'); ?></textarea></td>
         </tr>
       </table>
 
       <hr>
 
-      <!-- Seccion Features -->
+      <!-- Section features -->
 
       <h2>Features</h2>
-      <p>Configura el contenido de la sección Features.</p>
 
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Visibilidad</th>
           <td>
-          <?php $options = get_option( "home_features_visibilidad" ); ?>
-          <input type="checkbox" name="home_features_visibilidad" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
+          <?php $options = get_option( "home_features_visibility" ); ?>
+          <input type="checkbox" name="home_features_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Título de la cabecera</th>
-          <td><input type="text" name="home_features_cabecera_title" size="40" value="<?php echo get_option('home_features_cabecera_title'); ?>" /></td>
+          <td><input type="text" name="home_features_header_title" size="40" value="<?php echo get_option('home_features_header_title'); ?>" /></td>
         </tr>
         <tr valign="top">
           <th scope="row">Texto de la cabecera</th>
-          <td><textarea name="home_features_cabecera_text" cols="37" rows="10"><?php echo get_option('home_features_cabecera_text'); ?></textarea></td>
+          <td><textarea name="home_features_header_text" cols="37" rows="10"><?php echo get_option('home_features_header_text'); ?></textarea></td>
         </tr>
         <tr valign="top">
           <th scope="row">Imagen de la cabecera</th>
-          <td><input type="text" name="home_features_cabecera_image" size="40" value="<?php echo get_option('home_features_cabecera_image'); ?>" />
+          <td><input type="text" name="home_features_header_image" size="40" value="<?php echo get_option('home_features_header_image'); ?>" />
           <br><span class="description">Inserta la URL para la imagen de la cabecera</span></td>
         </tr>
       </table>
@@ -230,49 +227,48 @@ function mybookinges_configuracion_home() {
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Título de Feature uno</th>
-          <td><input type="text" name="home_features_uno_title" size="40" value="<?php echo get_option('home_features_uno_title'); ?>" /></td>
+          <td><input type="text" name="home_features_one_title" size="40" value="<?php echo get_option('home_features_one_title'); ?>" /></td>
         </tr>
         <tr valign="top">
           <th scope="row">Texto de Feature uno</th>
-          <td><textarea name="home_features_uno_text" cols="37" rows="10"><?php echo get_option('home_features_uno_text'); ?></textarea></td>
+          <td><textarea name="home_features_one_text" cols="37" rows="10"><?php echo get_option('home_features_one_text'); ?></textarea></td>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Título de Feature dos</th>
-          <td><input type="text" name="home_features_dos_title" size="40" value="<?php echo get_option('home_features_dos_title'); ?>" /></td>
+          <td><input type="text" name="home_features_two_title" size="40" value="<?php echo get_option('home_features_two_title'); ?>" /></td>
         </tr>
         <tr valign="top">
           <th scope="row">Texto de Feature dos</th>
-          <td><textarea name="home_features_dos_text" cols="37" rows="10"><?php echo get_option('home_features_dos_text'); ?></textarea></td>
+          <td><textarea name="home_features_two_text" cols="37" rows="10"><?php echo get_option('home_features_two_text'); ?></textarea></td>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Título de Feature tres</th>
-          <td><input type="text" name="home_features_tres_title" size="40" value="<?php echo get_option('home_features_tres_title'); ?>" /></td>
+          <td><input type="text" name="home_features_three_title" size="40" value="<?php echo get_option('home_features_three_title'); ?>" /></td>
         </tr>
         <tr valign="top">
           <th scope="row">Texto de Feature tres</th>
-          <td><textarea name="home_features_tres_text" cols="37" rows="10"><?php echo get_option('home_features_tres_text'); ?></textarea></td>
+          <td><textarea name="home_features_three_text" cols="37" rows="10"><?php echo get_option('home_features_three_text'); ?></textarea></td>
         </tr>
       </table>
 
       <hr>
 
-      <!-- Seccion Carrusel -->
+      <!-- Section carousel -->
 
       <h2>Carrusel</h2>
-      <p>Configura la visibilidad del carrusel de artículos de la portada.</p>
 
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Visibilidad</th>
           <td>
-          <?php $options = get_option( "home_carrusel_visibilidad" ); ?>
-          <input type="checkbox" name="home_carrusel_visibilidad" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
+          <?php $options = get_option( "home_carousel_visibility" ); ?>
+          <input type="checkbox" name="home_carousel_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
         </tr>
       </table>
 

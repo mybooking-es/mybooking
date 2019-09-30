@@ -14,35 +14,31 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<!-- SECCION CABECERA --------------------------------------------------------->
+<!-- SECTION CABECERA --------------------------------------------------------->
 
 <div class="hero-header-container">
   <div class="hero-header-content">
 
-    <!-- Eslogan -->
+    <!-- Punchline -->
 
     <div class="hero-header-left">
       <div class="aligner">
 
-        <!-- Titulo -->
-        <?php $titulo_hero = get_option("home_hero_title");
-    	    if ($titulo_hero !== '') { ?>
-        <h1><?php echo $titulo_hero ?></h1>
+        <?php $title_hero = get_option("home_hero_title");
+    	    if ($title_hero !== '') { ?>
+            <h1><?php echo $title_hero ?></h1>
         <?php }
     	  	else { ?>
-        <h1><?php _e("Título genérico",'mybookinges'); ?></h1>
-        <!-- TODO: Añadir título genérico final -->
+            <h1><?php _e("Título genérico",'mybookinges'); ?></h1>
         <?php } ?>
 
-        <!-- Texto -->
-        <?php $texto_hero = get_option("home_hero_text");
-    	    if ($texto_hero !== '') { ?>
-        <p><?php echo $texto_hero ?></p>
+        <?php $text_hero = get_option("home_hero_text");
+    	    if ($text_hero !== '') { ?>
+            <p><?php echo $text_hero ?></p>
         <?php }
     	  	else { ?>
-        <p><?php _e("Texto genérico sin Lorem ipsum dolor amet flannel mumblecore air plant iceland hexagon
+            <p><?php _e("Texto genérico sin Lorem ipsum dolor amet flannel mumblecore air plant iceland hexagon
             tote bag twee pok pok scenester selfies.",'mybookinges'); ?></p>
-        <!-- TODO: Agregar texto genérico final -->
         <?php } ?>
 
       </div>
@@ -63,263 +59,226 @@ get_header();
 
 </div>
 
-<!-- Test widgets area -->
 
-<div class="row">
-  <div class="col-md-12">
+<!-- SECTION HIGHLIGHT -------------------------------------------------------->
 
-    <?php if ( is_active_sidebar( 'mybooking_top_bar' ) ) : ?>
-      <?php dynamic_sidebar( 'mybooking_top_bar' ); ?>
-    <?php endif; ?>
+<?php $highlight_visible = get_option("home_highlight_visibility");
+if ($highlight_visible == 1) { ?>
 
-  </div>
-</div>
+  <!-- Header -->
 
+  <div class="flex-block-wrapper">
+    <div class="centered-flex-block mt150">
 
-<!-- SECCION DESTACADA -------------------------------------------------------->
+      <?php $title_highlight_header = get_option("home_highlight_header_title");
+          if ($title_highlight_header !== '') { ?>
+            <h1><?php echo $title_highlight_header ?></h1>
+      <?php }
+          else { ?>
+            <h1><?php _e("Título sección",'mybookinges'); ?></h1>
+      <?php } ?>
 
-<?php $highlight_ver = get_option("home_highlight_visibilidad");
-if ($highlight_ver == 1) { ?>
+      <?php $text_highlight_header = get_option("home_highlight_header_text");
+          if ($text_highlight_header !== '') { ?>
+            <p><?php echo $text_highlight_header ?></p>
+      <?php }
+          else { ?>
+            <p><?php _e("Texto destacado sin Lorem ipsum dolor amet flannel mumblecore air plant iceland hexagon
+            tote bag twee pok pok scenester selfies.",'mybookinges'); ?></p>
+      <?php } ?>
 
-<!-- Cabecera -->
-
-<div class="flex-block-wrapper">
-  <div class="centered-flex-block mt150">
-
-    <!-- Titulo -->
-    <?php $titulo_highlight_cabecera = get_option("home_highlight_cabecera_title");
-        if ($titulo_highlight_cabecera !== '') { ?>
-    <h1><?php echo $titulo_highlight_cabecera ?></h1>
-    <?php }
-        else { ?>
-    <h1><?php _e("Título sección",'mybookinges'); ?></h1>
-    <!-- TODO: Añadir título genérico final -->
-    <?php } ?>
-
-    <!-- Texto -->
-    <?php $texto_highlight_cabecera = get_option("home_highlight_cabecera_text");
-        if ($texto_highlight_cabecera !== '') { ?>
-    <p><?php echo $texto_highlight_cabecera ?></p>
-    <?php }
-        else { ?>
-    <p><?php _e("Texto destacado sin Lorem ipsum dolor amet flannel mumblecore air plant iceland hexagon
-          tote bag twee pok pok scenester selfies.",'mybookinges'); ?></p>
-    <!-- TODO: Agregar texto genérico final -->
-    <?php } ?>
-
-  </div>
-</div>
-
-<!-- Puntos fuertes -->
-
-<div class="icons-wrapper mt100">
-  <div class="icon-panel icon-1">
-
-    <?php $imagen_punto_uno = get_option("home_punto_uno_image");
-        if ($imagen_punto_uno !== '') { ?>
-    <img src="<?php echo $imagen_punto_uno ?>" alt="">
-    <?php }
-        else { ?>
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_1.svg" alt="">
-    <?php } ?>
-
-    <?php $texto_punto_uno = get_option("home_punto_uno_text");
-        if ($texto_punto_uno !== '') { ?>
-    <br>
-    <h5><?php echo $texto_punto_uno ?></h5>
-    <?php }
-        else { ?>
-    <br>
-    <h5><?php _e("We don't charge deposit",'mybookinges'); ?></h5>
-    <?php } ?>
-
+    </div>
   </div>
 
-  <div class="icon-panel icon-2">
+  <!-- Facts -->
 
-    <?php $imagen_punto_dos = get_option("home_punto_dos_image");
-        if ($imagen_punto_dos !== '') { ?>
-    <img src="<?php echo $imagen_punto_dos ?>" alt="">
-    <?php }
-        else { ?>
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_2.svg" alt="">
-    <?php } ?>
+  <div class="icons-wrapper mt100">
+    <div class="icon-panel icon-1">
 
-    <?php $texto_punto_dos = get_option("home_punto_dos_text");
-        if ($texto_punto_dos !== '') { ?>
-    <br>
-    <h5><?php echo $texto_punto_dos ?></h5>
-    <?php }
-        else { ?>
-    <br>
-    <h5><?php _e("Competitive prices",'mybookinges'); ?></h5>
-    <?php } ?>
+      <?php $imagen_fact_one = get_option("home_fact_one_image");
+          if ($imagen_fact_one !== '') { ?>
+            <img src="<?php echo $imagen_fact_one ?>" alt="">
+      <?php }
+          else { ?>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_1.svg" alt="">
+      <?php } ?>
 
+      <?php $text_fact_one = get_option("home_fact_one_text");
+          if ($text_fact_one !== '') { ?>
+            <br>
+            <h5><?php echo $text_fact_one ?></h5>
+      <?php }
+          else { ?>
+            <br>
+            <h5><?php _e("We don't charge deposit",'mybookinges'); ?></h5>
+      <?php } ?>
+
+    </div>
+
+    <div class="icon-panel icon-2">
+
+      <?php $imagen_fact_two = get_option("home_fact_two_image");
+          if ($imagen_fact_two !== '') { ?>
+            <img src="<?php echo $imagen_fact_two ?>" alt="">
+      <?php }
+          else { ?>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_2.svg" alt="">
+      <?php } ?>
+
+      <?php $text_fact_two = get_option("home_fact_two_text");
+          if ($text_fact_two !== '') { ?>
+            <br>
+            <h5><?php echo $text_fact_two ?></h5>
+      <?php }
+          else { ?>
+            <br>
+            <h5><?php _e("Competitive prices",'mybookinges'); ?></h5>
+      <?php } ?>
+
+    </div>
+
+    <div class="icon-panel icon-3">
+
+      <?php $imagen_fact_three = get_option("home_fact_three_image");
+          if ($imagen_fact_three !== '') { ?>
+            <img src="<?php echo $imagen_fact_three ?>" alt="">
+      <?php }
+          else { ?>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_3.svg" alt="">
+      <?php } ?>
+
+      <?php $text_fact_three = get_option("home_fact_three_text");
+          if ($text_fact_three !== '') { ?>
+            <br>
+            <h5><?php echo $text_fact_three ?></h5>
+      <?php }
+          else { ?>
+            <br>
+            <h5><?php _e("Extra drivers included",'mybookinges'); ?></h5>
+      <?php } ?>
+
+    </div>
   </div>
-
-  <div class="icon-panel icon-3">
-
-    <?php $imagen_punto_tres = get_option("home_punto_tres_image");
-        if ($imagen_punto_tres !== '') { ?>
-    <img src="<?php echo $imagen_punto_tres ?>" alt="">
-    <?php }
-        else { ?>
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_3.svg" alt="">
-    <?php } ?>
-
-    <?php $texto_punto_tres = get_option("home_punto_tres_text");
-        if ($texto_punto_tres !== '') { ?>
-    <br>
-    <h5><?php echo $texto_punto_tres ?></h5>
-    <?php }
-        else { ?>
-    <br>
-    <h5><?php _e("Extra drivers included",'mybookinges'); ?></h5>
-    <?php } ?>
-
-  </div>
-</div>
-<!-- TODO: Igualar los margins para darle consistencia cuando actue the_content() -->
 
 <?php } ?>
 
 
-<!-- SECCION CARACTERISTICAS -------------------------------------------------->
+<!-- SECTION FEATURES -------------------------------------------------->
 
-<?php $features_ver = get_option("home_features_visibilidad");
-if ($features_ver == 1) { ?>
+<?php $features_visible = get_option("home_features_visibility");
+if ($features_visible == 1) { ?>
 
-<div class="gradient-section">
-  <div class="centered-flex-block mt150">
+  <div class="gradient-section">
+    <div class="centered-flex-block mt150">
 
-    <!-- Titulo -->
-    <?php $titulo_features_cabecera = get_option("home_features_cabecera_title");
-        if ($titulo_features_cabecera !== '') { ?>
-    <h1 class="color-white"><?php echo $titulo_features_cabecera ?></h1>
-    <?php }
-        else { ?>
-    <h1 class="color-white"><?php _e("How it works",'mybookinges'); ?></h1>
-    <!-- TODO: Añadir título genérico final -->
-    <?php } ?>
+      <!-- Header -->
 
-    <!-- Texto -->
-    <?php $texto_features_cabecera = get_option("home_features_cabecera_text");
-        if ($texto_features_cabecera !== '') { ?>
-    <p class="color-white"><?php echo $texto_features_cabecera ?></p>
-    <?php }
-        else { ?>
-    <p class="color-white"><?php _e("Texto caracteristicas sin Lorem ipsum dolor amet flannel mumblecore air plant iceland hexagon
-          tote bag twee pok pok scenester selfies.",'mybookinges'); ?></p>
-    <!-- TODO: Agregar texto genérico final -->
-    <?php } ?>
-
-  </div>
-
-  <div class="text-center">
-
-    <?php $imagen_features_cabecera = get_option("home_features_cabecera_image");
-        if ($imagen_features_cabecera !== '') { ?>
-    <img class="image-fluid" src="<?php echo $imagen_features_cabecera ?>" alt="">
-    <?php }
-        else { ?>
-    <img class="image-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/three-cars.png" alt="">
-    <?php } ?>
-
-  </div>
-
-  <div class="feature">
-    <div class="features__item">
-
-      <span class="stopa stopa-1">1</span>
-
-      <!-- Titulo -->
-      <?php $titulo_features_uno = get_option("home_features_uno_title");
-          if ($titulo_features_uno !== '') { ?>
-      <h3><?php echo $titulo_features_uno ?></h3>
+      <?php $title_features_header = get_option("home_features_header_title");
+          if ($title_features_header !== '') { ?>
+            <h1 class="color-white"><?php echo $title_features_header ?></h1>
       <?php }
           else { ?>
-      <h3><?php _e("Choose",'mybookinges'); ?></h3>
-      <!-- TODO: Añadir título genérico final -->
+            <h1 class="color-white"><?php _e("How it works",'mybookinges'); ?></h1>
       <?php } ?>
 
-      <hr />
-
-      <!-- Texto -->
-      <?php $texto_features_uno = get_option("home_features_uno_text");
-          if ($texto_features_uno !== '') { ?>
-      <p><?php echo $texto_features_uno ?></p>
+      <?php $text_features_header = get_option("home_features_header_text");
+          if ($text_features_header !== '') { ?>
+            <p class="color-white"><?php echo $text_features_header ?></p>
       <?php }
           else { ?>
-      <p>
-        <?php _e("Texto features Duis finibus odio sit amet nisi dictum et viverra libero semper donec.",'mybookinges'); ?>
-      </p>
-      <!-- TODO: Agregar texto genérico final -->
+            <p class="color-white"><?php _e("Texto caracteristicas sin Lorem ipsum dolor amet flannel mumblecore air plant iceland hexagon
+            tote bag twee pok pok scenester selfies.",'mybookinges'); ?></p>
       <?php } ?>
 
     </div>
 
-    <div class="features__item">
+    <div class="text-center">
 
-      <span class="stopa stopa-2">2</span>
-
-      <!-- Titulo -->
-      <?php $titulo_features_dos = get_option("home_features_dos_title");
-          if ($titulo_features_dos !== '') { ?>
-      <h3><?php echo $titulo_features_dos ?></h3>
+      <?php $imagen_features_header = get_option("home_features_header_image");
+          if ($imagen_features_header !== '') { ?>
+            <img class="image-fluid" src="<?php echo $imagen_features_header ?>" alt="">
       <?php }
           else { ?>
-      <h3><?php _e("Your",'mybookinges'); ?></h3>
-      <!-- TODO: Añadir título genérico final -->
-      <?php } ?>
-
-      <hr />
-
-      <!-- Texto -->
-      <?php $texto_features_dos = get_option("home_features_dos_text");
-          if ($texto_features_dos !== '') { ?>
-      <p><?php echo $texto_features_dos ?></p>
-      <?php }
-          else { ?>
-      <p>
-        <?php _e("Texto features Duis finibus odio sit amet nisi dictum et viverra libero semper donec.",'mybookinges'); ?>
-      </p>
-      <!-- TODO: Agregar texto genérico final -->
+            <img class="image-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/three-cars.png" alt="">
       <?php } ?>
 
     </div>
 
-    <div class="features__item">
+    <!-- Points -->
 
-      <span class="stopa stopa-3">3</span>
+    <div class="feature">
+      <div class="features__item">
+        <span class="stopa stopa-1">1</span>
 
-      <!-- Titulo -->
-      <?php $titulo_features_tres = get_option("home_features_tres_title");
-          if ($titulo_features_tres !== '') { ?>
-      <h3><?php echo $titulo_features_tres ?></h3>
-      <?php }
-          else { ?>
-      <h3><?php _e("Choose",'mybookinges'); ?></h3>
-      <!-- TODO: Añadir título genérico final -->
-      <?php } ?>
+        <?php $title_features_one = get_option("home_features_one_title");
+            if ($title_features_one !== '') { ?>
+              <h3><?php echo $title_features_one ?></h3>
+        <?php }
+            else { ?>
+              <h3><?php _e("Choose",'mybookinges'); ?></h3>
+        <?php } ?>
 
-      <hr />
+        <hr />
 
-      <!-- Texto -->
-      <?php $texto_features_tres = get_option("home_features_tres_text");
-          if ($texto_features_tres !== '') { ?>
-      <p><?php echo $texto_features_tres ?></p>
-      <?php }
-          else { ?>
-      <p>
-        <?php _e("Texto features Duis finibus odio sit amet nisi dictum et viverra libero semper donec.",'mybookinges'); ?>
-      </p>
-      <!-- TODO: Agregar texto genérico final -->
-      <?php } ?>
+        <?php $text_features_one = get_option("home_features_one_text");
+            if ($text_features_one !== '') { ?>
+              <p><?php echo $text_features_one ?></p>
+        <?php }
+            else { ?>
+              <p><?php _e("Texto features Duis finibus odio sit amet nisi dictum et viverra libero semper donec.",'mybookinges'); ?></p>
+        <?php } ?>
 
+      </div>
+
+      <div class="features__item">
+        <span class="stopa stopa-2">2</span>
+
+        <?php $title_features_two = get_option("home_features_two_title");
+            if ($title_features_two !== '') { ?>
+              <h3><?php echo $title_features_two ?></h3>
+        <?php }
+            else { ?>
+              <h3><?php _e("Your",'mybookinges'); ?></h3>
+
+        <?php } ?>
+
+        <hr />
+
+        <?php $text_features_two = get_option("home_features_two_text");
+            if ($text_features_two !== '') { ?>
+              <p><?php echo $text_features_two ?></p>
+        <?php }
+            else { ?>
+              <p><?php _e("Texto features Duis finibus odio sit amet nisi dictum et viverra libero semper donec.",'mybookinges'); ?></p>
+        <?php } ?>
+
+      </div>
+
+      <div class="features__item">
+        <span class="stopa stopa-3">3</span>
+
+        <?php $title_features_three = get_option("home_features_three_title");
+            if ($title_features_three !== '') { ?>
+              <h3><?php echo $title_features_three ?></h3>
+        <?php }
+            else { ?>
+              <h3><?php _e("Choose",'mybookinges'); ?></h3>
+
+        <?php } ?>
+
+        <hr />
+
+        <?php $text_features_three = get_option("home_features_three_text");
+            if ($text_features_three !== '') { ?>
+              <p><?php echo $text_features_three ?></p>
+        <?php }
+            else { ?>
+              <p><?php _e("Texto features Duis finibus odio sit amet nisi dictum et viverra libero semper donec.",'mybookinges'); ?></p>
+        <?php } ?>
+
+      </div>
     </div>
-
   </div>
-</div>
 
 <?php } ?>
 
@@ -330,31 +289,30 @@ if ($features_ver == 1) { ?>
   <div class="centered-flex-block">
 
     <?php while ( have_posts() ) : the_post(); ?>
-    <!-- TODO: Insertar aquí un separador que actue cuando se activa esta condición -->
-    <?php the_content(); ?>
+      <?php the_content(); ?>
     <?php endwhile;?>
 
   </div>
 </div>
 
 
-<!-- CARRUSEL ----------------------------------------------------------------->
+<!-- CAROUSEL ----------------------------------------------------------------->
 
-<?php $carrusel_ver = get_option("home_carrusel_visibilidad");
-if ($carrusel_ver == 1) { ?>
+<?php $carrusel_visible = get_option("home_carousel_visibility");
+if ($carrusel_visible == 1) { ?>
 
   <div class="content">
     <div class="centered-flex-block">
       <div class="-carrusel-un-item carrusel-de-uno owl-carousel owl-theme">
 
         <?php
-        $noticias_args = array(
+        $news_args = array(
           'post_type' => 'post',
           'category_name' => 'portada',
           'posts_per_page'=> 6,
         );
-        $noticias_item = new WP_Query($noticias_args); ?>
-        <?php  while ( $noticias_item->have_posts() ) : $noticias_item->the_post(); ?>
+        $news_item = new WP_Query($news_args); ?>
+        <?php  while ( $news_item->have_posts() ) : $news_item->the_post(); ?>
           <div class="carrusel-item banner">
             <?php the_post_thumbnail(); ?>
             <div class="banner-franja">

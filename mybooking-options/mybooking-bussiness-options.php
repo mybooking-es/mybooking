@@ -1,75 +1,75 @@
 <?php
 /**
-*		CONFIGURACIÓN DE LA EMPRESA
-*  	---------------------------
+*		COMPANY INFO CONFIGURATION
+*  	--------------------------
 * 	Autor: Hector Asencio @Mybooking
 * 	Versión: 0.0.1
 *  	@package Understrap Mybooking Child
 */
 
-add_action('admin_menu', 'mybookinges_crea_menu_info_negocio');
-add_action('admin_init', 'mybookinges_registra_opciones_info_negocio');
+add_action('admin_menu', 'mybookinges_create_menu_company_info');
+add_action('admin_init', 'mybookinges_register_options_company_info');
 
-function mybookinges_crea_menu_info_negocio() {
+function mybookinges_create_menu_company_info() {
   if (!current_user_can('manage_options') || current_user_can('administrator'))
     add_submenu_page(
       "configuracion",
-    	__("Información del negocio"),
-    	__("Información del negocio"),
+    	__("Información corporativa"),
+    	__("Información corporativa"),
     	"edit_pages",
     	"info",
-    	"mybookinges_configuracion_info_negocio"
+    	"mybookinges_configuration_company_info"
     	);
 }
 
-function mybookinges_registra_opciones_info_negocio() {
+function mybookinges_register_options_company_info() {
 
   // Definición de opciones
-  add_option("info_negocio_nombre","","","yes");
-  add_option("info_negocio_razon_social","","","yes");
-  add_option("info_negocio_nif","","","yes");
+  add_option("company_info_trade_name","","","yes");
+  add_option("company_info_name","","","yes");
+  add_option("company_info_nif","","","yes");
 
-  add_option("info_negocio_direccion","","","yes");
-  add_option("info_negocio_telefono","","","yes");
-  add_option("info_negocio_email","","","yes");
+  add_option("company_info_adress","","","yes");
+  add_option("company_info_phone","","","yes");
+  add_option("company_info_email","","","yes");
 
-  add_option("info_negocio_twitter_url","","","yes");
-  add_option("info_negocio_facebook_url","","","yes");
-  add_option("info_negocio_instagram_url","","","yes");
-  add_option("info_negocio_linkedin_url","","","yes");
+  add_option("company_info_twitter_url","","","yes");
+  add_option("company_info_facebook_url","","","yes");
+  add_option("company_info_instagram_url","","","yes");
+  add_option("company_info_linkedin_url","","","yes");
 
-  add_option("contacto_seccion_titulo","","","yes");
-  add_option("contacto_seccion_subtitulo","","","yes");
-  add_option("contacto_mapa_url","","","yes");
+  add_option("contact_section_title","","","yes");
+  add_option("contact_section_subtitle","","","yes");
+  add_option("contact_map_code","","","yes");
 
   // Registro de opciones
-  register_setting("opciones_info_negocio", "info_negocio_nombre");
-  register_setting("opciones_info_negocio", "info_negocio_razon_social");
-  register_setting("opciones_info_negocio", "info_negocio_nif");
+  register_setting("options_company_info", "company_info_trade_name");
+  register_setting("options_company_info", "company_info_name");
+  register_setting("options_company_info", "company_info_nif");
 
-  register_setting("opciones_info_negocio", "info_negocio_direccion");
-  register_setting("opciones_info_negocio", "info_negocio_telefono");
-  register_setting("opciones_info_negocio", "info_negocio_email");
+  register_setting("options_company_info", "company_info_adress");
+  register_setting("options_company_info", "company_info_phone");
+  register_setting("options_company_info", "company_info_email");
 
-  register_setting("opciones_info_negocio", "info_negocio_twitter_url");
-  register_setting("opciones_info_negocio", "info_negocio_facebook_url");
-  register_setting("opciones_info_negocio", "info_negocio_instagram_url");
-  register_setting("opciones_info_negocio", "info_negocio_linkedin_url");
+  register_setting("options_company_info", "company_info_twitter_url");
+  register_setting("options_company_info", "company_info_facebook_url");
+  register_setting("options_company_info", "company_info_instagram_url");
+  register_setting("options_company_info", "company_info_linkedin_url");
 
-  register_setting("opciones_info_negocio", "contacto_seccion_titulo");
-  register_setting("opciones_info_negocio", "contacto_seccion_subtitulo");
-  register_setting("opciones_info_negocio", "contacto_mapa_url");
+  register_setting("options_company_info", "contact_section_title");
+  register_setting("options_company_info", "contact_section_subtitle");
+  register_setting("options_company_info", "contact_map_code");
 
 }
 
-function mybookinges_configuracion_info_negocio() {
+function mybookinges_configuration_company_info() {
   if (!current_user_can('edit_pages'))
       wp_die(__("No tienes acceso a esta página."));
   ?>
 
   <div class="wrap">
 
-    <!-- Titulo de la página -->
+    <!-- Page header -->
 
     <h1>
       Información del negocio<br>
@@ -80,11 +80,11 @@ function mybookinges_configuracion_info_negocio() {
 
     <?php settings_errors(); ?>
 
-    <!-- Formulario ----------------------------------------------------------->
+    <!-- Options form ----------------------------------------------------------->
 
     <form method="post" action="options.php">
 
-      <?php settings_fields('opciones_info_negocio'); ?>
+      <?php settings_fields('options_company_info'); ?>
 
       <!-- Información corporativa -->
 
@@ -93,15 +93,15 @@ function mybookinges_configuracion_info_negocio() {
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Denominación del negocio</th>
-          <td><input type="text" name="info_negocio_nombre" size="40" value="<?php echo get_option('info_negocio_nombre'); ?>" /></td>
+          <td><input type="text" name="company_info_trade_name" size="40" value="<?php echo get_option('company_info_trade_name'); ?>" /></td>
         </tr>
         <tr valign="top">
           <th scope="row">Razón social</th>
-          <td><input type="text" name="info_negocio_razon_social" size="40" value="<?php echo get_option('info_negocio_razon_social'); ?>" /></td>
+          <td><input type="text" name="company_info_name" size="40" value="<?php echo get_option('company_info_name'); ?>" /></td>
         </tr>
         <tr valign="top">
           <th scope="row">Número de Identificación Fiscal</th>
-          <td><input type="text" name="info_negocio_nif" size="40" value="<?php echo get_option('info_negocio_nif'); ?>" /></td>
+          <td><input type="text" name="company_info_nif" size="40" value="<?php echo get_option('company_info_nif'); ?>" /></td>
         </tr>
       </table>
 
@@ -114,15 +114,15 @@ function mybookinges_configuracion_info_negocio() {
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Dirección postal</th>
-          <td><input type="text" name="info_negocio_direccion" size="40" value="<?php echo get_option('info_negocio_direccion'); ?>" /></td>
+          <td><input type="text" name="company_info_adress" size="40" value="<?php echo get_option('company_info_adress'); ?>" /></td>
         </tr>
         <tr valign="top">
           <th scope="row">Teléfono de contacto</th>
-          <td><input type="text" name="info_negocio_telefono" size="40" value="<?php echo get_option('info_negocio_telefono'); ?>" /></td>
+          <td><input type="text" name="company_info_phone" size="40" value="<?php echo get_option('company_info_phone'); ?>" /></td>
         </tr>
         <tr valign="top">
           <th scope="row">Email de contacto</th>
-          <td><input type="text" name="info_negocio_email" size="40" value="<?php echo get_option('info_negocio_email'); ?>" /></td>
+          <td><input type="text" name="company_info_email" size="40" value="<?php echo get_option('company_info_email'); ?>" /></td>
         </tr>
       </table>
 
@@ -135,22 +135,22 @@ function mybookinges_configuracion_info_negocio() {
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Twitter</th>
-          <td><input type="text" name="info_negocio_twitter_url" size="40" value="<?php echo get_option('info_negocio_twitter_url'); ?>" />
+          <td><input type="text" name="company_info_twitter_url" size="40" value="<?php echo get_option('company_info_twitter_url'); ?>" />
           <br><span class="description">Pega aquí la URL del perfil de Twitter</span></td>
         </tr>
         <tr valign="top">
           <th scope="row">Facebook</th>
-          <td><input type="text" name="info_negocio_facebook_url" size="40" value="<?php echo get_option('info_negocio_facebook_url'); ?>" />
+          <td><input type="text" name="company_info_facebook_url" size="40" value="<?php echo get_option('company_info_facebook_url'); ?>" />
           <br><span class="description">Pega aquí la URL del perfil de Facebook</span></td>
         </tr>
         <tr valign="top">
           <th scope="row">Instagram</th>
-          <td><input type="text" name="info_negocio_instagram_url" size="40" value="<?php echo get_option('info_negocio_instagram_url'); ?>" />
+          <td><input type="text" name="company_info_instagram_url" size="40" value="<?php echo get_option('company_info_instagram_url'); ?>" />
           <br><span class="description">Pega aquí la URL del perfil de Instagram</span></td>
         </tr>
         <tr valign="top">
           <th scope="row">LinkedIn</th>
-          <td><input type="text" name="info_negocio_linkedin_url" size="40" value="<?php echo get_option('info_negocio_linkedin_url'); ?>" />
+          <td><input type="text" name="company_info_linkedin_url" size="40" value="<?php echo get_option('company_info_linkedin_url'); ?>" />
           <br><span class="description">Pega aquí la URL del perfil de LinkedIn</span></td>
         </tr>
       </table>
@@ -164,25 +164,25 @@ function mybookinges_configuracion_info_negocio() {
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Título de la sección</th>
-          <td><input type="text" name="contacto_seccion_titulo" size="40" value="<?php echo get_option('contacto_seccion_titulo'); ?>" />
+          <td><input type="text" name="contact_section_title" size="40" value="<?php echo get_option('contact_section_title'); ?>" />
           <br><span class="description">Aparece en la columna de información del template Mybooking-contact</span></td>
         </tr>
         <tr valign="top">
           <th scope="row">Subtítulo de la sección</th>
-          <td><input type="text" name="contacto_seccion_subtitulo" size="40" value="<?php echo get_option('contacto_seccion_subtitulo'); ?>" />
+          <td><input type="text" name="contact_section_subtitle" size="40" value="<?php echo get_option('contact_section_subtitle'); ?>" />
           <br><span class="description">Aparece en la columna de información del template Mybooking-contact</span></td>
         </tr>
         <tr valign="top">
           <th scope="row">Mapa de localización</th>
-          <td><input type="text" name="contacto_mapa_url" size="40" value="<?php echo get_option('contacto_mapa_url'); ?>" />
-          <br><span class="description">Pega aquí la URL del mapa en Google Maps</span></td>
+          <td><textarea name="contact_map_code" cols="37" rows="10"><?php echo get_option('contact_map_code'); ?></textarea>
+          <br><span class="description">Pega aquí el código de Google Maps</span></td>
         </tr>
       </table>
 
       <hr>
 
       <p class="submit">
-      	<input name="home_guardar" type="submit" class="button-primary" value="<?php _e('Guardar cambios') ?>" />
+      	<input name="company_info_save" type="submit" class="button-primary" value="<?php _e('Guardar cambios') ?>" />
       </p>
 
     </form>

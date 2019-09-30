@@ -23,13 +23,13 @@ get_header();
       <div class="contact-left-info">
         <div class="contact_details">
 
-          <!-- Cabecera -->
+          <!-- Header -->
 
           <div class="about">
 
-            <?php $titulo_contacto = get_option("contacto_seccion_titulo");
-        	    if ($titulo_contacto !== '') { ?>
-        	    	<h1><?php echo $titulo_contacto ?></h1>
+            <?php $title_contact = get_option("contact_section_title");
+        	    if ($title_contact !== '') { ?>
+        	    	<h1><?php echo $title_contact ?></h1>
         	    <?php }
         	  	else { ?>
         	  		<h4><?php _e("Contacto",'mybookinges'); ?></h4>
@@ -37,9 +37,9 @@ get_header();
 
             <hr />
 
-            <?php $texto_contacto = get_option("contacto_seccion_subtitulo");
-        	    if ($texto_contacto !== '') { ?>
-        	    	<h3><?php echo $texto_contacto ?></h3>
+            <?php $subtitle_contact = get_option("contact_section_subtitle");
+        	    if ($subtitle_contact !== '') { ?>
+        	    	<h3><?php echo $subtitle_contact ?></h3>
         	    <?php }
         	  	else { ?>
         	  		<h3><?php _e("Estaré encantado de atenderte en:",'mybookinges'); ?></h3>
@@ -47,7 +47,7 @@ get_header();
 
           </div>
 
-          <!-- Información de contacto -->
+          <!-- Contact info -->
 
           <div class="info">
 
@@ -56,9 +56,9 @@ get_header();
               <?php _e("Localización",'mybookinges'); ?>
             </h4>
 
-            <?php $direccion_contacto = get_option("info_negocio_direccion");
-        	    if ($direccion_contacto !== '') { ?>
-        	    	<p><?php echo $direccion_contacto ?></p>
+            <?php $company_adress = get_option("company_info_adress");
+        	    if ($company_adress !== '') { ?>
+        	    	<p><?php echo $company_adress ?></p>
         	  <?php } ?>
 
             <h4 class="color-blue-light">
@@ -66,9 +66,9 @@ get_header();
               <?php _e("Teléfono",'mybookinges'); ?>
             </h4>
 
-            <?php $telefono_contacto = get_option("info_negocio_telefono");
-        	    if ($telefono_contacto !== '') { ?>
-        	    	<p><?php echo $telefono_contacto ?></p>
+            <?php $company_phone = get_option("company_info_phone");
+        	    if ($company_phone !== '') { ?>
+        	    	<p><?php echo $company_phone ?></p>
         	  <?php } ?>
 
             <h4 class="color-blue-light">
@@ -76,62 +76,62 @@ get_header();
               <?php _e("Correo electrónico",'mybookinges'); ?>
             </h4>
 
-            <?php $email_contacto = get_option("info_negocio_email");
-        	    if ($email_contacto !== '') { ?>
-        	    	<p><?php echo $email_contacto ?></p>
+            <?php $company_email = get_option("company_info_email");
+        	    if ($company_email !== '') { ?>
+        	    	<p><?php echo $company_email ?></p>
         	  <?php } ?>
 
           </div>
         </div>
 
-        <!-- Enlaces sociales -->
+        <!-- Social links -->
 
         <ul class="social-links mt50">
 
           <li class="social__item">
-            <?php $twitter_contacto = get_option("info_negocio_twitter_url");
-        	    if ($twitter_contacto !== '') { ?>
-                <a href="<?php echo $twitter_contacto ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+            <?php $company_twitter = get_option("company_info_twitter_url");
+        	    if ($company_twitter !== '') { ?>
+                <a href="<?php echo $company_twitter ?>" target="_blank"><i class="fa fa-twitter"></i></a>
         	  <?php } ?>
           </li>
 
           <li class="social__item">
-            <?php $facebook_contacto = get_option("info_negocio_facebook_url");
-        	    if ($facebook_contacto !== '') { ?>
-                <a href="<?php echo $facebook_contacto ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+            <?php $company_facebook = get_option("company_info_facebook_url");
+        	    if ($company_facebook !== '') { ?>
+                <a href="<?php echo $company_facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a>
         	  <?php } ?>
           </li>
 
           <li class="social__item">
-            <?php $instagram_contacto = get_option("info_negocio_instagram_url");
-        	    if ($instagram_contacto !== '') { ?>
-                <a href="<?php echo $instagram_contacto ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+            <?php $company_instagram = get_option("company_info_instagram_url");
+        	    if ($company_instagram !== '') { ?>
+                <a href="<?php echo $company_instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a>
         	  <?php } ?>
           </li>
 
           <li class="social__item">
-            <?php $linkedin_contacto = get_option("info_negocio_linkedin_url");
-        	    if ($linkedin_contacto !== '') { ?>
-                <a href="<?php echo $linkedin_contacto ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <?php $company_linkedin = get_option("company_info_linkedin_url");
+        	    if ($company_linkedin !== '') { ?>
+                <a href="<?php echo $company_linkedin ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
         	  <?php } ?>
           </li>
 
         </ul>
       </div>
 
-      <!-- Mapa -->
+      <!-- Map -->
 
       <div class="contact-left-map">
-        <?php $mapa_contacto = get_option("contacto_mapa_url");
-    	    if ($mapa_contacto !== '') { ?>
-            <iframe
-              src="<?php echo $mapa_contacto ?>"
-              width="100%" height="553" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        <?php $contact_map = get_option("contact_map_code");
+    	    if ($contact_map !== '') { ?>
+              <?php echo $contact_map ?>
     	  <?php } ?>
+
       </div>
     </div>
 
-    <!-- Formulario -->
+    <!-- Contact form -->
 
     <div class="contact-form contact-right">
       <h4>Form</h4>
