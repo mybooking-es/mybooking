@@ -4,7 +4,7 @@
 
   <section class="widget widget_mybooking_rent_engine_selector reservation-step">
     <div class="">
-      <form name="widget_search_form" method="get" enctype="application/x-www-form-urlencoded" class="flex-form-sticky">
+      <form name="widget_search_form" method="get" enctype="application/x-www-form-urlencoded" class="flex-form">
         <div class="flex-form-item-box">
           <label>Lugar Entrega </label>
           <div class="flex-form-item">
