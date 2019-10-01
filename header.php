@@ -42,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		 </span>
 		</div>
 
-		<!-- Navegacion -->
+		<!-- Navigation -->
 
 		<nav class="navbar navbar-expand-md navbar-dark bg-nav">
 
@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="container-fluid">
 				<?php endif; ?>
 
-				<!-- Logo y branding -->
+				<!-- Logo & branding -->
 				<?php if ( ! has_custom_logo() ) { ?>
 
 					<?php if ( is_front_page() && is_home() ) : ?>
@@ -65,7 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<!-- Menú de WordPress -->
+				<!-- WordPress menu -->
 
 				<?php wp_nav_menu(
 					array(

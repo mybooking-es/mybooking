@@ -58,6 +58,7 @@ require_once('mybooking-options/mybooking-company-options.php');
  *
  */
 require_once('mybooking-posts/mybooking-testimonial.php');
+require_once('mybooking-posts/mybooking-promo.php');
 
 /**
  * Mybooking custom functions

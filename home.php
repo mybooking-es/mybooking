@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<!-- SECTION CABECERA --------------------------------------------------------->
+<!-- SECTION HEADER --------------------------------------------------------->
 
 <div class="hero-header-container">
   <div class="hero-header-content">
@@ -54,8 +54,6 @@ get_header();
 
     </div>
   </div>
-
-  <div class="diagonal-section"></div>
 
 </div>
 
@@ -161,6 +159,42 @@ if ($highlight_visible == 1) { ?>
   </div>
 
 <?php } ?>
+
+
+<!-- PROMO SECTION ----------------------------------------------------------->
+
+<?php //$promo_visible = get_option("home_promo_visibility");
+//if ($promo_visible == 1) { ?>
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+
+      <?php
+      $promo_args = array(
+        'post_type' => 'promo',
+        'posts_per_page'=> 1,
+      );
+      $promo_item = new WP_Query($promo_args); ?>
+      <?php  while ( $promo_item->have_posts() ) : $promo_item->the_post(); ?>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="promo_thumbnail">
+              <?php the_post_thumbnail(); ?>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <h2 class="promo_title display-4"><?php the_title(); ?></h2>
+          </div>
+        </div>
+
+      <?php endwhile; ?>
+
+    </div>
+</div>
+
+<?php //} ?>
 
 
 <!-- SECTION FEATURES -------------------------------------------------->
@@ -282,7 +316,7 @@ if ($features_visible == 1) { ?>
 <?php } ?>
 
 
-<!-- NEWS CAROUSEL ------------------------------------------------------------>
+<!-- NEWS SECTION ------------------------------------------------------------>
 
 <?php $news_visible = get_option("home_news_visibility");
 if ($news_visible == 1) { ?>
@@ -318,7 +352,7 @@ if ($news_visible == 1) { ?>
 
 <?php } ?>
 
-<!-- EL CONTENIDO ------------------------------------------------------------->
+<!-- PAGE CONTENT ------------------------------------------------------------->
 
 <div class="content flex-block-wrapper">
   <div class="centered-flex-block">
