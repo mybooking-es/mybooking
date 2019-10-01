@@ -35,8 +35,8 @@ gulp.task("watch", function() {
 // Copy Fontawesome fonts into dist folder
 gulp.task("cssimages", function() {
   return gulp
-    .src(paths.sass + "vendor/**/images/.{jpg,gif,png}")
-    .pipe(gulp.dest(PATHS.dist + "/css/images"));
+    .src(paths.sass + "/vendor/jquery.ui.custom/images/*.{jpg,gif,png}")
+    .pipe(gulp.dest(paths.css + "/images"));
 });
 
 // Run:
@@ -85,7 +85,7 @@ gulp.task("minifycss", function() {
 // Run:
 // gulp styles
 // Compile Sass and minify css
-gulp.task("styles", gulp.series("sass", "minifycss"));
+gulp.task("styles", gulp.series("sass", "minifycss", "cssimages"));
 
 // ----------------------------- JS MANAGEMENT --------------------------------
 
