@@ -1,9 +1,18 @@
 <?php
 /**
- * Registramos las áreas para widgets
+*		SIDEBARS
+*  	--------
+*		Overrides parent document on Understrap Theme
+*
+* 	Autor: Hector Asencio @Mybooking
+* 	Versión: 0.0.1
+*  	@package Understrap Mybooking Child
+*/
+
+/**
+ * Sidebars definition
  *
  */
-
 
 function mybooking_widgets_init() {
 

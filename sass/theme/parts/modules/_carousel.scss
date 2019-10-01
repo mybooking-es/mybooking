@@ -2,6 +2,7 @@
 // Module/carousel
 //==============================================
 
+/*
 .carrusel-de-uno .owl-item {
 	padding: 0;
 }
@@ -17,7 +18,15 @@
     max-height: 180px;
   }
 }
+*/
 
+.carrusel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*
 .owl-theme {
   position: relative;
 }
@@ -44,6 +53,7 @@
 .owl-theme .owl-controls .owl-buttons .owl-next {
   float: right;
 }
+*/
 
 /* BANNER */
 .banner {
