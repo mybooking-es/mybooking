@@ -28,7 +28,8 @@
   flex-direction: column;
   color: $white;
   h1 {
-    font-family: "Paytone One", sans-serif;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
   }
 }
 
@@ -77,13 +78,13 @@
   }
 
   .hero-header-left {
-    width: 60%;
+    width: 50%;
     background-color: transparent;
     height: 500px;
   }
 
   .hero-header-right {
-    width: 40%;
+    width: 50%;
   }
 
   .hero-header-content {

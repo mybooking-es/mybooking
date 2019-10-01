@@ -1018,7 +1018,8 @@ Remember you can use Bootstrap Spacing utility classes: https://getbootstrap.com
           flex-direction: column;
   color: #fff; }
   .hero-header-left h1 {
-    font-family: "Paytone One", sans-serif; }
+    font-family: "Inter", sans-serif;
+    font-weight: 900; }
 
 .aligner {
   display: -webkit-box;
@@ -1072,11 +1073,11 @@ Remember you can use Bootstrap Spacing utility classes: https://getbootstrap.com
     bottom: -10%;
     height: 150px; }
   .hero-header-left {
-    width: 60%;
+    width: 50%;
     background-color: transparent;
     height: 500px; }
   .hero-header-right {
-    width: 40%; }
+    width: 50%; }
   .hero-header-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1297,27 +1298,6 @@ ul.social-links,
     right: 1rem;
     top: 1.2rem; } }
 
-<<<<<<< HEAD
-.flex-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  background-color: #e0e0e0;
-  padding: 10px; }
-  .flex-form .btn {
-    height: 48px;
-    margin-top: 32px; }
-  .flex-form input.hasDatepicker {
-    max-width: 210px !important; }
-=======
 .flex-form, .flex-form-sticky {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1340,22 +1320,17 @@ ul.social-links,
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   background-color: #e0e0e0;
   position: fixed;
+  width: 100%;
   left: 0;
-  right: 0;
   top: 0;
   z-index: 100; }
   .flex-form-sticky .btn {
     height: 48px;
     margin-top: 32px; }
   .flex-form-sticky input.hasDatepicker {
-    width: 100px !important; }
->>>>>>> 28771cc128e6b9e334a400a83b92f40c4baa842f
+    max-width: 130px; }
 
 .flex-form-item-box {
   display: -webkit-box;
@@ -1365,29 +1340,16 @@ ul.social-links,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-<<<<<<< HEAD
-=======
-  margin-bottom: 12px;
   width: 100%;
->>>>>>> 28771cc128e6b9e334a400a83b92f40c4baa842f
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   margin: 5px; }
 
 .flex-form-item {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch; }
+  display: flex; }
   .flex-form-item select {
-<<<<<<< HEAD
-=======
     width: 100%;
->>>>>>> 28771cc128e6b9e334a400a83b92f40c4baa842f
-    min-width: 78px; }
+    min-width: 98px; }
 
 .flex-icon {
   display: -webkit-box;
@@ -1401,17 +1363,10 @@ ul.social-links,
   padding: 5px 10px;
   height: 48px;
   color: #616161; }
-<<<<<<< HEAD
 
-.box-1,
-.box-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-=======
->>>>>>> 28771cc128e6b9e334a400a83b92f40c4baa842f
+@media (max-width: 575.98px) {
+  input.hasDatepicker {
+    max-width: 130px; } }
 
 select {
   border-radius: 0px;

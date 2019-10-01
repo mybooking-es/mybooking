@@ -41,3 +41,15 @@
 .navbar .dropdown-item {
   color: $gray-800;
 }
+
+// .navbar-collapse {
+//   background-color: white;
+//   .navbar-nav .nav-link {
+//     color: #000;
+//   }
+// }
+// navbar media queries
+// Large devices (desktops, less than 1200px)
+// En movil y hasta 1199.98px el fondo es blanco y el logo tiene que ser verde
+@media (max-width: 1199.98px) {
+}
