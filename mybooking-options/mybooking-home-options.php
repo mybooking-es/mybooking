@@ -58,7 +58,8 @@ function mybookinges_register_options_home() {
   add_option("home_features_three_title","","","yes");
   add_option("home_features_three_text","","","yes");
 
-  add_option("home_carousel_visibility","","","yes");
+  add_option("home_news_visibility","","","yes");
+  add_option("home_testimonial_carousel_visibility","","","yes");
 
   // Register options
   register_setting("options_home", "home_hero_title");
@@ -85,7 +86,8 @@ function mybookinges_register_options_home() {
   register_setting("options_home", "home_features_three_title");
   register_setting("options_home", "home_features_three_text");
 
-  register_setting("options_home", "home_carousel_visibility");
+  register_setting("options_home", "home_news_visibility");
+  register_setting("options_home", "home_testimonial_carousel_visibility");
 
 }
 
@@ -259,16 +261,31 @@ function mybookinges_configuration_home() {
 
       <hr>
 
-      <!-- Section carousel -->
+      <!-- Section news -->
 
-      <h2>Carrusel</h2>
+      <h2>Noticias destacadas</h2>
 
       <table class="form-table">
         <tr valign="top">
           <th scope="row">Visibilidad</th>
           <td>
-          <?php $options = get_option( "home_carousel_visibility" ); ?>
-          <input type="checkbox" name="home_carousel_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
+          <?php $options = get_option( "home_news_visibility" ); ?>
+          <input type="checkbox" name="home_news_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
+        </tr>
+      </table>
+
+      <hr>
+
+      <!-- Section testimonial -->
+
+      <h2>Carrusel de testimonios</h2>
+
+      <table class="form-table">
+        <tr valign="top">
+          <th scope="row">Visibilidad</th>
+          <td>
+          <?php $options = get_option( "home_testimonial_carousel_visibility" ); ?>
+          <input type="checkbox" name="home_testimonial_carousel_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
         </tr>
       </table>
 

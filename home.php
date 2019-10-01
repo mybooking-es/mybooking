@@ -263,7 +263,6 @@ if ($features_visible == 1) { ?>
         <?php }
             else { ?>
               <h3><?php _e("Choose",'mybookinges'); ?></h3>
-
         <?php } ?>
 
         <hr />
@@ -283,6 +282,42 @@ if ($features_visible == 1) { ?>
 <?php } ?>
 
 
+<!-- NEWS CAROUSEL ------------------------------------------------------------>
+
+<?php $news_visible = get_option("home_news_visibility");
+if ($news_visible == 1) { ?>
+
+  <div class="container">
+    <div class="news_container">
+      <div class="row">
+
+        <?php
+        $news_args = array(
+          'post_type' => 'post',
+          'category_name' => 'mybooking-home',
+          'posts_per_page'=> 3,
+        );
+        $news_item = new WP_Query($news_args); ?>
+        <?php  while ( $news_item->have_posts() ) : $news_item->the_post(); ?>
+
+          <div class="col-md-4">
+            <div class="news_thumbnail">
+              <?php the_post_thumbnail(); ?>
+            </div>
+            <h2 class="news_title"><?php the_title(); ?></h2>
+            <div class="news_extract">
+              <?php echo the_excerpt(); ?>
+            </div>
+          </div>
+
+        <?php endwhile; ?>
+
+      </div>
+    </div>
+  </div>
+
+<?php } ?>
+
 <!-- EL CONTENIDO ------------------------------------------------------------->
 
 <div class="content flex-block-wrapper">
@@ -296,32 +331,32 @@ if ($features_visible == 1) { ?>
 </div>
 
 
-<!-- CAROUSEL ----------------------------------------------------------------->
+<!-- TESTIMONIAL CAROUSEL ----------------------------------------------------->
 
-<?php $carrusel_visible = get_option("home_carousel_visibility");
-if ($carrusel_visible == 1) { ?>
+<?php $testimonial_carousel_visible = get_option("home_testimonial_carousel_visibility");
+if ($testimonial_carousel_visible == 1) { ?>
 
-  <div class="content">
-    <div class="centered-flex-block">
-      <div class="-carrusel-un-item carrusel-de-uno owl-carousel owl-theme">
+  <div class="-carrusel-un-item carrusel-de-uno owl-carousel owl-theme">
+    <div class="container">
+      <div class="row justify-content-center">
 
         <?php
-        $news_args = array(
-          'post_type' => 'post',
-          'category_name' => 'portada',
-          'posts_per_page'=> 6,
-        );
-        $news_item = new WP_Query($news_args); ?>
-        <?php  while ( $news_item->have_posts() ) : $news_item->the_post(); ?>
-          <div class="carrusel-item banner">
-            <?php the_post_thumbnail(); ?>
-            <div class="banner-franja">
-              <h2 class="banner-titulo"><?php the_title(); ?></h2>
-              <a class="banner-enlace button tiny" href="<?php the_permalink(); ?>" title="<?php esc_attr__('Llegir','caritaspress'); ?> <?php the_title(); ?>">
-                <?php _e('Llegir','mybookinges'); ?>
-              </a>
-            </div>
+        $testimonial_args = array('post_type' => 'testimonial');
+        $testimonial_item = new WP_Query($testimonial_args);
+        while ( $testimonial_item->have_posts() ) : $testimonial_item->the_post();
+        ?>
+
+          <div class="col-md-6">
+            <blockquote class="blockquote">
+              <p class="mb-0 text-centered">
+                <?php the_content(); ?>
+              </p>
+              <footer class="blockquote-footer">
+                <?php the_title(); ?>
+              </footer>
+            </blockquote>
           </div>
+
         <?php endwhile; ?>
 
       </div>
