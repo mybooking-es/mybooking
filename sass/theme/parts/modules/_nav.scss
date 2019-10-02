@@ -2,9 +2,40 @@
 // Module/nav
 //==============================================
 
+// Call to action
+.cta {
+  margin-top: 0;
+  position: relative;
+  z-index: 30;
+  padding: 0.3rem;
+  background-color: $gray-200;
+  a {
+    color: $gray-800;
+    &:hover {
+      color: lighten($gray-800, 10%);
+      text-decoration: none;
+    }
+  }
+}
+.custom-logo-link {
+  width: 200px;
+}
+
+/* Navbar */
+.navbar-dark .navbar-toggler {
+  border: none;
+}
+.navbar {
+  z-index: 10;
+}
+.navbar-collapse {
+  .navbar-nav .nav-link {
+    color: $white;
+  }
+}
+
 .bg-nav {
   width: 100%;
-  height: 100px;
   margin-top: 0;
   background: $gradient-end;
   /* fallback for old browsers */
@@ -12,20 +43,6 @@
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, $gradient-start, $gradient-end);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.home .bg-nav {
-  background-color: transparent;
-  background: none;
-}
-
-/* Navbar */
-
-.navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  margin-bottom: 100px;
 }
 
 .navbar-nav .nav-link {
@@ -42,14 +59,13 @@
   color: $gray-800;
 }
 
-// .navbar-collapse {
-//   background-color: white;
-//   .navbar-nav .nav-link {
-//     color: #000;
-//   }
-// }
-// navbar media queries
-// Large devices (desktops, less than 1200px)
-// En movil y hasta 1199.98px el fondo es blanco y el logo tiene que ser verde
-@media (max-width: 1199.98px) {
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .home .bg-nav {
+    background: none;
+  }
+  .cta {
+    padding: 0.4rem;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
 }
