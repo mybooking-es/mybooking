@@ -34,11 +34,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<!-- Topbar -->
 
-		<div class=“cta cta__bg cta__text”>
-		 <span><i class=“fas fa-phone”></i> +34 888 88 88 88</span>
-		 <span class=“mr-auto ml-3”>
-			 <i class=“far fa-envelope”></i>
-			 <a class=“color-gray-800” href=“mailto:info@johndoe.com”>info@johndoe.com</a>
+		<div class="cta cta__bg cta__text">
+		 <span><i class="fa fa-phone"></i> +34 888 88 88 88</span>
+		 <span class="mr-auto ml-3">
+			 <i class="fa fa-envelope"></i>
+			 <a class="color-gray-800" href="mailto:info@johndoe.com">info@johndoe.com</a>
 		 </span>
 		</div>
 
