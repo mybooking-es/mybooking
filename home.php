@@ -173,6 +173,7 @@ if ($highlight_visible == 1) { ?>
       <?php
       $promo_args = array(
         'post_type' => 'promo',
+        'category_name' => 'activo',
         'posts_per_page'=> 1,
       );
       $promo_item = new WP_Query($promo_args); ?>
