@@ -35,4 +35,29 @@ function create_promo() {
   );
 }
 add_action( 'init', 'create_promo' );
+
+// TAXONOMIAS
+function mybooking_create_promo_taxonomies() {
+    register_taxonomy(
+        'estado',
+        'promo',
+        array(
+            'labels' => array(
+                'name' => 'Estados de la promoción',
+                'add_new_item' => 'Crea un nuevo estado para las promociones',
+                'new_item_name' => 'Nuevo estado'
+            ),
+            'show_ui' => true,
+            'show_tagcloud' => false,
+            'hierarchical' => true
+        )
+    );
+    if (!term_exists( 'Activo', 'estado') ){
+        wp_insert_term( 'Activo', 'estado' );
+    }
+    if (!term_exists( 'Inactivo', 'estado') ){
+        wp_insert_term( 'Inactivo', 'estado' );
+    }
+}
+add_action( 'init', 'mybooking_create_promo_taxonomies', 0 );
 ?>
