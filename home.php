@@ -173,7 +173,13 @@ if ($highlight_visible == 1) { ?>
       <?php
       $promo_args = array(
         'post_type' => 'promo',
-        'category_name' => 'activo',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'estado',
+            'field' => 'slug',
+            'terms' => array( 'activo' )
+          ),
+        ),
         'posts_per_page'=> 1,
       );
       $promo_item = new WP_Query($promo_args); ?>
@@ -187,12 +193,15 @@ if ($highlight_visible == 1) { ?>
           </div>
           <div class="col-md-12">
             <h2 class="promo_title display-4"><?php the_title(); ?></h2>
+            <a class="btn btn-primary" href="<?php the_permalink(); ?>" >
+              <?php esc_html_e( 'Ver promoción', 'mybookinges' ); ?>
+            </a>
           </div>
         </div>
 
       <?php endwhile; ?>
 
-    </div>
+  </div>
 </div>
 
 <?php //} ?>

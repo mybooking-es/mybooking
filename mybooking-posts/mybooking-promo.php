@@ -43,9 +43,9 @@ function mybooking_create_promo_taxonomies() {
         'promo',
         array(
             'labels' => array(
-                'name' => 'Estado de la promoción',
-                'add_new_item' => 'Asigna un estado a la promoción',
-                'new_item_name' => "Nuevo estado"
+                'name' => 'Estados de la promoción',
+                'add_new_item' => 'Crea un nuevo estado para las promociones',
+                'new_item_name' => 'Nuevo estado'
             ),
             'show_ui' => true,
             'show_tagcloud' => false,
@@ -55,7 +55,7 @@ function mybooking_create_promo_taxonomies() {
     if (!term_exists( 'Activo', 'estado') ){
         wp_insert_term( 'Activo', 'estado' );
     }
-    if (!term_exists( 'Inactivo', 'estado') ){ 
+    if (!term_exists( 'Inactivo', 'estado') ){
         wp_insert_term( 'Inactivo', 'estado' );
     }
 }
