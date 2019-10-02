@@ -3189,7 +3189,8 @@ Remember you can use Bootstrap Spacing utility classes: https://getbootstrap.com
 ==================================== */
 @media (min-width: 768px) {
   .hero-header-container {
-    padding-bottom: 200px; }
+    padding-bottom: 200px;
+    margin-top: -102px; }
   .diagonal-section {
     bottom: -10%;
     height: 150px; }
@@ -3558,9 +3559,33 @@ label {
 .custom-icon-select {
   top: 16px; }
 
+.cta {
+  margin-top: 0;
+  position: relative;
+  z-index: 30;
+  padding: 0.3rem;
+  background-color: #eeeeee; }
+  .cta a {
+    color: #424242; }
+    .cta a:hover {
+      color: #5c5c5c;
+      text-decoration: none; }
+
+.custom-logo-link {
+  width: 200px; }
+
+/* Navbar */
+.navbar-dark .navbar-toggler {
+  border: none; }
+
+.navbar {
+  z-index: 10; }
+
+.navbar-collapse .navbar-nav .nav-link {
+  color: #fff; }
+
 .bg-nav {
   width: 100%;
-  height: 100px;
   margin-top: 0;
   background: #5f2c82;
   /* fallback for old browsers */
@@ -3568,18 +3593,6 @@ label {
   background: -webkit-gradient(linear, left top, right top, from(#49a09d), to(#5f2c82));
   background: linear-gradient(to right, #49a09d, #5f2c82);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
-
-.home .bg-nav {
-  background-color: transparent;
-  background: none; }
-
-/* Navbar */
-.navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  margin-bottom: 100px; }
 
 .navbar-nav .nav-link {
   color: #fff;
@@ -3591,6 +3604,13 @@ label {
 
 .navbar .dropdown-item {
   color: #424242; }
+
+@media (min-width: 992px) {
+  .home .bg-nav {
+    background: none; }
+  .cta {
+    padding: 0.4rem;
+    background-color: rgba(255, 255, 255, 0.8); } }
 
 .icons-wrapper {
   display: -webkit-box;
