@@ -61,6 +61,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
+<a href="#0" class="cd-top">Top</a>
+
 </body>
 
 </html>

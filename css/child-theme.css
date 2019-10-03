@@ -3501,6 +3501,9 @@ ul.social-links,
   input.hasDatepicker {
     max-width: 130px; } }
 
+/* ============================================
+  ===========  Reglas para todos los Formularios
+  ============================================== */
 select {
   border-radius: 0px;
   padding: 0 0.8rem;
@@ -3559,6 +3562,16 @@ label {
 .custom-icon-select {
   top: 16px; }
 
+.custom-form input[type="text"],
+.custom-form input[type="password"],
+.custom-form .ui-autocomplete-input,
+.custom-form textarea,
+.custom-form .uneditable-input {
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
 .cta {
   margin-top: 0;
   position: relative;
@@ -3608,8 +3621,7 @@ label {
 @media (min-width: 992px) {
   .home .bg-nav {
     background: none; }
-  .cta {
-    padding: 0.4rem;
+  .home .cta {
     background-color: rgba(255, 255, 255, 0.8); } }
 
 .icons-wrapper {
@@ -3683,7 +3695,9 @@ label {
   .header-card h1 {
     color: #fff;
     height: 150px;
-    font-family: "Paytone One", sans-serif; }
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    line-height: 1; }
 
 .separator {
   height: 125px;
@@ -3695,23 +3709,26 @@ label {
   background: #f3efe4; }
 
 .product-wrapper {
-  width: 150px;
   position: relative; }
 
 .product-image {
-  height: 150px;
+  width: 200px;
   position: absolute;
-  top: -100px; }
+  top: 0;
+  left: 25%;
+  margin-top: -100px; }
 
 .footer-card .product-price {
   margin: 0;
   font-size: 1.5em;
-  padding: 0.5em; }
+  padding: 0.5em;
+  font-weight: 700; }
 
 .footer-card .short-description {
   margin: 0;
-  font-size: 0.8em;
-  padding-top: 5em; }
+  font-size: 0.9em;
+  padding-top: 5em;
+  font-weight: 200; }
 
 #steps {
   width: 100%;
@@ -3940,17 +3957,18 @@ span.stopa {
     max-width: 40%; } }
 
 .product-detail {
+  margin-top: 30px;
   background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
@@ -3961,7 +3979,59 @@ span.stopa {
     color: #616161; }
 
 .product-name {
-  font-family: "Paytone One", sans-serif; }
+  font-family: "Inter", sans-serif;
+  font-weight: 900; }
+
+@media (min-width: 768px) {
+  .product-detail {
+    margin-top: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; } }
+
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(66, 66, 66, 0.8) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s; }
+  .cd-top.cd-is-visible, .cd-top.cd-fade-out,
+  .no-touch .cd-top:hover {
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s; }
+  .cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1; }
+  .cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: 0.5; }
+  .no-touch .cd-top:hover {
+    background-color: #424242;
+    opacity: 1; }
+  @media only screen and (min-width: 768px) {
+    .cd-top {
+      right: 20px;
+      bottom: 20px; } }
+  @media only screen and (min-width: 1024px) {
+    .cd-top {
+      height: 60px;
+      width: 60px;
+      right: 30px;
+      bottom: 30px; } }
 
 .shadow-bottom {
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);

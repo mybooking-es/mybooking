@@ -59,7 +59,9 @@
   }
 }
 
-// Reglas para todos los Formularios
+/* ============================================
+  ===========  Reglas para todos los Formularios
+  ============================================== */
 select {
   border-radius: 0px;
   padding: 0 0.8rem;
@@ -104,7 +106,6 @@ textarea,
   border-radius: 0;
   height: 48px;
 }
-// Para los formularios que no has maquetado con flex box
 label {
   position: relative;
 }
@@ -118,4 +119,15 @@ label {
 .custom-icon-select {
   @extend .custom-icon;
   top: 16px;
+}
+.custom-form {
+  input[type="text"],
+  input[type="password"],
+  .ui-autocomplete-input,
+  textarea,
+  .uneditable-input {
+    border: 1px solid $gray-400;
+    border-radius: 3px;
+    box-shadow: none;
+  }
 }

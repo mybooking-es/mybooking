@@ -380,9 +380,9 @@ if ($news_visible == 1) { ?>
 <?php $testimonial_carousel_visible = get_option("home_testimonial_carousel_visibility");
 if ($testimonial_carousel_visible == 1) { ?>
 
-  <div class="-carrusel-un-item carrusel-de-uno owl-carousel owl-theme">
-    <div class="container">
-      <div class="row justify-content-center">
+  <div class="container -carrusel-un-item carrusel-de-uno owl-carousel owl-theme">
+    <!--div class="container">
+      <div class="row justify-content-center"-->
 
         <?php
         $testimonial_args = array('post_type' => 'testimonial');
@@ -390,7 +390,7 @@ if ($testimonial_carousel_visible == 1) { ?>
         while ( $testimonial_item->have_posts() ) : $testimonial_item->the_post();
         ?>
 
-          <div class="col-md-6">
+          <div class="col-md-12">
             <blockquote class="blockquote">
               <p class="mb-0 text-centered">
                 <?php the_content(); ?>
@@ -403,8 +403,8 @@ if ($testimonial_carousel_visible == 1) { ?>
 
         <?php endwhile; ?>
 
-      </div>
-    </div>
+      <!--/div>
+    </div-->
   </div>
 
 <?php } ?>

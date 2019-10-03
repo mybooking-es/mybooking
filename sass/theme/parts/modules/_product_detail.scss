@@ -1,9 +1,10 @@
 // Complete
 .product-detail {
+  margin-top: 30px;
   background: $white;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   ul {
     list-style: none;
@@ -13,5 +14,14 @@
   }
 }
 .product-name {
-  font-family: "Paytone One", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .product-detail {
+    margin-top: 0;
+    flex-direction: row;
+  }
 }
