@@ -29,7 +29,7 @@ get_header();
             <h1><?php echo $title_hero ?></h1>
         <?php }
     	  	else { ?>
-            <h1><?php _e("Título genérico",'mybookinges'); ?></h1>
+            <h1><?php _e("Mybooking WordPress Theme para negocios de alquiler de vehículos",'mybookinges'); ?></h1>
         <?php } ?>
 
         <?php $text_hero = get_option("home_hero_text");
@@ -37,8 +37,7 @@ get_header();
             <p><?php echo $text_hero ?></p>
         <?php }
     	  	else { ?>
-            <p><?php _e("Texto genérico sin Lorem ipsum dolor amet flannel mumblecore air plant iceland hexagon
-            tote bag twee pok pok scenester selfies.",'mybookinges'); ?></p>
+            <p><?php _e("Lanza tu web de reservas para tu negocio de alquiler de vehiculos sin esfuerzo. Instalar y listo.",'mybookinges'); ?></p>
         <?php } ?>
 
       </div>
@@ -73,7 +72,7 @@ if ($highlight_visible == 1) { ?>
             <h1><?php echo $title_highlight_header ?></h1>
       <?php }
           else { ?>
-            <h1><?php _e("Título sección",'mybookinges'); ?></h1>
+            <h1><?php _e("Lo que te ofrece",'mybookinges'); ?></h1>
       <?php } ?>
 
       <?php $text_highlight_header = get_option("home_highlight_header_text");
@@ -81,8 +80,7 @@ if ($highlight_visible == 1) { ?>
             <p><?php echo $text_highlight_header ?></p>
       <?php }
           else { ?>
-            <p><?php _e("Texto destacado sin Lorem ipsum dolor amet flannel mumblecore air plant iceland hexagon
-            tote bag twee pok pok scenester selfies.",'mybookinges'); ?></p>
+            <p><?php _e("Mybooking Wordpress Theme es el punto de partida perfecto para tu negocio de alquiler porque ofrece las funcionalidades que necesitas para empezar ahora mismo.",'mybookinges'); ?></p>
       <?php } ?>
 
     </div>
@@ -108,7 +106,7 @@ if ($highlight_visible == 1) { ?>
       <?php }
           else { ?>
             <br>
-            <h5><?php _e("We don't charge deposit",'mybookinges'); ?></h5>
+            <h5><?php _e("Plugin para conectar tu cuenta de Mybooking",'mybookinges'); ?></h5>
       <?php } ?>
 
     </div>
@@ -130,7 +128,7 @@ if ($highlight_visible == 1) { ?>
       <?php }
           else { ?>
             <br>
-            <h5><?php _e("Competitive prices",'mybookinges'); ?></h5>
+            <h5><?php _e("Opciones de personalización",'mybookinges'); ?></h5>
       <?php } ?>
 
     </div>
@@ -152,7 +150,7 @@ if ($highlight_visible == 1) { ?>
       <?php }
           else { ?>
             <br>
-            <h5><?php _e("Extra drivers included",'mybookinges'); ?></h5>
+            <h5><?php _e("Gestión sencilla de contenidos y promociones",'mybookinges'); ?></h5>
       <?php } ?>
 
     </div>
@@ -163,8 +161,8 @@ if ($highlight_visible == 1) { ?>
 
 <!-- PROMO SECTION ----------------------------------------------------------->
 
-<?php //$promo_visible = get_option("home_promo_visibility");
-//if ($promo_visible == 1) { ?>
+<?php $promo_visible = get_option("home_promo_visibility");
+if ($promo_visible == 1) { ?>
 
 
 <div class="jumbotron jumbotron-fluid">
@@ -204,7 +202,7 @@ if ($highlight_visible == 1) { ?>
   </div>
 </div>
 
-<?php //} ?>
+<?php } ?>
 
 
 <!-- SECTION FEATURES -------------------------------------------------->
@@ -222,7 +220,7 @@ if ($features_visible == 1) { ?>
             <h1 class="color-white"><?php echo $title_features_header ?></h1>
       <?php }
           else { ?>
-            <h1 class="color-white"><?php _e("How it works",'mybookinges'); ?></h1>
+            <h1 class="color-white"><?php _e("Cómo funciona",'mybookinges'); ?></h1>
       <?php } ?>
 
       <?php $text_features_header = get_option("home_features_header_text");
@@ -230,8 +228,7 @@ if ($features_visible == 1) { ?>
             <p class="color-white"><?php echo $text_features_header ?></p>
       <?php }
           else { ?>
-            <p class="color-white"><?php _e("Texto caracteristicas sin Lorem ipsum dolor amet flannel mumblecore air plant iceland hexagon
-            tote bag twee pok pok scenester selfies.",'mybookinges'); ?></p>
+            <p class="color-white"><?php _e("Mybooking WordPress Theme es sencillo de instalar y configurar para que puedas lanzar tu web de reservas en el menor tiempo posible",'mybookinges'); ?></p>
       <?php } ?>
 
     </div>
@@ -259,7 +256,7 @@ if ($features_visible == 1) { ?>
               <h3><?php echo $title_features_one ?></h3>
         <?php }
             else { ?>
-              <h3><?php _e("Choose",'mybookinges'); ?></h3>
+              <h3><?php _e("Instala",'mybookinges'); ?></h3>
         <?php } ?>
 
         <hr />
@@ -269,7 +266,7 @@ if ($features_visible == 1) { ?>
               <p><?php echo $text_features_one ?></p>
         <?php }
             else { ?>
-              <p><?php _e("Texto features Duis finibus odio sit amet nisi dictum et viverra libero semper donec.",'mybookinges'); ?></p>
+              <p><?php _e("Mybooking WordPress se integra con tu sitio WordPress existente o te permite empezar desde cero. Tu decides.",'mybookinges'); ?></p>
         <?php } ?>
 
       </div>
@@ -282,7 +279,7 @@ if ($features_visible == 1) { ?>
               <h3><?php echo $title_features_two ?></h3>
         <?php }
             else { ?>
-              <h3><?php _e("Your",'mybookinges'); ?></h3>
+              <h3><?php _e("Configura",'mybookinges'); ?></h3>
 
         <?php } ?>
 
@@ -293,7 +290,7 @@ if ($features_visible == 1) { ?>
               <p><?php echo $text_features_two ?></p>
         <?php }
             else { ?>
-              <p><?php _e("Texto features Duis finibus odio sit amet nisi dictum et viverra libero semper donec.",'mybookinges'); ?></p>
+              <p><?php _e("Mybooking WordPress está pensado para que la configuración de tu sitio sea rápida y sencilla.",'mybookinges'); ?></p>
         <?php } ?>
 
       </div>
@@ -306,7 +303,7 @@ if ($features_visible == 1) { ?>
               <h3><?php echo $title_features_three ?></h3>
         <?php }
             else { ?>
-              <h3><?php _e("Choose",'mybookinges'); ?></h3>
+              <h3><?php _e("Reserva",'mybookinges'); ?></h3>
         <?php } ?>
 
         <hr />
@@ -316,7 +313,7 @@ if ($features_visible == 1) { ?>
               <p><?php echo $text_features_three ?></p>
         <?php }
             else { ?>
-              <p><?php _e("Texto features Duis finibus odio sit amet nisi dictum et viverra libero semper donec.",'mybookinges'); ?></p>
+              <p><?php _e("Nuestro plugin conecta tu sitio web con el back-office en segundos y sin quebraderos de cabeza.",'mybookinges'); ?></p>
         <?php } ?>
 
       </div>

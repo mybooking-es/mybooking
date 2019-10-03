@@ -37,6 +37,8 @@ function mybookinges_register_options_home() {
   add_option("home_hero_title","","","yes");
   add_option("home_hero_text","","","yes");
 
+  add_option("home_promo_visibility","","","yes");
+
   add_option("home_highlight_visibility","","","yes");
   add_option("home_highlight_header_title","","","yes");
   add_option("home_highlight_header_text","","","yes");
@@ -64,6 +66,8 @@ function mybookinges_register_options_home() {
   // Register options
   register_setting("options_home", "home_hero_title");
   register_setting("options_home", "home_hero_text");
+
+  register_setting("options_home", "home_promo_visibility");
 
   register_setting("options_home", "home_highlight_visibility");
   register_setting("options_home", "home_highlight_header_title");
@@ -130,6 +134,21 @@ function mybookinges_configuration_home() {
           <th scope="row">Texto del eslogan</th>
           <td><textarea name="home_hero_text" cols="37" rows="10"><?php echo get_option('home_hero_text'); ?></textarea>
           <br><span class="description">Añade un texto personalizado para la cabecera de la página</span></td>
+        </tr>
+      </table>
+
+      <hr>
+
+      <!-- Section promo -->
+
+      <h2>Promociones</h2>
+
+      <table class="form-table">
+        <tr valign="top">
+          <th scope="row">Visibilidad</th>
+          <td>
+          <?php $options = get_option( "home_promo_visibility" ); ?>
+          <input type="checkbox" name="home_promo_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
         </tr>
       </table>
 

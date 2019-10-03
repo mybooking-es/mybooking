@@ -47,6 +47,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<div class="centered-flex-block">
 			    <div class="color-transparent-white">&copy; 2019 mybooking</div>
+					<?php $company_trade_name = get_option("company_info_trade_name");
+	            if ($company_trade_name !== '') { ?>
+	              <div class="color-transparent-white">&copy; <?php echo $company_trade_name ?></div>
+	        <?php }
+	            else { ?>
+								<div class="color-transparent-white">&copy; <?php _e("2019 mybooking",'mybookinges'); ?></div>
+	        <?php } ?>
 			  </div>
 
 			</div><!-- .site-info -->
