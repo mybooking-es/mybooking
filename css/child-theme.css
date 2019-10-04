@@ -1901,7 +1901,7 @@ body .ui-tooltip {
 .ui-progressbar .ui-progressbar-value {
   margin: -1px;
   height: 100%;
-  /*this can be removed if ui-widget-header is blue*/
+  /*this can be removed if ui-widget-header is brand-primary*/
   color: #ffffff;
   background-color: #0064cd;
   background-repeat: repeat-x;
@@ -2463,23 +2463,17 @@ body {
 .color-black {
   color: #2e3131; }
 
-.color-blue {
-  color: #3a539b; }
-
-.bg-blue {
-  background-color: #3a539b; }
-
-.color-blue-light {
-  color: #00b5cc; }
-
-.bg-blue-light {
-  background-color: #00b5cc; }
-
-.color-gradient-start {
+.brand-primary {
   color: #49a09d; }
 
-.color-gradient-end {
+.brand-secondary {
   color: #5f2c82; }
+
+.bg-brand-brimary {
+  background-color: #49a09d; }
+
+.bg-brand-secondary {
+  background-color: #5f2c82; }
 
 .color-gray-50 {
   color: #fafafa; }
@@ -3326,14 +3320,26 @@ ul.social-links,
   .contact-left-map {
     display: none; } }
 
+.news_container {
+  padding: 50px 0; }
+
+.news_thumbnail {
+  border-radius: 3px;
+  margin-bottom: 30px; }
+  .news_thumbnail img {
+    border-radius: 4px; }
+
+.news_extract {
+  color: #757575; }
+
 .btn-primary,
 .btn-primary:not(:disabled):not(.disabled):active {
-  background-color: #3a539b;
-  border-color: #3a539b; }
+  background-color: #49a09d;
+  border-color: #49a09d; }
   .btn-primary:hover,
   .btn-primary:not(:disabled):not(.disabled):active:hover {
-    background-color: #2c3f76;
-    border-color: #2c3f76; }
+    background-color: #397d7b;
+    border-color: #397d7b; }
 
 /*
 .carrusel-de-uno .owl-item {
@@ -3653,9 +3659,10 @@ label {
   text-align: center;
   margin-bottom: 30px;
   width: 50%; }
-  .icon-panel i {
-    font-size: 4em;
-    color: #3a539b; }
+  .icon-panel img {
+    width: 4em; }
+  .icon-panel h5 {
+    margin-top: 30px !important; }
 
 @media (min-width: 992px) {
   .icon-panel {
@@ -3844,7 +3851,7 @@ label {
   position: relative; }
 
 .feature > hr {
-  color: #73b5e8;
+  color: #49a09d;
   width: 20%;
   top: 17px; }
 
@@ -3852,7 +3859,7 @@ label {
   margin: 0 10px;
   padding: 0 30px;
   width: 100%;
-  color: white;
+  color: #fff;
   position: relative; }
 
 .features__item > hr {
@@ -3958,7 +3965,7 @@ span.stopa {
 
 .product-detail {
   margin-top: 30px;
-  background: white;
+  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4043,8 +4050,5 @@ span.stopa {
 
 .ui-datepicker {
   z-index: 5000 !important; }
-
-.title-small {
-  color: #49a09d; }
 
 /*# sourceMappingURL=child-theme.css.map */

@@ -4,10 +4,10 @@
 
 .btn-primary,
 .btn-primary:not(:disabled):not(.disabled):active {
-  background-color: $blue;
-  border-color: $blue;
+  background-color: $brand-primary;
+  border-color: $brand-primary;
   &:hover {
-    background-color: darken($blue, 10%);
-    border-color: darken($blue, 10%);
+    background-color: darken($brand-primary, 10%);
+    border-color: darken($brand-primary, 10%);
   }
 }

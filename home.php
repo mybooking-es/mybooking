@@ -29,7 +29,7 @@ get_header();
             <h1><?php echo $title_hero ?></h1>
         <?php }
     	  	else { ?>
-            <h1><?php _e("Mybooking WordPress Theme para negocios de alquiler de vehículos",'mybookinges'); ?></h1>
+            <h1><?php _e("Mybooking WordPress Theme",'mybookinges'); ?></h1>
         <?php } ?>
 
         <?php $text_hero = get_option("home_hero_text");
@@ -154,6 +154,29 @@ if ($highlight_visible == 1) { ?>
       <?php } ?>
 
     </div>
+
+    <div class="icon-panel icon-3">
+
+      <?php $imagen_fact_three = get_option("home_fact_three_image");
+          if ($imagen_fact_three !== '') { ?>
+            <img src="<?php echo $imagen_fact_three ?>" alt="">
+      <?php }
+          else { ?>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_3.svg" alt="">
+      <?php } ?>
+
+      <?php $text_fact_three = get_option("home_fact_three_text");
+          if ($text_fact_three !== '') { ?>
+            <br>
+            <h5><?php echo $text_fact_three ?></h5>
+      <?php }
+          else { ?>
+            <br>
+            <h5><?php _e("Gestión sencilla de contenidos y promociones",'mybookinges'); ?></h5>
+      <?php } ?>
+
+    </div>
+    
   </div>
 
 <?php } ?>
@@ -328,8 +351,8 @@ if ($features_visible == 1) { ?>
 <?php $news_visible = get_option("home_news_visibility");
 if ($news_visible == 1) { ?>
 
+  <div class="news_container">
   <div class="container">
-    <div class="news_container">
       <div class="row">
 
         <?php

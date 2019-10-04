@@ -9,11 +9,15 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  background: $gradient-end;
+  background: $brand-secondary;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, $gradient-start, $gradient-end);
+  background: -webkit-linear-gradient(
+    to right,
+    $brand-primary,
+    $brand-secondary
+  );
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, $gradient-start, $gradient-end);
+  background: linear-gradient(to right, $brand-primary, $brand-secondary);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -27,7 +31,7 @@
   position: relative;
 }
 .feature > hr {
-  color: $blue;
+  color: $brand-primary;
   width: 20%;
   top: 17px;
 }

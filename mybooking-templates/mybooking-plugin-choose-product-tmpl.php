@@ -24,7 +24,7 @@
     <!-- Script detailed for reservation summary -->
     <script type="text/tmpl" id="script_reservation_summary">
       <div class="bg-gray-100 p-3 mb-5 shadow-bottom">
-        <h4 class="title-small my-3">Detalle de la reserva</h4>
+        <h4 class="brand-primary my-3">Detalle de la reserva</h4>
         <h5>Entrega</h5>
         <p class="color-gray-700"><span><i class="fa fa-calendar mr-1" aria-hidden="true"></i></span><%=shopping_cart.date_from_full_format%> / <%=shopping_cart.time_from%></p>
         <p class="color-gray-700"><span><i class="fa fa-map-marker mr-1" aria-hidden="true"></i></span><%=shopping_cart.pickup_place_customer_translation%></p>

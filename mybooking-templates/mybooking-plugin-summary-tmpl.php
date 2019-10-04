@@ -6,7 +6,7 @@
       <% for (var idx=0; idx < booking.booking_lines.length; idx++) { %>
       <%   var booking_line = booking.booking_lines[idx]; %>
         <div class="col-md-6">
-            <h4 class="title-small my-3">Producto contratado</h4>
+            <h4 class="brand-primary my-3">Producto contratado</h4>
               <p class="color-gray-800"><%=booking_line.item_id%></p>
               <p class="short-description color-gray-500"><%=booking_line.item_description_customer_translation%></p>
               <p class="price"><%=configuration.formatCurrency(booking_line.item_cost)%></p>
@@ -19,7 +19,7 @@
     <% if (booking.booking_extras.length > 0) { %>
     <div id="selected_extras" class="row">
       <div class="col-md-12">
-          <h4 class="title-small my-3">Extras</h4>
+          <h4 class="brand-primary my-3">Extras</h4>
       </div>
       <% for (var idx=0;idx<booking.booking_extras.length;idx++) { %>
         <div class="col-md-3">
@@ -40,7 +40,7 @@
     <hr />
     <div id="customer_data" class="row">
       <div class="col-md-12">
-          <h4 class="title-small my-3">Datos del cliente</h4>
+          <h4 class="brand-primary my-3">Datos del cliente</h4>
       </div>
       <div class="col-md-3">
           <p class="color-gray-500">Nombre:</p>
@@ -67,7 +67,7 @@
 
   <div class="col-md-4">
     <div class="sidebar pl-4">
-      <h4 class="title-small">Detalle de la reserva</h4>
+      <h4 class="brand-primary">Detalle de la reserva</h4>
       <h5>Entrega</h5>
       <p><span><i class="fa fa-calendar mr-3" aria-hidden="true"></i></span><%=booking.date_from_full_format%> / <%=booking.time_from%></p>
       <p><span><i class="fa fa-map-marker mr-3" aria-hidden="true"></i></span><%=booking.pickup_place_customer_translation%></p>
@@ -120,7 +120,7 @@
 <!-- Payment -->
 <script type="text/tmpl" id="script_payment_detail">
   <div class="col-md-12">
-    <h4 class="title-small my-3">Pago</h4>
+    <h4 class="brand-primary my-3">Pago</h4>
     <div class="callout small success">
         <p>Para confirmar la reserva se requiere una paga y señal del 20% del importe total de la reserva</p>
     </div>
@@ -128,7 +128,7 @@
     <input type="radio" class="mr-2" name="" value="" id="pokemonRed" required><label for="pokemonRed">Tarjeta de crédito (20% de paga y señal para confirmar reserva)</label>
     <br>
 
-    <input type="radio" class="mr-2" name="" value="" id="pokemonBlue" required><label for="pokemonBlue">PayPal (20% de paga y señal para confirmar reserva)</label>
+    <input type="radio" class="mr-2" name="" value="" id="pokemonbrand-primary" required><label for="pokemonbrand-primary">PayPal (20% de paga y señal para confirmar reserva)</label>
 
 
   </div>

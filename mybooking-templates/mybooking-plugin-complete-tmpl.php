@@ -61,7 +61,7 @@
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="col sidebar bg-white shadow-bottom py-3 px-3 mt-5 mb-3">
-  <h4 class="title-small my-3">Detalle de la reserva</h4>
+  <h4 class="brand-primary my-3">Detalle de la reserva</h4>
   <h5>Entrega</h5>
   <p class="color-gray-700"><span><i class="fa fa-calendar mr-1" aria-hidden="true"></i></span><%=shopping_cart.date_from_full_format%> / <%=shopping_cart.time_from%></p>
   <p class="color-gray-700"><span><i class="fa fa-map-marker mr-1" aria-hidden="true"></i></span><%=shopping_cart.pickup_place_customer_translation%></p>
@@ -75,7 +75,7 @@
 </div>
 
 <div class="col sidebar bg-white shadow-bottom py-3 px-3">
-  <h4 class="title-small my-3">Precio</h4>
+  <h4 class="brand-primary my-3">Precio</h4>
   <h5>Total producto</h5>
   <p><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
   <hr>
@@ -89,7 +89,7 @@
 
 <!-- Payment detail -->
 <script type="text/tmpl" id="script_payment_detail">
-  <h4 class="title-small my3">Pago</h4>
+  <h4 class="brand-primary my3">Pago</h4>
   <div class="form-row">
     <div class="form-group col">
       <div class="alert alert-success">

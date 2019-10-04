@@ -1,5 +1,5 @@
 //==============================================
-// Module/modules
+// Module/ icon panel
 //==============================================
 
 // Here you can styling other small modules
@@ -21,9 +21,11 @@
   text-align: center;
   margin-bottom: 30px;
   width: 50%;
-  i {
-    font-size: 4em;
-    color: $blue;
+  img {
+    width: 4em;
+  }
+  h5 {
+    margin-top: 30px !important;
   }
 }
 // Large devices (desktops, 992px and up)

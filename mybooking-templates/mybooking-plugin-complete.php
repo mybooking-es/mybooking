@@ -10,14 +10,14 @@
 
           <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-5">
             <!-- Reservation : Extras -->
-            <h4 class="title-small my-3">Extras</h4>
+            <h4 class="brand-primary my-3">Extras</h4>
             <div id="extras_listing"></div>
           </div>
 
           <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-3 mb-5">
             <!-- Reservation complete -->
             <form id="form-reservation" name="reservation_form">
-              <h4 class="title-small my-3">Información del cliente</h4>
+              <h4 class="brand-primary my-3">Información del cliente</h4>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Nombre</label>
@@ -48,7 +48,7 @@
                 </div>
               </div>
 
-              <h4 class="title-small my-3">Información adicional</h4>
+              <h4 class="brand-primary my-3">Información adicional</h4>
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="comments">Comentarios</label>
