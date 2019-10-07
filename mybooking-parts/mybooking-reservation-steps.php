@@ -27,15 +27,15 @@
           $step = 'Resumen';
         } ?>
 
-        <div data-desc="Lugar y Fecha" class="step">1</div>
-        <div data-desc="Seleccionar producto" class="<?php echo $choose_active ?> step">2</div>
-        <div data-desc="Completar Reserva" class="<?php echo $complete_active ?> step">3</div>
-        <div data-desc="Sumario" class="<?php echo $summary_active ?> step">4</div>
+        <div data-desc="<?php _e( 'Lugar y Fecha', 'mybookinges' ) ?>" class="step">1</div>
+        <div data-desc="<?php _e( 'Seleccionar producto', 'mybookinges' ) ?>" class="<?php echo $choose_active ?> step">2</div>
+        <div data-desc="<?php _e( 'Completar Reserva', 'mybookinges' ) ?>" class="<?php echo $complete_active ?> step">3</div>
+        <div data-desc="<?php _e( 'Sumario', 'mybookinges' ) ?>" class="<?php echo $summary_active ?> step">4</div>
       </div>
     </div>
     <div class="col-md-12 col-lg-4 d-flex">
         <div class="d-inline-flex p-2 align-items-center">
-            <h2 class="color-blue"><?php echo $step ?></h2>
+            <h2 class="color-blue"><?php echo _e( $step, 'mybookinges') ?></h2>
         </div>
     </div>
   </div>
