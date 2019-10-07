@@ -24,31 +24,21 @@ $transparent-white: rgba(255, 255, 255, 0.6);
 // Theme colors
 // ===================================================================
 
-$blue: #3a539b;
-$blue-light: #00b5cc;
+$brand-primary: #49a09d;
+$brand-secondary: #5f2c82;
 
-.color-blue {
-  color: $blue;
+.brand-primary {
+  color: $brand-primary;
 }
-.bg-blue {
-  background-color: $blue;
+.brand-secondary {
+  color: $brand-secondary;
 }
-.color-blue-light {
-  color: $blue-light;
+// Background colors
+.bg-brand-brimary {
+  background-color: $brand-primary;
 }
-.bg-blue-light {
-  background-color: $blue-light;
-}
-
-// Gradient colors
-$gradient-start: #49a09d;
-$gradient-end: #5f2c82;
-
-.color-gradient-start {
-  color: $gradient-start;
-}
-.color-gradient-end {
-  color: $gradient-end;
+.bg-brand-secondary {
+  background-color: $brand-secondary;
 }
 
 // ========================================================
@@ -68,73 +58,55 @@ $gray-900: #212121;
 .color-gray-50 {
   color: $gray-50;
 }
-
 .color-gray-100 {
   color: $gray-100;
 }
-
 .color-gray-200 {
   color: $gray-200;
 }
-
 .color-gray-300 {
   color: $gray-300;
 }
-
 .color-gray-400 {
   color: $gray-400;
 }
-
 .color-gray-500 {
   color: $gray-500;
 }
-
 .color-gray-600 {
   color: $gray-600;
 }
-
 .color-gray-700 {
   color: $gray-700;
 }
-
 .color-gray-800 {
   color: $gray-800;
 }
-
 .color-gray-900 {
   color: $gray-900;
 }
-
 // background gray colors
-
 .bg-gray-50 {
   background-color: $gray-50;
 }
-
 .bg-gray-100 {
   background-color: $gray-100;
 }
-
 .bg-gray-200 {
   background-color: $gray-200;
 }
-
 .bg-gray-300 {
   background-color: $gray-300;
 }
-
 .bg-gray-400 {
   background-color: $gray-400;
 }
-
 .bg-gray-500 {
   background-color: $gray-500;
 }
-
 .bg-gray-800 {
   background-color: $gray-800;
 }
-
 .bg-gray-900 {
   background-color: $gray-900;
 }

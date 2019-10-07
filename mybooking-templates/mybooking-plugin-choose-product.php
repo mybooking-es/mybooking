@@ -1,7 +1,7 @@
 <div class="reservation-step">
   <!-- Reservation : Pickup/Return information -->
-  <div class="container-fluid my-5">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row my-5">
       <div class="col-12 col-lg-3">
         <div id="reservation_detail"></div>
       </div>

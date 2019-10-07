@@ -51,7 +51,7 @@ get_header();
 
           <div class="info">
 
-            <h4 class="color-blue-light">
+            <h4 class="brand-primary">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
               <?php _e("Localización",'mybookinges'); ?>
             </h4>
@@ -61,7 +61,7 @@ get_header();
         	    	<p><?php echo $company_adress ?></p>
         	  <?php } ?>
 
-            <h4 class="color-blue-light">
+            <h4 class="brand-primary">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <?php _e("Teléfono",'mybookinges'); ?>
             </h4>
@@ -71,7 +71,7 @@ get_header();
         	    	<p><?php echo $company_phone ?></p>
         	  <?php } ?>
 
-            <h4 class="color-blue-light">
+            <h4 class="brand-primary">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <?php _e("Correo electrónico",'mybookinges'); ?>
             </h4>
