@@ -1,3 +1,5 @@
+<?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
+
 <div class="reservation-step custom-form">
 
 <!-- Reservation : Selected product -->
