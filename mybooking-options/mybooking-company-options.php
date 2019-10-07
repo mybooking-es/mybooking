@@ -38,6 +38,10 @@ function mybookinges_register_options_company_info() {
   add_option("company_info_instagram_url","","","yes");
   add_option("company_info_linkedin_url","","","yes");
 
+  add_option("company_payment_visa","","","yes");
+  add_option("company_payment_mastercard","","","yes");
+  add_option("company_payment_paypal","","","yes");
+
   add_option("contact_section_title","","","yes");
   add_option("contact_section_subtitle","","","yes");
   add_option("contact_map_code","","","yes");
@@ -55,6 +59,10 @@ function mybookinges_register_options_company_info() {
   register_setting("options_company_info", "company_info_facebook_url");
   register_setting("options_company_info", "company_info_instagram_url");
   register_setting("options_company_info", "company_info_linkedin_url");
+
+  register_setting("options_company_info", "company_payment_visa");
+  register_setting("options_company_info", "company_payment_mastercard");
+  register_setting("options_company_info", "company_payment_paypal");
 
   register_setting("options_company_info", "contact_section_title");
   register_setting("options_company_info", "contact_section_subtitle");
@@ -86,7 +94,7 @@ function mybookinges_configuration_company_info() {
 
       <?php settings_fields('options_company_info'); ?>
 
-      <!-- Información corporativa -->
+      <!-- Company info -->
 
       <h2>Información corporativa</h2>
 
@@ -107,7 +115,7 @@ function mybookinges_configuration_company_info() {
 
       <hr>
 
-      <!-- Información de contacto -->
+      <!-- Contact info -->
 
       <h2>Información de contacto</h2>
 
@@ -128,7 +136,7 @@ function mybookinges_configuration_company_info() {
 
       <hr>
 
-      <!-- Redes sociales -->
+      <!-- Social links -->
 
       <h2>Enlaces sociales</h2>
 
@@ -157,7 +165,37 @@ function mybookinges_configuration_company_info() {
 
       <hr>
 
-      <!-- Ajustes del template Contacto -->
+      <!-- Payment methods -->
+
+      <h2>Métodos de pago</h2>
+
+      <table class="form-table">
+        <tr valign="top">
+          <th scope="row">VISA</th>
+          <td>
+          <?php $options = get_option( "company_payment_visa" ); ?>
+          <input type="checkbox" name="company_payment_visa" <?php checked( $options, 1 ); ?> value="1">
+          <span class="description">Marcar para mostrar el icono de VISA en el footer</span>
+        </tr>
+        <tr valign="top">
+          <th scope="row">Mastercard</th>
+          <td>
+          <?php $options = get_option( "company_payment_mastercard" ); ?>
+          <input type="checkbox" name="company_payment_mastercard" <?php checked( $options, 1 ); ?> value="1">
+          <span class="description">Marcar para mostrar el icono de Mastercard en el footer</span>
+        </tr>
+        <tr valign="top">
+          <th scope="row">PayPal</th>
+          <td>
+          <?php $options = get_option( "company_payment_paypal" ); ?>
+          <input type="checkbox" name="company_payment_paypal" <?php checked( $options, 1 ); ?> value="1">
+          <span class="description">Marcar para mostrar el icono de PayPal en el footer</span>
+        </tr>
+      </table>
+
+      <hr>
+
+      <!-- Contact page adjust -->
 
       <h2>Página Contacto</h2>
 
@@ -165,12 +203,12 @@ function mybookinges_configuration_company_info() {
         <tr valign="top">
           <th scope="row">Título de la sección</th>
           <td><input type="text" name="contact_section_title" size="40" value="<?php echo get_option('contact_section_title'); ?>" />
-          <br><span class="description">Aparece en la columna de información del template Mybooking-contact</span></td>
+          <br><span class="description">Aparece en el template Mybooking-contact</span></td>
         </tr>
         <tr valign="top">
           <th scope="row">Subtítulo de la sección</th>
           <td><input type="text" name="contact_section_subtitle" size="40" value="<?php echo get_option('contact_section_subtitle'); ?>" />
-          <br><span class="description">Aparece en la columna de información del template Mybooking-contact</span></td>
+          <br><span class="description">Aparece en el template Mybooking-contact</span></td>
         </tr>
         <tr valign="top">
           <th scope="row">Mapa de localización</th>

@@ -55,6 +55,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <?php endif; ?>
 
           <!-- Logo & branding -->
+
           <?php if ( ! has_custom_logo() ) { ?>
 
           <?php if ( is_front_page() && is_home() ) : ?>
