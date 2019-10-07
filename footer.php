@@ -26,26 +26,41 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 			<div class="col-sm">
 
-				<?php if ( is_active_sidebar( 'mybooking_global_footer' ) ) : ?>
+				<?php if ( is_active_sidebar( 'mybooking_global_footer_1' ) ) : ?>
 					<?php dynamic_sidebar( 'mybooking_global_footer_1' ); ?>
 				<?php endif; ?>
 
 			</div>
 			<div class="col-sm">
 
-				<?php if ( is_active_sidebar( 'mybooking_global_footer' ) ) : ?>
+				<?php if ( is_active_sidebar( 'mybooking_global_footer_2' ) ) : ?>
 					<?php dynamic_sidebar( 'mybooking_global_footer_2' ); ?>
 				<?php endif; ?>
 
 			</div>
 			<div class="col-sm">
 
-				<?php if ( is_active_sidebar( 'mybooking_global_footer' ) ) : ?>
+				<?php if ( is_active_sidebar( 'mybooking_global_footer_3' ) ) : ?>
 					<?php dynamic_sidebar( 'mybooking_global_footer_3' ); ?>
 				<?php endif; ?>
 
 			</div>
 		</div>
+
+		<!-- Footer menu -->
+
+		<div class="row justify-content-center">
+
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('mybooking_global_footer_menu') ) : ?>
+					<div class="col-md-8">
+						<?php dynamic_sidebar( 'mybooking_global_footer_menu' ); ?>
+						aqui va el menu
+					</div>
+				<?php endif; ?>
+
+		</div>
+
+		<hr style="background-color: #FFF;">
 
 		<!-- Footer info -->
 
