@@ -50,6 +50,8 @@ function mybookinges_register_options_home() {
   add_option("home_fact_two_text","","","yes");
   add_option("home_fact_three_image","","","yes");
   add_option("home_fact_three_text","","","yes");
+  add_option("home_fact_four_image","","","yes");
+  add_option("home_fact_four_text","","","yes");
 
   add_option("home_features_visibility","","","yes");
   add_option("home_features_header_title","","","yes");
@@ -82,6 +84,8 @@ function mybookinges_register_options_home() {
   register_setting("options_home", "home_fact_two_text");
   register_setting("options_home", "home_fact_three_image");
   register_setting("options_home", "home_fact_three_text");
+  register_setting("options_home", "home_fact_four_image");
+  register_setting("options_home", "home_fact_four_text");
 
   register_setting("options_home", "home_features_visibility");
   register_setting("options_home", "home_features_header_title");
@@ -202,9 +206,6 @@ function mybookinges_configuration_home() {
           <th scope="row">Texto del punto 1</th>
           <td><textarea name="home_fact_one_text" cols="37" rows="10"><?php echo get_option('home_fact_one_text'); ?></textarea></td>
         </tr>
-      </table>
-
-      <table class="form-table">
         <tr valign="top">
           <th scope="row">Imagen punto 2</th>
           <td><input type="text" name="home_fact_two_image" size="40" value="<?php echo get_option('home_fact_two_image'); ?>" />
@@ -214,9 +215,6 @@ function mybookinges_configuration_home() {
           <th scope="row">Texto del punto 2</th>
           <td><textarea name="home_fact_two_text" cols="37" rows="10"><?php echo get_option('home_fact_two_text'); ?></textarea></td>
         </tr>
-      </table>
-
-      <table class="form-table">
         <tr valign="top">
           <th scope="row">Imagen punto 3</th>
           <td><input type="text" name="home_fact_three_image" size="40" value="<?php echo get_option('home_fact_three_image'); ?>" />
@@ -225,6 +223,15 @@ function mybookinges_configuration_home() {
         <tr valign="top">
           <th scope="row">Texto del punto 3</th>
           <td><textarea name="home_fact_three_text" cols="37" rows="10"><?php echo get_option('home_fact_three_text'); ?></textarea></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row">Imagen punto 4</th>
+          <td><input type="text" name="home_fact_four_image" size="40" value="<?php echo get_option('home_fact_four_image'); ?>" />
+          <br><span class="description">Inserta la URL para la imagen del punto 3</span></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row">Texto del punto 4</th>
+          <td><textarea name="home_fact_four_text" cols="37" rows="10"><?php echo get_option('home_fact_four_text'); ?></textarea></td>
         </tr>
       </table>
 

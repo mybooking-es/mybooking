@@ -57,52 +57,116 @@ get_header();
 </div>
 
 
-<!-- PROMO SECTION ----------------------------------------------------------->
+<!-- SECTION HIGHLIGHT -------------------------------------------------------->
 
-<?php $promo_visible = get_option("home_promo_visibility");
-if ($promo_visible == 1) { ?>
+<?php $highlight_visible = get_option("home_highlight_visibility");
+if ($highlight_visible == 1) { ?>
 
   <div class="gradient-section">
     <div class="container">
 
+    <!-- Header -->
+
         <?php
-        $promo_args = array(
-          'post_type' => 'promo',
-          'tax_query' => array(
-            array(
-              'taxonomy' => 'estado',
-              'field' => 'slug',
-              'terms' => array( 'activo' )
-            ),
-          ),
-          'posts_per_page'=> 1,
-        );
-        $promo_item = new WP_Query($promo_args); ?>
-        <?php  while ( $promo_item->have_posts() ) : $promo_item->the_post(); ?>
+        $title_highlight_header = get_option("home_highlight_header_title");
+        $text_highlight_header = get_option("home_highlight_header_text");
+            if ($title_highlight_header !== '' || $text_highlight_header !== '') { ?>
 
-          <br>
-          <div class="row">
-            <div class="col">
+              <div class="flex-block-wrapper">
+                <div class="centered-flex-block mt150">
+                  <h1><?php echo $title_highlight_header ?></h1>
+                  <p class="color-gray-500"><?php echo $text_highlight_header ?></p>
+                </div>
+              </div>
 
-              <?php the_post_thumbnail(); ?>
-              <h2 class="promo_title display-4 color-white"><?php the_title(); ?></h2>
+        <?php } ?>
 
-              <?php
-              $promo_button_visible = get_option("home_promo_button_visibility");
-              $promo_button_text = get_option("home_promo_button_text");
-              if ($promo_button_visible == 1 && $promo_button_text !=='') { ?>
+    <!-- Facts -->
 
-                <a class="btn btn-primary" href="<?php the_permalink(); ?>" >
-                  <?php esc_html_e( $promo_button_text, 'mybookinges' ); ?>
-                </a>
+    <div class="icons-wrapper mt100">
+      <div class="icon-panel icon-1">
 
-              <?php } ?>
+        <?php $imagen_fact_one = get_option("home_fact_one_image");
+            if ($imagen_fact_one !== '') { ?>
+              <img src="<?php echo $imagen_fact_one ?>" alt="">
+        <?php }
+            else { ?>
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_1.svg" alt="">
+        <?php } ?>
 
-            </div>
-          </div>
-          <br>
+        <?php $text_fact_one = get_option("home_fact_one_text");
+            if ($text_fact_one !== '') { ?>
+              <br>
+              <h5 class="color-white"><?php echo $text_fact_one ?></h5>
+        <?php }
+            else { ?>
+              <h5 class="color-white"><?php _e("Conecta tu cuenta de Mybooking",'mybookinges'); ?></h5>
+        <?php } ?>
 
-        <?php endwhile; ?>
+      </div>
+
+      <div class="icon-panel icon-2">
+
+        <?php $imagen_fact_two = get_option("home_fact_two_image");
+            if ($imagen_fact_two !== '') { ?>
+              <img src="<?php echo $imagen_fact_two ?>" alt="">
+        <?php }
+            else { ?>
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_2.svg" alt="">
+        <?php } ?>
+
+        <?php $text_fact_two = get_option("home_fact_two_text");
+            if ($text_fact_two !== '') { ?>
+              <h5 class="color-white"><?php echo $text_fact_two ?></h5>
+        <?php }
+            else { ?>
+              <h5 class="color-white"><?php _e("Opciones de diseño y personalización",'mybookinges'); ?></h5>
+        <?php } ?>
+
+      </div>
+
+      <div class="icon-panel icon-3">
+
+        <?php $imagen_fact_three = get_option("home_fact_three_image");
+            if ($imagen_fact_three !== '') { ?>
+              <img src="<?php echo $imagen_fact_three ?>" alt="">
+        <?php }
+            else { ?>
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_3.svg" alt="">
+        <?php } ?>
+
+        <?php $text_fact_three = get_option("home_fact_three_text");
+            if ($text_fact_three !== '') { ?>
+
+            <h5 class="color-white"><?php echo $text_fact_three ?></h5>
+
+        <?php }
+            else { ?>
+              <h5 class="color-white"><?php _e("Gestión sencilla de contenidos",'mybookinges'); ?></h5>
+        <?php } ?>
+
+      </div>
+
+      <div class="icon-panel icon-4">
+
+          <?php $imagen_fact_four = get_option("home_fact_four_image");
+              if ($imagen_fact_four !== '') { ?>
+                <img src="<?php echo $imagen_fact_four ?>" alt="">
+          <?php }
+              else { ?>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_4.svg" alt="">
+          <?php } ?>
+
+          <?php $text_fact_four = get_option("home_fact_four_text");
+              if ($text_fact_four !== '') { ?>
+                <h5 class="color-white"><?php echo $text_fact_four ?></h5>
+          <?php }
+              else { ?>
+                <h5 class="color-white"><?php _e("Listo para empezar desde cero",'mybookinges'); ?></h5>
+          <?php } ?>
+
+        </div>
+      </div>
 
     </div>
   </div>
@@ -110,124 +174,55 @@ if ($promo_visible == 1) { ?>
 <?php } ?>
 
 
-<!-- SECTION HIGHLIGHT -------------------------------------------------------->
+<!-- PROMO SECTION ----------------------------------------------------------->
 
-<?php $highlight_visible = get_option("home_highlight_visibility");
-if ($highlight_visible == 1) { ?>
+<?php $promo_visible = get_option("home_promo_visibility");
+if ($promo_visible == 1) { ?>
 
-  <!-- Header -->
+<div class="container">
+  <div class="">
 
-  <div class="flex-block-wrapper">
-    <div class="centered-flex-block mt150">
+      <?php
+      $promo_args = array(
+        'post_type' => 'promo',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'estado',
+            'field' => 'slug',
+            'terms' => array( 'activo' )
+          ),
+        ),
+        'posts_per_page'=> 1,
+      );
+      $promo_item = new WP_Query($promo_args); ?>
+      <?php  while ( $promo_item->have_posts() ) : $promo_item->the_post(); ?>
 
-      <?php $title_highlight_header = get_option("home_highlight_header_title");
-          if ($title_highlight_header !== '') { ?>
-            <h1><?php echo $title_highlight_header ?></h1>
-      <?php }
-          else { ?>
-            <h1><?php _e("Lo que te ofrece",'mybookinges'); ?></h1>
-      <?php } ?>
+        <br>
+        <div class="row">
+          <div class="col text-center">
 
-      <?php $text_highlight_header = get_option("home_highlight_header_text");
-          if ($text_highlight_header !== '') { ?>
-            <p class="color-gray-500"><?php echo $text_highlight_header ?></p>
-      <?php }
-          else { ?>
-            <p class="color-gray-500"><?php _e("Mybooking Wordpress Theme es el punto de partida perfecto para tu negocio de alquiler porque ofrece las funcionalidades que necesitas para empezar ahora mismo.",'mybookinges'); ?></p>
-      <?php } ?>
+            <?php the_post_thumbnail(); ?>
+            <h2 class="promo_title display-4"><?php the_title(); ?></h2>
 
-    </div>
-  </div>
+            <?php
+            $promo_button_visible = get_option("home_promo_button_visibility");
+            $promo_button_text = get_option("home_promo_button_text");
+            if ($promo_button_visible == 1 && $promo_button_text !=='') { ?>
 
-  <!-- Facts -->
+              <a class="btn btn-primary mb50" href="<?php the_permalink(); ?>" >
+                <?php esc_html_e( $promo_button_text, 'mybookinges' ); ?>
+              </a>
 
-  <div class="icons-wrapper mt100">
-    <div class="icon-panel icon-1">
+            <?php } ?>
 
-      <?php $imagen_fact_one = get_option("home_fact_one_image");
-          if ($imagen_fact_one !== '') { ?>
-            <img src="<?php echo $imagen_fact_one ?>" alt="">
-      <?php }
-          else { ?>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_1.svg" alt="">
-      <?php } ?>
+          </div>
+        </div>
+        <br>
 
-      <?php $text_fact_one = get_option("home_fact_one_text");
-          if ($text_fact_one !== '') { ?>
-            <br>
-            <h5><?php echo $text_fact_one ?></h5>
-      <?php }
-          else { ?>
-            <h5><?php _e("Conecta tu cuenta de Mybooking",'mybookinges'); ?></h5>
-      <?php } ?>
-
-    </div>
-
-    <div class="icon-panel icon-2">
-
-      <?php $imagen_fact_two = get_option("home_fact_two_image");
-          if ($imagen_fact_two !== '') { ?>
-            <img src="<?php echo $imagen_fact_two ?>" alt="">
-      <?php }
-          else { ?>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_2.svg" alt="">
-      <?php } ?>
-
-      <?php $text_fact_two = get_option("home_fact_two_text");
-          if ($text_fact_two !== '') { ?>
-            <h5><?php echo $text_fact_two ?></h5>
-      <?php }
-          else { ?>
-            <h5><?php _e("Opciones de diseño y personalización",'mybookinges'); ?></h5>
-      <?php } ?>
-
-    </div>
-
-    <div class="icon-panel icon-3">
-
-      <?php $imagen_fact_three = get_option("home_fact_three_image");
-          if ($imagen_fact_three !== '') { ?>
-            <img src="<?php echo $imagen_fact_three ?>" alt="">
-      <?php }
-          else { ?>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_3.svg" alt="">
-      <?php } ?>
-
-      <?php $text_fact_three = get_option("home_fact_three_text");
-          if ($text_fact_three !== '') { ?>
-
-          <h5><?php echo $text_fact_three ?></h5>
-
-      <?php }
-          else { ?>
-            <h5><?php _e("Gestión sencilla de contenidos",'mybookinges'); ?></h5>
-      <?php } ?>
-
-    </div>
-
-    <div class="icon-panel icon-4">
-
-        <?php $imagen_fact_two = get_option("home_fact_two_image");
-            if ($imagen_fact_two !== '') { ?>
-              <img src="<?php echo $imagen_fact_two ?>" alt="">
-        <?php }
-            else { ?>
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_4.svg" alt="">
-        <?php } ?>
-
-        <?php $text_fact_two = get_option("home_fact_two_text");
-            if ($text_fact_two !== '') { ?>
-              <h5><?php echo $text_fact_two ?></h5>
-        <?php }
-            else { ?>
-              <h5><?php _e("Listo para empezar desde cero",'mybookinges'); ?></h5>
-        <?php } ?>
-
-      </div>
-
-
+    <?php endwhile; ?>
 
   </div>
+</div>
 
 <?php } ?>
 
