@@ -45,6 +45,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php endif; ?>
 
 			</div>
+			<hr style="background-color: #FFF;">
 		</div>
 
 		<!-- Footer menu -->
@@ -54,13 +55,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('mybooking_global_footer_menu') ) : ?>
 					<div class="col-md-8">
 						<?php dynamic_sidebar( 'mybooking_global_footer_menu' ); ?>
-						aqui va el menu
 					</div>
 				<?php endif; ?>
 
 		</div>
-
-		<hr style="background-color: #FFF;">
 
 		<!-- Footer info -->
 
@@ -68,7 +66,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="site-info">
 
 					<div class="row">
-						<div class="col">
+						<div class="col-sm">
 
 							<!-- Branding & company info -->
 
@@ -104,9 +102,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 	        	  <?php } ?>
 
 						</div>
-						<div class="col">
+						<div class="col-sm">
 							<h4><?php _e('Follow us', 'mybookinges'); ?></h4>
-							<ul class="social-links mt50">
+							<ul class="social-links">
 			          <li class="social__item">
 
 			            <?php $company_twitter = get_option("company_info_twitter_url");
@@ -141,9 +139,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			          </li>
 			        </ul>
 						</div>
-						<div class="col">
+						<div class="col-sm">
 							<h4><?php _e('Payment methods', 'mybookinges'); ?></h4>
-							<ul class="social-links mt50">
+							<ul class="social-links">
 			          <li class="social__item">
 
 			            <?php $company_visa = get_option("company_payment_visa");
@@ -175,9 +173,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php $company_trade_name = get_option("company_info_trade_name");
 	            if ($company_trade_name !== '') { ?>
 	              <div class="color-transparent-white">&copy; 2019 <?php echo $company_trade_name ?></div>
+								<br>
 	        <?php }
 	            else { ?>
 								<div class="color-transparent-white">&copy; <?php _e("2019 mybooking",'mybookinges'); ?></div>
+								<br>
 	        <?php } ?>
 
 			</div><!-- .site-info -->
