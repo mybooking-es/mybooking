@@ -57,6 +57,59 @@ get_header();
 </div>
 
 
+<!-- PROMO SECTION ----------------------------------------------------------->
+
+<?php $promo_visible = get_option("home_promo_visibility");
+if ($promo_visible == 1) { ?>
+
+  <div class="gradient-section">
+    <div class="container">
+
+        <?php
+        $promo_args = array(
+          'post_type' => 'promo',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'estado',
+              'field' => 'slug',
+              'terms' => array( 'activo' )
+            ),
+          ),
+          'posts_per_page'=> 1,
+        );
+        $promo_item = new WP_Query($promo_args); ?>
+        <?php  while ( $promo_item->have_posts() ) : $promo_item->the_post(); ?>
+
+          <br>
+          <div class="row">
+            <div class="col">
+
+              <?php the_post_thumbnail(); ?>
+              <h2 class="promo_title display-4 color-white"><?php the_title(); ?></h2>
+
+              <?php
+              $promo_button_visible = get_option("home_promo_button_visibility");
+              $promo_button_text = get_option("home_promo_button_text");
+              if ($promo_button_visible == 1 && $promo_button_text !=='') { ?>
+
+                <a class="btn btn-primary" href="<?php the_permalink(); ?>" >
+                  <?php esc_html_e( $promo_button_text, 'mybookinges' ); ?>
+                </a>
+
+              <?php } ?>
+
+            </div>
+          </div>
+          <br>
+
+        <?php endwhile; ?>
+
+    </div>
+  </div>
+
+<?php } ?>
+
+
 <!-- SECTION HIGHLIGHT -------------------------------------------------------->
 
 <?php $highlight_visible = get_option("home_highlight_visibility");
@@ -105,7 +158,7 @@ if ($highlight_visible == 1) { ?>
             <h5><?php echo $text_fact_one ?></h5>
       <?php }
           else { ?>
-            <h5><?php _e("Plugin para conectar tu cuenta de Mybooking",'mybookinges'); ?></h5>
+            <h5><?php _e("Conecta tu cuenta de Mybooking",'mybookinges'); ?></h5>
       <?php } ?>
 
     </div>
@@ -125,7 +178,7 @@ if ($highlight_visible == 1) { ?>
             <h5><?php echo $text_fact_two ?></h5>
       <?php }
           else { ?>
-            <h5><?php _e("Opciones de personalización",'mybookinges'); ?></h5>
+            <h5><?php _e("Opciones de diseño y personalización",'mybookinges'); ?></h5>
       <?php } ?>
 
     </div>
@@ -142,12 +195,12 @@ if ($highlight_visible == 1) { ?>
 
       <?php $text_fact_three = get_option("home_fact_three_text");
           if ($text_fact_three !== '') { ?>
-        
+
           <h5><?php echo $text_fact_three ?></h5>
-            
+
       <?php }
           else { ?>
-            <h5><?php _e("Gestión sencilla de contenidos y promociones",'mybookinges'); ?></h5>
+            <h5><?php _e("Gestión sencilla de contenidos",'mybookinges'); ?></h5>
       <?php } ?>
 
     </div>
@@ -161,66 +214,20 @@ if ($highlight_visible == 1) { ?>
             else { ?>
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_4.svg" alt="">
         <?php } ?>
-  
+
         <?php $text_fact_two = get_option("home_fact_two_text");
             if ($text_fact_two !== '') { ?>
               <h5><?php echo $text_fact_two ?></h5>
         <?php }
             else { ?>
-              <h5><?php _e("Selvage schlitz ethical twee organic",'mybookinges'); ?></h5>
+              <h5><?php _e("Listo para empezar desde cero",'mybookinges'); ?></h5>
         <?php } ?>
-  
+
       </div>
 
-    
-    
-  </div>
 
-<?php } ?>
-
-
-<!-- PROMO SECTION ----------------------------------------------------------->
-
-<?php $promo_visible = get_option("home_promo_visibility");
-if ($promo_visible == 1) { ?>
-
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-
-      <?php
-      $promo_args = array(
-        'post_type' => 'promo',
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'estado',
-            'field' => 'slug',
-            'terms' => array( 'activo' )
-          ),
-        ),
-        'posts_per_page'=> 1,
-      );
-      $promo_item = new WP_Query($promo_args); ?>
-      <?php  while ( $promo_item->have_posts() ) : $promo_item->the_post(); ?>
-
-        <div class="row">
-          <div class="col-md-3">
-            <div class="promo_thumbnail">
-              <?php the_post_thumbnail(); ?>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <h2 class="promo_title display-4"><?php the_title(); ?></h2>
-            <a class="btn btn-primary" href="<?php the_permalink(); ?>" >
-              <?php esc_html_e( 'Ver promoción', 'mybookinges' ); ?>
-            </a>
-          </div>
-        </div>
-
-      <?php endwhile; ?>
 
   </div>
-</div>
 
 <?php } ?>
 

@@ -38,6 +38,8 @@ function mybookinges_register_options_home() {
   add_option("home_hero_text","","","yes");
 
   add_option("home_promo_visibility","","","yes");
+  add_option("home_promo_button_visibility","","","yes");
+  add_option("home_promo_button_text","","","yes");
 
   add_option("home_highlight_visibility","","","yes");
   add_option("home_highlight_header_title","","","yes");
@@ -68,6 +70,8 @@ function mybookinges_register_options_home() {
   register_setting("options_home", "home_hero_text");
 
   register_setting("options_home", "home_promo_visibility");
+  register_setting("options_home", "home_promo_button_visibility");
+  register_setting("options_home", "home_promo_button_text");
 
   register_setting("options_home", "home_highlight_visibility");
   register_setting("options_home", "home_highlight_header_title");
@@ -149,6 +153,16 @@ function mybookinges_configuration_home() {
           <td>
           <?php $options = get_option( "home_promo_visibility" ); ?>
           <input type="checkbox" name="home_promo_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
+        </tr>
+        <tr valign="top">
+          <th scope="row">Moatrar botón</th>
+          <td>
+          <?php $options = get_option( "home_promo_button_visibility" ); ?>
+          <input type="checkbox" name="home_promo_button_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para mostrar el botón</span>
+        </tr>
+        <tr valign="top">
+          <th scope="row">Texto del botón</th>
+          <td><input type="text" name="home_promo_button_text" size="40" value="<?php echo get_option('home_promo_button_text'); ?>" /></td>
         </tr>
       </table>
 
