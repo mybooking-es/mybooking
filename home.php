@@ -77,10 +77,10 @@ if ($highlight_visible == 1) { ?>
 
       <?php $text_highlight_header = get_option("home_highlight_header_text");
           if ($text_highlight_header !== '') { ?>
-            <p><?php echo $text_highlight_header ?></p>
+            <p class="color-gray-500"><?php echo $text_highlight_header ?></p>
       <?php }
           else { ?>
-            <p><?php _e("Mybooking Wordpress Theme es el punto de partida perfecto para tu negocio de alquiler porque ofrece las funcionalidades que necesitas para empezar ahora mismo.",'mybookinges'); ?></p>
+            <p class="color-gray-500"><?php _e("Mybooking Wordpress Theme es el punto de partida perfecto para tu negocio de alquiler porque ofrece las funcionalidades que necesitas para empezar ahora mismo.",'mybookinges'); ?></p>
       <?php } ?>
 
     </div>
@@ -105,7 +105,6 @@ if ($highlight_visible == 1) { ?>
             <h5><?php echo $text_fact_one ?></h5>
       <?php }
           else { ?>
-            <br>
             <h5><?php _e("Plugin para conectar tu cuenta de Mybooking",'mybookinges'); ?></h5>
       <?php } ?>
 
@@ -123,11 +122,9 @@ if ($highlight_visible == 1) { ?>
 
       <?php $text_fact_two = get_option("home_fact_two_text");
           if ($text_fact_two !== '') { ?>
-            <br>
             <h5><?php echo $text_fact_two ?></h5>
       <?php }
           else { ?>
-            <br>
             <h5><?php _e("Opciones de personalización",'mybookinges'); ?></h5>
       <?php } ?>
 
@@ -145,37 +142,37 @@ if ($highlight_visible == 1) { ?>
 
       <?php $text_fact_three = get_option("home_fact_three_text");
           if ($text_fact_three !== '') { ?>
-            <br>
-            <h5><?php echo $text_fact_three ?></h5>
+        
+          <h5><?php echo $text_fact_three ?></h5>
+            
       <?php }
           else { ?>
-            <br>
             <h5><?php _e("Gestión sencilla de contenidos y promociones",'mybookinges'); ?></h5>
       <?php } ?>
 
     </div>
 
-    <div class="icon-panel icon-3">
+    <div class="icon-panel icon-4">
 
-      <?php $imagen_fact_three = get_option("home_fact_three_image");
-          if ($imagen_fact_three !== '') { ?>
-            <img src="<?php echo $imagen_fact_three ?>" alt="">
-      <?php }
-          else { ?>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_3.svg" alt="">
-      <?php } ?>
+        <?php $imagen_fact_two = get_option("home_fact_two_image");
+            if ($imagen_fact_two !== '') { ?>
+              <img src="<?php echo $imagen_fact_two ?>" alt="">
+        <?php }
+            else { ?>
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/punto_4.svg" alt="">
+        <?php } ?>
+  
+        <?php $text_fact_two = get_option("home_fact_two_text");
+            if ($text_fact_two !== '') { ?>
+              <h5><?php echo $text_fact_two ?></h5>
+        <?php }
+            else { ?>
+              <h5><?php _e("Selvage schlitz ethical twee organic",'mybookinges'); ?></h5>
+        <?php } ?>
+  
+      </div>
 
-      <?php $text_fact_three = get_option("home_fact_three_text");
-          if ($text_fact_three !== '') { ?>
-            <br>
-            <h5><?php echo $text_fact_three ?></h5>
-      <?php }
-          else { ?>
-            <br>
-            <h5><?php _e("Gestión sencilla de contenidos y promociones",'mybookinges'); ?></h5>
-      <?php } ?>
-
-    </div>
+    
     
   </div>
 

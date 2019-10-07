@@ -2464,16 +2464,16 @@ body {
   color: #2e3131; }
 
 .brand-primary {
-  color: #49a09d; }
+  color: #ffa600; }
 
 .brand-secondary {
-  color: #5f2c82; }
+  color: #ff6361; }
 
 .bg-brand-brimary {
-  background-color: #49a09d; }
+  background-color: #ffa600; }
 
 .bg-brand-secondary {
-  background-color: #5f2c82; }
+  background-color: #ff6361; }
 
 .color-gray-50 {
   color: #fafafa; }
@@ -3334,12 +3334,12 @@ ul.social-links,
 
 .btn-primary,
 .btn-primary:not(:disabled):not(.disabled):active {
-  background-color: #49a09d;
-  border-color: #49a09d; }
+  background-color: #ffa600;
+  border-color: #ffa600; }
   .btn-primary:hover,
   .btn-primary:not(:disabled):not(.disabled):active:hover {
-    background-color: #397d7b;
-    border-color: #397d7b; }
+    background-color: #cc8500;
+    border-color: #cc8500; }
 
 /*
 .carrusel-de-uno .owl-item {
@@ -3606,11 +3606,11 @@ label {
 .bg-nav {
   width: 100%;
   margin-top: 0;
-  background: #5f2c82;
+  background: #ff6361;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#49a09d), to(#5f2c82));
-  background: linear-gradient(to right, #49a09d, #5f2c82);
+  background: -webkit-gradient(linear, left top, right top, from(#ffa600), to(#ff6361));
+  background: linear-gradient(to right, #ffa600, #ff6361);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 .navbar-nav .nav-link {
@@ -3634,11 +3634,15 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-bottom: 200px;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin-bottom: 100px; }
 
 .icon-panel {
   display: -webkit-box;
@@ -3658,13 +3662,30 @@ label {
       align-content: center;
   text-align: center;
   margin-bottom: 30px;
-  width: 50%; }
+  width: 100%; }
   .icon-panel img {
     width: 4em; }
   .icon-panel h5 {
-    margin-top: 30px !important; }
+    margin-top: 30px;
+    max-width: 90%;
+    font-weight: 300;
+    min-height: 130px; }
+
+@media (min-width: 576px) {
+  .icons-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .icon-panel {
+    width: 50%; } }
 
 @media (min-width: 992px) {
+  .icons-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
   .icon-panel {
     width: 25%; } }
 
@@ -3693,11 +3714,11 @@ label {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 2em 3em 7em;
-  background: #5f2c82;
+  background: #ff6361;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#49a09d), to(#5f2c82));
-  background: linear-gradient(to right, #49a09d, #5f2c82);
+  background: -webkit-gradient(linear, left top, right top, from(#ffa600), to(#ff6361));
+  background: linear-gradient(to right, #ffa600, #ff6361);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .header-card h1 {
     color: #fff;
@@ -3826,11 +3847,11 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #5f2c82;
+  background: #ff6361;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#49a09d), to(#5f2c82));
-  background: linear-gradient(to right, #49a09d, #5f2c82);
+  background: -webkit-gradient(linear, left top, right top, from(#ffa600), to(#ff6361));
+  background: linear-gradient(to right, #ffa600, #ff6361);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 /* Features section */
@@ -3851,7 +3872,7 @@ label {
   position: relative; }
 
 .feature > hr {
-  color: #49a09d;
+  color: #ffa600;
   width: 20%;
   top: 17px; }
 
