@@ -2,15 +2,12 @@
 // Module/ icon panel
 //==============================================
 
-// Here you can styling other small modules
-
 // Icons Landing
 .icons-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-bottom: 100px;
 }
 
 .icon-panel {
@@ -25,10 +22,10 @@
   img {
     width: 4em;
   }
-  h5 {
+  h6 {
     margin-top: 30px;
     max-width: 90%;
-    font-weight: 300;
+    font-weight: 400;
     min-height: 130px;
   }
 }

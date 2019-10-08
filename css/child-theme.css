@@ -3641,8 +3641,7 @@ label {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 100px; }
+      flex-wrap: wrap; }
 
 .icon-panel {
   display: -webkit-box;
@@ -3665,10 +3664,10 @@ label {
   width: 100%; }
   .icon-panel img {
     width: 4em; }
-  .icon-panel h5 {
+  .icon-panel h6 {
     margin-top: 30px;
     max-width: 90%;
-    font-weight: 300;
+    font-weight: 400;
     min-height: 130px; }
 
 @media (min-width: 576px) {
@@ -3935,15 +3934,16 @@ span.stopa {
     height: 0;
     width: 0; } }
 
-.flex-block-wrapper {
+.title-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  margin: 3rem 0; }
 
-.centered-flex-block {
+.title {
   z-index: 2;
   opacity: 1;
   display: -webkit-box;
@@ -3962,9 +3962,11 @@ span.stopa {
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
-  max-width: 90%; }
-  .centered-flex-block h1 {
-    text-transform: uppercase; }
+  max-width: 90%;
+  margin: 3rem 0; }
+  .title h1 {
+    text-transform: uppercase;
+    font-weight: 900; }
 
 .hr {
   background-image: url(../images/hr.png);
@@ -3981,7 +3983,7 @@ span.stopa {
   margin: 10px auto 30px auto; }
 
 @media (min-width: 768px) {
-  .centered-flex-block {
+  .title {
     max-width: 40%; } }
 
 .product-detail {
@@ -4071,5 +4073,9 @@ span.stopa {
 
 .ui-datepicker {
   z-index: 5000 !important; }
+
+.counter .center {
+  width: 150px;
+  margin: 40px auto; }
 
 /*# sourceMappingURL=child-theme.css.map */

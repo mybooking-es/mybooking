@@ -2,12 +2,13 @@
 // Module/titles
 //==============================================
 
-.flex-block-wrapper {
+.title-wrapper {
   display: flex;
   justify-content: center;
+  margin: 3rem 0;
 }
 
-.centered-flex-block {
+.title {
   z-index: 2;
   opacity: 1;
   display: flex;
@@ -17,8 +18,10 @@
   align-content: center;
   text-align: center;
   max-width: 90%;
+  margin: 3rem 0;
   h1 {
     text-transform: uppercase;
+    font-weight: 900;
   }
 }
 
@@ -40,7 +43,7 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .centered-flex-block {
+  .title {
     max-width: 40%;
   }
 }

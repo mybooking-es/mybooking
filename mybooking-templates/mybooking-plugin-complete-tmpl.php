@@ -26,35 +26,33 @@
 
 <!-- Extra representation -->
 <script type="text/template" id="script_detailed_extra">
+
   <% for (var idx=0;idx<extras.length;idx++) { %>
     <% var extra = extras[idx]; %>
-    <% if (extra.max_quantity > 1) { %>
-      <form>
-          <div class="form-group w-100">
-          <label class="control-label" for="select<%=extra.code%>"><%=extra.name%> <i class="fa custom-icon-select fa-angle-down"></i>
-          <select class="pr-5" name="select<%=extra.code%>" id="select<%=extra.code%>" data-value="<%=extra.code%>">
-            <% for (var idx=0;idx<=extra.max_quantity;idx++) { %>
-            <option value="<%=idx%>"
-              <% if (extrasInShoppingCart[extra.code] && extrasInShoppingCart[extra.code] == idx) { %>
-                selected="selected"
-              <%}%> >
-              <%=idx%> un. <%if (idx>0){%>(<%=configuration.formatCurrency(extra.unit_price*idx)%>)<%}%>
-            </option>
+            <label for="select<%=extra.code%>" class="float-left"><%=extra.name%></label>
+            <% if (extra.photo_path != null) { %>
+            <img src="<%=extra.photo_path%>"/>
             <% } %>
-          </select>
-        </label> 
-        </div>
-      </form>
-    <% } else { %>
-      <form>
-          <div class="form-group">
-            <label for="checkboxl<%=extra.code%>"><%=extra.name%>
-            <span><%=configuration.formatCurrency(extra.unit_price)%></span>
-            <span><input id="checkboxl<%=extra.code%>" type="checkbox" class="extra-checkbox" data-value="<%=extra.code%>" <% if (extrasInShoppingCart[extra.code] &&  extrasInShoppingCart[extra.code] > 0) { %> checked="checked" <% } %>> </span>
-          </label>
-          </div>
-      </form>
-    <% } %>
+              <% if (extra.max_quantity > 1) { %> 
+                <div class="input-group input-group-sm mb-3 float-left mx-3" style="width:90px;">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary btn-minus-extra"
+                        data-value="<%=extra.code%>"
+                        data-max-quantity="<%=extra.max_quantity%>">-</button>
+                    </div>
+                    <% value = (extrasInShoppingCart[extra.code]) ? extrasInShoppingCart[extra.code] : 0; %>
+                    <input type="text" id="extra-<%=extra.code%>-quantity"
+                        class="form-control disabled text-center" value="<%=value%>"/>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary btn-plus-extra"
+                        data-value="<%=extra.code%>"
+                        data-max-quantity="<%=extra.max_quantity%>">+</button>
+                      </div>
+                </div>
+            <% } else { %>
+              <input id="checkboxl<%=extra.code%>" type="checkbox" class="extra-checkbox float-left mt5 mx-3" data-value="<%=extra.code%>" <% if (extrasInShoppingCart[extra.code] &&  extrasInShoppingCart[extra.code] > 0) { %> checked="checked" <% } %>>          
+            <% } %>
+            <p class="lead mx-3"><%= configuration.formatCurrency(extra.unit_price)%></p>
   <% } %>
 </script>
 
