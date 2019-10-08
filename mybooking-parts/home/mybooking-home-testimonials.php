@@ -1,4 +1,14 @@
-<!-- TESTIMONIAL CAROUSEL ----------------------------------------------------->
+<?php
+/**
+*		RESERVATION HOME TESTIMONIALS PARTIAL
+*  	-------------------------------------
+* 	Autor: Hector Asencio @Mybooking
+* 	Versión: 0.0.1
+*   @package WordPress
+*   @subpackage Understrap Mybooking Child
+*   @since Understrap Mybooking Child 0.0.1
+*/
+?>
 
 <?php $testimonial_carousel_visible = get_option("home_testimonial_carousel_visibility");
 if ($testimonial_carousel_visible == 1) { ?>

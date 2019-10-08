@@ -1,4 +1,14 @@
-<!-- SECTIONS NEWS ------------------------------------------------------------>
+<?php
+/**
+*		RESERVATION HOME NEWS PARTIAL
+*  	-----------------------------
+* 	Autor: Hector Asencio @Mybooking
+* 	Versión: 0.0.1
+*   @package WordPress
+*   @subpackage Understrap Mybooking Child
+*   @since Understrap Mybooking Child 0.0.1
+*/
+?>
 
 <?php $news_visible = get_option("home_news_visibility");
 if ($news_visible == 1) { ?>
@@ -33,15 +43,3 @@ if ($news_visible == 1) { ?>
   </div>
 
 <?php } ?>
-
-<!-- PAGE CONTENT ------------------------------------------------------------->
-
-<div class="content flex-block-wrapper">
-  <div class="centered-flex-block">
-
-    <?php while ( have_posts() ) : the_post(); ?>
-      <?php the_content(); ?>
-    <?php endwhile;?>
-
-  </div>
-</div>

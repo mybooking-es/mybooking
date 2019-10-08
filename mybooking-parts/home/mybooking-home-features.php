@@ -1,4 +1,14 @@
-<!-- SECTION FEATURES -------------------------------------------------->
+<?php
+/**
+*		RESERVATION HOME FEATURES PARTIAL
+*  	---------------------------------
+* 	Autor: Hector Asencio @Mybooking
+* 	Versión: 0.0.1
+*   @package WordPress
+*   @subpackage Understrap Mybooking Child
+*   @since Understrap Mybooking Child 0.0.1
+*/
+?>
 
 <?php $features_visible = get_option("home_features_visibility");
 if ($features_visible == 1) { ?>

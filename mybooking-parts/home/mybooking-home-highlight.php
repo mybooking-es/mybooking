@@ -1,4 +1,14 @@
-<!-- SECTION HIGHLIGHT -------------------------------------------------------->
+<?php
+/**
+*		RESERVATION HOME HIGHLIGHT PARTIAL
+*  	----------------------------------
+* 	Autor: Hector Asencio @Mybooking
+* 	Versión: 0.0.1
+*   @package WordPress
+*   @subpackage Understrap Mybooking Child
+*   @since Understrap Mybooking Child 0.0.1
+*/
+?>
 
 <?php $highlight_visible = get_option("home_highlight_visibility");
 if ($highlight_visible == 1) { ?>
