@@ -24,16 +24,6 @@ function mybookinges_create_menu_home() {
     	"dashicons-admin-generic",
     	4.1
     	);
-
-    /* remove duplicate menu hack */
-    add_submenu_page(
-        'configuracion',                  // parent slug, same as above menu slug
-        '',                               // empty page title
-        '',                               // empty menu title
-        'edit_pages',                     // same capability as above
-        'configuracion',                  // same menu slug as parent slug
-        'mybookinges_configuration_home' // same function as above
-    );
   
     add_submenu_page(
     	"configuracion",
@@ -43,7 +33,8 @@ function mybookinges_create_menu_home() {
     	"home",
     	"mybookinges_configuration_home"
     	);
-      
+    // Remove the 'automatic' add option with the same slug
+    remove_submenu_page('configuracion', 'configuracion');      
   }
 
 }
