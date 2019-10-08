@@ -24,6 +24,12 @@
     font-weight: 900;
   }
 }
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .title {
+    max-width: 40%;
+  }
+}
 
 .hr {
   background-image: url(../images/hr.png);
@@ -31,19 +37,4 @@
   width: 156px;
   height: 7px;
   margin: 10px auto 30px auto;
-}
-
-.hr-white {
-  background-image: url(../images/hr-white.png);
-  background-repeat: no-repeat;
-  width: 156px;
-  height: 7px;
-  margin: 10px auto 30px auto;
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .title {
-    max-width: 40%;
-  }
 }

@@ -154,11 +154,6 @@
       </div>
     </div>
   </div>
-<<<<<<< HEAD
 </div>
 <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
 </div>
-=======
-  <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
-</div>
->>>>>>> 86f482fabec04b5e9938d87748636441c2c0f2ae

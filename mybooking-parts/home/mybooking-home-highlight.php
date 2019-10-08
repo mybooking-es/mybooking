@@ -47,10 +47,10 @@ if ($highlight_visible == 1) { ?>
         <?php $text_fact_one = get_option("home_fact_one_text");
             if ($text_fact_one !== '') { ?>
               <br>
-              <h5 class="color-white"><?php echo $text_fact_one ?></h5>
+              <h6 class="color-black"><?php echo $text_fact_one ?></h6>
         <?php }
             else { ?>
-              <h5 class="color-white"><?php _e("Conecta tu cuenta de Mybooking",'mybookinges'); ?></h5>
+              <h6 class="color-black"><?php _e("Conecta tu cuenta de Mybooking",'mybookinges'); ?></h6>
         <?php } ?>
 
       </div>
@@ -67,10 +67,10 @@ if ($highlight_visible == 1) { ?>
 
         <?php $text_fact_two = get_option("home_fact_two_text");
             if ($text_fact_two !== '') { ?>
-              <h5 class="color-white"><?php echo $text_fact_two ?></h5>
+              <h6 class="color-black"><?php echo $text_fact_two ?></h6>
         <?php }
             else { ?>
-              <h5 class="color-white"><?php _e("Opciones de diseño y personalización",'mybookinges'); ?></h5>
+              <h6 class="color-black"><?php _e("Opciones de diseño y personalización",'mybookinges'); ?></h6>
         <?php } ?>
 
       </div>
@@ -88,11 +88,11 @@ if ($highlight_visible == 1) { ?>
         <?php $text_fact_three = get_option("home_fact_three_text");
             if ($text_fact_three !== '') { ?>
 
-            <h5 class="color-white"><?php echo $text_fact_three ?></h5>
+            <h6 class="color-black"><?php echo $text_fact_three ?></h6>
 
         <?php }
             else { ?>
-              <h5 class="color-white"><?php _e("Gestión sencilla de contenidos",'mybookinges'); ?></h5>
+              <h6 class="color-black"><?php _e("Gestión sencilla de contenidos",'mybookinges'); ?></h6>
         <?php } ?>
 
       </div>
@@ -109,10 +109,10 @@ if ($highlight_visible == 1) { ?>
 
           <?php $text_fact_four = get_option("home_fact_four_text");
               if ($text_fact_four !== '') { ?>
-                <h5 class="color-white"><?php echo $text_fact_four ?></h5>
+                <h6 class="color-black"><?php echo $text_fact_four ?></h6>
           <?php }
               else { ?>
-                <h5 class="color-white"><?php _e("Listo para empezar desde cero",'mybookinges'); ?></h5>
+                <h6 class="color-black"><?php _e("Listo para empezar desde cero",'mybookinges'); ?></h6>
           <?php } ?>
 
         </div>

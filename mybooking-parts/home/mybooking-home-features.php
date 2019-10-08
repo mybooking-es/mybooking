@@ -14,10 +14,10 @@
 if ($features_visible == 1) { ?>
 
   <div class="gradient-section">
-    <div class="centered-flex-block mt150">
-
+    
       <!-- Header -->
-
+      <div class="title-wrapper">
+        <div class="title">
       <?php $title_features_header = get_option("home_features_header_title");
           if ($title_features_header !== '') { ?>
             <h1 class="color-white"><?php echo $title_features_header ?></h1>
@@ -33,7 +33,7 @@ if ($features_visible == 1) { ?>
           else { ?>
             <p class="color-white"><?php _e("Mybooking WordPress Theme es sencillo de instalar y configurar para que puedas lanzar tu web de reservas en el menor tiempo posible",'mybookinges'); ?></p>
       <?php } ?>
-
+      </div>
     </div>
 
     <div class="text-center">
