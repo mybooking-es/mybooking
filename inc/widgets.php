@@ -6,7 +6,9 @@
 *
 * 	Autor: Hector Asencio @Mybooking
 * 	Versión: 0.0.1
-*  	@package Understrap Mybooking Child
+*   @package WordPress
+*   @subpackage Understrap Mybooking Child
+*   @since Understrap Mybooking Child 0.0.1
 */
 
 /**
@@ -16,6 +18,15 @@
 
 function mybooking_widgets_init() {
 
+	register_sidebar(
+		array(
+			'name'          => __( 'Top Bar', 'mybookinges' ),
+			'id'            => 'mybooking_top_bar',
+	    'descripion'    => __( 'Área de widgets en el top de las páginas', 'mybookinges' ),
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+		)
+	);
 	register_sidebar(
 		array(
 			'name'          => __( 'Home Hero', 'mybookinges' ),

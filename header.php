@@ -44,6 +44,13 @@ $container = get_theme_mod( 'understrap_container_type' );
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
           <a class="color-gray-800" href="mailto:info@johndoe.com">info@johndoe.com</a>
         </span>
+
+        <!-- Widget -->
+
+        <?php if ( is_active_sidebar( 'mybooking_top_bar' ) ) : ?>
+          <?php dynamic_sidebar( 'mybooking_top_bar' ); ?>
+        <?php endif; ?>
+
       </div>
 
       <!-- Navigation -->
