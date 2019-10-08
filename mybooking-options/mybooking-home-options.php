@@ -1,10 +1,12 @@
 <?php
 /**
-*		CONFIGURACIÓN DE LA HOME
-*  	------------------------
+*		HOME CONFIGURATION PAGE
+*  	-----------------------
 * 	Autor: Hector Asencio @Mybooking
 * 	Versión: 0.0.1
-*  	@package Understrap Mybooking Child
+*   @package WordPress
+*   @subpackage Understrap Mybooking Child
+*   @since Understrap Mybooking Child 0.0.1
 */
 
 add_action('admin_menu', 'mybookinges_create_menu_home');
@@ -38,6 +40,8 @@ function mybookinges_register_options_home() {
   add_option("home_hero_text","","","yes");
 
   add_option("home_promo_visibility","","","yes");
+  add_option("home_promo_button_visibility","","","yes");
+  add_option("home_promo_button_text","","","yes");
 
   add_option("home_highlight_visibility","","","yes");
   add_option("home_highlight_header_title","","","yes");
@@ -48,6 +52,8 @@ function mybookinges_register_options_home() {
   add_option("home_fact_two_text","","","yes");
   add_option("home_fact_three_image","","","yes");
   add_option("home_fact_three_text","","","yes");
+  add_option("home_fact_four_image","","","yes");
+  add_option("home_fact_four_text","","","yes");
 
   add_option("home_features_visibility","","","yes");
   add_option("home_features_header_title","","","yes");
@@ -68,6 +74,8 @@ function mybookinges_register_options_home() {
   register_setting("options_home", "home_hero_text");
 
   register_setting("options_home", "home_promo_visibility");
+  register_setting("options_home", "home_promo_button_visibility");
+  register_setting("options_home", "home_promo_button_text");
 
   register_setting("options_home", "home_highlight_visibility");
   register_setting("options_home", "home_highlight_header_title");
@@ -78,6 +86,8 @@ function mybookinges_register_options_home() {
   register_setting("options_home", "home_fact_two_text");
   register_setting("options_home", "home_fact_three_image");
   register_setting("options_home", "home_fact_three_text");
+  register_setting("options_home", "home_fact_four_image");
+  register_setting("options_home", "home_fact_four_text");
 
   register_setting("options_home", "home_features_visibility");
   register_setting("options_home", "home_features_header_title");
@@ -150,6 +160,16 @@ function mybookinges_configuration_home() {
           <?php $options = get_option( "home_promo_visibility" ); ?>
           <input type="checkbox" name="home_promo_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
         </tr>
+        <tr valign="top">
+          <th scope="row">Moatrar botón</th>
+          <td>
+          <?php $options = get_option( "home_promo_button_visibility" ); ?>
+          <input type="checkbox" name="home_promo_button_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para mostrar el botón</span>
+        </tr>
+        <tr valign="top">
+          <th scope="row">Texto del botón</th>
+          <td><input type="text" name="home_promo_button_text" size="40" value="<?php echo get_option('home_promo_button_text'); ?>" /></td>
+        </tr>
       </table>
 
       <hr>
@@ -188,9 +208,6 @@ function mybookinges_configuration_home() {
           <th scope="row">Texto del punto 1</th>
           <td><textarea name="home_fact_one_text" cols="37" rows="10"><?php echo get_option('home_fact_one_text'); ?></textarea></td>
         </tr>
-      </table>
-
-      <table class="form-table">
         <tr valign="top">
           <th scope="row">Imagen punto 2</th>
           <td><input type="text" name="home_fact_two_image" size="40" value="<?php echo get_option('home_fact_two_image'); ?>" />
@@ -200,9 +217,6 @@ function mybookinges_configuration_home() {
           <th scope="row">Texto del punto 2</th>
           <td><textarea name="home_fact_two_text" cols="37" rows="10"><?php echo get_option('home_fact_two_text'); ?></textarea></td>
         </tr>
-      </table>
-
-      <table class="form-table">
         <tr valign="top">
           <th scope="row">Imagen punto 3</th>
           <td><input type="text" name="home_fact_three_image" size="40" value="<?php echo get_option('home_fact_three_image'); ?>" />
@@ -211,6 +225,15 @@ function mybookinges_configuration_home() {
         <tr valign="top">
           <th scope="row">Texto del punto 3</th>
           <td><textarea name="home_fact_three_text" cols="37" rows="10"><?php echo get_option('home_fact_three_text'); ?></textarea></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row">Imagen punto 4</th>
+          <td><input type="text" name="home_fact_four_image" size="40" value="<?php echo get_option('home_fact_four_image'); ?>" />
+          <br><span class="description">Inserta la URL para la imagen del punto 3</span></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row">Texto del punto 4</th>
+          <td><textarea name="home_fact_four_text" cols="37" rows="10"><?php echo get_option('home_fact_four_text'); ?></textarea></td>
         </tr>
       </table>
 

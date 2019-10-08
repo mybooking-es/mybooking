@@ -1,12 +1,13 @@
 <?php
 /**
 *   TESTIMONIAL POST TYPE
-*   ---------------------
-*   Autor: Hector Asencio @Mybooking
-*   Versión: 0.0.1
-*   @package Understrap Mybooking Child
-*
+* 	Autor: Hector Asencio @Mybooking
+* 	Versión: 0.0.1
+*   @package WordPress
+*   @subpackage Understrap Mybooking Child
+*   @since Understrap Mybooking Child 0.0.1
 */
+
 function create_testimonial() {
   register_post_type( 'testimonial',
     array(

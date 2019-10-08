@@ -6,7 +6,9 @@
 *
 * 	Autor: Hector Asencio @Mybooking
 * 	Versión: 0.0.1
-*  	@package Understrap Mybooking Child
+*   @package WordPress
+*   @subpackage Understrap Mybooking Child
+*   @since Understrap Mybooking Child 0.0.1
 */
 
 /**
@@ -20,7 +22,7 @@ function mybooking_widgets_init() {
 		array(
 			'name'          => __( 'Top Bar', 'mybookinges' ),
 			'id'            => 'mybooking_top_bar',
-	    'descripion'    => __( 'Área de widgets en el top de todas las páginas', 'mybookinges' ),
+	    'descripion'    => __( 'Área de widgets en el top de las páginas', 'mybookinges' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
@@ -38,8 +40,8 @@ function mybooking_widgets_init() {
 		array(
 			'name'          => __( 'Footer Uno', 'mybookinges' ),
 			'id'            => 'mybooking_global_footer_1',
-			'description'   => __( 'Área 1 de widgets en el footer', 'mybookinges' ),
-			'before_widget' => '<div>',
+			'description'   => __( 'Primera área de widgets en el footer', 'mybookinges' ),
+			'before_widget' => '<br/><div>',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -47,8 +49,8 @@ function mybooking_widgets_init() {
 		array(
 			'name'          => __( 'Footer Dos', 'mybookinges' ),
 			'id'            => 'mybooking_global_footer_2',
-			'description'   => __( 'Área 2 de widgets en el footer', 'mybookinges' ),
-			'before_widget' => '<div>',
+			'description'   => __( 'Segunda área de widgets en el footer', 'mybookinges' ),
+			'before_widget' => '<br/><div>',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -56,7 +58,16 @@ function mybooking_widgets_init() {
 		array(
 			'name'          => __( 'Footer Tres', 'mybookinges' ),
 			'id'            => 'mybooking_global_footer_3',
-			'description'   => __( 'Área 3 de widgets en el footer', 'mybookinges' ),
+			'description'   => __( 'Tercera área de widgets en el footer', 'mybookinges' ),
+			'before_widget' => '<br/><div>',
+			'after_widget'  => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Footer Menu', 'mybookinges' ),
+			'id'            => 'mybooking_global_footer_menu',
+			'description'   => __( 'Resetea el menú del footer', 'mybookinges' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
