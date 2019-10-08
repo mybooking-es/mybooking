@@ -13,7 +13,8 @@ add_action('admin_menu', 'mybookinges_create_menu_company_info');
 add_action('admin_init', 'mybookinges_register_options_company_info');
 
 function mybookinges_create_menu_company_info() {
-  if (!current_user_can('manage_options') || current_user_can('administrator'))
+  if (!current_user_can('manage_options') || current_user_can('administrator')) {
+
     add_submenu_page(
       "configuracion",
     	__("Información corporativa"),
@@ -22,6 +23,8 @@ function mybookinges_create_menu_company_info() {
     	"info",
     	"mybookinges_configuration_company_info"
     	);
+     
+  }
 }
 
 function mybookinges_register_options_company_info() {

@@ -13,7 +13,8 @@ add_action('admin_menu', 'mybookinges_create_menu_home');
 add_action('admin_init', 'mybookinges_register_options_home');
 
 function mybookinges_create_menu_home() {
-  if (!current_user_can('manage_options') || current_user_can('administrator'))
+  if (!current_user_can('manage_options') || current_user_can('administrator')) {
+
     add_menu_page(
     	__("MyBooking"),
     	__("MyBooking"),
@@ -23,14 +24,28 @@ function mybookinges_create_menu_home() {
     	"dashicons-admin-generic",
     	4.1
     	);
+
+    /* remove duplicate menu hack */
+    add_submenu_page(
+        'configuracion',                  // parent slug, same as above menu slug
+        '',                               // empty page title
+        '',                               // empty menu title
+        'edit_pages',                     // same capability as above
+        'configuracion',                  // same menu slug as parent slug
+        'mybookinges_configuration_home' // same function as above
+    );
+  
     add_submenu_page(
     	"configuracion",
-    	__("Configuración de la página de inicio"),
-    	__("Configuración de la página de inicio"),
+    	__("Página de inicio"),
+    	__("Página de inicio"),
     	"edit_pages",
     	"home",
     	"mybookinges_configuration_home"
     	);
+      
+  }
+
 }
 
 function mybookinges_register_options_home() {
