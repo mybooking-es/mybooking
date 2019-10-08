@@ -13,8 +13,7 @@
 <?php $highlight_visible = get_option("home_highlight_visibility");
 if ($highlight_visible == 1) { ?>
 
-  <div class="gradient-section">
-    <div class="container">
+  <div class="container">
 
     <!-- Header -->
 
@@ -23,8 +22,8 @@ if ($highlight_visible == 1) { ?>
         $text_highlight_header = get_option("home_highlight_header_text");
             if ($title_highlight_header !== '' || $text_highlight_header !== '') { ?>
 
-              <div class="flex-block-wrapper">
-                <div class="centered-flex-block mt150">
+              <div class="title-wrapper">
+                <div class="title">
                   <h1><?php echo $title_highlight_header ?></h1>
                   <p class="color-gray-500"><?php echo $text_highlight_header ?></p>
                 </div>
@@ -34,7 +33,7 @@ if ($highlight_visible == 1) { ?>
 
     <!-- Facts -->
 
-    <div class="icons-wrapper mt100">
+    <div class="icons-wrapper">
       <div class="icon-panel icon-1">
 
         <?php $imagen_fact_one = get_option("home_fact_one_image");
@@ -120,6 +119,5 @@ if ($highlight_visible == 1) { ?>
       </div>
 
     </div>
-  </div>
 
 <?php } ?>

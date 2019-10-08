@@ -10,8 +10,8 @@
 */
 ?>
 
-<div class="content flex-block-wrapper">
-  <div class="centered-flex-block">
+<div class="container">
+  <div class="row">
 
     <?php while ( have_posts() ) : the_post(); ?>
       <?php the_content(); ?>

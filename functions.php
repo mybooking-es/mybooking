@@ -4,10 +4,25 @@
 *  	----------------
 *		Overrides parent document on Understrap Theme
 *
-* 	Autors: Hector Asencio & Juan Gil @Mybooking
 * 	Versión: 0.0.1
 *  	@package Understrap Mybooking Child
 */
+
+
+/**
+ * Internacionalization
+ *
+ */
+// function mybookinges_setup(){
+//     $domain = 'mybookinges';
+//     // wp-content/languages/mybookinges/es_ES.mo
+//     load_theme_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain );
+//     // wp-content/themes/mybookinges/languages/es_ES.mo
+//     load_theme_textdomain( $domain, get_stylesheet_directory() . '/languages' );
+//     // wp-content/themes/mybookinges/languages/es_ES.mo
+//     load_theme_textdomain( $domain, get_template_directory() . '/languages' );
+// }
+// add_action( 'after_setup_theme', 'mybookinges_setup' );
 
 /**
  * Clean inherited CSS & scripts
