@@ -15,10 +15,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper-footer" id="wrapper-footer"  style="background-color:#333;color:#FFF;">
 
-	<!-- Top button -->
-
-	<a href="#0" class="cd-top">Top</a>
-
 	<div class="<?php echo esc_attr( $container ); ?>">
 
 		<!-- Footer widgets -->
