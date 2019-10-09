@@ -3209,9 +3209,9 @@ Remember you can use Bootstrap Spacing utility classes: https://getbootstrap.com
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-color: #faf6f5;
+  background-color: #ffedcc;
   background-blend-mode: multiply;
-  padding-bottom: 100px; }
+  padding: 30px; }
 
 .contact-content {
   display: -webkit-box;
@@ -3219,10 +3219,10 @@ Remember you can use Bootstrap Spacing utility classes: https://getbootstrap.com
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin: 50px auto;
-  width: calc(100% -30px);
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  width: calc(100% -60px);
   color: #fff; }
 
 .contact-content hr {
@@ -3237,36 +3237,37 @@ Remember you can use Bootstrap Spacing utility classes: https://getbootstrap.com
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .contact-left iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px; }
 
 .contact-left-info {
   width: 100%;
-  background-color: #2a1d39;
+  background-color: #332100;
   padding: 20px 10% 20px 20px; }
 
-.contact-left-map {
-  background-color: #fff;
-  width: 100%; }
-
+.contact-left-map,
 .contact-right {
   width: 100%; }
 
+.contact-right {
+  margin-top: 30px; }
+
 .contact-form {
   padding: 20px;
-  background-color: #774cfd; }
+  background-color: #332100; }
 
 .contact-form input,
 .contact-form form textarea {
   width: 100%;
-  border-radius: 4px;
   border: none;
-  margin-bottom: 2em;
-  color: #acb7ee; }
+  margin-bottom: 2em; }
 
 ul.social-links,
 .social-links li {
-  margin: 1rem 0 0 0;
   padding: 0; }
 
 .social-links li {
@@ -3279,19 +3280,22 @@ ul.social-links,
   margin-left: 0; }
 
 .social-links a {
-  color: rgba(255, 255, 255, 0.2);
+  color: #e69500;
   -webkit-transition: ease-in-out 0.5ms;
   transition: ease-in-out 0.5ms; }
+  .social-links a:hover {
+    color: #ffa600; }
 
-.social-links a:hover {
-  color: #acb7ee; }
+@media (max-width: 575.98px) {
+  .contact-left-map {
+    display: none; } }
 
 @media (min-width: 768px) {
   .contact-left {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row; }
+        -ms-flex-direction: row;
+            flex-direction: row; }
   .contact-left-info {
     width: 50%; }
   .contact-left-map {
@@ -3299,26 +3303,27 @@ ul.social-links,
 
 @media (min-width: 992px) {
   .contact-content {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin: 50px 10% 0 10%;
-    height: 553px; }
-  .contact-left {
-    width: 80%; }
-  .contact-right {
-    width: 20%; } }
+    margin: 0 10%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content; } }
 
 @media (min-width: 1200px) {
+  .contact-content {
+    padding: 50px 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0 10%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content; }
   .contact-left {
     width: 70%; }
   .contact-right {
-    width: 30%; } }
-
-@media (max-width: 575.98px) {
-  .contact-left-map {
-    display: none; } }
+    width: 30%;
+    margin-top: 0; } }
 
 .news_container {
   padding: 50px 0; }
@@ -3583,12 +3588,14 @@ label {
   position: relative;
   z-index: 30;
   padding: 0.3rem;
-  background-color: #eeeeee; }
+  background-color: #332100; }
   .cta a {
-    color: #424242; }
+    color: white; }
     .cta a:hover {
-      color: #5c5c5c;
+      color: #fff6e6;
       text-decoration: none; }
+  .cta i {
+    color: #fff; }
 
 .custom-logo-link {
   width: 200px; }
@@ -3628,7 +3635,7 @@ label {
   .home .bg-nav {
     background: none; }
   .home .cta {
-    background-color: rgba(255, 255, 255, 0.8); } }
+    background-color: rgba(66, 66, 66, 0.5); } }
 
 .icons-wrapper {
   display: -webkit-box;
@@ -3642,7 +3649,7 @@ label {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 3rem; }
+  padding-bottom: 2rem; }
 
 .icon-panel {
   display: -webkit-box;
@@ -3658,10 +3665,8 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
   width: 100%; }
   .icon-panel img {
     width: 4em; }
@@ -3669,7 +3674,8 @@ label {
     margin-top: 30px;
     max-width: 90%;
     font-weight: 400;
-    min-height: 130px; }
+    height: 90px;
+    overflow: hidden; }
 
 @media (min-width: 576px) {
   .icons-wrapper {
@@ -3942,7 +3948,7 @@ span.stopa {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 3rem 0; }
+  padding: 3rem 0; }
 
 .title {
   z-index: 2;
@@ -3963,8 +3969,7 @@ span.stopa {
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
-  max-width: 90%;
-  margin: 3rem 0; }
+  max-width: 90%; }
   .title h1 {
     text-transform: uppercase;
     font-weight: 900; }
@@ -4057,6 +4062,21 @@ span.stopa {
       right: 30px;
       bottom: 30px; } }
 
+.blockquote {
+  padding: 4rem 0; }
+  .blockquote p {
+    font-size: 22px;
+    padding-left: 75px; }
+  .blockquote footer {
+    padding-left: 75px; }
+
+.blockquote:before {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: url(../images/quote-left-solid.svg) 0 0/contain no-repeat;
+  content: ""; }
+
 .shadow-bottom {
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
@@ -4071,5 +4091,9 @@ span.stopa {
 .counter .center {
   width: 150px;
   margin: 40px auto; }
+
+.wrapper-footer {
+  background-color: #332100;
+  color: #fff; }
 
 /*# sourceMappingURL=child-theme.css.map */

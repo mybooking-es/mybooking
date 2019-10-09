@@ -1,0 +1,17 @@
+.blockquote {
+  padding: 4rem 0;
+  p {
+    font-size: 22px;
+    padding-left: 75px;
+  }
+  footer {
+    padding-left: 75px;
+  }
+}
+.blockquote:before {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: url(../images/quote-left-solid.svg) 0 0 / contain no-repeat;
+  content: "";
+}

@@ -12,7 +12,7 @@
 
 <?php $testimonial_carousel_visible = get_option("home_testimonial_carousel_visibility");
 if ($testimonial_carousel_visible == 1) { ?>
-
+<div class="bg-gray-100">
   <div class="container -carrusel-un-item carrusel-de-uno owl-carousel owl-theme">
 
     <?php
@@ -21,11 +21,11 @@ if ($testimonial_carousel_visible == 1) { ?>
     while ( $testimonial_item->have_posts() ) : $testimonial_item->the_post();
     ?>
 
-      <div class="col-md-12">
+      <div class="col-md-9 offset-md-1">
         <blockquote class="blockquote">
-          <p class="mb-0 text-centered">
+         
             <?php the_content(); ?>
-          </p>
+      
           <footer class="blockquote-footer">
             <?php the_title(); ?>
           </footer>
@@ -35,5 +35,5 @@ if ($testimonial_carousel_visible == 1) { ?>
     <?php endwhile; ?>
 
   </div>
-
+  </div>
 <?php } ?>

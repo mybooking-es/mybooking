@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .icon-panel {
@@ -16,9 +16,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-content: center;
+  // align-content: center;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
   width: 100%;
   img {
     width: 4em;
@@ -27,7 +27,8 @@
     margin-top: 30px;
     max-width: 90%;
     font-weight: 400;
-    min-height: 130px;
+    height: 90px;
+    overflow: hidden;
   }
 }
 
