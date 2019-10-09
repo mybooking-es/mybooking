@@ -24,7 +24,7 @@ function mybookinges_create_menu_home() {
     	"dashicons-admin-generic",
     	4.1
     	);
-  
+
     add_submenu_page(
     	"configuracion",
     	__("Página de inicio"),
@@ -34,7 +34,7 @@ function mybookinges_create_menu_home() {
     	"mybookinges_configuration_home"
     	);
     // Remove the 'automatic' add option with the same slug
-    remove_submenu_page('configuracion', 'configuracion');      
+    remove_submenu_page('configuracion', 'configuracion');
   }
 
 }
@@ -122,8 +122,8 @@ function mybookinges_configuration_home() {
     <!-- Page header -->
 
     <h1>
-      Configuración de la página de inicio <br>
-      <small>Ajustes para el template 'MyBooking Home'</small>
+      <?php _e('Configuración de la página de inicio') ?> <br>
+      <small><?php _e('Ajustes para el template "MyBooking Home"') ?></small>
     </h1>
 
     <hr>
@@ -138,18 +138,18 @@ function mybookinges_configuration_home() {
 
       <!-- Section hero -->
 
-      <h2>Cabecera de la página de inicio</h2>
+      <h2><?php _e('Cabecera de la página de inicio') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Título del eslogan</th>
+          <th scope="row"><?php _e('Título del eslogan') ?></th>
           <td><input type="text" name="home_hero_title" size="40" value="<?php echo get_option('home_hero_title'); ?>" />
-          <br><span class="description">Añade un titulo personalizado para la cabecera de la página</span></td>
+          <br><span class="description"><?php _e('Añade un titulo personalizado para la cabecera de la página') ?></span></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Texto del eslogan</th>
+          <th scope="row"><?php _e('Texto del eslogan') ?></th>
           <td><textarea name="home_hero_text" cols="37" rows="10"><?php echo get_option('home_hero_text'); ?></textarea>
-          <br><span class="description">Añade un texto personalizado para la cabecera de la página</span></td>
+          <br><span class="description"><?php _e('Añade un texto personalizado para la cabecera de la página') ?></span></td>
         </tr>
       </table>
 
@@ -157,23 +157,23 @@ function mybookinges_configuration_home() {
 
       <!-- Section promo -->
 
-      <h2>Promociones</h2>
+      <h2><?php _e('Promociones') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Visibilidad</th>
+          <th scope="row"><?php _e('Visibilidad') ?></th>
           <td>
           <?php $options = get_option( "home_promo_visibility" ); ?>
           <input type="checkbox" name="home_promo_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
         </tr>
         <tr valign="top">
-          <th scope="row">Moatrar botón</th>
+          <th scope="row"><?php _e('Mostrar botón') ?></th>
           <td>
           <?php $options = get_option( "home_promo_button_visibility" ); ?>
           <input type="checkbox" name="home_promo_button_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para mostrar el botón</span>
         </tr>
         <tr valign="top">
-          <th scope="row">Texto del botón</th>
+          <th scope="row"><?php _e('Texto del botón') ?></th>
           <td><input type="text" name="home_promo_button_text" size="40" value="<?php echo get_option('home_promo_button_text'); ?>" /></td>
         </tr>
       </table>
@@ -182,11 +182,11 @@ function mybookinges_configuration_home() {
 
       <!-- Section highlight -->
 
-      <h2>Destacada</h2>
+      <h2><?php _e('Sección destacados') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Visibilidad</th>
+          <th scope="row"><?php _e('Visibilidad') ?></th>
           <td>
           <?php $options = get_option( "home_highlight_visibility" ); ?>
           <input type="checkbox" name="home_highlight_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
@@ -195,50 +195,50 @@ function mybookinges_configuration_home() {
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Título de la sección destacada</th>
+          <th scope="row"><?php _e('Título de la sección de destacados') ?></th>
           <td><input type="text" name="home_highlight_header_title" size="40" value="<?php echo get_option('home_highlight_header_title'); ?>" /></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Texto de la sección destacada</th>
+          <th scope="row"><?php _e('Texto de la sección de destacados') ?></th>
           <td><textarea name="home_highlight_header_text" cols="37" rows="10"><?php echo get_option('home_highlight_header_text'); ?></textarea></td>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Imagen punto 1</th>
+          <th scope="row"><?php _e('Imagen punto 1') ?></th>
           <td><input type="text" name="home_fact_one_image" size="40" value="<?php echo get_option('home_fact_one_image'); ?>" />
-          <br><span class="description">Inserta la URL para la imagen del punto 1</span></td>
+          <br><span class="description"><?php _e('Inserta la URL para la imagen del punto 1') ?></span></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Texto del punto 1</th>
+          <th scope="row"><?php _e('Texto del punto 1') ?></th>
           <td><textarea name="home_fact_one_text" cols="37" rows="10"><?php echo get_option('home_fact_one_text'); ?></textarea></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Imagen punto 2</th>
+          <th scope="row"><?php _e('Imagen punto 2') ?></th>
           <td><input type="text" name="home_fact_two_image" size="40" value="<?php echo get_option('home_fact_two_image'); ?>" />
-          <br><span class="description">Inserta la URL para la imagen del punto 2</span></td>
+          <br><span class="description"><?php _e('Inserta la URL para la imagen del punto 2') ?></span></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Texto del punto 2</th>
+          <th scope="row"><?php _e('Texto del punto 2') ?></th>
           <td><textarea name="home_fact_two_text" cols="37" rows="10"><?php echo get_option('home_fact_two_text'); ?></textarea></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Imagen punto 3</th>
+          <th scope="row"><?php _e('Imagen punto 3') ?></th>
           <td><input type="text" name="home_fact_three_image" size="40" value="<?php echo get_option('home_fact_three_image'); ?>" />
-          <br><span class="description">Inserta la URL para la imagen del punto 3</span></td>
+          <br><span class="description"><?php _e('Inserta la URL para la imagen del punto 3') ?></span></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Texto del punto 3</th>
+          <th scope="row"><?php _e('Texto del punto 3') ?></th>
           <td><textarea name="home_fact_three_text" cols="37" rows="10"><?php echo get_option('home_fact_three_text'); ?></textarea></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Imagen punto 4</th>
+          <th scope="row"><?php _e('Imagen punto 4') ?></th>
           <td><input type="text" name="home_fact_four_image" size="40" value="<?php echo get_option('home_fact_four_image'); ?>" />
-          <br><span class="description">Inserta la URL para la imagen del punto 3</span></td>
+          <br><span class="description"><?php _e('Inserta la URL para la imagen del punto 3') ?></span></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Texto del punto 4</th>
+          <th scope="row"><?php _e('Texto del punto 4') ?></th>
           <td><textarea name="home_fact_four_text" cols="37" rows="10"><?php echo get_option('home_fact_four_text'); ?></textarea></td>
         </tr>
       </table>
@@ -247,11 +247,11 @@ function mybookinges_configuration_home() {
 
       <!-- Section features -->
 
-      <h2>Features</h2>
+      <h2><?php _e('Características') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Visibilidad</th>
+          <th scope="row"><?php _e('Visibilidad') ?></th>
           <td>
           <?php $options = get_option( "home_features_visibility" ); ?>
           <input type="checkbox" name="home_features_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
@@ -260,49 +260,49 @@ function mybookinges_configuration_home() {
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Título de la cabecera</th>
+          <th scope="row"><?php _e('Título de la cabecera') ?></th>
           <td><input type="text" name="home_features_header_title" size="40" value="<?php echo get_option('home_features_header_title'); ?>" /></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Texto de la cabecera</th>
+          <th scope="row"><?php _e('Texto de la cabecera') ?></th>
           <td><textarea name="home_features_header_text" cols="37" rows="10"><?php echo get_option('home_features_header_text'); ?></textarea></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Imagen de la cabecera</th>
+          <th scope="row"><?php _e('Imagen de la cabecera') ?></th>
           <td><input type="text" name="home_features_header_image" size="40" value="<?php echo get_option('home_features_header_image'); ?>" />
-          <br><span class="description">Inserta la URL para la imagen de la cabecera</span></td>
+          <br><span class="description"><?php _e('Inserta la URL para la imagen de la cabecera') ?></span></td>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Título de Feature uno</th>
+          <th scope="row"><?php _e('Título de característica uno') ?></th>
           <td><input type="text" name="home_features_one_title" size="40" value="<?php echo get_option('home_features_one_title'); ?>" /></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Texto de Feature uno</th>
+          <th scope="row"><?php _e('Texto de característica uno') ?></th>
           <td><textarea name="home_features_one_text" cols="37" rows="10"><?php echo get_option('home_features_one_text'); ?></textarea></td>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Título de Feature dos</th>
+          <th scope="row"><?php _e('Título de característica dos') ?></th>
           <td><input type="text" name="home_features_two_title" size="40" value="<?php echo get_option('home_features_two_title'); ?>" /></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Texto de Feature dos</th>
+          <th scope="row"><?php _e('Texto de característica dos') ?></th>
           <td><textarea name="home_features_two_text" cols="37" rows="10"><?php echo get_option('home_features_two_text'); ?></textarea></td>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Título de Feature tres</th>
+          <th scope="row"><?php _e('Título de característica tres') ?></th>
           <td><input type="text" name="home_features_three_title" size="40" value="<?php echo get_option('home_features_three_title'); ?>" /></td>
         </tr>
         <tr valign="top">
-          <th scope="row">Texto de Feature tres</th>
+          <th scope="row"><?php _e('Texto de característica tres') ?></th>
           <td><textarea name="home_features_three_text" cols="37" rows="10"><?php echo get_option('home_features_three_text'); ?></textarea></td>
         </tr>
       </table>
@@ -311,11 +311,11 @@ function mybookinges_configuration_home() {
 
       <!-- Section news -->
 
-      <h2>Noticias destacadas</h2>
+      <h2><?php _e('Noticias') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Visibilidad</th>
+          <th scope="row"><?php _e('Visibilidad') ?></th>
           <td>
           <?php $options = get_option( "home_news_visibility" ); ?>
           <input type="checkbox" name="home_news_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>
@@ -326,11 +326,11 @@ function mybookinges_configuration_home() {
 
       <!-- Section testimonial -->
 
-      <h2>Carrusel de testimonios</h2>
+      <h2><?php _e('Carrusel de testimonios') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row">Visibilidad</th>
+          <th scope="row"><?php _e('Visibilidad') ?></th>
           <td>
           <?php $options = get_option( "home_testimonial_carousel_visibility" ); ?>
           <input type="checkbox" name="home_testimonial_carousel_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description">Marcar para activar la sección</span>

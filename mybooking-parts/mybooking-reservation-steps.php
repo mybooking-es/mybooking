@@ -19,13 +19,13 @@
 
         if ( in_array('choose_product',$classes) ) {
           $choose_active = 'active';
-          $step = 'Seleccionar producto';
+          $step = __('Seleccionar producto');
         } elseif ( in_array('complete',$classes) ) {
           $complete_active = 'active';
-          $step = 'Completar reserva';
+          $step = __('Completar reserva');
         } elseif ( in_array('summary',$classes) ) {
           $summary_active = 'active';
-          $step = 'Resumen';
+          $step = __('Resumen');
         } ?>
 
           <div data-desc="<?php _e( 'Lugar y Fecha', 'mybookinges' ) ?>" class="step">1</div>
