@@ -1,0 +1,885 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mybooking\n"
+"POT-Creation-Date: 2019-10-10 11:44+0200\n"
+"PO-Revision-Date: 2019-10-10 12:58+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: footer.php:102
+msgid "Síguenos"
+msgstr "Follow us"
+
+#: footer.php:139 mybooking-options/mybooking-company-options.php:175
+msgid "Métodos de pago"
+msgstr "Payment methods"
+
+#: footer.php:175
+msgid "2019 mybooking"
+msgstr "2019 mybooking"
+
+#: inc/widgets.php:23
+msgid "Top Bar"
+msgstr "Top Bar"
+
+#: inc/widgets.php:25
+msgid "Área de widgets en el top de las páginas"
+msgstr "Top Bar widgets area "
+
+#: inc/widgets.php:32
+msgid "Home Hero"
+msgstr "Home Hero"
+
+#: inc/widgets.php:34
+msgid "Área de widgets en el hero de la plantilla MyBooking Home"
+msgstr "Mybooking Home template hero widget area"
+
+#: inc/widgets.php:41
+msgid "Footer Uno"
+msgstr "Footer One"
+
+#: inc/widgets.php:43
+msgid "Primera área de widgets en el footer"
+msgstr "First footer widgets area"
+
+#: inc/widgets.php:50
+msgid "Footer Dos"
+msgstr "Footer Two"
+
+#: inc/widgets.php:52
+msgid "Segunda área de widgets en el footer"
+msgstr "Secon footer widgets area"
+
+#: inc/widgets.php:59
+msgid "Footer Tres"
+msgstr "Footer Three"
+
+#: inc/widgets.php:61
+msgid "Tercera área de widgets en el footer"
+msgstr "Third footer widgets area"
+
+#: inc/widgets.php:68
+msgid "Footer Menu"
+msgstr "Footer Menu"
+
+#: inc/widgets.php:70
+msgid "Resetea el menú del footer"
+msgstr "Reset the footer menu"
+
+#: mybooking-functions/mybooking-categories.php:19
+#: mybooking-functions/mybooking-categories.php:20
+msgid "Mybooking Home"
+msgstr "Mybooking Home"
+
+#: mybooking-functions/mybooking-categories.php:39
+msgid "Uncategorized"
+msgstr "Uncategorized"
+
+#: mybooking-functions/mybooking-categories.php:52
+#: mybooking-functions/mybooking-categories.php:55
+#: mybooking-functions/mybooking-categories.php:62
+#: mybooking-functions/mybooking-categories.php:76
+#: mybooking-functions/mybooking-categories.php:79
+#: mybooking-functions/mybooking-categories.php:87
+#, php-format
+msgid "View all posts in %s"
+msgstr "View all posts in %s"
+
+#: mybooking-options/mybooking-company-options.php:20
+#: mybooking-options/mybooking-company-options.php:21
+#: mybooking-options/mybooking-company-options.php:104
+msgid "Información corporativa"
+msgstr "Corporate information"
+
+#: mybooking-options/mybooking-company-options.php:80
+#: mybooking-options/mybooking-home-options.php:117
+msgid "No tienes acceso a esta página."
+msgstr "You have no access for this page"
+
+#: mybooking-options/mybooking-company-options.php:88
+msgid "Información del negocio"
+msgstr "Company information"
+
+#: mybooking-options/mybooking-company-options.php:89
+msgid ""
+"Aparece en varios lugares del tema, incluyendo el template \"MyBooking "
+"Contacto\""
+msgstr "Apears in several places, including \"Mybooking Contact\" template"
+
+#: mybooking-options/mybooking-company-options.php:108
+msgid "Denominación del negocio"
+msgstr "Company trade name"
+
+#: mybooking-options/mybooking-company-options.php:112
+msgid "Razón social"
+msgstr "Company name"
+
+#: mybooking-options/mybooking-company-options.php:116
+msgid "Número de Identificación Fiscal"
+msgstr "Fiscal Identification Number"
+
+#: mybooking-options/mybooking-company-options.php:125
+msgid "Información de contacto"
+msgstr "Contact information"
+
+#: mybooking-options/mybooking-company-options.php:129
+msgid "Dirección postal"
+msgstr "Mailing Address"
+
+#: mybooking-options/mybooking-company-options.php:133
+msgid "Teléfono de contacto"
+msgstr "Contact phone"
+
+#: mybooking-options/mybooking-company-options.php:137
+msgid "Email de contacto"
+msgstr "Contact Email"
+
+#: mybooking-options/mybooking-company-options.php:146
+msgid "Enlaces sociales"
+msgstr "Social links"
+
+#: mybooking-options/mybooking-company-options.php:150
+msgid "Twitter"
+msgstr "Twitter"
+
+#: mybooking-options/mybooking-company-options.php:152
+msgid "Pega aquí la URL del perfil de Twitter"
+msgstr "Paste the Twitter profile URL here"
+
+#: mybooking-options/mybooking-company-options.php:155
+msgid "Facebook"
+msgstr "Facebook"
+
+#: mybooking-options/mybooking-company-options.php:157
+msgid "Pega aquí la URL del perfil de Facebook"
+msgstr "Paste the Facebook profile URL here"
+
+#: mybooking-options/mybooking-company-options.php:160
+msgid "Instagram"
+msgstr "Instagram"
+
+#: mybooking-options/mybooking-company-options.php:162
+msgid "Pega aquí la URL del perfil de Instagram"
+msgstr "Paste the Instagram profile URL here"
+
+#: mybooking-options/mybooking-company-options.php:165
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: mybooking-options/mybooking-company-options.php:167
+msgid "Pega aquí la URL del perfil de LinkedIn"
+msgstr "Paste the LinkedIn profile URL here"
+
+#: mybooking-options/mybooking-company-options.php:179
+msgid "VISA"
+msgstr "VISA"
+
+#: mybooking-options/mybooking-company-options.php:183
+msgid "Marcar para mostrar el icono de VISA en el footer"
+msgstr "Check to show VISA icon in the footer"
+
+#: mybooking-options/mybooking-company-options.php:186
+msgid "Mastercard"
+msgstr "Mastercard"
+
+#: mybooking-options/mybooking-company-options.php:190
+msgid "Marcar para mostrar el icono de Mastercard en el footer"
+msgstr "Check to show Mastercard icon in the footer"
+
+#: mybooking-options/mybooking-company-options.php:193
+msgid "PayPal"
+msgstr "PayPal"
+
+#: mybooking-options/mybooking-company-options.php:197
+msgid "Marcar para mostrar el icono de PayPal en el footer"
+msgstr "Check to show PayPal icon in the footer"
+
+#: mybooking-options/mybooking-company-options.php:205
+msgid "Página Contacto"
+msgstr "Contact page"
+
+#: mybooking-options/mybooking-company-options.php:209
+msgid "Título de la sección"
+msgstr "Section title"
+
+#: mybooking-options/mybooking-company-options.php:211
+#: mybooking-options/mybooking-company-options.php:216
+msgid "Aparece en el template Mybooking-contact"
+msgstr "Apears on Mybooking-contact template"
+
+#: mybooking-options/mybooking-company-options.php:214
+msgid "Subtítulo de la sección"
+msgstr "Section subtitle"
+
+#: mybooking-options/mybooking-company-options.php:219
+msgid "Mapa de localización"
+msgstr "Contact map"
+
+#: mybooking-options/mybooking-company-options.php:221
+msgid "Pega aquí el código de Google Maps"
+msgstr "Paste the Google Maps iframe code here"
+
+#: mybooking-options/mybooking-company-options.php:228
+#: mybooking-options/mybooking-home-options.php:343
+msgid "Guardar cambios"
+msgstr "Save changes"
+
+#: mybooking-options/mybooking-home-options.php:19
+#: mybooking-options/mybooking-home-options.php:20
+msgid "MyBooking"
+msgstr "MyBooking"
+
+#: mybooking-options/mybooking-home-options.php:30
+#: mybooking-options/mybooking-home-options.php:31
+msgid "Página de inicio"
+msgstr "Home page"
+
+#: mybooking-options/mybooking-home-options.php:125
+msgid "Configuración de la página de inicio"
+msgstr "Home page configuration"
+
+#: mybooking-options/mybooking-home-options.php:126
+msgid "Ajustes para el template \"MyBooking Home\""
+msgstr "\"MyBooking Home\" template setup"
+
+#: mybooking-options/mybooking-home-options.php:141
+msgid "Cabecera de la página de inicio"
+msgstr "Home page header"
+
+#: mybooking-options/mybooking-home-options.php:145
+msgid "Título del eslogan"
+msgstr "Slogan title"
+
+#: mybooking-options/mybooking-home-options.php:147
+msgid "Añade un titulo personalizado para la cabecera de la página"
+msgstr "Add a custom title for home page header"
+
+#: mybooking-options/mybooking-home-options.php:150
+msgid "Texto del eslogan"
+msgstr "Slogan text"
+
+#: mybooking-options/mybooking-home-options.php:152
+msgid "Añade un texto personalizado para la cabecera de la página"
+msgstr "Add a custom text to home page header"
+
+#: mybooking-options/mybooking-home-options.php:160
+#: mybooking-posts/mybooking-promo.php:16
+msgid "Promociones"
+msgstr "Promotions"
+
+#: mybooking-options/mybooking-home-options.php:164
+#: mybooking-options/mybooking-home-options.php:189
+#: mybooking-options/mybooking-home-options.php:254
+#: mybooking-options/mybooking-home-options.php:318
+#: mybooking-options/mybooking-home-options.php:333
+msgid "Visibilidad"
+msgstr "Visibility"
+
+#: mybooking-options/mybooking-home-options.php:170
+msgid "Mostrar botón"
+msgstr "Show button"
+
+#: mybooking-options/mybooking-home-options.php:176
+msgid "Texto del botón"
+msgstr "Button text"
+
+#: mybooking-options/mybooking-home-options.php:185
+msgid "Sección destacados"
+msgstr "Highlight section"
+
+#: mybooking-options/mybooking-home-options.php:198
+msgid "Título de la sección de destacados"
+msgstr "Highlight section title"
+
+#: mybooking-options/mybooking-home-options.php:202
+msgid "Texto de la sección de destacados"
+msgstr "Highlight section text"
+
+#: mybooking-options/mybooking-home-options.php:209
+msgid "Imagen punto 1"
+msgstr "Point 1 image"
+
+#: mybooking-options/mybooking-home-options.php:211
+msgid "Inserta la URL para la imagen del punto 1"
+msgstr "Paste the URL for Point 1 image here"
+
+#: mybooking-options/mybooking-home-options.php:214
+msgid "Texto del punto 1"
+msgstr "Point 1 text"
+
+#: mybooking-options/mybooking-home-options.php:218
+msgid "Imagen punto 2"
+msgstr "Point 2 image"
+
+#: mybooking-options/mybooking-home-options.php:220
+msgid "Inserta la URL para la imagen del punto 2"
+msgstr "Paste the URL for Point 2 image here"
+
+#: mybooking-options/mybooking-home-options.php:223
+msgid "Texto del punto 2"
+msgstr "Point 2 text"
+
+#: mybooking-options/mybooking-home-options.php:227
+msgid "Imagen punto 3"
+msgstr "Point 3 image"
+
+#: mybooking-options/mybooking-home-options.php:229
+#: mybooking-options/mybooking-home-options.php:238
+msgid "Inserta la URL para la imagen del punto 3"
+msgstr "Paste the URL for Point 3 image here"
+
+#: mybooking-options/mybooking-home-options.php:232
+msgid "Texto del punto 3"
+msgstr "Point 3 text"
+
+#: mybooking-options/mybooking-home-options.php:236
+msgid "Imagen punto 4"
+msgstr "Point 4 image"
+
+#: mybooking-options/mybooking-home-options.php:241
+msgid "Texto del punto 4"
+msgstr "Point 4 text"
+
+#: mybooking-options/mybooking-home-options.php:250
+msgid "Características"
+msgstr "Features"
+
+#: mybooking-options/mybooking-home-options.php:263
+msgid "Título de la cabecera"
+msgstr "Features header title"
+
+#: mybooking-options/mybooking-home-options.php:267
+msgid "Texto de la cabecera"
+msgstr "Features header text"
+
+#: mybooking-options/mybooking-home-options.php:271
+msgid "Imagen de la cabecera"
+msgstr "Features header image"
+
+#: mybooking-options/mybooking-home-options.php:273
+msgid "Inserta la URL para la imagen de la cabecera"
+msgstr "Paste the URL for Features header image here"
+
+#: mybooking-options/mybooking-home-options.php:279
+msgid "Título de característica uno"
+msgstr "Feature one title"
+
+#: mybooking-options/mybooking-home-options.php:283
+msgid "Texto de característica uno"
+msgstr "Feature one "
+
+#: mybooking-options/mybooking-home-options.php:290
+msgid "Título de característica dos"
+msgstr "Feature two tilte"
+
+#: mybooking-options/mybooking-home-options.php:294
+msgid "Texto de característica dos"
+msgstr "Feature two text"
+
+#: mybooking-options/mybooking-home-options.php:301
+msgid "Título de característica tres"
+msgstr "Feature three title"
+
+#: mybooking-options/mybooking-home-options.php:305
+msgid "Texto de característica tres"
+msgstr "Feature three text"
+
+#: mybooking-options/mybooking-home-options.php:314
+msgid "Noticias"
+msgstr "News"
+
+#: mybooking-options/mybooking-home-options.php:329
+msgid "Carrusel de testimonios"
+msgstr "Testimonial slider"
+
+#: mybooking-parts/contact/mybooking-contact-form.php:16
+#: mybooking-templates/mybooking-plugin-complete.php:25
+#: mybooking-templates/mybooking-plugin-complete.php:26
+msgid "Nombre"
+msgstr "Name"
+
+#: mybooking-parts/contact/mybooking-contact-form.php:20
+msgid "Email"
+msgstr "Email"
+
+#: mybooking-parts/contact/mybooking-contact-form.php:24
+msgid "Commentario"
+msgstr "Comment"
+
+#: mybooking-parts/contact/mybooking-contact-form.php:30
+msgid "Enviar"
+msgstr "Send"
+
+#: mybooking-parts/contact/mybooking-contact-info.php:20
+msgid "Contacto"
+msgstr "Contact"
+
+#: mybooking-parts/contact/mybooking-contact-info.php:30
+msgid "Estaré encantado de atenderte en:"
+msgstr "We'll be happy you contact us at:"
+
+#: mybooking-parts/contact/mybooking-contact-info.php:38
+msgid "Localización"
+msgstr "Location"
+
+#: mybooking-parts/contact/mybooking-contact-info.php:48
+msgid "Teléfono"
+msgstr "Telephone"
+
+#: mybooking-parts/contact/mybooking-contact-info.php:58
+msgid "Correo electrónico"
+msgstr "Email"
+
+#: mybooking-parts/home/mybooking-home-features.php:26
+msgid "Cómo funciona"
+msgstr "How it works"
+
+#: mybooking-parts/home/mybooking-home-features.php:34
+msgid ""
+"Mybooking WordPress Theme es sencillo de instalar y configurar para que "
+"puedas lanzar tu web de reservas en el menor tiempo posible"
+msgstr ""
+"Mybooking WordPress Theme is easy to install and configure for launch your "
+"own bookings site in a while"
+
+#: mybooking-parts/home/mybooking-home-features.php:62
+msgid "Instala"
+msgstr "Install"
+
+#: mybooking-parts/home/mybooking-home-features.php:72
+msgid ""
+"Mybooking WordPress se integra con tu sitio WordPress existente o te permite "
+"empezar desde cero. Tu decides."
+msgstr ""
+"Mybooking WordPress match your existing WordPress installation or provides "
+"you a solid starting point. At your onw."
+
+#: mybooking-parts/home/mybooking-home-features.php:85
+msgid "Configura"
+msgstr "Configure"
+
+#: mybooking-parts/home/mybooking-home-features.php:96
+msgid ""
+"Mybooking WordPress está pensado para que la configuración de tu sitio sea "
+"rápida y sencilla."
+msgstr "Mybooking WordPress is designed for quick and easy site configuration"
+
+#: mybooking-parts/home/mybooking-home-features.php:109
+msgid "Reserva"
+msgstr "Book"
+
+#: mybooking-parts/home/mybooking-home-features.php:119
+msgid ""
+"Nuestro plugin conecta tu sitio web con el back-office en segundos y sin "
+"quebraderos de cabeza."
+msgstr ""
+"Our plugin connects your site and Mybooking's back-office in seconds without "
+"headaches"
+
+#: mybooking-parts/home/mybooking-home-header.php:26
+msgid "Mybooking WordPress Theme"
+msgstr "Mybooking WordPress Theme"
+
+#: mybooking-parts/home/mybooking-home-header.php:34
+msgid ""
+"Lanza tu web de reservas para tu negocio de alquiler de vehiculos sin "
+"esfuerzo. Instalar y listo."
+msgstr ""
+"Launch your own booking online system for your rental company effortlessly. "
+"Install and go."
+
+#: mybooking-parts/home/mybooking-home-highlight.php:53
+msgid "Conecta tu cuenta de Mybooking"
+msgstr "Connect your Mybooking back-office"
+
+#: mybooking-parts/home/mybooking-home-highlight.php:73
+msgid "Opciones de diseño y personalización"
+msgstr "Customization and eyecandy options"
+
+#: mybooking-parts/home/mybooking-home-highlight.php:95
+msgid "Gestión sencilla de contenidos"
+msgstr "Simple content manegement"
+
+#: mybooking-parts/home/mybooking-home-highlight.php:115
+msgid "Listo para empezar desde cero"
+msgstr "Ready to start from scratch"
+
+#: mybooking-parts/mybooking-reservation-steps.php:22
+#: mybooking-parts/mybooking-reservation-steps.php:32
+msgid "Seleccionar producto"
+msgstr "Select product"
+
+#: mybooking-parts/mybooking-reservation-steps.php:25
+msgid "Completar reserva"
+msgstr "Complete reservation"
+
+#: mybooking-parts/mybooking-reservation-steps.php:28
+msgid "Resumen"
+msgstr "Summary"
+
+#: mybooking-parts/mybooking-reservation-steps.php:31
+msgid "Lugar y Fecha"
+msgstr "Place and date"
+
+#: mybooking-parts/mybooking-reservation-steps.php:34
+msgid "Completar Reserva"
+msgstr "Complete Reservation"
+
+#: mybooking-parts/mybooking-reservation-steps.php:36
+msgid "Sumario"
+msgstr "Summary"
+
+#: mybooking-posts/mybooking-promo.php:17
+msgid "Promoción"
+msgstr "Promotion"
+
+#: mybooking-posts/mybooking-promo.php:18
+msgid "Añadir promoción"
+msgstr "Add promotion"
+
+#: mybooking-posts/mybooking-promo.php:19
+#: mybooking-posts/mybooking-promo.php:22
+msgid "Nueva promoción"
+msgstr "New promotion"
+
+#: mybooking-posts/mybooking-promo.php:20
+#: mybooking-posts/mybooking-testimonial.php:19
+msgid "Editar"
+msgstr "Edit"
+
+#: mybooking-posts/mybooking-promo.php:21
+msgid "Editar promoción"
+msgstr "Edit promotion"
+
+#: mybooking-posts/mybooking-promo.php:23
+#: mybooking-posts/mybooking-testimonial.php:22
+msgid "Ver"
+msgstr "See"
+
+#: mybooking-posts/mybooking-promo.php:24
+msgid "Ver promoción"
+msgstr "See promotion"
+
+#: mybooking-posts/mybooking-promo.php:25
+msgid "Buscar promoción"
+msgstr "Search promotion"
+
+#: mybooking-posts/mybooking-promo.php:26
+msgid "Ninguna promoción encontrada"
+msgstr "No one promotion found"
+
+#: mybooking-posts/mybooking-promo.php:27
+msgid "Ninguna promoción encontrada en la Papelera"
+msgstr "No one promotion found in the trash"
+
+#: mybooking-posts/mybooking-promo.php:28
+msgid "Promoción padre"
+msgstr "Parent promotion"
+
+#: mybooking-posts/mybooking-promo.php:48
+msgid "Estados de la promoción"
+msgstr "Promotion state"
+
+#: mybooking-posts/mybooking-promo.php:49
+msgid "Crea un nuevo estado para las promociones"
+msgstr "Create new promotion state"
+
+#: mybooking-posts/mybooking-promo.php:50
+msgid "Nuevo estado"
+msgstr "New promotion state"
+
+#: mybooking-posts/mybooking-promo.php:57
+#: mybooking-posts/mybooking-promo.php:58
+msgid "Activo"
+msgstr "Active"
+
+#: mybooking-posts/mybooking-promo.php:60
+#: mybooking-posts/mybooking-promo.php:61
+msgid "Inactivo"
+msgstr "Inactive"
+
+#: mybooking-posts/mybooking-testimonial.php:15
+msgid "Testimonios"
+msgstr "Testimonials"
+
+#: mybooking-posts/mybooking-testimonial.php:16
+msgid "Testimonio"
+msgstr "Testimonial"
+
+#: mybooking-posts/mybooking-testimonial.php:17
+msgid "Añadir testimonio"
+msgstr "Add Testimonial"
+
+#: mybooking-posts/mybooking-testimonial.php:18
+#: mybooking-posts/mybooking-testimonial.php:21
+msgid "Nuevo testimonio"
+msgstr "New Testimonial"
+
+#: mybooking-posts/mybooking-testimonial.php:20
+msgid "Editar testimonio"
+msgstr "Edit Testimonial"
+
+#: mybooking-posts/mybooking-testimonial.php:23
+msgid "Ver testimonio"
+msgstr "See Testimonial"
+
+#: mybooking-posts/mybooking-testimonial.php:24
+msgid "Buscar testimonio"
+msgstr "Search Testimonial"
+
+#: mybooking-posts/mybooking-testimonial.php:25
+msgid "Ningún testimonio encontrado"
+msgstr "No Testimonials found"
+
+#: mybooking-posts/mybooking-testimonial.php:26
+msgid "Ningún testimonio encontrado en la Papelera"
+msgstr "No Testimonials found in the trash"
+
+#: mybooking-posts/mybooking-testimonial.php:27
+msgid "Testimonio padre"
+msgstr "Parent Testimonial"
+
+#: mybooking-templates/mybooking-plugin-complete.php:15
+msgid "Extras"
+msgstr "Extras"
+
+#: mybooking-templates/mybooking-plugin-complete.php:22
+msgid "Información del cliente"
+msgstr "Customer information"
+
+#: mybooking-templates/mybooking-plugin-complete.php:29
+#: mybooking-templates/mybooking-plugin-complete.php:31
+msgid "Apellidos"
+msgstr "Surname"
+
+#: mybooking-templates/mybooking-plugin-complete.php:34
+#: mybooking-templates/mybooking-plugin-complete.php:36
+msgid "Correo eléctronico"
+msgstr "Email"
+
+#: mybooking-templates/mybooking-plugin-complete.php:39
+#: mybooking-templates/mybooking-plugin-complete.php:41
+msgid "Confirmar correo eléctronico"
+msgstr "Confirm email"
+
+#: mybooking-templates/mybooking-plugin-complete.php:44
+#: mybooking-templates/mybooking-plugin-complete.php:46
+msgid "Teléfono principal"
+msgstr "Main telephone"
+
+#: mybooking-templates/mybooking-plugin-complete.php:49
+#: mybooking-templates/mybooking-plugin-complete.php:51
+msgid "Teléfono alternativo"
+msgstr "Secondary telephone"
+
+#: mybooking-templates/mybooking-plugin-complete.php:55
+msgid "Información adicional"
+msgstr "Additional informatio"
+
+#: mybooking-templates/mybooking-plugin-complete.php:58
+#: mybooking-templates/mybooking-plugin-complete.php:59
+msgid "Comentarios"
+msgstr "Comments"
+
+#: mybooking-templates/mybooking-plugin-complete.php:64
+msgid "Dirección del cliente"
+msgstr "Customer mailing adress"
+
+#: mybooking-templates/mybooking-plugin-complete.php:67
+#: mybooking-templates/mybooking-plugin-complete.php:68
+msgid "Calle"
+msgstr "Street"
+
+#: mybooking-templates/mybooking-plugin-complete.php:71
+#: mybooking-templates/mybooking-plugin-complete.php:72
+msgid "Número"
+msgstr "Number"
+
+#: mybooking-templates/mybooking-plugin-complete.php:75
+#: mybooking-templates/mybooking-plugin-complete.php:76
+msgid "Complemento(piso/puerta)"
+msgstr "Others (plant/door)"
+
+#: mybooking-templates/mybooking-plugin-complete.php:79
+#: mybooking-templates/mybooking-plugin-complete.php:80
+msgid "Ciudad"
+msgstr "City"
+
+#: mybooking-templates/mybooking-plugin-complete.php:83
+#: mybooking-templates/mybooking-plugin-complete.php:84
+msgid "Provincia"
+msgstr "State"
+
+#: mybooking-templates/mybooking-plugin-complete.php:87
+#: mybooking-templates/mybooking-plugin-complete.php:88
+msgid "País"
+msgstr "Country"
+
+#: mybooking-templates/mybooking-plugin-complete.php:92
+msgid "Datos del conductor"
+msgstr "Driver's data"
+
+#: mybooking-templates/mybooking-plugin-complete.php:95
+#: mybooking-templates/mybooking-plugin-complete.php:97
+msgid "Nombre del conductor"
+msgstr "Driver's name"
+
+#: mybooking-templates/mybooking-plugin-complete.php:100
+#: mybooking-templates/mybooking-plugin-complete.php:101
+msgid "Apellidos del conductor"
+msgstr "Driver's surname"
+
+#: mybooking-templates/mybooking-plugin-complete.php:104
+#: mybooking-templates/mybooking-plugin-complete.php:105
+msgid "Nif o pasaporte del conductor"
+msgstr "Driver's passport or ID"
+
+#: mybooking-templates/mybooking-plugin-complete.php:108
+#: mybooking-templates/mybooking-plugin-complete.php:109
+msgid "Fecha de nacimiento del conductor"
+msgstr "Driver's birth date"
+
+#: mybooking-templates/mybooking-plugin-complete.php:112
+#: mybooking-templates/mybooking-plugin-complete.php:113
+msgid "Número del carnet de conducir"
+msgstr "Driver's license number"
+
+#: mybooking-templates/mybooking-plugin-complete.php:116
+#: mybooking-templates/mybooking-plugin-complete.php:118
+msgid "Fecha expedición carnet de conducir"
+msgstr "Driver's license expedition date"
+
+#: mybooking-templates/mybooking-plugin-complete.php:121
+#: mybooking-templates/mybooking-plugin-complete.php:123
+msgid "País de expedición carnet de conducir"
+msgstr "Driver's license expedition country"
+
+#: mybooking-templates/mybooking-plugin-complete.php:127
+msgid "Vuelo"
+msgstr "Flight"
+
+#: mybooking-templates/mybooking-plugin-complete.php:130
+#: mybooking-templates/mybooking-plugin-complete.php:131
+msgid "Compañia"
+msgstr "Flight company"
+
+#: mybooking-templates/mybooking-plugin-complete.php:134
+#: mybooking-templates/mybooking-plugin-complete.php:135
+msgid "Número de vuelo"
+msgstr "Flight number"
+
+#: mybooking-templates/mybooking-plugin-complete.php:138
+#: mybooking-templates/mybooking-plugin-complete.php:139
+msgid "Hora prevista"
+msgstr "Estimated arrival time"
+
+#: mybooking-templates/mybooking-plugin-complete.php:146
+msgid "Solicitar reserva"
+msgstr "Request reservation"
+
+#: node_modules/yargs-parser/index.js:301
+#, javascript-format
+msgid "Not enough arguments following: %s"
+msgstr ""
+
+#: node_modules/yargs-parser/index.js:449
+#, javascript-format
+msgid "Invalid JSON config file: %s"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:169
+msgid "Commands:"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:177 node_modules/yargs/lib/usage.js:407
+msgid "default:"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:179
+msgid "aliases:"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:241
+msgid "boolean"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:242
+msgid "count"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:243 node_modules/yargs/lib/usage.js:244
+msgid "string"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:245
+msgid "array"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:246
+msgid "number"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:250
+msgid "required"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:251
+msgid "choices:"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:270
+msgid "Examples:"
+msgstr ""
+
+#: node_modules/yargs/lib/usage.js:385
+msgid "generated-value"
+msgstr ""
+
+#: node_modules/yargs/lib/validation.js:26
+#: node_modules/yargs/lib/validation.js:49
+#, javascript-format
+msgid "Not enough non-option arguments: got %s, need at least %s"
+msgstr ""
+
+#: node_modules/yargs/lib/validation.js:37
+#, javascript-format
+msgid "Too many non-option arguments: got %s, maximum of %s"
+msgstr ""
+
+#: node_modules/yargs/lib/validation.js:185
+msgid "Invalid values:"
+msgstr ""
+
+#: node_modules/yargs/lib/validation.js:188
+#, javascript-format
+msgid "Argument: %s, Given: %s, Choices: %s"
+msgstr ""
+
+#: node_modules/yargs/lib/validation.js:218
+#, javascript-format
+msgid "Argument check failed: %s"
+msgstr ""
+
+#: node_modules/yargs/lib/validation.js:283
+msgid "Implications failed:"
+msgstr ""
+
+#: node_modules/yargs/lib/validation.js:313
+#, javascript-format
+msgid "Arguments %s and %s are mutually exclusive"
+msgstr ""
+
+#: node_modules/yargs/lib/validation.js:332
+#, javascript-format
+msgid "Did you mean %s?"
+msgstr ""

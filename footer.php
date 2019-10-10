@@ -99,7 +99,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						</div>
 						<div class="col-sm">
-							<h4><?php _e('Follow us', 'mybookinges'); ?></h4>
+							<h4><?php _e('Síguenos', 'mybookinges'); ?></h4>
 							<ul class="social-links">
 			          <li class="social__item">
 
@@ -136,7 +136,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			        </ul>
 						</div>
 						<div class="col-sm">
-							<h4><?php _e('Payment methods', 'mybookinges'); ?></h4>
+							<h4><?php _e('Métodos de pago', 'mybookinges'); ?></h4>
 							<ul class="social-links">
 			          <li class="social__item">
 

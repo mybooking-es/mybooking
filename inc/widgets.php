@@ -23,8 +23,8 @@ function mybooking_widgets_init() {
 			'name'          => __( 'Top Bar', 'mybookinges' ),
 			'id'            => 'mybooking_top_bar',
 	    'descripion'    => __( 'Área de widgets en el top de las páginas', 'mybookinges' ),
-			'before_widget' => '<div>',
-			'after_widget'  => '</div>',
+			'before_widget' => '',
+			'after_widget'  => '',
 		)
 	);
 	register_sidebar(
