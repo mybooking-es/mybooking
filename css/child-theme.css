@@ -2464,16 +2464,16 @@ body {
   color: #2e3131; }
 
 .brand-primary {
-  color: #ffa600; }
+  color: #8ac53f; }
 
 .brand-secondary {
-  color: #ff6361; }
+  color: #bfd975; }
 
 .bg-brand-brimary {
-  background-color: #ffa600; }
+  background-color: #8ac53f; }
 
 .bg-brand-secondary {
-  background-color: #ff6361; }
+  background-color: #bfd975; }
 
 .color-gray-50 {
   color: #fafafa; }
@@ -3209,7 +3209,7 @@ Remember you can use Bootstrap Spacing utility classes: https://getbootstrap.com
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-color: #ffedcc;
+  background-color: #e9f4dc;
   background-blend-mode: multiply;
   padding: 30px; }
 
@@ -3246,7 +3246,7 @@ Remember you can use Bootstrap Spacing utility classes: https://getbootstrap.com
 
 .contact-left-info {
   width: 100%;
-  background-color: #332100;
+  background-color: #1e2b0d;
   padding: 20px 10% 20px 20px; }
 
 .contact-left-map,
@@ -3258,7 +3258,7 @@ Remember you can use Bootstrap Spacing utility classes: https://getbootstrap.com
 
 .contact-form {
   padding: 20px;
-  background-color: #332100; }
+  background-color: #1e2b0d; }
 
 .contact-form input,
 .contact-form form textarea {
@@ -3280,11 +3280,11 @@ ul.social-links,
   margin-left: 0; }
 
 .social-links a {
-  color: #e69500;
+  color: #7db436;
   -webkit-transition: ease-in-out 0.5ms;
   transition: ease-in-out 0.5ms; }
   .social-links a:hover {
-    color: #ffa600; }
+    color: #8ac53f; }
 
 @media (max-width: 575.98px) {
   .contact-left-map {
@@ -3339,12 +3339,12 @@ ul.social-links,
 
 .btn-primary,
 .btn-primary:not(:disabled):not(.disabled):active {
-  background-color: #ffa600;
-  border-color: #ffa600; }
+  background-color: #8ac53f;
+  border-color: #8ac53f; }
   .btn-primary:hover,
   .btn-primary:not(:disabled):not(.disabled):active:hover {
-    background-color: #cc8500;
-    border-color: #cc8500; }
+    background-color: #6fa130;
+    border-color: #6fa130; }
 
 /*
 .carrusel-de-uno .owl-item {
@@ -3588,11 +3588,11 @@ label {
   position: relative;
   z-index: 30;
   padding: 0.3rem;
-  background-color: #332100; }
+  background-color: #1e2b0d; }
   .cta a {
     color: white; }
     .cta a:hover {
-      color: #fff6e6;
+      color: #f5faef;
       text-decoration: none; }
   .cta i {
     color: #fff; }
@@ -3613,11 +3613,11 @@ label {
 .bg-nav {
   width: 100%;
   margin-top: 0;
-  background: #ff6361;
+  background: #bfd975;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#ffa600), to(#ff6361));
-  background: linear-gradient(to right, #ffa600, #ff6361);
+  background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
+  background: linear-gradient(to right, #8ac53f, #bfd975);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 .navbar-nav .nav-link {
@@ -3714,17 +3714,18 @@ label {
           flex-grow: 1;
   margin: 0 18px 18px 0;
   -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2); }
+          box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+  background-color: #f3efe4; }
 
 .header-card {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 2em 3em 7em;
-  background: #ff6361;
+  background: #bfd975;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#ffa600), to(#ff6361));
-  background: linear-gradient(to right, #ffa600, #ff6361);
+  background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
+  background: linear-gradient(to right, #8ac53f, #bfd975);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .header-card h1 {
     color: #fff;
@@ -3752,17 +3753,16 @@ label {
   left: 25%;
   margin-top: -100px; }
 
-.footer-card .product-price {
-  margin: 0;
-  font-size: 1.5em;
-  padding: 0.5em;
-  font-weight: 700; }
-
-.footer-card .short-description {
-  margin: 0;
-  font-size: 0.9em;
-  padding-top: 5em;
-  font-weight: 200; }
+.footer-card {
+  line-height: 1; }
+  .footer-card .product-price {
+    font-size: 1.5em;
+    padding: 0.5em;
+    font-weight: 700; }
+  .footer-card .short-description {
+    font-size: 0.9em;
+    padding-top: 5em;
+    font-weight: 200; }
 
 #steps {
   width: 100%;
@@ -3853,11 +3853,11 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #ff6361;
+  background: #bfd975;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#ffa600), to(#ff6361));
-  background: linear-gradient(to right, #ffa600, #ff6361);
+  background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
+  background: linear-gradient(to right, #8ac53f, #bfd975);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 /* Features section */
@@ -3878,7 +3878,7 @@ label {
   position: relative; }
 
 .feature > hr {
-  color: #ffa600;
+  color: #8ac53f;
   width: 20%;
   top: 17px; }
 
@@ -4093,7 +4093,41 @@ span.stopa {
   margin: 40px auto; }
 
 .wrapper-footer {
-  background-color: #332100;
+  background-color: #1e2b0d;
   color: #fff; }
+
+.btn.btn-secondary.understrap-read-more-link {
+  color: #8ac53f;
+  background-color: transparent;
+  border: 0;
+  padding-left: 0; }
+  .btn.btn-secondary.understrap-read-more-link:hover {
+    color: #6fa130; }
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #8ac53f;
+  background-color: #8ac53f; }
+
+.card-img {
+  padding: 12px;
+  max-width: 100%; }
+
+.card-columns {
+  -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1; }
+
+@media (min-width: 576px) {
+  .card-columns {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2; } }
+
+@media (min-width: 1200px) {
+  .card-columns {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3; } }
 
 /*# sourceMappingURL=child-theme.css.map */
