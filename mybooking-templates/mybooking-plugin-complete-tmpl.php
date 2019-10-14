@@ -26,15 +26,21 @@
 
 <!-- Extra representation -->
 <script type="text/template" id="script_detailed_extra">
-
+<div class="card-columns">
   <% for (var idx=0;idx<extras.length;idx++) { %>
     <% var extra = extras[idx]; %>
-            <label for="select<%=extra.code%>" class="float-left"><%=extra.name%></label>
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
             <% if (extra.photo_path != null) { %>
-            <img src="<%=extra.photo_path%>"/>
+              <img src="<%=extra.photo_path%>" class="card-img" alt="..."/>
             <% } %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><%=extra.name%></h5>
               <% if (extra.max_quantity > 1) { %> 
-                <div class="input-group input-group-sm mb-3 float-left mx-3" style="width:90px;">
+                <div class="input-group input-group-sm" style="width:90px;">
                     <div class="input-group-prepend">
                       <button class="btn btn-outline-secondary btn-minus-extra"
                         data-value="<%=extra.code%>"
@@ -49,11 +55,19 @@
                         data-max-quantity="<%=extra.max_quantity%>">+</button>
                       </div>
                 </div>
-            <% } else { %>
-              <input id="checkboxl<%=extra.code%>" type="checkbox" class="extra-checkbox float-left mt5 mx-3" data-value="<%=extra.code%>" <% if (extrasInShoppingCart[extra.code] &&  extrasInShoppingCart[extra.code] > 0) { %> checked="checked" <% } %>>          
-            <% } %>
-            <p class="lead mx-3"><%= configuration.formatCurrency(extra.unit_price)%></p>
+              <% } else { %>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=extra.code%>" data-value="<%=extra.code%>" <% if (extrasInShoppingCart[extra.code] &&  extrasInShoppingCart[extra.code] > 0) { %> checked="checked" <% } %>>
+                  <label class="custom-control-label" for="checkboxl<%=extra.code%>"></label>
+                </div>        
+              <% } %>
+              <p class="card-text mt-2"><%= configuration.formatCurrency(extra.unit_price)%></p> 
+            </div>
+          </div>
+        </div>
+      </div>
   <% } %>
+  </div>
 </script>
 
 <!-- Reservation summary -->
