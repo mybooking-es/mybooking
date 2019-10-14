@@ -1,20 +1,38 @@
 // Complete
 .product-detail {
-  margin-top: 30px;
+  padding: 30px;
   background: $white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: 1;
+  h5 {
+    font-weight: 700;
+    line-height: 1.2;
+  }
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    color: $gray-700;
+    color: $gray-600;
+    line-height: 1;
   }
+}
+.grupo {
+  font-weight: 800;
+  color: $gray-600;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.detail-text {
+  font-weight: 200;
+  line-height: 1.2;
 }
 .product-name {
   font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  line-height: 1;
   font-weight: 900;
 }
 

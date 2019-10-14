@@ -9,7 +9,6 @@
  */
 /* Layout helpers
 ----------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans|Paytone+One");
 .ui-helper-hidden {
   display: none; }
 
@@ -2428,29 +2427,6 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
             transform: scale(1.5); } }
 
 /** Import parts **/
-/*
-base styles
-*/
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
-
-body {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; }
-
-.btn {
-  cursor: pointer; }
-
 .color-transparent-white {
   color: rgba(255, 255, 255, 0.6); }
 
@@ -2528,6 +2504,33 @@ body {
 
 .bg-gray-900 {
   background-color: #212121; }
+
+.fw-100 {
+  font-weight: 100; }
+
+.fw-200 {
+  font-weight: 200; }
+
+.fw-300 {
+  font-weight: 300; }
+
+.fw-400 {
+  font-weight: 400; }
+
+.fw-500 {
+  font-weight: 500; }
+
+.fw-600 {
+  font-weight: 600; }
+
+.fw-700 {
+  font-weight: 700; }
+
+.fw-800 {
+  font-weight: 800; }
+
+.fw-900 {
+  font-weight: 700; }
 
 @font-face {
   font-family: "Inter";
@@ -3093,6 +3096,30 @@ Remember you can use Bootstrap Spacing utility classes: https://getbootstrap.com
 .p150 {
   padding: 150px; }
 
+/*
+base styles
+*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #2e3131; }
+
+.btn {
+  cursor: pointer; }
+
 .hero-header-container {
   background: url(../images/bg-image.jpg) no-repeat center center;
   background-size: cover;
@@ -3583,6 +3610,12 @@ label {
   -webkit-box-shadow: none;
           box-shadow: none; }
 
+.form-reservation-error {
+  color: #dc3545; }
+
+input.form-reservation-error {
+  border-color: #dc3545 !important; }
+
 .cta {
   margin-top: 0;
   position: relative;
@@ -3814,23 +3847,23 @@ label {
           transform: translate(-70px, -1px); }
 
 .step.active {
-  border-color: #73b5e8;
-  color: #73b5e8; }
+  border-color: #8ac53f;
+  color: #8ac53f; }
 
 .step.active:before {
-  background: -webkit-gradient(linear, right top, left top, from(#58bb58), to(#73b5e8));
-  background: linear-gradient(to left, #58bb58 0%, #73b5e8 100%); }
+  background: -webkit-gradient(linear, right top, left top, from(#bfd975), to(#8ac53f));
+  background: linear-gradient(to left, #bfd975 0%, #8ac53f 100%); }
 
 .step.active:after {
-  color: #73b5e8; }
+  color: #8ac53f; }
 
 .step.done {
-  background-color: #58bb58;
-  border-color: #58bb58;
+  background-color: #bfd975;
+  border-color: #bfd975;
   color: white; }
 
 .step.done:before {
-  background-color: #58bb58; }
+  background-color: #bfd975; }
 
 @media (max-width: 767.98px) {
   #steps {
@@ -3986,7 +4019,7 @@ span.stopa {
   margin: 10px auto 30px auto; }
 
 .product-detail {
-  margin-top: 30px;
+  padding: 30px;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4000,15 +4033,32 @@ span.stopa {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  line-height: 1; }
+  .product-detail h5 {
+    font-weight: 700;
+    line-height: 1.2; }
   .product-detail ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    color: #616161; }
+    color: #757575;
+    line-height: 1; }
+
+.grupo {
+  font-weight: 800;
+  color: #757575;
+  margin-bottom: 0;
+  line-height: 1; }
+
+.detail-text {
+  font-weight: 200;
+  line-height: 1.2; }
 
 .product-name {
   font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  line-height: 1;
   font-weight: 900; }
 
 @media (min-width: 768px) {
@@ -4083,7 +4133,8 @@ span.stopa {
   border-radius: 5px 5px 4px 4px; }
 
 .total-price {
-  font-size: 2rem; }
+  font-size: 2rem;
+  font-weight: 700; }
 
 .ui-datepicker {
   z-index: 5000 !important; }
@@ -4109,6 +4160,9 @@ span.stopa {
   border-color: #8ac53f;
   background-color: #8ac53f; }
 
+.card {
+  border: none; }
+
 .card-img {
   padding: 12px;
   max-width: 100%; }
@@ -4129,5 +4183,17 @@ span.stopa {
     -webkit-column-count: 3;
        -moz-column-count: 3;
             column-count: 3; } }
+
+.list-group li {
+  border: 0;
+  padding-left: 0;
+  margin-left: 0; }
+  .list-group li .extra-name {
+    width: 60%; }
+  .list-group li .extra-price {
+    color: #757575; }
+
+.badge-primary {
+  background-color: #8ac53f; }
 
 /*# sourceMappingURL=child-theme.css.map */

@@ -1,32 +1,35 @@
 <!-- Product detail -->
 <script type="text/tpml" id="script_product_detail">
-  <div>
+  <div class="product-detail">
+    <div>
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-          <h2 class="mb-3 product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
-        <% } %>
-        <h5>Entrega</h5>
-        <ul>
-          <li><%=shopping_cart.date_from_full_format%> / <%=shopping_cart.time_from%></li>
-          <li><%=shopping_cart.pickup_place_customer_translation%></li>
-        </ul>
-        <h5 class="mt-3">Devolución</h5>
-        <ul>
-          <li><%=shopping_cart.date_to_full_format%> / <%=shopping_cart.time_to%></li>
-          <li><%=shopping_cart.return_place_customer_translation%></li>
-        </ul>
-  </div>
-  <div>
+        <h4 class="grupo">GRUPO <%=shopping_cart.items[idx].item_id%></h4>
+        <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
+        <p class="detail-text">Duración del alquiler: <%=shopping_cart.days%> día/s</p>
+      <% } %>
+      <h5>Entrega</h5>
+      <ul>
+        <li><%=shopping_cart.date_from_full_format%> / <%=shopping_cart.time_from%></li>
+        <li><%=shopping_cart.pickup_place_customer_translation%></li>
+      </ul>
+      <h5 class="mt-3">Devolución</h5>
+      <ul>
+        <li><%=shopping_cart.date_to_full_format%> / <%=shopping_cart.time_to%></li>
+        <li><%=shopping_cart.return_place_customer_translation%></li>
+      </ul>
+      <button id="modify_reservation_button" class="btn btn-outline-dark my-3" data-toggle="modal" data-target="#choose_productModal">Modificar reserva</button> 
+    </div>
+    <div>
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-          <div>
-              <img src="<%=shopping_cart.items[idx].photo_full%>" alt="" style="max-width: 400px">
-          </div>
-          <% } %>
+      <img class="img-fluid" src="<%=shopping_cart.items[idx].photo_full%>" alt="">
+      <% } %>
+    </div>
   </div>
 </script>
 
 <!-- Extra representation -->
 <script type="text/template" id="script_detailed_extra">
-<div class="card-columns">
+  <div class="card-columns">
   <% for (var idx=0;idx<extras.length;idx++) { %>
     <% var extra = extras[idx]; %>
       <div class="card mb-3">
@@ -72,35 +75,73 @@
 
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
-  <div class="col sidebar bg-white shadow-bottom py-3 px-3 mt-5 mb-3">
-  <h4 class="brand-primary my-3">Detalle de la reserva</h4>
-  <h5>Entrega</h5>
-  <p class="color-gray-700"><span><i class="fa fa-calendar mr-1" aria-hidden="true"></i></span><%=shopping_cart.date_from_full_format%> / <%=shopping_cart.time_from%></p>
-  <p class="color-gray-700"><span><i class="fa fa-map-marker mr-1" aria-hidden="true"></i></span><%=shopping_cart.pickup_place_customer_translation%></p>
-  <hr>
-  <h5>Devolución</h5>
-  <p class="color-gray-700"><span><i class="fa fa-calendar mr-1" aria-hidden="true"></i></span><%=shopping_cart.date_to_full_format%> / <%=shopping_cart.time_to%></p>
-  <p class="color-gray-700"><span><i class="fa fa-map-marker mr-1" aria-hidden="true"></i></span><%=shopping_cart.return_place_customer_translation%></p>
-  <hr>
-  <!-- Button trigger modal -->
-  <button id="modify_reservation_button" class="btn btn-outline-dark" data-toggle="modal" data-target="#choose_productModal">Modificar reserva</button> 
-</div>
-
-<div class="col sidebar bg-white shadow-bottom py-3 px-3">
+<div class="col sidebar bg-white shadow-bottom py-3 px-3 mt-5">
   <h4 class="brand-primary my-3">Precio</h4>
   <h5>Total producto</h5>
-  <p><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
+  <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
+
   <hr>
-  <h5>Total extras</h5>
-  <p><%=configuration.formatCurrency(shopping_cart.extras_cost)%></p>
+      <h5>Extras</h5>
+      <ul class="list-group">
+      <% for (var idx=0; idx<shopping_cart.extras.length; idx++) { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="extra-name"><%=shopping_cart.extras[idx].extra_description_customer_translation%></span>
+          <span class="badge badge-primary badge-pill"><%=shopping_cart.extras[idx].quantity%></span>
+          <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
+        </li>
+      <% } %>
+  </ul>
+
+  <% if (shopping_cart.extras_cost > 0) { %>
+      <hr>
+      <h5>Total extras</h5>
+      <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.extras_cost)%></p>
+  <% } %>
+
+  <% if (shopping_cart.time_from_cost > 0) { %>
   <hr>
-  <h5>Total</h5>
+  <h6>Suplemento hora de entrega</h6>
+  <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.time_from_cost)%></p>
+  <% } %>
+
+  <% if (shopping_cart.pickup_place_cost > 0) { %>
+  <hr>
+  <h6>Suplemento lugar de entrega</h6>
+  <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.pickup_place_cost)%></p>
+  <% } %>
+
+  <% if (shopping_cart.time_to_cost > 0) { %>
+  <hr>
+  <h6>Suplemento hora de devolución</h6>
+  <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.time_to_cost)%></p>
+  <% } %>
+
+  <% if (shopping_cart.return_place_cost > 0) { %>
+  <hr>
+  <h6>Suplemento lugar de devolución</h6>
+  <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.return_place_cost)%></p>
+  <% } %>
+
+  <% if (shopping_cart.driver_age_cost > 0) { %>
+  <hr>
+  <h6>Suplemento edad del conductor</h6>
+  <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.driver_age_cost)%></p>
+  <% } %>
+
+  <% if (shopping_cart.category_supplement_1_cost > 0) { %>
+  <hr>
+  <h6>Suplemento combustible</h6>
+  <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.category_supplement_1_cost)%></p>
+  <% } %>
+
+  <hr>
+  <h5 class="brand-primary">Importe total</h5>
   <p class="total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
 </div>  
 </script>
 
 <!-- Payment detail -->
-<script type="text/tmpl" id="script_payment_detail">
+<!-- <script type="text/tmpl" id="script_payment_detail">
   <h4 class="brand-primary my3">Pago</h4>
   <div class="form-row">
     <div class="form-group col">
@@ -117,4 +158,54 @@
         </label>
     </div>
   </div>
-</script>
+</script> -->
+
+<!-- Payment detail -->
+
+<script type="text/tmpl" id="script_payment_detail">
+    
+    <% if (sales_process.can_pay && sales_process.can_request) { %>
+
+      <h4 class="brand-primary my3">>Confirmar</h4>
+      <br>
+
+      <div class="field">
+        <div class="control">
+          <label class="radio">
+            <input type="radio" id="none" name="payment" value="none" data-payment-method="none">
+            Solicitud de reserva
+          </label>
+          <label class="radio">
+            <input type="radio" id="credit-card" name="payment" value="redsys256" data-payment-method="redsys256">
+            Pagar
+          </label>
+        </div>
+      </div>
+
+      <input type="radio" id="none" name="payment" value="none" data-payment-method="none">
+      <div class="field is-grouped">
+        <div class="control">
+          <button type="submit" class="button is-primary">Confirmar</a>
+        </div>
+      </div>  
+
+    <% } else if (sales_process.can_request) { %>
+
+      <input type="hidden" name="payment" value="none" data-payment-method="none">
+      <div class="field is-grouped">
+        <div class="control">
+          <button type="submit" class="btn btn-outline-dark my-5"><?php _e('Solicitar reserva') ?></a>
+        </div>
+      </div>  
+
+    <% } else if (sales_process.can_pay) { %>
+
+      <input type="hidden" name="payment" value="redsys256" data-payment-method="redsys256">
+      <div class="field is-grouped">
+        <div class="control">
+          <button type="submit" class="button is-primary">Pagar</a>
+        </div>
+      </div>  
+    <% } %>  
+  
+  </script> 

@@ -2,8 +2,8 @@
 // Module/steps
 //==============================================
 
-$steps-brand-primary: hsl(206, 72%, 68%);
-$green: hsl(120, 42%, 54%);
+// $brand-primary: hsl(206, 72%, 68%);
+// $brand-secondary: hsl(120, 42%, 54%);
 $steps-white: hsl(0, 0%, 100%);
 $grey: hsl(226, 10%, 55%);
 $disa: hsl(226, 15%, 83%);
@@ -54,22 +54,26 @@ $disa: hsl(226, 15%, 83%);
   transform: translate(-70px, -1px);
 }
 .step.active {
-  border-color: $steps-brand-primary;
-  color: $steps-brand-primary;
+  border-color: $brand-primary;
+  color: $brand-primary;
 }
 .step.active:before {
-  background: linear-gradient(to left, $green 0%, $steps-brand-primary 100%);
+  background: linear-gradient(
+    to left,
+    $brand-secondary 0%,
+    $brand-primary 100%
+  );
 }
 .step.active:after {
-  color: $steps-brand-primary;
+  color: $brand-primary;
 }
 .step.done {
-  background-color: $green;
-  border-color: $green;
+  background-color: $brand-secondary;
+  border-color: $brand-secondary;
   color: $steps-white;
 }
 .step.done:before {
-  background-color: $green;
+  background-color: $brand-secondary;
 }
 
 // Small devices (landscape phones, less than 768px)

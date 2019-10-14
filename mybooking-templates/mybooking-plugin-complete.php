@@ -23,35 +23,34 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name"><?php _e('Nombre') ?></label>
-                  <input class="form-control" id="name" name="customer_name" type="text" placeholder="<?php _e('Nombre') ?>:*">
+                  <input class="form-control" id="customer_name" name="customer_name" type="text" placeholder="<?php _e('Nombre') ?>:*">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="surname"><?php _e('Apellidos') ?></label>
-                  <input class="form-control" id="surname" name="customer_surname" type="text"
+                  <input class="form-control" id="customer_surname" name="customer_surname" type="text"
                     placeholder="<?php _e('Apellidos') ?>:*">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="email"><?php _e('Correo eléctronico') ?></label>
-                  <input class="form-control" id="email" name="customer_email" type="text"
+                  <input class="form-control" id="customer_email" name="customer_email" type="text"
                     placeholder="<?php _e('Correo eléctronico') ?>:*">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="confirm_email"><?php _e('Confirmar correo eléctronico') ?></label>
-                  <input class="form-control" id="confirm_email" type="text"
+                  <label for="confirm_customer_email"><?php _e('Confirmar correo eléctronico') ?></label>
+                  <input class="form-control" id="customer_email_confirmation" name="customer_email_confirmation" type="text"
                     placeholder="<?php _e('Confirmar correo eléctronico') ?>:*">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="phone"><?php _e('Teléfono principal') ?></label>
-                  <input class="form-control" id="phone" name="customer_phone" type="text"
+                  <input class="form-control" id="customer_phone" name="customer_phone" type="text"
                     placeholder="<?php _e('Teléfono principal') ?>:*">
                 </div>
                 <div class="form-group col-md-6">
                   <label for=""><?php _e('Teléfono alternativo') ?></label>
-                  <input class="form-control" id="mobile_phone" name="customer_mobile_phone" id="customer_mobile_phone"
+                  <input class="form-control" id="customer_mobile_phone" name="customer_mobile_phone" 
                     type="text" placeholder="<?php _e('Teléfono alternativo') ?>:">
                 </div>
               </div>
-
               <h4 class="brand-primary my-3"><?php _e('Información adicional') ?></h4>
               <div class="form-row">
                 <div class="form-group col-md-12">
@@ -60,7 +59,6 @@
                     style="width: 100%; height: 100px; padding: 0.8rem;"></textarea>
                 </div>
               </div>
-
               <h4 class="brand-primary my-3"><?php _e('Dirección del cliente') ?></h4>
               <div class="form-row">
                 <div class="form-group col-md-6">
@@ -88,7 +86,6 @@
                   <input class="form-control" name="country" id="country" type="text" placeholder="<?php _e('País') ?>:">
                 </div>
               </div>
-
               <h4 class="brand-primary my-3"><?php _e('Datos del conductor') ?></h4>
               <div class="form-row">
                 <div class="form-group col-md-6">
@@ -123,12 +120,11 @@
                     placeholder="<?php _e('País de expedición carnet de conducir') ?>:">
                 </div>
               </div>
-
               <h4 class="brand-primary my-3"><?php _e('Vuelo') ?></h4>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="flight_company"><?php _e('Compañia') ?></label>
-                  <input class="form-control" id="Compañia" name="flight_company" type="text" placeholder="<?php _e('Compañia') ?>:">
+                  <input class="form-control" id="flight_company" name="flight_company" type="text" placeholder="<?php _e('Compañia') ?>:">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="flight_number"><?php _e('Número de vuelo') ?></label>
@@ -139,13 +135,10 @@
                   <input class="form-control" id="flight_time" name="flight_time" type="text" placeholder="<?php _e('Hora prevista') ?>:">
                 </div>
               </div>
-
-          <!-- Reservation : payment -->
-          <div id="payment_detail"></div>
-
-          <button type="submit" class="btn btn-outline-dark my-5"><?php _e('Solicitar reserva') ?></a>
-
+              <!-- Reservation : payment -->
+              <div id="payment_detail"></div>
             </form>
+           
         </div>
       </div>
       <!-- Reservation: Summary (sidebar) -->

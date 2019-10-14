@@ -131,3 +131,10 @@ label {
     box-shadow: none;
   }
 }
+
+.form-reservation-error {
+  color: #dc3545;
+}
+input.form-reservation-error {
+  border-color: #dc3545 !important;
+}
