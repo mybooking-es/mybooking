@@ -4,7 +4,6 @@
 *  	--------
 *		Overrides parent document on Understrap Theme
 *
-* 	Autor: Hector Asencio @Mybooking
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child

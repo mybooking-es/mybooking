@@ -3,9 +3,10 @@
 /**
 * Template Name: MyBooking Contact
 *
-* @package WordPress
-* @subpackage Understrap Mybooking Child
-* @since Understrap Mybooking Child 0.0.1
+* 	Versión: 0.0.1
+*   @package WordPress
+*   @subpackage Understrap Mybooking Child
+*   @since Understrap Mybooking Child 0.0.1
 */
 
 // Exit if accessed directly.

@@ -2,12 +2,16 @@
 /**
 *		CATEGORIES
 *  	----------
-* 	Autor: Hector Asencio @Mybooking
+*
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
 *   @since Understrap Mybooking Child 0.0.1
 */
+
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 /**
 * Create default categories

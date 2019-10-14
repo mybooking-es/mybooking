@@ -2,12 +2,15 @@
 /**
 *		RESERVATION HOME HIGHLIGHT PARTIAL
 *  	----------------------------------
-* 	Autor: Hector Asencio @Mybooking
+*
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
 *   @since Understrap Mybooking Child 0.0.1
 */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 ?>
 
 <?php $highlight_visible = get_option("home_highlight_visibility");
@@ -50,7 +53,7 @@ if ($highlight_visible == 1) { ?>
               <h6 class="color-black"><?php echo $text_fact_one ?></h6>
         <?php }
             else { ?>
-              <h6 class="color-black"><?php _e("Conecta tu cuenta de Mybooking",'mybookinges'); ?></h6>
+              <h6 class="color-black"><?php _e("Conecta tu cuenta de Mybooking",'mybooking'); ?></h6>
         <?php } ?>
 
       </div>
@@ -70,7 +73,7 @@ if ($highlight_visible == 1) { ?>
               <h6 class="color-black"><?php echo $text_fact_two ?></h6>
         <?php }
             else { ?>
-              <h6 class="color-black"><?php _e("Opciones de diseño y personalización",'mybookinges'); ?></h6>
+              <h6 class="color-black"><?php _e("Opciones de diseño y personalización",'mybooking'); ?></h6>
         <?php } ?>
 
       </div>
@@ -92,7 +95,7 @@ if ($highlight_visible == 1) { ?>
 
         <?php }
             else { ?>
-              <h6 class="color-black"><?php _e("Gestión sencilla de contenidos",'mybookinges'); ?></h6>
+              <h6 class="color-black"><?php _e("Gestión sencilla de contenidos",'mybooking'); ?></h6>
         <?php } ?>
 
       </div>
@@ -112,7 +115,7 @@ if ($highlight_visible == 1) { ?>
                 <h6 class="color-black"><?php echo $text_fact_four ?></h6>
           <?php }
               else { ?>
-                <h6 class="color-black"><?php _e("Listo para empezar desde cero",'mybookinges'); ?></h6>
+                <h6 class="color-black"><?php _e("Listo para empezar desde cero",'mybooking'); ?></h6>
           <?php } ?>
 
         </div>

@@ -12,138 +12,138 @@
 
           <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-5">
             <!-- Reservation : Extras -->
-            <h4 class="brand-primary my-3"><?php _e('Extras') ?></h4>
+            <h4 class="brand-primary my-3"><?php _e('Extras', 'mybooking') ?></h4>
             <div id="extras_listing"></div>
           </div>
 
           <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-3 mb-5">
             <!-- Reservation complete -->
             <form id="form-reservation" name="reservation_form">
-              <h4 class="brand-primary my-3"><?php _e('Información del cliente') ?></h4>
+              <h4 class="brand-primary my-3"><?php _e('Información del cliente', 'mybooking') ?></h4>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="name"><?php _e('Nombre') ?></label>
-                  <input class="form-control" id="name" name="customer_name" type="text" placeholder="<?php _e('Nombre') ?>:*">
+                  <label for="name"><?php _e('Nombre', 'mybooking') ?></label>
+                  <input class="form-control" id="name" name="customer_name" type="text" placeholder="<?php _e('Nombre', 'mybooking') ?>:*">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="surname"><?php _e('Apellidos') ?></label>
+                  <label for="surname"><?php _e('Apellidos', 'mybooking') ?></label>
                   <input class="form-control" id="surname" name="customer_surname" type="text"
-                    placeholder="<?php _e('Apellidos') ?>:*">
+                    placeholder="<?php _e('Apellidos', 'mybooking') ?>:*">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="email"><?php _e('Correo eléctronico') ?></label>
+                  <label for="email"><?php _e('Correo eléctronico', 'mybooking') ?></label>
                   <input class="form-control" id="email" name="customer_email" type="text"
-                    placeholder="<?php _e('Correo eléctronico') ?>:*">
+                    placeholder="<?php _e('Correo eléctronico', 'mybooking') ?>:*">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="confirm_email"><?php _e('Confirmar correo eléctronico') ?></label>
+                  <label for="confirm_email"><?php _e('Confirmar correo eléctronico', 'mybooking') ?></label>
                   <input class="form-control" id="confirm_email" type="text"
-                    placeholder="<?php _e('Confirmar correo eléctronico') ?>:*">
+                    placeholder="<?php _e('Confirmar correo eléctronico', 'mybooking') ?>:*">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="phone"><?php _e('Teléfono principal') ?></label>
+                  <label for="phone"><?php _e('Teléfono principal', 'mybooking') ?></label>
                   <input class="form-control" id="phone" name="customer_phone" type="text"
-                    placeholder="<?php _e('Teléfono principal') ?>:*">
+                    placeholder="<?php _e('Teléfono principal', 'mybooking') ?>:*">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for=""><?php _e('Teléfono alternativo') ?></label>
+                  <label for=""><?php _e('Teléfono alternativo', 'mybooking') ?></label>
                   <input class="form-control" id="mobile_phone" name="customer_mobile_phone" id="customer_mobile_phone"
-                    type="text" placeholder="<?php _e('Teléfono alternativo') ?>:">
+                    type="text" placeholder="<?php _e('Teléfono alternativo', 'mybooking') ?>:">
                 </div>
               </div>
 
-              <h4 class="brand-primary my-3"><?php _e('Información adicional') ?></h4>
+              <h4 class="brand-primary my-3"><?php _e('Información adicional', 'mybooking') ?></h4>
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label for="comments"><?php _e('Comentarios') ?></label>
-                  <textarea name="comments" id="comments" placeholder="<?php _e('Comentarios') ?>"
+                  <label for="comments"><?php _e('Comentarios', 'mybooking') ?></label>
+                  <textarea name="comments" id="comments" placeholder="<?php _e('Comentarios', 'mybooking') ?>"
                     style="width: 100%; height: 100px; padding: 0.8rem;"></textarea>
                 </div>
               </div>
 
-              <h4 class="brand-primary my-3"><?php _e('Dirección del cliente') ?></h4>
+              <h4 class="brand-primary my-3"><?php _e('Dirección del cliente', 'mybooking') ?></h4>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="street"><?php _e('Calle') ?></label>
-                  <input class="form-control" id="street" name="street" type="text" placeholder="<?php _e('Calle') ?>:">
+                  <label for="street"><?php _e('Calle', 'mybooking') ?></label>
+                  <input class="form-control" id="street" name="street" type="text" placeholder="<?php _e('Calle', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="number"><?php _e('Número') ?></label>
-                  <input class="form-control" id="number" name="number" type="text" placeholder="<?php _e('Número') ?>:">
+                  <label for="number"><?php _e('Número', 'mybooking') ?></label>
+                  <input class="form-control" id="number" name="number" type="text" placeholder="<?php _e('Número', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="complement"><?php _e('Complemento(piso/puerta)') ?></label>
-                  <input class="form-control" id="complement" name="complement" type="text" placeholder="<?php _e('Complemento(piso/puerta)') ?>:">
+                  <label for="complement"><?php _e('Complemento(piso/puerta)', 'mybooking') ?></label>
+                  <input class="form-control" id="complement" name="complement" type="text" placeholder="<?php _e('Complemento(piso/puerta)', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="city"><?php _e('Ciudad') ?></label>
-                  <input class="form-control" id="city" name="city" type="text" placeholder="<?php _e('Ciudad') ?>:">
+                  <label for="city"><?php _e('Ciudad', 'mybooking') ?></label>
+                  <input class="form-control" id="city" name="city" type="text" placeholder="<?php _e('Ciudad', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="state"><?php _e('Provincia') ?></label>
-                  <input class="form-control" id="state" name="state" type="text" placeholder="<?php _e('Provincia') ?>:">
+                  <label for="state"><?php _e('Provincia', 'mybooking') ?></label>
+                  <input class="form-control" id="state" name="state" type="text" placeholder="<?php _e('Provincia', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="country"><?php _e('País') ?></label>
-                  <input class="form-control" name="country" id="country" type="text" placeholder="<?php _e('País') ?>:">
+                  <label for="country"><?php _e('País', 'mybooking') ?></label>
+                  <input class="form-control" name="country" id="country" type="text" placeholder="<?php _e('País', 'mybooking') ?>:">
                 </div>
               </div>
 
-              <h4 class="brand-primary my-3"><?php _e('Datos del conductor') ?></h4>
+              <h4 class="brand-primary my-3"><?php _e('Datos del conductor', 'mybooking') ?></h4>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="driver_name"><?php _e('Nombre del conductor') ?></label>
+                  <label for="driver_name"><?php _e('Nombre del conductor', 'mybooking') ?></label>
                   <input class="form-control" id="driver_name" name="driver_name" type="text"
-                    placeholder="<?php _e('Nombre del conductor') ?>:">
+                    placeholder="<?php _e('Nombre del conductor', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for=""><?php _e('Apellidos del conductor') ?></label>
-                  <input class="form-control" id="driver_surname" name="driver_surname" type="text" placeholder="<?php _e('Apellidos del conductor') ?>:">
+                  <label for=""><?php _e('Apellidos del conductor', 'mybooking') ?></label>
+                  <input class="form-control" id="driver_surname" name="driver_surname" type="text" placeholder="<?php _e('Apellidos del conductor', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="driver_document_id"><?php _e('Nif o pasaporte del conductor') ?></label>
-                  <input class="form-control" id="driver_document_id" name="driver_document_id" type="text" placeholder="<?php _e('Nif o pasaporte del conductor') ?>:">
+                  <label for="driver_document_id"><?php _e('Nif o pasaporte del conductor', 'mybooking') ?></label>
+                  <input class="form-control" id="driver_document_id" name="driver_document_id" type="text" placeholder="<?php _e('Nif o pasaporte del conductor', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="driver_date_of_birth"><?php _e('Fecha de nacimiento del conductor') ?></label>
-                  <input class="form-control" id="driver_date_of_birth" name="driver_date_of_birth" type="text" placeholder="<?php _e('Fecha de nacimiento del conductor') ?>:">
+                  <label for="driver_date_of_birth"><?php _e('Fecha de nacimiento del conductor', 'mybooking') ?></label>
+                  <input class="form-control" id="driver_date_of_birth" name="driver_date_of_birth" type="text" placeholder="<?php _e('Fecha de nacimiento del conductor', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="driver_driving_license_number"><?php _e('Número del carnet de conducir') ?></label>
-                  <input class="form-control" id="driver_driving_license_number" name="driver_driving_license_number" type="text" placeholder="<?php _e('Número del carnet de conducir') ?>:">
+                  <label for="driver_driving_license_number"><?php _e('Número del carnet de conducir', 'mybooking') ?></label>
+                  <input class="form-control" id="driver_driving_license_number" name="driver_driving_license_number" type="text" placeholder="<?php _e('Número del carnet de conducir', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="driver_driving_license_date"><?php _e('Fecha expedición carnet de conducir') ?></label>
+                  <label for="driver_driving_license_date"><?php _e('Fecha expedición carnet de conducir', 'mybooking') ?></label>
                   <input class="form-control" name="driver_driving_license_date" id="driver_driving_license_date" type="text"
-                    placeholder="<?php _e('Fecha expedición carnet de conducir') ?>:">
+                    placeholder="<?php _e('Fecha expedición carnet de conducir', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="driver_driving_license_country"><?php _e('País de expedición carnet de conducir') ?></label>
+                  <label for="driver_driving_license_country"><?php _e('País de expedición carnet de conducir', 'mybooking') ?></label>
                   <input class="form-control" name="driver_driving_license_country" id="driver_driving_license_country" type="text"
-                    placeholder="<?php _e('País de expedición carnet de conducir') ?>:">
+                    placeholder="<?php _e('País de expedición carnet de conducir'), 'mybooking' ?>:">
                 </div>
               </div>
 
-              <h4 class="brand-primary my-3"><?php _e('Vuelo') ?></h4>
+              <h4 class="brand-primary my-3"><?php _e('Vuelo', 'mybooking') ?></h4>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="flight_company"><?php _e('Compañia') ?></label>
-                  <input class="form-control" id="Compañia" name="flight_company" type="text" placeholder="<?php _e('Compañia') ?>:">
+                  <label for="flight_company"><?php _e('Compañia', 'mybooking') ?></label>
+                  <input class="form-control" id="Compañia" name="flight_company" type="text" placeholder="<?php _e('Compañia', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="flight_number"><?php _e('Número de vuelo') ?></label>
-                  <input class="form-control" id="flight_number" name="flight_number" type="text" placeholder="<?php _e('Número de vuelo') ?>:">
+                  <label for="flight_number"><?php _e('Número de vuelo', 'mybooking') ?></label>
+                  <input class="form-control" id="flight_number" name="flight_number" type="text" placeholder="<?php _e('Número de vuelo', 'mybooking') ?>:">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="flight_time"><?php _e('Hora prevista') ?></label>
-                  <input class="form-control" id="flight_time" name="flight_time" type="text" placeholder="<?php _e('Hora prevista') ?>:">
+                  <label for="flight_time"><?php _e('Hora prevista', 'mybooking') ?></label>
+                  <input class="form-control" id="flight_time" name="flight_time" type="text" placeholder="<?php _e('Hora prevista', 'mybooking') ?>:">
                 </div>
               </div>
 
           <!-- Reservation : payment -->
           <div id="payment_detail"></div>
 
-          <button type="submit" class="btn btn-outline-dark my-5"><?php _e('Solicitar reserva') ?></a>
+          <button type="submit" class="btn btn-outline-dark my-5"><?php _e('Solicitar reserva', 'mybooking') ?></a>
 
             </form>
         </div>

@@ -4,7 +4,10 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package understrap
+ * 	Versión: 0.0.1
+ *   @package WordPress
+ *   @subpackage Understrap Mybooking Child
+ *   @since Understrap Mybooking Child 0.0.1
  */
 
 // Exit if accessed directly.
@@ -99,7 +102,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						</div>
 						<div class="col-sm">
-							<h4><?php _e('Síguenos', 'mybookinges'); ?></h4>
+							<h4><?php _e('Síguenos', 'mybooking'); ?></h4>
 							<ul class="social-links">
 			          <li class="social__item">
 
@@ -136,7 +139,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			        </ul>
 						</div>
 						<div class="col-sm">
-							<h4><?php _e('Métodos de pago', 'mybookinges'); ?></h4>
+							<h4><?php _e('Métodos de pago', 'mybooking'); ?></h4>
 							<ul class="social-links">
 			          <li class="social__item">
 
@@ -172,7 +175,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<br>
 	        <?php }
 	            else { ?>
-								<div class="color-transparent-white">&copy; <?php _e("2019 mybooking",'mybookinges'); ?></div>
+								<div class="color-transparent-white">&copy; <?php _e("2019 mybooking",'mybooking'); ?></div>
 								<br>
 	        <?php } ?>
 

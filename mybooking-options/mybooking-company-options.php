@@ -2,7 +2,7 @@
 /**
 *		COMPANY INFO CONFIGURATION
 *  	--------------------------
-* 	Autor: Hector Asencio @Mybooking
+*
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
@@ -17,8 +17,8 @@ function mybookinges_create_menu_company_info() {
 
     add_submenu_page(
       "configuracion",
-    	__("Información corporativa"),
-    	__("Información corporativa"),
+    	__("Información corporativa", 'mybooking'),
+    	__("Información corporativa", 'mybooking'),
     	"edit_pages",
     	"info",
     	"mybookinges_configuration_company_info"
@@ -77,7 +77,7 @@ function mybookinges_register_options_company_info() {
 
 function mybookinges_configuration_company_info() {
   if (!current_user_can('edit_pages'))
-      wp_die(__("No tienes acceso a esta página."));
+      wp_die(__("No tienes acceso a esta página.", 'mybooking'));
   ?>
 
   <div class="wrap">
@@ -85,8 +85,8 @@ function mybookinges_configuration_company_info() {
     <!-- Page header -->
 
     <h1>
-      <?php _e('Información del negocio') ?><br>
-      <small><?php _e('Aparece en varios lugares del tema, incluyendo el template "MyBooking Contacto"') ?></small>
+      <?php _e('Información del negocio', 'mybooking') ?><br>
+      <small><?php _e('Aparece en varios lugares del tema, incluyendo el template "MyBooking Contacto"', 'mybooking') ?></small>
     </h1>
 
     <hr>
@@ -101,20 +101,20 @@ function mybookinges_configuration_company_info() {
 
       <!-- Company info -->
 
-      <h2><?php _e('Información corporativa') ?></h2>
+      <h2><?php _e('Información corporativa', 'mybooking') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php _e('Denominación del negocio') ?></th>
-          <td><input type="text" name="company_info_trade_name" size="40" value="<?php echo get_option('company_info_trade_name'); ?>" /></td>
+          <th scope="row"><?php _e('Denominación del negocio', 'mybooking') ?></th>
+          <td><input type="text" name="company_info_trade_name" size="40" value="<?php echo get_option('company_info_trade_name', 'mybooking'); ?>" /></td>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('Razón social') ?></th>
-          <td><input type="text" name="company_info_name" size="40" value="<?php echo get_option('company_info_name'); ?>" /></td>
+          <th scope="row"><?php _e('Razón social', 'mybooking') ?></th>
+          <td><input type="text" name="company_info_name" size="40" value="<?php echo get_option('company_info_name', 'mybooking'); ?>" /></td>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('Número de Identificación Fiscal') ?></th>
-          <td><input type="text" name="company_info_nif" size="40" value="<?php echo get_option('company_info_nif'); ?>" /></td>
+          <th scope="row"><?php _e('Número de Identificación Fiscal', 'mybooking') ?></th>
+          <td><input type="text" name="company_info_nif" size="40" value="<?php echo get_option('company_info_nif', 'mybooking'); ?>" /></td>
         </tr>
       </table>
 
@@ -122,20 +122,20 @@ function mybookinges_configuration_company_info() {
 
       <!-- Contact info -->
 
-      <h2><?php _e('Información de contacto') ?></h2>
+      <h2><?php _e('Información de contacto', 'mybooking') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php _e('Dirección postal') ?></th>
-          <td><input type="text" name="company_info_adress" size="40" value="<?php echo get_option('company_info_adress'); ?>" /></td>
+          <th scope="row"><?php _e('Dirección postal', 'mybooking') ?></th>
+          <td><input type="text" name="company_info_adress" size="40" value="<?php echo get_option('company_info_adress', 'mybooking'); ?>" /></td>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('Teléfono de contacto') ?></th>
-          <td><input type="text" name="company_info_phone" size="40" value="<?php echo get_option('company_info_phone'); ?>" /></td>
+          <th scope="row"><?php _e('Teléfono de contacto', 'mybooking') ?></th>
+          <td><input type="text" name="company_info_phone" size="40" value="<?php echo get_option('company_info_phone', 'mybooking'); ?>" /></td>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('Email de contacto') ?></th>
-          <td><input type="text" name="company_info_email" size="40" value="<?php echo get_option('company_info_email'); ?>" /></td>
+          <th scope="row"><?php _e('Email de contacto', 'mybooking') ?></th>
+          <td><input type="text" name="company_info_email" size="40" value="<?php echo get_option('company_info_email', 'mybooking'); ?>" /></td>
         </tr>
       </table>
 
@@ -143,28 +143,28 @@ function mybookinges_configuration_company_info() {
 
       <!-- Social links -->
 
-      <h2><?php _e('Enlaces sociales') ?></h2>
+      <h2><?php _e('Enlaces sociales', 'mybooking') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php _e('Twitter') ?></th>
+          <th scope="row"><?php _e('Twitter', 'mybooking') ?></th>
           <td><input type="text" name="company_info_twitter_url" size="40" value="<?php echo get_option('company_info_twitter_url'); ?>" />
-          <br><span class="description"><?php _e('Pega aquí la URL del perfil de Twitter') ?></span></td>
+          <br><span class="description"><?php _e('Pega aquí la URL del perfil de Twitter', 'mybooking') ?></span></td>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('Facebook') ?></th>
+          <th scope="row"><?php _e('Facebook', 'mybooking') ?></th>
           <td><input type="text" name="company_info_facebook_url" size="40" value="<?php echo get_option('company_info_facebook_url'); ?>" />
-          <br><span class="description"><?php _e('Pega aquí la URL del perfil de Facebook') ?></span></td>
+          <br><span class="description"><?php _e('Pega aquí la URL del perfil de Facebook', 'mybooking') ?></span></td>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('Instagram') ?></th>
+          <th scope="row"><?php _e('Instagram', 'mybooking') ?></th>
           <td><input type="text" name="company_info_instagram_url" size="40" value="<?php echo get_option('company_info_instagram_url'); ?>" />
           <br><span class="description"><?php _e('Pega aquí la URL del perfil de Instagram') ?></span></td>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('LinkedIn') ?></th>
+          <th scope="row"><?php _e('LinkedIn', 'mybooking') ?></th>
           <td><input type="text" name="company_info_linkedin_url" size="40" value="<?php echo get_option('company_info_linkedin_url'); ?>" />
-          <br><span class="description"><?php _e('Pega aquí la URL del perfil de LinkedIn') ?></span></td>
+          <br><span class="description"><?php _e('Pega aquí la URL del perfil de LinkedIn', 'mybooking') ?></span></td>
         </tr>
       </table>
 
@@ -172,29 +172,29 @@ function mybookinges_configuration_company_info() {
 
       <!-- Payment methods -->
 
-      <h2><?php _e('Métodos de pago') ?></h2>
+      <h2><?php _e('Métodos de pago', 'mybooking') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php _e('VISA') ?></th>
+          <th scope="row"><?php _e('VISA', 'mybooking') ?></th>
           <td>
           <?php $options = get_option( "company_payment_visa" ); ?>
           <input type="checkbox" name="company_payment_visa" <?php checked( $options, 1 ); ?> value="1">
-          <span class="description"><?php _e('Marcar para mostrar el icono de VISA en el footer') ?></span>
+          <span class="description"><?php _e('Marcar para mostrar el icono de VISA en el footer', 'mybooking') ?></span>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('Mastercard') ?></th>
+          <th scope="row"><?php _e('Mastercard', 'mybooking') ?></th>
           <td>
           <?php $options = get_option( "company_payment_mastercard" ); ?>
           <input type="checkbox" name="company_payment_mastercard" <?php checked( $options, 1 ); ?> value="1">
-          <span class="description"><?php _e('Marcar para mostrar el icono de Mastercard en el footer') ?></span>
+          <span class="description"><?php _e('Marcar para mostrar el icono de Mastercard en el footer', 'mybooking') ?></span>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('PayPal') ?></th>
+          <th scope="row"><?php _e('PayPal', 'mybooking') ?></th>
           <td>
           <?php $options = get_option( "company_payment_paypal" ); ?>
           <input type="checkbox" name="company_payment_paypal" <?php checked( $options, 1 ); ?> value="1">
-          <span class="description"><?php _e('Marcar para mostrar el icono de PayPal en el footer') ?></span>
+          <span class="description"><?php _e('Marcar para mostrar el icono de PayPal en el footer', 'mybooking') ?></span>
         </tr>
       </table>
 
@@ -202,30 +202,30 @@ function mybookinges_configuration_company_info() {
 
       <!-- Contact page adjust -->
 
-      <h2><?php _e('Página Contacto') ?></h2>
+      <h2><?php _e('Página Contacto', 'mybooking') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php _e('Título de la sección') ?></th>
+          <th scope="row"><?php _e('Título de la sección', 'mybooking') ?></th>
           <td><input type="text" name="contact_section_title" size="40" value="<?php echo get_option('contact_section_title'); ?>" />
-          <br><span class="description"><?php _e('Aparece en el template Mybooking-contact') ?></span></td>
+          <br><span class="description"><?php _e('Aparece en el template Mybooking-contact', 'mybooking') ?></span></td>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('Subtítulo de la sección') ?></th>
+          <th scope="row"><?php _e('Subtítulo de la sección', 'mybooking') ?></th>
           <td><input type="text" name="contact_section_subtitle" size="40" value="<?php echo get_option('contact_section_subtitle'); ?>" />
-          <br><span class="description"><?php _e('Aparece en el template Mybooking-contact') ?></span></td>
+          <br><span class="description"><?php _e('Aparece en el template Mybooking-contact', 'mybooking') ?></span></td>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('Mapa de localización') ?></th>
+          <th scope="row"><?php _e('Mapa de localización', 'mybooking') ?></th>
           <td><textarea name="contact_map_code" cols="37" rows="10"><?php echo get_option('contact_map_code'); ?></textarea>
-          <br><span class="description"><?php _e('Pega aquí el código de Google Maps') ?></span></td>
+          <br><span class="description"><?php _e('Pega aquí el código de Google Maps', 'mybooking') ?></span></td>
         </tr>
       </table>
 
       <hr>
 
       <p class="submit">
-      	<input name="company_info_save" type="submit" class="button-primary" value="<?php _e('Guardar cambios') ?>" />
+      	<input name="company_info_save" type="submit" class="button-primary" value="<?php _e('Guardar cambios', 'mybooking') ?>" />
       </p>
 
     </form>

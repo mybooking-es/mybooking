@@ -4,7 +4,10 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package understrap
+ * 	Versión: 0.0.1
+ *   @package WordPress
+ *   @subpackage Understrap Mybooking Child
+ *   @since Understrap Mybooking Child 0.0.1
  */
 
 // Exit if accessed directly.
@@ -25,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
   <?php do_action( 'wp_body_open' ); ?>
   <div class="site" id="page">
     <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
-      <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'mybookinges' ); ?></a>
+      <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'mybooking' ); ?></a>
 
       <!-- Topbar -->
       <?php get_template_part('mybooking-parts/site/mybooking-top-bar') ?>

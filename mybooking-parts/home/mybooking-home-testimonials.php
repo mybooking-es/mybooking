@@ -2,7 +2,7 @@
 /**
 *		RESERVATION HOME TESTIMONIALS PARTIAL
 *  	-------------------------------------
-* 	Autor: Hector Asencio @Mybooking
+*
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
@@ -23,9 +23,9 @@ if ($testimonial_carousel_visible == 1) { ?>
 
       <div class="col-md-9 offset-md-1">
         <blockquote class="blockquote">
-         
+
             <?php the_content(); ?>
-      
+
           <footer class="blockquote-footer">
             <?php the_title(); ?>
           </footer>

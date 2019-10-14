@@ -2,12 +2,15 @@
 /**
 *		RESERVATION HOME HEADER PARTIAL
 *  	-------------------------------
-* 	Autor: Hector Asencio @Mybooking
+*
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
 *   @since Understrap Mybooking Child 0.0.1
 */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 ?>
 
 <div class="hero-header-container">
@@ -23,7 +26,7 @@
             <h1><?php echo $title_hero ?></h1>
         <?php }
     	  	else { ?>
-            <h1><?php _e("Mybooking WordPress Theme",'mybookinges'); ?></h1>
+            <h1><?php _e("Mybooking WordPress Theme",'mybooking'); ?></h1>
         <?php } ?>
 
         <?php $text_hero = get_option("home_hero_text");
@@ -31,7 +34,7 @@
             <p><?php echo $text_hero ?></p>
         <?php }
     	  	else { ?>
-            <p><?php _e("Lanza tu web de reservas para tu negocio de alquiler de vehiculos sin esfuerzo. Instalar y listo.",'mybookinges'); ?></p>
+            <p><?php _e("Lanza tu web de reservas para tu negocio de alquiler de vehiculos sin esfuerzo. Instalar y listo.",'mybooking'); ?></p>
         <?php } ?>
 
       </div>

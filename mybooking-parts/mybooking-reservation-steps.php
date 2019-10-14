@@ -2,9 +2,11 @@
 /**
 *		RESERVATION STEPS
 *  	-----------------
-* 	Autor: Hector Asencio @Mybooking
+
 * 	Versión: 0.0.1
-*  	@package Understrap Mybooking Child
+*   @package WordPress
+*   @subpackage Understrap Mybooking Child
+*   @since Understrap Mybooking Child 0.0.1
 */
 ?>
 
@@ -19,26 +21,26 @@
 
         if ( in_array('choose_product',$classes) ) {
           $choose_active = 'active';
-          $step = __('Seleccionar producto');
+          $step = __('Seleccionar producto', 'mybooking');
         } elseif ( in_array('complete',$classes) ) {
           $complete_active = 'active';
-          $step = __('Completar reserva');
+          $step = __('Completar reserva', 'mybooking');
         } elseif ( in_array('summary',$classes) ) {
           $summary_active = 'active';
-          $step = __('Resumen');
+          $step = __('Resumen', 'mybooking');
         } ?>
 
-          <div data-desc="<?php _e( 'Lugar y Fecha', 'mybookinges' ) ?>" class="step">1</div>
-          <div data-desc="<?php _e( 'Seleccionar producto', 'mybookinges' ) ?>"
+          <div data-desc="<?php _e( 'Lugar y Fecha', 'mybooking' ) ?>" class="step">1</div>
+          <div data-desc="<?php _e( 'Seleccionar producto', 'mybooking' ) ?>"
             class="<?php echo $choose_active ?> step">2</div>
-          <div data-desc="<?php _e( 'Completar Reserva', 'mybookinges' ) ?>"
+          <div data-desc="<?php _e( 'Completar Reserva', 'mybooking' ) ?>"
             class="<?php echo $complete_active ?> step">3</div>
-          <div data-desc="<?php _e( 'Sumario', 'mybookinges' ) ?>" class="<?php echo $summary_active ?> step">4</div>
+          <div data-desc="<?php _e( 'Sumario', 'mybooking' ) ?>" class="<?php echo $summary_active ?> step">4</div>
         </div>
       </div>
       <div class="col-md-12 col-lg-4 d-flex">
         <div class="d-inline-flex p-2 align-items-center">
-          <h2 class="color-gray-700"><?php echo _e( $step, 'mybookinges') ?></h2>
+          <h2 class="color-gray-700"><?php echo _e( $step, 'mybooking') ?></h2>
         </div>
       </div>
     </div>

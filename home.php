@@ -2,7 +2,7 @@
 /**
 *   Template Name: MyBooking Home
 *  	-----------------------------
-* 	Autor: Hector Asencio @Mybooking
+*
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child

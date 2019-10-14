@@ -5,24 +5,26 @@
 *		Overrides parent document on Understrap Theme
 *
 * 	Versión: 0.0.1
-*  	@package Understrap Mybooking Child
+*   @package WordPress
+*   @subpackage Understrap Mybooking Child
+*   @since Understrap Mybooking Child 0.0.1
 */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Internacionalization
  *
  */
-function mybookinges_setup(){
-    $domain = 'mybookinges';
-    // wp-content/languages/mybookinges/es_ES.mo
-    load_theme_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain );
-    // wp-content/themes/mybookinges/languages/es_ES.mo
-    load_theme_textdomain( $domain, get_stylesheet_directory() . '/languages' );
-    // wp-content/themes/mybookinges/languages/es_ES.mo
-    load_theme_textdomain( $domain, get_template_directory() . '/languages' );
+function mybooking_setup(){
+    $domain = 'mybooking';
+    load_child_theme_textdomain( $domain, get_stylesheet_directory() . '/languages' );
+    // wp-content/themes/mybooking/languages/
+    load_child_theme_textdomain( $domain, get_template_directory() . '/languages' );
 }
-add_action( 'after_setup_theme', 'mybookinges_setup' );
+add_action( 'after_setup_theme', 'mybooking_setup' );
+
 
 /**
  * Clean inherited CSS & scripts
