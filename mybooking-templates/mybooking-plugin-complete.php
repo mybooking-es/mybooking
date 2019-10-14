@@ -117,7 +117,7 @@
                 <div class="form-group col-md-6">
                   <label for="driver_driving_license_country"><?php _e('País de expedición carnet de conducir', 'mybooking') ?></label>
                   <input class="form-control" name="driver_driving_license_country" id="driver_driving_license_country" type="text"
-                    placeholder="<?php _e('País de expedición carnet de conducir'), 'mybooking' ?>:">
+                    placeholder="<?php _e('País de expedición carnet de conducir', 'mybooking') ?>:">
                 </div>
               </div>
               <h4 class="brand-primary my-3"><?php _e('Vuelo') ?></h4>

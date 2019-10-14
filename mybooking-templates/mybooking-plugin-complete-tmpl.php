@@ -141,26 +141,6 @@
 </script>
 
 <!-- Payment detail -->
-<!-- <script type="text/tmpl" id="script_payment_detail">
-  <h4 class="brand-primary my3">Pago</h4>
-  <div class="form-row">
-    <div class="form-group col">
-      <div class="alert alert-success">
-        <p><?php _e('Para confirmar la reserva se requiere una paga y señal del 20% del importe total de la reserva', 'mybooking') ?></p>
-      </div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-check col">
-        <input class="form-check-input  ml-1" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-        <label class="form-check-label ml-4" for="exampleRadios1">
-            <?php _e('Sólo solicitud de reserva', 'mybooking') ?>
-        </label>
-    </div>
-  </div>
-</script> -->
-
-<!-- Payment detail -->
 
 <script type="text/tmpl" id="script_payment_detail">
     
