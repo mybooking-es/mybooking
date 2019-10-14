@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label for="confirm_customer_email"><?php _e('Confirmar correo eléctronico') ?></label>
-                  <input class="form-control" id="customer_email_confirmation" name="customer_email_confirmation" type="text"
+                  <input class="form-control" id="confirm_customer_email" name="confirm_customer_email" type="text"
                     placeholder="<?php _e('Confirmar correo eléctronico') ?>:*">
                 </div>
                 <div class="form-group col-md-6">
