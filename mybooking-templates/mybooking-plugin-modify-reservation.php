@@ -5,7 +5,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content  bg-gray-400">
       <div class="modal-header">
-        <h5 class="modal-title">Modificar búsqueda</h5>
+        <h5 class="modal-title"><?php _e('Modificar búsqueda', 'mybooking') ?></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -13,14 +13,14 @@
       <form name="search_form" method="get" enctype="application/x-www-form-urlencoded"
         class="flex-form">
         <div class="flex-form-item-box">
-          <label>Lugar Entrega </label>
+          <label><?php _e('Lugar Entrega ', 'mybooking') ?></label>
           <div class="flex-form-item">
             <select id="pickup_place" name="pickup_place"></select>
             <i class="fa fa-angle-down flex-icon"></i>
           </div>
         </div>
         <div class="flex-form-item-box">
-          <label>Lugar Devolución </label>
+          <label><?php _e('Lugar Devolución ', 'mybooking') ?></label>
           <div class="flex-form-item">
             <select id="return_place" name="return_place">
             </select>
@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="flex-form-item-box">
-          <label>Fecha Entrega </label>
+          <label><?php _e('Fecha Entrega ', 'mybooking') ?></label>
           <div class="flex-form-item">
             <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
             <input type="text" id="date_from" name="date_from" />
@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="flex-form-item-box">
-          <label>Fecha Devolución </label>
+          <label><?php _e('Fecha Devolución ', 'mybooking') ?></label>
           <div class="flex-form-item">
             <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
             <input type="text" id="date_to" name="date_to" />
@@ -46,7 +46,7 @@
           </div>
         </div>
         <div class="flex-form-item-box mt-3">
-          <input class="btn btn-primary btn-block" type="submit" value="Nueva búsqueda" />
+          <input class="btn btn-primary btn-block" type="submit" value="<?php _e('Nueva búsqueda', 'mybooking') ?>" />
         </div>
       </form>
     </div>

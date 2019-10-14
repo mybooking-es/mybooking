@@ -2,7 +2,7 @@
 /**
 *		RESERVATION HOME PROMO PARTIAL
 *  	------------------------------
-* 	Autor: Hector Asencio @Mybooking
+*
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
@@ -44,7 +44,7 @@ if ($promo_visible == 1) { ?>
             if ($promo_button_visible == 1 && $promo_button_text !=='') { ?>
 
               <a class="btn btn-primary mb50" href="<?php the_permalink(); ?>" >
-                <?php esc_html_e( $promo_button_text, 'mybookinges' ); ?>
+                <?php esc_html_e( $promo_button_text, 'mybooking' ); ?>
               </a>
 
             <?php } ?>

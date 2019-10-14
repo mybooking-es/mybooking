@@ -13,19 +13,19 @@ function create_promo() {
   register_post_type( 'promo',
     array(
       'labels' => array(
-        'name' => __('Promociones'),
-        'singular_name' => __('Promoción'),
-        'add_new' => __('Añadir promoción'),
-        'add_new_item' => __('Nueva promoción'),
-        'edit' => __('Editar'),
-        'edit_item' => __('Editar promoción'),
-        'new_item' => __('Nueva promoción'),
-        'view' => __('Ver'),
-        'view_item' => __('Ver promoción'),
-        'search_items' => __('Buscar promoción'),
-        'not_found' => __('Ninguna promoción encontrada'),
-        'not_found_in_trash' => __('Ninguna promoción encontrada en la Papelera'),
-        'parent' => __('Promoción padre')
+        'name' => __('Promociones', 'mybooking'),
+        'singular_name' => __('Promoción', 'mybooking'),
+        'add_new' => __('Añadir promoción', 'mybooking'),
+        'add_new_item' => __('Nueva promoción', 'mybooking'),
+        'edit' => __('Editar', 'mybooking'),
+        'edit_item' => __('Editar promoción', 'mybooking'),
+        'new_item' => __('Nueva promoción', 'mybooking'),
+        'view' => __('Ver', 'mybooking'),
+        'view_item' => __('Ver promoción', 'mybooking'),
+        'search_items' => __('Buscar promoción', 'mybooking'),
+        'not_found' => __('Ninguna promoción encontrada', 'mybooking'),
+        'not_found_in_trash' => __('Ninguna promoción encontrada en la Papelera', 'mybooking'),
+        'parent' => __('Promoción padre', 'mybooking')
       ),
       'public' => true,
       'menu_position' => 50,
@@ -45,9 +45,9 @@ function mybooking_create_promo_taxonomies() {
         'promo',
         array(
             'labels' => array(
-                'name' => __('Estados de la promoción'),
-                'add_new_item' => __('Crea un nuevo estado para las promociones'),
-                'new_item_name' => __('Nuevo estado')
+                'name' => __('Estados de la promoción', 'mybooking'),
+                'add_new_item' => __('Crea un nuevo estado para las promociones', 'mybooking'),
+                'new_item_name' => __('Nuevo estado', 'mybooking')
             ),
             'show_ui' => true,
             'show_tagcloud' => false,

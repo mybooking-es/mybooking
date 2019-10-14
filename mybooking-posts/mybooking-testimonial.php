@@ -1,7 +1,6 @@
 <?php
 /**
 *   TESTIMONIAL POST TYPE
-* 	Autor: Hector Asencio @Mybooking
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
@@ -12,19 +11,19 @@ function create_testimonial() {
   register_post_type( 'testimonial',
     array(
       'labels' => array(
-        'name' => __('Testimonios'),
-        'singular_name' => __('Testimonio'),
-        'add_new' => __('Añadir testimonio'),
-        'add_new_item' => __('Nuevo testimonio'),
-        'edit' => __('Editar'),
-        'edit_item' => __('Editar testimonio'),
-        'new_item' => __('Nuevo testimonio'),
-        'view' => __('Ver'),
-        'view_item' => __('Ver testimonio'),
-        'search_items' => __('Buscar testimonio'),
-        'not_found' => __('Ningún testimonio encontrado'),
-        'not_found_in_trash' => __('Ningún testimonio encontrado en la Papelera'),
-        'parent' => __('Testimonio padre')
+        'name' => __('Testimonios', 'mybooking'),
+        'singular_name' => __('Testimonio', 'mybooking'),
+        'add_new' => __('Añadir testimonio', 'mybooking'),
+        'add_new_item' => __('Nuevo testimonio', 'mybooking'),
+        'edit' => __('Editar', 'mybooking'),
+        'edit_item' => __('Editar testimonio', 'mybooking'),
+        'new_item' => __('Nuevo testimonio', 'mybooking'),
+        'view' => __('Ver', 'mybooking'),
+        'view_item' => __('Ver testimonio', 'mybooking'),
+        'search_items' => __('Buscar testimonio', 'mybooking'),
+        'not_found' => __('Ningún testimonio encontrado', 'mybooking'),
+        'not_found_in_trash' => __('Ningún testimonio encontrado en la Papelera', 'mybooking'),
+        'parent' => __('Testimonio padre', 'mybooking')
       ),
       'public' => true,
       'menu_position' => 50,

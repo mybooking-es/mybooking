@@ -2,6 +2,8 @@
 /**
 *   CONTACT INFO PARTIAL
 *   --------------------
+*
+* 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
 *   @since Understrap Mybooking Child 0.0.1
@@ -17,7 +19,7 @@
           <h1><?php echo $title_contact ?></h1>
         <?php }
         else { ?>
-          <h4><?php _e("Contacto",'mybookinges'); ?></h4>
+          <h4><?php _e("Contacto",'mybooking'); ?></h4>
       <?php } ?>
 
       <hr />
@@ -27,7 +29,7 @@
           <h3><?php echo $subtitle_contact ?></h3>
         <?php }
         else { ?>
-          <h3><?php _e("Estaré encantado de atenderte en:",'mybookinges'); ?></h3>
+          <h3><?php _e("Estaré encantado de atenderte en:",'mybooking'); ?></h3>
       <?php } ?>
 
     </div>
@@ -35,7 +37,7 @@
     <div class="info">
       <h4 class="brand-primary">
         <i class="fa fa-map-marker" aria-hidden="true"></i>
-        <?php _e("Localización",'mybookinges'); ?>
+        <?php _e("Localización",'mybooking'); ?>
       </h4>
 
       <?php $company_adress = get_option("company_info_adress");
@@ -45,7 +47,7 @@
 
       <h4 class="brand-primary">
         <i class="fa fa-phone" aria-hidden="true"></i>
-        <?php _e("Teléfono",'mybookinges'); ?>
+        <?php _e("Teléfono",'mybooking'); ?>
       </h4>
 
       <?php $company_phone = get_option("company_info_phone");
@@ -55,7 +57,7 @@
 
       <h4 class="brand-primary">
         <i class="fa fa-envelope" aria-hidden="true"></i>
-        <?php _e("Correo electrónico",'mybookinges'); ?>
+        <?php _e("Correo electrónico",'mybooking'); ?>
       </h4>
 
       <?php $company_email = get_option("company_info_email");

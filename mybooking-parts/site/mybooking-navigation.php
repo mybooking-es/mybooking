@@ -2,11 +2,15 @@
 /**
 *		SITE NAVIGATION PARTIAL
 *  	-----------------------
+*
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
 *   @since Understrap Mybooking Child 0.0.1
 */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
@@ -34,7 +38,7 @@
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false"
-      aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+      aria-label="<?php esc_attr_e( 'Toggle navigation', 'mybooking' ); ?>">
       <span class="navbar-toggler-icon"></span>
     </button>
 

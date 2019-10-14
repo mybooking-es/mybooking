@@ -2,19 +2,22 @@
 /**
 *		RESERVATION HOME FEATURES PARTIAL
 *  	---------------------------------
-* 	Autor: Hector Asencio @Mybooking
+*
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
 *   @since Understrap Mybooking Child 0.0.1
 */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 ?>
 
 <?php $features_visible = get_option("home_features_visibility");
 if ($features_visible == 1) { ?>
 
   <div class="gradient-section">
-    
+
       <!-- Header -->
       <div class="title-wrapper">
         <div class="title">
@@ -23,7 +26,7 @@ if ($features_visible == 1) { ?>
             <h1 class="color-white"><?php echo $title_features_header ?></h1>
       <?php }
           else { ?>
-            <h1 class="color-white"><?php _e("Cómo funciona",'mybookinges'); ?></h1>
+            <h1 class="color-white"><?php _e("Cómo funciona",'mybooking'); ?></h1>
       <?php } ?>
 
       <?php $text_features_header = get_option("home_features_header_text");
@@ -31,7 +34,7 @@ if ($features_visible == 1) { ?>
             <p class="color-white"><?php echo $text_features_header ?></p>
       <?php }
           else { ?>
-            <p class="color-white"><?php _e("Mybooking WordPress Theme es sencillo de instalar y configurar para que puedas lanzar tu web de reservas en el menor tiempo posible",'mybookinges'); ?></p>
+            <p class="color-white"><?php _e("Mybooking WordPress Theme es sencillo de instalar y configurar para que puedas lanzar tu web de reservas en el menor tiempo posible",'mybooking'); ?></p>
       <?php } ?>
       </div>
     </div>
@@ -59,7 +62,7 @@ if ($features_visible == 1) { ?>
               <h3><?php echo $title_features_one ?></h3>
         <?php }
             else { ?>
-              <h3><?php _e("Instala",'mybookinges'); ?></h3>
+              <h3><?php _e("Instala",'mybooking'); ?></h3>
         <?php } ?>
 
         <hr />
@@ -69,7 +72,7 @@ if ($features_visible == 1) { ?>
               <p><?php echo $text_features_one ?></p>
         <?php }
             else { ?>
-              <p><?php _e("Mybooking WordPress se integra con tu sitio WordPress existente o te permite empezar desde cero. Tu decides.",'mybookinges'); ?></p>
+              <p><?php _e("Mybooking WordPress se integra con tu sitio WordPress existente o te permite empezar desde cero. Tu decides.",'mybooking'); ?></p>
         <?php } ?>
 
       </div>
@@ -82,7 +85,7 @@ if ($features_visible == 1) { ?>
               <h3><?php echo $title_features_two ?></h3>
         <?php }
             else { ?>
-              <h3><?php _e("Configura",'mybookinges'); ?></h3>
+              <h3><?php _e("Configura",'mybooking'); ?></h3>
 
         <?php } ?>
 
@@ -93,7 +96,7 @@ if ($features_visible == 1) { ?>
               <p><?php echo $text_features_two ?></p>
         <?php }
             else { ?>
-              <p><?php _e("Mybooking WordPress está pensado para que la configuración de tu sitio sea rápida y sencilla.",'mybookinges'); ?></p>
+              <p><?php _e("Mybooking WordPress está pensado para que la configuración de tu sitio sea rápida y sencilla.",'mybooking'); ?></p>
         <?php } ?>
 
       </div>
@@ -106,7 +109,7 @@ if ($features_visible == 1) { ?>
               <h3><?php echo $title_features_three ?></h3>
         <?php }
             else { ?>
-              <h3><?php _e("Reserva",'mybookinges'); ?></h3>
+              <h3><?php _e("Reserva",'mybooking'); ?></h3>
         <?php } ?>
 
         <hr />
@@ -116,7 +119,7 @@ if ($features_visible == 1) { ?>
               <p><?php echo $text_features_three ?></p>
         <?php }
             else { ?>
-              <p><?php _e("Nuestro plugin conecta tu sitio web con el back-office en segundos y sin quebraderos de cabeza.",'mybookinges'); ?></p>
+              <p><?php _e("Nuestro plugin conecta tu sitio web con el back-office en segundos y sin quebraderos de cabeza.",'mybooking'); ?></p>
         <?php } ?>
 
       </div>

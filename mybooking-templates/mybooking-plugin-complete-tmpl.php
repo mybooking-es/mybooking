@@ -42,7 +42,7 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title"><%=extra.name%></h5>
-              <% if (extra.max_quantity > 1) { %> 
+              <% if (extra.max_quantity > 1) { %>
                 <div class="input-group input-group-sm" style="width:90px;">
                     <div class="input-group-prepend">
                       <button class="btn btn-outline-secondary btn-minus-extra"
@@ -62,9 +62,9 @@
                 <div class="custom-control custom-switch">
                   <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=extra.code%>" data-value="<%=extra.code%>" <% if (extrasInShoppingCart[extra.code] &&  extrasInShoppingCart[extra.code] > 0) { %> checked="checked" <% } %>>
                   <label class="custom-control-label" for="checkboxl<%=extra.code%>"></label>
-                </div>        
+                </div>
               <% } %>
-              <p class="card-text mt-2"><%= configuration.formatCurrency(extra.unit_price)%></p> 
+              <p class="card-text mt-2"><%= configuration.formatCurrency(extra.unit_price)%></p>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@
   <hr>
   <h5 class="brand-primary">Importe total</h5>
   <p class="total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
-</div>  
+</div>
 </script>
 
 <!-- Payment detail -->
@@ -146,7 +146,7 @@
   <div class="form-row">
     <div class="form-group col">
       <div class="alert alert-success">
-        <p>Para confirmar la reserva se requiere una paga y señal del 20% del importe total de la reserva</p>
+        <p><?php _e('Para confirmar la reserva se requiere una paga y señal del 20% del importe total de la reserva', 'mybooking') ?></p>
       </div>
     </div>
   </div>
@@ -154,7 +154,7 @@
     <div class="form-check col">
         <input class="form-check-input  ml-1" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
         <label class="form-check-label ml-4" for="exampleRadios1">
-            Sólo solicitud de reserva
+            <?php _e('Sólo solicitud de reserva', 'mybooking') ?>
         </label>
     </div>
   </div>
