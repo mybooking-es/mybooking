@@ -2,8 +2,6 @@
 // Module/steps
 //==============================================
 
-// $brand-primary: hsl(206, 72%, 68%);
-// $brand-secondary: hsl(120, 42%, 54%);
 $steps-white: hsl(0, 0%, 100%);
 $grey: hsl(226, 10%, 55%);
 $disa: hsl(226, 15%, 83%);
@@ -60,8 +58,8 @@ $disa: hsl(226, 15%, 83%);
 .step.active:before {
   background: linear-gradient(
     to left,
-    $brand-secondary 0%,
-    $brand-primary 100%
+    $brand-primary 0%,
+    $brand-secondary 100%
   );
 }
 .step.active:after {

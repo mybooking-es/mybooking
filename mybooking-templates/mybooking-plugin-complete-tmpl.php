@@ -3,7 +3,6 @@
   <div class="product-detail">
     <div>
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-        <h4 class="grupo">GRUPO <%=shopping_cart.items[idx].item_id%></h4>
         <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
         <p class="detail-text"><?php _e('Duración del alquiler', 'mybooking') ?>: <%=shopping_cart.days%> día/s</p>
       <% } %>

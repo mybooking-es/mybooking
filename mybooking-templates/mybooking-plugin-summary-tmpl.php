@@ -8,7 +8,6 @@
 <div class="product-detail">
   <div>
     <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-      <h4 class="grupo">GRUPO <%=booking.booking_lines[idx].item_id%></h4>
       <h2 class="product-name"><%=booking_line.item_description_customer_translation%></h2>
       <p class="detail-text">LOCALIZADOR: <%= booking.id %></br>
           Duración del alquiler: <%=booking.days%> día/s</p>
