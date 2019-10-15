@@ -2440,16 +2440,16 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   color: #2e3131; }
 
 .brand-primary {
-  color: #8ac53f; }
+  color: #8360c3; }
 
 .brand-secondary {
-  color: #bfd975; }
+  color: #2ebf91; }
 
 .bg-brand-brimary {
-  background-color: #8ac53f; }
+  background-color: #8360c3; }
 
 .bg-brand-secondary {
-  background-color: #bfd975; }
+  background-color: #2ebf91; }
 
 .color-gray-50 {
   color: #fafafa; }
@@ -3120,6 +3120,14 @@ body {
 .btn {
   cursor: pointer; }
 
+a {
+  color: #8360c3;
+  -webkit-transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.25s; }
+  a:hover {
+    color: #6842ae;
+    text-decoration: none; }
+
 .hero-header-container {
   background: url(../images/bg-image.jpg) no-repeat center center;
   background-size: cover;
@@ -3236,7 +3244,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-color: #e9f4dc;
+  background-color: #f7f4fb;
   background-blend-mode: multiply;
   padding: 30px; }
 
@@ -3273,7 +3281,7 @@ body {
 
 .contact-left-info {
   width: 100%;
-  background-color: #1e2b0d;
+  background-color: #26183f;
   padding: 20px 10% 20px 20px; }
 
 .contact-left-map,
@@ -3285,7 +3293,7 @@ body {
 
 .contact-form {
   padding: 20px;
-  background-color: #1e2b0d; }
+  background-color: #26183f; }
 
 .contact-form input,
 .contact-form form textarea {
@@ -3307,11 +3315,11 @@ ul.social-links,
   margin-left: 0; }
 
 .social-links a {
-  color: #7db436;
+  color: #754dbc;
   -webkit-transition: ease-in-out 0.5ms;
   transition: ease-in-out 0.5ms; }
   .social-links a:hover {
-    color: #8ac53f; }
+    color: #8360c3; }
 
 @media (max-width: 575.98px) {
   .contact-left-map {
@@ -3364,14 +3372,23 @@ ul.social-links,
 .news_extract {
   color: #757575; }
 
+.entry-title {
+  font-weight: 900; }
+
+.entry-meta {
+  margin: 12px 0; }
+
+.entry-content {
+  margin: 30px 0; }
+
 .btn-primary,
 .btn-primary:not(:disabled):not(.disabled):active {
-  background-color: #8ac53f;
-  border-color: #8ac53f; }
+  background-color: #8360c3;
+  border-color: #8360c3; }
   .btn-primary:hover,
   .btn-primary:not(:disabled):not(.disabled):active:hover {
-    background-color: #6fa130;
-    border-color: #6fa130; }
+    background-color: #6842ae;
+    border-color: #6842ae; }
 
 /*
 .carrusel-de-uno .owl-item {
@@ -3621,11 +3638,11 @@ input.form-reservation-error {
   position: relative;
   z-index: 30;
   padding: 0.3rem;
-  background-color: #1e2b0d; }
+  background-color: #26183f; }
   .cta a {
     color: white; }
     .cta a:hover {
-      color: #f5faef;
+      color: white;
       text-decoration: none; }
   .cta i {
     color: #fff; }
@@ -3646,11 +3663,11 @@ input.form-reservation-error {
 .bg-nav {
   width: 100%;
   margin-top: 0;
-  background: #bfd975;
+  background: #2ebf91;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
-  background: linear-gradient(to right, #8ac53f, #bfd975);
+  background: -webkit-gradient(linear, left top, right top, from(#8360c3), to(#2ebf91));
+  background: linear-gradient(to right, #8360c3, #2ebf91);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 .navbar-nav .nav-link {
@@ -3754,11 +3771,11 @@ input.form-reservation-error {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 2em 3em 7em;
-  background: #bfd975;
+  background: #2ebf91;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
-  background: linear-gradient(to right, #8ac53f, #bfd975);
+  background: -webkit-gradient(linear, left top, right top, from(#8360c3), to(#2ebf91));
+  background: linear-gradient(to right, #8360c3, #2ebf91);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .header-card h1 {
     color: #fff;
@@ -3847,23 +3864,23 @@ input.form-reservation-error {
           transform: translate(-70px, -1px); }
 
 .step.active {
-  border-color: #8ac53f;
-  color: #8ac53f; }
+  border-color: #8360c3;
+  color: #8360c3; }
 
 .step.active:before {
-  background: -webkit-gradient(linear, right top, left top, from(#bfd975), to(#8ac53f));
-  background: linear-gradient(to left, #bfd975 0%, #8ac53f 100%); }
+  background: -webkit-gradient(linear, right top, left top, from(#2ebf91), to(#8360c3));
+  background: linear-gradient(to left, #2ebf91 0%, #8360c3 100%); }
 
 .step.active:after {
-  color: #8ac53f; }
+  color: #8360c3; }
 
 .step.done {
-  background-color: #bfd975;
-  border-color: #bfd975;
+  background-color: #2ebf91;
+  border-color: #2ebf91;
   color: white; }
 
 .step.done:before {
-  background-color: #bfd975; }
+  background-color: #2ebf91; }
 
 @media (max-width: 767.98px) {
   #steps {
@@ -3886,11 +3903,11 @@ input.form-reservation-error {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #bfd975;
+  background: #2ebf91;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
-  background: linear-gradient(to right, #8ac53f, #bfd975);
+  background: -webkit-gradient(linear, left top, right top, from(#8360c3), to(#2ebf91));
+  background: linear-gradient(to right, #8360c3, #2ebf91);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 /* Features section */
@@ -3911,7 +3928,7 @@ input.form-reservation-error {
   position: relative; }
 
 .feature > hr {
-  color: #8ac53f;
+  color: #8360c3;
   width: 20%;
   top: 17px; }
 
@@ -4144,21 +4161,21 @@ span.stopa {
   margin: 40px auto; }
 
 .wrapper-footer {
-  background-color: #1e2b0d;
+  background-color: #26183f;
   color: #fff; }
 
 .btn.btn-secondary.understrap-read-more-link {
-  color: #8ac53f;
+  color: #8360c3;
   background-color: transparent;
   border: 0;
   padding-left: 0; }
   .btn.btn-secondary.understrap-read-more-link:hover {
-    color: #6fa130; }
+    color: #6842ae; }
 
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
-  border-color: #8ac53f;
-  background-color: #8ac53f; }
+  border-color: #8360c3;
+  background-color: #8360c3; }
 
 .card {
   border: none; }
@@ -4194,6 +4211,6 @@ span.stopa {
     color: #757575; }
 
 .badge-primary {
-  background-color: #8ac53f; }
+  background-color: #8360c3; }
 
 /*# sourceMappingURL=child-theme.css.map */

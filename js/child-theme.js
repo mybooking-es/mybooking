@@ -1598,3 +1598,17 @@ jQuery(document).ready(function($) {
     );
   });
 });
+
+// Steps
+$(document).ready(function() {
+  $(".step").each(function(index, element) {
+    //element == this
+    $(element)
+      .not(".active")
+      .addClass("done");
+    $(".done").html('<i class="fa fa-check" aria-hidden="true"></i>');
+    if ($(this).is(".active")) {
+      return false;
+    }
+  });
+});

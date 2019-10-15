@@ -24,3 +24,12 @@ body {
 .btn {
   cursor: pointer;
 }
+
+a {
+  color: $brand-primary;
+  transition: ease-in-out 0.25s;
+  &:hover {
+    color: darken($brand-primary, 10%);
+    text-decoration: none;
+  }
+}
