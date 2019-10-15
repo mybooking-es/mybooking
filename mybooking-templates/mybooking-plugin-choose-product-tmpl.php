@@ -34,16 +34,16 @@
     <!-- Script detailed for reservation summary -->
     <script type="text/tmpl" id="script_reservation_summary">
       <div class="bg-white p-3 mb-5 shadow-bottom">
-        <h4 class="brand-primary my-3">Detalle de la reserva</h4>
-        <h5>Entrega</h5>
+        <h4 class="brand-primary my-3"><?php _e('Detalles de la reserva', 'mybooking') ?></h4>
+        <h5><?php _e('Entrega', 'mybooking') ?></h5>
         <p class="color-gray-600"><span><i class="fa fa-calendar mr-1" aria-hidden="true"></i></span><%=shopping_cart.date_from_full_format%> / <%=shopping_cart.time_from%></p>
         <p class="color-gray-600"><span><i class="fa fa-map-marker mr-1" aria-hidden="true"></i></span><%=shopping_cart.pickup_place_customer_translation%></p>
         <hr>
-        <h5>Devolución</h5>
+        <h5><?php _e('Devolución', 'mybooking') ?></h5>
         <p class="color-gray-600"><span><i class="fa fa-calendar mr-1" aria-hidden="true"></i></span><%=shopping_cart.date_to_full_format%> / <%=shopping_cart.time_to%></p>
         <p class="color-gray-600"><span><i class="fa fa-map-marker mr-1" aria-hidden="true"></i></span><%=shopping_cart.return_place_customer_translation%></p>
         <hr>
         <!-- Button trigger modal -->
-        <button id="modify_reservation_button" class="btn btn-outline-dark" data-toggle="modal" data-target="#choose_productModal"><?php _e('Modificar reserva', 'mybooking') ?></button> 
+        <button id="modify_reservation_button" class="btn btn-outline-dark" data-toggle="modal" data-target="#choose_productModal"><?php _e('Modificar reserva', 'mybooking') ?></button>
       </div>
     </script>

@@ -5,19 +5,19 @@
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
         <h4 class="grupo">GRUPO <%=shopping_cart.items[idx].item_id%></h4>
         <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
-        <p class="detail-text">Duración del alquiler: <%=shopping_cart.days%> día/s</p>
+        <p class="detail-text"><?php _e('Duración del alquiler', 'mybooking') ?>: <%=shopping_cart.days%> día/s</p>
       <% } %>
-      <h5>Entrega</h5>
+      <h5><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>
         <li><%=shopping_cart.date_from_full_format%> / <%=shopping_cart.time_from%></li>
         <li><%=shopping_cart.pickup_place_customer_translation%></li>
       </ul>
-      <h5 class="mt-3">Devolución</h5>
+      <h5 class="mt-3"><?php _e('Devolución', 'mybooking') ?></h5>
       <ul>
         <li><%=shopping_cart.date_to_full_format%> / <%=shopping_cart.time_to%></li>
         <li><%=shopping_cart.return_place_customer_translation%></li>
       </ul>
-      <button id="modify_reservation_button" class="btn btn-outline-dark my-3" data-toggle="modal" data-target="#choose_productModal">Modificar reserva</button> 
+      <button id="modify_reservation_button" class="btn btn-outline-dark my-3" data-toggle="modal" data-target="#choose_productModal"><?php _e('Modificar reserva', 'mybooking') ?></button>
     </div>
     <div>
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
@@ -76,12 +76,12 @@
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
 <div class="col sidebar bg-white shadow-bottom py-3 px-3 mt-5">
-  <h4 class="brand-primary my-3">Precio</h4>
+  <h4 class="brand-primary my-3"><?php _e('Precio', 'mybooking') ?></h4>
   <h5>Total producto</h5>
   <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
 
   <hr>
-      <h5>Extras</h5>
+      <h5><?php _e('Extras', 'mybooking') ?></h5>
       <ul class="list-group">
       <% for (var idx=0; idx<shopping_cart.extras.length; idx++) { %>
         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -94,48 +94,48 @@
 
   <% if (shopping_cart.extras_cost > 0) { %>
       <hr>
-      <h5>Total extras</h5>
+      <h5><?php _e('Total extras', 'mybooking') ?></h5>
       <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.extras_cost)%></p>
   <% } %>
 
   <% if (shopping_cart.time_from_cost > 0) { %>
   <hr>
-  <h6>Suplemento hora de entrega</h6>
+  <h6><?php _e('Suplemento hora de entrega', 'mybooking') ?></h6>
   <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.time_from_cost)%></p>
   <% } %>
 
   <% if (shopping_cart.pickup_place_cost > 0) { %>
   <hr>
-  <h6>Suplemento lugar de entrega</h6>
+  <h6><?php _e('Suplemento lugar de entrega', 'mybooking') ?></h6>
   <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.pickup_place_cost)%></p>
   <% } %>
 
   <% if (shopping_cart.time_to_cost > 0) { %>
   <hr>
-  <h6>Suplemento hora de devolución</h6>
+  <h6><?php _e('Suplemento hora de devolución', 'mybooking') ?></h6>
   <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.time_to_cost)%></p>
   <% } %>
 
   <% if (shopping_cart.return_place_cost > 0) { %>
   <hr>
-  <h6>Suplemento lugar de devolución</h6>
+  <h6><?php _e('Suplemento lugar de devolución', 'mybooking') ?></h6>
   <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.return_place_cost)%></p>
   <% } %>
 
   <% if (shopping_cart.driver_age_cost > 0) { %>
   <hr>
-  <h6>Suplemento edad del conductor</h6>
+  <h6><?php _e('Suplemento edad del conductor', 'mybooking') ?></h6>
   <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.driver_age_cost)%></p>
   <% } %>
 
   <% if (shopping_cart.category_supplement_1_cost > 0) { %>
   <hr>
-  <h6>Suplemento combustible</h6>
+  <h6><?php _e('Suplemento combustible', 'mybooking') ?></h6>
   <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.category_supplement_1_cost)%></p>
   <% } %>
 
   <hr>
-  <h5 class="brand-primary">Importe total</h5>
+  <h5 class="brand-primary"><?php _e('Importe total', 'mybooking') ?></h5>
   <p class="total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
 </div>
 </script>
@@ -143,21 +143,21 @@
 <!-- Payment detail -->
 
 <script type="text/tmpl" id="script_payment_detail">
-    
+
     <% if (sales_process.can_pay && sales_process.can_request) { %>
 
-      <h4 class="brand-primary my3">>Confirmar</h4>
+      <h4 class="brand-primary my3">><?php _e('Confirmar', 'mybooking') ?></h4>
       <br>
 
       <div class="field">
         <div class="control">
           <label class="radio">
             <input type="radio" id="none" name="payment" value="none" data-payment-method="none">
-            Solicitud de reserva
+            <?php _e('Solicitud de reserva', 'mybooking') ?>
           </label>
           <label class="radio">
             <input type="radio" id="credit-card" name="payment" value="redsys256" data-payment-method="redsys256">
-            Pagar
+            <?php _e('Pagar', 'mybooking') ?>
           </label>
         </div>
       </div>
@@ -165,27 +165,27 @@
       <input type="radio" id="none" name="payment" value="none" data-payment-method="none">
       <div class="field is-grouped">
         <div class="control">
-          <button type="submit" class="button is-primary">Confirmar</a>
+          <button type="submit" class="button is-primary"><?php _e('Confirmar', 'mybooking') ?></a>
         </div>
-      </div>  
+      </div>
 
     <% } else if (sales_process.can_request) { %>
 
       <input type="hidden" name="payment" value="none" data-payment-method="none">
       <div class="field is-grouped">
         <div class="control">
-          <button type="submit" class="btn btn-outline-dark my-5"><?php _e('Solicitar reserva') ?></a>
+          <button type="submit" class="btn btn-outline-dark my-5"><?php _e('Solicitar reserva', 'mybooking') ?></a>
         </div>
-      </div>  
+      </div>
 
     <% } else if (sales_process.can_pay) { %>
 
       <input type="hidden" name="payment" value="redsys256" data-payment-method="redsys256">
       <div class="field is-grouped">
         <div class="control">
-          <button type="submit" class="button is-primary">Pagar</a>
+          <button type="submit" class="button is-primary"><?php _e('Pagar', 'mybooking') ?></a>
         </div>
-      </div>  
-    <% } %>  
-  
-  </script> 
+      </div>
+    <% } %>
+
+  </script>
