@@ -4,28 +4,37 @@
       <% var product = products[idx]; %>
       <div class="magic-card">
           <header class="header-card">
-              <h1><%=product.name%></h1>
+              <h1 class="product-name"><%=product.name%></h1>
           </header>
           <div class="separator"></div>
           <section class="footer-card">
-              <div class="product-wrapper"><img src="<%=product.photo%>" class="product-image"></div>
-              <p class="short-description"><%=product.short_description%></p>
-              <!-- Offer -->
-              <% if (product.price != product.base_price) { %>
-                <% if (product.offer_discount_type == 'percentage') { %>
-                  <p class="lead mt-2"><%=new Number(product.offer_value)%>% <%=product.offer_name%></p>
+            <div class="img-wrapper">
+          <img src="<%=product.photo%>" class="product-image"></div>
+              <div class="variable-content">
+                <% if (product.price != product.base_price) { %>
+                  <% if (product.offer_discount_type == 'percentage') { %>
+                    <p class="offer"><%=new Number(product.offer_value)%>% <%=product.offer_name%><span><small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small></span></p>
+                  <% } %>
                 <% } %>
-                <p><small class="text-muted"><s><%= configuration.formatCurrency(product.base_price)%></s></small></p>
-              <% } %>
+
+                
+                
+              </div>
+
+              <div class="abajo">
+              <p class="product-price"><%=configuration.formatCurrency(product.price)%></p>
+
               <% if (product.availability) { %>
-              <% if (product.few_available_units) { %>
-              <p class="text-danger"><?php _e('¡Quedan pocas unidades!') ?></p>
-              <% } %>
-              <a class="btn btn-light mb30 btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
+              <a class="btn btn-dark btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
               <% } else { %>
               <p class="has-text-centered"><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></p>
               <% } %>
-              <p class="product-price"><%=configuration.formatCurrency(product.price)%></p>
+
+              <% if (product.few_available_units) { %>
+                <p class="text-danger mt-3"><?php _e('¡Quedan pocas unidades!') ?></p>
+              <% } %>
+              
+              </div>
           </section>
       </div>
       <% } %>

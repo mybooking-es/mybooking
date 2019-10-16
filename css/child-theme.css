@@ -3772,15 +3772,11 @@ input.form-reservation-error {
           box-sizing: border-box;
   padding: 2em 3em 7em;
   background: #bfd975;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
-  background: linear-gradient(to right, #8ac53f, #bfd975);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
-  .header-card h1 {
+  background: linear-gradient(to right, #8ac53f, #bfd975); }
+  .header-card .product-name {
     color: #fff;
-    height: 150px;
-    font-family: "Inter", sans-serif;
+    height: 180px;
     font-weight: 800;
     line-height: 1; }
 
@@ -3790,29 +3786,48 @@ input.form-reservation-error {
   background-image: -webkit-gradient(linear, left top, right bottom, from(transparent), color-stop(50%, transparent), color-stop(50%, #f3efe4), to(#f3efe4));
   background-image: linear-gradient(to bottom right, transparent, transparent 50%, #f3efe4 50%, #f3efe4); }
 
-.footer-card {
-  background: #f3efe4; }
-
-.product-wrapper {
-  position: relative; }
+.img-wrapper {
+  height: 50px; }
 
 .product-image {
-  width: 200px;
+  width: 250px;
   position: absolute;
   top: 0;
-  left: 25%;
-  margin-top: -100px; }
+  left: 50%;
+  margin: -140px auto auto -125px; }
 
 .footer-card {
+  background: #f3efe4;
+  position: relative;
+  height: 250px;
   line-height: 1; }
+  .footer-card a.btn {
+    background-color: #1e2b0d;
+    border-color: #1e2b0d;
+    color: #fff;
+    width: 180px;
+    -webkit-transition: ease-in-out 0.15s;
+    transition: ease-in-out 0.15s; }
+    .footer-card a.btn:hover {
+      background-color: #395219;
+      border-color: #395219;
+      color: #e6e6e6; }
+  .footer-card .variable-content {
+    line-height: 0.9;
+    margin-top: 15px; }
+  .footer-card .offer {
+    font-size: 0.9em;
+    font-weight: 700;
+    color: #8ac53f; }
   .footer-card .product-price {
     font-size: 1.5em;
     padding: 0.5em;
     font-weight: 700; }
-  .footer-card .short-description {
-    font-size: 0.9em;
-    padding-top: 5em;
-    font-weight: 200; }
+  .footer-card .abajo {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    margin-left: -90px; }
 
 #steps {
   width: 100%;

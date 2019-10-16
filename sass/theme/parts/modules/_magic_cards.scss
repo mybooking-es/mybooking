@@ -19,19 +19,15 @@
   box-sizing: border-box;
   padding: 2em 3em 7em;
   background: $brand-secondary;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
     $brand-primary,
     $brand-secondary
   );
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, $brand-primary, $brand-secondary);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  h1 {
+  .product-name {
     color: #fff;
-    height: 150px;
-    font-family: "Inter", sans-serif;
+    height: 180px;
     font-weight: 800;
     line-height: 1;
   }
@@ -48,34 +44,51 @@
     #f3efe4
   );
 }
-
-.footer-card {
-  background: #f3efe4;
+.img-wrapper {
+  height: 50px;
 }
-
-.product-wrapper {
-  position: relative;
-}
-
 .product-image {
-  width: 200px;
+  width: 250px;
   position: absolute;
   top: 0;
-  left: 25%;
-  margin-top: -100px;
+  left: 50%;
+  margin: -140px auto auto -125px;
 }
-
 .footer-card {
+  background: #f3efe4;
+  position: relative;
+  height: 250px;
   line-height: 1;
+  a.btn {
+    background-color: darken($brand-primary, 40%);
+    border-color: darken($brand-primary, 40%);
+    color: $white;
+    width: 180px;
+    transition: ease-in-out 0.15s;
+    &:hover {
+      background-color: darken($brand-primary, 30%);
+      border-color: darken($brand-primary, 30%);
+      color: darken($white, 10%);
+    }
+  }
+  .variable-content {
+    line-height: 0.9;
+    margin-top: 15px;
+  }
+  .offer {
+    font-size: 0.9em;
+    font-weight: 700;
+    color: $brand-primary;
+  }
   .product-price {
     font-size: 1.5em;
     padding: 0.5em;
     font-weight: 700;
   }
-
-  .short-description {
-    font-size: 0.9em;
-    padding-top: 5em;
-    font-weight: 200;
+  .abajo {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    margin-left: -90px;
   }
 }
