@@ -9,6 +9,8 @@ var rimraf = require("gulp-rimraf");
 var sourcemaps = require("gulp-sourcemaps");
 var cleanCSS = require("gulp-clean-css");
 var autoprefixer = require("gulp-autoprefixer");
+var gulp = require("gulp");
+var browserSync = require("browser-sync").create();
 
 // Configuration file to keep your code DRY
 var cfg = require("./gulpconfig.json");
@@ -86,6 +88,21 @@ gulp.task("minifycss", function() {
 // gulp styles
 // Compile Sass and minify css
 gulp.task("styles", gulp.series("sass", "minifycss", "cssimages"));
+
+// ---------- Local Server  -------------------------------------------------
+
+// Run:
+// gulp browser-sync
+// Starts browser-sync task for starting the server.
+gulp.task("browser-sync", function() {
+  var cfgdev = require("./gulpenv.json");
+  browserSync.init(cfg.browserSyncWatchFiles, cfgdev.browserSyncOptions);
+});
+
+// Run:
+// gulp watch-bs
+// Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
+gulp.task("watch-bs", gulp.parallel("browser-sync", "watch"));
 
 // ----------------------------- JS MANAGEMENT --------------------------------
 

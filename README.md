@@ -28,3 +28,17 @@ funtions.php on top of the Understrap parent theme's functions.php.
 ### Build
 
 - To build styles run `$ gulp styles`
+
+### Browser Sync
+
+Browsersync settings is setup in a gulpenv.json file. This file is not hold in Version Control. Please
+create it on the root folder of the theme and configure the proxy depending on your development environment.
+
+```json
+{
+  "browserSyncOptions": {
+    "proxy": "localhost:8888/mybooking",
+    "notify": false
+  }
+}
+```
