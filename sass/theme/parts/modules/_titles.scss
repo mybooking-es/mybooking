@@ -31,10 +31,10 @@
   }
 }
 
-.hr {
-  background-image: url(../images/hr.png);
-  background-repeat: no-repeat;
-  width: 156px;
-  height: 7px;
-  margin: 10px auto 30px auto;
+.center-hr {
+  border-color: $brand-primary;
+  border-width: 4px 0 0;
+  font-weight: 300;
+  margin: 0 0 30px;
+  width: 150px;
 }

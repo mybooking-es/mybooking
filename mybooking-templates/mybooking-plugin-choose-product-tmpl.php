@@ -16,9 +16,6 @@
                     <p class="offer"><%=new Number(product.offer_value)%>% <%=product.offer_name%><span><small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small></span></p>
                   <% } %>
                 <% } %>
-
-                
-                
               </div>
 
               <div class="abajo">
@@ -27,7 +24,7 @@
               <% if (product.availability) { %>
               <a class="btn btn-dark btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
               <% } else { %>
-              <p class="has-text-centered"><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></p>
+              <p><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></p>
               <% } %>
 
               <% if (product.few_available_units) { %>

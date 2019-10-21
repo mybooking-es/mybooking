@@ -34,7 +34,7 @@ gulp.task("watch", function() {
 
 // ---------- SASS + CSS MANAGEMENT ---------------------------
 
-// Copy Fontawesome fonts into dist folder
+// Copy jQuery UI images into dist images folder
 gulp.task("cssimages", function() {
   return gulp
     .src(paths.sass + "/vendor/jquery.ui.custom/images/*.{jpg,gif,png}")

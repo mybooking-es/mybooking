@@ -140,12 +140,10 @@
 </script>
 
 <!-- Payment detail -->
-
 <script type="text/tmpl" id="script_payment_detail">
-
     <% if (sales_process.can_pay && sales_process.can_request) { %>
 
-      <h4 class="brand-primary my3">><?php _e('Confirmar', 'mybooking') ?></h4>
+      <h4 class="brand-primary my3"><?php _e('Confirmar', 'mybooking') ?></h4>
       <br>
 
       <div class="field">
@@ -186,5 +184,4 @@
         </div>
       </div>
     <% } %>
-
   </script>
