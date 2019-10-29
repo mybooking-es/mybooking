@@ -51,7 +51,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Added Whatsapp/Telegram field on Company Information options page wich is rendered on home topbar
 - Eliminated placeholder texts for more layout flexibility
 - Added a secondary widgets area on home header
-- Two new layout for footer; Regular and Simple, and and options page for administer them
+- Two new layouts for footer; Regular and Simple, and options page for administer them
 - Footer elements separated in parts
 - New classes on footer parts for styling
 - New menus registered, for footer and topbar
