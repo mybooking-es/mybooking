@@ -69,6 +69,7 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
  */
 require_once('mybooking-options/mybooking-home-options.php');
 require_once('mybooking-options/mybooking-company-options.php');
+require_once('mybooking-options/mybooking-global-options.php');
 
 /**
  * Mybooking custom post types
@@ -81,6 +82,7 @@ require_once('mybooking-posts/mybooking-promo.php');
  * Mybooking custom functions
  *
  */
+ require_once('mybooking-functions/mybooking-menus.php');
  require_once('mybooking-functions/mybooking-excerpts.php');
  require_once('mybooking-functions/mybooking-categories.php');
 

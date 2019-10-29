@@ -4,7 +4,7 @@
 *  	--------
 *		Overrides parent document on Understrap Theme
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
 *   @since Understrap Mybooking Child 0.0.1
@@ -28,9 +28,18 @@ function mybooking_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Home Hero', 'mybookinges' ),
-			'id'            => 'mybooking_home_hero',
-	    'descripion'    => __( 'Área de widgets en el hero de la plantilla MyBooking Home', 'mybookinges' ),
+			'name'          => __( 'Home Hero 1', 'mybookinges' ),
+			'id'            => 'mybooking_home_hero_primary',
+	    'descripion'    => __( 'Área de widgets a la derecha del hero de la plantilla MyBooking Home', 'mybookinges' ),
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Home Hero 2', 'mybookinges' ),
+			'id'            => 'mybooking_home_hero_secondary',
+	    'descripion'    => __( 'Área de widgets sobre el texto del hero de la plantilla MyBooking Home', 'mybookinges' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
@@ -59,15 +68,6 @@ function mybooking_widgets_init() {
 			'id'            => 'mybooking_global_footer_3',
 			'description'   => __( 'Tercera área de widgets en el footer', 'mybookinges' ),
 			'before_widget' => '<br/><div>',
-			'after_widget'  => '</div>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => __( 'Footer Menu', 'mybookinges' ),
-			'id'            => 'mybooking_global_footer_menu',
-			'description'   => __( 'Resetea el menú del footer', 'mybookinges' ),
-			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
 	);

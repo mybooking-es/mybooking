@@ -1,6 +1,6 @@
 <?php
 /**
-*		RESERVATION HOME TESTIMONIALS PARTIAL
+*		MYBOOKING HOME TESTIMONIALS PARTIAL
 *  	-------------------------------------
 *
 * 	Versión: 0.0.1

@@ -3,10 +3,11 @@
 *		SITE TOP BAR PARTIAL
 *  	--------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
 *   @since Understrap Mybooking Child 0.0.1
+*
 */
 
 // Exit if accessed directly.
@@ -20,6 +21,15 @@ defined( 'ABSPATH' ) || exit;
         if ($company_phone !== '') { ?>
           <i class="fa fa-phone" aria-hidden="true"></i>
           <a href="tel:<?php echo $company_phone ?>"> <?php echo $company_phone ?></span> </a>
+    <?php } ?>
+
+  </span>
+  <span class="ml-3">
+
+    <?php $company_chat = get_option("company_info_chat");
+        if ($company_chat !== '') { ?>
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+          <a href="tel:<?php echo $company_chat ?>"> <?php echo $company_chat ?></span> </a>
     <?php } ?>
 
   </span>

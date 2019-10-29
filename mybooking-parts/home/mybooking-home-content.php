@@ -1,6 +1,6 @@
 <?php
 /**
-*		RESERVATION HOME CONTENT PARTIAL
+*		MYBOOKING HOME CONTENT PARTIAL
 *  	--------------------------------
 *
 * 	Versión: 0.0.1
@@ -13,7 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="container">
+<div class="container mybooking-page_content">
   <div class="row">
 
     <?php while ( have_posts() ) : the_post(); ?>

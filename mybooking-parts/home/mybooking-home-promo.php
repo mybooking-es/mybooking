@@ -1,9 +1,9 @@
 <?php
 /**
-*		RESERVATION HOME PROMO PARTIAL
+*		MYBOOKING HOME PROMO PARTIAL
 *  	------------------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Understrap Mybooking Child
 *   @since Understrap Mybooking Child 0.0.1
@@ -12,9 +12,6 @@
 
 <?php $promo_visible = get_option("home_promo_visibility");
 if ($promo_visible == 1) { ?>
-
-<div class="container">
-  <div class="">
 
       <?php
       $promo_args = array(
@@ -31,31 +28,42 @@ if ($promo_visible == 1) { ?>
       $promo_item = new WP_Query($promo_args); ?>
       <?php  while ( $promo_item->have_posts() ) : $promo_item->the_post(); ?>
 
-        <br>
-        <div class="row">
-          <div class="col text-center">
+        <div class="container">
+          <div class="">
 
-            <?php the_post_thumbnail(); ?>
-            <h2 class="promo_title display-4"><?php the_title(); ?></h2>
+            <br>
+            <div class="row">
+              <div class="col text-center">
 
-            <?php
-            $promo_button_visible = get_option("home_promo_button_visibility");
-            $promo_button_text = get_option("home_promo_button_text");
-            if ($promo_button_visible == 1 && $promo_button_text !=='') { ?>
+                <?php $promo_image_visible = get_option("home_promo_image_visibility");
+                if ($promo_image_visible == 1) {
+                  the_post_thumbnail();
+                } ?>
 
-              <a class="btn btn-primary mb50" href="<?php the_permalink(); ?>" >
-                <?php esc_html_e( $promo_button_text, 'mybooking' ); ?>
-              </a>
+                <?php $promo_title_visible = get_option("home_promo_title_visibility");
+                if ($promo_title_visible == 1) { ?>
+                  <h2 class="mybooking-promo_title display-4"><?php the_title(); ?></h2>
+                <?php } ?>
 
-            <?php } ?>
+
+                <?php
+                $promo_button_visible = get_option("home_promo_button_visibility");
+                $promo_button_text = get_option("home_promo_button_text");
+                if ($promo_button_visible == 1 && $promo_button_text !=='') { ?>
+
+                  <a class="btn btn-primary mb50" href="<?php the_permalink(); ?>" >
+                    <?php esc_html_e( $promo_button_text, 'mybooking' ); ?>
+                  </a>
+
+                <?php } ?>
+
+              </div>
+            </div>
+            <br>
 
           </div>
         </div>
-        <br>
 
     <?php endwhile; ?>
-
-  </div>
-</div>
 
 <?php } ?>
