@@ -56,3 +56,4 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - No more widgets on footer menu zone
 - Adjustable columns on footer; now the active ones expands to all the space
 - Now is possible to hide/show title and image on promos
+- Several minor refactoring on code
