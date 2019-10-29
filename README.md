@@ -14,6 +14,8 @@ funtions.php on top of the Understrap parent theme's functions.php.
 3. Go to "Appearance -> Themes"
 4. Activate Mybooking WordPress Theme
 
+WordPress will install the [parent theme](https://github.com/understrap/understrap) automatically.
+
 ## Editing
 
 ## Developing with NPM, Gulp, SASS and Browser Sync
