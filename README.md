@@ -47,5 +47,12 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 ### Version 0.0.2
 - Theme package renamed to Mybooking WordPress Theme and version number updated
 - Added Whatsapp/Telegram field on Company Information options page wich is rendered on home topbar
-- Eliminated placeholder texts in home features section for more layout flexibility
+- Eliminated placeholder texts for more layout flexibility
 - Added a secondary widgets area on home header
+- Two new layout for footer; Regular and Simple, and and options page for administer them
+- Footer elements separated in parts
+- New classes on footer parts for styling
+- New menus registered, for footer and topbar
+- No more widgets on footer menu zone
+- Adjustable columns on footer; now the active ones expands to all the space
+- Now is possible to hide/show title and image on promos
