@@ -1,6 +1,15 @@
 <!-- FLEX-FORM-SELECTOR -->
 <section class="widget widget_mybooking_rent_engine_selector reservation-step">
-  <form id="form-selector" name="widget_search_form" method="get" enctype="application/x-www-form-urlencoded" class="flex-form">
+  <form id="form-selector" name="widget_search_form" method="get" enctype="application/x-www-form-urlencoded" class="flex-form" autocomplete="off">
+
+    <?php if ( $args['sales_channel_code'] != '' ) : ?>
+    <input type="hidden" name="sales_channel_code" value="<?php echo $args['sales_channel_code']?>"/>
+    <?php endif; ?>
+
+    <?php if ( $args['family_id'] != '' ) : ?>
+    <input type="hidden" name="family_id" value="<?php echo $args['family_id']?>"/>
+    <?php endif; ?>
+
     <div class="flex-form-item-box">
       <label><?php _e('Lugar Entrega ', 'mybooking') ?></label>
       <div class="flex-form-item">
