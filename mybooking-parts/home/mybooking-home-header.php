@@ -52,13 +52,8 @@ defined( 'ABSPATH' ) || exit;
 
     <div class="hero-header-right">
 
-<<<<<<< HEAD
       <?php if ( is_active_sidebar( 'mybooking_home_hero_right' ) ) : ?>
         <?php dynamic_sidebar( 'mybooking_home_hero_right' ); ?>
-=======
-      <?php if ( is_active_sidebar( 'mybooking_home_hero_primary' ) ) : ?>
-        <?php dynamic_sidebar( 'mybooking_home_hero_primary' ); ?>
->>>>>>> de63521a53d8950b8cbc1c378d102dafb08a090d
       <?php endif; ?>
 
     </div>
