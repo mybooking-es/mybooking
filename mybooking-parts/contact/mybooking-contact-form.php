@@ -5,8 +5,8 @@
 *
 * 	Versión: 0.0.1
 *   @package WordPress
-*   @subpackage Understrap Mybooking Child
-*   @since Understrap Mybooking Child 0.0.1
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
 */
 
 // Exit if accessed directly.
@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 <div class="contact-form contact-right">
   <h4>Form</h4>
   <hr />
-  <form action="https://formspree.io/johndoe@gmail.com" method="POST">
+  <!-- <form action="https://formspree.io/johndoe@gmail.com" method="POST">
     <div class="form-group">
       <label for="name"><?php _e('Nombre', 'mybooking') ?></label>
       <input type="text" class="form-control" name="name" aria-describedby="name" placeholder="<?php _e('Nombre', 'mybooking') ?>" />
@@ -36,5 +36,10 @@ defined( 'ABSPATH' ) || exit;
         </button>
       </label>
     </div>
-  </form>
+  </form> -->
+  <?php if ( is_active_sidebar( 'mybooking_contact_form' ) ) : ?>
+    <div class="col">
+      <?php dynamic_sidebar( 'mybooking_contact_form' ); ?>
+    </div>
+  <?php endif; ?>
 </div>

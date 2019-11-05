@@ -3,10 +3,10 @@
 *		EXCERPTS
 *  	--------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
-*   @subpackage Understrap Mybooking Child
-*   @since Understrap Mybooking Child 0.0.1
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
 */
 
 
@@ -24,7 +24,7 @@ function mybooking_custom_excerpt_length( $length ) {
 		// For personalized output use
 		// <?php $mybooking_custom_length=20; echo get_the_excerpt(); ?
 	} else {
-		return 30;
+		return 100;
 	}
 }
 add_filter( 'excerpt_length', 'mybooking_custom_excerpt_length', 999 );

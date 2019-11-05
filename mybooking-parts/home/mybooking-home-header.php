@@ -1,12 +1,12 @@
 <?php
 /**
-*		RESERVATION HOME HEADER PARTIAL
-*  	-------------------------------
+*		MYBOOKING HOME HEADER PARTIAL
+*  	-----------------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
-*   @subpackage Understrap Mybooking Child
-*   @since Understrap Mybooking Child 0.0.1
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
 */
 
 // Exit if accessed directly.
@@ -20,6 +20,14 @@ defined( 'ABSPATH' ) || exit;
 
     <div class="hero-header-left">
       <div class="aligner">
+
+        <p>
+
+          <?php if ( is_active_sidebar( 'mybooking_home_hero_left' ) ) : ?>
+            <?php dynamic_sidebar( 'mybooking_home_hero_left' ); ?>
+          <?php endif; ?>
+
+        </p>
 
         <?php $title_hero = get_option("home_hero_title");
     	    if ($title_hero !== '') { ?>
@@ -40,12 +48,12 @@ defined( 'ABSPATH' ) || exit;
       </div>
     </div>
 
-    <!-- Widget -->
+    <!-- Widget Primary -->
 
     <div class="hero-header-right">
 
-      <?php if ( is_active_sidebar( 'mybooking_home_hero' ) ) : ?>
-        <?php dynamic_sidebar( 'mybooking_home_hero' ); ?>
+      <?php if ( is_active_sidebar( 'mybooking_home_hero_right' ) ) : ?>
+        <?php dynamic_sidebar( 'mybooking_home_hero_right' ); ?>
       <?php endif; ?>
 
     </div>

@@ -4,10 +4,10 @@
 *  	--------
 *		Overrides parent document on Understrap Theme
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
-*   @subpackage Understrap Mybooking Child
-*   @since Understrap Mybooking Child 0.0.1
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
 */
 
 /**
@@ -28,9 +28,18 @@ function mybooking_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Home Hero', 'mybookinges' ),
-			'id'            => 'mybooking_home_hero',
-	    'descripion'    => __( 'Área de widgets en el hero de la plantilla MyBooking Home', 'mybookinges' ),
+			'name'          => __( 'Home Hero Left', 'mybookinges' ),
+			'id'            => 'mybooking_home_hero_left',
+	    'descripion'    => __( 'Área de widgets sobre el texto del hero de la plantilla MyBooking Home', 'mybookinges' ),
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Home Hero Right', 'mybookinges' ),
+			'id'            => 'mybooking_home_hero_right',
+	    'descripion'    => __( 'Área de widgets a la derecha del hero de la plantilla MyBooking Home', 'mybookinges' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
@@ -64,10 +73,19 @@ function mybooking_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer Menu', 'mybookinges' ),
-			'id'            => 'mybooking_global_footer_menu',
-			'description'   => __( 'Resetea el menú del footer', 'mybookinges' ),
-			'before_widget' => '<div>',
+			'name'          => __( 'Footer Cuatro', 'mybookinges' ),
+			'id'            => 'mybooking_global_footer_4',
+			'description'   => __( 'Cuarta área de widgets en el footer', 'mybookinges' ),
+			'before_widget' => '<br/><div>',
+			'after_widget'  => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Formulario de Contacto', 'mybookinges' ),
+			'id'            => 'mybooking_contact_form',
+			'description'   => __( 'Zona para insertar el formulario de contacto en la página de contacto', 'mybookinges' ),
+			'before_widget' => '<br/><div>',
 			'after_widget'  => '</div>',
 		)
 	);

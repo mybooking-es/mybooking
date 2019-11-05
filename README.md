@@ -1,19 +1,20 @@
-# Mybooking Understrap Child Theme
+# Mybooking WordPress Theme
 
-Mybooking Child Theme for UnderStrap Theme Framework: https://github.com/understrap/understrap
+Mybooking WordPress Theme is a child theme for UnderStrap Theme Framework: https://github.com/understrap/understrap
 
 ## How it works
 
-Mybooking Understrap Child Theme shares with the parent theme all PHP files and adds its own
+Mybooking WordPress Theme shares with the parent theme all PHP files and adds its own
 funtions.php on top of the Understrap parent theme's functions.php.
 
 ## Installation
 
-1. Install the parent theme Understrap first. https://github.com/understrap/understrap
-2. Upload mybooking-wp-theme folder to your wp-content/themes directory
-3. Go into your WP admin backend
-4. Go to "Appearance -> Themes"
-5. Activate Mybooking WordPress Theme
+1. Go into your WP admin backend
+2. Upload mybooking-wp-theme.zip
+3. Go to "Appearance -> Themes"
+4. Activate Mybooking WordPress Theme
+
+WordPress will install the [parent theme](https://github.com/understrap/understrap) automatically.
 
 ## Editing
 
@@ -22,7 +23,7 @@ funtions.php on top of the Understrap parent theme's functions.php.
 ### Installing dependencies
 
 - Make sure you have installed Node.js and Gulp on your computer globally
-- Open your terminal and browse to the location of the Mybooking Understrap Child Theme
+- Open your terminal and browse to the location of the Mybooking WordPress Theme
 - Run `$ yarn`
 
 ### Build
@@ -31,8 +32,7 @@ funtions.php on top of the Understrap parent theme's functions.php.
 
 ### Browser Sync
 
-Browsersync settings is setup in a gulpenv.json file. This file is not hold in Version Control. Please
-create it on the root folder of the theme and configure the proxy depending on your development environment.
+Browsersync settings is setup in a gulpenv.json file. This file is not hold in Version Control. Please create it on the root folder of the theme and configure the proxy depending on your development environment.
 
 ```json
 {
@@ -42,3 +42,27 @@ create it on the root folder of the theme and configure the proxy depending on y
   }
 }
 ```
+**NOTE: Localhost port depends of local server configuration.**
+
+## Changelog
+
+### Version 0.0.2
+- Theme package renamed to Mybooking WordPress Theme and version number updated
+- Added Whatsapp/Telegram field on Company Information options page wich is rendered on home topbar
+- Eliminated placeholder texts for more layout flexibility
+- Added a secondary widgets area on home header
+- Two new layouts	for footer; Regular and Simple, and options page for administer them
+- Footer elements separated in parts
+- New classes on footer parts for styling
+- New menus registered, for footer and topbar
+- No more widgets on footer menu zone
+- Adjustable columns on footer; now the active ones expands to all the space
+- Now is possible to hide/show title and image on promos
+- Several minor refactoring on code
+
+### Version 0.1.2
+- Moved and renamed **home.php** to **mybooking-parts/mybooking-home.php**
+- Added customized **index.php**
+- Moved **mybooking-empty.php** to **mybooking-parts/**
+- Added **mybooking-parts/blog/mybooking-content-single** for custom posts
+- Added **mybooking-parts/blog/mybooking-content-blog** for custom blog

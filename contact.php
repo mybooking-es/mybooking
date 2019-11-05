@@ -1,12 +1,13 @@
 <?php
 
 /**
-* Template Name: MyBooking Contact
+*   Template Name: MyBooking Contact
+*  	-----------------------------
 *
 * 	Versión: 0.0.1
 *   @package WordPress
-*   @subpackage Understrap Mybooking Child
-*   @since Understrap Mybooking Child 0.0.1
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
 */
 
 // Exit if accessed directly.
@@ -21,14 +22,17 @@ get_header();
     <div class="contact-left">
 
       <!-- Contact info -->
+      
       <?php get_template_part('mybooking-parts/contact/mybooking-contact-info') ?>
 
       <!-- Map -->
+
       <?php get_template_part('mybooking-parts/contact/mybooking-contact-map') ?>
 
     </div>
 
     <!-- Contact form -->
+
     <?php get_template_part('mybooking-parts/contact/mybooking-contact-form') ?>
 
   </div>

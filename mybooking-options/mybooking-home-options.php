@@ -5,8 +5,8 @@
 *
 * 	Versión: 0.0.1
 *   @package WordPress
-*   @subpackage Understrap Mybooking Child
-*   @since Understrap Mybooking Child 0.0.1
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
 */
 
 
@@ -50,6 +50,8 @@ function mybookinges_register_options_home() {
   add_option("home_hero_text","","","yes");
 
   add_option("home_promo_visibility","","","yes");
+  add_option("home_promo_image_visibility","","","yes");
+  add_option("home_promo_title_visibility","","","yes");
   add_option("home_promo_button_visibility","","","yes");
   add_option("home_promo_button_text","","","yes");
 
@@ -84,6 +86,8 @@ function mybookinges_register_options_home() {
   register_setting("options_home", "home_hero_text");
 
   register_setting("options_home", "home_promo_visibility");
+  register_setting("options_home", "home_promo_image_visibility");
+  register_setting("options_home", "home_promo_title_visibility");
   register_setting("options_home", "home_promo_button_visibility");
   register_setting("options_home", "home_promo_button_text");
 
@@ -169,6 +173,18 @@ function mybookinges_configuration_home() {
           <td>
           <?php $options = get_option( "home_promo_visibility" ); ?>
           <input type="checkbox" name="home_promo_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description"><?php _e('Marcar para activar la sección', 'mybooking') ?></span>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><?php _e('Mostrar imagen', 'mybooking') ?></th>
+          <td>
+          <?php $options = get_option( "home_promo_image_visibility" ); ?>
+          <input type="checkbox" name="home_promo_image_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description"><?php _e('Marcar para mostrar la imagen', 'mybooking') ?></span>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><?php _e('Mostrar titulo', 'mybooking') ?></th>
+          <td>
+          <?php $options = get_option( "home_promo_title_visibility" ); ?>
+          <input type="checkbox" name="home_promo_title_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description"><?php _e('Marcar para mostrar el título', 'mybooking') ?></span>
         </tr>
         <tr valign="top">
           <th scope="row"><?php _e('Mostrar botón', 'mybooking') ?></th>
