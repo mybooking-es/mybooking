@@ -6,13 +6,8 @@
  *
  *	Versión: 0.0.2
  *  @package WordPress
-<<<<<<< HEAD
  *  @subpackage Mybooking WordPress Theme
  *  @since Mybooking WordPress Theme 0.0.1
-=======
- *  @subpackage Understrap Mybooking Child
- *  @since Understrap Mybooking Child 0.0.1
->>>>>>> de63521a53d8950b8cbc1c378d102dafb08a090d
  */
 
 // Exit if accessed directly.
