@@ -1511,8 +1511,8 @@ if (typeof Object.create !== "function") {
     };
 }(jQuery, window, document));
 // Add your custom JS here.
+// OWL CAROUSEL
 $(document).ready(function() {
-  // CARRUSELES
   $(".-carrusel-un-item").owlCarousel({
     autoPlay: true,
     slideSpeed: 300,
@@ -1544,8 +1544,7 @@ $(document).ready(function() {
   });
 });
 
-// Form Selector
-
+// Form Selector sticky
 $(document).ready(function() {
   if (typeof $("#form-selector").offset() !== "undefined") {
     var height = $("#form-selector").offset().top;
@@ -1569,7 +1568,6 @@ $(document).ready(function() {
 });
 
 // Go top button
-
 jQuery(document).ready(function($) {
   // browser window scroll (in pixels) after which the "back to top" link is shown
   var offset = 300,
