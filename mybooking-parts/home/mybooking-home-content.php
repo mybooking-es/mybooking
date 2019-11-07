@@ -1,19 +1,19 @@
 <?php
 /**
-*		RESERVATION HOME CONTENT PARTIAL
+*		MYBOOKING HOME CONTENT PARTIAL
 *  	--------------------------------
 *
 * 	Versión: 0.0.1
 *   @package WordPress
-*   @subpackage Understrap Mybooking Child
-*   @since Understrap Mybooking Child 0.0.1
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
 */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="container">
+<div class="container mybooking-page_content">
   <div class="row">
 
     <?php while ( have_posts() ) : the_post(); ?>

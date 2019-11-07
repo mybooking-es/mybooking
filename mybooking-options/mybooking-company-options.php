@@ -5,8 +5,8 @@
 *
 * 	Versión: 0.0.1
 *   @package WordPress
-*   @subpackage Understrap Mybooking Child
-*   @since Understrap Mybooking Child 0.0.1
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
 */
 
 add_action('admin_menu', 'mybookinges_create_menu_company_info');
@@ -36,6 +36,7 @@ function mybookinges_register_options_company_info() {
 
   add_option("company_info_adress","","","yes");
   add_option("company_info_phone","","","yes");
+  add_option("company_info_chat","","","yes");
   add_option("company_info_email","","","yes");
 
   add_option("company_info_twitter_url","","","yes");
@@ -58,6 +59,7 @@ function mybookinges_register_options_company_info() {
 
   register_setting("options_company_info", "company_info_adress");
   register_setting("options_company_info", "company_info_phone");
+  register_setting("options_company_info", "company_info_chat");
   register_setting("options_company_info", "company_info_email");
 
   register_setting("options_company_info", "company_info_twitter_url");
@@ -132,6 +134,11 @@ function mybookinges_configuration_company_info() {
         <tr valign="top">
           <th scope="row"><?php _e('Teléfono de contacto', 'mybooking') ?></th>
           <td><input type="text" name="company_info_phone" size="40" value="<?php echo get_option('company_info_phone', 'mybooking'); ?>" /></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><?php _e('Canal de chat', 'mybooking') ?></th>
+          <td><input type="text" name="company_info_chat" size="40" value="<?php echo get_option('company_info_chat', 'mybooking'); ?>" />
+          <br><span class="description"><?php _e('Número de telefono asociado a Whatsapp, Telegram o similar', 'mybooking') ?></span></td>
         </tr>
         <tr valign="top">
           <th scope="row"><?php _e('Email de contacto', 'mybooking') ?></th>

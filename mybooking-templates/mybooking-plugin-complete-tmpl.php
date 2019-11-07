@@ -159,10 +159,9 @@
         </div>
       </div>
 
-      <input type="radio" id="none" name="payment" value="none" data-payment-method="none">
       <div class="field is-grouped">
         <div class="control">
-          <button type="submit" class="button is-primary"><?php _e('Confirmar', 'mybooking') ?></a>
+          <button type="submit" class="button btn-outline-dark my-5"><?php _e('Confirmar', 'mybooking') ?></a>
         </div>
       </div>
 
@@ -180,7 +179,7 @@
       <input type="hidden" name="payment" value="redsys256" data-payment-method="redsys256">
       <div class="field is-grouped">
         <div class="control">
-          <button type="submit" class="button is-primary"><?php _e('Pagar', 'mybooking') ?></a>
+          <button type="submit" class="button btn-outline-dark my-5"><?php _e('Pagar', 'mybooking') ?></a>
         </div>
       </div>
     <% } %>

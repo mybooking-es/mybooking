@@ -3,10 +3,11 @@
 *		SITE TOP BAR PARTIAL
 *  	--------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.3
 *   @package WordPress
-*   @subpackage Understrap Mybooking Child
-*   @since Understrap Mybooking Child 0.0.1
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
+*
 */
 
 // Exit if accessed directly.
@@ -25,6 +26,15 @@ defined( 'ABSPATH' ) || exit;
   </span>
   <span class="ml-3">
 
+    <?php $company_chat = get_option("company_info_chat");
+        if ($company_chat !== '') { ?>
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+          <a href="tel:<?php echo $company_chat ?>"> <?php echo $company_chat ?></span> </a>
+    <?php } ?>
+
+  </span>
+  <span class="ml-3">
+
     <?php $company_email = get_option("company_info_email");
         if ($company_email !== '') { ?>
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -38,5 +48,9 @@ defined( 'ABSPATH' ) || exit;
   <?php if ( is_active_sidebar( 'mybooking_top_bar' ) ) : ?>
     <?php dynamic_sidebar( 'mybooking_top_bar' ); ?>
   <?php endif; ?>
+
+  <!-- Top Menu -->
+
+  <?php wp_nav_menu( array( 'theme_location' => 'top-menu' ) ); ?>
 
 </div>

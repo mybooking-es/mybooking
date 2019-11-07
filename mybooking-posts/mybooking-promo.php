@@ -2,11 +2,11 @@
 /**
 *   PROMO POST TYPE
 *   ---------------
-* 	Autor: Hector Asencio @Mybooking
+*
 * 	Versión: 0.0.1
 *   @package WordPress
-*   @subpackage Understrap Mybooking Child
-*   @since Understrap Mybooking Child 0.0.1
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
 */
 
 function create_promo() {

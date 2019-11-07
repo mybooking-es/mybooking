@@ -5,8 +5,8 @@
 *
 * 	Versión: 0.0.1
 *   @package WordPress
-*   @subpackage Understrap Mybooking Child
-*   @since Understrap Mybooking Child 0.0.1
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
 */
 ?>
 
@@ -27,10 +27,7 @@
       <?php $subtitle_contact = get_option("contact_section_subtitle");
         if ($subtitle_contact !== '') { ?>
           <h3><?php echo $subtitle_contact ?></h3>
-        <?php }
-        else { ?>
-          <h3><?php _e("Estaré encantado de atenderte en:",'mybooking'); ?></h3>
-      <?php } ?>
+        <?php } ?>
 
     </div>
 
