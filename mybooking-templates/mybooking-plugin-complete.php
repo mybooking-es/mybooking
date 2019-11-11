@@ -1,3 +1,14 @@
+<?php
+/**
+*   PLUGIN COMPLETE PAGE
+*   --------------------
+*
+* 	Versión: 0.0.1
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
+*/
+?>
 <?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
 
 <div class="reservation-step custom-form">

@@ -1,3 +1,14 @@
+<?php
+/**
+*   PLUGIN MODIFY RESERVATION PARTIAL
+*   ---------------------------------
+*
+* 	Versión: 0.0.1
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
+*/
+?>
 <!-- FLEX-FORM-MODIFY MODAL -->
 <!-- Modal -->
 <div class="modal fade" id="choose_productModal" tabindex="-1" role="dialog" aria-labelledby="choose_productModal"

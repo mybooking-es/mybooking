@@ -1,3 +1,14 @@
+<?php
+/**
+*   PLUGIN WIDGET FORM
+*   ------------------
+*
+* 	Versión: 0.0.1
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
+*/
+?>
 <!-- FLEX-FORM-SELECTOR -->
 <section class="widget widget_mybooking_rent_engine_selector reservation-step">
   <form id="form-selector" name="widget_search_form" method="get" enctype="application/x-www-form-urlencoded" class="flex-form" autocomplete="off">
