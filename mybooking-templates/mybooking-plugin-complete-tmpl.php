@@ -1,3 +1,14 @@
+<?php
+/**
+*   PLUGIN COMPLETE TEMPLATE
+*   ------------------------
+*
+* 	Versión: 0.0.2
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
+*/
+?>
 <!-- Product detail -->
 <script type="text/tpml" id="script_product_detail">
   <div class="product-detail">
@@ -50,7 +61,7 @@
                     </div>
                     <% value = (extrasInShoppingCart[extra.code]) ? extrasInShoppingCart[extra.code] : 0; %>
                     <input type="text" id="extra-<%=extra.code%>-quantity"
-                        class="form-control disabled text-center" value="<%=value%>"/>
+                        class="form-control disabled text-center extra-input" value="<%=value%>" data-extra-code="<%=extra.code%>"/>
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary btn-plus-extra"
                         data-value="<%=extra.code%>"

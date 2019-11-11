@@ -1,3 +1,14 @@
+<?php
+/**
+*   PLUGIN SUMMARY TEMPLATE
+*   -----------------------
+*
+* 	Versión: 0.0.1
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
+*/
+?>
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
 
