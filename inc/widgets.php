@@ -28,7 +28,7 @@ function mybooking_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Home Hero Right', 'mybookinges' ),
+			'name'          => __( 'Home Hero Main', 'mybookinges' ),
 			'id'            => 'mybooking_home_hero_main',
 	    'descripion'    => __( 'Área de widgets a la derecha del hero de la plantilla MyBooking Home', 'mybookinges' ),
 			'before_widget' => '<div>',
@@ -37,7 +37,7 @@ function mybooking_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Home Hero Left', 'mybookinges' ),
+			'name'          => __( 'Home Hero Secondary', 'mybookinges' ),
 			'id'            => 'mybooking_home_hero_secondary',
 	    'descripion'    => __( 'Área de widgets sobre el texto del hero de la plantilla MyBooking Home', 'mybookinges' ),
 			'before_widget' => '<div>',
