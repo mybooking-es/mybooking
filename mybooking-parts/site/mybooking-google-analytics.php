@@ -21,6 +21,5 @@ defined( 'ABSPATH' ) || exit;
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', '<?php echo $analytics_id ?>', 'auto');
-  ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
 </script>
