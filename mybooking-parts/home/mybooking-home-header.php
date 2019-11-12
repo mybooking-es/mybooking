@@ -15,20 +15,18 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="hero-header-container">
   <div class="hero-header-content">
-
-    <!-- Punchline -->
-
     <div class="hero-header-left">
       <div class="aligner">
-
         <p>
 
+          <!-- Widget Left -->
           <?php if ( is_active_sidebar( 'mybooking_home_hero_left' ) ) : ?>
             <?php dynamic_sidebar( 'mybooking_home_hero_left' ); ?>
           <?php endif; ?>
 
         </p>
 
+        <!-- Title -->
         <?php $title_hero = get_option("home_hero_title");
     	    if ($title_hero !== '') { ?>
             <h1><?php echo $title_hero ?></h1>
@@ -37,6 +35,7 @@ defined( 'ABSPATH' ) || exit;
             <h1><?php _e("Mybooking WordPress Theme",'mybooking'); ?></h1>
         <?php } ?>
 
+        <!-- Subtitle -->
         <?php $text_hero = get_option("home_hero_text");
     	    if ($text_hero !== '') { ?>
             <p><?php echo $text_hero ?></p>
@@ -48,8 +47,7 @@ defined( 'ABSPATH' ) || exit;
       </div>
     </div>
 
-    <!-- Widget Primary -->
-
+    <!-- Widget Right -->
     <div class="hero-header-right">
 
       <?php if ( is_active_sidebar( 'mybooking_home_hero_right' ) ) : ?>

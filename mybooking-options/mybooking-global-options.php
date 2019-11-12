@@ -31,10 +31,12 @@ function mybookinges_register_options_global() {
 
   // Definición de opciones
   add_option("global_google_analytics","","","yes");
+  add_option("global_header_layout","","","yes");
   add_option("global_footer_layout","","","yes");
 
   // Registro de opciones
   register_setting("options_global", "global_google_analytics");
+  register_setting("options_global", "global_header_layout");
   register_setting("options_global", "global_footer_layout");
 
 }
@@ -71,6 +73,20 @@ function mybookinges_configuration_global() {
         <tr valign="top">
           <th scope="row"><?php _e('Introduce el ID de Google Analytics', 'mybooking') ?></th>
           <td><input type="text" name="global_google_analytics" size="40" value="<?php echo get_option('global_google_analytics', 'mybooking'); ?>" /></td>
+        </tr>
+      </table>
+
+      <hr>
+
+      <h2><?php _e('Layout del header', 'mybooking') ?></h2>
+
+      <table class="form-table">
+        <tr valign="top">
+          <th scope="row"><?php _e('Escoge el tipo de cabecera', 'mybooking') ?></th>
+          <td>
+          <?php $options = get_option( "global_header_layout" ); ?>
+          <input type="radio" name="global_header_layout" <?php checked( $options, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Dos columnas','mybooking') ?></strong>  <?php _e('WIDGETS + TEXTO | WIDGET', 'mybooking') ?></span><br><br>
+          <input type="radio" name="global_header_layout" <?php checked( $options, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Una columnas', 'mybooking') ?></strong>  <?php _e('TEXTO + WIDGET', 'mybooking') ?></span>
         </tr>
       </table>
 

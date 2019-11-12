@@ -3,7 +3,7 @@
 *   Template Name: MyBooking Home
 *  	-----------------------------
 *
-* 	Versión: 0.0.3
+* 	Versión: 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -18,7 +18,13 @@ defined( 'ABSPATH' ) || exit;
 <!-- MYBOOKING PARTIALS -->
 
 <!-- Header -->
-<?php get_template_part('mybooking-parts/home/mybooking-home-header'); ?>
+<?php $header_layout = get_option('global_header_layout');
+if ($header_layout == 0) {
+    get_template_part('mybooking-parts/home/mybooking-home-header');
+  } else {
+    get_template_part('mybooking-parts/home/mybooking-home-header-horizontal');
+  }
+?>
 
 <!-- Highlight -->
 <?php get_template_part('mybooking-parts/home/mybooking-home-highlight'); ?>
