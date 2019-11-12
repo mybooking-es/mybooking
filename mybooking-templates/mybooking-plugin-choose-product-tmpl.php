@@ -27,9 +27,6 @@
                 <p class="offer"><%=new Number(product.offer_value)%>% <%=product.offer_name%><span><small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small></span></p>
               <% } %>
             <% } %>
-
-
-
           </div>
 
           <div class="abajo">

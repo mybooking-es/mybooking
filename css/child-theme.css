@@ -2530,7 +2530,7 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   font-weight: 800; }
 
 .fw-900 {
-  font-weight: 700; }
+  font-weight: 900; }
 
 @font-face {
   font-family: "Inter";
@@ -3504,6 +3504,9 @@ ul.social-links,
   padding: 10px; }
 
 .flex-form-sticky {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -3556,8 +3559,107 @@ ul.social-links,
   input.hasDatepicker {
     max-width: 130px; } }
 
+.flex-form-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px; }
+
+.flex-form-group-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.flex-form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .flex-form-group input.hasDatepicker {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+
+.flex-form-horizontal-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px; }
+
+.flex-form-horizontal-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .flex-form-horizontal-item select {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+
+.flex-form-group:nth-child(1n) {
+  margin-right: 5px; }
+
+.flex-form-group:nth-child(2n) {
+  margin-left: 5px; }
+
+.flex-form-sticky .flex-form-group {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.flex-form-sticky .flex-form-horizontal-box:last-child {
+  margin-left: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
+
+.flex-form-horizontal.flex-form-sticky {
+  background-color: #bdbdbd;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+@media (min-width: 768px) {
+  .flex-form-group-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; } }
+
+@media (max-width: 1199.98px) {
+  .flex-form-horizontal-item select {
+    width: 100px; } }
+
 /* ============================================
-  ===========  Reglas para todos los Formularios
+  ===========  Reglas generales para Formularios
   ============================================== */
 select {
   border-radius: 0px;
@@ -3565,9 +3667,10 @@ select {
   text-indent: 1px;
   text-overflow: "";
   border: 0;
-  font-size: 1rem;
+  font-size: 0.8rem;
   height: 48px;
   appearance: none;
+  color: #616161;
   -moz-appearance: none;
   -webkit-appearance: none; }
   select:focus {
@@ -3579,10 +3682,24 @@ select {
 .input-group > .form-control {
   height: 48px; }
 
+.form-group select.form-control {
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 0.8rem;
+  font-size: 0.8rem;
+  line-height: 18px;
+  color: #616161;
+  height: 48px;
+  margin-top: 8px; }
+
 .input-group-prepend > .input-group-text {
   border-radius: 0; }
 
-/* remove rounding from cards, buttons and inputs */
 .card,
 .btn,
 .form-control {
@@ -3597,12 +3714,22 @@ textarea,
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 0 0.8rem;
-  font-size: 13px;
+  font-size: 0.8rem;
   line-height: 18px;
   color: #616161;
-  border: 0;
+  height: 48px;
+  border: none;
   border-radius: 0;
-  height: 48px; }
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.custom-form input[type="text"],
+.custom-form input[type="password"],
+.custom-form .ui-autocomplete-input,
+.custom-form textarea,
+.custom-form .uneditable-input {
+  border: 1px solid #bdbdbd;
+  border-radius: 3px; }
 
 label {
   position: relative; }
@@ -3612,20 +3739,10 @@ label {
   font-size: 18px;
   color: #616161;
   right: 8px;
-  top: 36px; }
+  top: 48px; }
 
 .custom-icon-select {
   top: 16px; }
-
-.custom-form input[type="text"],
-.custom-form input[type="password"],
-.custom-form .ui-autocomplete-input,
-.custom-form textarea,
-.custom-form .uneditable-input {
-  border: 1px solid #bdbdbd;
-  border-radius: 3px;
-  -webkit-box-shadow: none;
-          box-shadow: none; }
 
 .form-reservation-error {
   color: #dc3545; }
@@ -3633,7 +3750,37 @@ label {
 input.form-reservation-error {
   border-color: #dc3545 !important; }
 
+.custom-date-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .custom-date-form select {
+    padding-right: 30px !important; }
+  .custom-date-form .fa {
+    margin-left: -20px; }
+
+.custom-date-form > div:nth-child(2n) {
+  margin: 0 5px; }
+
+.custom-date-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  .custom-date-item select.form-control {
+    margin-top: 0; }
+
+.input-group > .form-control.extra-input {
+  border-top: 1px solid #6c757d;
+  border-bottom: 1px solid #6c757d; }
+
 .cta {
+  font-size: small;
   margin-top: 0;
   position: relative;
   z-index: 30;
@@ -4043,12 +4190,12 @@ span.stopa {
   .title {
     max-width: 40%; } }
 
-.hr {
-  background-image: url(../images/hr.png);
-  background-repeat: no-repeat;
-  width: 156px;
-  height: 7px;
-  margin: 10px auto 30px auto; }
+.center-hr {
+  border-color: #8ac53f;
+  border-width: 4px 0 0;
+  font-weight: 300;
+  margin: 0 0 30px;
+  width: 150px; }
 
 .product-detail {
   padding: 30px;
@@ -4159,34 +4306,6 @@ span.stopa {
   background: url(../images/quote-left-solid.svg) 0 0/contain no-repeat;
   content: ""; }
 
-.shadow-bottom {
-  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
-          box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
-  border-radius: 5px 5px 4px 4px; }
-
-.total-price {
-  font-size: 2rem;
-  font-weight: 700; }
-
-.ui-datepicker {
-  z-index: 5000 !important; }
-
-.counter .center {
-  width: 150px;
-  margin: 40px auto; }
-
-.wrapper-footer {
-  background-color: #1e2b0d;
-  color: #fff; }
-
-.btn.btn-secondary.understrap-read-more-link {
-  color: #8ac53f;
-  background-color: transparent;
-  border: 0;
-  padding-left: 0; }
-  .btn.btn-secondary.understrap-read-more-link:hover {
-    color: #6fa130; }
-
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
   border-color: #8ac53f;
@@ -4227,5 +4346,39 @@ span.stopa {
 
 .badge-primary {
   background-color: #8ac53f; }
+
+.full-height {
+  height: 100%; }
+
+.full-width {
+  width: 100%; }
+
+.shadow-bottom {
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 5px 5px 4px 4px; }
+
+.total-price {
+  font-size: 2rem;
+  font-weight: 700; }
+
+.ui-datepicker {
+  z-index: 5000 !important; }
+
+.counter .center {
+  width: 150px;
+  margin: 40px auto; }
+
+.wrapper-footer {
+  background-color: #1e2b0d;
+  color: #fff; }
+
+.btn.btn-secondary.understrap-read-more-link {
+  color: #8ac53f;
+  background-color: transparent;
+  border: 0;
+  padding-left: 0; }
+  .btn.btn-secondary.understrap-read-more-link:hover {
+    color: #6fa130; }
 
 /*# sourceMappingURL=child-theme.css.map */

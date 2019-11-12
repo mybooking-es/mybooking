@@ -2,8 +2,8 @@
 // Module/inputs, forms, textarea
 //==============================================
 
-// Form Selector
-
+// Form Selector vertical
+// Estilos de formulario flat design puro flex-box
 .flex-form {
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@
 }
 .flex-form-sticky {
   @extend .flex-form;
+  align-items: end;
   flex-direction: row;
   background-color: $gray-300;
   position: fixed;
@@ -59,8 +60,75 @@
   }
 }
 
+// Form selector horizontal
+// Estilos de formulario flat adaptado para que funcione en horizontal
+
+.flex-form-horizontal {
+  display: flex;
+  flex-direction: column;
+  background-color: $transparent-white;
+  padding: 10px;
+}
+.flex-form-group-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flex-form-group {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  input.hasDatepicker {
+    flex-grow: 1;
+  }
+}
+.flex-form-horizontal-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.flex-form-horizontal-item {
+  display: flex;
+  select {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+.flex-form-group:nth-child(1n) {
+  margin-right: 5px;
+}
+.flex-form-group:nth-child(2n) {
+  margin-left: 5px;
+}
+.flex-form-sticky {
+  .flex-form-group {
+    flex-direction: row;
+  }
+  .flex-form-horizontal-box:last-child {
+    margin-left: 5px;
+    flex-grow: 1;
+    align-self: flex-end;
+  }
+}
+.flex-form-horizontal.flex-form-sticky {
+  background-color: $gray-400;
+  flex-direction: row;
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .flex-form-group-wrapper {
+    flex-direction: row;
+  }
+}
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  .flex-form-horizontal-item select {
+    width: 100px;
+  }
+}
+
 /* ============================================
-  ===========  Reglas para todos los Formularios
+  ===========  Reglas generales para Formularios
   ============================================== */
 select {
   border-radius: 0px;
@@ -68,9 +136,10 @@ select {
   text-indent: 1px;
   text-overflow: "";
   border: 0;
-  font-size: 1rem;
+  font-size: 0.8rem;
   height: 48px;
   appearance: none;
+  color: $gray-700;
   -moz-appearance: none;
   -webkit-appearance: none;
   &:focus {
@@ -79,19 +148,33 @@ select {
     border: 0;
   }
 }
+// Machacando estilos de formulario de Bootstrap para el form completar datos
+// También sobreescribo mis propias reglas pues en este caso quiero un borde gris rounded
 .input-group > .form-control {
   height: 48px;
+}
+.form-group select.form-control {
+  border: 1px solid $gray-400;
+  border-radius: 3px;
+  box-shadow: none;
+  display: inline-flex;
+  padding: 0 0.8rem;
+  font-size: 0.8rem;
+  line-height: 18px;
+  color: $gray-700;
+  height: 48px;
+  margin-top: 8px;
 }
 .input-group-prepend > .input-group-text {
   border-radius: 0;
 }
-/* remove rounding from cards, buttons and inputs */
 .card,
 .btn,
 .form-control {
   border-radius: 0;
 }
-// Overriding jQuery UI styles
+
+// Machacando estilos de jquery ui para el form completar datos
 input[type="text"],
 input[type="password"],
 .ui-autocomplete-input,
@@ -99,26 +182,13 @@ textarea,
 .uneditable-input {
   display: inline-flex;
   padding: 0 0.8rem;
-  font-size: 13px;
+  font-size: 0.8rem;
   line-height: 18px;
   color: $gray-700;
-  border: 0;
-  border-radius: 0;
   height: 48px;
-}
-label {
-  position: relative;
-}
-.custom-icon {
-  position: absolute;
-  font-size: 18px;
-  color: $gray-700;
-  right: 8px;
-  top: 36px;
-}
-.custom-icon-select {
-  @extend .custom-icon;
-  top: 16px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 .custom-form {
   input[type="text"],
@@ -128,8 +198,22 @@ label {
   .uneditable-input {
     border: 1px solid $gray-400;
     border-radius: 3px;
-    box-shadow: none;
   }
+}
+// Custom icon para los arrow-down en los select maquetados con Bootstrap
+label {
+  position: relative;
+}
+.custom-icon {
+  position: absolute;
+  font-size: 18px;
+  color: $gray-700;
+  right: 8px;
+  top: 48px;
+}
+.custom-icon-select {
+  @extend .custom-icon;
+  top: 16px;
 }
 
 .form-reservation-error {
@@ -137,4 +221,30 @@ label {
 }
 input.form-reservation-error {
   border-color: #dc3545 !important;
+}
+// Form Dates
+.custom-date-form {
+  display: flex;
+  select {
+    padding-right: 30px !important;
+  }
+  .fa {
+    margin-left: -20px;
+  }
+}
+.custom-date-form > div:nth-child(2n) {
+  margin: 0 5px;
+}
+.custom-date-item {
+  display: flex;
+  align-items: baseline;
+  flex-grow: 1;
+  select.form-control {
+    margin-top: 0;
+  }
+}
+// Extra inputs
+.input-group > .form-control.extra-input {
+  border-top: 1px solid #6c757d;
+  border-bottom: 1px solid #6c757d;
 }

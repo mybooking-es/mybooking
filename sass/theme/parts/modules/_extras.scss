@@ -1,0 +1,50 @@
+//==============================================
+// Module/extras for complete
+//==============================================
+
+// custom style para el swith de extras en complete
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: $brand-primary;
+  background-color: $brand-primary;
+}
+// Cards para los extras en complete
+.card {
+  border: none;
+}
+.card-img {
+  padding: 12px;
+  max-width: 100%;
+}
+.card-columns {
+  column-count: 1;
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+// List group para los extras en complete y summary
+.list-group li {
+  border: 0;
+  padding-left: 0;
+  margin-left: 0;
+  .extra-name {
+    width: 60%;
+  }
+  .extra-price {
+    color: $gray-600;
+  }
+}
+.badge-primary {
+  background-color: $brand-primary;
+}

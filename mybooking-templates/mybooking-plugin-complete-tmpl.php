@@ -151,50 +151,47 @@
 </script>
 
 <!-- Payment detail -->
-
 <script type="text/tmpl" id="script_payment_detail">
+  <% if (sales_process.can_pay && sales_process.can_request) { %>
 
-    <% if (sales_process.can_pay && sales_process.can_request) { %>
-
-      <h4 class="brand-primary my3"><?php _e('Confirmar', 'mybooking') ?></h4>
-      <br>
-
-      <div class="field">
-        <div class="control">
-          <label class="radio">
-            <input type="radio" id="none" name="payment" value="none" data-payment-method="none">
-            <?php _e('Solicitud de reserva', 'mybooking') ?>
-          </label>
-          <label class="radio">
-            <input type="radio" id="credit-card" name="payment" value="redsys256" data-payment-method="redsys256">
-            <?php _e('Pagar', 'mybooking') ?>
-          </label>
-        </div>
+    <h4 class="brand-primary my3"><?php _e('Confirmar', 'mybooking') ?></h4>
+    <br>
+    <div class="field">
+      <div class="control">
+        <label class="radio">
+          <input type="radio" id="none" name="payment" value="none" data-payment-method="none">
+          Solicitud de reserva
+        </label>
+        <br>  
+        <label class="radio">
+          <input type="radio" id="credit-card" name="payment" value="redsys256" data-payment-method="redsys256">
+          Pagar
+        </label>
       </div>
+    </div>
 
-      <div class="field is-grouped">
-        <div class="control">
-          <button type="submit" class="button btn-outline-dark my-5"><?php _e('Confirmar', 'mybooking') ?></a>
-        </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <button type="submit" class="btn btn-outline-dark my-5">Confirmar</a>
       </div>
+    </div>
 
-    <% } else if (sales_process.can_request) { %>
+  <% } else if (sales_process.can_request) { %>
 
-      <input type="hidden" name="payment" value="none" data-payment-method="none">
-      <div class="field is-grouped">
-        <div class="control">
-          <button type="submit" class="btn btn-outline-dark my-5"><?php _e('Solicitar reserva', 'mybooking') ?></a>
-        </div>
+    <input type="hidden" name="payment" value="none" data-payment-method="none">
+    <div class="field is-grouped">
+      <div class="control">
+        <button type="submit" class="btn btn-outline-dark my-5"><%= complete.request_reservation %></a>
       </div>
+    </div>
 
-    <% } else if (sales_process.can_pay) { %>
+  <% } else if (sales_process.can_pay) { %>
 
-      <input type="hidden" name="payment" value="redsys256" data-payment-method="redsys256">
-      <div class="field is-grouped">
-        <div class="control">
-          <button type="submit" class="button btn-outline-dark my-5"><?php _e('Pagar', 'mybooking') ?></a>
-        </div>
+    <input type="hidden" name="payment" value="redsys256" data-payment-method="redsys256">
+    <div class="field is-grouped">
+      <div class="control">
+        <button type="submit" class="btn btn-outline-dark my-5">Pagar</a>
       </div>
-    <% } %>
-
-  </script>
+    </div>
+  <% } %>
+</script>

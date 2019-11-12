@@ -1511,8 +1511,8 @@ if (typeof Object.create !== "function") {
     };
 }(jQuery, window, document));
 // Add your custom JS here.
+// OWL CAROUSEL
 $(document).ready(function() {
-  // CARRUSELES
   $(".-carrusel-un-item").owlCarousel({
     autoPlay: true,
     slideSpeed: 300,
@@ -1544,29 +1544,30 @@ $(document).ready(function() {
   });
 });
 
-// Form Selector
+// Form Selector sticky
 $(document).ready(function() {
-  var height = $("#form-selector").offset().top;
-  var is_mobile = false;
+  if (typeof $("#form-selector").offset() !== "undefined") {
+    var height = $("#form-selector").offset().top;
+    var is_mobile = false;
 
-  if ($(".navbar-toggler").is(":visible")) {
-    is_mobile = true;
-  }
-  if (!is_mobile) {
-    $(window).on("scroll", function() {
-      if ($(".navbar-toggler").is(":visible")) {
-        $("#form-selector").removeClass("flex-form-sticky");
-      } else if ($(window).scrollTop() > height) {
-        $("#form-selector").addClass("flex-form-sticky");
-      } else {
-        $("#form-selector").removeClass("flex-form-sticky");
-      }
-    });
+    if ($(".navbar-toggler").is(":visible")) {
+      is_mobile = true;
+    }
+    if (!is_mobile) {
+      $(window).on("scroll", function() {
+        if ($(".navbar-toggler").is(":visible")) {
+          $("#form-selector").removeClass("flex-form-sticky");
+        } else if ($(window).scrollTop() > height) {
+          $("#form-selector").addClass("flex-form-sticky");
+        } else {
+          $("#form-selector").removeClass("flex-form-sticky");
+        }
+      });
+    }
   }
 });
 
 // Go top button
-
 jQuery(document).ready(function($) {
   // browser window scroll (in pixels) after which the "back to top" link is shown
   var offset = 300,
