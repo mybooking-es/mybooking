@@ -1,0 +1,128 @@
+//==============================================
+// Module/ form selector
+
+//==============================================
+// Form Selector vertical
+// Estilos de formulario flat design puro flex-box
+.flex-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  background-color: $transparent-white;
+  padding: 10px;
+}
+.flex-form-sticky {
+  @extend .flex-form;
+  align-items: end;
+  flex-direction: row;
+  background-color: $gray-300;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  .btn {
+    height: 48px;
+    margin-top: 32px;
+  }
+  input.hasDatepicker {
+    max-width: 130px;
+  }
+}
+.flex-form-item-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 5px;
+}
+.flex-form-item {
+  display: flex;
+  select {
+    width: 100%;
+    min-width: 98px;
+  }
+}
+.flex-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  background-color: #fff;
+  padding: 5px 10px;
+  height: 48px;
+  color: $gray-700;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  input.hasDatepicker {
+    max-width: 130px;
+  }
+}
+
+// Form selector horizontal
+
+.flex-form-horizontal {
+  display: flex;
+  flex-direction: column;
+  background-color: $transparent-white;
+  padding: 10px;
+}
+.flex-form-group-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 2;
+}
+.flex-form-group {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  input.hasDatepicker {
+    flex-grow: 1;
+  }
+}
+.flex-form-horizontal-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.flex-form-horizontal-item {
+  display: flex;
+  select {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+.flex-form-group:nth-child(1n) {
+  margin-right: 5px;
+}
+.flex-form-group:nth-child(2n) {
+  margin-left: 5px;
+}
+.flex-form-sticky {
+  .flex-form-group {
+    flex-direction: row;
+  }
+  .flex-form-horizontal-box:last-child {
+    margin-left: 5px;
+    flex-grow: 1;
+    align-self: flex-end;
+  }
+}
+.flex-form-horizontal.flex-form-sticky {
+  background-color: $gray-300;
+  flex-direction: row;
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .flex-form-group-wrapper {
+    flex-direction: row;
+  }
+}
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  .flex-form-horizontal-item select {
+    width: 100px;
+  }
+}

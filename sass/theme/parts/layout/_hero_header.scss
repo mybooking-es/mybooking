@@ -2,11 +2,12 @@
 // Layout/Hero header
 //==============================================
 
-.hero-header-container {
+// Vertical
+.hero-header {
   background: url(../images/bg-image.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
-  padding: 50px 0 100px 0;
+  padding-bottom: 100px;
   background-blend-mode: overlay;
   background-color: $gray-700;
 }
@@ -15,7 +16,6 @@
   display: flex;
   flex-direction: column-reverse;
   height: 1000px;
-  padding-top: 50px;
 }
 
 .hero-header-left {
@@ -27,10 +27,6 @@
   justify-content: center;
   flex-direction: column;
   color: $white;
-  h1 {
-    font-family: "Inter", sans-serif;
-    font-weight: 900;
-  }
 }
 
 .aligner {
@@ -49,10 +45,6 @@
   justify-content: center;
 }
 
-.hero-header-right img {
-  margin: 0 auto;
-}
-
 .diagonal-section {
   position: absolute;
   background-color: #fff;
@@ -68,9 +60,8 @@
 ==================================== */
 
 @media (min-width: 768px) {
-  .hero-header-container {
+  .hero-header {
     padding-bottom: 200px;
-    margin-top: -102px;
   }
 
   .diagonal-section {
@@ -79,18 +70,45 @@
   }
 
   .hero-header-left {
-    width: 50%;
+    width: 60%;
     background-color: transparent;
     height: 500px;
   }
 
   .hero-header-right {
-    width: 50%;
+    width: 40%;
   }
 
   .hero-header-content {
     display: flex;
     flex-direction: row;
     height: 500px;
+  }
+}
+
+// Horizontal
+
+.aligner-horizontal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 90%;
+}
+.hero-header-content-horizontal {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  align-items: center;
+  justify-content: center;
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .aligner-horizontal {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 50%;
   }
 }
