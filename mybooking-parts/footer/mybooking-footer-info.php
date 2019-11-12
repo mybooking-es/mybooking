@@ -3,7 +3,7 @@
 *		MYBOOKING FOOTER INFO PARTIAL
 *  	-----------------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.2
@@ -15,119 +15,140 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- Footer info -->
 
-<footer class="site-footer" id="colophon">
-  <div class="site-info">
+<div class="row">
 
-      <div class="row">
+  <!-- Branding or widget area 1 -->
+  <?php if ( is_active_sidebar( 'mybooking_global_footer_1' )) { ?>
 
-        <!-- Branding -->
+    <div class="col">
+      <?php dynamic_sidebar( 'mybooking_global_footer_1' ); ?>
+    </div>
 
-        <div class="col mybooking-footer_branding">
-          <p><?php the_custom_logo(); ?></p>
-        </div>
+  <?php } else { ?>
 
-        <!-- Company info -->
+    <div class="col">
+      <div class="logo-footer">
 
-        <div class="col mybooking-footer_company-info">
+        <?php the_custom_logo(); ?>
+
+      </div>
+      <ul>
+        <li>
 
           <?php $company_name = get_option("company_info_name");
             if ($company_name !== '') { ?>
-              <h4><?php echo $company_name ?></h4>
+              <?php echo $company_name ?>
           <?php } ?>
 
-          <p>
+        </li>
+        <li>
 
-            <?php $company_id = get_option("company_info_nif");
-              if ($company_id !== '') { ?>
-                NIF: <?php echo $company_id ?><br>
-            <?php } ?>
-            <?php $company_adress = get_option("company_info_adress");
-              if ($company_adress !== '') { ?>
-                <?php echo $company_adress ?>
-            <?php } ?>
+          <?php $company_id = get_option("company_info_nif");
+            if ($company_id !== '') { ?>
+              NIF: <?php echo $company_id ?>
+          <?php } ?>
 
-          </p>
-        </div>
+        </li>
+        <li>
 
-        <!-- Payment methods -->
+          <?php $company_adress = get_option("company_info_adress");
+            if ($company_adress !== '') { ?>
+              <?php echo $company_adress ?>
+          <?php } ?>
 
-        <div class="col mybooking-footer_payment">
-          <h4><?php _e('Métodos de pago', 'mybooking'); ?></h4>
-          <ul class="social-links">
-            <li class="social__item">
+        </li>
+      </ul>
+    </div>
 
-              <?php $company_visa = get_option("company_payment_visa");
-                if ($company_visa == 1) { ?>
-                  <a href="<?php echo $company_visa ?>" target="_blank"><i class="fa fa-cc-visa"></i></a>
-              <?php } ?>
+  <?php } ?>
 
-            </li>
-            <li class="social__item">
+  <!-- Widget area 2 -->
+  <?php if ( is_active_sidebar( 'mybooking_global_footer_2' )) { ?>
 
-              <?php $company_mastercard = get_option("company_payment_mastercard");
-                if ($company_mastercard == 1) { ?>
-                  <a href="<?php echo $company_mastercard ?>" target="_blank"><i class="fa fa-cc-mastercard"></i></a>
-              <?php } ?>
+    <div class="col">
+      <?php dynamic_sidebar( 'mybooking_global_footer_2' ); ?>
+    </div>
 
-            </li>
-            <li class="social__item">
+  <?php } ?>
 
-              <?php $company_paypal = get_option("company_payment_paypal");
-                if ($company_paypal == 1) { ?>
-                  <a href="<?php echo $company_paypal ?>" target="_blank"><i class="fa fa-paypal"></i></a>
-              <?php } ?>
+  <!-- Widget area 3 -->
+  <?php if ( is_active_sidebar( 'mybooking_global_footer_3' )) { ?>
 
-            </li>
-          </ul>
-        </div>
+    <div class="col">
+      <?php dynamic_sidebar( 'mybooking_global_footer_3' ); ?>
+    </div>
 
-        <!-- Social links -->
+  <?php } ?>
 
-        <div class="col mybooking-footer_social">
-          <h4><?php _e('Síguenos', 'mybooking'); ?></h4>
-          <ul class="social-links">
-            <li class="social__item">
+  <!-- Contact or widget area 4 -->
+  <?php if ( is_active_sidebar( 'mybooking_global_footer_4' )) { ?>
 
-              <?php $company_twitter = get_option("company_info_twitter_url");
-                if ($company_twitter !== '') { ?>
-                  <a href="<?php echo $company_twitter ?>" target="_blank"><i class="fa fa-twitter"></i></a>
-              <?php } ?>
+    <div class="col">
+      <?php dynamic_sidebar( 'mybooking_global_footer_4' ); ?>
+    </div>
 
-            </li>
-            <li class="social__item">
+  <?php } else { ?>
 
-              <?php $company_facebook = get_option("company_info_facebook_url");
-                if ($company_facebook !== '') { ?>
-                  <a href="<?php echo $company_facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a>
-              <?php } ?>
+    <div class="col">
+      <h6>Síguenos</h6>
+      <ul class="social-links">
+        <li class="social__item">
 
-            </li>
-            <li class="social__item">
+          <?php $company_facebook = get_option("company_info_facebook_url");
+            if ($company_facebook !== '') { ?>
+              <a href="<?php echo $company_facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+          <?php } ?>
 
-              <?php $company_instagram = get_option("company_info_instagram_url");
-                if ($company_instagram !== '') { ?>
-                  <a href="<?php echo $company_instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a>
-              <?php } ?>
+        </li>
+        <li class="social__item">
 
-            </li>
-            <li class="social__item">
+          <?php $company_instagram = get_option("company_info_instagram_url");
+            if ($company_instagram !== '') { ?>
+              <a href="<?php echo $company_instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+          <?php } ?>
 
-              <?php $company_linkedin = get_option("company_info_linkedin_url");
-                if ($company_linkedin !== '') { ?>
-                  <a href="<?php echo $company_linkedin ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
-              <?php } ?>
+        </li>
+        <li class="social__item">
 
-            </li>
-          </ul>
-        </div>
-      </div>
+          <?php $company_twitter = get_option("company_info_twitter_url");
+            if ($company_twitter !== '') { ?>
+              <a href="<?php echo $company_twitter ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+          <?php } ?>
 
-      <!-- Copyright notice -->
+        </li>
+        <li class="social__item">
 
-      <?php $company_trade_name = get_option("company_info_trade_name");
-          if ($company_trade_name !== '') { ?>
-            <div class="mybooking-copyright color-transparent-white">&copy; <?php echo date('Y'); ?> <?php echo $company_trade_name ?></div>
-      <?php } ?>
+          <?php $company_linkedin = get_option("company_info_linkedin_url");
+            if ($company_linkedin !== '') { ?>
+              <a href="<?php echo $company_linkedin ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <?php } ?>
 
-  </div><!-- .site-info -->
-</footer><!-- #colophon -->
+        </li>
+      </ul>
+      <br>
+      <p class="info_bloc">
+
+        <?php $company_phone = get_option("company_info_phone");
+          if ($company_phone !== '') { ?>
+            <a class="info_link" href="tel:<?php echo $company_phone ?>">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span class="info_text"><?php echo $company_phone ?></span>
+            </a>
+        <?php } ?>
+
+        <br>
+
+        <?php $company_email = get_option("company_info_email");
+          if ($company_email !== '') { ?>
+            <a class="info_link" href="mailto:<?php echo $company_email ?>">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <span class="info_text"><?php echo $company_email ?></span>
+            </a>
+        <?php } ?>
+
+      </p>
+    </div>
+
+  <?php } ?>
+
+</div>

@@ -4,7 +4,7 @@
 
 // Call to action
 .cta {
-  font-size: small;
+  font-size: .9em;
   margin-top: 0;
   position: relative;
   z-index: 30;
@@ -19,6 +19,29 @@
   }
   i {
     color: $white;
+  }
+}
+.cta a:hover {
+		color: #FFF;
+    opacity: .5;
+}
+.cta .info_link {
+    margin: 0 0 0 1em;
+}
+@media (max-width: 575.98px) {
+  .cta {
+      text-align: center;
+  }
+  .cta a:hover {
+  		color: #FFF;
+      opacity: .5;
+  }
+	.cta .menu,
+  .cta .info_text {
+		  display: none;
+	}
+  .cta .info_link {
+      margin: 0 2em;
   }
 }
 .custom-logo-link {

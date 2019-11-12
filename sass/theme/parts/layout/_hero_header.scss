@@ -17,6 +17,23 @@
   flex-direction: column-reverse;
 }
 
+.hero-header-content h1,
+.hero-header-content-horizontal h1 {
+  font-weight: 900;
+}
+
+.hero-header-content h1,
+.hero-header-content p,
+.hero-header-content-horizontal h1,
+.hero-header-content-horizontal p {
+  color: $white;
+}
+
+.hero-header-content-horizontal h1,
+.hero-header-content-horizontal p {
+  text-align: center;
+}
+
 .hero-header-left {
   display: flex;
   order: 1;
@@ -25,7 +42,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: $white;
 }
 
 .aligner {
