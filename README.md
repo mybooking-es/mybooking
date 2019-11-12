@@ -67,7 +67,8 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Added **mybooking-parts/blog/mybooking-content-single** for custom posts
 - Added **mybooking-parts/blog/mybooking-content-blog** for custom blog
 
-## Version 0.1.3
+### Version 0.1.3
 - Refactorized **mybooking-top-bar.php** to include info icons inside anchors
 - Added new classes at topbar for correct visualization on responsive view
 - Fixed bad columns align on **mybooking-home-news.php**
+- Added Google Analytics code and configuration
