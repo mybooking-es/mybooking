@@ -1,0 +1,60 @@
+//==============================================
+// Layout/ Footer
+//==============================================
+.wrapper-footer {
+  background-color: darken($brand-primary, 40%);
+  color: $white;
+}
+.logo-footer {
+  background: url("../images/mybooking_logo_white.svg");
+  width: 150px;
+  height: 30px;
+  margin-bottom: 0.5rem;
+}
+.footer {
+  overflow-x: hidden;
+  padding: 3rem 0 3rem 0;
+  background-color: $black;
+  color: $gray-400;
+  h6 {
+    text-transform: uppercase;
+    //margin-bottom: 1rem;
+    font-weight: 700;
+    color: $gray-400;
+    height: 30px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      a {
+        color: $gray-400;
+        text-decoration: none;
+        transition: all 0.4s;
+        &:hover {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+}
+.copy {
+  color: $gray-400;
+  background-color: darken($brand-primary, 40%);
+  padding-top: 1rem;
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .footer {
+    text-align: center;
+    h6 {
+      margin-top: 1rem;
+    }
+    .social-links {
+      position: absolute;
+      left: 50%;
+      margin-left: -61px;
+    }
+  }
+}

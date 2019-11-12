@@ -3128,7 +3128,7 @@ a {
     color: #6fa130;
     text-decoration: none; }
 
-.hero-header {
+.hero-header-container {
   background: url(../images/bg-image.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
