@@ -60,13 +60,9 @@
 ==================================== */
 
 @media (min-width: 768px) {
-  .hero-header {
+  .hero-header-container {
     padding-bottom: 200px;
-  }
-
-  .diagonal-section {
-    bottom: -10%;
-    height: 150px;
+    margin-top: -100px;
   }
 
   .hero-header-left {

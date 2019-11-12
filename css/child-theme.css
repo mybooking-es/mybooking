@@ -3210,11 +3210,9 @@ a {
   Media Queries
 ==================================== */
 @media (min-width: 768px) {
-  .hero-header {
-    padding-bottom: 200px; }
-  .diagonal-section {
-    bottom: -10%;
-    height: 150px; }
+  .hero-header-container {
+    padding-bottom: 200px;
+    margin-top: -100px; }
   .hero-header-left {
     width: 60%;
     background-color: transparent;
