@@ -30,8 +30,8 @@ defined( 'ABSPATH' ) || exit;
       <?php } ?>
 
       <!-- Widget -->
-      <?php if ( is_active_sidebar( 'mybooking_home_hero_right' ) ) : ?>
-        <?php dynamic_sidebar( 'mybooking_home_hero_right' ); ?>
+      <?php if ( is_active_sidebar( 'mybooking_home_hero_main' ) ) : ?>
+        <?php dynamic_sidebar( 'mybooking_home_hero_main' ); ?>
       <?php endif; ?>
 
     </div>

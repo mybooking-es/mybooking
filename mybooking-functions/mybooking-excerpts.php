@@ -24,7 +24,7 @@ function mybooking_custom_excerpt_length( $length ) {
 		// For personalized output use
 		// <?php $mybooking_custom_length=20; echo get_the_excerpt(); ?
 	} else {
-		return 100;
+		return 30;
 	}
 }
 add_filter( 'excerpt_length', 'mybooking_custom_excerpt_length', 999 );

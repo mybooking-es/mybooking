@@ -85,8 +85,8 @@ function mybookinges_configuration_global() {
           <th scope="row"><?php _e('Escoge el tipo de cabecera', 'mybooking') ?></th>
           <td>
           <?php $options = get_option( "global_header_layout" ); ?>
-          <input type="radio" name="global_header_layout" <?php checked( $options, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Dos columnas','mybooking') ?></strong>  <?php _e('WIDGETS + TEXTO | WIDGET', 'mybooking') ?></span><br><br>
-          <input type="radio" name="global_header_layout" <?php checked( $options, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Una columnas', 'mybooking') ?></strong>  <?php _e('TEXTO + WIDGET', 'mybooking') ?></span>
+          <input type="radio" name="global_header_layout" <?php checked( $options, 0 ); ?> value="0"><span class="description"><strong><?php _e('Dos columnas','mybooking') ?></strong><br><?php _e('Título y texto personalizables más dos areas para widgets', 'mybooking', 'mybooking') ?></span><br><br>
+          <input type="radio" name="global_header_layout" <?php checked( $options, 1 ); ?> value="1"><span class="description"><strong><?php _e('Una columna', 'mybooking') ?></strong><br><?php _e('Título y texto personalizables y una zona para widgets', 'mybooking') ?></span>
         </tr>
       </table>
 
@@ -99,8 +99,8 @@ function mybookinges_configuration_global() {
           <th scope="row"><?php _e('Escoge el tipo de footer', 'mybooking') ?></th>
           <td>
           <?php $options = get_option( "global_footer_layout" ); ?>
-          <input type="radio" name="global_footer_layout" <?php checked( $options, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Normal','mybooking') ?></strong>  <?php _e('WIDGETS + MENU + INFO', 'mybooking') ?></span><br><br>
-          <input type="radio" name="global_footer_layout" <?php checked( $options, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Simple', 'mybooking') ?></strong>  <?php _e('INFO', 'mybooking') ?></span>
+          <input type="radio" name="global_footer_layout" <?php checked( $options, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Mínimal','mybooking') ?></strong><br><?php _e('Solo muestra el copyright', 'mybooking') ?></span><br><br>
+          <input type="radio" name="global_footer_layout" <?php checked( $options, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Normal', 'mybooking') ?></strong><br><?php _e('Muestra cuatro columnas para widgets, información corporativa y enlaces sociales', 'mybooking') ?></span>
         </tr>
       </table>
 

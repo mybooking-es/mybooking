@@ -6,9 +6,6 @@
   color: $white;
 }
 .logo-footer {
-  background: url("../images/mybooking_logo_white.svg");
-  width: 150px;
-  height: 30px;
   margin-bottom: 0.5rem;
 }
 .footer {
@@ -18,14 +15,19 @@
   color: $gray-400;
   h6 {
     text-transform: uppercase;
-    //margin-bottom: 1rem;
     font-weight: 700;
     color: $gray-400;
     height: 30px;
   }
+  ul:after { /* Clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
   ul {
     margin: 0;
     padding: 0;
+    display: block;
     li {
       list-style: none;
       a {
@@ -51,13 +53,19 @@
   }
   .footer {
     text-align: center;
+    .col {
+      display: block;
+      min-width: 100%;
+    }
     h6 {
       margin-top: 1rem;
     }
     .social-links {
-      position: absolute;
-      left: 50%;
-      margin-left: -61px;
+      display: inline-block;
+      text-align: center;
     }
+  }
+  .logo-footer {
+    display: inline-block;
   }
 }

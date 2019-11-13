@@ -3145,6 +3145,20 @@ a {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse; }
 
+.hero-header-content h1,
+.hero-header-content-horizontal h1 {
+  font-weight: 900; }
+
+.hero-header-content h1,
+.hero-header-content p,
+.hero-header-content-horizontal h1,
+.hero-header-content-horizontal p {
+  color: #fff; }
+
+.hero-header-content-horizontal h1,
+.hero-header-content-horizontal p {
+  text-align: center; }
+
 .hero-header-left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3163,8 +3177,7 @@ a {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  color: #fff; }
+          flex-direction: column; }
 
 .aligner {
   display: -webkit-box;
@@ -3391,6 +3404,60 @@ ul.social-links,
   .contact-right {
     width: 30%;
     margin-top: 0; } }
+
+.wrapper-footer {
+  background-color: #1e2b0d;
+  color: #fff; }
+
+.logo-footer {
+  margin-bottom: 0.5rem; }
+
+.footer {
+  overflow-x: hidden;
+  padding: 3rem 0 3rem 0;
+  background-color: #2e3131;
+  color: #bdbdbd; }
+  .footer h6 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #bdbdbd;
+    height: 30px; }
+  .footer ul:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .footer ul {
+    margin: 0;
+    padding: 0;
+    display: block; }
+    .footer ul li {
+      list-style: none; }
+      .footer ul li a {
+        color: #bdbdbd;
+        text-decoration: none;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s; }
+        .footer ul li a:hover {
+          color: #8ac53f; }
+
+.copy {
+  color: #bdbdbd;
+  background-color: #1e2b0d;
+  padding-top: 1rem; }
+
+@media (max-width: 575.98px) {
+  .footer {
+    text-align: center; }
+    .footer .col {
+      display: block;
+      min-width: 100%; }
+    .footer h6 {
+      margin-top: 1rem; }
+    .footer .social-links {
+      display: inline-block;
+      text-align: center; }
+  .logo-footer {
+    display: inline-block; } }
 
 .news_container {
   padding: 50px 0; }
