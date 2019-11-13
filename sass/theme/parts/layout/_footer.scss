@@ -46,6 +46,9 @@
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  .logo-footer {
+    margin: 0 auto 20px;
+  }
   .footer {
     text-align: center;
     h6 {
