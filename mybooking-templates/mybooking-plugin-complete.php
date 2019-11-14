@@ -18,7 +18,7 @@
 
   <div class="bg-gray-200">
     <div class="container-fluid">
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-md-8">
 
           <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-5">
@@ -678,7 +678,7 @@
           </div>
         </div>
         <!-- Reservation: Summary (sidebar) -->
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div id="reservation_detail"></div>
         </div>
       </div>

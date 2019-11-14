@@ -1,23 +1,19 @@
 //==============================================
 // Layout/ Footer
 //==============================================
-.wrapper-footer {
-  background-color: darken($brand-primary, 40%);
-  color: $white;
-}
-.logo-footer {
-  margin-bottom: 0.5rem;
-}
 .footer {
   overflow-x: hidden;
   padding: 3rem 0 3rem 0;
-  background-color: $black;
+  background-color: #111;
   color: $gray-400;
   h6 {
     text-transform: uppercase;
     font-weight: 700;
     color: $gray-400;
     height: 30px;
+  }
+  .logo-footer {
+    margin-bottom: 0.5rem;
   }
   ul:after { /* Clearfix */
     content: "";
@@ -46,8 +42,7 @@
   background-color: darken($brand-primary, 40%);
   padding-top: 1rem;
 }
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
   .footer {
     text-align: center;
     .col {

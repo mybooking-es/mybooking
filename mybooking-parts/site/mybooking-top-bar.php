@@ -14,7 +14,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="cta">
+<div class="topbar">
   <span>
 
     <?php $company_phone = get_option("company_info_phone");
@@ -41,7 +41,8 @@ defined( 'ABSPATH' ) || exit;
   </span>
 
   <!-- Top Menu -->
-
-  <?php wp_nav_menu( array( 'theme_location' => 'top-menu' ) ); ?>
+  <div class="topbar_menu">
+    <?php wp_nav_menu( array( 'theme_location' => 'top-menu' ) ); ?>
+  </div>
 
 </div>

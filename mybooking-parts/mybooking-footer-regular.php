@@ -13,5 +13,4 @@
 defined( 'ABSPATH' ) || exit;
 
 get_template_part('mybooking-parts/footer/mybooking-footer-info');
-get_template_part('mybooking-parts/footer/mybooking-footer-credits');
 ?>

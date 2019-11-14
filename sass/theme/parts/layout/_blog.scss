@@ -5,9 +5,16 @@
 .entry-title {
   font-weight: 900;
 }
+
 .entry-meta {
   margin: 12px 0;
 }
+
 .entry-content {
   margin: 30px 0;
+}
+
+img.wp-post-image {
+    min-width: 100%;
+    height: auto;
 }

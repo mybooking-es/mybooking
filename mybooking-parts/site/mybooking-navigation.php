@@ -21,7 +21,6 @@ defined( 'ABSPATH' ) || exit;
     <?php endif; ?>
 
     <!-- Logo & branding -->
-
     <?php if ( ! has_custom_logo() ) { ?>
 
     <?php if ( is_front_page() && is_home() ) : ?>
@@ -43,7 +42,6 @@ defined( 'ABSPATH' ) || exit;
     </button>
 
     <!-- WordPress menu -->
-
     <?php wp_nav_menu(
       array(
         'theme_location'  => 'primary',

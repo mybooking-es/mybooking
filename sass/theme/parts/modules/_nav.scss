@@ -2,14 +2,16 @@
 // Module/nav
 //==============================================
 
-// Call to action
-.cta {
+// Topbar
+.topbar {
   font-size: .9em;
   margin-top: 0;
   position: relative;
   z-index: 30;
-  padding: 0.3rem;
+  padding: 0.3rem 1rem;
   background-color: darken($brand-primary, 40%);
+  float: left;
+  width: 100%;
   a {
     color: white;
     &:hover {
@@ -21,29 +23,51 @@
     color: $white;
   }
 }
-.cta a:hover {
+
+.topbar a:hover {
 		color: #FFF;
     opacity: .5;
 }
-.cta .info_link {
+
+.topbar .info_link {
     margin: 0 0 0 1em;
 }
-@media (max-width: 575.98px) {
-  .cta {
+
+.topbar .topbar_menu {
+    float: right;
+}
+
+.topbar .topbar_menu .menu {
+    margin: 0;
+}
+
+.topbar .topbar_menu li {
+	  display: inline-block;
+	  margin: 0 .5em;
+}
+
+@media (max-width: 798px) {
+  .topbar {
       text-align: center;
   }
-  .cta a:hover {
-  		color: #FFF;
-      opacity: .5;
+
+  .topbar .topbar_menu {
+      float: none;
+      margin: .5rem auto;
   }
-	.cta .menu,
-  .cta .info_text {
+}
+
+@media (max-width: 575.98px) {
+	.topbar .menu,
+  .topbar .info_text {
 		  display: none;
 	}
-  .cta .info_link {
+
+  .topbar .info_link {
       margin: 0 2em;
   }
 }
+
 .custom-logo-link {
   width: 200px;
 }
@@ -52,9 +76,12 @@
 .navbar-dark .navbar-toggler {
   border: none;
 }
+
 .navbar {
   z-index: 10;
+  padding: .5rem 0;
 }
+
 .navbar-collapse {
   .navbar-nav .nav-link {
     color: $white;
@@ -79,15 +106,60 @@
 .navbar-nav .nav-link {
   color: $white;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .navbar-toggler-icon {
   color: $white;
-  margin-top: 8px;
 }
 
 .navbar .dropdown-item {
   color: $gray-800;
+}
+
+// Extra small devices (smartphones 575.98px)
+@media (max-width: 575.98px) {
+	.home .bg-nav .navbar-brand img {
+		display: block;
+	}
+
+  #wrapper-navbar {
+      width: 100%;
+      position: fixed;
+      z-index: 30;
+  }
+
+  .bg-nav {
+    box-shadow: 1px 3px 3px #666;
+  }
+
+  .navbar-collapse {
+    display: table;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .navbar-nav {
+    display: table-cell;
+    padding-bottom: 150px;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+@media (max-width: 798px) {
+  .navbar {
+    padding: .5rem 1rem;
+  }
+  .navbar-nav {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.3em;
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -95,7 +167,8 @@
   .home .bg-nav {
     background: none;
   }
-  .home .cta {
+
+  .home .topbar {
     background-color: rgba(66, 66, 66, 0.5);
   }
 }

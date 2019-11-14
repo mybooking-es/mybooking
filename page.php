@@ -30,16 +30,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<div class="wrapper" id="page-wrapper">
-
+<div class="wrapper page_content" id="page-wrapper">
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-
 		<div class="row">
-
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
 					<!--
@@ -48,12 +44,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php endwhile; // end of the loop. ?>
 
-			</main><!-- #main -->
-
-		</div><!-- .row -->
-
-	</div><!-- #content -->
-
-</div><!-- #page-wrapper -->
+			</main>
+		</div>
+	</div>
+</div>
 
 <?php get_footer();

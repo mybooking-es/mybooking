@@ -4,7 +4,7 @@
 *  	-----
 *		Overrides parent document on Understrap Theme
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.2
@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php get_template_part( 'global-templates/hero' ); ?>
 <?php endif; ?>
 
-<div class="wrapper" id="index-wrapper">
+<div class="wrapper page_content" id="index-wrapper">
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 		<div class="row">
 			<main class="site-main" id="main">

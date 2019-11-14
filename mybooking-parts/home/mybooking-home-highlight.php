@@ -3,7 +3,7 @@
 *		MYBOOKING HOME HIGHLIGHT PARTIAL
 *  	----------------------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -20,77 +20,74 @@ if ($highlight_visible == 1) { ?>
 
     <!-- Header -->
 
-        <?php
-        $title_highlight_header = get_option("home_highlight_header_title");
-        $text_highlight_header = get_option("home_highlight_header_text");
-            if ($title_highlight_header !== '' || $text_highlight_header !== '') { ?>
+    <?php
+    $title_highlight_header = get_option("home_highlight_header_title");
+    $text_highlight_header = get_option("home_highlight_header_text");
+      if ($title_highlight_header !== '' || $text_highlight_header !== '') { ?>
 
-              <div class="title-wrapper">
-                <div class="title">
-                  <h1><?php echo $title_highlight_header ?></h1>
-                  <p class="color-gray-500"><?php echo $text_highlight_header ?></p>
-                </div>
-              </div>
+        <div class="title-wrapper">
+          <div class="title">
+            <h1><?php echo $title_highlight_header ?></h1>
+            <p class="color-gray-500"><?php echo $text_highlight_header ?></p>
+          </div>
+        </div>
 
-        <?php } ?>
+    <?php } ?>
 
     <!-- Facts -->
 
     <div class="icons-wrapper">
-      <div class="icon-panel icon-1">
 
-        <?php $imagen_fact_one = get_option("home_fact_one_image");
-            if ($imagen_fact_one !== '') { ?>
-              <img src="<?php echo $imagen_fact_one ?>" alt="">
-        <?php } ?>
-        <?php $text_fact_one = get_option("home_fact_one_text");
-            if ($text_fact_one !== '') { ?>
-              <br>
-              <h6 class="color-black"><?php echo $text_fact_one ?></h6>
-        <?php } ?>
+      <?php
+        $imagen_fact_one = get_option( "home_fact_one_image" );
+        $text_fact_one = get_option("home_fact_one_text");
+        if ( $imagen_fact_one !== '' || $text_fact_one !== '' ) { ?>
 
-      </div>
+          <div class="icon-panel icon-1">
+            <img src="<?php echo $imagen_fact_one ?>" alt="">
+          </div>
+          <br>
+          <h6 class="color-black"><?php echo $text_fact_one ?></h6>
 
-      <div class="icon-panel icon-2">
+      <?php } ?>
+      <?php
+        $imagen_fact_two = get_option( "home_fact_two_image" );
+        $text_fact_two = get_option("home_fact_two_text");
+        if ( $imagen_fact_two !== '' || $text_fact_two !== '' ) { ?>
 
-        <?php $imagen_fact_two = get_option("home_fact_two_image");
-            if ($imagen_fact_two !== '') { ?>
-              <img src="<?php echo $imagen_fact_two ?>" alt="">
-        <?php } ?>
-        <?php $text_fact_two = get_option("home_fact_two_text");
-            if ($text_fact_two !== '') { ?>
-              <h6 class="color-black"><?php echo $text_fact_two ?></h6>
-        <?php } ?>
+          <div class="icon-panel icon-1">
+            <img src="<?php echo $imagen_fact_two ?>" alt="">
+          </div>
+          <br>
+          <h6 class="color-black"><?php echo $text_fact_two ?></h6>
 
-      </div>
+      <?php } ?>
+      <?php
+        $imagen_fact_three = get_option( "home_fact_three_image" );
+        $text_fact_three = get_option("home_fact_three_text");
+        if ( $imagen_fact_three !== '' || $text_fact_three !== '' ) { ?>
 
-      <div class="icon-panel icon-3">
+          <div class="icon-panel icon-1">
+            <img src="<?php echo $imagen_fact_three ?>" alt="">
+          </div>
+          <br>
+          <h6 class="color-black"><?php echo $text_fact_three ?></h6>
 
-        <?php $imagen_fact_three = get_option("home_fact_three_image");
-            if ($imagen_fact_three !== '') { ?>
-              <img src="<?php echo $imagen_fact_three ?>" alt="">
-        <?php } ?>
-        <?php $text_fact_three = get_option("home_fact_three_text");
-            if ($text_fact_three !== '') { ?>
-            <h6 class="color-black"><?php echo $text_fact_three ?></h6>
-        <?php } ?>
+      <?php } ?>
+      <?php
+        $imagen_fact_four = get_option( "home_fact_four_image" );
+        $text_fact_four = get_option("home_fact_four_text");
+        if ( $imagen_fact_four !== '' || $text_fact_four !== '' ) { ?>
 
-      </div>
+          <div class="icon-panel icon-1">
+            <img src="<?php echo $imagen_fact_four ?>" alt="">
+          </div>
+          <br>
+          <h6 class="color-black"><?php echo $text_fact_four ?></h6>
 
-      <div class="icon-panel icon-4">
+      <?php } ?>
 
-          <?php $imagen_fact_four = get_option("home_fact_four_image");
-              if ($imagen_fact_four !== '') { ?>
-                <img src="<?php echo $imagen_fact_four ?>" alt="">
-          <?php } ?>
-          <?php $text_fact_four = get_option("home_fact_four_text");
-              if ($text_fact_four !== '') { ?>
-                <h6 class="color-black"><?php echo $text_fact_four ?></h6>
-          <?php } ?>
-
-        </div>
-
-      </div>
     </div>
+  </div>
 
 <?php } ?>

@@ -6,8 +6,24 @@
 .btn-primary:not(:disabled):not(.disabled):active {
   background-color: $brand-primary;
   border-color: $brand-primary;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
   &:hover {
     background-color: darken($brand-primary, 10%);
     border-color: darken($brand-primary, 10%);
   }
+}
+
+// Deben ir en el CSS del plugin
+.footer-card a.btn {
+		letter-spacing: 1px;
+		font-weight: 600;
+		text-transform: uppercase;
+}
+
+.btn-outline-dark {
+		letter-spacing: 1px;
+		font-weight: 600;
+		text-transform: uppercase;
 }

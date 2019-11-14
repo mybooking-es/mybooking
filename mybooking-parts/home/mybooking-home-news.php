@@ -3,7 +3,7 @@
 *		MYBOOKING HOME NEWS PARTIAL
 *  	-----------------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -16,7 +16,7 @@ if ($news_visible == 1) { ?>
   <div class="news_container">
     <div class="container">
       <div class="row">
-        
+
         <?php
         $news_args = array(
           'post_type' => 'post',
@@ -28,11 +28,21 @@ if ($news_visible == 1) { ?>
 
                 <div class="col-md-4">
                   <div class="news_thumbnail">
-                    <?php the_post_thumbnail(); ?>
+                    <a href="<?php echo get_the_permalink() ?>">
+
+                      <?php the_post_thumbnail(); ?>
+
+                    </a>
                   </div>
-                  <h2 class="news_title"><?php the_title(); ?></h2>
+                  <h2 class="news_title">
+
+                    <?php the_title(); ?>
+
+                  </h2>
                   <div class="news_extract">
+
                     <?php echo the_excerpt(); ?>
+
                   </div>
                 </div>
 

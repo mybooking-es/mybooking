@@ -1,0 +1,22 @@
+//==============================================
+// Layout/WordPress Pages
+//==============================================
+.page_content {
+  padding: 3rem 0;
+}
+
+.post-navigation {
+  margin: 2rem 0;
+}
+
+@media (max-width: 575.98px) {
+  .home .page_content {
+    padding: 2rem;
+  }
+
+  .blog .page_content,
+  .single .page_content,
+  .page .page_content {
+    padding: 8rem 2rem;
+  }
+}

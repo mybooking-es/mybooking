@@ -18,16 +18,9 @@
   align-content: center;
   text-align: center;
   max-width: 90%;
-  // margin: 3rem 0;
   h1 {
     text-transform: uppercase;
     font-weight: 900;
-  }
-}
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .title {
-    max-width: 40%;
   }
 }
 

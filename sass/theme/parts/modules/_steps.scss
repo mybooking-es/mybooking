@@ -6,10 +6,16 @@ $steps-white: hsl(0, 0%, 100%);
 $grey: hsl(226, 10%, 55%);
 $disa: hsl(226, 15%, 83%);
 
-#steps {
+.steps_container {
+  padding: 1.5rem 0;
+  background-color: #f5f5f5;
+}
+
+.steps {
   width: 100%;
   margin: 10px auto;
 }
+
 .step {
   width: 40px;
   height: 40px;
@@ -23,13 +29,16 @@ $disa: hsl(226, 15%, 83%);
   text-align: center;
   line-height: 26px;
 }
+
 .step:first-child {
   line-height: 30px;
 }
+
 .step:nth-child(n + 2) {
   margin: 0 0 0 120px;
   transform: translate(0, -4px);
 }
+
 .step:nth-child(n + 2):before {
   width: 100px;
   height: 3px;
@@ -38,6 +47,7 @@ $disa: hsl(226, 15%, 83%);
   transform: translate(-120px, 15px);
   content: "";
 }
+
 .step:after {
   width: 180px;
   display: block;
@@ -48,13 +58,16 @@ $disa: hsl(226, 15%, 83%);
   font-size: 13px;
   margin-top: 10px;
 }
+
 .step:first-child:after {
   transform: translate(-70px, -1px);
 }
+
 .step.active {
   border-color: $brand-primary;
   color: $brand-primary;
 }
+
 .step.active:before {
   background: linear-gradient(
     to left,
@@ -62,21 +75,38 @@ $disa: hsl(226, 15%, 83%);
     $brand-secondary 100%
   );
 }
+
 .step.active:after {
   color: $brand-primary;
 }
+
 .step.done {
   background-color: $brand-secondary;
   border-color: $brand-secondary;
   color: $steps-white;
 }
+
 .step.done:before {
   background-color: $brand-secondary;
 }
 
+.steps_title {
+  font-weight: 900;
+}
+
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {
-  #steps {
+@media (max-width: 575.98px) {
+  .steps {
     display: none;
+  }
+}
+
+@media (max-width: 798px) {
+  .steps {
+    margin: 1rem auto;
+  }
+
+  .steps_title {
+    margin: 0 auto;
   }
 }

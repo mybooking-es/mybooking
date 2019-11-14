@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-			<div class="wrapper-footer footer" id="wrapper-footer">
+			<div class="footer" id="wrapper-footer">
 				<div class="<?php echo esc_attr( $container ); ?>">
 
 					<?php $footer_layout = get_option('global_footer_layout');
@@ -29,6 +29,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				</div>
 			</div>
+
+			<?php get_template_part('mybooking-parts/footer/mybooking-footer-credits'); ?>
+			
 		</div>
 
 		<!-- Goole Analytics -->

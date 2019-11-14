@@ -10,11 +10,11 @@
 */
 ?>
 
-<div class="bg-gray-100">
+<div class="steps_container">
   <div class="container">
-    <div class="row py-3">
-      <div class="col-md-12 col-lg-8">
-        <div id="steps">
+    <div class="row justify-content-center">
+      <div class="col-lg-auto col-md-10">
+        <div id="steps" class="steps">
 
           <?php
         $classes = get_body_class();
@@ -40,9 +40,7 @@
         </div>
       </div>
       <div class="col-md-12 col-lg-4 d-flex">
-        <div class="d-inline-flex p-2 align-items-center">
-          <h2 class="color-gray-700"><?php echo _e( $step, 'mybooking') ?></h2>
-        </div>
+        <h2 class="steps_title"><?php echo _e( $step, 'mybooking') ?></h2>
       </div>
     </div>
   </div>
