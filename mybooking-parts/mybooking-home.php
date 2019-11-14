@@ -1,9 +1,9 @@
 <?php
 /**
-*   Template Name: MyBooking Home
-*  	-----------------------------
+*   Template Name: MyBooking Landing
+*  	--------------------------------
 *
-* 	Versión: 0.0.4
+* 	Versión: 0.0.5
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -19,21 +19,17 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- Header -->
 <?php $header_layout = get_option('global_header_layout');
-if ($header_layout == 0) {
+  if ($header_layout == 0) {
     get_template_part('mybooking-parts/home/mybooking-home-header');
   } else {
     get_template_part('mybooking-parts/home/mybooking-home-header-horizontal');
   }
 ?>
 
-<!-- Highlight -->
-<?php get_template_part('mybooking-parts/home/mybooking-home-highlight'); ?>
-
-<!-- Promo -->
-<?php get_template_part('mybooking-parts/home/mybooking-home-promo'); ?>
-
-<!-- Features -->
-<?php get_template_part('mybooking-parts/home/mybooking-home-features'); ?>
+<?php
+// Erased unused modules we can replicate with Elementor: Promos, Highlight & Features
+// TODO: Refactorice /mybooking-parts and /mybooking-config to clean up erased modules
+?>
 
 <!-- Content -->
 <?php get_template_part('mybooking-parts/home/mybooking-home-content'); ?>
