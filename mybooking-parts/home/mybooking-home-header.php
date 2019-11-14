@@ -14,6 +14,7 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <div class="hero-header-container">
+<img class="bg-landing" src="http://localhost:8888/mybooking/wp-content/uploads/2019/11/bg-image.jpg" alt="">
   <div class="hero-header-content">
     <div class="hero-header-left">
       <div class="aligner">
