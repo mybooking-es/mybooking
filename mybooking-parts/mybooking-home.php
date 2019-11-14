@@ -1,7 +1,7 @@
 <?php
 /**
-*   Template Name: MyBooking Landing
-*  	--------------------------------
+*   Template Name: MyBooking Home
+*  	-----------------------------
 *
 * 	Versión: 0.0.5
 *   @package WordPress

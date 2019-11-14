@@ -72,3 +72,9 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Added new classes at topbar for correct visualization on responsive view
 - Fixed bad columns align on **mybooking-home-news.php**
 - Added Google Analytics code and configuration
+- Refactorized footer layouts; now we have minimal & regular
+- Global responsive fixins on footer, header & plugin process templates
+- Striped out Promos Features & Highlight because we can replicate with Elementor
+- New header layout with one column and his configuration
+- Now we can setup header image via configuration instead CSS
+- Lots of minor fixins
