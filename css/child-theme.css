@@ -4204,7 +4204,9 @@ input.form-reservation-error {
 
 .steps_container {
   padding: 1.5rem 0;
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+  display: table;
+  width: 100%; }
 
 .steps {
   width: 100%;
@@ -4275,7 +4277,10 @@ input.form-reservation-error {
   background-color: #bfd975; }
 
 .steps_title {
-  font-weight: 900; }
+  width: 100%;
+  font-weight: 900;
+  text-align: right;
+  text-transform: uppercase; }
 
 @media (max-width: 575.98px) {
   .steps {
@@ -4285,7 +4290,7 @@ input.form-reservation-error {
   .steps {
     margin: 1rem auto; }
   .steps_title {
-    margin: 0 auto; } }
+    text-align: center; } }
 
 .gradient-section {
   -webkit-box-pack: center;
