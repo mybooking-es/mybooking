@@ -48,6 +48,7 @@ function mybookinges_register_options_home() {
   // Define options
   add_option("home_hero_title","","","yes");
   add_option("home_hero_text","","","yes");
+  add_option("home_hero_image","","","yes");
 
   add_option("home_promo_visibility","","","yes");
   add_option("home_promo_image_visibility","","","yes");
@@ -84,6 +85,7 @@ function mybookinges_register_options_home() {
   // Register options
   register_setting("options_home", "home_hero_title");
   register_setting("options_home", "home_hero_text");
+  register_setting("options_home", "home_hero_image");
 
   register_setting("options_home", "home_promo_visibility");
   register_setting("options_home", "home_promo_image_visibility");
@@ -157,7 +159,12 @@ function mybookinges_configuration_home() {
         <tr valign="top">
           <th scope="row"><?php _e('Texto del eslogan', 'mybooking') ?></th>
           <td><textarea name="home_hero_text" cols="37" rows="10"><?php echo get_option('home_hero_text'); ?></textarea>
-          <br><span class="description"><?php _e('Añade un texto personalizado para la cabecera de la página', 'mybooking', 'mybooking') ?></span></td>
+          <br><span class="description"><?php _e('Añade un texto personalizado para la cabecera de la página', 'mybooking') ?></span></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><?php _e('Imagen de fondo', 'mybooking') ?></th>
+          <td><input type="text" name="home_hero_image" size="40" value="<?php echo get_option('home_hero_image'); ?>" />
+          <br><span class="description"><?php _e('Pega aquí la URL de la imagen de fondo para la cabecera de la página', 'mybooking') ?></span></td>
         </tr>
       </table>
 

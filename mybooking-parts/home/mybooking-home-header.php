@@ -3,7 +3,7 @@
 *		MYBOOKING HOME HEADER PARTIAL
 *  	-----------------------------
 *
-* 	Versión: 0.0.2
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -14,7 +14,8 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <div class="hero-header-container">
-<img class="bg-landing" src="http://localhost:8888/mybooking/wp-content/uploads/2019/11/bg-image.jpg" alt="">
+  <?php $image_hero = get_option("home_hero_image"); ?>
+  <img class="bg-landing" src="<?php echo $image_hero ?>" alt="">
   <div class="hero-header-content">
     <div class="hero-header-left">
       <div class="aligner">
