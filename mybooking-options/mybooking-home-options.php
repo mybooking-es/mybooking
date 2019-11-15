@@ -172,7 +172,7 @@ function mybookinges_configuration_home() {
 
       <!-- Section promo -->
 
-      <h2><?php _e('Promociones', 'mybooking') ?></h2>
+      <!-- <h2><?php _e('Promociones', 'mybooking') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
@@ -205,11 +205,11 @@ function mybookinges_configuration_home() {
         </tr>
       </table>
 
-      <hr>
+      <hr> -->
 
       <!-- Section highlight -->
 
-      <h2><?php _e('Sección destacados', 'mybooking') ?></h2>
+      <!-- <h2><?php _e('Sección destacados', 'mybooking') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
@@ -270,11 +270,11 @@ function mybookinges_configuration_home() {
         </tr>
       </table>
 
-      <hr>
+      <hr> -->
 
       <!-- Section features -->
 
-      <h2><?php _e('Características', 'mybooking') ?></h2>
+      <!-- <h2><?php _e('Características', 'mybooking') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
@@ -334,7 +334,7 @@ function mybookinges_configuration_home() {
         </tr>
       </table>
 
-      <hr>
+      <hr> -->
 
       <!-- Section news -->
 

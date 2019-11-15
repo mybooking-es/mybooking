@@ -26,11 +26,6 @@ defined( 'ABSPATH' ) || exit;
   }
 ?>
 
-<?php
-// Erased unused modules we can replicate with Elementor: Promos, Highlight & Features
-// TODO: Refactorice /mybooking-parts and /mybooking-config to clean up erased modules
-?>
-
 <!-- Content -->
 <?php get_template_part('mybooking-parts/home/mybooking-home-content'); ?>
 

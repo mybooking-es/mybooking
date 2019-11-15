@@ -14,8 +14,10 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <div class="hero-header-container">
+
   <?php $image_hero = get_option("home_hero_image"); ?>
   <img class="bg-landing" src="<?php echo $image_hero ?>" alt="">
+  
   <div class="hero-header-content">
     <div class="hero-header-left">
       <div class="aligner">
