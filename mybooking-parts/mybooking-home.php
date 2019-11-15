@@ -26,13 +26,16 @@ defined( 'ABSPATH' ) || exit;
   }
 ?>
 
-<!-- Content -->
+<!-- Mybooking Promo Module -->
+<?php get_template_part('mybooking-parts/home/mybooking-home-promo'); ?>
+
+<!-- WordPress Content -->
 <?php get_template_part('mybooking-parts/home/mybooking-home-content'); ?>
 
-<!-- News -->
+<!-- Mybooking News Module -->
 <?php get_template_part('mybooking-parts/home/mybooking-home-news'); ?>
 
-<!-- Testimonials -->
+<!-- Mybooking Testimonials Module -->
 <?php get_template_part('mybooking-parts/home/mybooking-home-testimonials'); ?>
 
 <!-- END MYBOOKING PARTIALS -->
