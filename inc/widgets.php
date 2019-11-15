@@ -46,6 +46,15 @@ function mybooking_widgets_init() {
 	);
 	register_sidebar(
 		array(
+			'name'          => __( 'Lateral Páginas Mybooking', 'mybooking' ),
+			'id'            => 'mybooking_page_sidebar',
+	    'description'    => __( 'Área de widgets en el sidebar de la plantilla Mybooking Pages', 'mybooking' ),
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name'          => __( 'Footer Uno', 'mybooking' ),
 			'id'            => 'mybooking_global_footer_1',
 			'description'   => __( 'Primera área de widgets en el footer', 'mybooking' ),

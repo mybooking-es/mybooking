@@ -4,10 +4,10 @@
 *  	-----
 *		Overrides parent document on Understrap Theme
 *
-* 	Versión: 0.0.2
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.0.1
+*   @since Mybooking WordPress Theme 0.1.2
 */
 
 /**
@@ -37,12 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
-					<!--
-					@Mybooking: We don't want comments on client's pages
-					--------------------------------------------------------------------->
-
-				<?php endwhile; // end of the loop. ?>
+				<?php endwhile; ?>
 
 			</main>
 		</div>

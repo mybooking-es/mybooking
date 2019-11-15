@@ -64,6 +64,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Moved and renamed **home.php** to **mybooking-parts/mybooking-home.php**
 - Added customized **index.php**
 - Moved **mybooking-empty.php** to **mybooking-parts/**
+- Added custom **page.php**
 - Added **mybooking-parts/blog/mybooking-content-single** for custom posts
 - Added **mybooking-parts/blog/mybooking-content-blog** for custom blog
 
@@ -77,4 +78,6 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Striped out Promos Features & Highlight because we can replicate with Elementor
 - New header layout with one column and his configuration
 - Now we can setup header image via configuration instead CSS
+- Custom template for pages with header image and sidebar
+- Added image to 404 page
 - Lots of minor fixins
