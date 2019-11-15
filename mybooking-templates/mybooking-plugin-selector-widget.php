@@ -11,7 +11,8 @@
 ?>
 <!-- FLEX-FORM-SELECTOR -->
 <section class="widget widget_mybooking_rent_engine_selector reservation-step">
-  <form id="form-selector" name="widget_search_form" method="get" enctype="application/x-www-form-urlencoded" class="flex-form" autocomplete="off">
+  <form id="form-selector" name="widget_search_form" method="get"
+        enctype="application/x-www-form-urlencoded" class="flex-form" autocomplete="off">
 
     <?php if ( $args['sales_channel_code'] != '' ) : ?>
 
