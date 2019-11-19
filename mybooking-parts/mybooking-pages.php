@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     		<div class="row">
           <div class="col-md-6">
 
-            <h1 class="entry-title"><?php the_title(); ?><?php _e( ' con','mybooking' ); ?> <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></h1>
+            <h1 class="entry-title"><?php the_title(); ?></h1>
 
           </div>
     			<main class="site-main" id="main">
