@@ -16,16 +16,6 @@
  */
 
 function mybooking_widgets_init() {
-
-	register_sidebar(
-		array(
-			'name'          => __( 'Top Bar', 'mybooking' ),
-			'id'            => 'mybooking_top_bar',
-	    'description'    => __( 'Área de widgets en el top de las páginas', 'mybooking' ),
-			'before_widget' => '',
-			'after_widget'  => '',
-		)
-	);
 	register_sidebar(
 		array(
 			'name'          => __( 'Home Hero Principal', 'mybooking' ),

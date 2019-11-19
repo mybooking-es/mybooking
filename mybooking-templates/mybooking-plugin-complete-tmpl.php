@@ -160,19 +160,19 @@
       <div class="control">
         <label class="radio">
           <input type="radio" id="none" name="payment" value="none" data-payment-method="none">
-          Solicitud de reserva
+          <?php _e('Solicitud de reserva','mybooking') ?>
         </label>
-        <br>  
+        <br>
         <label class="radio">
           <input type="radio" id="credit-card" name="payment" value="redsys256" data-payment-method="redsys256">
-          Pagar
+          <?php _e('Pagar','mybooking') ?>
         </label>
       </div>
     </div>
-
+Confirmar
     <div class="field is-grouped">
       <div class="control">
-        <button type="submit" class="btn btn-outline-dark my-5">Confirmar</a>
+        <button type="submit" class="btn btn-outline-dark my-5"><?php _e('Confirmar','mybooking') ?></a>
       </div>
     </div>
 
@@ -181,7 +181,7 @@
     <input type="hidden" name="payment" value="none" data-payment-method="none">
     <div class="field is-grouped">
       <div class="control">
-        <button type="submit" class="btn btn-outline-dark my-5"><%= complete.request_reservation %></a>
+        <button type="submit" class="btn btn-outline-dark my-5"><?php _e('Reservar','mybooking') ?></a>
       </div>
     </div>
 
@@ -190,7 +190,7 @@
     <input type="hidden" name="payment" value="redsys256" data-payment-method="redsys256">
     <div class="field is-grouped">
       <div class="control">
-        <button type="submit" class="btn btn-outline-dark my-5">Pagar</a>
+        <button type="submit" class="btn btn-outline-dark my-5"><?php _e('Pagar','mybooking') ?></a>
       </div>
     </div>
   <% } %>
