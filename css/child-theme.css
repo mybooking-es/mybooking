@@ -3538,7 +3538,15 @@ img.wp-post-image {
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 11px 0;
           box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 11px 0; }
 
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
+  .mybooking_page {
+    margin-top: 55vh; }
+  .mybooking_page .site-main .col-md-6 {
+    max-width: 100%; }
+  .col-md-5.page_sidebar {
+    display: block;
+    max-width: 100% !important;
+    float: none; }
   .page_header {
     height: 100vh;
     overflow: visible; }
@@ -4619,7 +4627,36 @@ span.stopa {
 .badge-primary {
   background-color: #8ac53f; }
 
-<<<<<<< HEAD
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #8ac53f;
+  background-color: #8ac53f; }
+
+@media (max-width: 575.98px) {
+  #extras_listing img.card-img {
+    max-width: 40%; }
+  .custom-control {
+    min-height: 3rem; }
+  .custom-switch .custom-control-label::before {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem; }
+  .custom-switch .custom-control-label::after {
+    top: calc(.25rem + 2px);
+    left: calc(-2.25rem + 2px);
+    width: calc(2rem - 4px);
+    height: calc(2rem - 4px);
+    background-color: #adb5bd;
+    border-radius: 1rem;
+    -webkit-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-transform .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-transform .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-transform .15s ease-in-out,-webkit-box-shadow .15s ease-in-out; }
+  .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    background-color: #fff;
+    -webkit-transform: translateX(3rem);
+    transform: translateX(3rem); } }
+
 .scroll-downs {
   position: absolute;
   top: 80vh;
@@ -4681,35 +4718,6 @@ span.stopa {
 @media (max-width: 767.98px) {
   .scroll-downs {
     display: none; } }
-=======
-.custom-control-input:checked ~ .custom-control-label::before {
-  color: #fff;
-  border-color: #8ac53f;
-  background-color: #8ac53f; }
-
-@media (max-width: 575.98px) {
-  .custom-control {
-    min-height: 3rem; }
-  .custom-switch .custom-control-label::before {
-    width: 5rem;
-    height: 2rem;
-    border-radius: 1rem; }
-  .custom-switch .custom-control-label::after {
-    top: calc(.25rem + 2px);
-    left: calc(-2.25rem + 2px);
-    width: calc(2rem - 4px);
-    height: calc(2rem - 4px);
-    background-color: #adb5bd;
-    border-radius: 1rem;
-    -webkit-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-transform .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-transform .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-    transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-transform .15s ease-in-out,-webkit-box-shadow .15s ease-in-out; }
-  .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
-    background-color: #fff;
-    -webkit-transform: translateX(3rem);
-    transform: translateX(3rem); } }
->>>>>>> fbd966a9f0922f183670b406452c8a013e01bf1b
 
 .full-height {
   height: 100%; }
