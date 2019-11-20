@@ -52,6 +52,10 @@
 }
 
 @media (max-width: 575.98px) {
+  #extras_listing img.card-img { //TODO change ID for class
+      max-width: 40%;
+  }
+
   .custom-control {
       min-height: 3rem;
   }
