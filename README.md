@@ -80,4 +80,6 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Now we can setup header image via configuration instead CSS
 - Custom template for pages with header image and sidebar
 - Added image to 404 page
+- Eliminated the topbar widget area
+- Updated translations
 - Lots of minor fixins
