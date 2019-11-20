@@ -83,3 +83,5 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Eliminated the topbar widget area
 - Updated translations
 - Lots of minor fixins
+
+### Version 0.1.4
