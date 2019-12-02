@@ -20,8 +20,8 @@
   <div>
     <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
       <h2 class="product-name"><%=booking_line.item_description_customer_translation%></h2>
-      <p class="detail-text">LOCALIZADOR: <%= booking.id %></br>
-          Duración del alquiler: <%=booking.days%> día/s</p>
+      <p class="detail-text"><?php _e('LOCALIZADOR','mybooking') ?>: <%= booking.id %></br>
+          <?php _e('Duración del alquiler','mybooking') ?>: <%=booking.days%> <?php _e('día/s','mybooking') ?></p>
     <% } %>
     <h5><?php _e('Entrega', 'mybooking') ?></h5>
     <ul>

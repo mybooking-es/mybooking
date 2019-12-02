@@ -87,7 +87,7 @@
 <script type="text/tmpl" id="script_reservation_summary">
 <div class="col sidebar bg-white shadow-bottom py-3 px-3 mt-5">
   <h4 class="brand-primary my-3"><?php _e('Precio', 'mybooking') ?></h4>
-  <h5>Total producto</h5>
+  <h5><?php _e('Total producto','mybooking') ?></h5>
   <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
 
   <hr>
