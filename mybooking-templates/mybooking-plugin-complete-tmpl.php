@@ -169,7 +169,6 @@
         </label>
       </div>
     </div>
-Confirmar
     <div class="field is-grouped">
       <div class="control">
         <button type="submit" class="btn btn-outline-dark my-5"><?php _e('Confirmar','mybooking') ?></a>
