@@ -112,6 +112,7 @@ gulp.task("watch-bs", gulp.parallel("browser-sync", "watch"));
 gulp.task("scripts", function() {
   var scripts = [
     `${paths.dev}/js/vendor/owl.carousel/owl.carousel.js`,
+    `${paths.dev}/js/vendor/jquery-eu-cookie/jquery-eu-cookie-law-popup.js`,
 
     // Adding currently empty javascript file to add on for your own themes´ customizations
     // Please add any customizations to this .js file only!

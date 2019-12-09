@@ -85,3 +85,5 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Lots of minor fixins
 
 ### Version 0.1.4
+- Added the cookies policy warning [from here](https://www.wimagguc.com/2018/05/gdpr-compliance-with-the-jquery-eu-cookie-law-plugin/)
+- Cleaned **_carousel.scss**

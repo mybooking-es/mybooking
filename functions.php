@@ -4,7 +4,7 @@
 *  	----------------
 *		Overrides parent document on Understrap Theme
 *
-* 	Versión: 0.0.2
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -59,6 +59,8 @@ function theme_enqueue_styles() {
     wp_enqueue_script( 'parent-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $the_theme->get( 'Version' ), true );
     // Load child theme JS
     wp_enqueue_script( 'child-understrap-mybooking-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
+    // Load child theme JS
+    wp_enqueue_script( 'child-understrap-mybooking-scripts', get_stylesheet_directory_uri() . '/js/vendor/jquery-eu-cookie-law-popup.js', array(), $the_theme->get( 'Version' ), true );
 
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
