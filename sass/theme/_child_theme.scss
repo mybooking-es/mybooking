@@ -45,3 +45,67 @@
     color: darken($brand-primary, 10%);
   }
 }
+
+/** Date Range picker **/
+
+.bg-warning {
+   background-color: #ffbe4a;
+   color: #000000 !important;
+}
+
+.bg-danger {
+   background-color: #f18484;
+   color: #ffffff !important;
+}
+
+.not-selectable-day {
+   color: #ccc !important;
+}
+
+.date-picker-wrapper .month-wrapper table .day {
+  font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.month-name .month-element {
+  font-size: 24px;
+}
+.date-picker-wrapper .month-wrapper table .caption {
+  height: 90px;
+}  
+.date-picker-wrapper .month-wrapper table .week-name {
+  height: 40px;
+}  
+.week-name th {
+  font-size: 14px; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.date-picker-wrapper {
+  border: none;
+  background-color: none;
+  padding: 0;
+}
+.date-picker-wrapper .month-wrapper {
+  border: none;
+}
+.date-picker-wrapper.no-topbar {
+  padding-top: 0;
+}
+.date-picker-wrapper.no-shortcuts {
+  padding-bottom: 0;
+}
+.date-picker-wrapper{
+  background-color: transparent;
+}
+.date-picker-wrapper .footer {  
+  background-color: transparent;
+  padding-bottom: 0px;
+}
+.date-picker-wrapper .gap {
+  height: 0px !important;
+}
+.disabled-picker {
+  opacity: 0.7;
+  pointer-events: none;
+}
