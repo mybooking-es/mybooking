@@ -24,6 +24,11 @@ body {
 .btn {
   cursor: pointer;
 }
+button,
+[type="button"] {
+  -webkit-appearance: none;
+  border: none;
+}
 
 a {
   color: $brand-primary;
