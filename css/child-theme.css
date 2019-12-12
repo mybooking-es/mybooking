@@ -3487,9 +3487,6 @@ Remember you can use Bootstrap Spacing utility classes: https://getbootstrap.com
 .p150 {
   padding: 150px; }
 
-/*
-base styles
-*/
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -3524,6 +3521,17 @@ a {
     color: #6fa130;
     text-decoration: none; }
 
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
 .hero-header-container {
   position: relative;
   height: -webkit-fit-content;
