@@ -109,3 +109,7 @@
   opacity: 0.7;
   pointer-events: none;
 }
+// Google Autocomplete
+.pac-container {
+    z-index: 10000 !important;
+}
