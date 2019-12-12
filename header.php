@@ -31,6 +31,30 @@ defined( 'ABSPATH' ) || exit;
   <?php do_action( 'wp_body_open' ); ?>
 
   <div class="site eupopup eupopup-bottom" id="page">
+
+   <!-- Cookies popup -->
+   <div class="eupopup-container eupopup-container-bottom eupopup-style-compact">
+     <div class="eupopup-markup">
+       <div class="eupopup-head">
+         <?php _e('Esta web usa cookies','mybooking') ?>
+       </div>
+       <div class="eupopup-body">
+         <?php _e('Si continuas navegando entendemos que aceptas todas las cookies','mybooking') ?>
+       </div>
+       <div class="eupopup-buttons">
+         <a href="cookies" target="_blank" class="eupopup-button eupopup-button_2">
+           <?php _e('Información','mybooking') ?>
+         </a>
+         <a href="#" class="eupopup-button eupopup-button_1">
+           <?php _e('Continuar','mybooking') ?>
+         </a>
+       </div>
+       <div class="clearfix"></div>
+       <a href="#" class="eupopup-closebutton">x</a>
+     </div>
+   </div>
+
+    <!-- Content -->
     <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
       <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'mybooking' ); ?></a>
 

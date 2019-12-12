@@ -4,7 +4,7 @@
 *  	----------------
 *		Overrides parent document on Understrap Theme
 *
-* 	Versión: 0.0.3
+* 	Versión: 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -20,7 +20,6 @@ defined( 'ABSPATH' ) || exit;
 function mybooking_setup(){
     $domain = 'mybooking';
     load_child_theme_textdomain( $domain, get_stylesheet_directory() . '/languages' );
-    // wp-content/themes/mybooking/languages/
     load_child_theme_textdomain( $domain, get_template_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'mybooking_setup' );
@@ -84,8 +83,9 @@ require_once('mybooking-posts/mybooking-testimonial.php');
  * Mybooking custom functions
  *
  */
- require_once('mybooking-functions/mybooking-menus.php');
- require_once('mybooking-functions/mybooking-excerpts.php');
- require_once('mybooking-functions/mybooking-categories.php');
+require_once('mybooking-functions/mybooking-menus.php');
+require_once('mybooking-functions/mybooking-excerpts.php');
+require_once('mybooking-functions/mybooking-categories.php');
+require_once('mybooking-functions/mybooking-slugs.php');
 
 ?>

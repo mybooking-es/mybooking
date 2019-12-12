@@ -9,7 +9,6 @@
 *   @since Mybooking WordPress Theme 0.0.2
 */
 
-
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
