@@ -4294,7 +4294,7 @@ input.form-reservation-error {
           align-items: center;
   font-size: 1.3rem;
   background-color: #fff;
-  padding: 5px 10px;
+  padding: .8rem;
   height: 48px;
   color: #616161; }
 
@@ -4991,6 +4991,10 @@ span.stopa {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; } }
+
+.product_info {
+  padding: 2rem !important;
+  background-color: #ededed; }
 
 .cd-top {
   display: inline-block;
