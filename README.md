@@ -47,11 +47,11 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 ## Changelog
 
 ### Version 0.0.2
-- Theme package renamed to _Mybooking WordPress Theme_ and version number updated
-- Added _Whatsapp/Telegram_ field on Company Information options page wich is rendered on home topbar
+- Theme package renamed to Mybooking WordPress Theme and version number updated
+- Added Whatsapp/Telegram field on Company Information options page wich is rendered on home topbar
 - Eliminated placeholder texts for more layout flexibility
 - Added a secondary widgets area on home header
-- Two new layouts	for footer; _Regular_ and _Simple_, and options page for administer them
+- Two new layouts	for footer; Regular and Simple, and options page for administer them
 - Footer elements separated in parts
 - New classes on footer parts for styling
 - New menus registered, for footer and topbar
@@ -72,14 +72,14 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Refactorized **mybooking-top-bar.php** to include info icons inside anchors
 - Added new classes at topbar for correct visualization on responsive view
 - Fixed bad columns align on **mybooking-home-news.php**
-- Added _Google Analytics_ code and configuration
+- Added Google Analytics code and configuration
 - Refactorized footer layouts; now we have minimal & regular
 - Global responsive fixins on footer, header & plugin process templates
-- Striped out _Promos_, _Features_ & _Highlight_ because we can replicate with Elementor
+- Striped out Promos Features & Highlight because we can replicate with Elementor
 - New header layout with one column and his configuration
-- Now we can setup header image via configuration instead `CSS`
+- Now we can setup header image via configuration instead CSS
 - Custom template for pages with header image and sidebar
-- Added image to `404` page
+- Added image to 404 page
 - Eliminated the topbar widget area
 - Updated translations
 - Lots of minor fixins
@@ -87,5 +87,3 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 ### Version 0.1.4
 - Added the cookies policy warning [from here](https://www.wimagguc.com/2018/05/gdpr-compliance-with-the-jquery-eu-cookie-law-plugin/)
 - Cleaned **_carousel.scss**
-- New function `the_slug()` to use on `PHP` hooks
-- Added **_wordpress.scss** for control WordPress defaults

@@ -40,4 +40,4 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- END MYBOOKING PARTIALS -->
 
-<?php get_footer(); ?>
+<?php get_footer();

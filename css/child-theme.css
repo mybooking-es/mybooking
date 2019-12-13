@@ -3959,8 +3959,7 @@ img.wp-post-image {
   clear: both; }
 
 .eupopup-container {
-  background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
-  background: linear-gradient(to right, #8ac53f, #bfd975);
+  background-color: #8ac53f;
   color: #111;
   padding: 5px 20px;
   font-size: 12px;
@@ -4027,11 +4026,11 @@ img.wp-post-image {
 
 .eupopup-buttons {
   float: right;
-  padding: 0; }
+  padding: 7px 0 5px 0; }
 
 .eupopup-button_1 {
   background-color: #111;
-  padding: 15px 25px;
+  padding: 5px 10px;
   color: #8ac53f;
   font-weight: normal;
   font-size: 12px;
@@ -4039,9 +4038,9 @@ img.wp-post-image {
   letter-spacing: 1px; }
 
 .eupopup-button_2 {
-  background-color: transparent;
-  padding: 15px 25px;
-  color: #111;
+  background-color: #111;
+  padding: 5px 10px;
+  color: #8ac53f;
   font-weight: normal;
   font-size: 12px;
   text-transform: uppercase;
@@ -4063,7 +4062,7 @@ body .eupopup-color-inverse .eupopup-head {
 
 body .eupopup-style-compact {
   text-align: left;
-  padding: 15px 0 15px 35px;
+  padding: 15px 10px 15px 35px;
   line-height: 15px; }
 
 body .eupopup-style-compact .eupopup-head,
@@ -4073,31 +4072,8 @@ body .eupopup-style-compact .eupopup-buttons {
   padding: 0;
   margin: 0; }
 
-body .eupopup-style-compact .eupopup-head {
-  margin-right: 1rem; }
-
 body .eupopup-style-compact .eupopup-button {
   margin: 0 5px; }
-
-body .eupopup-style-compact .eupopup-button:last-of-type {
-  margin: 0 0 0 5px; }
-
-@media (max-width: 798px) {
-  body .eupopup-style-compact .eupopup-head,
-  body .eupopup-style-compact .eupopup-body,
-  body .eupopup-style-compact .eupopup-buttons {
-    display: block;
-    float: left;
-    margin: .5rem; }
-  .eupopup-button_1,
-  .eupopup-button_2 {
-    background-color: transparent;
-    color: #111;
-    padding: 15px 0;
-    line-height: 1;
-    font-weight: bold; }
-  .eupopup-button {
-    margin: 0; } }
 
 .btn-primary,
 .btn-primary:not(:disabled):not(.disabled):active {

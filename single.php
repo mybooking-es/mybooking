@@ -23,11 +23,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'mybooking-parts/blog/mybooking-content-single' ); ?>
+					<?php get_template_part( 'mybooking-parts/loops/mybooking-content-single' ); ?>
 					<?php understrap_post_nav(); ?>
 
 					<!-- @Mybooking: We don't want comments on client's posts -->
-					
+
 				<?php endwhile; ?>
 
 			</main>
