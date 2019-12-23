@@ -2,7 +2,7 @@
 /**
 *		SINGLE POST PARTIAL
 *  	-------------------
-*		Overrides parent document on Understrap Theme
+*		Overrides parent document on Understrap parent theme
 *
 * 	Versión: 0.0.1
 *   @package WordPress

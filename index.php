@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php if ( have_posts() ) : ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'mybooking-parts/blog/mybooking-content-blog' ); ?>
+						<?php get_template_part( 'mybooking-parts/loops/mybooking-content-blog' ); ?>
 					<?php endwhile; ?>
 				<?php else : ?>
 					<?php get_template_part( 'loop-templates/content', 'none' ); ?>

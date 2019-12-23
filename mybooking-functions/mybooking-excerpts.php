@@ -33,8 +33,8 @@ add_filter( 'excerpt_length', 'mybooking_custom_excerpt_length', 999 );
 * Adds elipsis at excerpt ends
 *
 */
-function mybooking_excerpt_more( $more ) {
-	return ' … ';
-}
-add_filter( 'excerpt_more', 'mybooking_excerpt_more' );
+// function mybooking_excerpt_more( $more ) {
+// 	return ' … ';
+// }
+// add_filter( 'excerpt_more', 'mybooking_excerpt_more' );
 ?>

@@ -78,7 +78,8 @@ require_once('mybooking-options/mybooking-global-options.php');
  *
  */
 require_once('mybooking-posts/mybooking-testimonial.php');
-// require_once('mybooking-posts/mybooking-promo.php'); Disconnected until refactoring
+require_once('mybooking-posts/mybooking-product.php');
+// require_once('mybooking-posts/mybooking-promo.php');
 
 /**
  * Mybooking custom functions

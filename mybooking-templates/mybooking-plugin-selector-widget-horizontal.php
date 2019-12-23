@@ -21,8 +21,9 @@
     <?php if ( $args['family_id'] != '' ) : ?>
     <input type="hidden" name="family_id" value="<?php echo $args['family_id']?>" />
     <?php endif; ?>
-
+    
     <div class="flex-form-group-wrapper">
+      <!-- Pickup / Return place -->
       <div class="flex-form-group">
         <div class="flex-form-horizontal-box">
           <label><?php _e('Lugar Entrega ', 'mybooking') ?></label>
@@ -39,17 +40,29 @@
                 <i class="fa fa-times flex-icon"></i>
               </button>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
         <div class="flex-form-horizontal-box">
           <label><?php _e('Lugar Devolución ', 'mybooking') ?></label>
           <div class="flex-form-horizontal-item widget_return_place_group return_place">
+=======
+          </div>           
+        </div>
+        <div class="flex-form-horizontal-box">
+          <label><?php _e('Lugar Devolución ', 'mybooking') ?></label>
+          <div class="flex-form-horizontal-item widget_return_place_group">
+>>>>>>> eaaa5ef88586086dd10c4e769f7acc39db751840
             <select id="widget_return_place" name="return_place">
             </select>
             <i class="fa fa-angle-down flex-icon"></i>
           </div>
           <!-- Custom delivery place -->
+<<<<<<< HEAD
           <div id="another_return_place_group" style="display: none;" class="return_place">
+=======
+          <div id="another_return_place_group" style="display: none;">
+>>>>>>> eaaa5ef88586086dd10c4e769f7acc39db751840
             <div class="flex-form-item bg-white justify-content-between">
               <input class="bg-white w-100" type="text" id="widget_return_place_other" name="return_place_other" />
               <input type="hidden" name="custom_return_place" value="false" />
@@ -57,9 +70,14 @@
                 <i class="fa fa-times flex-icon"></i>
               </button>
             </div>
+<<<<<<< HEAD
           </div>
+=======
+          </div>          
+>>>>>>> eaaa5ef88586086dd10c4e769f7acc39db751840
         </div>
       </div>
+      <!-- Date/Time from / to -->
       <div class="flex-form-group">
         <div class="flex-form-horizontal-box">
           <label><?php _e('Fecha Entrega ', 'mybooking') ?></label>
