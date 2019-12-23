@@ -3120,6 +3120,11 @@ body {
 .btn {
   cursor: pointer; }
 
+button,
+[type="button"] {
+  -webkit-appearance: none;
+  border: none; }
+
 a {
   color: #8ac53f;
   -webkit-transition: ease-in-out 0.25s;
@@ -3944,6 +3949,9 @@ input.form-reservation-error {
             flex-grow: 1; }
 
 .flex-form-horizontal-box {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
