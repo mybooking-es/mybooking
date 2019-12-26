@@ -14,11 +14,14 @@
 <% for (var idx=0;idx<products.length; idx++) { %>
   <% var product = products[idx]; %>
   <div class="magic-card">
-      <header class="header-card">
-          <h1 class="product-name"><%=product.name%></h1>
-      </header>
+  <header class="header-card">
+          <div class="product-name-and-short-description">
+            <p class="product-name"><%=product.name%></p>
+            <p class="product-short-description"><%=product.short_description%></p>
+          </div>
+        </header>
       <div class="separator"></div>
-      <section class="footer-card">
+      <section class="footer-card text-center">
         <div class="img-wrapper">
       <img src="<%=product.photo%>" class="product-image"></div>
           <div class="variable-content">
@@ -29,13 +32,26 @@
             <% } %>
           </div>
 
+          <% if (product.key_characteristics) { %> 
+                <div class="key-characteristics">
+                  <% for (characteristic in product.key_characteristics) { %>
+                  <div class="key-icon">
+                    <images src="<?php bloginfo('template_url'); ?>/images/key_characteristics/<%=characteristic%>.svg"/>
+                    <p><%=product.key_characteristics[characteristic]%></p>  
+                  </div>
+                
+                  <% } %>
+                </div>
+            <% } %>
+
           <div class="abajo">
           <p class="product-price"><%=configuration.formatCurrency(product.price)%></p>
 
           <% if (product.availability) { %>
           <a class="btn btn-dark btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
           <% } else { %>
-          <p class="has-text-centered"><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></p>
+          <div class="not-available"><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></div>
+            
           <% } %>
 
           <% if (product.few_available_units) { %>

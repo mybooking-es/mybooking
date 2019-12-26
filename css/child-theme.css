@@ -4651,11 +4651,20 @@ input.form-reservation-error {
   background: #bfd975;
   background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
   background: linear-gradient(to right, #8ac53f, #bfd975); }
+  .header-card .product-name-and-short-description {
+    height: 180px; }
   .header-card .product-name {
     color: #fff;
-    height: 180px;
     font-weight: 800;
-    line-height: 1; }
+    line-height: 1;
+    font-size: 1.8rem;
+    margin-bottom: 10px; }
+  .header-card .product-short-description {
+    color: #e0e0e0;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 1rem;
+    margin-top: 0; }
 
 .separator {
   height: 125px;
@@ -4696,6 +4705,36 @@ input.form-reservation-error {
     font-size: 0.9em;
     font-weight: 700;
     color: #8ac53f; }
+  .footer-card .key-characteristics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto; }
+  .footer-card .key-icon:first-child {
+    margin-left: 30px; }
+  .footer-card .key-icon:last-child {
+    margin-right: 30px; }
+  .footer-card .key-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    margin: 0 0.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .footer-card .key-icon img {
+      height: 30px;
+      width: 30px; }
+    .footer-card .key-icon p {
+      font-size: 14px; }
   .footer-card .product-price {
     font-size: 1.5em;
     padding: 0.5em;
@@ -4703,8 +4742,18 @@ input.form-reservation-error {
   .footer-card .abajo {
     position: absolute;
     top: 90px;
-    left: 50%;
-    margin-left: -90px; }
+    width: 100%;
+    padding: 0 20px; }
+
+.not-available {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #424242;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto; }
 
 .steps_container {
   padding: 1.5rem 0;

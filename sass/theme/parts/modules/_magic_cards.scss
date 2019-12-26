@@ -25,13 +25,26 @@
     $brand-primary,
     $brand-secondary
   );
-  
+
   background: linear-gradient(to right, $brand-primary, $brand-secondary);
+  .product-name-and-short-description {
+    height: 180px;
+  }
+  // Grupo
   .product-name {
     color: #fff;
-    height: 180px;
     font-weight: 800;
     line-height: 1;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  // Nombre
+  .product-short-description {
+    color: $gray-300;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 1rem;
+    margin-top: 0;
   }
 }
 
@@ -87,7 +100,31 @@
     font-weight: 700;
     color: $brand-primary;
   }
-
+  .key-characteristics {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .key-icon:first-child {
+    margin-left: 30px;
+  }
+  .key-icon:last-child {
+    margin-right: 30px;
+  }
+  .key-icon {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0.5rem;
+    align-items: center;
+    img {
+      height: 30px;
+      width: 30px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
   .product-price {
     font-size: 1.5em;
     padding: 0.5em;
@@ -97,7 +134,15 @@
   .abajo {
     position: absolute;
     top: 90px;
-    left: 50%;
-    margin-left: -90px;
+    width: 100%;
+    padding: 0 20px;
   }
+}
+.not-available {
+  width: fit-content;
+  background: $gray-800;
+  color: $white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto;
 }
