@@ -36,7 +36,7 @@
                 <div class="key-characteristics">
                   <% for (characteristic in product.key_characteristics) { %>
                   <div class="key-icon">
-                    <images src="<?php bloginfo('template_url'); ?>/images/key_characteristics/<%=characteristic%>.svg"/>
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/key_characteristics/<%=characteristic%>.svg"/>
                     <p><%=product.key_characteristics[characteristic]%></p>  
                   </div>
                 
