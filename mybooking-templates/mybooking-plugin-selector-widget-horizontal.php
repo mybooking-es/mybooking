@@ -67,7 +67,7 @@
           <label><?php _e('Fecha Entrega ', 'mybooking') ?></label>
           <div class="flex-form-horizontal-item">
             <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
-            <input type="text" id="widget_date_from" name="date_from" />
+            <input type="text" id="widget_date_from" name="date_from" readonly="true"/>
             <select class="ml-1" id="widget_time_from" name="time_from">
             </select>
           </div>
@@ -76,7 +76,7 @@
           <label><?php _e('Fecha Devolución ', 'mybooking') ?></label>
           <div class="flex-form-horizontal-item">
             <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
-            <input type="text" id="widget_date_to" name="date_to" />
+            <input type="text" id="widget_date_to" name="date_to" readonly="true"/>
             <select class="ml-1" id="widget_time_to" name="time_to">
             </select>
           </div>
