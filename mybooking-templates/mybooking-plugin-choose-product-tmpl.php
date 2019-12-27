@@ -15,7 +15,7 @@
   <% var product = products[idx]; %>
   <div class="magic-card">
   <header class="header-card">
-          <div class="product-name-and-short-description">
+          <div class="product-title">
             <p class="product-name"><%=product.name%></p>
             <p class="product-short-description"><%=product.short_description%></p>
           </div>
@@ -45,18 +45,18 @@
             <% } %>
 
           <div class="abajo">
-          <p class="product-price"><%=configuration.formatCurrency(product.price)%></p>
+            <p class="product-price"><%=configuration.formatCurrency(product.price)%></p>
 
-          <% if (product.availability) { %>
-          <a class="btn btn-dark btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
-          <% } else { %>
-          <div class="not-available"><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></div>
-            
-          <% } %>
+            <% if (product.availability) { %>
+            <a class="btn btn-dark btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
+            <% } else { %>
+            <div class="not-available"><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></div>
+              
+            <% } %>
 
-          <% if (product.few_available_units) { %>
-            <p class="text-danger mt-3"><?php _e('¡Quedan pocas unidades!') ?></p>
-          <% } %>
+            <% if (product.few_available_units) { %>
+              <p class="text-danger mt-3"><?php _e('¡Quedan pocas unidades!') ?></p>
+            <% } %>
 
           </div>
       </section>
