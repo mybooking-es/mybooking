@@ -4102,9 +4102,6 @@ body .eupopup-style-compact .eupopup-button {
   height: auto;
   display: block; }
 
-/* ============================================
-  ===========  Reglas generales para Formularios
-  ============================================== */
 select {
   border-radius: 0px;
   padding: 0 0.8rem;
@@ -4113,8 +4110,9 @@ select {
   border: 0;
   font-size: 0.8rem;
   height: 48px;
-  appearance: none;
   color: #616161;
+  background-color: #fff;
+  appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none; }
   select:focus {

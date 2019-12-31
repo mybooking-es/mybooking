@@ -44,7 +44,7 @@
                 </div>
             <% } %>
 
-          <div class="abajo">
+          <div class="push-down">
             <p class="product-price"><%=configuration.formatCurrency(product.price)%></p>
 
             <% if (product.availability) { %>
