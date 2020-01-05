@@ -4,14 +4,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: -9px;
 }
 
 .magic-card {
   text-align: center;
   flex-basis: 300px;
   flex-grow: 1;
-  margin: 9px;
+  margin: 0 18px 18px 0;
   box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
   background-color: #f3efe4;
 }
@@ -25,13 +24,25 @@
     $brand-primary,
     $brand-secondary
   );
-  
   background: linear-gradient(to right, $brand-primary, $brand-secondary);
+  .product-title {
+    height: 180px;
+  }
+  // Grupo
   .product-name {
     color: #fff;
-    height: 180px;
     font-weight: 800;
     line-height: 1;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  // Nombre
+  .product-short-description {
+    color: $gray-300;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 1rem;
+    margin-top: 0;
   }
 }
 
@@ -46,23 +57,20 @@
     #f3efe4
   );
 }
-
 .img-wrapper {
-  height: 50px;
+  height: 30px;
 }
-
 .product-image {
-  width: 250px;
+  width: 300px;
   position: absolute;
   top: 0;
   left: 50%;
-  margin: -140px auto auto -125px;
+  margin: -200px auto auto -150px;
 }
-
 .footer-card {
   background: #f3efe4;
   position: relative;
-  height: 250px;
+  height: 270px;
   line-height: 1;
   a.btn {
     background-color: darken($brand-primary, 40%);
@@ -76,28 +84,182 @@
       color: darken($white, 10%);
     }
   }
-
   .variable-content {
     line-height: 0.9;
     margin-top: 15px;
   }
-
   .offer {
     font-size: 0.9em;
     font-weight: 700;
     color: $brand-primary;
   }
 
+  .key-characteristics {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .key-icon:first-child {
+    margin-left: 30px;
+  }
+  .key-icon:last-child {
+    margin-right: 30px;
+  }
+  .key-icon {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0.5rem;
+    align-items: center;
+    img {
+      height: 30px;
+      width: 30px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
   .product-price {
     font-size: 1.5em;
     padding: 0.5em;
+    margin-top: 30px;
     font-weight: 700;
   }
-
-  .abajo {
+  .push-down {
     position: absolute;
     top: 90px;
-    left: 50%;
-    margin-left: -90px;
+    width: 100%;
+  }
+}
+
+.not-available {
+  width: fit-content;
+  background: $gray-800;
+  color: $white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+// ==================================
+// ===== ROW CARDS MAGIC-CARDS HORIZONTAL
+// ==================================
+
+.magic-row-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.magic-row-card_img {
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: #f3efe4;
+  // background: linear-gradient(to right, $brand-primary, $brand-secondary);
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+.magic-row-card_body {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  padding: 30px;
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.magic-row-card_body-left {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.magic-row-card_body-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  .magic-row-card_icons {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    .magic-icon {
+      font-size: 13px;
+      display: flex;
+      // flex-direction: column;
+      align-items: center;
+      width: 50%;
+      margin-bottom: 20px;
+      color: $gray-500;
+    }
+  }
+}
+a.magic-button.btn {
+  width: 100%;
+  transition: ease-in-out 0.15s;
+  border-radius: 50px;
+  background-color: transparent;
+  border-color: $brand-primary;
+  color: $brand-primary;
+  &:hover {
+    background-color: darken($brand-primary, 30%);
+    border-color: darken($brand-primary, 30%);
+    color: darken($white, 10%);
+    cursor: pointer;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .magic-row-card {
+    flex-direction: row;
+  }
+  .magic-row-card_img {
+    flex-basis: 40%;
+    border-radius: 4px;
+  }
+  .magic-row-card_body {
+    display: flex;
+    height: 250px;
+    flex-basis: 70%;
+    margin-left: -20px;
+    border-radius: 4px;
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .magic-row-card_body {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .magic-row-card_body-left {
+    width: 100%;
+  }
+  .magic-row-card_body-right {
+    justify-content: space-between;
+    width: 100%;
+    .magic-row-card_icons {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      .magic-icon {
+        width: 50%;
+        margin-bottom: 30px;
+        color: $gray-500;
+      }
+      .fas {
+        color: $brand-primary;
+        font-size: 1.5rem;
+      }
+    }
   }
 }
