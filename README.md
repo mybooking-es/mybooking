@@ -87,3 +87,6 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 ### Version 0.1.4
 - Added the cookies policy warning [from here](https://www.wimagguc.com/2018/05/gdpr-compliance-with-the-jquery-eu-cookie-law-plugin/)
 - Cleaned **_carousel.scss**
+- Updated translation to en_GB and added de_DE
+- New custom post type for vehicle reselling
+- Custom post type activation option in Global Options settings page

@@ -9,7 +9,6 @@
 *   @since Mybooking WordPress Theme 0.1.4
 */
 
-// POST TYPE
 function create_product() {
   register_post_type( 'product',
     array(

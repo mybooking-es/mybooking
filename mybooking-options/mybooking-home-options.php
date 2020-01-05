@@ -338,7 +338,7 @@ function mybookinges_configuration_home() {
 
       <!-- Section news -->
 
-      <h2><?php _e('Noticias') ?></h2>
+      <h2><?php _e('Noticias','mybooking') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
@@ -346,6 +346,7 @@ function mybookinges_configuration_home() {
           <td>
           <?php $options = get_option( "home_news_visibility" ); ?>
           <input type="checkbox" name="home_news_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description"><?php _e('Marcar para activar la sección', 'mybooking') ?></span>
+          </td>
         </tr>
       </table>
 
@@ -361,6 +362,7 @@ function mybookinges_configuration_home() {
           <td>
           <?php $options = get_option( "home_testimonial_carousel_visibility" ); ?>
           <input type="checkbox" name="home_testimonial_carousel_visibility" <?php checked( $options, 1 ); ?> value="1"> <span class="description"><?php _e('Marcar para activar la sección', 'mybooking') ?></span>
+          </td>
         </tr>
       </table>
 

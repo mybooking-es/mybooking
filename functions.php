@@ -74,19 +74,31 @@ require_once('mybooking-options/mybooking-company-options.php');
 require_once('mybooking-options/mybooking-global-options.php');
 
 /**
- * Mybooking custom post types
- *
- */
-require_once('mybooking-posts/mybooking-testimonial.php');
-require_once('mybooking-posts/mybooking-product.php');
-// require_once('mybooking-posts/mybooking-promo.php');
-
-/**
  * Mybooking custom functions
  *
  */
- require_once('mybooking-functions/mybooking-menus.php');
- require_once('mybooking-functions/mybooking-excerpts.php');
- require_once('mybooking-functions/mybooking-categories.php');
+require_once('mybooking-functions/mybooking-menus.php');
+require_once('mybooking-functions/mybooking-excerpts.php');
+require_once('mybooking-functions/mybooking-categories.php');
+
+ /**
+  * Mybooking custom post types
+  *
+  */
+$testimonial_active = get_option( "global_testimonial_active" );
+if ($testimonial_active == 1) {
+  require_once('mybooking-posts/mybooking-testimonial.php');
+}
+
+$promo_active = get_option( "global_promo_active" );
+if ($promo_active == 1) {
+  require_once('mybooking-posts/mybooking-promo.php');
+}
+
+$product_active = get_option( "global_product_active" );
+if ($product_active == 1) {
+  require_once('mybooking-posts/mybooking-product.php');
+}
+
 
 ?>

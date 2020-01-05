@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
             <article class="row article">
               <div class="col-md-3">
-                <div class="article_image">
+                <div class="product_image">
                   <a href="<?php the_permalink(); ?>" title="<?php esc_attr__('Ver','mybooking'); ?> <?php the_title(); ?>">
 
                     <?php the_post_thumbnail(); ?>
@@ -41,15 +41,15 @@ $container = get_theme_mod( 'understrap_container_type' );
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="article_body">
-                  <h2 class="article_title">
+                <div class="product_body">
+                  <h2 class="product_title">
                     <a href="<?php the_permalink(); ?>" title="<?php esc_attr__('Ver','mybooking'); ?> <?php the_title(); ?>">
 
                       <?php the_title(); ?>
 
                     </a>
                   </h2>
-                  <div class="article_excerpt">
+                  <div class="product_excerpt">
 
                     <?php the_excerpt(); ?>
 
@@ -57,32 +57,50 @@ $container = get_theme_mod( 'understrap_container_type' );
                 </div>
               </div>
               <div class="col-md-3">
-                <h3 class="article_price">
-                  <?php $info_price_auto = get_post_meta( get_the_id(), 'product_info_price_auto', true );
-                  echo $info_price_auto
-                  ?>
-                </h3>
+								<hr>
+								<h4 class="product_price">
+
+									<?php
+										$info_price_auto = get_post_meta(
+											get_the_id(),
+											'product_info_price_auto',
+											true
+										);
+	                  echo $info_price_auto ?>
+
+                </h4>
                 <p>
-                  Kilometraje:
-                  <strong><?php $info_km = get_post_meta( get_the_id(), 'product_info_km', true );
-                  echo $info_km
-                  ?></strong>
-                  <br>
-                  Fecha de matriculación:
-                  <strong><?php $info_year = get_post_meta( get_the_id(), 'product_info_year', true );
-                  echo $info_year
-                  ?></strong>
-                  <br>
-                  Potencia:
-                  <strong><?php $info_power = get_post_meta( get_the_id(), 'product_info_power', true );
-                  echo $info_power
-                  ?></strong>
-                  <br>
-                  Color:
-                  <strong><?php $info_color = get_post_meta( get_the_id(), 'product_info_color', true );
-                  echo $info_color
-                  ?></strong>
-                </p>
+
+									<?php
+										$info_fuel = get_post_meta(
+											get_the_id(),
+											'product_info_fuel',
+											true
+										);
+                		echo $info_fuel ?>
+
+								<br>
+
+									<?php
+										$info_drive = get_post_meta(
+											get_the_id(),
+											'product_info_drive',
+											true
+										);
+                		echo $info_drive ?>
+
+								<br>
+
+									<?php
+										$info_km = get_post_meta(
+											get_the_id(),
+											'product_info_km',
+											true
+										);
+                		echo $info_km ?> km
+
+                 </p>
+								 <hr>
               </div>
             </article>
 

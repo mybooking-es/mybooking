@@ -20,18 +20,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="<?php echo esc_attr( $container ); ?>">
 
 					<?php $footer_layout = get_option('global_footer_layout');
-					if ($footer_layout == 0) {
-							get_template_part('mybooking-parts/mybooking-footer-minimal');
-						} else {
-							get_template_part('mybooking-parts/mybooking-footer-regular');
-						}
-					?>
+						if ($footer_layout == 0) {
+								get_template_part('mybooking-parts/mybooking-footer-minimal');
+							} else {
+								get_template_part('mybooking-parts/mybooking-footer-regular');
+							}	?>
 
 				</div>
 			</div>
 
 			<?php get_template_part('mybooking-parts/footer/mybooking-footer-credits'); ?>
-			
+
 		</div>
 
 		<!-- Goole Analytics -->

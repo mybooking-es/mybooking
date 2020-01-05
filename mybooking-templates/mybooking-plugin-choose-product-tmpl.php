@@ -9,6 +9,7 @@
 *   @since Mybooking WordPress Theme 0.0.1
 */
 ?>
+
 <!-- Script to show product search -->
 <script type="text/tpml" id="script_detailed_product">
 <% for (var idx=0;idx<products.length; idx++) { %>
