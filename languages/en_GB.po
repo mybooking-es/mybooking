@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap Mybooking Child\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-05 20:42+0000\n"
-"PO-Revision-Date: 2020-01-05 20:46+0000\n"
+"POT-Creation-Date: 2020-01-08 08:49+0000\n"
+"PO-Revision-Date: 2020-01-08 08:50+0000\n"
 "Last-Translator: admin <cranca@gmail.com>\n"
 "Language-Team: English (UK)\n"
 "Language: en_GB\n"
@@ -369,7 +369,6 @@ msgstr "Total import"
 msgid "Confirmar"
 msgstr "Confirm"
 
-# uest
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:163
 msgid "Solicitud de reserva"
 msgstr "Reservation request"
@@ -399,15 +398,21 @@ msgstr "Driver details"
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:55
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:36
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:38
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:6
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:8
 msgid "Nombre"
 msgstr "Name"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:59
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:20
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:22
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:57
 msgid "Correo electrónico"
 msgstr "Email"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:63
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:27
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:29
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:47
 msgid "Teléfono"
 msgstr "Phone number"
@@ -438,6 +443,8 @@ msgstr "Client information"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:41
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:43
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:12
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:14
 msgid "Apellidos"
 msgstr "Last name"
 
@@ -543,6 +550,15 @@ msgstr "Flight number"
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:671
 msgid "Hora prevista"
 msgstr "Estimated time"
+
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:34
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:36
+msgid "Mensaje"
+msgstr "Message"
+
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:47
+msgid "Enviar"
+msgstr "Send"
 
 #. Name of the template
 msgid "MyBooking Pages"

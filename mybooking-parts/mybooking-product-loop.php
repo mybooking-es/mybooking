@@ -66,7 +66,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 											'product_info_price_auto',
 											true
 										);
-	                  echo $info_price_auto ?>
+	                  echo $info_price_auto
+
+										$info_price_manual = get_post_meta(
+											get_the_id(),
+											'product_info_price_manual',
+											true
+										);
+	                  echo $info_price_manual
+
+										$info_price_diesel = get_post_meta(
+											get_the_id(),
+											'product_info_price_diesel',
+											true
+										);
+	                  echo $info_price_diesel
+									?>
 
                 </h4>
                 <p>
