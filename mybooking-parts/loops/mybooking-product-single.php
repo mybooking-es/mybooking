@@ -27,8 +27,140 @@ defined( 'ABSPATH' ) || exit;
 
         <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-        <div class="product_description"><?php the_content(); ?></div>
+        <div class="product_description">
 
+          <?php the_content(); ?>
+
+          <br>
+          <table class="product_info-table">
+            <tr>
+              <td colspan="2">
+                <h3><?php _e('Detalles del vehículo','mybooking') ?></h3>
+              </td>
+            </tr>
+
+            <?php $info_brand = get_post_meta( get_the_id(),'product_info_brand',true );
+              if ( $info_brand != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Marca','mybooking'); ?></strong></td>
+                  <td><?php echo $info_brand; ?></td>
+                </tr>
+
+            <?php } ?>
+
+            <?php $info_model = get_post_meta( get_the_id(),'product_info_model',true );
+              if ( $info_model != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Modelo','mybooking'); ?></strong></td>
+                  <td><?php echo $info_model; ?></td>
+                </tr>
+
+            <?php } ?>
+
+            <?php $info_fuel = get_post_meta( get_the_id(),'product_info_fuel',true );
+              if ( $info_fuel != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Combustible','mybooking'); ?></strong></td>
+                  <td><?php echo $info_fuel; ?></td>
+                </tr>
+
+            <?php } ?>
+
+            <?php $info_drive = get_post_meta( get_the_id(),'product_info_drive',true );
+              if ( $info_drive != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Cambio','mybooking'); ?></strong></td>
+                  <td><?php echo $info_drive; ?></td>
+                </tr>
+
+            <?php } ?>
+
+            <?php $info_km = get_post_meta( get_the_id(),'product_info_km',true );
+              if ( $info_km != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Kilometraje','mybooking'); ?></strong></td>
+                  <td><?php echo $info_km; ?></td>
+                </tr>
+
+            <?php } ?>
+
+            <?php $info_year = get_post_meta( get_the_id(),'product_info_year',true );
+              if ( $info_year != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Año','mybooking'); ?></strong></td>
+                  <td><?php echo $info_year; ?></td>
+                </tr>
+
+            <?php } ?>
+
+            <?php $info_displacement = get_post_meta( get_the_id(),'product_info_displacement',true );
+              if ( $info_displacement != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Cilindrada','mybooking'); ?></strong></td>
+                  <td><?php echo $info_displacement; ?> cc</td>
+                </tr>
+
+            <?php } ?>
+
+            <?php $info_power = get_post_meta( get_the_id(),'product_info_power',true );
+              if ( $info_power != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Potencia','mybooking'); ?></strong></td>
+                  <td><?php echo $info_power; ?> CV</td>
+                </tr>
+
+            <?php } ?>
+
+            <?php $info_warranty = get_post_meta( get_the_id(),'product_info_warranty',true );
+              if ( $info_warranty != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Garantia','mybooking'); ?></strong></td>
+                  <td><?php echo $info_warranty; ?></td>
+                </tr>
+
+            <?php } ?>
+
+            <?php $info_places = get_post_meta( get_the_id(),'product_info_places',true );
+              if ( $info_places != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Plazas','mybooking'); ?></strong></td>
+                  <td><?php echo $info_places; ?></td>
+                </tr>
+
+            <?php } ?>
+
+            <?php $info_color = get_post_meta( get_the_id(),'product_info_color',true );
+              if ( $info_color != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Color','mybooking'); ?></strong></td>
+                  <td><?php echo $info_color; ?></td>
+                </tr>
+
+            <?php } ?>
+
+            <?php $info_power = get_post_meta( get_the_id(),'product_info_power',true );
+              if ( $info_power != '' ) { ?>
+
+                <tr>
+                  <td><strong><?php _e('Cilindrada','mybooking'); ?></strong></td>
+                  <td><?php echo $info_power; ?> CV</td>
+                </tr>
+
+            <?php } ?>
+
+          </table>
+        </div>
       </div>
       <div class="col-md-3 product_info">
         <h2 class="product_price">
@@ -57,97 +189,44 @@ defined( 'ABSPATH' ) || exit;
           ?>
 
         </h2>
-        <hr>
-        <h5>
+        <table class="product_info-table">
 
-          <?php
-            $info_fuel = get_post_meta(
-              get_the_id(),
-              'product_info_fuel',
-              true
-            );
-            echo $info_fuel ?>
+          <?php $info_brand = get_post_meta( get_the_id(),'product_info_brand',true );
+            if ( $info_brand != '' ) { ?>
 
-        </h5>
-        <h5>
+                <h4><strong><?php echo $info_brand; ?></h4>
 
-          <?php
-            $info_drive = get_post_meta(
-              get_the_id(),
-              'product_info_drive',
-              true
-            );
-            echo $info_drive ?>
+          <?php } ?>
 
-        </h5>
-        <h5>
+          <?php $info_model = get_post_meta( get_the_id(),'product_info_model',true );
+            if ( $info_model != '' ) { ?>
 
-          <?php
-            $info_km = get_post_meta(
-              get_the_id(),
-              'product_info_km',
-              true
-            );
-            echo $info_km ?> km
-        </h5>
-        <h5>
-          Año
-          <?php
-            $info_year = get_post_meta(
-              get_the_id(),
-              'product_info_year',
-              true
-            );
-            echo $info_year ?>
+                <h4><?php echo $info_model; ?></h4>
 
-         </h5>
-         <p>
-          <strong>
+          <?php } ?>
 
-            <?php
-              $info_power = get_post_meta(
-                get_the_id(),
-                'product_info_power',
-                true
-              );
-              echo $info_power ?>
-              CV
-          </strong>
-          <br>
-          <strong>
+          <?php $info_fuel = get_post_meta( get_the_id(),'product_info_fuel',true );
+            if ( $info_fuel != '' ) { ?>
 
-            <?php
-              $info_displacement = get_post_meta(
-                get_the_id(),
-                'product_info_displacement',
-                true
-              );
-              echo $info_displacement ?>
-              cc
-          </strong>
-          <br>
-          <strong>
+                <h4><?php echo $info_fuel; ?></h4>
 
-            <?php
-              $info_places = get_post_meta(
-                get_the_id(),
-                'product_info_places',
-                true
-              );
-              echo $info_places ?>
-              Plazas
-          </strong>
-          <br>
-          <strong>
-            <?php
-              $info_color = get_post_meta(
-                get_the_id(),
-                'product_info_color',
-                true
-              );
-              echo $info_color ?>
-          </strong>
-        </p>
+          <?php } ?>
+
+          <?php $info_drive = get_post_meta( get_the_id(),'product_info_drive',true );
+            if ( $info_drive != '' ) { ?>
+
+                <h4><?php echo $info_drive; ?></h4>
+
+          <?php } ?>
+
+          <?php $info_km = get_post_meta( get_the_id(),'product_info_km',true );
+            if ( $info_km != '' ) { ?>
+
+                <h4><?php echo $info_km; ?> km</h4>
+
+          <?php } ?>
+
+        </table>
       </div>
     </div>
     <div class="col_md_12">
