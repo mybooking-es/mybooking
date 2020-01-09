@@ -17,17 +17,20 @@ defined( 'ABSPATH' ) || exit;
 <!-- Product post -->
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
   <div class="entry-content">
-    <div class="row no-gutters">
-      <div class="col-md-8 product_image">
+    <div class="row">
+      <div class="col-md-12 product_title">
+
+        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+      </div>
+      <div class="col-md-9 product_image">
 
         <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
+        <div class="product_description"><?php the_content(); ?></div>
+
       </div>
-      <div class="col-md-4 product_info">
-
-        <?php the_title( '<h5 class="entry-title">', '</h5>' ); ?>
-
-        <hr>
+      <div class="col-md-3 product_info">
         <h2 class="product_price">
 
           <?php
@@ -147,22 +150,13 @@ defined( 'ABSPATH' ) || exit;
         </p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12 product_description">
-        <br>
+    <div class="col_md_12">
 
-        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-        <?php the_content(); ?>
+      <?php	wp_link_pages( array(
+          'before' => '<div class="page-links">' . __( 'Páginas:', 'understrap' ),
+          'after'  => '</div>',
+        )); ?>
 
-      </div>
-      <div class="col_md_12">
-
-        <?php	wp_link_pages( array(
-            'before' => '<div class="page-links">' . __( 'Páginas:', 'understrap' ),
-            'after'  => '</div>',
-          )); ?>
-
-      </div>
     </div>
   </div>
   <footer class="entry-footer">
