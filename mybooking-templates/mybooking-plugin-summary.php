@@ -20,6 +20,6 @@
         </div>
       </div>
     </div>
-    <div id="reservation_detail"></div>
+    <div id="reservation_detail"></div>  
   </div>
 </div>
