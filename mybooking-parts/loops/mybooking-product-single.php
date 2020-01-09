@@ -119,16 +119,6 @@ defined( 'ABSPATH' ) || exit;
 
             <?php } ?>
 
-            <?php $info_warranty = get_post_meta( get_the_id(),'product_info_warranty',true );
-              if ( $info_warranty != '' ) { ?>
-
-                <tr>
-                  <td><strong><?php _e('Garantia','mybooking'); ?></strong></td>
-                  <td><?php echo $info_warranty; ?></td>
-                </tr>
-
-            <?php } ?>
-
             <?php $info_places = get_post_meta( get_the_id(),'product_info_places',true );
               if ( $info_places != '' ) { ?>
 
@@ -149,15 +139,16 @@ defined( 'ABSPATH' ) || exit;
 
             <?php } ?>
 
-            <?php $info_power = get_post_meta( get_the_id(),'product_info_power',true );
-              if ( $info_power != '' ) { ?>
+            <?php $info_warranty = get_post_meta( get_the_id(),'product_info_warranty',true );
+              if ( $info_warranty != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Cilindrada','mybooking'); ?></strong></td>
-                  <td><?php echo $info_power; ?> CV</td>
+                  <td><strong><?php _e('Garantia','mybooking'); ?></strong></td>
+                  <td><?php echo $info_warranty; ?></td>
                 </tr>
 
             <?php } ?>
+
 
           </table>
         </div>
