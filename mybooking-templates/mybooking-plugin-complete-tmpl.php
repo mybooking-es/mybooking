@@ -89,18 +89,19 @@
   <h4 class="brand-primary my-3"><?php _e('Precio', 'mybooking') ?></h4>
   <h5><?php _e('Total producto','mybooking') ?></h5>
   <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
-
-  <hr>
+  <% if (shopping_cart.extras.length > 0) { %>
+      <hr>
       <h5><?php _e('Extras', 'mybooking') ?></h5>
       <ul class="list-group">
-      <% for (var idx=0; idx<shopping_cart.extras.length; idx++) { %>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span class="extra-name"><%=shopping_cart.extras[idx].extra_description_customer_translation%></span>
-          <span class="badge badge-primary badge-pill"><%=shopping_cart.extras[idx].quantity%></span>
-          <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
-        </li>
-      <% } %>
-  </ul>
+        <% for (var idx=0; idx<shopping_cart.extras.length; idx++) { %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span class="extra-name"><%=shopping_cart.extras[idx].extra_description_customer_translation%></span>
+            <span class="badge badge-primary badge-pill"><%=shopping_cart.extras[idx].quantity%></span>
+            <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
+          </li>
+        <% } %>
+      </ul>
+  <% } %>
 
   <% if (shopping_cart.extras_cost > 0) { %>
       <hr>
