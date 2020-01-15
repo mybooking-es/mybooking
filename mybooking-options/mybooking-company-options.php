@@ -44,12 +44,9 @@ function mybookinges_register_options_company_info() {
   add_option("company_info_instagram_url","","","yes");
   add_option("company_info_linkedin_url","","","yes");
 
-  add_option("company_payment_visa","","","yes");
-  add_option("company_payment_mastercard","","","yes");
-  add_option("company_payment_paypal","","","yes");
-
   add_option("contact_section_title","","","yes");
   add_option("contact_section_subtitle","","","yes");
+  add_option("contact_section_text","","","yes");
   add_option("contact_map_code","","","yes");
 
   // Registro de opciones
@@ -67,12 +64,9 @@ function mybookinges_register_options_company_info() {
   register_setting("options_company_info", "company_info_instagram_url");
   register_setting("options_company_info", "company_info_linkedin_url");
 
-  register_setting("options_company_info", "company_payment_visa");
-  register_setting("options_company_info", "company_payment_mastercard");
-  register_setting("options_company_info", "company_payment_paypal");
-
   register_setting("options_company_info", "contact_section_title");
   register_setting("options_company_info", "contact_section_subtitle");
+  register_setting("options_company_info", "contact_section_text");
   register_setting("options_company_info", "contact_map_code");
 
 }
@@ -177,36 +171,6 @@ function mybookinges_configuration_company_info() {
 
       <hr>
 
-      <!-- Payment methods -->
-
-      <h2><?php _e('Métodos de pago', 'mybooking') ?></h2>
-
-      <table class="form-table">
-        <tr valign="top">
-          <th scope="row"><?php _e('VISA', 'mybooking') ?></th>
-          <td>
-          <?php $options = get_option( "company_payment_visa" ); ?>
-          <input type="checkbox" name="company_payment_visa" <?php checked( $options, 1 ); ?> value="1">
-          <span class="description"><?php _e('Marcar para mostrar el icono de VISA en el footer', 'mybooking') ?></span>
-        </tr>
-        <tr valign="top">
-          <th scope="row"><?php _e('Mastercard', 'mybooking') ?></th>
-          <td>
-          <?php $options = get_option( "company_payment_mastercard" ); ?>
-          <input type="checkbox" name="company_payment_mastercard" <?php checked( $options, 1 ); ?> value="1">
-          <span class="description"><?php _e('Marcar para mostrar el icono de Mastercard en el footer', 'mybooking') ?></span>
-        </tr>
-        <tr valign="top">
-          <th scope="row"><?php _e('PayPal', 'mybooking') ?></th>
-          <td>
-          <?php $options = get_option( "company_payment_paypal" ); ?>
-          <input type="checkbox" name="company_payment_paypal" <?php checked( $options, 1 ); ?> value="1">
-          <span class="description"><?php _e('Marcar para mostrar el icono de PayPal en el footer', 'mybooking') ?></span>
-        </tr>
-      </table>
-
-      <hr>
-
       <!-- Contact page adjust -->
 
       <h2><?php _e('Página Contacto', 'mybooking') ?></h2>
@@ -220,6 +184,11 @@ function mybookinges_configuration_company_info() {
         <tr valign="top">
           <th scope="row"><?php _e('Subtítulo de la sección', 'mybooking') ?></th>
           <td><input type="text" name="contact_section_subtitle" size="40" value="<?php echo get_option('contact_section_subtitle'); ?>" />
+          <br><span class="description"><?php _e('Aparece en el template Mybooking-contact', 'mybooking') ?></span></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><?php _e('Texto de la sección', 'mybooking') ?></th>
+          <td><textarea name="contact_section_text" cols="37" rows="10"><?php echo get_option('contact_section_text'); ?></textarea>
           <br><span class="description"><?php _e('Aparece en el template Mybooking-contact', 'mybooking') ?></span></td>
         </tr>
         <tr valign="top">

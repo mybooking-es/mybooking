@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Understrap Mybooking Child\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-08 08:49+0000\n"
-"PO-Revision-Date: 2020-01-08 08:50+0000\n"
+"POT-Creation-Date: 2020-01-15 08:15+0000\n"
+"PO-Revision-Date: 2020-01-15 08:16+0000\n"
 "Last-Translator: admin <cranca@gmail.com>\n"
 "Language-Team: English (UK)\n"
 "Language: en_GB\n"
@@ -181,10 +181,12 @@ msgid "Información del producto"
 msgstr "Product information"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-posts/mybooking-product.php:71
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:46
 msgid "Marca"
 msgstr "Brand"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-posts/mybooking-product.php:81
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:56
 msgid "Modelo"
 msgstr "Model"
 
@@ -193,14 +195,17 @@ msgid "Año de matriculación"
 msgstr "Enrollment Year"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-posts/mybooking-product.php:101
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:106
 msgid "Cilindrada"
 msgstr "Displacement"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-posts/mybooking-product.php:111
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:116
 msgid "Potencia"
 msgstr "Power"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-posts/mybooking-product.php:121
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:86
 msgid "Kilometraje"
 msgstr "Mileage"
 
@@ -209,18 +214,22 @@ msgid "Combutible"
 msgstr "Fuel"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-posts/mybooking-product.php:141
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:76
 msgid "Cambio"
 msgstr "Gearshift"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-posts/mybooking-product.php:150
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:136
 msgid "Color"
 msgstr "Colour"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-posts/mybooking-product.php:160
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:126
 msgid "Plazas"
 msgstr "Places"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-posts/mybooking-product.php:170
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:146
 msgid "Garantia"
 msgstr "Warranty"
 
@@ -406,14 +415,14 @@ msgstr "Name"
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:59
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:20
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:22
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:57
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:67
 msgid "Correo electrónico"
 msgstr "Email"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:63
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:27
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:29
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:47
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:52
 msgid "Teléfono"
 msgstr "Phone number"
 
@@ -461,7 +470,7 @@ msgstr "Confirm email"
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:56
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:58
 msgid "Teléfono principal"
-msgstr "Main contact phone"
+msgstr "Phone number"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:66
 msgid "Información adicional"
@@ -474,7 +483,7 @@ msgstr "Comments"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:74
 msgid "Dirección del cliente"
-msgstr "Customer mailling adress"
+msgstr "Home adress"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:77
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:79
@@ -494,7 +503,7 @@ msgstr "Extra (flat/door)"
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:97
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:99
 msgid "Provincia"
-msgstr "State"
+msgstr "County"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:102
 msgid "País"
@@ -517,7 +526,7 @@ msgstr "Driver's ID card or passport"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:363
 msgid "Fecha de nacimiento del conductor"
-msgstr "Driver's date of birth"
+msgstr "Date of birth"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:386
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:388
@@ -608,7 +617,7 @@ msgstr "Global options"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-global-options.php:52
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-home-options.php:127
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:82
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:76
 msgid "No tienes acceso a esta página."
 msgstr "You have no access to this page"
 
@@ -700,7 +709,7 @@ msgstr "Activate Products module"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-global-options.php:135
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-home-options.php:372
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:235
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:204
 msgid "Guardar cambios"
 msgstr "Save changes"
 
@@ -905,139 +914,116 @@ msgstr "Testimonial slider"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:20
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:21
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:106
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:100
 msgid "Información corporativa"
 msgstr "Company information"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:90
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:84
 msgid "Información del negocio"
 msgstr "Company information"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:91
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:85
 msgid ""
 "Aparece en varios lugares del tema, incluyendo el template \"MyBooking "
 "Contacto\""
 msgstr ""
 "Appears in several theme places, including \"Mybooking Contact\" template"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:110
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:104
 msgid "Denominación del negocio"
 msgstr "Company trade name"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:114
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:108
 msgid "Razón social"
 msgstr "Company bussiness name"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:118
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:112
 msgid "Número de Identificación Fiscal"
 msgstr "Fiscal Identification Number"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:127
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:121
 msgid "Información de contacto"
 msgstr "Contact information"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:131
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:125
 msgid "Dirección postal"
 msgstr "Mailling adress"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:135
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:129
 msgid "Teléfono de contacto"
 msgstr "Contact phone"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:139
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:133
 msgid "Canal de chat"
 msgstr "Chat channel"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:141
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:135
 msgid "Número de telefono asociado a Whatsapp, Telegram o similar"
 msgstr "Telephone number associated with Whatsapp, Telegram or similar"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:144
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:138
 msgid "Email de contacto"
 msgstr "Contact email"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:153
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:147
 msgid "Enlaces sociales"
 msgstr "Social links"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:157
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:151
 msgid "Twitter"
 msgstr "Twitter"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:159
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:153
 msgid "Pega aquí la URL del perfil de Twitter"
 msgstr "Paste Twitter profile URL here"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:162
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:156
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:164
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:158
 msgid "Pega aquí la URL del perfil de Facebook"
 msgstr "Paste Facebook profile URL here"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:167
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:161
 msgid "Instagram"
 msgstr "Instagram"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:172
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:166
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:174
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:168
 msgid "Pega aquí la URL del perfil de LinkedIn"
 msgstr "Paste LinkedIn profile URL here"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:182
-msgid "Métodos de pago"
-msgstr "Payment methods"
-
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:186
-msgid "VISA"
-msgstr "VISA"
-
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:190
-msgid "Marcar para mostrar el icono de VISA en el footer"
-msgstr "Check to show VISA icon on footer"
-
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:193
-msgid "Mastercard"
-msgstr "Mastercard"
-
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:197
-msgid "Marcar para mostrar el icono de Mastercard en el footer"
-msgstr "Check to show Mastercard icon on footer"
-
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:200
-msgid "PayPal"
-msgstr "PayPal"
-
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:204
-msgid "Marcar para mostrar el icono de PayPal en el footer"
-msgstr "Check to show PayPal icon on footer"
-
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:212
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:176
 msgid "Página Contacto"
 msgstr "Contact page"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:216
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:180
 msgid "Título de la sección"
 msgstr "Section title"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:218
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:223
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:182
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:187
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:192
 msgid "Aparece en el template Mybooking-contact"
 msgstr "Appears in \"Mybooking Contact\" template"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:221
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:185
 msgid "Subtítulo de la sección"
 msgstr "Section subtitle"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:226
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:190
+msgid "Texto de la sección"
+msgstr "Section text"
+
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:195
 msgid "Mapa de localización"
 msgstr "Location map"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:228
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-options/mybooking-company-options.php:197
 msgid "Pega aquí el código de Google Maps"
 msgstr "Paste Google Maps iframe code here"
 
@@ -1114,11 +1100,23 @@ msgstr "Toggle navigation"
 msgid "Powered by"
 msgstr "Powered by"
 
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:38
+msgid "Detalles del vehículo"
+msgstr "Vehicle details"
+
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:66
+msgid "Combustible"
+msgstr "Fuel"
+
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/loops/mybooking-product-single.php:96
+msgid "Año"
+msgstr "Year"
+
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:22
 msgid "Contacto"
 msgstr "Contact"
 
-#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:37
+#: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:42
 msgid "Localización"
 msgstr "Location"
 

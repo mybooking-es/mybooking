@@ -27,7 +27,12 @@
       <?php $subtitle_contact = get_option("contact_section_subtitle");
         if ($subtitle_contact !== '') { ?>
           <h3><?php echo $subtitle_contact ?></h3>
-        <?php } ?>
+      <?php } ?>
+
+      <?php $company_text = get_option("contact_section_text");
+        if ($company_text !== '') { ?>
+          <p><?php echo $company_text ?></p>
+      <?php } ?>
 
     </div>
 
@@ -48,9 +53,14 @@
       </h4>
 
       <?php $company_phone = get_option("company_info_phone");
+            $company_chat = get_option("company_info_chat");
         if ($company_phone !== '') { ?>
-          <p><?php echo $company_phone ?></p>
+          <p><?php echo $company_phone ?><br>
+        <?php }
+        if ($company_chat !== '') { ?>
+          <?php echo $company_chat ?></p>
       <?php } ?>
+
 
       <h4 class="brand-primary">
         <i class="fa fa-envelope" aria-hidden="true"></i>
