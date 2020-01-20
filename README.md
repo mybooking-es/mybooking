@@ -87,6 +87,11 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 ### Version 0.1.4
 - Added the cookies policy warning [from here](https://www.wimagguc.com/2018/05/gdpr-compliance-with-the-jquery-eu-cookie-law-plugin/)
 - Cleaned **_carousel.scss**
+- Cleaned payment icons on config page because are not used anymore
 - Updated translation to en_GB and added de_DE
 - New custom post type for vehicle reselling
 - Custom post type activation option in Global Options settings page
+- Added custom text on contact template
+
+### Version 0.1.5
+- Now we can choose the type of card presentation on choose page; horizontal or grid

@@ -33,6 +33,7 @@ function mybookinges_register_options_global() {
   add_option("global_google_analytics","","","yes");
   add_option("global_header_layout","","","yes");
   add_option("global_footer_layout","","","yes");
+  add_option("global_list_layout","","","yes");
   add_option("global_testimonials_active","","","yes");
   add_option("global_promo_active","","","yes");
   add_option("global_product_active","","","yes");
@@ -41,6 +42,7 @@ function mybookinges_register_options_global() {
   register_setting("options_global", "global_google_analytics");
   register_setting("options_global", "global_header_layout");
   register_setting("options_global", "global_footer_layout");
+  register_setting("options_global", "global_list_layout");
   register_setting("options_global", "global_testimonial_active");
   register_setting("options_global", "global_promo_active");
   register_setting("options_global", "global_product_active");
@@ -84,11 +86,11 @@ function mybookinges_configuration_global() {
 
       <hr>
 
-      <h2><?php _e('Layout del header', 'mybooking') ?></h2>
+      <h2><?php _e('Layouts', 'mybooking') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php _e('Escoge el tipo de cabecera', 'mybooking') ?></th>
+          <th scope="row"><?php _e('Cabecera', 'mybooking') ?></th>
           <td>
           <?php $options_header = get_option( "global_header_layout" ); ?>
           <input type="radio" name="global_header_layout" <?php checked( $options_header, 0 ); ?> value="0"><span class="description"><strong><?php _e('Dos columnas','mybooking') ?></strong><br><?php _e('Título y texto personalizables más dos areas para widgets', 'mybooking', 'mybooking') ?></span><br><br>
@@ -96,17 +98,24 @@ function mybookinges_configuration_global() {
         </tr>
       </table>
 
-      <hr>
-
-      <h2><?php _e('Layout del footer', 'mybooking') ?></h2>
-
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php _e('Escoge el tipo de footer', 'mybooking') ?></th>
+          <th scope="row"><?php _e('Footer', 'mybooking') ?></th>
           <td>
             <?php $options_footer = get_option( "global_footer_layout" ); ?>
             <input type="radio" name="global_footer_layout" <?php checked( $options_footer, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Mínimal','mybooking') ?></strong><br><?php _e('Solo muestra el copyright', 'mybooking') ?></span><br><br>
             <input type="radio" name="global_footer_layout" <?php checked( $options_footer, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Normal', 'mybooking') ?></strong><br><?php _e('Muestra cuatro columnas para widgets, información corporativa y enlaces sociales', 'mybooking') ?></span>
+          </td>
+        </tr>
+      </table>
+
+      <table class="form-table">
+        <tr valign="top">
+          <th scope="row"><?php _e('Productos', 'mybooking') ?></th>
+          <td>
+            <?php $options_list = get_option( "global_list_layout" ); ?>
+            <input type="radio" name="global_list_layout" <?php checked( $options_list, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Cuadrícula','mybooking') ?></strong><br><?php _e('Muestra los vehiculos en una cuadrícula', 'mybooking') ?></span><br><br>
+            <input type="radio" name="global_list_layout" <?php checked( $options_list, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Lista', 'mybooking') ?></strong><br><?php _e('Muestra los vehiculos en una lista', 'mybooking') ?></span>
           </td>
         </tr>
       </table>
