@@ -1,21 +1,51 @@
 // Cards for product list
 
-.magic-cards {
+.magic-cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  padding-top: 6px;
+  padding-bottom: 3rem;
 }
-
-.magic-card {
-  text-align: center;
-  flex-basis: 300px;
+.magic-card-wrapper {
+  display: flex;
   flex-grow: 1;
-  margin: 0 18px 18px 0;
+  padding: 10px;
+}
+.magic-card {
+  flex-grow: 1;
+  text-align: center;
   box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
   background-color: #f3efe4;
 }
 
-.header-card {
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .magic-card {
+    min-width: 320px;
+  }
+  .magic-card-wrapper {
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .magic-card-wrapper {
+    flex-basis: 45%;
+  }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .magic-cards-container {
+    //padding: 0 5%;
+  }
+  .magic-card-wrapper {
+    flex-basis: 33%;
+    flex-grow: 0;
+  }
+}
+
+.magic-card-header {
   box-sizing: border-box;
   padding: 2em 3em 7em;
   background: $brand-secondary;
@@ -25,7 +55,7 @@
     $brand-secondary
   );
   background: linear-gradient(to right, $brand-primary, $brand-secondary);
-  .product-title {
+  .product-name-and-short-description {
     height: 180px;
   }
   // Grupo
@@ -96,8 +126,9 @@
 
   .key-characteristics {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
+    max-width: 500px;
   }
   .key-icon:first-child {
     margin-left: 30px;
@@ -129,6 +160,7 @@
     position: absolute;
     top: 90px;
     width: 100%;
+    padding: 0 20px;
   }
 }
 
@@ -138,128 +170,5 @@
   color: $white;
   border-radius: 5px;
   padding: 10px;
-  margin: 0 auto;
-}
-
-// ==================================
-// ===== ROW CARDS MAGIC-CARDS HORIZONTAL
-// ==================================
-
-.magic-row-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-.magic-row-card_img {
-  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 300px;
-  border-radius: 4px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  background: #f3efe4;
-  // background: linear-gradient(to right, $brand-primary, $brand-secondary);
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-  }
-}
-.magic-row-card_body {
-  display: flex;
-  width: 100%;
-  height: fit-content;
-  padding: 30px;
-  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  border-radius: 4px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.magic-row-card_body-left {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.magic-row-card_body-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30%;
-  .magic-row-card_icons {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    .magic-icon {
-      font-size: 13px;
-      display: flex;
-      // flex-direction: column;
-      align-items: center;
-      width: 50%;
-      margin-bottom: 20px;
-      color: $gray-500;
-    }
-  }
-}
-a.magic-button.btn {
-  width: 100%;
-  transition: ease-in-out 0.15s;
-  border-radius: 50px;
-  background-color: transparent;
-  border-color: $brand-primary;
-  color: $brand-primary;
-  &:hover {
-    background-color: darken($brand-primary, 30%);
-    border-color: darken($brand-primary, 30%);
-    color: darken($white, 10%);
-    cursor: pointer;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .magic-row-card {
-    flex-direction: row;
-  }
-  .magic-row-card_img {
-    flex-basis: 40%;
-    border-radius: 4px;
-  }
-  .magic-row-card_body {
-    display: flex;
-    height: 250px;
-    flex-basis: 70%;
-    margin-left: -20px;
-    border-radius: 4px;
-  }
-}
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  .magic-row-card_body {
-    flex-direction: column;
-    height: fit-content;
-  }
-  .magic-row-card_body-left {
-    width: 100%;
-  }
-  .magic-row-card_body-right {
-    justify-content: space-between;
-    width: 100%;
-    .magic-row-card_icons {
-      margin-top: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      .magic-icon {
-        width: 50%;
-        margin-bottom: 30px;
-        color: $gray-500;
-      }
-      .fas {
-        color: $brand-primary;
-        font-size: 1.5rem;
-      }
-    }
-  }
+  margin: 0 10px;
 }
