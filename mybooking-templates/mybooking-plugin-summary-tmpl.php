@@ -171,27 +171,27 @@
       <div class="form-group col-md-6">
         <label for="street"><?php _e('Calle', 'mybooking') ?></label>
         <input class="form-control" id="street" name="customer_address[street]" type="text"
-          placeholder="<?php _e('Calle', 'mybooking') ?>" value="<%=booking.address_street%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Calle', 'mybooking') ?>")%>" value="<%=booking.address_street%>">
       </div>
       <div class="form-group col-md-6">
         <label for="number"><?php _e('Número', 'mybooking') ?></label>
         <input class="form-control" id="number" name="customer_address[number]" type="text"
-          placeholder="<?php _e('Número', 'mybooking') ?>" value="<%=booking.address_number%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Número', 'mybooking') ?>")%>" value="<%=booking.address_number%>">
       </div>
       <div class="form-group col-md-6">
         <label for="complement"><?php _e('Complemento (piso/puerta)', 'mybooking') ?></label>
         <input class="form-control" id="complement" name="customer_address[complement]" type="text"
-          placeholder="<?php _e('Complemento (piso/puerta)', 'mybooking') ?>" value="<%=booking.address_complement%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Complemento (piso/puerta)', 'mybooking') ?>")%>" value="<%=booking.address_complement%>">
       </div>
       <div class="form-group col-md-6">
         <label for="city"><?php _e('Ciudad', 'mybooking') ?></label>
         <input class="form-control" id="city" name="customer_address[city]" type="text"
-          placeholder="<?php _e('Ciudad', 'mybooking') ?>" value="<%=booking.address_city%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Ciudad', 'mybooking') ?>")%>" value="<%=booking.address_city%>">
       </div>
       <div class="form-group col-md-6">
         <label for="state"><?php _e('Provincia', 'mybooking') ?></label>
         <input class="form-control" id="state" name="customer_address[state]" type="text"
-          placeholder="<?php _e('Provincia', 'mybooking') ?>" value="<%=booking.address_state%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Provincia', 'mybooking') ?>")%>" value="<%=booking.address_state%>">
       </div>
       <div class="form-group col-md-6">
         <label class="full-width" for="country"><?php _e('País', 'mybooking') ?>
@@ -441,17 +441,17 @@
       <div class="form-group col-md-6">
         <label for="driver_name"><?php _e('Nombre del conductor', 'mybooking') ?></label>
         <input class="form-control" id="driver_name" name="driver_name" type="text"
-          placeholder="<?php _e('Nombre del conductor', 'mybooking') ?>" value="<%=booking.driver_name%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Nombre del conductor', 'mybooking') ?>")%>" value="<%=booking.driver_name%>">
       </div>
       <div class="form-group col-md-6">
         <label for=""><?php _e('Apellidos del conductor', 'mybooking') ?></label>
         <input class="form-control" id="driver_surname" name="driver_surname" type="text"
-          placeholder="<?php _e('Apellidos del conductor', 'mybooking') ?>" value="<%=booking.driver_surname%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Apellidos del conductor', 'mybooking') ?>")%>" value="<%=booking.driver_surname%>">
       </div>
       <div class="form-group col-md-6">
         <label for="driver_document_id"><?php _e('Nif o pasaporte del conductor', 'mybooking') ?></label>
         <input class="form-control" id="driver_document_id" name="driver_document_id" type="text"
-          placeholder="<?php _e('Nif o pasaporte del conductor', 'mybooking') ?>" value="<%=booking.driver_document_id%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Nif o pasaporte del conductor', 'mybooking') ?>")%>" value="<%=booking.driver_document_id%>">
       </div>
 
       <div class="form-group col-md-6">
@@ -481,7 +481,7 @@
         <label
           for="driver_driving_license_number"><?php _e('Número del carnet de conducir', 'mybooking') ?></label>
         <input class="form-control" id="driver_driving_license_number" name="driver_driving_license_number"
-          type="text" placeholder="<?php _e('Número del carnet de conducir', 'mybooking') ?>" value="<%=booking.driver_driving_license_number%>">
+          type="text" placeholder="<%=configuration.escapeHtml("<?php _e('Número del carnet de conducir', 'mybooking') ?>")%>" value="<%=booking.driver_driving_license_number%>">
       </div>
       <div class="form-group col-md-6">
         <label
@@ -755,12 +755,12 @@
       <div class="form-group col-md-6">
         <label for="driver_name"><?php _e('Nombre del conductor', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_1_name" name="additional_driver_1_name" type="text"
-          placeholder="<?php _e('Nombre del conductor', 'mybooking') ?>" value="<%=booking.additional_driver_1_name%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Nombre del conductor', 'mybooking') ?>")%>" value="<%=booking.additional_driver_1_name%>">
       </div>
       <div class="form-group col-md-6">
         <label for=""><?php _e('Apellidos del conductor', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_1_surname" name="additional_driver_1_surname" type="text"
-          placeholder="<?php _e('Apellidos del conductor', 'mybooking') ?>" value="<%=booking.additional_driver_1_surname%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Apellidos del conductor', 'mybooking') ?>")%>" value="<%=booking.additional_driver_1_surname%>">
       </div>
     </div>
     <div class="form-row">
@@ -768,7 +768,7 @@
         <label
           for="driver_driving_license_number"><?php _e('Número del carnet de conducir', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_1_driving_license_number" name="additional_driver_1_driving_license_number"
-          type="text" placeholder="<?php _e('Número del carnet de conducir', 'mybooking') ?>" value="<%=booking.additional_driver_1_driving_license_number%>">
+          type="text" placeholder="<%=configuration.escapeHtml("<?php _e('Número del carnet de conducir', 'mybooking') ?>")%>" value="<%=booking.additional_driver_1_driving_license_number%>">
       </div>
       <div class="form-group col-md-6">
         <label
@@ -1042,12 +1042,12 @@
       <div class="form-group col-md-6">
         <label for="driver_name"><?php _e('Nombre del conductor', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_2_name" name="additional_driver_2_name" type="text"
-          placeholder="<?php _e('Nombre del conductor', 'mybooking') ?>" value="<%=booking.additional_driver_2_name%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Nombre del conductor', 'mybooking') ?>")%>" value="<%=booking.additional_driver_2_name%>">
       </div>
       <div class="form-group col-md-6">
         <label for=""><?php _e('Apellidos del conductor', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_2_surname" name="additional_driver_2_surname" type="text"
-          placeholder="<?php _e('Apellidos del conductor', 'mybooking') ?>" value="<%=booking.additional_driver_2_surname%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Apellidos del conductor', 'mybooking') ?>")%>" value="<%=booking.additional_driver_2_surname%>">
       </div>
     </div>
     <div class="form-row">
@@ -1055,7 +1055,7 @@
         <label
           for="driver_driving_license_number"><?php _e('Número del carnet de conducir', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_2_driving_license_number" name="additional_driver_2_driving_license_number"
-          type="text" placeholder="<?php _e('Número del carnet de conducir', 'mybooking') ?>" value="<%=booking.additional_driver_2_driving_license_number%>">
+          type="text" placeholder="<%=configuration.escapeHtml("<?php _e('Número del carnet de conducir', 'mybooking') ?>")%>" value="<%=booking.additional_driver_2_driving_license_number%>">
       </div>
       <div class="form-group col-md-6">
         <label
@@ -1331,17 +1331,17 @@
       <div class="form-group col-md-6">
         <label for="flight_company"><?php _e('Compañia', 'mybooking') ?></label>
         <input class="form-control" id="flight_company" name="flight_company" type="text"
-          placeholder="<?php _e('Compañia', 'mybooking') ?>" value="<%=booking.flight_company%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Compañia', 'mybooking') ?>")%>" value="<%=booking.flight_company%>">
       </div>
       <div class="form-group col-md-6">
         <label for="flight_number"><?php _e('Número de vuelo', 'mybooking') ?></label>
         <input class="form-control" id="flight_number" name="flight_number" type="text"
-          placeholder="<?php _e('Número de vuelo', 'mybooking') ?>" value="<%=booking.flight_number%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Número de vuelo', 'mybooking') ?>")%>" value="<%=booking.flight_number%>">
       </div>
       <div class="form-group col-md-6">
         <label for="flight_time"><?php _e('Hora prevista', 'mybooking') ?></label>
         <input class="form-control" id="flight_time" name="flight_time" type="text"
-          placeholder="<?php _e('Hora prevista', 'mybooking') ?>" value="<%=booking.flight_time%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Hora prevista', 'mybooking') ?>")%>" value="<%=booking.flight_time%>">
       </div>
     </div>
     <div class="form-row">
