@@ -54,14 +54,14 @@
                     <% } %>
                   </div>
 
-                  <% if (product.key_characteristics) { %> 
+                  <% if (product.key_characteristics) { %>
                       <div class="key-characteristics">
                         <% for (characteristic in product.key_characteristics) { %>
                         <div class="key-icon">
                           <img src="<?php echo get_stylesheet_directory_uri() ?>/images/key_characteristics/<%=characteristic%>.svg"/>
-                          <p><%=product.key_characteristics[characteristic]%></p>  
+                          <p><%=product.key_characteristics[characteristic]%></p>
                         </div>
-                      
+
                         <% } %>
                       </div>
                   <% } %>
@@ -73,12 +73,12 @@
                   <a class="btn btn-dark btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
                   <% } else { %>
                   <div class="not-available"><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></div>
-                  <% } %> 
+                  <% } %>
 
                   <% if (product.few_available_units) { %>
                     <p class="text-danger mt-3"><?php _e('¡Quedan pocas unidades!') ?></p>
                   <% } %>
-                  
+
                   </div>
               </section>
           </div>
@@ -155,10 +155,10 @@
         </div>
         <div class="magic-card-horizontal_body-right">
           <div class="magic-card-horizontal_icons">
-            <% if (product.key_characteristics) { %> 
+            <% if (product.key_characteristics) { %>
               <% for (characteristic in product.key_characteristics) { %>
                 <div class="magic-icon">
-                  <img src="assets/images/key_characteristics/<%=characteristic%>.svg"/>
+                  <img src="<?php echo get_stylesheet_directory_uri() ?>/images/key_characteristics/<%=characteristic%>.svg"/>
                   <span><%=product.key_characteristics[characteristic]%> </span>
                 </div>
               <% } %>
