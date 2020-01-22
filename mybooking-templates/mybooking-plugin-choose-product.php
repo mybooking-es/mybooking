@@ -13,17 +13,16 @@
 
 <div class="reservation-step">
   <!-- Reservation : Pickup/Return information -->
-  <div class="bg-gray-200 py-5">
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-3">
-          <div id="reservation_detail"></div>
-        </div>
-        <div class="col-12 col-lg-8">
-          <div id="product_listing" class="magic-cards mb-5"></div>
-        </div>
-      </div>
+  <?php $list_layout = get_option('global_list_layout');
+  if ($list_layout == 0) { ?>
+    <div class="bg-gray-200 reservation-summary-sidebar-wrapper">
+      <div id="reservation_detail"></div>
+      <div id="product_listing"></div>
     </div>
-    <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
-  </div>
+  <?php } else { ?>
+      <div id="reservation_detail" class="sticky-top"></div>
+      <div id="product_listing" class="bg-gray-200"></div>
+  <?php } ?>
+  <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
+  
 </div>

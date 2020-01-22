@@ -1,0 +1,74 @@
+.reservation-summary-sticky-wrapper {
+  text-align: center;
+  background-color: darken($brand-primary, 40%);
+}
+.reservation-summary-sticky {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  padding: 0.6rem 1rem;
+  justify-content: space-around;
+  .modify-button {
+    button {
+      background-color: transparent;
+      margin-left: 3rem;
+    }
+    i {
+      font-size: 1.5rem;
+      color: $brand-primary;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        color: darken($brand-primary, 10%);
+      }
+    }
+  }
+}
+.reservation-summary-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  p {
+    text-align: left;
+    color: $gray-400;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    &:first-child {
+      margin-right: 1rem;
+    }
+  }
+}
+.reservation-summary-separator {
+  width: 3rem;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  i {
+    color: $gray-400;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .reservation-summary-item {
+    align-items: center;
+    flex-direction: row;
+    span {
+      float: left;
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .bold-on-mobile {
+    font-weight: 800;
+  }
+}

@@ -4619,44 +4619,72 @@ input.form-reservation-error {
   .icon-panel {
     width: 25%; } }
 
-.magic-cards {
+.magic-cards-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
+  padding-top: 6px;
+  padding-bottom: 3rem; }
 
-.magic-card {
-  text-align: center;
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
+.magic-card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin: 0 18px 18px 0;
+  padding: 10px; }
+
+.magic-card {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
   -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
   background-color: #f3efe4; }
 
-.header-card {
+@media (min-width: 768px) {
+  .magic-card {
+    min-width: 320px; }
+  .magic-card-wrapper {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; } }
+
+@media (min-width: 992px) {
+  .magic-card-wrapper {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%; } }
+
+@media (min-width: 1200px) {
+  .magic-card-wrapper {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; } }
+
+.magic-card-header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 2em 3em 7em;
   background: #bfd975;
   background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
   background: linear-gradient(to right, #8ac53f, #bfd975); }
-  .header-card .product-title {
+  .magic-card-header .product-name-and-short-description {
     height: 180px; }
-  .header-card .product-name {
+  .magic-card-header .product-name {
     color: #fff;
     font-weight: 800;
     line-height: 1;
     font-size: 1.8rem;
     margin-bottom: 10px; }
-  .header-card .product-short-description {
+  .magic-card-header .product-short-description {
     color: #e0e0e0;
     font-weight: 400;
     line-height: 1;
@@ -4706,10 +4734,11 @@ input.form-reservation-error {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 0 auto; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+    max-width: 500px; }
   .footer-card .key-icon:first-child {
     margin-left: 30px; }
   .footer-card .key-icon:last-child {
@@ -4740,7 +4769,8 @@ input.form-reservation-error {
   .footer-card .push-down {
     position: absolute;
     top: 90px;
-    width: 100%; }
+    width: 100%;
+    padding: 0 20px; }
 
 .not-available {
   width: -webkit-fit-content;
@@ -4750,9 +4780,19 @@ input.form-reservation-error {
   color: #fff;
   border-radius: 5px;
   padding: 10px;
-  margin: 0 auto; }
+  margin: 0 10px; }
 
-.magic-row-card {
+.magic-card-horizontal-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px; }
+
+.magic-card-horizontal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4763,9 +4803,13 @@ input.form-reservation-error {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 2rem;
+  max-width: 1000px;
+  -ms-flex-item-align: center;
+      align-self: center; }
 
-.magic-row-card_img {
+.magic-card-horizontal_image {
   -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -4774,13 +4818,13 @@ input.form-reservation-error {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   background: #f3efe4; }
-  .magic-row-card_img img {
+  .magic-card-horizontal_image img {
     height: 100%;
     width: 100%;
     -o-object-fit: contain;
        object-fit: contain; }
 
-.magic-row-card_body {
+.magic-card-horizontal_body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4796,8 +4840,26 @@ input.form-reservation-error {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
 
-.magic-row-card_body-left {
-  width: 70%;
+.magic-card-horizontal_product-name {
+  color: #212121;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 1.8rem; }
+
+.magic-card-horizontal_product-short-description {
+  color: #9e9e9e;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 0.8rem; }
+
+.magic-card-horizontal_price h2 {
+  color: #8ac53f;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  font-weight: 800; }
+
+.magic-card-horizontal_body-left {
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4809,7 +4871,7 @@ input.form-reservation-error {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.magic-row-card_body-right {
+.magic-card-horizontal_body-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4820,25 +4882,33 @@ input.form-reservation-error {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 30%; }
-  .magic-row-card_body-right .magic-row-card_icons {
-    text-align: center;
+  width: 40%; }
+
+.magic-card-horizontal_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .magic-card-horizontal_icons .magic-icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    .magic-row-card_body-right .magic-row-card_icons .magic-icon {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50%;
+    margin-bottom: 20px; }
+    .magic-card-horizontal_icons .magic-icon span {
       font-size: 13px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      width: 50%;
-      margin-bottom: 20px;
       color: #9e9e9e; }
+    .magic-card-horizontal_icons .magic-icon img {
+      height: 30px;
+      width: 30px; }
 
 a.magic-button.btn {
   width: 100%;
@@ -4855,27 +4925,39 @@ a.magic-button.btn {
     cursor: pointer; }
 
 @media (min-width: 992px) {
-  .magic-row-card {
+  .magic-card-horizontal {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; }
-  .magic-row-card_img {
+  .magic-card-horizontal_image {
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
     border-radius: 4px; }
-  .magic-row-card_body {
+  .magic-card-horizontal_body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 250px;
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
-    margin-left: -20px;
-    border-radius: 4px; } }
+    margin-left: -10px;
+    border-radius: 4px; }
+  .magic-card-horizontal_icons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .magic-card-horizontal_icons .magic-icon {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; } }
 
 @media (max-width: 575.98px) {
-  .magic-row-card_body {
+  .magic-card-horizontal {
+    margin-bottom: 1rem; }
+  .magic-card-horizontal_body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4883,27 +4965,39 @@ a.magic-button.btn {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content; }
-  .magic-row-card_body-left {
+  .magic-card-horizontal_body-left {
+    width: 100%;
+    position: relative; }
+  .magic-card-horizontal_body-right {
     width: 100%; }
-  .magic-row-card_body-right {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%; }
-    .magic-row-card_body-right .magic-row-card_icons {
-      margin-top: 30px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-      .magic-row-card_body-right .magic-row-card_icons .magic-icon {
-        width: 50%;
-        margin-bottom: 30px;
+  .magic-card-horizontal_price {
+    position: absolute;
+    right: 5px;
+    top: 5px; }
+    .magic-card-horizontal_price h2 {
+      font-size: 1.4rem;
+      font-weight: 700; }
+  .magic-card-horizontal_icons {
+    margin-top: 50px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+    .magic-card-horizontal_icons .magic-icon {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 50%;
+      margin-bottom: 20px;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: center; }
+      .magic-card-horizontal_icons .magic-icon span {
+        font-size: 13px;
         color: #9e9e9e; }
-      .magic-row-card_body-right .magic-row-card_icons .fas {
-        color: #8ac53f;
-        font-size: 1.5rem; } }
+      .magic-card-horizontal_icons .magic-icon img {
+        height: 30px;
+        width: 30px; } }
 
 .steps_container {
   padding: 1.5rem 0;
@@ -5492,6 +5586,110 @@ td {
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
   padding: .5rem 0; }
+
+.reservation-summary-sticky-wrapper {
+  text-align: center;
+  background-color: #1e2b0d; }
+
+.reservation-summary-sticky {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.6rem 1rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .reservation-summary-sticky .modify-button button {
+    background-color: transparent;
+    margin-left: 3rem; }
+  .reservation-summary-sticky .modify-button i {
+    font-size: 1.5rem;
+    color: #8ac53f;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out; }
+    .reservation-summary-sticky .modify-button i:hover {
+      color: #6fa130; }
+
+.reservation-summary-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .reservation-summary-item p {
+    text-align: left;
+    color: #bdbdbd;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem; }
+    .reservation-summary-item p:first-child {
+      margin-right: 1rem; }
+
+.reservation-summary-separator {
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .reservation-summary-separator i {
+    color: #bdbdbd; }
+
+@media (min-width: 768px) {
+  .reservation-summary-item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .reservation-summary-item span {
+      float: left; } }
+
+@media (max-width: 767.98px) {
+  .bold-on-mobile {
+    font-weight: 800; } }
+
+.reservation-summary-sidebar-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.reservation-summary-sidebar {
+  -ms-flex-preferred-size: 290px;
+      flex-basis: 290px;
+  min-width: 290px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #fff; }
+
+@media (min-width: 768px) {
+  .reservation-summary-sidebar-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; } }
 
 .full-height {
   height: 100%; }
