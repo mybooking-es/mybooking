@@ -3,7 +3,7 @@
 *   PLUGIN COMPLETE PAGE
 *   --------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -19,7 +19,7 @@
   <div class="bg-gray-200">
     <div class="container">
       <div class="row justify-content-center">
-          
+
           <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-5">
             <!-- Reservation : Extras -->
             <h4 class="brand-primary my-3"><?php _e('Extras', 'mybooking') ?></h4>
