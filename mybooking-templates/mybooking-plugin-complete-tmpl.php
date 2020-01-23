@@ -39,19 +39,17 @@
 
 <!-- Extra representation -->
 <script type="text/template" id="script_detailed_extra">
-  <div class="card-columns">
+  <div class="extras-container">
   <% for (var idx=0;idx<extras.length;idx++) { %>
     <% var extra = extras[idx]; %>
-      <div class="card mb-3">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <% if (extra.photo_path != null) { %>
-              <img src="<%=extra.photo_path%>" class="card-img" alt="..."/>
-            <% } %>
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title"><%=extra.name%></h5>
+    <div class="extra-wrapper">
+      <div class="extra-image">
+        <% if (extra.photo_path != null) { %>
+          <img src="<%=extra.photo_path%>" class="card-img" />
+        <% } %>
+      </div>
+      <div class="extra-content">
+          <h6 class="lead"><%=extra.name%></h6>
               <% if (extra.max_quantity > 1) { %>
                 <div class="input-group input-group-sm" style="width:90px;">
                     <div class="input-group-prepend">
@@ -74,11 +72,9 @@
                   <label class="custom-control-label" for="checkboxl<%=extra.code%>"></label>
                 </div>
               <% } %>
-              <p class="card-text mt-2"><%= configuration.formatCurrency(extra.unit_price)%></p>
-            </div>
-          </div>
-        </div>
+              <p class="fw-700 mt-2"><%= configuration.formatCurrency(extra.unit_price)%></p>
       </div>
+    </div>
   <% } %>
   </div>
 </script>

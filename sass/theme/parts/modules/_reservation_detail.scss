@@ -1,0 +1,58 @@
+//==============================================
+// Module/extras for complete reservation detail
+//==============================================
+
+.reservation-detail-container {
+  display: flex;
+  flex-direction: column;
+}
+.reservation-detail-image-container {
+  display: flex;
+  flex-grow: 2;
+  .reservation-detail-image-wrapper {
+    max-width: 200px;
+  }
+}
+.reservation-detail-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .reservation-detail-container {
+    flex-direction: row;
+  }
+}
+
+// custom style para el swith de extras en complete
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: $brand-primary;
+  background-color: $brand-primary;
+}
+// Cards para los extras en complete
+.card {
+  border: none;
+}
+.card-img {
+  padding: 12px;
+  max-width: 100%;
+}
+
+// List group para los extras en complete y summary
+.list-group li {
+  border: 0;
+  padding-left: 0;
+  margin-left: 0;
+  .extra-name {
+    width: 60%;
+  }
+  .extra-price {
+    color: $gray-600;
+  }
+}
+.badge-primary {
+  background-color: $brand-primary;
+}
