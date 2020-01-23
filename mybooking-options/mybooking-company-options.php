@@ -3,7 +3,7 @@
 *		COMPANY INFO CONFIGURATION
 *  	--------------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -43,6 +43,7 @@ function mybookinges_register_options_company_info() {
   add_option("company_info_facebook_url","","","yes");
   add_option("company_info_instagram_url","","","yes");
   add_option("company_info_linkedin_url","","","yes");
+  add_option("company_info_youtube_url","","","yes");
 
   add_option("contact_section_title","","","yes");
   add_option("contact_section_subtitle","","","yes");
@@ -63,6 +64,7 @@ function mybookinges_register_options_company_info() {
   register_setting("options_company_info", "company_info_facebook_url");
   register_setting("options_company_info", "company_info_instagram_url");
   register_setting("options_company_info", "company_info_linkedin_url");
+  register_setting("options_company_info", "company_info_youtube_url");
 
   register_setting("options_company_info", "contact_section_title");
   register_setting("options_company_info", "contact_section_subtitle");
@@ -166,6 +168,11 @@ function mybookinges_configuration_company_info() {
           <th scope="row"><?php _e('LinkedIn', 'mybooking') ?></th>
           <td><input type="text" name="company_info_linkedin_url" size="40" value="<?php echo get_option('company_info_linkedin_url'); ?>" />
           <br><span class="description"><?php _e('Pega aquí la URL del perfil de LinkedIn', 'mybooking') ?></span></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><?php _e('YouTube', 'mybooking') ?></th>
+          <td><input type="text" name="company_info_youtube_url" size="40" value="<?php echo get_option('company_info_youtube_url'); ?>" />
+          <br><span class="description"><?php _e('Pega aquí la URL del canal de YouTube', 'mybooking') ?></span></td>
         </tr>
       </table>
 

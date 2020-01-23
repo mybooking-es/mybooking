@@ -15,7 +15,7 @@
     <div>
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
         <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
-        <p class="detail-text"><?php _e('Duración del alquiler', 'mybooking') ?>: <%=shopping_cart.days%> día/s</p>
+        <p class="detail-text"><?php _e('Duración del alquiler', 'mybooking') ?>: <%=shopping_cart.days%> <?php _e('día/s','mybooking'); ?></p>
       <% } %>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>
@@ -90,14 +90,14 @@
       </div>
       <div class="reservation-detail-content">
         <ul class="list-group">
-          
+
           <!-- Product -->
 
           <li class="list-group-item d-flex justify-content-between align-items-center">
             <span class="extra-name"><?php _e('Total producto','mybooking') ?></span>
             <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.item_cost)%></span>
           </li>
-      
+
           <!-- Extras -->
 
           <% if (shopping_cart.extras.length > 0) { %>
@@ -118,47 +118,47 @@
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.time_from_cost)%></span>
             </li>
           <% } %>
-        
+
           <% if (shopping_cart.pickup_place_cost > 0) { %>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               <span class="extra-name"><?php _e('Suplemento lugar de entrega', 'mybooking') ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.pickup_place_cost)%></span>
             </li>
           <% } %>
-        
+
           <% if (shopping_cart.time_to_cost > 0) { %>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               <span class="extra-name"><?php _e('Suplemento hora de devolución', 'mybooking') ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.time_to_cost)%></span>
             </li>
           <% } %>
-        
+
           <% if (shopping_cart.return_place_cost > 0) { %>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               <span class="extra-name"><?php _e('Suplemento lugar de devolución', 'mybooking') ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.return_place_cost)%></span>
             </li>
           <% } %>
-        
+
           <% if (shopping_cart.driver_age_cost > 0) { %>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               <span class="extra-name"><?php _e('Suplemento edad del conductor', 'mybooking') ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.driver_age_cost)%></span>
             </li>
           <% } %>
-        
+
           <% if (shopping_cart.category_supplement_1_cost > 0) { %>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               <span class="extra-name"><?php _e('Suplemento combustible', 'mybooking') ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.category_supplement_1_cost)%></span>
-            </li>          
+            </li>
           <% } %>
 
           <li class="list-group-item d-flex justify-content-between align-items-center">
             <span class="extra-name fw-700"><?php _e('Importe total', 'mybooking') ?></span>
             <span class="extra-price fw-600"><%=configuration.formatCurrency(shopping_cart.total_cost)%></span>
           </li>
-        </ul> 
+        </ul>
       </div>
     </div>
 
@@ -172,18 +172,18 @@
 <script type="text/tmpl" id="script_payment_detail">
     <input type="hidden" name="payment" value="none">
 
-    <%  
+    <%
        var paymentAmount = 0;
        var selectionOptions = 0;
 
-       if (sales_process.can_request) { 
+       if (sales_process.can_request) {
          selectionOptions += 1;
-       }  
-       
-       if (sales_process.can_pay_on_delivery) { 
+       }
+
+       if (sales_process.can_pay_on_delivery) {
          selectionOptions += 1;
-       } 
-       
+       }
+
        if (sales_process.can_pay) {
          selectionOptions += 1;
          if (sales_process.can_pay_deposit) {
@@ -192,12 +192,12 @@
          else {
             paymentAmount = shopping_cart.total_cost;
          }
-       } 
+       }
     %>
 
     <% if (selectionOptions > 1) { %>
       <hr>
-      <div class="form-row">  
+      <div class="form-row">
          <% if (sales_process.can_request) { %>
            <div class="form-group col-md-12">
              <label for="payments_paypal_standard">
@@ -208,18 +208,18 @@
          <% if (sales_process.can_pay_on_delivery) { %>
            <div class="form-group col-md-12">
              <label for="payments_paypal_standard">
-              <input type="radio" name="complete_action" value="pay_on_delivery" class="complete_action">&nbsp;Pagar en destino
+              <input type="radio" name="complete_action" value="pay_on_delivery" class="complete_action">&nbsp;<?php _e('Pagar en destino','mybooking'); ?>
              </label>
            </div>
          <% } %>
          <% if (sales_process.can_pay) { %>
          <div class="form-group col-md-12">
            <label for="payments_paypal_standard">
-            <input type="radio" name="complete_action" value="pay_now" class="complete_action">&nbsp;Pagar ahora
+            <input type="radio" name="complete_action" value="pay_now" class="complete_action">&nbsp;<?php _e('Pagar ahora','mybooking') ?>
            </label>
          </div>
          <% } %>
-      </div>         
+      </div>
     <% } %>
 
     <!-- Request reservation -->
@@ -228,14 +228,14 @@
     <div id="request_reservation_container" <% if (selectionOptions > 1 || !sales_process.can_request) { %>style="display:none"<%}%>>
 
         <div class="border p-4">
-          <div class="form-row">  
+          <div class="form-row">
             <div class="form-group col-md-12">
               <label for="payments_paypal_standard">
-                <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;Acepto los términos y condiciones y la política de privacidad
+                <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;<?php _e('Acepto los términos y condiciones y la política de privacidad','mybooking') ?>
               </label>
             </div>
-          </div>   
-          
+          </div>
+
           <div class="form-row">
             <div class="form-group col-md-12">
               <button type="submit" class="btn btn-outline-dark"><?php _e('Solicitud de reserva','mybooking') ?></button>
@@ -247,25 +247,25 @@
     <% } %>
 
     <% if (sales_process.can_pay) { %>
-        
+
         <% if (sales_process.can_pay_on_delivery) { %>
         <!-- Pay on delivery -->
         <div id="payment_on_delivery_container" <% if (selectionOptions > 1 || !sales_process.can_pay_on_delivery) { %>style="display:none"<%}%>>
 
             <div class="border p-4">
-                <div class="form-row">  
+                <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="payments_paypal_standard">
-                      <input type="checkbox" id="conditions_read_payment_on_delivery" name="conditions_read_payment_on_delivery">&nbsp;Acepto los términos y condiciones y la política de privacidad
+                      <input type="checkbox" id="conditions_read_payment_on_delivery" name="conditions_read_payment_on_delivery">&nbsp;<?php _e('Acepto los términos y condiciones y la política de privacidad','mybooking') ?>
                     </label>
                   </div>
-                </div>   
+                </div>
 
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <button type="submit" class="btn btn-outline-dark"><?php _e('Confirmar', 'mybooking') ?></button>
                   </div>
-                </div>  
+                </div>
             </div>
 
         </div>
@@ -285,9 +285,9 @@
                    <p><%=i18next.t('complete.reservationForm.booking_amount',{amount: configuration.formatCurrency(paymentAmount)})%></p>
                 </div>
 
-                <% if (sales_process.payment_methods.paypal_standard && 
+                <% if (sales_process.payment_methods.paypal_standard &&
                        sales_process.payment_methods.tpv_virtual) { %>
-                    <div class="form-row">  
+                    <div class="form-row">
                        <div class="form-group col-md-12">
                          <label for="payments_paypal_standard">
                           <input type="radio" id="payments_paypal_standard" name="payment_method_select" class="payment_method_select" value="paypal_standard">&nbsp;Paypal
@@ -296,37 +296,37 @@
                        </div>
                        <div class="form-group col-md-12">
                          <label for="payments_credit_card">
-                          <input type="radio" id="payments_credit_card" name="payment_method_select" class="payment_method_select" value="<%=sales_process.payment_methods.tpv_virtual%>">&nbsp;Tarjeta de crédito/débito
+                          <input type="radio" id="payments_credit_card" name="payment_method_select" class="payment_method_select" value="<%=sales_process.payment_methods.tpv_virtual%>">&nbsp;<?php _e('Tarjeta de crédito/débito','mybooking') ?>
                           <img src="/assets/images/pm-visa.jpg"/>
                           <img src="/assets/images/pm-mastercard.jpg"/>
                          </label>
                        </div>
-                    </div>  
+                    </div>
                     <div id="payment_method_select_error" class="form-row">
-                    </div> 
+                    </div>
                 <% } else if (sales_process.payment_methods.paypal_standard) { %>
                     <img src="/assets/images/pm-paypal.jpg"/>
                     <input type="hidden" id="payment_method_value" value="paypal_standard">
-                <% } else if (sales_process.payment_methods.tpv_virtual) { %> 
+                <% } else if (sales_process.payment_methods.tpv_virtual) { %>
                     <img src="/assets/images/pm-mastercard.jpg"/>
                     <img src="/assets/images/pm-visa.jpg"/>
                     <input type="hidden" id="payment_method_value" value="<%=sales_process.payment_methods.tpv_virtual%>">
                 <% } %>
 
                 <hr>
-                <div class="form-row">  
+                <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="payments_paypal_standard">
-                      <input type="checkbox" id="conditions_read_pay_now" name="conditions_read_pay_now">&nbsp;Acepto los términos y condiciones y la política de privacidad
+                      <input type="checkbox" id="conditions_read_pay_now" name="conditions_read_pay_now">&nbsp;<?php _e('Acepto los términos y condiciones y la política de privacidad','mybooking') ?>
                     </label>
                   </div>
-                </div>   
+                </div>
 
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <button type="submit" class="btn btn-outline-dark"><%=i18next.t('complete.reservationForm.payment_button',{amount: configuration.formatCurrency(paymentAmount)})%></a>
                   </div>
-                </div>   
+                </div>
             </div>
 
         </div>

@@ -48,7 +48,7 @@ function mybooking_widgets_init() {
 			'name'          => __( 'Footer Uno', 'mybooking' ),
 			'id'            => 'mybooking_global_footer_1',
 			'description'   => __( 'Primera área de widgets en el footer', 'mybooking' ),
-			'before_widget' => '<br/><div>',
+			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -57,7 +57,7 @@ function mybooking_widgets_init() {
 			'name'          => __( 'Footer Dos', 'mybooking' ),
 			'id'            => 'mybooking_global_footer_2',
 			'description'   => __( 'Segunda área de widgets en el footer', 'mybooking' ),
-			'before_widget' => '<br/><div>',
+			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -66,7 +66,7 @@ function mybooking_widgets_init() {
 			'name'          => __( 'Footer Tres', 'mybooking' ),
 			'id'            => 'mybooking_global_footer_3',
 			'description'   => __( 'Tercera área de widgets en el footer', 'mybooking' ),
-			'before_widget' => '<br/><div>',
+			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -75,7 +75,7 @@ function mybooking_widgets_init() {
 			'name'          => __( 'Footer Cuatro', 'mybooking' ),
 			'id'            => 'mybooking_global_footer_4',
 			'description'   => __( 'Cuarta área de widgets en el footer', 'mybooking' ),
-			'before_widget' => '<br/><div>',
+			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
 	);
