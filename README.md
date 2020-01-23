@@ -92,7 +92,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - New custom post type for vehicle reselling
 - Custom post type activation option in Global Options settings page
 
-### Version 0.1.5
+### Version 0.1.5git
 - Added custom text on contact template
 - Several translation updates and minor changes
 
@@ -102,3 +102,4 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Added YouTube icon on footer
 - Added new fields on **mybookin-plugin-complete-tmpl.php**
 - Updated translations
+- Sticky topbar on Choose template

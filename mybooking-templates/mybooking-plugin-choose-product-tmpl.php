@@ -12,23 +12,46 @@
 
 <?php $list_layout = get_option('global_list_layout');
   if ($list_layout == 0) { ?>
-    <!-- Summary sidebar -->
+
+    <!-- Summary Sticky -->
     <script type="text/tmpl" id="script_reservation_summary">
-      <div class="shadow-bottom reservation-summary-sidebar">
-        <h4 class="brand-primary my-3"><?php _e('Detalles de la reserva', 'mybooking') ?></h4>
-        <h5><?php _e('Entrega', 'mybooking') ?></h5>
-        <p class="color-gray-600"><span><i class="fa fa-calendar mr-1" aria-hidden="true"></i></span><%=shopping_cart.date_from_full_format%> / <%=shopping_cart.time_from%></p>
-        <p class="color-gray-600"><span><i class="fa fa-map-marker mr-1" aria-hidden="true"></i></span><%=shopping_cart.pickup_place_customer_translation%></p>
-        <hr>
-        <h5><?php _e('Devolución', 'mybooking') ?></h5>
-        <p class="color-gray-600"><span><i class="fa fa-calendar mr-1" aria-hidden="true"></i></span><%=shopping_cart.date_to_full_format%> / <%=shopping_cart.time_to%></p>
-        <p class="color-gray-600"><span><i class="fa fa-map-marker mr-1" aria-hidden="true"></i></span><%=shopping_cart.return_place_customer_translation%></p>
-        <hr>
+      <div class="reservation-summary-sticky-wrapper">
+      <div class="reservation-summary-sticky">
+        <div class="reservation-summary-item">
+          <!-- primer bloque Recogida -->
+          <p>
+            <span class="fw-700 d-none d-md-block mr-2">Recogida</span>
+            <span class="bold-on-mobile"><%=shopping_cart.pickup_place_customer_translation%></span>
+          </p>
+          <p><%=shopping_cart.date_from_short_format%> - <%=shopping_cart.time_from%></p>
+        </div>
+        <div class="reservation-summary-separator">
+          <i class="fa fa-long-arrow-right"></i>
+        </div>
+        <div class="reservation-summary-item">
+          <!-- Devolución (en móbil muestra lugar sólo cuando es diferente) -->
+          <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
+            <p>
+              <span class="fw-700 d-none d-md-block mr-2">Devolución</span>
+              <span class="bold-on-mobile"><%=shopping_cart.return_place_customer_translation%></span>
+            </p>
+          <% } else { %>
+            <p>
+              <span class="fw-700 d-none d-md-block mr-2">Devolución</span>
+              <span class="bold-on-mobile d-none d-md-block"><%=shopping_cart.return_place_customer_translation%></span>
+            </p>
+          <% } %>
+          <p><%=shopping_cart.date_to_short_format%> - <%=shopping_cart.time_to%></p>
+        </div>
         <!-- Button trigger modal -->
-        <button id="modify_reservation_button" class="btn btn-outline-dark" data-toggle="modal" data-target="#choose_productModal"><?php _e('Modificar reserva', 'mybooking') ?></button>
+        <div class="modify-button">
+        <button id="modify_reservation_button" data-toggle="modal" data-target="#choose_productModal"><i class="fa fa-edit"></i></button>
+        </div>
       </div>
+    </div>
     </script>
-    <!-- product grid list -->
+
+    <!-- Product Grid -->
     <script type="text/tpml" id="script_detailed_product">
       <div class="magic-cards-container">
         <% for (var idx=0;idx<products.length; idx++) { %>
@@ -88,7 +111,7 @@
     </script>
 <?php } else { ?>
 
-<!-- summary horizontal sticky -->
+<!-- Summary Sticky -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="reservation-summary-sticky-wrapper">
   <div class="reservation-summary-sticky">
@@ -101,7 +124,7 @@
       <p><%=shopping_cart.date_from_short_format%> - <%=shopping_cart.time_from%></p>
     </div>
     <div class="reservation-summary-separator">
-      <i class="fas fa-long-arrow-alt-right"></i>
+      <i class="fa fa-long-arrow-right"></i>
     </div>
     <div class="reservation-summary-item">
       <!-- Devolución (en móbil muestra lugar sólo cuando es diferente) -->
@@ -126,7 +149,7 @@
 </div>
 </script>
 
-<!-- Script detailed product for choose_product -->
+<!-- Product List -->
 <script type="text/tpml" id="script_detailed_product">
   <div class="magic-card-horizontal-wrapper">
   <% for (var idx=0;idx<products.length; idx++) { %>

@@ -15,14 +15,14 @@
   <!-- Reservation : Pickup/Return information -->
   <?php $list_layout = get_option('global_list_layout');
   if ($list_layout == 0) { ?>
-    <div class="bg-gray-200 reservation-summary-sidebar-wrapper">
-      <div id="reservation_detail"></div>
+    <div class="">
+      <div id="reservation_detail" class="sticky-top"></div>
       <div id="product_listing"></div>
     </div>
   <?php } else { ?>
       <div id="reservation_detail" class="sticky-top"></div>
-      <div id="product_listing" class="bg-gray-200"></div>
+      <div id="product_listing"></div>
   <?php } ?>
   <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
-  
+
 </div>
