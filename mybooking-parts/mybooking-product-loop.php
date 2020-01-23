@@ -3,7 +3,7 @@
 *		Template Name: Mybooking Product Loop
 *  	-------------------------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.4
@@ -21,6 +21,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 		<div class="row">
 			<main class="site-main" id="main">
+
+				<?php the_content(); ?>
 
         <?php
           $args=array(

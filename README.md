@@ -91,7 +91,14 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Updated translation to en_GB and added de_DE
 - New custom post type for vehicle reselling
 - Custom post type activation option in Global Options settings page
-- Added custom text on contact template
 
 ### Version 0.1.5
-- Now we can choose the type of card presentation on choose page; horizontal or grid
+- Added custom text on contact template
+- Several translation updates and minor changes
+
+### Version 0.2.0
+- Added horizontal cards on choose vehicle process page
+- Cleaned obsolet parts on footer
+- Added YouTube icon on footer
+- Added new fields on **mybookin-plugin-complete-tmpl.php**
+- Updated translations

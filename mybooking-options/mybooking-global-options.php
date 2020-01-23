@@ -3,7 +3,7 @@
 *		GLOBAL CONFIGURATION
 *  	--------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.2
@@ -103,8 +103,8 @@ function mybookinges_configuration_global() {
           <th scope="row"><?php _e('Footer', 'mybooking') ?></th>
           <td>
             <?php $options_footer = get_option( "global_footer_layout" ); ?>
-            <input type="radio" name="global_footer_layout" <?php checked( $options_footer, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Mínimal','mybooking') ?></strong><br><?php _e('Solo muestra el copyright', 'mybooking') ?></span><br><br>
-            <input type="radio" name="global_footer_layout" <?php checked( $options_footer, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Normal', 'mybooking') ?></strong><br><?php _e('Muestra cuatro columnas para widgets, información corporativa y enlaces sociales', 'mybooking') ?></span>
+            <input type="radio" name="global_footer_layout" <?php checked( $options_footer, 0 ); ?> value="1"> <span class="description"><strong><?php _e('Normal', 'mybooking') ?></strong><br><?php _e('Muestra cuatro columnas para widgets, información corporativa y enlaces sociales', 'mybooking') ?></span>
+            <input type="radio" name="global_footer_layout" <?php checked( $options_footer, 1 ); ?> value="0"> <span class="description"><strong><?php _e('Mínimal','mybooking') ?></strong><br><?php _e('Solo muestra el copyright', 'mybooking') ?></span><br><br>
           </td>
         </tr>
       </table>
