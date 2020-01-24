@@ -39,32 +39,38 @@
                 <div class="form-group col-md-6">
                   <label for="name"><?php _e('Nombre', 'mybooking') ?> *</label>
                   <input class="form-control" id="customer_name" name="customer_name" type="text"
-                    placeholder="<?php _e('Nombre', 'mybooking') ?>*">
+                    placeholder="<?php _e('Nombre', 'mybooking') ?>*"
+                    maxlength="40">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="surname"><?php _e('Apellidos', 'mybooking') ?> *</label>
                   <input class="form-control" id="customer_surname" name="customer_surname" type="text"
-                    placeholder="<?php _e('Apellidos', 'mybooking') ?>">
+                    placeholder="<?php _e('Apellidos', 'mybooking') ?>"
+                    maxlength="40">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="email"><?php _e('Correo eléctronico', 'mybooking') ?> *</label>
                   <input class="form-control" id="customer_email" name="customer_email" type="text"
-                    placeholder="<?php _e('Correo eléctronico', 'mybooking') ?>">
+                    placeholder="<?php _e('Correo eléctronico', 'mybooking') ?>"
+                    maxlength="50">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="confirm_customer_email"><?php _e('Confirmar correo eléctronico', 'mybooking') ?> *</label>
                   <input class="form-control" id="confirm_customer_email" name="confirm_customer_email" type="text"
-                    placeholder="<?php _e('Confirmar correo eléctronico', 'mybooking') ?>">
+                    placeholder="<?php _e('Confirmar correo eléctronico', 'mybooking') ?>"
+                    maxlength="50">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="phone"><?php _e('Teléfono principal', 'mybooking') ?> *</label>
                   <input class="form-control" id="customer_phone" name="customer_phone" type="text"
-                    placeholder="<?php _e('Teléfono principal', 'mybooking') ?>">
+                    placeholder="<?php _e('Teléfono principal', 'mybooking') ?>"
+                    maxlength="15">
                 </div>
                 <div class="form-group col-md-6">
                   <label for=""><?php _e('Teléfono alternativo', 'mybooking') ?></label>
                   <input class="form-control" id="customer_mobile_phone" name="customer_mobile_phone" type="text"
-                    placeholder="<?php _e('Teléfono alternativo', 'mybooking') ?>">
+                    placeholder="<?php _e('Teléfono alternativo', 'mybooking') ?>"
+                    maxlength="15">
                 </div>
               </div>
               <h4 class="brand-primary my-3"><?php _e('Información adicional', 'mybooking') ?></h4>
