@@ -109,4 +109,3 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Eliminated footer menu references
 - Deprecation notice on Contact settings section (we'll eliminate on 1.0.0)
 - Added the_content() hook on **mybooking-product-loop.php**
-- Now we can upload .svg files

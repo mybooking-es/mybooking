@@ -15,9 +15,19 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="hero-header-container">
 
-  <?php $image_hero = get_option("home_hero_image"); ?>
-  <img class="bg-landing" src="<?php echo $image_hero ?>" alt="">
-  
+  <?php $video_hero = get_option( "home_hero_video" ); ?>
+  <?php $image_hero = get_option( "home_hero_image" ); ?>
+
+  <?php if ( $video_hero !== '' ) { ?>
+
+    <video class="bg-landing" src="<?php echo $video_hero ?>">
+
+  <?php } else { ?>
+
+    <img class="bg-landing" src="<?php echo $image_hero ?>" alt="">
+
+  <?php } ?>
+
   <div class="hero-header-content">
     <div class="hero-header-left">
       <div class="aligner">
@@ -31,7 +41,7 @@ defined( 'ABSPATH' ) || exit;
         </p>
 
         <!-- Title -->
-        <?php $title_hero = get_option("home_hero_title");
+        <?php $title_hero = get_option( "home_hero_title" );
     	    if ($title_hero !== '') { ?>
             <h1><?php echo $title_hero ?></h1>
         <?php } ?>
@@ -45,9 +55,9 @@ defined( 'ABSPATH' ) || exit;
       </div>
     </div>
 
-    <!-- Widget Right -->
     <div class="hero-header-right">
 
+      <!-- Widget Right -->
       <?php if ( is_active_sidebar( 'mybooking_home_hero_main' ) ) : ?>
         <?php dynamic_sidebar( 'mybooking_home_hero_main' ); ?>
       <?php endif; ?>
