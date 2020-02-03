@@ -13,10 +13,9 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-add_filter( 'upload_mimes', 'mybooking_myme_types', 1, 1 );
-function mybooking_myme_types( $mime_types ) {
-  $mime_types['svg'] = 'image/svg+xml';     // Adding .svg extension
-
-  return $mime_types;
+function mybooking_mime_types($mimes) {
+   $mimes['svg'] = 'image/svg+xml';
+   return $mimes;
 }
+add_filter('upload_mimes', 'mybooking_mime_types');
 ?>
