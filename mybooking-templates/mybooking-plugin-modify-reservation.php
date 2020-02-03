@@ -1,7 +1,7 @@
 <?php
 /**
-*   PLUGIN MODIFY RESERVATION PARTIAL
-*   ---------------------------------
+*   PLUGIN MODIFY RESERVATION
+*   -------------------------
 *
 * 	Versión: 0.0.1
 *   @package WordPress
@@ -39,7 +39,7 @@
                 <i class="fa fa-times flex-icon"></i>
               </button>
             </div>
-          </div>          
+          </div>
         </div>
         <!-- Return place -->
         <div class="flex-form-item-box">
@@ -56,9 +56,9 @@
               <input type="hidden" name="custom_return_place" value="false" />
               <button type="button" class="another_return_place_group_close p-0">
                   <i class="fa fa-times flex-icon"></i>
-              </button>  
-            </div>          
-          </div>          
+              </button>
+            </div>
+          </div>
         </div>
         <!-- Date/Time from -->
         <div class="flex-form-item-box">

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Understrap Mybooking Child\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-24 11:33+0000\n"
-"PO-Revision-Date: 2020-01-24 11:36+0000\n"
+"PO-Revision-Date: 2020-02-03 13:51+0000\n"
 "Last-Translator: admin <cranca@gmail.com>\n"
 "Language-Team: English (UK)\n"
 "Language: en_GB\n"
@@ -645,7 +645,7 @@ msgstr "Driving license number"
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:797
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:1084
 msgid "Fecha expedición carnet de conducir"
-msgstr "Driving license expedition date"
+msgstr "Driving license date of issue"
 
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:510
 #: ../../../../../../../Proyectos/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:819

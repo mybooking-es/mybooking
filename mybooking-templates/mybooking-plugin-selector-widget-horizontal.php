@@ -1,7 +1,7 @@
 <?php
 /**
-*   PLUGIN WIDGET FORM
-*   ------------------
+*   PLUGIN SELECTOR WIDGET HORIZONTAL
+*   ---------------------------------
 *
 *   Versión: 0.0.1
 *   @package WordPress
@@ -21,7 +21,7 @@
     <?php if ( $args['family_id'] != '' ) : ?>
     <input type="hidden" name="family_id" value="<?php echo $args['family_id']?>" />
     <?php endif; ?>
-    
+
     <div class="flex-form-group-wrapper">
       <!-- Pickup / Return place -->
       <div class="flex-form-group">
@@ -40,7 +40,7 @@
                 <i class="fa fa-times flex-icon"></i>
               </button>
             </div>
-          </div>           
+          </div>
         </div>
         <div class="flex-form-horizontal-box">
           <label><?php _e('Lugar Devolución ', 'mybooking') ?></label>
@@ -58,7 +58,7 @@
                 <i class="fa fa-times flex-icon"></i>
               </button>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
       <!-- Date/Time from / to -->

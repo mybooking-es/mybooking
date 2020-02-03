@@ -16,7 +16,6 @@ defined( 'ABSPATH' ) || exit;
 function mybooking_extra_menus() {
 register_nav_menus(
 array(
-   'footer-menu' => __( 'Menú Footer' ),
    'top-menu' => __( 'Menú Topbar' )
    )
  );

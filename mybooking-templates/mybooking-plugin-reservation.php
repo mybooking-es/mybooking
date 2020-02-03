@@ -1,12 +1,12 @@
 <?php
 /**
-*   PLUGIN SUMMARY PAGE
-*   -------------------
+*   PLUGIN RESERVATION PAGE
+*   -----------------------
 *
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.0.1
+*   @since Mybooking WordPress Theme 0.2.0
 */
 ?>
 <div class="reservation-step custom-form">
@@ -18,6 +18,6 @@
         </div>
       </div>
     </div>
-    <div id="reservation_detail"></div>  
+    <div id="reservation_detail"></div>
   </div>
 </div>

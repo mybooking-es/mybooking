@@ -1,12 +1,12 @@
 <?php
 /**
-*   PLUGIN SUMMARY TEMPLATE
-*   -----------------------
+*   PLUGIN RESERVATION TEMPLATE
+*   ---------------------------
 *
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.0.1
+*   @since Mybooking WordPress Theme 0.2.0
 */
 ?>
 
@@ -68,8 +68,8 @@
           </div>
         </div>
         <br>
-        <div id="reservation_form_container" class="col bg-white shadow-bottom py-3 px-3" style="display:none"></div>  
-        <br>   
+        <div id="reservation_form_container" class="col bg-white shadow-bottom py-3 px-3" style="display:none"></div>
+        <br>
       </div>
       <!-- Sidebar -->
       <div class="col-md-4">
@@ -77,7 +77,7 @@
           <h4 class="brand-primary my-3"><?php _e('Detalle de la reserva', 'mybooking') ?></h4>
           <h5><?php _e('Total producto', 'mybooking') ?></h5>
           <p class="color-gray-600"><%=configuration.formatCurrency(booking.item_cost)%></p>
-         
+
           <% if (booking.booking_extras.length > 0) { %>
             <hr>
             <h5><?php _e('Extras', 'mybooking') ?></h5>
@@ -193,7 +193,7 @@
         <label for="state"><?php _e('Código Postal', 'mybooking') ?></label>
         <input class="form-control" id="zip" name="customer_address[zip]" type="text"
           placeholder="<%=configuration.escapeHtml("<?php _e('Provincia', 'mybooking') ?>")%>" value="<%=booking.zip%>"  max_length="10">
-      </div>      
+      </div>
       <div class="form-group col-md-6">
         <label class="full-width" for="country"><?php _e('País', 'mybooking') ?>
           <i class="fa custom-icon fa-angle-down"></i>
@@ -452,7 +452,7 @@
           maxlength="40">
       </div>
     </div>
-    <div class="form-row">        
+    <div class="form-row">
       <div class="form-group col-md-6">
         <label for="driver_document_id"><?php _e('Nif o pasaporte del conductor', 'mybooking') ?></label>
         <input class="form-control" id="driver_document_id" name="driver_document_id" type="text"
@@ -482,13 +482,13 @@
         <input type="hidden" name="driver_document_id_date" id="driver_document_id_date"></input>
       </div>
     </div>
-    <div class="form-row">  
+    <div class="form-row">
       <div class="form-group col-md-6">
         <label
           for="driver_driving_license_number"><?php _e('Número del carnet de conducir', 'mybooking') ?></label>
         <input class="form-control" id="driver_driving_license_number" name="driver_driving_license_number"
-          type="text" placeholder="<%=configuration.escapeHtml("<?php _e('Número del carnet de conducir', 'mybooking') ?>")%>" 
-          value="<%=booking.driver_driving_license_number%>" 
+          type="text" placeholder="<%=configuration.escapeHtml("<?php _e('Número del carnet de conducir', 'mybooking') ?>")%>"
+          value="<%=booking.driver_driving_license_number%>"
           maxlength="50">
       </div>
       <div class="form-group col-md-6">
@@ -514,7 +514,7 @@
         <input type="hidden" name="driver_driving_license_date" id="driver_driving_license_date"></input>
       </div>
     </div>
-    <div class="form-row">      
+    <div class="form-row">
       <div class="form-group col-md-6">
         <label
           for="driver_driving_license_country"><?php _e('País de expedición carnet de conducir', 'mybooking') ?>
@@ -787,14 +787,14 @@
       <div class="form-group col-md-6">
         <label for="driver_name"><?php _e('Nombre del conductor', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_1_name" name="additional_driver_1_name" type="text"
-          placeholder="<%=configuration.escapeHtml("<?php _e('Nombre del conductor', 'mybooking') ?>")%>" 
+          placeholder="<%=configuration.escapeHtml("<?php _e('Nombre del conductor', 'mybooking') ?>")%>"
           value="<%=booking.additional_driver_1_name%>"
           maxlength="40">
       </div>
       <div class="form-group col-md-6">
         <label for=""><?php _e('Apellidos del conductor', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_1_surname" name="additional_driver_1_surname" type="text"
-          placeholder="<%=configuration.escapeHtml("<?php _e('Apellidos del conductor', 'mybooking') ?>")%>" 
+          placeholder="<%=configuration.escapeHtml("<?php _e('Apellidos del conductor', 'mybooking') ?>")%>"
           value="<%=booking.additional_driver_1_surname%>"
           maxlength="40">
       </div>
@@ -804,7 +804,7 @@
         <label
           for="driver_driving_license_number"><?php _e('Número del carnet de conducir', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_1_driving_license_number" name="additional_driver_1_driving_license_number"
-          type="text" placeholder="<%=configuration.escapeHtml("<?php _e('Número del carnet de conducir', 'mybooking') ?>")%>" 
+          type="text" placeholder="<%=configuration.escapeHtml("<?php _e('Número del carnet de conducir', 'mybooking') ?>")%>"
           value="<%=booking.additional_driver_1_driving_license_number%>"
           maxlength="50">
       </div>
@@ -1080,14 +1080,14 @@
       <div class="form-group col-md-6">
         <label for="driver_name"><?php _e('Nombre del conductor', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_2_name" name="additional_driver_2_name" type="text"
-          placeholder="<%=configuration.escapeHtml("<?php _e('Nombre del conductor', 'mybooking') ?>")%>" 
+          placeholder="<%=configuration.escapeHtml("<?php _e('Nombre del conductor', 'mybooking') ?>")%>"
           value="<%=booking.additional_driver_2_name%>"
           maxlength="40">
       </div>
       <div class="form-group col-md-6">
         <label for=""><?php _e('Apellidos del conductor', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_2_surname" name="additional_driver_2_surname" type="text"
-          placeholder="<%=configuration.escapeHtml("<?php _e('Apellidos del conductor', 'mybooking') ?>")%>" 
+          placeholder="<%=configuration.escapeHtml("<?php _e('Apellidos del conductor', 'mybooking') ?>")%>"
           value="<%=booking.additional_driver_2_surname%>"
           maxlength="40">
       </div>
@@ -1097,7 +1097,7 @@
         <label
           for="driver_driving_license_number"><?php _e('Número del carnet de conducir', 'mybooking') ?></label>
         <input class="form-control" id="additional_driver_2_driving_license_number" name="additional_driver_2_driving_license_number"
-          type="text" placeholder="<%=configuration.escapeHtml("<?php _e('Número del carnet de conducir', 'mybooking') ?>")%>" 
+          type="text" placeholder="<%=configuration.escapeHtml("<?php _e('Número del carnet de conducir', 'mybooking') ?>")%>"
           value="<%=booking.additional_driver_2_driving_license_number%>"
           maxlength="50">
       </div>
@@ -1406,9 +1406,9 @@
       <%= i18next.t('complete.reservationForm.booking_amount', {amount:configuration.formatCurrency(booking.booking_amount) }) %>
     </div>
   <% } %>
-  <form name="payment_form">  
+  <form name="payment_form">
     <% if (sales_process.payment_methods.paypal_standard && sales_process.payment_methods.tpv_virtual) { %>
-    <div class="form-row">  
+    <div class="form-row">
        <div class="form-group col-md-12">
          <label for="payments_paypal_standard">
           <input type="radio" name="payment_method_id" value="paypal_standard">&nbsp;<?php _e('Paypal', 'mybooking') ?>
@@ -1422,7 +1422,7 @@
           <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-mastercard.jpg"/>
          </label>
        </div>
-    </div>   
+    </div>
     <% } else if (sales_process.payment_methods.paypal_standard) {%>
       <div class="form-row">
         <div class="form-group col-md-12">
@@ -1437,9 +1437,9 @@
           <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-mastercard.jpg"/>
         </div>
       </div>
-      
+
       <input type="hidden" name="payment_method_id" value="<%=sales_process.payment_methods.tpv_virtual%>"/>
-    <% } %>  
+    <% } %>
     <% if (sales_process.can_pay_deposit) { %>
       <input type="hidden" name="payment" value="deposit"/>
     <% } else if (booking.total_paid == 0) {%>
@@ -1452,6 +1452,6 @@
         <button class="btn btn-outline-dark" id="btn_pay" type="submit"><?php _e('Pagar', 'mybooking') ?></button>
       </div>
     </div>
-  </div>  
+  </div>
 
 </script>

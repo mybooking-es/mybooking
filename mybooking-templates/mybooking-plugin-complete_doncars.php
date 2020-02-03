@@ -1,12 +1,12 @@
 <?php
 /**
-*   PLUGIN COMPLETE PAGE
-*   --------------------
+*   PLUGIN COMPLETE PAGE DONCARS
+*   ----------------------------
 *
 * 	Versión: 0.0.1
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.0.1
+*   @since Mybooking WordPress Theme 0.1.5
 */
 ?>
 <?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
