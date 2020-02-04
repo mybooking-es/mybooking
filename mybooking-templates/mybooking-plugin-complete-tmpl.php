@@ -9,34 +9,36 @@
 *   @since Mybooking WordPress Theme 0.0.1
 */
 ?>
-<!-- Product detail -->
+<!-- Complete sticky bar -->
 <script type="text/tpml" id="script_product_detail">
-  <div class="product-detail">
-    <div>
-      <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-        <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
-        <p class="detail-text"><?php _e('Duración del alquiler', 'mybooking') ?>: <%=shopping_cart.days%> <?php _e('día/s','mybooking'); ?></p>
-      <% } %>
-      <h5><?php _e('Entrega', 'mybooking') ?></h5>
-      <ul>
-        <li><%=shopping_cart.date_from_full_format%> / <%=shopping_cart.time_from%></li>
-        <li><%=shopping_cart.pickup_place_customer_translation%></li>
-      </ul>
-      <h5 class="mt-3"><?php _e('Devolución', 'mybooking') ?></h5>
-      <ul>
-        <li><%=shopping_cart.date_to_full_format%> / <%=shopping_cart.time_to%></li>
-        <li><%=shopping_cart.return_place_customer_translation%></li>
-      </ul>
-      <button id="modify_reservation_button" class="btn btn-outline-dark my-3" data-toggle="modal" data-target="#choose_productModal"><?php _e('Modificar reserva', 'mybooking') ?></button>
-    </div>
-    <div>
-      <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-      <img class="img-fluid" src="<%=shopping_cart.items[idx].photo_full%>" alt="">
-      <% } %>
+  <div class="complete-summary-sticky-wrapper">
+    <div class="complete-summary-sticky">
+      <div class="complete-summary-left">
+        <div class="complete-summary-item">
+            <!-- primer bloque Recogida -->
+            <p class="color-gray-500"><%=shopping_cart.pickup_place_customer_translation%></p>
+            <p class="color-white"><%=shopping_cart.days%> <?php _e('día/s', 'mybooking') ?></p>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="modify-button">
+          <button id="modify_reservation_button" data-toggle="modal" data-target="#choose_productModal"><i class="fa fa-edit"></i></button>
+        </div>
+      </div>
+      <div class="complete-summary-right">
+        <div class="complete-summary-item">
+            <p class="color-gray-500">Total</p>
+            <p class="color-white"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="modify-button">
+          <button data-toggle="modal" data-target="#viewReservationModal">
+            <i class="fa fa-info-circle"></i>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </script>
-
 <!-- Extra representation -->
 <script type="text/template" id="script_detailed_extra">
   <div class="extras-container">
@@ -79,98 +81,121 @@
   </div>
 </script>
 
-<!-- Reservation summary -->
+<!-- Reservation summary modal -->
 <script type="text/tmpl" id="script_reservation_summary">
-    <h4 class="brand-primary my-3"><?php _e('Resumen de la reserva', 'mybooking') ?></h4>
-    <div class="reservation-detail-container">
-      <div class="reservation-detail-image-container">
-        <div class="reservation-detail-image-wrapper">
-          <img class="img-fluid" src="<%= shopping_cart.items[0].photo_medium%>">
+  <div class="modal fade" id="viewReservationModal" tabindex="-1" role="dialog" aria-labelledby="viewModal"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="viewModal"><?php _e('Detalle de la reserva', 'mybooking') ?></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-      </div>
-      <div class="reservation-detail-content">
-        <ul class="list-group">
-
-          <!-- Product -->
-
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span class="extra-name"><?php _e('Total producto','mybooking') ?></span>
-            <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.item_cost)%></span>
-          </li>
-
-          <!-- Extras -->
-
-          <% if (shopping_cart.extras.length > 0) { %>
-            <% for (var idx=0; idx<shopping_cart.extras.length; idx++) { %>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span class="extra-name"><%=shopping_cart.extras[idx].extra_description_customer_translation%></span>
-                <span class="badge badge-primary badge-pill"><%=shopping_cart.extras[idx].quantity%></span>
-                <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
-              </li>
-            <% } %>
+        <div class="modal-body summary-modal">
+          <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
+          <div class="product-view">
+            <div class="product-view_image">
+              <img class="img-fluid" src="<%= shopping_cart.items[0].photo_medium%>">
+            </div>
+            <div class="product-view_text">
+              <p class="fw-700"><%=shopping_cart.items[idx].item_description_customer_translation%></p>
+              <p class="color-gray-500"><?php _e('Duración del alquiler', 'mybooking') ?>: <%=shopping_cart.days%>
+                <?php _e('día/s', 'mybooking') ?></p>
+            </div>
+          </div>
+          <div class="product-summary-wrapper">
+            <div class="product-summary">
+              <ul>
+                <li><%=shopping_cart.date_from_full_format%> /
+                  <%=shopping_cart.time_from%></li>
+                <li><%=shopping_cart.pickup_place_customer_translation%></li>
+              </ul>
+            </div>
+            <div class="product-summary_separator">
+              <i class="fa fa-long-arrow-right"></i>
+            </div>
+            <div class="product-summary">
+              <ul>
+                <li><%=shopping_cart.date_to_full_format%> /
+                  <%=shopping_cart.time_to%></li>
+                <li><%=shopping_cart.return_place_customer_translation%></li>
+              </ul>
+            </div>
+          </div>
           <% } %>
 
-          <!-- Supplements -->
-
-          <% if (shopping_cart.time_from_cost > 0) { %>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
+          <ul class="list-group p-3 summary-modal_list">
+            <!-- Product -->
+            <li class="list-group-item">
+              <span class="extra-name"><?php _e('Total producto', 'mybooking') ?></span>
+              <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.item_cost)%></span>
+            </li>
+            <!-- Extras -->
+            <% if (shopping_cart.extras.length > 0) { %>
+            <% for (var idx=0; idx<shopping_cart.extras.length; idx++) { %>
+            <li class="list-group-item">
+              <span class="extra-name"><%=shopping_cart.extras[idx].extra_description_customer_translation%></span>
+              <span class="badge badge-primary badge-pill"><%=shopping_cart.extras[idx].quantity%></span>
+              <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
+            </li>
+            <% } %>
+            <% } %>
+            <!-- Supplements -->
+            <% if (shopping_cart.time_from_cost > 0) { %>
+            <li class="list-group-item">
               <span class="extra-name"><?php _e('Suplemento hora de entrega', 'mybooking') ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.time_from_cost)%></span>
             </li>
-          <% } %>
-
-          <% if (shopping_cart.pickup_place_cost > 0) { %>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
+            <% } %>
+            <% if (shopping_cart.pickup_place_cost > 0) { %>
+            <li class="list-group-item">
               <span class="extra-name"><?php _e('Suplemento lugar de entrega', 'mybooking') ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.pickup_place_cost)%></span>
             </li>
-          <% } %>
-
-          <% if (shopping_cart.time_to_cost > 0) { %>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
+            <% } %>
+            <% if (shopping_cart.time_to_cost > 0) { %>
+            <li class="list-group-item">
               <span class="extra-name"><?php _e('Suplemento hora de devolución', 'mybooking') ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.time_to_cost)%></span>
             </li>
-          <% } %>
-
-          <% if (shopping_cart.return_place_cost > 0) { %>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
+            <% } %>
+            <% if (shopping_cart.return_place_cost > 0) { %>
+            <li class="list-group-item">
               <span class="extra-name"><?php _e('Suplemento lugar de devolución', 'mybooking') ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.return_place_cost)%></span>
             </li>
-          <% } %>
-
-          <% if (shopping_cart.driver_age_cost > 0) { %>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
+            <% } %>
+            <% if (shopping_cart.driver_age_cost > 0) { %>
+            <li class="list-group-item">
               <span class="extra-name"><?php _e('Suplemento edad del conductor', 'mybooking') ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.driver_age_cost)%></span>
             </li>
-          <% } %>
-
-          <% if (shopping_cart.category_supplement_1_cost > 0) { %>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
+            <% } %>
+            <% if (shopping_cart.category_supplement_1_cost > 0) { %>
+            <li class="list-group-item">
               <span class="extra-name"><?php _e('Suplemento combustible', 'mybooking') ?></span>
-              <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.category_supplement_1_cost)%></span>
+              <span
+                class="extra-price"><%=configuration.formatCurrency(shopping_cart.category_supplement_1_cost)%></span>
             </li>
-          <% } %>
-
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span class="extra-name fw-700"><?php _e('Importe total', 'mybooking') ?></span>
-            <span class="extra-price fw-600"><%=configuration.formatCurrency(shopping_cart.total_cost)%></span>
-          </li>
-        </ul>
+            <% } %>
+        </div>
+        <div class="modal-footer summary-modal_footer">
+          <! -- TOTAL -->
+                <span class="extra-name fw-700"><?php _e('Total', 'mybooking') ?></span>
+                <span
+                  class="fw-900 brand-primary"><%=configuration.formatCurrency(shopping_cart.total_cost)%></span>
+        </div>
       </div>
     </div>
-
-    <! -- TOTAL -->
-    <hr>
-    <p class="total-price text-right mr-3"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
+  </div>
 
 </script>
 
 <!-- Payment detail -->
 <script type="text/tmpl" id="script_payment_detail">
-    <input type="hidden" name="payment" value="none">
+  <input type="hidden" name="payment" value="none">
 
     <%
        var paymentAmount = 0;
