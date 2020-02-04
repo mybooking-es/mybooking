@@ -180,6 +180,10 @@ function mybookinges_configuration_company_info() {
 
       <!-- Contact page adjust -->
 
+      <div class="notice notice-error settings-error">
+        <p><strong>¡Los ajustes de la sección Contacto se eliminarán en próximas versiones!</strong></p>
+      </div>
+
       <h2><?php _e('Página Contacto', 'mybooking') ?></h2>
 
       <table class="form-table">

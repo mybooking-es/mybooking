@@ -1,7 +1,7 @@
 <?php
 /**
-*   PLUGIN WIDGET FORM
-*   ------------------
+*   PLUGIN SELECTOR WIDGET
+*   ----------------------
 *
 * 	Versión: 0.0.1
 *   @package WordPress
