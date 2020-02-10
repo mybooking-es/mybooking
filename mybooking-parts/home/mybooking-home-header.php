@@ -19,15 +19,15 @@ defined( 'ABSPATH' ) || exit;
   <?php $options_header_background = get_option( "home_header_background" );
   if ( $options_header_background == 0 ) { ?>
 
-    <?php $image_hero = get_option( "home_hero_image" ); ?>
-    <img class="home-header_background" src="<?php echo $image_hero ?>">
+    <?php $image_header = get_option( "home_header_image" ); ?>
+    <img class="home-header_background" src="<?php echo $image_header ?>">
 
   <?php } elseif ( $options_header_background == 1 ) { ?>
 
-    <?php $video_hero = get_option( "home_hero_video" ); ?>
-    <?php $image_hero = get_option( "home_hero_image" ); ?>
-    <video class="home-header_background" autoplay loop muted poster="<?php echo $image_hero ?>">
-      <source src="<?php echo $video_hero ?>">
+    <?php $video_header = get_option( "home_header_video" ); ?>
+    <?php $image_header = get_option( "home_header_image" ); ?>
+    <video class="home-header_background" autoplay loop muted poster="<?php echo $image_header ?>">
+      <source src="<?php echo $video_header ?>">
     </video>
 
   <?php } elseif ( $options_header_background == 2 ) { ?>

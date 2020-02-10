@@ -20,18 +20,6 @@ defined( 'ABSPATH' ) || exit;
     <div class="container-fluid">
     <?php endif; ?>
 
-    <!-- Menu toggler -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="<?php esc_attr_e( 'Toggle navigation', 'mybooking' ); ?>">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
     <!-- Logo & branding -->
     <?php $custom_logo = get_post_meta($post->ID, 'logo_personalizado', true) ?>
     <?php if ( ! has_custom_logo() ) { ?>
@@ -62,6 +50,17 @@ defined( 'ABSPATH' ) || exit;
         </a>
 
     <?php } else { the_custom_logo(); } ?>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="<?php esc_attr_e( 'Toggle navigation', 'mybooking' ); ?>">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <!-- WordPress menu -->
     <?php wp_nav_menu(
