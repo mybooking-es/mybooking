@@ -35,9 +35,12 @@ defined( 'ABSPATH' ) || exit;
       <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'mybooking' ); ?></a>
 
       <!-- Topbar -->
-      <?php get_template_part('mybooking-parts/site/mybooking-top-bar') ?>
+      <?php $topbar_active = get_option( "global_topbar" );
+      if ( $topbar_active == 1 ) {
+        get_template_part( 'mybooking-parts/site/mybooking-top-bar' );
+      } ?>
 
       <!-- Navigation -->
-      <?php get_template_part('mybooking-parts/site/mybooking-navigation') ?>
+      <?php get_template_part( 'mybooking-parts/site/mybooking-navigation' ) ?>
 
     </div>

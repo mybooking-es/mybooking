@@ -30,6 +30,7 @@ function mybookinges_create_menu_global() {
 function mybookinges_register_options_global() {
 
   // Definición de opciones
+  add_option("global_topbar","","","yes");
   add_option("global_footer_layout","","","yes");
   add_option("global_list_layout","","","yes");
   add_option("global_testimonials_active","","","yes");
@@ -37,6 +38,7 @@ function mybookinges_register_options_global() {
   add_option("global_product_active","","","yes");
 
   // Registro de opciones
+  register_setting("options_global", "global_topbar");
   register_setting("options_global", "global_footer_layout");
   register_setting("options_global", "global_list_layout");
   register_setting("options_global", "global_testimonial_active");
@@ -68,6 +70,20 @@ function mybookinges_configuration_global() {
     <form method="post" action="options.php">
 
       <?php settings_fields('options_global'); ?>
+
+      <!-- Topbar -->
+
+      <h2><?php _e('Topbar', 'mybooking') ?></h2>
+
+      <table class="form-table">
+        <tr valign="top">
+          <th scope="row"><?php _e('Activa o desactiva el topbar global', 'mybooking') ?></th>
+          <td>
+            <?php $topbar_active = get_option( "global_topbar" ); ?>
+            <input type="checkbox" name="global_topbar" <?php checked( $topbar_active, 1 ); ?> value="1"> <span class="description"><?php _e('Selecciona para activar el topbar', 'mybooking') ?></span>
+          </td>
+        </tr>
+      </table>
 
       <!-- Footer -->
 
