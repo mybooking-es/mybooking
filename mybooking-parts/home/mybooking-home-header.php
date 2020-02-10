@@ -13,6 +13,17 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
+<!-- Wizard container -->  
+<div id="wizard_container" class="bg-white text-dark">
+     <!-- Title -->
+     <div id="step_title" class="step_title text-center h5 pb-2"></div>
+     <!-- Close btn -->
+     <span id="close_wizard_btn" style="" ><i class="fa fa-times"></i></span>
+     <!-- Container -->
+    <div id="wizard_container_step" class="p-2">
+    </div>
+</div>
+
 <div class="home-header">
 
   <!-- FONDOS -->

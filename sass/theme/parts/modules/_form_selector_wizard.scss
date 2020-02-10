@@ -1,3 +1,50 @@
+	#wizard_container {
+
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 1040; 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
+
+	}
+
+	#wizard_container .step_title {
+
+	  position: relative; 
+	  top: 20px; 
+	  border-bottom: 1px solid #eee;
+
+	}
+
+	#close_wizard_btn {
+
+		position: fixed; 
+		top: 20px; 
+		right: 20px; 
+		margin-right: 10px
+
+	}
+
+	#close_wizard_btn i {
+		font-size:1.2em;
+		font-weight: 200;	
+	}
+
+
+	#wizard_container_step {
+     position: fixed; 
+     top: 50px; 
+     left: 0; 
+     z-index: 2000; 
+     width: 100%; 
+     height: 100%; 
+     overflow-y: auto; 
+     overflow-x: hidden	
+	}
+
   #wizard_container #date_from {
     width: 100%;
     height: 100%;
