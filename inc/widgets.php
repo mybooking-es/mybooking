@@ -18,6 +18,15 @@
 function mybooking_widgets_init() {
 	register_sidebar(
 		array(
+			'name'          => __( 'Menú Principal', 'mybooking' ),
+			'id'            => 'mybooking_menu',
+	    'description'    => __( 'Área de widgets en la barra de navegación', 'mybooking' ),
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name'          => __( 'Home Izquierda', 'mybooking' ),
 			'id'            => 'mybooking_home_izquierda',
 	    'description'    => __( 'Área de widgets a la izquierda de la cabecera de la Home', 'mybooking' ),
