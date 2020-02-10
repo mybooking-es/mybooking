@@ -73,6 +73,13 @@
 }
 
 /* Navbar */
+.home .navbar-container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 30;
+}
+
 .navbar-dark .navbar-toggler {
   border: none;
 }
@@ -125,7 +132,7 @@
 		display: block;
 	}
 
-  #wrapper-navbar {
+  .navbar-container {
       width: 100%;
       position: fixed;
       top: 0;

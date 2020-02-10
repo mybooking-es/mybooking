@@ -3,7 +3,7 @@
 *		MYBOOKING HOME HEADER PARTIAL
 *  	-----------------------------
 *
-* 	Versión: 0.0.3
+* 	Versión: 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -13,56 +13,76 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="hero-header-container">
+<div class="home-header">
 
-  <?php $video_hero = get_option( "home_hero_video" ); ?>
-  <?php $image_hero = get_option( "home_hero_image" ); ?>
+  <!-- FONDOS -->
+  <?php $options_header_background = get_option( "home_header_background" );
+  if ( $options_header_background == 0 ) { ?>
 
-  <?php if ( $video_hero !== '' ) { ?>
+    <?php $image_hero = get_option( "home_hero_image" ); ?>
+    <img class="home-header_background" src="<?php echo $image_hero ?>">
 
-    <video class="bg-landing" src="<?php echo $video_hero ?>">
+  <?php } elseif ( $options_header_background == 1 ) { ?>
 
-  <?php } else { ?>
+    <?php $video_hero = get_option( "home_hero_video" ); ?>
+    <?php $image_hero = get_option( "home_hero_image" ); ?>
+    <video class="home-header_background" autoplay loop muted poster="<?php echo $image_hero ?>">
+      <source src="<?php echo $video_hero ?>">
+    </video>
 
-    <img class="bg-landing" src="<?php echo $image_hero ?>" alt="">
+  <?php } elseif ( $options_header_background == 2 ) { ?>
+
+    <?php
+    $carousel_args = array( 'post_type' => 'carousel' );
+    $carousel_item = new WP_Query( $carousel_args );
+    if( $carousel_item->have_posts() ) { ?>
+      <div class="home-header_background carrusel portada-carrusel -carrusel-portada">
+        <?php  while ( $carousel_item->have_posts() ) : $carousel_item->the_post(); ?>
+          <div class="carrusel-item">
+            <?php the_post_thumbnail(); ?>
+          </div>
+        <?php endwhile; ?>
+      </div>
+    <?php } ?>
 
   <?php } ?>
 
-  <div class="hero-header-content">
-    <div class="hero-header-left">
-      <div class="aligner">
-        <p>
+  <!-- ESTRUCTURAS -->
 
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <?php $options_header_layout = get_option( 'home_header_layout' );
+      if ( $options_header_layout == 0 ) { ?>
+
+        <div class="home-header_content home-left col">
           <!-- Widget Left -->
-          <?php if ( is_active_sidebar( 'mybooking_home_hero_secondary' ) ) : ?>
-            <?php dynamic_sidebar( 'mybooking_home_hero_secondary' ); ?>
+          <?php if ( is_active_sidebar( 'mybooking_home_izquierda' ) ) : ?>
+            <?php dynamic_sidebar( 'mybooking_home_izquierda' ); ?>
           <?php endif; ?>
+        </div>
+        <div class="home-header_content home-right col">
+          <!-- Widget Right -->
+          <?php if ( is_active_sidebar( 'mybooking_home_derecha' ) ) : ?>
+            <?php dynamic_sidebar( 'mybooking_home_derecha' ); ?>
+          <?php endif; ?>
+        </div>
 
-        </p>
+      <?php } elseif ( $options_header_layout == 1 ) { ?>
 
-        <!-- Title -->
-        <?php $title_hero = get_option( "home_hero_title" );
-    	    if ($title_hero !== '') { ?>
-            <h1><?php echo $title_hero ?></h1>
-        <?php } ?>
+        <div class="home-header_content home-alone col">
+          <!-- Widget Left -->
+          <?php if ( is_active_sidebar( 'mybooking_home_izquierda' ) ) : ?>
+            <?php dynamic_sidebar( 'mybooking_home_izquierda' ); ?>
+          <?php endif; ?>
+          <!-- Widget Right -->
+          <?php if ( is_active_sidebar( 'mybooking_home_derecha' ) ) : ?>
+            <?php dynamic_sidebar( 'mybooking_home_derecha' ); ?>
+          <?php endif; ?>
+        </div>
 
-        <!-- Subtitle -->
-        <?php $text_hero = get_option("home_hero_text");
-    	    if ($text_hero !== '') { ?>
-            <p><?php echo $text_hero ?></p>
-        <?php } ?>
-
-      </div>
-    </div>
-
-    <div class="hero-header-right">
-
-      <!-- Widget Right -->
-      <?php if ( is_active_sidebar( 'mybooking_home_hero_main' ) ) : ?>
-        <?php dynamic_sidebar( 'mybooking_home_hero_main' ); ?>
-      <?php endif; ?>
+      <?php } ?>
 
     </div>
-
   </div>
 </div>

@@ -3,7 +3,7 @@
 *		GLOBAL CONFIGURATION
 *  	--------------------
 *
-* 	Versión: 0.0.2
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.2
@@ -30,8 +30,6 @@ function mybookinges_create_menu_global() {
 function mybookinges_register_options_global() {
 
   // Definición de opciones
-  add_option("global_google_analytics","","","yes");
-  add_option("global_header_layout","","","yes");
   add_option("global_footer_layout","","","yes");
   add_option("global_list_layout","","","yes");
   add_option("global_testimonials_active","","","yes");
@@ -39,8 +37,6 @@ function mybookinges_register_options_global() {
   add_option("global_product_active","","","yes");
 
   // Registro de opciones
-  register_setting("options_global", "global_google_analytics");
-  register_setting("options_global", "global_header_layout");
   register_setting("options_global", "global_footer_layout");
   register_setting("options_global", "global_list_layout");
   register_setting("options_global", "global_testimonial_active");
@@ -73,30 +69,9 @@ function mybookinges_configuration_global() {
 
       <?php settings_fields('options_global'); ?>
 
-      <!-- Footer Layout -->
+      <!-- Footer -->
 
-      <h2><?php _e('Google Analytics', 'mybooking') ?></h2>
-
-      <table class="form-table">
-        <tr valign="top">
-          <th scope="row"><?php _e('Introduce el ID de Google Analytics', 'mybooking') ?></th>
-          <td><input type="text" name="global_google_analytics" size="40" value="<?php echo get_option('global_google_analytics', 'mybooking'); ?>" /></td>
-        </tr>
-      </table>
-
-      <hr>
-
-      <h2><?php _e('Layouts', 'mybooking') ?></h2>
-
-      <table class="form-table">
-        <tr valign="top">
-          <th scope="row"><?php _e('Cabecera', 'mybooking') ?></th>
-          <td>
-          <?php $options_header = get_option( "global_header_layout" ); ?>
-          <input type="radio" name="global_header_layout" <?php checked( $options_header, 0 ); ?> value="0"><span class="description"><strong><?php _e('Dos columnas','mybooking') ?></strong><br><?php _e('Título y texto personalizables más dos areas para widgets', 'mybooking', 'mybooking') ?></span><br><br>
-          <input type="radio" name="global_header_layout" <?php checked( $options_header, 1 ); ?> value="1"><span class="description"><strong><?php _e('Una columna', 'mybooking') ?></strong><br><?php _e('Título y texto personalizables y una zona para widgets', 'mybooking') ?></span>
-        </tr>
-      </table>
+      <h2><?php _e('Pie de página', 'mybooking') ?></h2>
 
       <table class="form-table">
         <tr valign="top">
@@ -109,9 +84,13 @@ function mybookinges_configuration_global() {
         </tr>
       </table>
 
+      <hr>
+
+      <h2><?php _e('Listado de productos', 'mybooking') ?></h2>
+
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php _e('Productos', 'mybooking') ?></th>
+          <th scope="row"><?php _e('Estilo de presentación', 'mybooking') ?></th>
           <td>
             <?php $options_list = get_option( "global_list_layout" ); ?>
             <input type="radio" name="global_list_layout" <?php checked( $options_list, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Cuadrícula','mybooking') ?></strong><br><?php _e('Muestra los vehiculos en una cuadrícula', 'mybooking') ?></span><br><br>
@@ -121,6 +100,8 @@ function mybookinges_configuration_global() {
       </table>
 
       <hr>
+
+      <!-- Modules -->
 
       <h2><?php _e('Módulos extra', 'mybooking') ?></h2>
 

@@ -3,7 +3,7 @@
 *		COMPANY INFO CONFIGURATION
 *  	--------------------------
 *
-* 	Versión: 0.0.3
+* 	Versión: 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -45,6 +45,8 @@ function mybookinges_register_options_company_info() {
   add_option("company_info_linkedin_url","","","yes");
   add_option("company_info_youtube_url","","","yes");
 
+  add_option("company_info_google_analytics","","","yes");
+
   add_option("contact_section_title","","","yes");
   add_option("contact_section_subtitle","","","yes");
   add_option("contact_section_text","","","yes");
@@ -65,6 +67,8 @@ function mybookinges_register_options_company_info() {
   register_setting("options_company_info", "company_info_instagram_url");
   register_setting("options_company_info", "company_info_linkedin_url");
   register_setting("options_company_info", "company_info_youtube_url");
+
+  register_setting("options_company_info", "company_info_google_analytics");
 
   register_setting("options_company_info", "contact_section_title");
   register_setting("options_company_info", "contact_section_subtitle");
@@ -178,7 +182,20 @@ function mybookinges_configuration_company_info() {
 
       <hr>
 
-      <!-- Contact page adjust -->
+      <!-- Google Analytics -->
+
+      <h2><?php _e('Google Analytics', 'mybooking') ?></h2>
+
+      <table class="form-table">
+        <tr valign="top">
+          <th scope="row"><?php _e('Introduce el ID de Google Analytics', 'mybooking') ?></th>
+          <td><input type="text" name="company_info_google_analytics" size="40" value="<?php echo get_option('company_info_google_analytics', 'mybooking'); ?>" /></td>
+        </tr>
+      </table>
+
+      <hr>
+
+      <!-- Contact page setup -->
 
       <div class="notice notice-error settings-error">
         <p><strong>¡Los ajustes de la sección Contacto se eliminarán en próximas versiones!</strong></p>

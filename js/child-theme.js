@@ -1778,17 +1778,34 @@ $(document).bind("user_cookie_consent_changed", function(event, object) {
 
 }(jQuery));
 
-// Add your custom JS here.
+/**
+*   MYBOOKING CUSTOM JS
+*   -------------------
+*
+* 	Versión: 0.0.2
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
+*/
+
 // OWL CAROUSEL
 $(document).ready(function() {
+
+  $(".-carrusel-portada").owlCarousel({
+    autoPlay: true,
+    slideSpeed : 3600,
+    paginationSpeed : 600,
+    pagination: true,
+    singleItem:true,
+    pagination : false
+  });
+
   $(".-carrusel-un-item").owlCarousel({
     autoPlay: true,
     slideSpeed: 300,
     paginationSpeed: 400,
     singleItem: true,
     pagination: false
-    /*navigation: true,
-    navigationText: ["«", "»"]*/
   });
 
   $(".-carrusel-tres-items").owlCarousel({
@@ -1812,10 +1829,10 @@ $(document).ready(function() {
   });
 });
 
-// Form Selector sticky
+// FORM SELECTOR STICKY
 $(document).ready(function() {
-  if (typeof $("#form-selector").offset() !== "undefined") {
-    var height = $("#form-selector").offset().top;
+  if (typeof $(".home .page_content").offset() !== "undefined") {
+    var height = $(".home .page_content").offset().top;
     var is_mobile = false;
 
     if ($(".navbar-toggler").is(":visible")) {
@@ -1835,7 +1852,7 @@ $(document).ready(function() {
   }
 });
 
-// Go top button
+// GO TOP BUTTON
 jQuery(document).ready(function($) {
   // browser window scroll (in pixels) after which the "back to top" link is shown
   var offset = 300,
@@ -1868,7 +1885,7 @@ jQuery(document).ready(function($) {
   });
 });
 
-// Steps
+// RESERVATION STEPS
 $(document).ready(function() {
   $(".step").each(function(index, element) {
     //element == this

@@ -1,0 +1,145 @@
+//==============================================
+// Layout/Hero header
+//==============================================
+
+// Vertical
+.hero-header-container {
+  position: relative;
+  height: fit-content;
+  padding-bottom: 100px;
+  background-color: $gray-700;
+  z-index: 5;
+}
+
+.bg-landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  mix-blend-mode: overlay;
+  z-index: -1000;
+}
+
+.hero-header-content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.hero-header-content h1,
+.hero-header-content-horizontal h1 {
+  font-weight: 900;
+}
+
+.hero-header-content h1,
+.hero-header-content p,
+.hero-header-content-horizontal h1,
+.hero-header-content-horizontal p {
+  color: $white;
+}
+
+.hero-header-content-horizontal h1,
+.hero-header-content-horizontal p {
+  text-align: center;
+}
+
+.hero-header-left {
+  display: flex;
+  order: 1;
+  width: 100%;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.aligner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+.hero-header-right {
+  display: flex;
+  order: 2;
+  width: 100%;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 575.98px) {
+  .hero-header-container {
+    margin-top: 0;
+    padding-top: 100px;
+  }
+
+  .hero-header-left {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .aligner {
+    max-width: 70%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-header-container {
+    margin-top: -100px;
+    padding-top: 100px;
+    height: 100vh;
+  }
+
+  .hero-header-left {
+    width: 60%;
+    height: 70vh;
+    // margin-top: 2em;
+  }
+  .hero-header-right {
+    width: 40%;
+    height: 70vh;
+  }
+  .aligner {
+    max-width: 80%;
+  }
+
+  .hero-header-content {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-header-container {
+    height: 100vh;
+  }
+}
+
+// Horizontal
+.aligner-horizontal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 90%;
+}
+
+.hero-header-content-horizontal {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .aligner-horizontal {
+    max-width: 50%;
+  }
+  .hero-header-content-horizontal {
+    height: 70vh;
+  }
+}

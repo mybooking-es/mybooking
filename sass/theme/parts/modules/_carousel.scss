@@ -7,3 +7,61 @@
   height: auto;
   display: block;
 }
+
+.owl-carousel .owl-item {
+  padding: 0;
+  border: none;
+}
+
+.owl-item img.wp-post-image {
+  min-width: 100%;
+}
+
+// Home Carousel
+
+.portada-carrusel {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carrusel-item {
+  height: 40rem;
+  object-fit: cover;
+  width: 100%;
+  position: relative;
+}
+
+.carrusel-item .wp-post-image {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+// .carrusel-seccion {
+//   width: 1200px;
+//   height: 100%;
+//   margin: 0 auto;
+//   text-align: center;
+//   position: relative;
+// }
+//
+// .carrusel-enlace {
+//   margin-top: 1.5rem;
+// }
+//
+// .carrusel-enlace.button {
+//   background: rgba(255, 255, 255, 0.2);
+// }
+//
+// .carrusel-item .carrusel-titulo {
+//   color: #fff;
+//   text-shadow: 0 0 10px #333;
+// }
+//
+// .carrusel-item .carrusel-titulo,
+// .carrusel-item .button {
+//   position: relative;
+//   top: 40%;
+//   left: 0;
+// }

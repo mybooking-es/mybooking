@@ -4,7 +4,7 @@
 *  	--------
 *		Overrides parent document on Understrap Theme
 *
-* 	Versión: 0.0.3
+* 	Versión: 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -18,18 +18,18 @@
 function mybooking_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Home Hero Principal', 'mybooking' ),
-			'id'            => 'mybooking_home_hero_main',
-	    'description'    => __( 'Área de widgets a la derecha del hero de la plantilla MyBooking Home', 'mybooking' ),
+			'name'          => __( 'Home Izquierda', 'mybooking' ),
+			'id'            => 'mybooking_home_izquierda',
+	    'description'    => __( 'Área de widgets a la izquierda de la cabecera de la Home', 'mybooking' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Home Hero Secundario', 'mybooking' ),
-			'id'            => 'mybooking_home_hero_secondary',
-	    'description'    => __( 'Área de widgets sobre el texto del hero de la plantilla MyBooking Home', 'mybooking' ),
+			'name'          => __( 'Home Derecha', 'mybooking' ),
+			'id'            => 'mybooking_home_derecha',
+	    'description'    => __( 'Área de widgets a la derecha de la cabecera de la Home', 'mybooking' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
@@ -76,15 +76,6 @@ function mybooking_widgets_init() {
 			'id'            => 'mybooking_global_footer_4',
 			'description'   => __( 'Cuarta área de widgets en el footer', 'mybooking' ),
 			'before_widget' => '<div>',
-			'after_widget'  => '</div>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => __( 'Formulario de Contacto', 'mybooking' ),
-			'id'            => 'mybooking_contact_form',
-			'description'   => __( 'Zona para insertar el formulario de contacto en la página de contacto', 'mybooking' ),
-			'before_widget' => '<br/><div>',
 			'after_widget'  => '</div>',
 		)
 	);

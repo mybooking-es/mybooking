@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
   <?php do_action( 'wp_body_open' ); ?>
 
   <div class="site eupopup eupopup-bottom" id="page">
-    <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+    <div id="wrapper-navbar" class="navbar-container" itemscope itemtype="http://schema.org/WebSite">
       <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'mybooking' ); ?></a>
 
       <!-- Topbar -->

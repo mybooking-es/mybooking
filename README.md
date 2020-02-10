@@ -109,3 +109,9 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Eliminated footer menu references
 - Deprecation notice on Contact settings section (we'll eliminate on 1.0.0)
 - Added the_content() hook on **mybooking-product-loop.php**
+
+### 0.3.0
+- New home header module with image/video/carousel background
+- Reestructured options pages for new header options
+- New custom post type Carousel
+- Deleted obsolete partials related to old home header

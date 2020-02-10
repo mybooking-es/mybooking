@@ -1,9 +1,9 @@
 //==============================================
 // Module/ form selector
-
 //==============================================
-// Form Selector vertical
-// Estilos de formulario flat design puro flex-box
+
+// Vertical Selector
+
 .flex-form {
   display: flex;
   flex-direction: column;
@@ -11,8 +11,10 @@
   flex-grow: 1;
   background-color: $transparent-white;
   padding: 10px;
-  z-index: 5000;
+  z-index: 10000;
+  color: #333;
 }
+
 .flex-form-sticky {
   @extend .flex-form;
   align-items: end;
@@ -33,6 +35,7 @@
     font-size: 13px;
   }
 }
+
 .flex-form-item-box {
   flex-grow: 1;
   display: flex;
@@ -40,6 +43,7 @@
   width: 100%;
   margin: 5px;
 }
+
 .flex-form-item {
   display: flex;
   select {
@@ -47,6 +51,7 @@
     min-width: 70px;
   }
 }
+
 .flex-icon {
   display: flex;
   align-items: center;
@@ -57,20 +62,14 @@
   color: $gray-700;
 }
 
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  input.hasDatepicker {
-    max-width: 130px;
-  }
-}
-
-// Form selector horizontal
+// Horizontal Selector
 
 .flex-form-horizontal {
   display: flex;
   flex-direction: column;
   background-color: $transparent-white;
   padding: 10px;
+  color: #333;
 }
 .flex-form-group-wrapper {
   display: flex;
@@ -119,18 +118,6 @@
   background-color: $gray-300;
   flex-direction: row;
 }
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .flex-form-group-wrapper {
-    flex-direction: row;
-  }
-}
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {
-  .flex-form-horizontal-item select {
-    width: 100px;
-  }
-}
 
 // Checkbox
 
@@ -159,5 +146,30 @@
       color: $brand-primary;
       box-shadow: none;
     }
+  }
+}
+
+// Media Queries
+
+@media (max-width: 575.98px) {
+  .flex-form,
+  .flex-form-horizontal {
+    min-width: 100vw;
+  }
+
+  input.hasDatepicker {
+    max-width: 130px;
+  }
+}
+
+@media (min-width: 768px) {
+  .flex-form-group-wrapper {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .flex-form-horizontal-item select {
+    width: 100px;
   }
 }

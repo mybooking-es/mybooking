@@ -13,19 +13,19 @@ function create_product() {
   register_post_type( 'product',
     array(
       'labels' => array(
-        'name' => __('Productos','mybooking'),
-        'singular_name' => __('Producto','mybooking'),
-        'add_new' => __('Añadir producto','mybooking'),
-        'add_new_item' => __('Nuevo producto','mybooking'),
-        'edit' => __('Editar','mybooking'),
-        'edit_item' => __('Editar producto','mybooking'),
-        'new_item' => __('Nuevo producto','mybooking'),
-        'view' => __('Ver','mybooking'),
-        'view_item' => __('Ver producto','mybooking'),
-        'search_items' => __('Buscar producto','mybooking'),
-        'not_found' => __('Ningún producto encontrado','mybooking'),
-        'not_found_in_trash' => __('Ningún producto encontrado en la Papelera','mybooking'),
-        'parent' => __('Producto superior','mybooking')
+        'name' => __( 'Productos','mybooking' ),
+        'singular_name' => __( 'Producto','mybooking' ),
+        'add_new' => __( 'Añadir producto','mybooking' ),
+        'add_new_item' => __( 'Nuevo producto','mybooking' ),
+        'edit' => __( 'Editar','mybooking' ),
+        'edit_item' => __( 'Editar producto','mybooking' ),
+        'new_item' => __( 'Nuevo producto','mybooking' ),
+        'view' => __( 'Ver','mybooking' ),
+        'view_item' => __( 'Ver producto','mybooking' ),
+        'search_items' => __( 'Buscar producto','mybooking' ),
+        'not_found' => __( 'Ningún producto encontrado','mybooking' ),
+        'not_found_in_trash' => __( 'Ningún producto encontrado en la Papelera','mybooking' ),
+        'parent' => __( 'Producto superior','mybooking' )
       ),
       'public' => true,
       'menu_position' => 50,
@@ -40,7 +40,7 @@ add_action( 'init', 'create_product' );
 // METABOX
 function product_info_meta_box() {
     add_meta_box( 'product-info',
-        __('Información del producto','mybooking'),
+        __( 'Información del producto','mybooking' ),
         'show_product_info_meta_box',
         'product',
         'normal',

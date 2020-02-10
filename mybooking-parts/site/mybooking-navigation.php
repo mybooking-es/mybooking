@@ -22,7 +22,6 @@ defined( 'ABSPATH' ) || exit;
 
     <!-- Logo & branding -->
     <?php $custom_logo = get_post_meta($post->ID, 'logo_personalizado', true) ?>
-
     <?php if ( ! has_custom_logo() ) { ?>
 
       <?php if ( is_front_page() && is_home() ) : ?>

@@ -18,25 +18,19 @@ defined( 'ABSPATH' ) || exit;
 <!-- MYBOOKING PARTIALS -->
 
 <!-- Header -->
-<?php $header_layout = get_option('global_header_layout');
-  if ($header_layout == 0) {
-    get_template_part('mybooking-parts/home/mybooking-home-header');
-  } else {
-    get_template_part('mybooking-parts/home/mybooking-home-header-horizontal');
-  }
-?>
+<?php get_template_part( 'mybooking-parts/home/mybooking-home-header' ); ?>
 
 <!-- Mybooking Promo Module -->
-<?php get_template_part('mybooking-parts/home/mybooking-home-promo'); ?>
+<!-- <?php get_template_part( 'mybooking-parts/home/mybooking-home-promo' ); ?> -->
 
 <!-- WordPress Content -->
-<?php get_template_part('mybooking-parts/home/mybooking-home-content'); ?>
+<?php get_template_part( 'mybooking-parts/home/mybooking-home-content' ); ?>
 
 <!-- Mybooking News Module -->
-<?php get_template_part('mybooking-parts/home/mybooking-home-news'); ?>
+<?php get_template_part( 'mybooking-parts/home/mybooking-home-news' ); ?>
 
 <!-- Mybooking Testimonials Module -->
-<?php get_template_part('mybooking-parts/home/mybooking-home-testimonials'); ?>
+<?php get_template_part( 'mybooking-parts/home/mybooking-home-testimonials' ); ?>
 
 <!-- END MYBOOKING PARTIALS -->
 
