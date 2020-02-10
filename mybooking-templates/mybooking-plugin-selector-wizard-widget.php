@@ -1,102 +1,45 @@
-    <section class="widget widget_mybooking_rent_engine_selector reservation-step has-background-grey-lighter">
-      <form
-        name="widget_search_form"
-        method="get"
-        enctype="application/x-www-form-urlencoded">
-        
-        <?php if ( $args['sales_channel_code'] != '' ) : ?>
-        <input type="hidden" name="sales_channel_code" value="<?php echo $args['sales_channel_code']?>"/>
-        <?php endif; ?>
-
-        <?php if ( $args['family_id'] != '' ) : ?>
-        <input type="hidden" name="family_id" value="<?php echo $args['family_id']?>"/>
-        <?php endif; ?>
-        
-        <!-- Entrega -->
-        <div class="field">
-          <label class="label">Entrega</label>
-          <div class="control">
-            <div class="select is-fullwidth">
-              <select id="widget_pickup_place" name="pickup_place"> </select>
-            </div>
+    <section class="section">
+      <!-- Wizard container -->  
+      <div id="wizard_container" class="bg-white" 
+           style="display: none; position: fixed; top: 0; left: 0; z-index: 1040; width: 100%; height: 100%; overflow: hidden;">
+           <!-- Title -->
+           <div id="step_title" class="text-center h5 pb-2" style="position: relative; top: 20px; border-bottom: 1px solid #eee">Seleccionar fecha</div>
+           <!-- Close btn -->
+           <span id="close_wizard_btn" style="position: fixed; top: 20px; right: 20px; margin-right: 10px" ><i class="fa fa-times" style="font-size:1.2em; font-weight: 200"></i></span>
+           <!-- Container -->
+          <div id="wizard_container_step" class="p-2" 
+               style="position: fixed; top: 50px; left: 0; z-index: 2000; width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden">
           </div>
-        </div>
-
-        <div class="field">
-          <div class="control">
-            <label class="checkbox">
-                <input type="checkbox" id="widget_same_pickup_return_place" name="same_pickup_return_place" 
-                       checked/>&nbsp;&nbsp;Devolver en la misma oficina
-            </label>
-          </div>
-        </div>
-
-        <div class="field field-body">
-          <div class="field">
-            <div class="control is-expanded">
-              <input
-                      type="text"
-                      id="widget_date_from"
-                      name="date_from"
-                      class="input"
-                      autocomplete="off"
-                    />
-            </div>
-          </div>
-          <div class="field">
-            <div class="control">
-              <div class="select is-fullwidth">
-                <select id="widget_time_from" name="time_from"> </select>
+      </div>
+      <!-- Search form -->
+      <div class="container">
+        <form name="wizard_search_form" class="mt-5">
+            <input type="hidden" name="pickup_place">
+            <input type="hidden" name="return_place">
+            <input type="hidden" name="date_from">
+            <input type="hidden" name="time_from">
+            <input type="hidden" name="time_to">
+            <div class="row">
+              <div class="col-md-3">
+                  <label for="place_holder">¿Dónde?</label>
+                  <input type="text" class="form-control form-control-lg bg-white" id="place_holder" 
+                         aria-describedby="pickupPlaceHolder" placeholder="Elige un lugar" readonly="true">
               </div>
-            </div>
+              <div class="col-md-3">
+                  <label for="from_holder">¿Cuando?</label>
+                  <input type="text" class="form-control form-control-lg bg-white" id="from_holder" 
+                         aria-describedby="FromHolder" placeholder="Fecha de salida" readonly="true">
+              </div>    
+              <!--div class="col-md-3 d-flex align-items-end">
+                  <input type="text" class="form-control form-control-lg bg-white" id="to_holder" 
+                         aria-describedby="FromHolder" placeholder="Fecha de salida" readonly="true">
+              </div-->   
+              <br>
+              <div class="col-md-1 d-flex align-items-end">
+                  <button id="btn_reservation" type="button" class="btn btn-success">Reservar</button> 
+              </div>                                     
+            </div>           
           </div>
-        </div>
-
-
-        <!-- Devolución -->
-        <div class="field">
-          <label class="label">Devolución</label>
-          <div class="control widget_return_place">
-            <div class="select is-fullwidth">
-              <select id="widget_return_place" name="return_place"> </select>
-            </div>
-          </div>          
-        </div>
-        
-        <div class="field field-body">
-          <div class="field">
-            <div class="control is-expanded">
-              <input type="text" id="widget_date_to" name="date_to" autocomplete="off" class="input"/>
-            </div>
-          </div>
-          <div class="field">
-            <div class="control">
-              <div class="select is-fullwidth">
-                <select id="widget_time_to" name="time_to"> </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="field">
-          <div class="control">
-            <label class="checkbox">
-                <div>
-                  <input type="checkbox" id="widget_accept_age" name="accept_age"/>&nbsp;Soy mayor de 21 años
-                </div>
-            </label>
-          </div>
-        </div>
-
-        <div class="field is-horizontal">
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <input class="button is-primary" type="submit" value="Buscar" />
-              </div>
-            </div>
-          </div>
-        </div>        
-        
-      </form>
+        </form>
+      </div>
     </section>
