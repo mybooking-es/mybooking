@@ -2,6 +2,29 @@
     <!--                      Microtemplates                   -->
     <!-- ===================================================== -->
 
+    <!-- Steps summary -->
+    
+    <script id="wizard_steps_summary" type="txt/tmpl">
+
+      <div>
+        <div class="row">
+          <div class="col-md-6 text-right">
+            <p><%= summary.pickupPlace %></p>
+            <% if (summary.dateFrom != null) {%>
+              <p><%= summary.dateFrom %> <% if (summary.timeFrom != null) {%><%= summary.timeFrom %><% } %> </p>
+            <% } %>
+          </div>
+          <div class="col-md-6">
+            <p><%= summary.returnPlace %></p>
+            <% if (summary.dateTo != null) {%>
+              <p><%= summary.dateTo %> <% if (summary.timeTo != null) {%><%= summary.timeTo %><% } %></p>
+            <% } %>      
+          </div>
+        </div>
+      </div>
+
+    </script>
+
     <!-- Select place micro-template -->
 
     <script id="select_place_tmpl" type="txt/tmpl">
