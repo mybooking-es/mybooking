@@ -1,28 +1,69 @@
 //==============================================
 // Layout/Hero header
+//
+// Notes:
+// ------
+// Due to the height of the selector form the height of the
+// header background (image, video, carousel) must be 560px at least.
+// It can be solved reducing the height of the selector form
+//
 //==============================================
 
-// Vertical
+/**
+ * Wraps the header : (Image | Video | Carrusel) + Widgets areas
+ */
 .home-header {
   position: relative;
-  height: fit-content;
-  padding: 8rem 0 5rem 0;
   flex-direction: column;
   background-color: #666;
   z-index: 2;
 }
 
+// ----------------------
+
+/**
+ * Image (img) | Video (video) | Carrusel (div) common class
+ */
 .home-header_background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
   width: 100%;
-  object-fit: cover;
-  z-index: -1;
-  mix-blend-mode: overlay;
+  padding-top: 62px; // For mobile content (because parent is absolute)
 }
 
+/**
+ * Background image specific class
+ */
+.home-header_background_img,
+.home-header_background_video {
+  object-fit: cover;
+  object-position: 50% 50%;
+  z-index: -1;
+  mix-blend-mode: overlay;
+  min-height: 220px;
+  width: 100%;
+}
+
+/**
+ * Background carousel
+ */
+.home-header_background_carrusel {
+  mix-blend-mode: overlay;
+  min-height: 220px;
+}
+
+// Carousel item
+.home-header_background_carrusel .carrusel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 50%;
+  min-height: 220px; // Same value as .home-header_background_carrusel
+}
+
+// -----------------------
+
+/**
+ * Widget areas 
+ */
 .home-header_content {
   display: flex;
   flex-direction: column;
@@ -34,21 +75,56 @@
 .home-alone:not(.form),
 .home-left:not(.form),
 .home-right:not(.form) {
-  color: #FFF;
+  color: #fff;
 }
 
-@media (max-width: 575.98px) {
-  .home-header {
-    padding: 8rem 0 0 0;
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .home-header_background_img,
+  .home-header_background_video {
+    min-height: 560px; // Desktop : min height for selector widget
+    max-height: 600px;
+  }
+
+  .home-header_background_carrusel {
+    padding-top: 0;
+    height: 560px; // Desktop : min height for selector widget
+  }
+
+  .carrusel-item img {
+    height: 560px !important; // It must be the same value as .home-header_background_carrusel height
   }
 }
 
+// Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .home-header {
     flex-direction: row;
   }
 }
 
-@media (min-width: 1200px) {
-
+// Large devices (desktop)
+@media (min-width: 992px) {
+  // Background (common)
+  .home-header_background_img {
+    padding-top: 0;
+  }
+  .home-left {
+    align-items: flex-start;
+  }
+  .home-right {
+    align-items: flex-end;
+  }
+  // Widgets container
+  .home-header_content_container {
+    position: absolute;
+    left: 50%;
+    /*top: 50%;*/
+    top: calc(50% + 2em);
+    transform: translate(-50%, -50%);
+  }
+  .home-header_content_container_sticky {
+    position: initial;
+    transform: none !important;
+  }
 }

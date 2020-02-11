@@ -3524,12 +3524,11 @@ a {
     color: #6fa130;
     text-decoration: none; }
 
+/**
+ * Wraps the header : (Image | Video | Carrusel) + Widgets areas
+ */
 .home-header {
   position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 8rem 0 5rem 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -3537,17 +3536,46 @@ a {
   background-color: #666;
   z-index: 2; }
 
+/**
+ * Image (img) | Video (video) | Carrusel (div) common class
+ */
 .home-header_background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
   width: 100%;
+  padding-top: 62px; }
+
+/**
+ * Background image specific class
+ */
+.home-header_background_img,
+.home-header_background_video {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
   z-index: -1;
-  mix-blend-mode: overlay; }
+  mix-blend-mode: overlay;
+  min-height: 220px;
+  width: 100%; }
 
+/**
+ * Background carousel
+ */
+.home-header_background_carrusel {
+  mix-blend-mode: overlay;
+  min-height: 220px; }
+
+.home-header_background_carrusel .carrusel-item img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  min-height: 220px; }
+
+/**
+ * Widget areas 
+ */
 .home-header_content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3569,11 +3597,18 @@ a {
 .home-alone:not(.form),
 .home-left:not(.form),
 .home-right:not(.form) {
-  color: #FFF; }
+  color: #fff; }
 
-@media (max-width: 575.98px) {
-  .home-header {
-    padding: 8rem 0 0 0; } }
+@media (min-width: 576px) {
+  .home-header_background_img,
+  .home-header_background_video {
+    min-height: 560px;
+    max-height: 600px; }
+  .home-header_background_carrusel {
+    padding-top: 0;
+    height: 560px; }
+  .carrusel-item img {
+    height: 560px !important; } }
 
 @media (min-width: 768px) {
   .home-header {
@@ -3581,6 +3616,29 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; } }
+
+@media (min-width: 992px) {
+  .home-header_background_img {
+    padding-top: 0; }
+  .home-left {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .home-right {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  .home-header_content_container {
+    position: absolute;
+    left: 50%;
+    /*top: 50%;*/
+    top: calc(50% + 2em);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .home-header_content_container_sticky {
+    position: initial;
+    -webkit-transform: none !important;
+            transform: none !important; } }
 
 .bg-contact {
   background-image: url(../images/bg.png);
@@ -3991,35 +4049,6 @@ body .eupopup-style-compact .eupopup-button {
   font-weight: 600;
   text-transform: uppercase; }
 
-.carrusel-item img {
-  width: 100%;
-  height: auto;
-  display: block; }
-
-.owl-carousel .owl-item {
-  padding: 0;
-  border: none; }
-
-.owl-item img.wp-post-image {
-  min-width: 100%; }
-
-.portada-carrusel {
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.carrusel-item {
-  height: 40rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  position: relative; }
-
-.carrusel-item .wp-post-image {
-  top: 0;
-  left: 0;
-  position: absolute; }
-
 select {
   border-radius: 0px;
   padding: 0 0.8rem;
@@ -4211,7 +4240,7 @@ input.form-reservation-error {
           align-items: center;
   font-size: 1.3rem;
   background-color: #fff;
-  padding: .8rem;
+  padding: 0.8rem;
   height: 48px;
   color: #616161; }
 
@@ -4350,12 +4379,18 @@ input.form-reservation-error {
         -ms-flex-direction: row;
             flex-direction: row; } }
 
+@media (max-width: 992px) {
+  .flex-form, .flex-form-sticky,
+  .flex-form-horizontal {
+    width: 100vw;
+    padding: 20px; } }
+
 @media (max-width: 1199.98px) {
   .flex-form-horizontal-item select {
     width: 100px; } }
 
 .topbar {
-  font-size: .9em;
+  font-size: 0.9em;
   margin-top: 0;
   position: relative;
   z-index: 30;
@@ -4372,8 +4407,8 @@ input.form-reservation-error {
     color: #fff; }
 
 .topbar a:hover {
-  color: #FFF;
-  opacity: .5; }
+  color: #fff;
+  opacity: 0.5; }
 
 .topbar .info_link {
   margin: 0 0 0 1em; }
@@ -4386,14 +4421,14 @@ input.form-reservation-error {
 
 .topbar .topbar_menu li {
   display: inline-block;
-  margin: 0 .5em; }
+  margin: 0 0.5em; }
 
 @media (max-width: 798px) {
   .topbar {
     text-align: center; }
   .topbar .topbar_menu {
     float: none;
-    margin: .5rem auto; } }
+    margin: 0.5rem auto; } }
 
 @media (max-width: 575.98px) {
   .topbar .menu,
@@ -4406,18 +4441,23 @@ input.form-reservation-error {
   width: 200px; }
 
 /* Navbar */
+/* Occupies the top of the page */
 .home .navbar-container {
   width: 100%;
-  position: absolute;
+  /*position: absolute;*/
   top: 0;
   z-index: 30; }
+
+/* Nav bar in front of the image and transparent */
+.home .nav-container-absolute {
+  position: absolute; }
 
 .navbar-dark .navbar-toggler {
   border: none; }
 
 .navbar {
   z-index: 10;
-  padding: .5rem 0; }
+  padding: 0.5rem 0; }
 
 .navbar-collapse .navbar-nav .nav-link {
   color: #fff; }
@@ -4452,6 +4492,8 @@ input.form-reservation-error {
     position: fixed;
     top: 0;
     z-index: 30; }
+  .home .nav-container-absolute {
+    position: fixed; }
   .bg-nav {
     -webkit-box-shadow: 1px 3px 3px #666;
             box-shadow: 1px 3px 3px #666; }
@@ -4466,18 +4508,18 @@ input.form-reservation-error {
     text-align: center; } }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #FFF; }
+  color: #fff; }
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
-  opacity: .5; }
+  opacity: 0.5; }
 
 .navbar-dark .navbar-nav .active .nav-link {
   color: #333; }
 
 @media (max-width: 798px) {
   .navbar {
-    padding: .5rem 1rem; }
+    padding: 0.5rem 1rem; }
   .navbar-nav {
     text-align: center;
     margin-bottom: 50px; }
@@ -4485,7 +4527,7 @@ input.form-reservation-error {
     font-size: 1.3em; } }
 
 @media (min-width: 992px) {
-  .home .bg-nav {
+  .home .nav-container-absolute .bg-nav {
     background: none; }
   .home .topbar {
     background-color: rgba(66, 66, 66, 0.5); } }
