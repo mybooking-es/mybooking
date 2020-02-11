@@ -3,10 +3,10 @@
     <!-- ===================================================== -->
 
     <!-- Steps summary -->
-    
+
     <script id="wizard_steps_summary" type="txt/tmpl">
 
-      <div>
+      <div class="pt-2">
         <div class="row">
           <div class="col-md-6 text-right">
             <p><%= summary.pickupPlace %></p>
@@ -34,7 +34,7 @@
           <div class="col-md-12">
             <ul style="list-style: none" class="pt-3">
               <% for (var idx=0; idx<places.length; idx++) { %>
-              <li><a class="selector_place text-primary" role="button"><%=places[idx].name%></a></li>
+              <li><a class="selector_place text-primary" role="button" data-place-id="<%=places[idx].name%>"><%=places[idx].name%></a></li>
               <% } %>
             </ul>
           </div>
