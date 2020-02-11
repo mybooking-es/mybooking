@@ -63,6 +63,11 @@ defined( 'ABSPATH' ) || exit;
 
     <?php } else { the_custom_logo(); } ?>
 
+    <!-- Widgets Main Menu -->
+    <?php if ( is_active_sidebar( 'mybooking_menu' ) ) : ?>
+      <?php dynamic_sidebar( 'mybooking_menu' ); ?>
+    <?php endif; ?>
+
     <!-- WordPress menu -->
     <?php wp_nav_menu(
       array(
