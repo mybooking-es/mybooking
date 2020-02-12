@@ -14,13 +14,6 @@
 <section class="section">
   <div class="wizard-selector container">
     <form class="wizard-selector_form mt-5" name="wizard_search_form">
-
-      <input type="hidden" name="pickup_place">
-      <input type="hidden" name="return_place">
-      <input type="hidden" name="date_from">
-      <input type="hidden" name="time_from">
-      <input type="hidden" name="time_to">
-
       <div class="row">
         <div class="wizard-selector_field col-md-3">
             <label for="place_holder"><?php _e('¿Dónde?','mybooking') ?></label>
