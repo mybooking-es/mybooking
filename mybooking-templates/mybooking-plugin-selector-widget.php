@@ -9,6 +9,7 @@
 *   @since Mybooking WordPress Theme 0.0.1
 */
 ?>
+
 <!-- FLEX-FORM-SELECTOR -->
 <section class="widget widget_mybooking_rent_engine_selector widget-reservation-step">
   <form id="form-selector" name="widget_search_form" method="get"

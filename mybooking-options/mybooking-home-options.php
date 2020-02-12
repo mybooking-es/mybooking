@@ -95,7 +95,7 @@ function mybookinges_configuration_home() {
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php _e('Estructura de la cabecera', 'mybooking') ?></th>
+          <th scope="row"><?php _e( 'Estructura de la cabecera', 'mybooking' ) ?></th>
           <td>
           <?php $options_header_layout = get_option( "home_header_layout" ); ?>
           <input type="radio" name="home_header_layout" <?php checked( $options_header_layout, 0 ); ?> value="0"><span class="description"><strong><?php _e('Dos columnas','mybooking') ?></strong><br><?php _e('Dos columnas con dos areas para widgets', 'mybooking', 'mybooking') ?></span><br><br>
@@ -105,25 +105,25 @@ function mybookinges_configuration_home() {
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php _e('Estilo de fondo de la cabecera', 'mybooking') ?></th>
+          <th scope="row"><?php _e( 'Estilo de fondo de la cabecera', 'mybooking' ) ?></th>
           <td>
           <?php $options_header_background = get_option( "home_header_background" ); ?>
-          <input type="radio" name="home_header_background" <?php checked( $options_header_background, 0 ); ?> value="0"><span class="description"><strong><?php _e('Imagen de fondo','mybooking') ?></strong><br><?php _e('Inserta una imagen fija de fondo', 'mybooking', 'mybooking') ?></span><br><br>
-          <input type="radio" name="home_header_background" <?php checked( $options_header_background, 1 ); ?> value="1"><span class="description"><strong><?php _e('Vídeo de fondo', 'mybooking') ?></strong><br><?php _e('Inserta un vídeo de fondo', 'mybooking') ?></span><br><br>
-          <input type="radio" name="home_header_background" <?php checked( $options_header_background, 2 ); ?> value="2"><span class="description"><strong><?php _e('Carrusel de imágenes', 'mybooking') ?></strong><br><?php _e('Genera un carrusel y activa el módulo de Carrusel', 'mybooking') ?></span>
+          <input type="radio" name="home_header_background" <?php checked( $options_header_background, 0 ); ?> value="0"><span class="description"><strong><?php _e( 'Imagen de fondo','mybooking' ) ?></strong><br><?php _e( 'Inserta una imagen fija de fondo', 'mybooking', 'mybooking' ) ?></span><br><br>
+          <input type="radio" name="home_header_background" <?php checked( $options_header_background, 1 ); ?> value="1"><span class="description"><strong><?php _e( 'Vídeo de fondo', 'mybooking' ) ?></strong><br><?php _e( 'Inserta un vídeo de fondo', 'mybooking' ) ?></span><br><br>
+          <input type="radio" name="home_header_background" <?php checked( $options_header_background, 2 ); ?> value="2"><span class="description"><strong><?php _e( 'Carrusel de imágenes', 'mybooking' ) ?></strong><br><?php _e( 'Genera un carrusel y activa el módulo de Carrusel', 'mybooking' ) ?></span>
         </tr>
       </table>
 
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php _e('Imagen de fondo', 'mybooking') ?></th>
-          <td><input type="text" name="home_header_image" size="40" value="<?php echo get_option('home_header_image'); ?>" />
-          <br><span class="description"><?php _e('Pega aquí la URL de la imagen de fondo para la cabecera de la página', 'mybooking') ?></span></td>
+          <th scope="row"><?php _e( 'Imagen de fondo', 'mybooking' ) ?></th>
+          <td><input type="text" name="home_header_image" size="40" value="<?php echo get_option( 'home_header_image' ); ?>" />
+          <br><span class="description"><?php _e( 'Pega aquí la URL de la imagen de fondo para la cabecera de la página', 'mybooking' ) ?></span></td>
         </tr>
         <tr valign="top">
-          <th scope="row"><?php _e('Vídeo de fondo', 'mybooking') ?></th>
-          <td><input type="text" name="home_header_video" size="40" value="<?php echo get_option('home_header_video'); ?>" />
-          <br><span class="description"><?php _e('Pega aquí la URL del vídeo de fondo para la cabecera de la página', 'mybooking') ?></span></td>
+          <th scope="row"><?php _e( 'Vídeo de fondo', 'mybooking' ) ?></th>
+          <td><input type="text" name="home_header_video" size="40" value="<?php echo get_option( 'home_header_video' ); ?>" />
+          <br><span class="description"><?php _e( 'Pega aquí la URL del vídeo de fondo para la cabecera de la página', 'mybooking' ) ?></span></td>
         </tr>
       </table>
 

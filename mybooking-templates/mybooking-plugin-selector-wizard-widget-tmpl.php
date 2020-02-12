@@ -1,112 +1,123 @@
-    <!-- ===================================================== -->
-    <!--                      Microtemplates                   -->
-    <!-- ===================================================== -->
+<?php
+/**
+*   PLUGIN SELECTOR WIZARD TEMPLATES
+*   --------------------------------
+*
+* 	Versión: 0.0.1
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.3.0
+*/
+?>
 
-    <!-- Steps summary -->
+<!-- ===================================================== -->
+<!--                      Microtemplates                   -->
+<!-- ===================================================== -->
 
-    <script id="wizard_steps_summary" type="txt/tmpl">
+<!-- Steps summary -->
 
-      <div class="pt-2">
-        <div class="row">
-          <div class="col-md-6 text-right">
-            <p><%= summary.pickupPlace %></p>
-            <% if (summary.dateFrom != null) {%>
-              <p><%= summary.dateFrom %> <% if (summary.timeFrom != null) {%><%= summary.timeFrom %><% } %> </p>
-            <% } %>
-          </div>
-          <div class="col-md-6">
-            <p><%= summary.returnPlace %></p>
-            <% if (summary.dateTo != null) {%>
-              <p><%= summary.dateTo %> <% if (summary.timeTo != null) {%><%= summary.timeTo %><% } %></p>
-            <% } %>      
-          </div>
-        </div>
+<script id="wizard_steps_summary" type="txt/tmpl">
+
+  <div class="wizard-summary container">
+    <div class="row">
+      <div class="wizard-summary_item col">
+        <span class="wizard-summary_pickup"><%= summary.pickupPlace %></span>
+        <% if (summary.dateFrom != null) {%>
+          <span class="wizard-summary_datefrom"><%= summary.dateFrom %> <% if (summary.timeFrom != null) {%><%= summary.timeFrom %><% } %> </span>
+        <% } %>
       </div>
-
-    </script>
-
-    <!-- Select place micro-template -->
-
-    <script id="select_place_tmpl" type="txt/tmpl">
-
-      <div class="container p-0">
-        <div class="row">
-          <div class="col-md-12">
-            <ul style="list-style: none" class="pt-3">
-              <% for (var idx=0; idx<places.length; idx++) { %>
-              <li><a class="selector_place text-primary" role="button" data-place-id="<%=places[idx].name%>"><%=places[idx].name%></a></li>
-              <% } %>
-            </ul>
-          </div>
-        </div>
+      <div class="wizard-summary_item col">
+        <span class="wizard-summary_return"><%= summary.returnPlace %></span>
+        <% if (summary.dateTo != null) {%>
+          <span class="wizard-summary_dateto"><%= summary.dateTo %> <% if (summary.timeTo != null) {%><%= summary.timeTo %><% } %></span>
+        <% } %>
       </div>
+    </div>
+  </div>
 
-    </script>
+</script>
 
-    <!-- Select place multiple destionations micro-template -->
+<!-- Select place micro-template -->
 
-    <script id="select_place_multiple_destinations_tmpl" type="txt/tmpl">
+<script id="select_place_tmpl" type="txt/tmpl">
 
-      <div class="container p-0">
-        <!-- Destinations selector -->
-        <div class="row mt-3">
-          <div class="col-md-12">
-            <button class="btn btn-primary destination-selector" type="button" data-destination-id="all">Todos</button>
-            <% for (var idx=0; idx<places.destinations.length; idx++) { %>
-              <button class="btn btn-primary destination-selector"  type="button" 
-                 data-destination-id="<%=places.destinations[idx].id%>"><%=places.destinations[idx].name%></button>
-            <% } %>
-          </div>
-        </div>
-        <hr>
-        <!-- Places selector -->
-        <div class="row">
-          <div class="col-md-12">
-            <% for (var idx=0; idx<places.destinations.length; idx++) { %>
-              <h3 class="destination-group" data-destination-id="<%=places.destinations[idx].id%>"><a name="<%=places.destinations[idx].id%>"><%=places.destinations[idx].name%></a></h3>
-              <ul style="list-style: none" class="destination-group pt-3" data-destination-id="<%=places.destinations[idx].id%>">
-              <% for (var idy=0; idy<places.destinations[idx].places.length; idy++) { %>               
-                <li><a class="selector_place text-primary" role="button" data-place-id="<%=places.destinations[idx].places[idy].name%>"><%=places.destinations[idx].places[idy].name%></a></li>
-              <% } %>
-              </ul>
-            <% } %>
-          </div>
-        </div>
+  <div class="wizard-place container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="wizard-place_list">
+          <% for (var idx=0; idx<places.length; idx++) { %>
+          <li><a class="wizard-place_item selector_place text-primary" role="button" data-place-id="<%=places[idx].name%>"><%=places[idx].name%></a></li>
+          <% } %>
+        </ul>
       </div>
+    </div>
+  </div>
 
-    </script>    
+</script>
 
-    <!-- Select date micro-template -->
+<!-- Select place multiple destionations micro-template -->
 
-    <script id="select_date_tmpl" type="txt/tmpl">
+<script id="select_place_multiple_destinations_tmpl" type="txt/tmpl">
 
-      <div class="container p-0">
-        <div class="row">
-          <div class="col-md-12">
-             <div id="selector_date" class="pt-3"></div>
+  <div class="wizard-multi-place container">
+    <!-- Place selectors -->
+    <div class="wizard-multi-place_selectors row">
+      <div class="col-md-12">
+        <button class="wizard-multi-place_btn btn btn-primary destination-selector" type="button" data-destination-id="all"><?php _e('Todos','mybooking') ?></button>
+        <% for (var idx=0; idx<places.destinations.length; idx++) { %>
+          <button class="wizard-multi-place_btn btn btn-primary destination-selector"  type="button"
+             data-destination-id="<%=places.destinations[idx].id%>"><%=places.destinations[idx].name%></button>
+        <% } %>
+      </div>
+    </div>
+    <!-- Places list -->
+    <div class="wizard-multi-place_info row">
+      <div class="col-md-12">
+        <% for (var idx=0; idx<places.destinations.length; idx++) { %>
+          <h3 class="wizard-place_title destination-group" data-destination-id="<%=places.destinations[idx].id%>"><a name="<%=places.destinations[idx].id%>"><%=places.destinations[idx].name%></a></h3>
+          <ul class="wizard-place_list destination-group" data-destination-id="<%=places.destinations[idx].id%>">
+          <% for (var idy=0; idy<places.destinations[idx].places.length; idy++) { %>
+            <li class="wizard-place_item"><a class="selector_place" role="button" data-place-id="<%=places.destinations[idx].places[idy].name%>"><%=places.destinations[idx].places[idy].name%></a></li>
+          <% } %>
+          </ul>
+        <% } %>
+      </div>
+    </div>
+  </div>
+
+</script>
+
+<!-- Select date micro-template -->
+
+<script id="select_date_tmpl" type="txt/tmpl">
+
+  <div class="wizard-date container">
+    <div class="row">
+      <div class="col-md-12">
+         <div id="selector_date" class="wizard-date_calendar"></div>
+      </div>
+    </div>
+  </div>
+
+</script>
+
+<!-- Select time micro-template -->
+
+<script id="select_time_tmpl" type="txt/tmpl">
+
+  <div class="wizard-time container">
+      <% for (var idx=0; idx<times.length; idx++) { %>
+          <% if (idx % 2 == 0) { %>
+          <div class="row">
+          <% } %>
+            <div class="wizard-time_selector col">
+              <button class="wizard-time_btn btn btn-light selector_time" type="button" data-value="<%=times[idx]%>"><%= times[idx] %></button>
+            </div>
+          <% if (idx % 2 == 1) { %>
           </div>
-        </div>
-      </div>
+          <% } %>
+        <% } %>
+    </div>
+  </div>
 
-    </script>
-
-    <!-- Select time micro-template -->
-
-    <script id="select_time_tmpl" type="txt/tmpl">
-
-      <div class="container p-2 mb-5">
-          <% for (var idx=0; idx<times.length; idx++) { %>
-              <% if (idx % 2 == 0) { %>
-              <div class="row">
-              <% } %>
-                <div class="col">
-                  <button type="button" class="btn btn-light selector_time text-center mb-2 p-3" style="width: 100%" data-value="<%=times[idx]%>"><%= times[idx] %></button>
-                </div>
-              <% if (idx % 2 == 1) { %>                
-              </div>
-              <% } %>
-            <% } %>
-        </div>
-      </div>
-
-    </script>  
+</script>

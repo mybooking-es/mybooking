@@ -18,8 +18,17 @@
 function mybooking_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Menú Principal', 'mybooking' ),
-			'id'            => 'mybooking_menu',
+			'name'          => __( 'Panel 1 del menú', 'mybooking' ),
+			'id'            => 'mybooking_panel_one',
+	    'description'    => __( 'Área de widgets en la barra de navegación', 'mybooking' ),
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Panel 2 del menú', 'mybooking' ),
+			'id'            => 'mybooking_panel_two',
 	    'description'    => __( 'Área de widgets en la barra de navegación', 'mybooking' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',

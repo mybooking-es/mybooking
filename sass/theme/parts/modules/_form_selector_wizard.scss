@@ -1,55 +1,157 @@
-	#wizard_container {
+// WIZARD FORM
 
-    display: none; 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    z-index: 1040; 
-    width: 100%; 
-    height: 100%; 
-    overflow: hidden;
+.wizard-selector_field input {
+  border-radius: 25px 25px;
+  margin-bottom: 10px;
+}
 
-	}
+.wizard-selector_btn {
+  width: 100%;
+  border-radius: 25px 25px;
+  padding: .7rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 13px;
+}
 
-	#wizard_container .step_title {
+// WIZARD CONTAINERS
 
-	  position: relative; 
-	  top: 20px; 
-	  border-bottom: 1px solid #eee;
+.wizard-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  overflow: hidden;
+	background-color: #EEE;
+}
 
-	}
+.wizard-close {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	margin-right: 10px
+}
 
-	#close_wizard_btn {
+.wizard-step_title {
+	margin-bottom: 1rem;
+	font-size: 28px;
+	font-weight: 700;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  cursor: pointer;
+}
 
-		position: fixed; 
-		top: 20px; 
-		right: 20px; 
-		margin-right: 10px
+.wizard-step_container {
+   width: 100%;
+   height: 100%;
+   overflow-y: auto;
+   overflow-x: hidden;
+}
 
-	}
+#wizard_container #date_from {
+  width: 100%;
+  height: 100%;
+}
 
-	#close_wizard_btn i {
-		font-size:1.2em;
-		font-weight: 200;	
-	}
+// WIZARD PLACE
 
+.wizard-multi-place {
+  padding: 0 1rem;
+}
 
-	#wizard_container_step {
-     position: fixed; 
-     top: 50px; 
-     left: 0; 
-     z-index: 2000; 
-     width: 100%; 
-     height: 100%; 
-     overflow-y: auto; 
-     overflow-x: hidden	
-	}
+.wizard-multi-place_selectors {
+  margin-bottom: 2rem;
+}
 
-  #wizard_container #date_from {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .selector_place {
-    cursor: pointer;
-  }
+.wizard-multi-place_btn {
+  border: 1px solid #333;
+  border-radius: 20px 20px;
+  background-color: #FFF;
+  color: #333;
+  padding: .2rem .7rem;
+  margin: 3px 0;
+  font-size: .7em;
+}
+
+.wizard-multi-place_info {
+  padding: 0 1rem;
+}
+
+.wizard-place_title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.wizard-place_list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.wizard-place_item {
+  padding: .1rem 0;
+}
+
+.selector_place {
+  font-size: 14px;
+  font-weight: 500!important;
+  cursor: pointer;
+}
+
+.selector_place:hover {
+  color: #FFF!important;
+  background-color: #6fa130;
+  border-radius: 15px 15px;
+  padding: .2rem .5rem;
+}
+
+// WIZARD SUMMARY
+
+.wizard-summary {
+  margin-bottom: 2rem;
+}
+
+.wizard-summary_pickup,
+.wizard-summary_return {
+  font-size: 10px;
+}
+
+.wizard-summary_pickup,
+.wizard-summary_datefrom {
+  width: 100%;
+  float: left;
+}
+
+.wizard-summary_return,
+.wizard-summary_dateto {
+  width: 100%;
+  float: right;
+  text-align: right!important;
+}
+
+.wizard-time {
+  width: 80%;
+}
+
+.wizard-time_btn {
+  border: 1px solid #333;
+  border-radius: 25px 25px;
+  background-color: #FFF;
+  color: #333;
+  padding: .3rem .9rem;
+  margin: 5px 0;
+  font-size: 1.4em;
+  width: 100%;
+}
+
+// WIZARD CALENDAR
+
+.wizard-date_calendar .ui-widget-content {
+  background-color: transparent!important;
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * jQuery UI Bootstrap (0.22)
  * http://addyosmani.github.com/jquery-ui-bootstrap
@@ -4354,6 +4355,131 @@ input.form-reservation-error {
   .flex-form-horizontal-item select {
     width: 100px; } }
 
+.wizard-selector_field input {
+  border-radius: 25px 25px;
+  margin-bottom: 10px; }
+
+.wizard-selector_btn {
+  width: 100%;
+  border-radius: 25px 25px;
+  padding: .7rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 13px; }
+
+.wizard-container  {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  overflow: hidden;
+  background-color: #EEE; }
+
+.wizard-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  margin-right: 10px; }
+
+.wizard-step_title {
+  margin-bottom: 1rem;
+  font-size: 28px;
+  font-weight: 700;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  cursor: pointer; }
+
+.wizard-step_container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+#wizard_container #date_from {
+  width: 100%;
+  height: 100%; }
+
+.wizard-multi-place {
+  padding: 0 1rem; }
+
+.wizard-multi-place_selectors {
+  margin-bottom: 2rem; }
+
+.wizard-multi-place_btn {
+  border: 1px solid #333;
+  border-radius: 20px 20px;
+  background-color: #FFF;
+  color: #333;
+  padding: .2rem .7rem;
+  margin: 3px 0;
+  font-size: .7em; }
+
+.wizard-multi-place_info {
+  padding: 0 1rem; }
+
+.wizard-place_title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.wizard-place_list {
+  padding-left: 0;
+  list-style-type: none; }
+
+.wizard-place_item {
+  padding: .1rem 0; }
+
+.selector_place {
+  font-size: 14px;
+  font-weight: 500 !important;
+  cursor: pointer; }
+
+.selector_place:hover {
+  color: #FFF !important;
+  background-color: #6fa130;
+  border-radius: 15px 15px;
+  padding: .2rem .5rem; }
+
+.wizard-summary {
+  margin-bottom: 2rem; }
+
+.wizard-summary_pickup,
+.wizard-summary_return {
+  font-size: 10px; }
+
+.wizard-summary_pickup,
+.wizard-summary_datefrom {
+  width: 100%;
+  float: left; }
+
+.wizard-summary_return,
+.wizard-summary_dateto {
+  width: 100%;
+  float: right;
+  text-align: right !important; }
+
+.wizard-time {
+  width: 80%; }
+
+.wizard-time_btn {
+  border: 1px solid #333;
+  border-radius: 25px 25px;
+  background-color: #FFF;
+  color: #333;
+  padding: .3rem .9rem;
+  margin: 5px 0;
+  font-size: 1.4em;
+  width: 100%; }
+
+.wizard-date_calendar .ui-widget-content {
+  background-color: transparent !important; }
+
 .topbar {
   font-size: .9em;
   margin-top: 0;
@@ -4405,15 +4531,22 @@ input.form-reservation-error {
 .custom-logo-link {
   width: 200px; }
 
-/* Navbar */
 .home .navbar-container {
   width: 100%;
   position: absolute;
   top: 0;
   z-index: 30; }
 
+.navbar-brand {
+  margin: 0;
+  float: left; }
+
 .navbar-dark .navbar-toggler {
-  border: none; }
+  border: none;
+  padding: 0; }
+
+.navbar-toggler-icon {
+  color: #fff; }
 
 .navbar {
   z-index: 10;
@@ -4438,11 +4571,28 @@ input.form-reservation-error {
   letter-spacing: 1px;
   font-weight: 600; }
 
-.navbar-toggler-icon {
-  color: #fff; }
-
 .navbar .dropdown-item {
   color: #424242; }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #FFF; }
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  opacity: .5; }
+
+.navbar-dark .navbar-nav .active .nav-link {
+  color: #333; }
+
+.navpanel_opener {
+  margin: 0 3px; }
+
+.navpanel-dialog .modal-header {
+  border-bottom: none;
+  padding-bottom: 0; }
+
+.modal-backdrop {
+  display: none; }
 
 @media (max-width: 575.98px) {
   .home .bg-nav .navbar-brand img {
@@ -4465,26 +4615,23 @@ input.form-reservation-error {
     vertical-align: middle;
     text-align: center; } }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: #FFF; }
-
-.navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link:hover {
-  opacity: .5; }
-
-.navbar-dark .navbar-nav .active .nav-link {
-  color: #333; }
-
-@media (max-width: 798px) {
+@media (max-width: 768px) {
   .navbar {
     padding: .5rem 1rem; }
+  .navbar > .container,
+  .navbar > .container-fluid {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .navbar-brand {
+    margin: 0 1rem; }
   .navbar-nav {
     text-align: center;
     margin-bottom: 50px; }
   .navbar-nav .nav-link {
     font-size: 1.3em; } }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .home .bg-nav {
     background: none; }
   .home .topbar {
@@ -5639,6 +5786,13 @@ td {
   .reservation-summary-separator i {
     color: #bdbdbd; }
 
+@media (max-width: 575.98px) {
+  .sticky-top {
+    width: 100%;
+    position: fixed;
+    top: 58px;
+    z-index: 25; } }
+
 @media (min-width: 768px) {
   .reservation-summary-item {
     -webkit-box-align: center;
@@ -5678,6 +5832,75 @@ td {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; } }
+
+/** Override JQUERY UI **/
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal; }
+
+/* Header */
+.ui-datepicker .ui-datepicker-header {
+  background-color: transparent !important;
+  padding: 20px !important;
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 0px !important;
+  margin-bottom: 5px !important; }
+
+/** Selected date as none **/
+.ui-state-active, ui-state-highlight {
+  background: transparent !important;
+  color: gray !important; }
+
+a.ui-state-default.ui-state-highlight.ui-state-active {
+  background: transparent !important; }
+
+/* Title */
+.ui-datepicker-title {
+  position: relative !important;
+  top: -15px !important;
+  margin: 0 !important; }
+
+/* Month and year */
+.ui-datepicker-month, .ui-datepicker-year {
+  font-size: 2em !important; }
+
+.ui-datepicker {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important; }
+
+.ui-datepicker table {
+  width: 100% !important;
+  height: 100% !important; }
+
+.ui-datepicker table th span {
+  font-size: 2em !important;
+  text-align: center !important;
+  color: #d7d6d6; }
+
+.ui-datepicker table td span,
+.ui-datepicker table td a {
+  height: 100%;
+  font-size: 2em !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  /* Avoid shadow on cells */ }
+
+.ui-datepicker-prev:before {
+  content: '\f053';
+  font-family: 'FontAwesome';
+  font-size: 20px;
+  /*left: -6px !important;*/ }
+
+.ui-datepicker-next:before {
+  content: '\f054';
+  font-family: 'FontAwesome';
+  font-size: 20px;
+  /*right: -6px !important;*/ }
+
+.ui-icon {
+  background-image: none !important; }
 
 .full-height {
   height: 100%; }

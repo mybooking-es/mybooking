@@ -31,6 +31,11 @@ function mybookinges_register_options_global() {
 
   // Definición de opciones
   add_option("global_topbar","","","yes");
+  add_option("global_navigation_layout","","","yes");
+  add_option("global_navigation_panel_one","","","yes");
+  add_option("global_navigation_panel_two","","","yes");
+  add_option("global_navigation_image_one","","","yes");
+  add_option("global_navigation_image_two","","","yes");
   add_option("global_footer_layout","","","yes");
   add_option("global_list_layout","","","yes");
   add_option("global_testimonials_active","","","yes");
@@ -39,6 +44,11 @@ function mybookinges_register_options_global() {
 
   // Registro de opciones
   register_setting("options_global", "global_topbar");
+  register_setting("options_global", "global_navigation_layout");
+  register_setting("options_global", "global_navigation_panel_one");
+  register_setting("options_global", "global_navigation_panel_two");
+  register_setting("options_global", "global_navigation_image_one");
+  register_setting("options_global", "global_navigation_image_two");
   register_setting("options_global", "global_footer_layout");
   register_setting("options_global", "global_list_layout");
   register_setting("options_global", "global_testimonial_active");
@@ -84,6 +94,50 @@ function mybookinges_configuration_global() {
           </td>
         </tr>
       </table>
+
+      <hr>
+
+      <!-- Navigation -->
+
+      <h2><?php _e('Navegación', 'mybooking') ?></h2>
+
+      <table class="form-table">
+        <tr valign="top">
+          <th scope="row"><?php _e( 'Escoge el estilo de navegación para móvil', 'mybooking' ) ?></th>
+          <td>
+            <?php $options_navigation = get_option( "global_navigation_layout" ); ?>
+            <input type="radio" name="global_navigation_layout" <?php checked( $options_navigation, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Menú a la derecha', 'mybooking') ?></strong></span><br><br>
+            <input type="radio" name="global_navigation_layout" <?php checked( $options_navigation, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Menú a la izquierda','mybooking') ?></strong></span>
+          </td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><?php _e( 'Activa o desactiva los paneles desplegables', 'mybooking' ) ?></th>
+          <td>
+            <?php $panel_one_active = get_option( "global_navigation_panel_one" ); ?>
+            <input type="checkbox" name="global_navigation_panel_one" <?php checked( $panel_one_active, 1 ); ?> value="1"> <span class="description"><?php _e( 'Activa el panel desplegable uno', 'mybooking' ) ?></span><br><br>
+            <?php $panel_two_active = get_option( "global_navigation_panel_two" ); ?>
+            <input type="checkbox" name="global_navigation_panel_two" <?php checked( $panel_two_active, 1 ); ?> value="1"> <span class="description"><?php _e( 'Activa el panel desplegable dos', 'mybooking' ) ?></span>
+          </td>
+        </tr>
+
+        <?php if ( $panel_one_active == 1 ) { ?>
+          <tr valign="top">
+            <th scope="row"><?php _e( 'Icono del panel 1', 'mybooking' ) ?></th>
+            <td><input type="text" name="global_navigation_image_one" size="40" value="<?php echo get_option( 'global_navigation_image_one' ); ?>" />
+            <br><span class="description"><?php _e( 'Pega aquí la URL del icono para el panel uno', 'mybooking' ) ?></span></td>
+          </tr>
+        <?php } ?>
+        <?php if ( $panel_two_active == 1 ) { ?>
+          <tr valign="top">
+            <th scope="row"><?php _e( 'Icono del panel 2', 'mybooking' ) ?></th>
+            <td><input type="text" name="global_navigation_image_two" size="40" value="<?php echo get_option( 'global_navigation_image_two' ); ?>" />
+            <br><span class="description"><?php _e( 'Pega aquí la URL del icono para el panel dos', 'mybooking' ) ?></span></td>
+          </tr>
+        <?php } ?>
+
+      </table>
+
+      <hr>
 
       <!-- Footer -->
 

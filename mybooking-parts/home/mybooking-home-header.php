@@ -3,7 +3,7 @@
 *		MYBOOKING HOME HEADER PARTIAL
 *  	-----------------------------
 *
-* 	Versión: 0.0.4
+* 	Versión: 0.0.5
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -13,19 +13,18 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<!-- Wizard container -->  
-<div id="wizard_container" class="bg-white text-dark">
-    <!-- Title -->
-    <div id="step_title" class="step_title text-center h5 pb-2"></div>
-    <!-- Close btn -->
-    <span id="close_wizard_btn" style="" ><i class="fa fa-times"></i></span>
-    <!-- Container -->
-    <div id="wizard_container_step" class="p-2">
-      <div id="wizard_container_step_header">
-      </div>
-      <div id="wizard_container_step_body">
-      </div>      
-    </div>
+<!-- WIZARD -->
+<div class="wizard-container" id="wizard_container">
+  <div class="wizard-step_header container">
+    <span class="wizard-close" id="close_wizard_btn">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/close-icon.png" alt="X">
+    </span>
+    <div class="wizard-step_title step_title" id="step_title"></div>
+  </div>
+  <div class="wizard-step_container" id="wizard_container_step">
+    <div class="wizard-step_summary" id="wizard_container_step_header"></div>
+    <div class="wizard-step_body" id="wizard_container_step_body"></div>
+  </div>
 </div>
 
 <div class="home-header">
