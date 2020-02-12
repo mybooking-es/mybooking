@@ -13,7 +13,7 @@
 <?php $testimonial_carousel_visible = get_option("home_testimonial_carousel_visibility");
 if ($testimonial_carousel_visible == 1) { ?>
 <div class="bg-gray-100">
-  <div class="container -carrusel-un-item carrusel-de-uno owl-carousel owl-theme">
+  <div class="container -carrusel-testimonials owl-theme">
 
     <?php
     $testimonial_args = array('post_type' => 'testimonial');

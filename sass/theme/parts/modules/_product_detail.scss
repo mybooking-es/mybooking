@@ -18,6 +18,9 @@
     color: $gray-600;
     line-height: 1;
   }
+  .img-fluid {
+    max-width: 600px !important;
+  }
 }
 .grupo {
   font-weight: 800;

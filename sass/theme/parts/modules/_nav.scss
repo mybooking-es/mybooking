@@ -4,7 +4,7 @@
 
 // Topbar
 .topbar {
-  font-size: .9em;
+  font-size: 0.9em;
   margin-top: 0;
   position: relative;
   z-index: 30;
@@ -25,46 +25,46 @@
 }
 
 .topbar a:hover {
-		color: #FFF;
-    opacity: .5;
+  color: #fff;
+  opacity: 0.5;
 }
 
 .topbar .info_link {
-    margin: 0 0 0 1em;
+  margin: 0 0 0 1em;
 }
 
 .topbar .topbar_menu {
-    float: right;
+  float: right;
 }
 
 .topbar .topbar_menu .menu {
-    margin: 0;
+  margin: 0;
 }
 
 .topbar .topbar_menu li {
-	  display: inline-block;
-	  margin: 0 .5em;
+  display: inline-block;
+  margin: 0 0.5em;
 }
 
 @media (max-width: 798px) {
   .topbar {
-      text-align: center;
+    text-align: center;
   }
 
   .topbar .topbar_menu {
-      float: none;
-      margin: .5rem auto;
+    float: none;
+    margin: 0.5rem auto;
   }
 }
 
 @media (max-width: 575.98px) {
-	.topbar .menu,
+  .topbar .menu,
   .topbar .info_text {
-		  display: none;
-	}
+    display: none;
+  }
 
   .topbar .info_link {
-      margin: 0 2em;
+    margin: 0 2em;
   }
 }
 
@@ -72,11 +72,11 @@
   width: 200px;
 }
 
-// Navbar
-
+/* Navbar */
+/* Occupies the top of the page */
 .home .navbar-container {
   width: 100%;
-  position: absolute;
+  /*position: absolute;*/
   top: 0;
   z-index: 30;
 }
@@ -84,6 +84,11 @@
 .navbar-brand {
   margin: 0;
   float: left;
+}
+
+/* Nav bar in front of the image and transparent */
+.home .nav-container-absolute {
+  position: absolute;
 }
 
 .navbar-dark .navbar-toggler {
@@ -97,7 +102,7 @@
 
 .navbar {
   z-index: 10;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .navbar-collapse {
@@ -160,15 +165,19 @@
 }
 
 @media (max-width: 575.98px) {
-	.home .bg-nav .navbar-brand img {
-		display: block;
-	}
+  .home .bg-nav .navbar-brand img {
+    display: block;
+  }
 
   .navbar-container {
-      width: 100%;
-      position: fixed;
-      top: 0;
-      z-index: 30;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 30;
+  }
+
+  .home .nav-container-absolute {
+    position: fixed;
   }
 
   .bg-nav {
@@ -191,7 +200,7 @@
 
 @media (max-width: 768px) {
   .navbar {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .navbar > .container,

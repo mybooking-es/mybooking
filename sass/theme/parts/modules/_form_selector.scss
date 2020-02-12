@@ -57,7 +57,7 @@
   align-items: center;
   font-size: 1.3rem;
   background-color: #fff;
-  padding: .8rem;
+  padding: 0.8rem;
   height: 48px;
   color: $gray-700;
 }
@@ -156,7 +156,6 @@
   .flex-form-horizontal {
     min-width: 100vw;
   }
-
   input.hasDatepicker {
     max-width: 130px;
   }
@@ -165,6 +164,14 @@
 @media (min-width: 768px) {
   .flex-form-group-wrapper {
     flex-direction: row;
+  }
+}
+
+@media (max-width: 992px) {
+  .flex-form,
+  .flex-form-horizontal {
+    width: 100vw;
+    padding: 20px;
   }
 }
 

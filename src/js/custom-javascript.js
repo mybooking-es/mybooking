@@ -1,51 +1,32 @@
 /**
-*   MYBOOKING CUSTOM JS
-*   -------------------
-*
-* 	Versión: 0.0.2
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.0.1
-*/
+ *   MYBOOKING CUSTOM JS
+ *   -------------------
+ *
+ * 	Versión: 0.0.2
+ *   @package WordPress
+ *   @subpackage Mybooking WordPress Theme
+ *   @since Mybooking WordPress Theme 0.0.1
+ */
 
 // OWL CAROUSEL
 $(document).ready(function() {
-
+  // Home page carousel
   $(".-carrusel-portada").owlCarousel({
     autoPlay: true,
-    slideSpeed : 3600,
-    paginationSpeed : 600,
+    slideSpeed: 3600,
+    paginationSpeed: 600,
     navigation: false,
-    pagination: true,
-    singleItem:true
+    pagination: false,
+    singleItem: true
   });
 
-  $(".-carrusel-un-item").owlCarousel({
+  // Testimonials
+  $(".-carrusel-testimonials").owlCarousel({
     autoPlay: true,
     slideSpeed: 300,
     paginationSpeed: 400,
     singleItem: true,
     pagination: false
-  });
-
-  $(".-carrusel-tres-items").owlCarousel({
-    autoPlay: true,
-    navigation: true,
-    navigationText: ["«", "»"],
-    pagination: false,
-    items: 3,
-    itemsDesktop: [1200, 3],
-    itemsDesktopSmall: [400, 1]
-  });
-
-  $(".-carrusel-cuatro-items").owlCarousel({
-    autoPlay: true,
-    navigation: true,
-    navigationText: ["«", "»"],
-    pagination: false,
-    items: 4,
-    itemsDesktop: [1200, 3],
-    itemsDesktopSmall: [400, 1]
   });
 });
 
@@ -55,6 +36,11 @@ $(document).ready(function() {
     var height = $(".home .page_content").offset().top;
     var is_mobile = false;
 
+    /*
+  if (typeof $("#form-selector").offset() !== "undefined") {
+    var height = $("#form-selector").offset().top;
+    var is_mobile = false;
+*/
     if ($(".navbar-toggler").is(":visible")) {
       is_mobile = true;
     }
@@ -62,10 +48,19 @@ $(document).ready(function() {
       $(window).on("scroll", function() {
         if ($(".navbar-toggler").is(":visible")) {
           $("#form-selector").removeClass("flex-form-sticky");
+          $("#home-header_content_container").removeClass(
+            "home-header_content_container_sticky"
+          );
         } else if ($(window).scrollTop() > height) {
           $("#form-selector").addClass("flex-form-sticky");
+          $("#home-header_content_container").addClass(
+            "home-header_content_container_sticky"
+          );
         } else {
           $("#form-selector").removeClass("flex-form-sticky");
+          $("#home-header_content_container").removeClass(
+            "home-header_content_container_sticky"
+          );
         }
       });
     }
