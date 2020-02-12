@@ -1,5 +1,9 @@
 // WIZARD FORM
 
+.wizard-selector {
+  margin-top: 1rem;
+}
+
 .wizard-selector_field input {
   border-radius: 25px 25px;
   margin-bottom: 10px;
@@ -33,7 +37,7 @@
 
 .wizard-close {
 	position: fixed;
-	top: 20px;                                          
+	top: 20px;
 	right: 20px;
 	margin-right: 10px
 }

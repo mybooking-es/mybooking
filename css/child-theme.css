@@ -2819,6 +2819,75 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
             transform: scale(1.5); } }
 
 /** Import parts **/
+/** Override JQUERY UI **/
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal; }
+
+/* Header */
+.ui-datepicker .ui-datepicker-header {
+  background-color: transparent !important;
+  padding: 20px !important;
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 0px !important;
+  margin-bottom: 5px !important; }
+
+/** Selected date as none **/
+.ui-state-active, ui-state-highlight {
+  background: transparent !important;
+  color: gray !important; }
+
+a.ui-state-default.ui-state-highlight.ui-state-active {
+  background: transparent !important; }
+
+/* Title */
+.ui-datepicker-title {
+  position: relative !important;
+  top: -15px !important;
+  margin: 0 !important; }
+
+/* Month and year */
+.ui-datepicker-month, .ui-datepicker-year {
+  font-size: 2em !important; }
+
+.ui-datepicker {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important; }
+
+.ui-datepicker table {
+  width: 100% !important;
+  height: 100% !important; }
+
+.ui-datepicker table th span {
+  font-size: 2em !important;
+  text-align: center !important;
+  color: #d7d6d6; }
+
+.ui-datepicker table td span,
+.ui-datepicker table td a {
+  height: 100%;
+  font-size: 2em !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  /* Avoid shadow on cells */ }
+
+.ui-datepicker-prev:before {
+  content: '\f053';
+  font-family: 'FontAwesome';
+  font-size: 20px;
+  /*left: -6px !important;*/ }
+
+.ui-datepicker-next:before {
+  content: '\f054';
+  font-family: 'FontAwesome';
+  font-size: 20px;
+  /*right: -6px !important;*/ }
+
+.ui-icon {
+  background-image: none !important; }
+
 .color-transparent-white {
   color: rgba(255, 255, 255, 0.6); }
 
@@ -4390,6 +4459,9 @@ input.form-reservation-error {
   .flex-form-horizontal-item select {
     width: 100px; } }
 
+.wizard-selector {
+  margin-top: 1rem; }
+
 .wizard-selector_field input {
   border-radius: 25px 25px;
   margin-bottom: 10px; }
@@ -4513,7 +4585,7 @@ input.form-reservation-error {
   width: 100%; }
 
 .wizard-date_calendar .ui-widget-content {
-  background-color: transparent !important; }
+  background: transparent !important; }
 
 .topbar {
   font-size: 0.9em;
@@ -6068,75 +6140,6 @@ ul.summary-modal_prices {
             flex-direction: row; }
     .complete-summary-item span {
       float: left; } }
-
-/** Override JQUERY UI **/
-@font-face {
-  font-family: "FontAwesome";
-  font-weight: normal;
-  font-style: normal; }
-
-/* Header */
-.ui-datepicker .ui-datepicker-header {
-  background-color: transparent !important;
-  padding: 20px !important;
-  border-bottom: 1px solid #EEE;
-  padding-bottom: 0px !important;
-  margin-bottom: 5px !important; }
-
-/** Selected date as none **/
-.ui-state-active, ui-state-highlight {
-  background: transparent !important;
-  color: gray !important; }
-
-a.ui-state-default.ui-state-highlight.ui-state-active {
-  background: transparent !important; }
-
-/* Title */
-.ui-datepicker-title {
-  position: relative !important;
-  top: -15px !important;
-  margin: 0 !important; }
-
-/* Month and year */
-.ui-datepicker-month, .ui-datepicker-year {
-  font-size: 2em !important; }
-
-.ui-datepicker {
-  width: 100% !important;
-  height: 100% !important;
-  border: 0 !important; }
-
-.ui-datepicker table {
-  width: 100% !important;
-  height: 100% !important; }
-
-.ui-datepicker table th span {
-  font-size: 2em !important;
-  text-align: center !important;
-  color: #d7d6d6; }
-
-.ui-datepicker table td span,
-.ui-datepicker table td a {
-  height: 100%;
-  font-size: 2em !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  /* Avoid shadow on cells */ }
-
-.ui-datepicker-prev:before {
-  content: '\f053';
-  font-family: 'FontAwesome';
-  font-size: 20px;
-  /*left: -6px !important;*/ }
-
-.ui-datepicker-next:before {
-  content: '\f054';
-  font-family: 'FontAwesome';
-  font-size: 20px;
-  /*right: -6px !important;*/ }
-
-.ui-icon {
-  background-image: none !important; }
 
 .full-height {
   height: 100%; }

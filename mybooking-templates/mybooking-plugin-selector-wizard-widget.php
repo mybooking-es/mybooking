@@ -13,7 +13,7 @@
 <!-- Search form -->
 <section class="section">
   <div class="wizard-selector container">
-    <form class="wizard-selector_form mt-5" name="wizard_search_form">
+    <form class="wizard-selector_form" name="wizard_search_form">
 
       <input type="hidden" name="pickup_place">
       <input type="hidden" name="return_place">
