@@ -14,23 +14,18 @@
 <div class="reservation-step custom-form">
 
   <!-- Reservation : Selected product -->
-  <div id="selected_product" class="product-detail"></div>
+  <div id="selected_product" class="sticky-top"></div>
+  <!-- Reservation summary modal -->
+  <div id="reservation_detail"></div>
 
   <div class="bg-gray-200">
     <div class="container">
       <div class="row justify-content-center">
-
           <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-5">
             <!-- Reservation : Extras -->
             <h4 class="brand-primary my-3"><?php _e('Extras', 'mybooking') ?></h4>
             <div id="extras_listing"></div>
           </div>
-
-          <div class="col-md-12 bg-white shadow-bottom py-3 mt-3">
-            <!-- Reservation summary -->
-            <div id="reservation_detail"></div>
-          </div>
-
           <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-3 mb-5">
             <!-- Reservation complete -->
             <form id="form-reservation" name="reservation_form">
