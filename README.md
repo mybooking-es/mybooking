@@ -103,9 +103,9 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Added new fields on **mybookin-plugin-complete-tmpl.php**
 - Updated translations
 - Sticky topbar on Choose template
+- New reservation template for process
 
 ### 0.2.1
-- New templates on **mybooking-templates/**
 - Eliminated footer menu references
 - Deprecation notice on Contact settings section (we'll eliminate on 1.0.0)
 - Added the_content() hook on **mybooking-product-loop.php**
@@ -115,3 +115,12 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Reestructured options pages for new header options
 - New custom post type Carousel
 - Deleted obsolete partials related to old home header
+
+### 0.4.0
+- New navigation with widget modals and custom options
+
+### 0.5.0
+- New reservation widget and process wizard style
+
+### 0.5.1
+- Reworked header backgrounds for better responsiveness

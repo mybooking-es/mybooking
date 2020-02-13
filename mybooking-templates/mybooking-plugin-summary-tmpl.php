@@ -68,8 +68,8 @@
           </div>
         </div>
         <br>
-        <div id="reservation_form_container" class="col bg-white shadow-bottom py-3 px-3" style="display:none"></div>  
-        <br>   
+        <div id="reservation_form_container" class="col bg-white shadow-bottom py-3 px-3" style="display:none"></div>
+        <br>
       </div>
       <!-- Sidebar -->
       <div class="col-md-4">
@@ -77,7 +77,7 @@
           <h4 class="brand-primary my-3"><?php _e('Detalle de la reserva', 'mybooking') ?></h4>
           <h5><?php _e('Total producto', 'mybooking') ?></h5>
           <p class="color-gray-600"><%=configuration.formatCurrency(booking.item_cost)%></p>
-         
+
           <% if (booking.booking_extras.length > 0) { %>
             <hr>
             <h5><?php _e('Extras', 'mybooking') ?></h5>
