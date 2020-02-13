@@ -26,9 +26,13 @@ defined( 'ABSPATH' ) || exit;
 
 <body <?php body_class(); ?>>
   <?php do_action( 'wp_body_open' ); ?>
+  <?php 
+    $navbar_integrated = get_option( "home_navbar_integrated" ); 
+    $navbar_class = ($navbar_integrated == 1 ? 'nav-container-absolute' : '');  
 
+  ?>
   <div class="site eupopup eupopup-bottom" id="page">
-    <div id="wrapper-navbar" class="navbar-container nav-container-absolute" itemscope itemtype="http://schema.org/WebSite">
+    <div id="wrapper-navbar" class="navbar-container <?php echo $navbar_class; ?>" itemscope itemtype="http://schema.org/WebSite">
       <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'mybooking' ); ?></a>
 
       <!-- Topbar -->

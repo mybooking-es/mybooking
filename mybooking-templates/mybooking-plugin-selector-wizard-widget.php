@@ -13,7 +13,6 @@
 <!-- Search form -->
 <section class="section">
   <div class="wizard-selector container">
-<<<<<<< HEAD
     <form class="wizard-selector_form" name="wizard_search_form">
 
       <input type="hidden" name="pickup_place">
@@ -22,9 +21,6 @@
       <input type="hidden" name="time_from">
       <input type="hidden" name="time_to">
 
-=======
-    <form class="wizard-selector_form mt-5" name="wizard_search_form">
->>>>>>> 131db393be4fcc4237647faffe2cbf33d8ae1467
       <div class="row">
         <div class="wizard-selector_field col-md-3">
             <label for="place_holder"><?php _e('¿Dónde?','mybooking') ?></label>
