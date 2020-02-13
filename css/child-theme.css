@@ -4506,14 +4506,15 @@ input.form-reservation-error {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding-bottom: 6em !important; }
 
 #wizard_container #date_from {
   width: 100%;
   height: 100%; }
 
 .wizard-multi-place {
-  padding: 0 1rem; }
+  padding: 0 1rem 1rem 1rem; }
 
 .wizard-multi-place_selectors {
   margin-bottom: 2rem; }
