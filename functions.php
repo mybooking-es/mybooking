@@ -43,7 +43,11 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
+// Include WordPerss Bootstrap NavWalker (Understrap)
 require_once('inc/class-wp-bootstrap-navwalker.php');
+
+// Include the widgets areas
+require_once('inc/widgets.php');
 
 /**
  * Mybooking configuration pages
