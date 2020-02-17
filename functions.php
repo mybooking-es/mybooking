@@ -43,6 +43,8 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
+require_once('inc/class-wp-bootstrap-navwalker.php');
+
 /**
  * Mybooking configuration pages
  *
