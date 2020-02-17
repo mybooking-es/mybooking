@@ -25,8 +25,8 @@ gulp.task("watch", function() {
     [
       `${paths.dev}/js/**/*.js`,
       "js/**/*.js",
-      "!js/child-theme.js",
-      "!js/child-theme.min.js"
+      "!js/theme.js",
+      "!js/theme.min.js"
     ],
     gulp.series("scripts")
   );
@@ -65,10 +65,10 @@ gulp.task("sass", function() {
 
 // Run:
 // gulp minifycss
-// Minify child-theme.css
+// Minify theme.css
 gulp.task("minifycss", function() {
   return gulp
-    .src(paths.css + "/child-theme.css")
+    .src(paths.css + "/theme.css")
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(cleanCSS({ compatibility: "*" }))
     .pipe(
@@ -120,12 +120,12 @@ gulp.task("scripts", function() {
   ];
   gulp
     .src(scripts, { allowEmpty: true })
-    .pipe(concat("child-theme.min.js"))
+    .pipe(concat("theme.min.js"))
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
 
   return gulp
     .src(scripts, { allowEmpty: true })
-    .pipe(concat("child-theme.js"))
+    .pipe(concat("theme.js"))
     .pipe(gulp.dest(paths.js));
 });

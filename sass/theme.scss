@@ -1,0 +1,22 @@
+// Theme variables
+@import "theme/theme_variables";
+
+// Loads bootstrap 4
+@import "assets/bootstrap4";     
+
+// Loads Understrap default. To incorporate BS in WP
+@import "understrap/understrap"; 
+
+// Font Awesome
+@import "assets/font-awesome";    
+
+// Underscores media styles
+@import "assets/underscores";    
+
+// Vendor libraries
+@import "vendor/jquery.ui.custom/jquery-ui-1.9.2.custom";
+@import "vendor/jquery.date.range.picker/jquery-date-range-picker-0.20.0";
+@import "vendor/owl.carousel/owl.carousel";
+@import "vendor/owl.carousel/owl.theme";
+@import "vendor/owl.carousel/owl.transitions";
+@import "theme/theme";
