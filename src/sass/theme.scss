@@ -1,17 +1,19 @@
 // Theme variables
 @import "theme/theme_variables";
 
+// --- Dependencies Start
+
 // Loads bootstrap 4
-@import "assets/bootstrap4";     
+@import "vendor/bootstrap4/bootstrap";     
 
 // Loads Understrap default. To incorporate BS in WP
-@import "understrap/understrap"; 
+@import "vendor/understrap/understrap"; 
 
 // Font Awesome
-@import "assets/font-awesome";    
+@import "vendor/fontawesome/font-awesome";    
 
 // Underscores media styles
-@import "assets/underscores";    
+@import "vendor/underscores/galleries";    
 
 // Vendor libraries
 @import "vendor/jquery.ui.custom/jquery-ui-1.9.2.custom";
@@ -19,4 +21,8 @@
 @import "vendor/owl.carousel/owl.carousel";
 @import "vendor/owl.carousel/owl.theme";
 @import "vendor/owl.carousel/owl.transitions";
+
+// --- Dependencies End
+
+// Theme
 @import "theme/theme";

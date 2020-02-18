@@ -13346,7 +13346,6 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
     -webkit-transform: scale(1.5);
             transform: scale(1.5); } }
 
-/** Import parts **/
 /** Override JQUERY UI **/
 @font-face {
   font-family: "FontAwesome";

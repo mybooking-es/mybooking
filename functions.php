@@ -17,19 +17,19 @@ defined( 'ABSPATH' ) || exit;
  * Internacionalization
  *
  */
-function mybooking_setup(){
+function mybooking_theme_setup(){
     $domain = 'mybooking';
     load_child_theme_textdomain( $domain, get_stylesheet_directory() . '/languages' );
     // wp-content/themes/mybooking/languages/
     load_child_theme_textdomain( $domain, get_template_directory() . '/languages' );
 }
-add_action( 'after_setup_theme', 'mybooking_setup' );
+add_action( 'after_setup_theme', 'mybooking_theme_setup' );
 
 /**
  * Enqueue new CSS & scripts
  *
  */
-function theme_enqueue_styles() {
+function mybooking_theme_enqueue_styles() {
 
 	// Get the theme data
 	$the_theme = wp_get_theme();
@@ -41,7 +41,7 @@ function theme_enqueue_styles() {
   wp_enqueue_script( 'mybooking-scripts', get_stylesheet_directory_uri() . '/js/theme.min.js', array(), $the_theme->get( 'Version' ), true );
 
 }
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'mybooking_theme_enqueue_styles' );
 
 // Include WordPerss Bootstrap NavWalker (Understrap)
 require_once('inc/class-wp-bootstrap-navwalker.php');

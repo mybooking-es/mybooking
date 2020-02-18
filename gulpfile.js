@@ -20,7 +20,7 @@ var paths = cfg.paths;
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task("watch", function() {
-  gulp.watch(`${paths.sass}/**/*.scss`, gulp.series("styles"));
+  gulp.watch(`${paths.dev}/sass/**/*.scss`, gulp.series("styles"));
   gulp.watch(
     [
       `${paths.dev}/js/**/*.js`,
@@ -37,7 +37,7 @@ gulp.task("watch", function() {
 // Copy jQuery UI images into dist images folder
 gulp.task("cssimages", function() {
   return gulp
-    .src(paths.sass + "/vendor/jquery.ui.custom/images/*.{jpg,gif,png}")
+    .src(paths.dev + "/sass/vendor/jquery.ui.custom/images/*.{jpg,gif,png}")
     .pipe(gulp.dest(paths.css + "/images"));
 });
 
@@ -46,7 +46,7 @@ gulp.task("cssimages", function() {
 // Compiles SCSS files in CSS
 gulp.task("sass", function() {
   var stream = gulp
-    .src(`${paths.sass}/*.scss`)
+    .src(`${paths.dev}/sass/*.scss`)
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(
       plumber({
@@ -111,6 +111,14 @@ gulp.task("watch-bs", gulp.parallel("browser-sync", "watch"));
 // Uglifies and concat all JS files into one
 gulp.task("scripts", function() {
   var scripts = [
+
+    // Start - All BS4 stuff
+    `${paths.dev}/js/bootstrap4/bootstrap.bundle.js`,
+
+    // End - All BS4 stuff
+
+    `${paths.dev}/js/skip-link-focus-fix.js`,
+
     `${paths.dev}/js/vendor/owl.carousel/owl.carousel.js`,
     `${paths.dev}/js/vendor/jquery-eu-cookie/jquery-eu-cookie-law-popup.js`,
 
@@ -129,3 +137,4 @@ gulp.task("scripts", function() {
     .pipe(concat("theme.js"))
     .pipe(gulp.dest(paths.js));
 });
+
