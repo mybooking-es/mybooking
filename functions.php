@@ -12,6 +12,21 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+$mybooking_includes = array(
+  '/setup.php',                           // Theme setup and custom theme supports.
+  '/widgets.php',                         // Register widget area.
+  '/class-wp-bootstrap-navwalker.php'     // Load custom WordPress nav walker.
+);
+
+foreach ( $mybooking_includes as $file ) {
+  $filepath = locate_template( 'inc' . $file );
+  if ( ! $filepath ) {
+    trigger_error( sprintf( 'Error locating /inc%s for inclusion', $file ), E_USER_ERROR );
+  }
+  require_once $filepath;
+}
+
+
 /**
  * Internacionalization
  *
@@ -42,11 +57,6 @@ function mybooking_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'mybooking_theme_enqueue_styles' );
 
-// Include WordPerss Bootstrap NavWalker (Understrap)
-require_once('inc/class-wp-bootstrap-navwalker.php');
-
-// Include the widgets areas
-require_once('inc/widgets.php');
 
 /**
  * Mybooking configuration pages
