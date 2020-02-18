@@ -2,7 +2,7 @@
 /**
 *		PAGES
 *  	-----
-*		Overrides parent document on Understrap Theme
+*		Parent document
 *
 * 	Versión: 0.0.3
 *   @package WordPress
@@ -18,7 +18,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package understrap
+ * @package mybooking-wp-theme
  */
 
 // Exit if accessed directly.

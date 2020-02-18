@@ -2,7 +2,7 @@
 /**
 *		SINGLE PRODUCT PARTIAL
 *  	----------------------
-*		Overrides parent document on Understrap parent theme
+*		Product content type partial
 *
 * 	Versión: 0.0.1
 *   @package WordPress

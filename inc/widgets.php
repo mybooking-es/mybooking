@@ -2,7 +2,7 @@
 /**
 *		SIDEBARS
 *  	--------
-*		Overrides parent document on Understrap Theme
+*		Them widget areas
 *
 * 	Versión: 0.0.4
 *   @package WordPress

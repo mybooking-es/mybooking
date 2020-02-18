@@ -2,7 +2,7 @@
 /**
 *		INDEX
 *  	-----
-*		Overrides parent document on Understrap Theme
+*		Parent document
 *
 * 	Versión: 0.0.2
 *   @package WordPress

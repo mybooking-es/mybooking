@@ -2,7 +2,7 @@
 /**
 *		BLOG LOOP RENDERING
 *  	-------------------
-*		Overrides parent document on Understrap Theme
+*		Blog document
 *
 * 	Versión: 0.0.2
 *   @package WordPress

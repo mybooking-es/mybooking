@@ -2,7 +2,6 @@
 /**
 *		GLOBAL FUNCTIONS
 *  	----------------
-*		Overrides parent document on Understrap Theme
 *
 * 	Versión: 0.0.3
 *   @package WordPress
