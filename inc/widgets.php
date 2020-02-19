@@ -2,13 +2,15 @@
 /**
 *		SIDEBARS
 *  	--------
-*		Them widget areas
 *
-* 	Versión: 0.0.4
+* 	Versión: 0.0.5
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
 */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Sidebars definition
