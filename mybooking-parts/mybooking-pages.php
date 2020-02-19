@@ -3,7 +3,7 @@
 *   Template Name: MyBooking Pages
 *  	------------------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.3
@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'mybooking_container_type' );
 ?>
 
 <?php while ( have_posts() ) : the_post(); ?>

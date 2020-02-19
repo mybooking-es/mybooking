@@ -3,7 +3,7 @@
 *		MYBOOKING THEME SETUP
 *  	---------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.0
@@ -104,7 +104,21 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 	}
 }
 
+/**
+ * Mybooking Configuration & functions
+ *
+ */
+require_once('mybooking-options/mybooking-home-options.php');
+require_once('mybooking-options/mybooking-company-options.php');
+require_once('mybooking-options/mybooking-global-options.php');
+require_once('mybooking-functions/mybooking-menus.php');
+require_once('mybooking-functions/mybooking-categories.php');
 
+
+/**
+ * Post excerpts
+ *
+ */
 add_filter( 'excerpt_more', 'mybooking_custom_excerpt_more' );
 
 if ( ! function_exists( 'mybooking_custom_excerpt_more' ) ) {

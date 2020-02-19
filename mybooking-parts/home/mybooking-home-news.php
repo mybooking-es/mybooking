@@ -3,7 +3,7 @@
 *		MYBOOKING HOME NEWS PARTIAL
 *  	-----------------------------
 *
-* 	Versión: 0.0.2
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -26,25 +26,19 @@ if ($news_visible == 1) { ?>
         $news_item = new WP_Query($news_args); ?>
         <?php  while ( $news_item->have_posts() ) : $news_item->the_post(); ?>
 
-                <div class="col-md-4">
-                  <div class="news_thumbnail">
-                    <a href="<?php echo get_the_permalink() ?>">
-
-                      <?php the_post_thumbnail(); ?>
-
-                    </a>
-                  </div>
-                  <h2 class="news_title">
-
-                    <?php the_title(); ?>
-
-                  </h2>
-                  <div class="news_extract">
-
-                    <?php echo the_excerpt(); ?>
-
-                  </div>
-                </div>
+            <div class="col-md-4">
+              <div class="news_thumbnail">
+                <a href="<?php echo get_the_permalink() ?>">
+                  <?php the_post_thumbnail(); ?>
+                </a>
+              </div>
+              <h2 class="news_title">
+                <?php the_title(); ?>
+              </h2>
+              <div class="news_extract">
+                <?php echo the_excerpt(); ?>
+              </div>
+            </div>
 
         <?php endwhile; ?>
 

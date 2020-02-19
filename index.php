@@ -4,7 +4,7 @@
 *  	-----
 *		Parent document
 *
-* 	Versión: 0.0.2
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.2
@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'mybooking_container_type' );
 ?>
 
 <?php if ( is_front_page() && is_home() ) : ?>
@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</main>
 
-			<?php understrap_pagination(); ?>
+			<?php mybooking_pagination(); ?>
 
 		</div>
 	</div>

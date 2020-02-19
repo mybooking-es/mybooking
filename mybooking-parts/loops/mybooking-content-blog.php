@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
 
 				<?php if ( 'post' == get_post_type() ) : ?>
 					<div class="entry-meta">
-						<?php understrap_posted_on(); ?>
+						<?php mybooking_posted_on(); ?>
 					</div>
 				<?php endif; ?>
 
@@ -42,7 +42,7 @@ defined( 'ABSPATH' ) || exit;
 
 				<?php the_excerpt(); ?>
 				<?php wp_link_pages(	array(
-						'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+						'before' => '<div class="page-links">' . __( 'Pages:', 'mybooking' ),
 						'after'  => '</div>',
 					)); ?>
 

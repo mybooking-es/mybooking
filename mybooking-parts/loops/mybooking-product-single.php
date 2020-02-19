@@ -223,7 +223,7 @@ defined( 'ABSPATH' ) || exit;
     <div class="col_md_12">
 
       <?php	wp_link_pages( array(
-          'before' => '<div class="page-links">' . __( 'Páginas:', 'understrap' ),
+          'before' => '<div class="page-links">' . __( 'Páginas:', 'mybooking' ),
           'after'  => '</div>',
         )); ?>
 
@@ -231,7 +231,7 @@ defined( 'ABSPATH' ) || exit;
   </div>
   <footer class="entry-footer">
 
-    <?php understrap_entry_footer(); ?>
+    <?php mybooking_entry_footer(); ?>
 
   </footer>
 </article>

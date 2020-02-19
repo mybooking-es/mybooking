@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 
 				<div class="entry-meta">
 
-					<?php understrap_posted_on(); ?>
+					<?php mybooking_posted_on(); ?>
 
 				</div>
 			</header>
@@ -33,14 +33,14 @@ defined( 'ABSPATH' ) || exit;
 
 				<?php the_content(); ?>
 				<?php	wp_link_pages( array(
-						'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+						'before' => '<div class="page-links">' . __( 'Pages:', 'mybooking' ),
 						'after'  => '</div>',
 					)); ?>
 
 			</div>
 			<footer class="entry-footer">
 
-				<?php understrap_entry_footer(); ?>
+				<?php mybooking_entry_footer(); ?>
 
 			</footer>
 		</div>

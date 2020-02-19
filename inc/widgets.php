@@ -38,7 +38,7 @@ function mybooking_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Home Izquierda', 'mybooking' ),
+			'name'          => __( 'Home Header Uno', 'mybooking' ),
 			'id'            => 'mybooking_home_izquierda',
 	    'description'    => __( 'Área de widgets a la izquierda de la cabecera de la Home', 'mybooking' ),
 			'before_widget' => '<div>',
@@ -47,7 +47,7 @@ function mybooking_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Home Derecha', 'mybooking' ),
+			'name'          => __( 'Home Header Dos', 'mybooking' ),
 			'id'            => 'mybooking_home_derecha',
 	    'description'    => __( 'Área de widgets a la derecha de la cabecera de la Home', 'mybooking' ),
 			'before_widget' => '<div>',

@@ -124,3 +124,11 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 
 ### 0.5.1
 - Reworked header backgrounds for better responsiveness
+
+### 0.6.0
+- Mybooking now is a parent theme!!!
+
+### 0.6.1
+- Added theme suport and customizer options
+- Updated container and pagination hooks
+- Refactorized functions.php
