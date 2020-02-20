@@ -44,4 +44,35 @@ foreach ( $mybooking_includes as $file ) {
 // }
 // add_action( 'after_setup_theme', 'mybooking_theme_setup' );
 
+/**
+ * Mybooking Configuration & functions
+ *
+ */
+// require_once('mybooking-options/mybooking-home-options.php');
+// require_once('mybooking-options/mybooking-company-options.php');
+// require_once('mybooking-options/mybooking-global-options.php');
+// require_once('mybooking-functions/mybooking-menus.php');
+// require_once('mybooking-functions/mybooking-categories.php');
+
+// $options_header_background = get_option( 'home_header_background' );
+// if ( $options_header_background == 2 ) {
+//  require_once('mybooking-posts/mybooking-carousel.php');
+// }
+//
+// $testimonial_active = get_option( "global_testimonial_active" );
+// if ( $testimonial_active == 1 ) {
+//  require_once('mybooking-posts/mybooking-testimonial.php');
+// }
+//
+// $promo_active = get_option( "global_promo_active" );
+// if ( $promo_active == 1 ) {
+//  require_once('mybooking-posts/mybooking-promo.php');
+// }
+//
+// $product_active = get_option( "global_product_active" );
+// if ( $product_active == 1 ) {
+//  require_once('mybooking-posts/mybooking-product.php');
+// }
+
+
 ?>

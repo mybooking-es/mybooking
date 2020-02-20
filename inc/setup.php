@@ -108,11 +108,11 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
  * Mybooking Configuration & functions
  *
  */
-require_once('mybooking-options/mybooking-home-options.php');
-require_once('mybooking-options/mybooking-company-options.php');
-require_once('mybooking-options/mybooking-global-options.php');
-require_once('mybooking-functions/mybooking-menus.php');
-require_once('mybooking-functions/mybooking-categories.php');
+require_once( get_template_directory() . '/mybooking-options/mybooking-home-options.php' );
+require_once( get_template_directory() . '/mybooking-options/mybooking-company-options.php' );
+require_once( get_template_directory() . '/mybooking-options/mybooking-global-options.php' );
+require_once( get_template_directory() . '/mybooking-functions/mybooking-menus.php' );
+require_once( get_template_directory() . '/mybooking-functions/mybooking-categories.php' );
 
 
 /**
