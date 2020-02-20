@@ -38,7 +38,7 @@
         </div>
         <br>
         <div class="col-md-3 d-flex align-items-end">
-            <button class="wizard-selector_btn btn btn-success" id="btn_reservation" type="button"><?php _e('Reservar','mybooking') ?></button>
+            <button class="wizard-selector_btn btn" id="btn_reservation" type="button"><?php _e('Reservar','mybooking') ?></button>
         </div>
       </div>
     </form>

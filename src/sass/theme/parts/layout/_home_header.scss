@@ -15,7 +15,7 @@
 .home-header {
   position: relative;
   flex-direction: column;
-  background-color: #666;
+  background-color: #8ac53f;
   z-index: 2;
 }
 
@@ -26,7 +26,7 @@
  */
 .home-header_background {
   width: 100%;
-  padding-top: 62px; // For mobile content (because parent is absolute)
+  padding-top: 42px; // For mobile content (because parent is absolute)
 }
 
 /**
@@ -36,18 +36,17 @@
 .home-header_background_video {
   object-fit: cover;
   object-position: 50% 50%;
-  z-index: -1;
-  mix-blend-mode: overlay;
   min-height: 220px;
   width: 100%;
+  z-index: -1;
 }
 
 /**
  * Background carousel
  */
 .home-header_background_carrusel {
-  mix-blend-mode: overlay;
   min-height: 220px;
+  z-index: -1;
 }
 
 // Carousel item
@@ -62,7 +61,7 @@
 // -----------------------
 
 /**
- * Widget areas 
+ * Widget areas
  */
 .home-header_content {
   display: flex;

@@ -76,19 +76,37 @@
 /* Occupies the top of the page */
 .home .navbar-container {
   width: 100%;
-  /*position: absolute;*/
   top: 0;
   z-index: 30;
 }
 
-.navbar-brand {
-  margin: 0;
-  float: left;
+.bg-nav {
+  width: 100%;
+  margin-top: 0;
+  background: $brand-secondary;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    $brand-primary,
+    $brand-secondary
+  );
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $brand-primary, $brand-secondary);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* Nav bar in front of the image and transparent */
 .home .nav-container-absolute {
   position: absolute;
+}
+
+.nav-container-absolute .bg-nav {
+  background: none;
+}
+
+.navbar-brand {
+  margin: 0;
+  float: left;
 }
 
 .navbar-dark .navbar-toggler {
@@ -109,21 +127,6 @@
   .navbar-nav .nav-link {
     color: $white;
   }
-}
-
-.bg-nav {
-  width: 100%;
-  margin-top: 0;
-  background: $brand-secondary;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    $brand-primary,
-    $brand-secondary
-  );
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, $brand-primary, $brand-secondary);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .navbar-nav .nav-link {
@@ -203,11 +206,6 @@
     padding: 0.5rem 1rem;
   }
 
-  .navbar > .container,
-  .navbar > .container-fluid {
-      justify-content: center;
-  }
-
   .navbar-brand {
     margin: 0 1rem;
   }
@@ -223,11 +221,15 @@
 
 }
 
-@media (min-width: 1024px) {
-  .home .bg-nav {
-    background: none;
+@media (max-width: 991px) {
+  .navbar > .container,
+  .navbar > .container-fluid {
+      justify-content: center;
   }
+  
+}
 
+@media (min-width: 1024px) {
   .home .topbar {
     background-color: rgba(66, 66, 66, 0.5);
   }

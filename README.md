@@ -132,3 +132,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Added theme suport and customizer options
 - Updated container and pagination hooks
 - Refactorized functions.php
+
+### 0.6.2
+- Elementor content area desplacement solved
+- CSS adjustements

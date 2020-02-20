@@ -3259,15 +3259,13 @@ input[type="button"].btn-block {
     background-color: #007bff;
     border: 0;
     border-radius: 1rem;
-    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     -moz-appearance: none;
          appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-moz-range-thumb {
-        -webkit-transition: none;
+        -moz-transition: none;
         transition: none; } }
     .custom-range::-moz-range-thumb:active {
       background-color: #b3d7ff; }
@@ -3288,14 +3286,12 @@ input[type="button"].btn-block {
     background-color: #007bff;
     border: 0;
     border-radius: 1rem;
-    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-ms-thumb {
-        -webkit-transition: none;
+        -ms-transition: none;
         transition: none; } }
     .custom-range::-ms-thumb:active {
       background-color: #b3d7ff; }
@@ -14130,7 +14126,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #666;
+  background-color: #8ac53f;
   z-index: 2; }
 
 /**
@@ -14138,7 +14134,7 @@ a {
  */
 .home-header_background {
   width: 100%;
-  padding-top: 62px; }
+  padding-top: 42px; }
 
 /**
  * Background image specific class
@@ -14149,17 +14145,16 @@ a {
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
-  z-index: -1;
-  mix-blend-mode: overlay;
   min-height: 220px;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
 
 /**
  * Background carousel
  */
 .home-header_background_carrusel {
-  mix-blend-mode: overlay;
-  min-height: 220px; }
+  min-height: 220px;
+  z-index: -1; }
 
 .home-header_background_carrusel .carrusel-item img {
   width: 100%;
@@ -14171,7 +14166,7 @@ a {
   min-height: 220px; }
 
 /**
- * Widget areas 
+ * Widget areas
  */
 .home-header_content {
   display: -webkit-box;
@@ -14990,18 +14985,28 @@ input.form-reservation-error {
   margin-top: 1rem; }
 
 .wizard-selector_field input {
-  border-radius: 25px 25px;
+  border: 1px solid #777;
   margin-bottom: 10px; }
 
 .wizard-selector_btn {
   width: 100%;
-  border-radius: 25px 25px;
   padding: .7rem 1.6rem;
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 13px; }
+  margin-bottom: 13px;
+  background-color: #8ac53f; }
+
+.wizard-selector_btn:hover {
+  background-color: #333;
+  border-color: #333;
+  color: #FFF; }
+
+@media (max-width: 598.75px) {
+  .wizard-selector_btn {
+    background-color: transparent;
+    border: 1px solid #333; } }
 
 .wizard-container  {
   display: none;
@@ -15048,7 +15053,6 @@ input.form-reservation-error {
 
 .wizard-multi-place_btn {
   border: 1px solid #333;
-  border-radius: 20px 20px;
   background-color: #FFF;
   color: #333;
   padding: .2rem .7rem;
@@ -15078,7 +15082,6 @@ input.form-reservation-error {
 .selector_place:hover {
   color: #FFF !important;
   background-color: #6fa130;
-  border-radius: 15px 15px;
   padding: .2rem .5rem; }
 
 .wizard-summary {
@@ -15104,7 +15107,6 @@ input.form-reservation-error {
 
 .wizard-time_btn {
   border: 1px solid #333;
-  border-radius: 25px 25px;
   background-color: #FFF;
   color: #333;
   padding: .3rem .9rem;
@@ -15170,17 +15172,29 @@ input.form-reservation-error {
 /* Occupies the top of the page */
 .home .navbar-container {
   width: 100%;
-  /*position: absolute;*/
   top: 0;
   z-index: 30; }
 
-.navbar-brand {
-  margin: 0;
-  float: left; }
+.bg-nav {
+  width: 100%;
+  margin-top: 0;
+  background: #bfd975;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
+  background: linear-gradient(to right, #8ac53f, #bfd975);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 /* Nav bar in front of the image and transparent */
 .home .nav-container-absolute {
   position: absolute; }
+
+.nav-container-absolute .bg-nav {
+  background: none; }
+
+.navbar-brand {
+  margin: 0;
+  float: left; }
 
 .navbar-dark .navbar-toggler {
   border: none;
@@ -15195,16 +15209,6 @@ input.form-reservation-error {
 
 .navbar-collapse .navbar-nav .nav-link {
   color: #fff; }
-
-.bg-nav {
-  width: 100%;
-  margin-top: 0;
-  background: #bfd975;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
-  background: linear-gradient(to right, #8ac53f, #bfd975);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 .navbar-nav .nav-link {
   color: #fff;
@@ -15261,11 +15265,6 @@ input.form-reservation-error {
 @media (max-width: 768px) {
   .navbar {
     padding: 0.5rem 1rem; }
-  .navbar > .container,
-  .navbar > .container-fluid {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
   .navbar-brand {
     margin: 0 1rem; }
   .navbar-nav {
@@ -15274,9 +15273,14 @@ input.form-reservation-error {
   .navbar-nav .nav-link {
     font-size: 1.3em; } }
 
+@media (max-width: 991px) {
+  .navbar > .container,
+  .navbar > .container-fluid {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+
 @media (min-width: 1024px) {
-  .home .bg-nav {
-    background: none; }
   .home .topbar {
     background-color: rgba(66, 66, 66, 0.5); } }
 
