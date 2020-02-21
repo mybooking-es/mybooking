@@ -1,0 +1,64 @@
+// ==========================================================================
+// $Base/Custom Properties
+// ==========================================================================
+
+:root {
+  // Mybooking Theme Style Set
+  // -------------------------
+  // Usage:
+  //  * Don't forget put fallbacks over variables for older browsers
+  //  * '-h' means ':hover' and must be applied to ':active' and ':focus' also
+  //  * Call vars from JS like this: '$("--var-name")'
+  //
+
+  // General
+  --body-bg:;
+  --body-color:;
+  --body-link:;
+  --body-link-h:;
+  --body-font:;
+  --body-font-sz:;
+
+  // Components
+  --topbar-bg-color:;
+  --topbar-txt-color:;
+  --header-bg-color:;
+  --header-txt-color:;
+  --footer-bg-color:;
+  --footer-txt-color:;
+  --credits-bg-color:;
+  --credits-txt-color:;
+
+  // Navigation
+  --nav-color:;
+  --nav-bg-color: #8ac53f;
+  --nav-link-color:;
+  --nav-link-color-h:;
+  --nav-toggler-color:;
+
+  // Nav Panels
+
+  // Button
+  --btn-bg-color:;
+  --btn-txt-color:;
+  --btn-border:;
+  --btn-bg-color-h:;
+  --btn-txt-color-h:;
+  --btn-border-h:;
+
+  // Wizard form
+  --wizform-input-border:;
+  --wizform-btn-color:;
+  --wizform-txt-color:;
+  --wizform-btn-border:;
+  --wizform-btn-color-h:;
+  --wizform-txt-color-h:;
+  --wizform-btn-border-h:;
+
+  // Wizard
+  // Selector form
+  // Modal form
+  // Steps
+  // Cards
+  // Contact form
+}

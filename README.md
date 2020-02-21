@@ -46,7 +46,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 
 ## Changelog
 
-### Version 0.0.2
+### 0.0.2
 - Theme package renamed to Mybooking WordPress Theme and version number updated
 - Added Whatsapp/Telegram field on Company Information options page wich is rendered on home topbar
 - Eliminated placeholder texts for more layout flexibility
@@ -60,7 +60,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Now is possible to hide/show title and image on promos
 - Several minor refactoring on code
 
-### Version 0.1.2
+### 0.1.2
 - Moved and renamed **home.php** to **mybooking-parts/mybooking-home.php**
 - Added customized **index.php**
 - Moved **mybooking-empty.php** to **mybooking-parts/**
@@ -68,7 +68,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Added **mybooking-parts/blog/mybooking-content-single** for custom posts
 - Added **mybooking-parts/blog/mybooking-content-blog** for custom blog
 
-### Version 0.1.3
+### 0.1.3
 - Refactorized **mybooking-top-bar.php** to include info icons inside anchors
 - Added new classes at topbar for correct visualization on responsive view
 - Fixed bad columns align on **mybooking-home-news.php**
@@ -84,7 +84,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Updated translations
 - Lots of minor fixins
 
-### Version 0.1.4
+### 0.1.4
 - Added the cookies policy warning [from here](https://www.wimagguc.com/2018/05/gdpr-compliance-with-the-jquery-eu-cookie-law-plugin/)
 - Cleaned **_carousel.scss**
 - Cleaned payment icons on config page because are not used anymore
@@ -92,11 +92,11 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - New custom post type for vehicle reselling
 - Custom post type activation option in Global Options settings page
 
-### Version 0.1.5
+### 0.1.5
 - Added custom text on contact template
 - Several translation updates and minor changes
 
-### Version 0.2.0
+### 0.2.0
 - Added horizontal cards on choose vehicle process page
 - Cleaned obsolet partials on footer
 - Added YouTube icon on footer

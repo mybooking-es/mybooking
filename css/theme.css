@@ -14117,6 +14117,9 @@ a {
     color: #6fa130;
     text-decoration: none; }
 
+:root {
+  --nav-bg-color: #8ac53f; }
+
 /**
  * Wraps the header : (Image | Video | Carrusel) + Widgets areas
  */
@@ -15178,11 +15181,9 @@ input.form-reservation-error {
 .bg-nav {
   width: 100%;
   margin-top: 0;
-  background: #bfd975;
+  background-color: #555;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#8ac53f), to(#bfd975));
-  background: linear-gradient(to right, #8ac53f, #bfd975);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 /* Nav bar in front of the image and transparent */
