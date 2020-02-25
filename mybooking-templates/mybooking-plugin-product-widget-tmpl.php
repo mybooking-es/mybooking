@@ -12,6 +12,9 @@
 
 <script type="text/tmpl" id="script_reservation_summary">
 
+		<br>
+    <hr>
+    
     <h4 class="brand-primary my-3">Reserva</h4>
     <p class="color-gray-600">Duración del alquiler: <%=shopping_cart.days%> día/s</p>
 
@@ -40,5 +43,7 @@
 
     <h4 class="brand-primary my-3">Importe total</h4>
     <p class="total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
+    
+    <hr>
 
 </script>
