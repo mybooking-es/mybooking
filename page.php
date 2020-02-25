@@ -1,10 +1,9 @@
 <?php
 /**
-*		PAGES
-*  	-----
-*		Parent document
+*		DEFAULT PAGE
+*  	------------
 *
-* 	Versión: 0.0.3
+* 	Versión: 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.2
@@ -18,7 +17,6 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package mybooking-wp-theme
  */
 
 // Exit if accessed directly.
@@ -36,7 +34,13 @@ $container = get_theme_mod( 'mybooking_container_type' );
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+					<?php
+					the_title(
+						sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+						'</a></h2>'
+					);
+					?>
+					<?php the_content(); ?>
 				<?php endwhile; ?>
 
 			</main>

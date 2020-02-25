@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
 
-  <?php $container = get_theme_mod( 'understrap_container_type' );
+  <?php $container = get_theme_mod( 'mybooking_container_type' );
   if ( 'container' == $container ) : ?>
     <div class="container-fluid">
   <?php endif; ?>

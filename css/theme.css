@@ -15182,9 +15182,7 @@ input.form-reservation-error {
   width: 100%;
   margin-top: 0;
   background-color: #555;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  background-color: var(--nav-bg-color); }
 
 /* Nav bar in front of the image and transparent */
 .home .nav-container-absolute {
