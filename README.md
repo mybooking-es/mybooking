@@ -134,5 +134,5 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Refactorized functions.php
 
 ### 0.6.2
-- Elementor content area desplacement solved
+- Elementor content area displacement solved
 - CSS adjustements

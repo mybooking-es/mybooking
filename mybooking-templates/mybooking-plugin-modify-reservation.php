@@ -14,7 +14,7 @@
 <div class="modal fade" id="choose_productModal" tabindex="-1" role="dialog" aria-labelledby="choose_productModal"
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content  bg-gray-400">
+    <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title"><?php _e('Modificar reserva', 'mybooking') ?></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">

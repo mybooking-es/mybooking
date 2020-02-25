@@ -34,12 +34,7 @@ $container = get_theme_mod( 'mybooking_container_type' );
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php
-					the_title(
-						sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-						'</a></h2>'
-					);
-					?>
+					<h2 class="entry-title"><?php the_title(); ?></h2>
 					<?php the_content(); ?>
 				<?php endwhile; ?>
 
