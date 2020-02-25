@@ -1,0 +1,197 @@
+// ==================================
+// ===== ROW CARDS CARDS static
+// ==================================
+.cards-static-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+// This is just for the shadow
+.card-static-wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 10px;
+  justify-content: center;
+}
+.card-static {
+  flex-grow: 1;
+  min-width: 300px;
+  max-width: 430px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 2rem;
+    color: lighten($color: $brand-primary, $amount: 10%);
+    transition: ease-in-out 0.2ms;
+    &:hover {
+      cursor: pointer;
+      color: $brand-primary;
+    }
+  }
+}
+.card-static_image {
+  width: 100%;
+  height: 300px;
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #f3efe4;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+    // For background transparent images use contain
+    object-fit: contain;
+    // otherwise use cover
+    // object-fit: cover;
+  }
+}
+.card-static_body {
+  justify-content: space-between;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 200px;
+  padding: 80px 20px 20px 20px;
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  a.button.btn {
+    width: 100%;
+    transition: ease-in-out 0.15s;
+    border-radius: 50px;
+    background-color: transparent;
+    border-color: $brand-primary;
+    color: $brand-primary;
+    &:hover {
+      background-color: darken($brand-primary, 30%);
+      border-color: darken($brand-primary, 30%);
+      color: darken($white, 10%);
+      cursor: pointer;
+    }
+  }
+}
+.card-static_header {
+  display: inline-flex;
+  flex-direction: column;
+  width: calc(100% - 120px);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  // Grupo
+  h2.card-static_product-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    color: $gray-900;
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1rem;
+  }
+  // Nombre
+  h3.card-static_product-short-description {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    color: $gray-500;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+}
+
+.card-static_price {
+  width: 100px;
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $brand-primary;
+  }
+}
+.card-static_low-availability {
+  position: absolute;
+  left: 20px;
+  top: 60px;
+  font-size: 0.8rem;
+}
+.card-static_discount {
+  font-size: 13px;
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  top: 45px;
+  line-height: 1;
+}
+
+.card-static_icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: nowrap;
+  .icon {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    span {
+      font-size: 13px;
+      color: $gray-500;
+    }
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .key-icon {
+    margin: 0 0.5rem;
+  }
+  .card-static-wrapper {
+    flex-basis: 100%;
+    flex-grow: 0;
+  }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .card-static-wrapper {
+    flex-basis: 50%;
+    flex-grow: 0;
+  }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .card-static-wrapper {
+    flex-basis: 45%;
+    flex-grow: 0;
+  }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards-static-container {
+    padding: 30px 5%;
+  }
+  .card-static-wrapper {
+    flex-basis: 33%;
+    flex-grow: 0;
+  }
+}
