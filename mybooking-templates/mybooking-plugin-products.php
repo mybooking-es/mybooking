@@ -5,14 +5,16 @@
       <div class="card-static">
         <div class="card-static_image">
           <img src="<?php echo $product->photo_path?>"  alt="?php echo $product->name?>">
-          <i type="button" class="fas fa-info-circle" data-toggle="modal" data-target="#infoModal"></i>
         </div>
         <div class="card-static_body">
-          <div class="card-static_header">
+          <div class="card-static_header-catalog">
             <h2 class="card-static_product-name"><?php echo $product->name ?></h2>
             <h3 class="card-static_product-short-description"><?php echo $product->short_description ?></h3>
+          </div>
+          
+          <div class="card-static_btn">
             <a href="/<?php echo $args['url_detail']?>/<?php echo $product->code?>" class="button btn">Más
-              información</a>
+                  información</a>
           </div>
         </div>
       </div>

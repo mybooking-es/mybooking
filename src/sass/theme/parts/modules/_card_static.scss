@@ -47,13 +47,13 @@
     background: #f3efe4;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
     // For background transparent images use contain
-    object-fit: contain;
+    // object-fit: contain;
     // otherwise use cover
-    // object-fit: cover;
+    object-fit: cover;
   }
 }
 .card-static_body {
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -65,6 +65,10 @@
   border-radius: 4px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+.card-static_btn {
+  align-self: self-end;
+  width: 100%;
   a.button.btn {
     width: 100%;
     transition: ease-in-out 0.15s;
@@ -80,6 +84,7 @@
     }
   }
 }
+
 .card-static_header {
   display: inline-flex;
   flex-direction: column;
@@ -92,10 +97,8 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-
     color: $gray-900;
     font-weight: 600;
-    line-height: 1;
     font-size: 1rem;
   }
   // Nombre
@@ -103,10 +106,24 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-
     color: $gray-500;
     font-weight: 400;
-    line-height: 1;
+    font-size: 0.8rem;
+  }
+}
+.card-static_header-catalog {
+  @extend .card-static_header;
+  width: 100%;
+  // Grupo
+  h2.card-static_product-name {
+    color: $gray-900;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  // Nombre
+  h3.card-static_product-short-description {
+    color: $gray-500;
+    font-weight: 400;
     font-size: 0.8rem;
   }
 }

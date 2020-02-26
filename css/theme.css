@@ -15341,6 +15341,243 @@ input.form-reservation-error {
   .icon-panel {
     width: 25%; } }
 
+.cards-static-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.card-static-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.card-static {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 300px;
+  max-width: 430px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center; }
+  .card-static i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 2rem;
+    color: #a2d166;
+    -webkit-transition: ease-in-out 0.2ms;
+    transition: ease-in-out 0.2ms; }
+    .card-static i:hover {
+      cursor: pointer;
+      color: #8ac53f; }
+
+.card-static_image {
+  width: 100%;
+  height: 300px; }
+  .card-static_image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #f3efe4;
+    -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.card-static_body {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-height: 200px;
+  padding: 80px 20px 20px 20px;
+  -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+
+.card-static_btn {
+  -ms-flex-item-align: self-end;
+      align-self: self-end;
+  width: 100%; }
+  .card-static_btn a.button.btn {
+    width: 100%;
+    -webkit-transition: ease-in-out 0.15s;
+    transition: ease-in-out 0.15s;
+    border-radius: 50px;
+    background-color: transparent;
+    border-color: #8ac53f;
+    color: #8ac53f; }
+    .card-static_btn a.button.btn:hover {
+      background-color: #395219;
+      border-color: #395219;
+      color: #e6e6e6;
+      cursor: pointer; }
+
+.card-static_header, .card-static_header-catalog {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(100% - 120px);
+  position: absolute;
+  top: 20px;
+  left: 20px; }
+  .card-static_header h2.card-static_product-name, .card-static_header-catalog h2.card-static_product-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #212121;
+    font-weight: 600;
+    font-size: 1rem; }
+  .card-static_header h3.card-static_product-short-description, .card-static_header-catalog h3.card-static_product-short-description {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #9e9e9e;
+    font-weight: 400;
+    font-size: 0.8rem; }
+
+.card-static_header-catalog {
+  width: 100%; }
+  .card-static_header-catalog h2.card-static_product-name {
+    color: #212121;
+    font-weight: 600;
+    font-size: 1rem; }
+  .card-static_header-catalog h3.card-static_product-short-description {
+    color: #9e9e9e;
+    font-weight: 400;
+    font-size: 0.8rem; }
+
+.card-static_price {
+  width: 100px;
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  top: 20px; }
+  .card-static_price h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8ac53f; }
+
+.card-static_low-availability {
+  position: absolute;
+  left: 20px;
+  top: 60px;
+  font-size: 0.8rem; }
+
+.card-static_discount {
+  font-size: 13px;
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  top: 45px;
+  line-height: 1; }
+
+.card-static_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+  .card-static_icons .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+    margin-bottom: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center; }
+    .card-static_icons .icon span {
+      font-size: 13px;
+      color: #9e9e9e; }
+    .card-static_icons .icon img {
+      height: 30px;
+      width: 30px; }
+
+@media (min-width: 576px) {
+  .key-icon {
+    margin: 0 0.5rem; }
+  .card-static-wrapper {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; } }
+
+@media (min-width: 768px) {
+  .card-static-wrapper {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; } }
+
+@media (min-width: 992px) {
+  .card-static-wrapper {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; } }
+
+@media (min-width: 1200px) {
+  .cards-static-container {
+    padding: 30px 5%; }
+  .card-static-wrapper {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; } }
+
 .magic-cards-container {
   display: -webkit-box;
   display: -ms-flexbox;
