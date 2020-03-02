@@ -21,11 +21,8 @@
   <div class="bg-gray-200">
     <div class="container">
       <div class="row justify-content-center">
-          <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-5">
-            <!-- Reservation : Extras -->
-            <h4 class="brand-primary my-3"><?php _e('Extras', 'mybooking') ?></h4>
-            <div id="extras_listing"></div>
-          </div>
+          <!-- Reservation : Extras -->
+          <div id="extras_listing"></div>
           <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-3 mb-5">
             <!-- Reservation complete -->
             <form id="form-reservation" name="reservation_form">

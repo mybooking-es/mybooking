@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <!-- WIZARD -->
-<div class="wizard-container" id="wizard_container">
+<div class="wizard-container full-size-datepicker-container" id="wizard_container">
   <div class="wizard-step_header container">
     <span class="wizard-close" id="close_wizard_btn">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/close-icon.png" alt="X">

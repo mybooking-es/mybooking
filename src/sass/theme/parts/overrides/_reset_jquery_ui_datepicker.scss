@@ -6,6 +6,11 @@
       font-style : normal;
   }
 
+  .ui-datepicker {
+    border: 1px solid !important;
+    width: 270px;
+  }
+
   /* Header */
   .ui-datepicker .ui-datepicker-header {
     background-color: transparent !important;
@@ -13,18 +18,17 @@
     border-bottom: 1px solid #EEE;
     padding-bottom: 0px !important;
     margin-bottom: 5px !important;
-
   }
 
-/** Selected date as none **/
-.ui-state-active, ui-state-highlight /*, .ui-state-hover*/ {
-    background: transparent !important;
-    color: gray !important;
-}
+  /** Selected date as none **/
+  .ui-state-active, ui-state-highlight /*, .ui-state-hover*/ {
+      background: transparent !important;
+      color: gray !important;
+  }
 
-a.ui-state-default.ui-state-highlight.ui-state-active  {
-  background: transparent !important;
-}
+  a.ui-state-default.ui-state-highlight.ui-state-active  {
+    background: transparent !important;
+  }
 
   /* Title */
   .ui-datepicker-title {
@@ -35,28 +39,21 @@ a.ui-state-default.ui-state-highlight.ui-state-active  {
 
   /* Month and year */
   .ui-datepicker-month, .ui-datepicker-year {
-    font-size: 2em !important;
+    font-size: 1.1em !important;
   }
 
-  .ui-datepicker {
-    width: 100% !important;
-    height: 100% !important;
-    border: 0 !important;
-  }
-  .ui-datepicker table {
-    width: 100% !important;
-    height: 100% !important;
-  }
+  /* Table header (days) */
   .ui-datepicker table th span {
-    font-size: 2em !important;
+    font-size: 1.1em !important;
     text-align: center !important;
     color: #d7d6d6;
   }
 
+  /* Table date (days) */
   .ui-datepicker table td span,
   .ui-datepicker table td a {
     height: 100%;
-    font-size: 2em !important;
+    font-size: 1.1em !important;
     box-shadow: none !important; /* Avoid shadow on cells */
   }
 
@@ -77,3 +74,38 @@ a.ui-state-default.ui-state-highlight.ui-state-active  {
   .ui-icon {
         background-image: none !important;
   }
+
+  /** JQUERY UI IN FULL SIZE CONTAINER **/
+
+  .full-size-datepicker-container {
+
+    /* Month and year */
+    .ui-datepicker-month, .ui-datepicker-year {
+      font-size: 2em !important;
+    }
+
+    .ui-datepicker {
+      border: 0 !important;
+    }
+
+    /**
+     * Include datepicker in full-size-datepicker-container to make it 100%
+     */
+    .ui-datepicker,
+    .ui-datepicker table {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+    .ui-datepicker table th span {
+      font-size: 2em !important;
+    }
+
+    .ui-datepicker table td span,
+    .ui-datepicker table td a {
+      height: 100%;
+      font-size: 2em !important;
+    }
+
+  }
+

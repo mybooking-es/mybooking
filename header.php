@@ -32,8 +32,10 @@ defined( 'ABSPATH' ) || exit;
 
   ?>
   <div class="site eupopup eupopup-bottom" id="page">
-    <div id="wrapper-navbar" class="navbar-container <?php echo $navbar_class; ?>" itemscope itemtype="http://schema.org/WebSite">
-      <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'mybooking' ); ?></a>
+    <div id="wrapper-navbar" class="navbar-container <?php echo $navbar_class; ?>" itemscope
+      itemtype="http://schema.org/WebSite">
+      <a class="skip-link sr-only sr-only-focusable"
+        href="#content"><?php esc_html_e( 'Skip to content', 'mybooking' ); ?></a>
 
       <!-- Topbar -->
       <?php $topbar_active = get_option( "global_topbar" );
@@ -50,3 +52,15 @@ defined( 'ABSPATH' ) || exit;
           } ?>
 
     </div>
+
+    <div id="full_loader">
+      <div class="gooey">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
