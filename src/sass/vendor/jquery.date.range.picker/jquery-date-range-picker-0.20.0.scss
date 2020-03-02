@@ -406,10 +406,16 @@
   display: none;
 }
 
-.date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected {
+.date-picker-wrapper .date-available {
+  background-color: #aeecbc;
+  color: black;
+}
+
+.date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected, .date-picker-wrapper .date-selected {
   background-color: #49e !important;
   color: white !important;
 }
+
 
 .date-picker-wrapper .date-range-length-tip {
   position: absolute;

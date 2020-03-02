@@ -10,7 +10,7 @@
 */
 ?>
 
-<div id="product_selector" data-code="<?php echo $args['code']?>" class="container is-desktop">
+<div id="product_selector" data-code="<?php echo $args['code']?>" class="container">
   <div class="row">
     <div class="col-xs-12">
       <form

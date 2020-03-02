@@ -16,7 +16,12 @@
     <hr>
     
     <h4 class="brand-primary my-3">Reserva</h4>
-    <p class="color-gray-600">Duración del alquiler: <%=shopping_cart.days%> día/s</p>
+
+    <% if (shopping_cart.days) { %>
+    <p class="color-gray-600">Duración del alquiler: <span><%=shopping_cart.days%> día/s</span></p>
+    <% } else if (shopping_cart.hours) { %>
+		<p class="color-gray-600">Duración del alquiler: <span><%=shopping_cart.hours%> hora/s</span></p>
+    <% } %>
 
 	  <h5><?php _e('Total producto','mybooking') ?></h5>
 	  <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
