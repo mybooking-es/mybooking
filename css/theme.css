@@ -15272,7 +15272,7 @@ input.form-reservation-error {
   .navbar-nav .nav-link {
     font-size: 1.3em; } }
 
-@media (max-width: 991px) {
+@media (min-width: 768px) {
   .navbar > .container,
   .navbar > .container-fluid {
     -webkit-box-pack: center;

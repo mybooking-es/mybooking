@@ -213,7 +213,7 @@
 
 }
 
-@media (max-width: 991px) {
+@media (min-width: 768px) {
   .navbar > .container,
   .navbar > .container-fluid {
       justify-content: center;
