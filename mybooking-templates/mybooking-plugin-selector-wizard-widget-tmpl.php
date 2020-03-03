@@ -19,13 +19,14 @@
 <script id="wizard_steps_summary" type="txt/tmpl">
 
   <div class="wizard-summary container">
-    <div class="row">
+    <div class="row justify-content-between">
       <div class="wizard-summary_item col">
         <span class="wizard-summary_pickup"><%= summary.pickupPlace %></span>
         <% if (summary.dateFrom != null) {%>
           <span class="wizard-summary_datefrom"><%= summary.dateFrom %> <% if (summary.timeFrom != null) {%><%= summary.timeFrom %><% } %> </span>
         <% } %>
       </div>
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icono_flecha_der.png" alt=">">
       <div class="wizard-summary_item col">
         <span class="wizard-summary_return"><%= summary.returnPlace %></span>
         <% if (summary.dateTo != null) {%>
@@ -92,8 +93,8 @@
 <script id="select_date_tmpl" type="txt/tmpl">
 
   <div class="wizard-date container">
-    <div class="row">
-      <div class="col-md-12">
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10 ">
          <div id="selector_date" class="wizard-date_calendar"></div>
       </div>
     </div>
