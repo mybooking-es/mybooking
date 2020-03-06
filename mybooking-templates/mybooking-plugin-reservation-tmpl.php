@@ -1403,7 +1403,7 @@
     <div id="payment_amount_container" class="alert alert-info">
       <%= i18next.t('myReservation.pay.booking_amount', {amount:configuration.formatCurrency(booking.booking_amount) }) %>
     </div>
-  <% } else if (booking.total_pending > 0 && booking.status != 'pending_confirmation' && booking.status != 'canceled') { %>
+  <% } else if (booking.total_pending > 0 && booking.status != 'pending_confirmation' && booking.status != 'cancelled') { %>
     <div id="payment_amount_container" class="alert alert-info">
       <%= i18next.t('myReservation.pay.pending_amount', {amount:configuration.formatCurrency(booking.total_pending) }) %>
     </div>      

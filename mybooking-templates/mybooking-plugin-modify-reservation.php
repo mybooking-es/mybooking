@@ -27,8 +27,9 @@
         <div class="flex-form-item-box">
           <label><?php _e('Lugar Entrega ', 'mybooking') ?></label>
           <div class="flex-form-item pickup_place_group">
-            <select id="pickup_place" name="pickup_place"></select>
-            <i class="fa fa-angle-down flex-icon"></i>
+            <label class="form_selector-select_label_wrap">
+              <select id="pickup_place" name="pickup_place" class="form_selector-select_dropdown"></select>
+            </label>
           </div>
           <!-- Custom delivery place -->
           <div id="another_pickup_place_group" style="display: none;">
@@ -45,9 +46,10 @@
         <div class="flex-form-item-box">
           <label><?php _e('Lugar Devolución ', 'mybooking') ?></label>
           <div class="flex-form-item return_place_group">
-            <select id="return_place" name="return_place">
-            </select>
-            <i class="fa fa-angle-down flex-icon"></i>
+            <label class="form_selector-select_label_wrap">
+              <select id="return_place" name="return_place" class="form_selector-select_dropdown">
+              </select>
+            </label>
           </div>
           <!-- Custom collection place -->
           <div id="another_return_place_group" style="display: none;">
@@ -64,7 +66,7 @@
         <div class="flex-form-item-box">
           <label><?php _e('Fecha Entrega ', 'mybooking') ?></label>
           <div class="flex-form-item">
-            <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+            <label for="date_from"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
             <input type="text" id="date_from" name="date_from" readonly="true"/>
             <select class="ml-1" id="time_from" name="time_from">
             </select>
@@ -74,7 +76,7 @@
         <div class="flex-form-item-box">
           <label><?php _e('Fecha Devolución ', 'mybooking') ?></label>
           <div class="flex-form-item">
-            <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+            <label for="date_to"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
             <input type="text" id="date_to" name="date_to" readonly="true"/>
             <select class="ml-1" id="time_to" name="time_to">
             </select>
