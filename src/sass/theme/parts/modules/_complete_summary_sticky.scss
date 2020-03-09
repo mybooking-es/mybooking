@@ -39,16 +39,19 @@
   align-items: flex-start;
   justify-content: flex-end;
   flex-direction: column;
-
   p {
     text-align: left;
-    //color: $gray-400;
     margin: 0;
     padding: 0;
     font-size: 0.8rem;
     &:first-child {
       margin-right: 1rem;
     }
+  }
+  p.complete-summary-item_price {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #fff;
   }
 }
 

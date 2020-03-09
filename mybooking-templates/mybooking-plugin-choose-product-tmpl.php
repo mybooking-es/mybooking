@@ -13,9 +13,9 @@
 <?php $list_layout = get_option('global_list_layout');
   if ($list_layout == 0) { ?>
 
-    <!-- Summary Sticky -->
-    <script type="text/tmpl" id="script_reservation_summary">
-      <div class="reservation-summary-sticky-wrapper">
+<!-- Summary Sticky -->
+<script type="text/tmpl" id="script_reservation_summary">
+  <div class="reservation-summary-sticky-wrapper">
       <div class="reservation-summary-sticky">
         <div class="reservation-summary-item">
           <!-- primer bloque Recogida -->
@@ -51,63 +51,61 @@
     </div>
     </script>
 
-    <!-- Product Grid -->
-    <script type="text/tpml" id="script_detailed_product">
-      <div class="magic-cards-container">
-        <% for (var idx=0;idx<products.length; idx++) { %>
-          <% var product = products[idx]; %>
-          <div class="magic-card-wrapper">
-          <div class="magic-card">
-              <header class="magic-card-header">
-                <div class="product-name-and-short-description">
-                  <p class="product-name"><%=product.name%></p>
-                  <p class="product-short-description"><%=product.short_description%></p>
-                </div>
-              </header>
-              <div class="separator"></div>
-              <section class="footer-card">
-                <div class="img-wrapper">
-                  <img src="<%=product.photo%>" class="product-image">
-                </div>
-                  <div class="variable-content">
-                    <% if (product.price != product.base_price) { %>
-                      <% if (product.offer_discount_type == 'percentage') { %>
-                        <p class="offer"><%=new Number(product.offer_value)%>% <%=product.offer_name%><span><small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small></span></p>
-                      <% } %>
-                    <% } %>
+<!-- Static cards -->
+<script type="text/tpml" id="script_detailed_product">
+  <div class="cards-static-container">
+  <% for (var idx=0;idx<products.length; idx++) { %>
+    <% var product = products[idx]; %>
+    <div class="card-static-wrapper">
+      <div class="card-static">
+        <div class="card-static_image">
+            <img src="<%=product.photo%>">
+            <i type="button" class="fa fa-info-circle" data-toggle="modal" data-target="#infoModal"></i>
+        </div>
+        <div class="card-static_body">
+            <div class="card-static_price">
+              <h2><%=configuration.formatCurrency(product.price)%></h2>
+            </div>
+            <div class="card-static_header">
+                <h2 class="card-static_product-name"><%=product.name%></h2>
+                <h3 class="card-static_product-short-description"><%=product.short_description%></h3>
+            </div>
+        
+            <% if (product.few_available_units) { %>
+              <p class="text-danger card-static_low-availability"><?php _e('¡Quedan pocas unidades!') ?></p>
+            <% } %>
+            <% if (product.price != product.base_price) { %>
+              <% if (product.offer_discount_type == 'percentage') { %>
+                <p class="card-static_discount"><%=new Number(product.offer_value)%>% <%=product.offer_name%><br>
+                <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small><span class="ml-2"><%=configuration.formatCurrency(product.price)%></span></p>
+              <% } %>
+            <% } %>
+            
+            <div class="card-static_icons">
+              <% if (product.key_characteristics) { %> 
+                <% for (characteristic in product.key_characteristics) { %>
+                  <div class="icon">
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/key_characteristics/<%=characteristic%>.svg"/>
+                    <span><%=product.key_characteristics[characteristic]%> </span>
                   </div>
-
-                  <% if (product.key_characteristics) { %>
-                      <div class="key-characteristics">
-                        <% for (characteristic in product.key_characteristics) { %>
-                        <div class="key-icon">
-                          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/key_characteristics/<%=characteristic%>.svg"/>
-                          <p><%=product.key_characteristics[characteristic]%></p>
-                        </div>
-
-                        <% } %>
-                      </div>
-                  <% } %>
-
-                  <div class="push-down">
-                  <p class="product-price"><%=configuration.formatCurrency(product.price)%></p>
-
-                  <% if (product.availability) { %>
-                  <a class="btn btn-dark btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
-                  <% } else { %>
-                  <div class="not-available"><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></div>
-                  <% } %>
-
-                  <% if (product.few_available_units) { %>
-                    <p class="text-danger mt-3"><?php _e('¡Quedan pocas unidades!') ?></p>
-                  <% } %>
-
-                  </div>
-              </section>
+                <% } %>
+              <% } %>
+            </div>
+            <% if (product.availability) { %>
+              <div class="card-static_btn">
+                <a class="button btn btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
+              </div>
+              <% } else { %>
+              <p><%= choose_product.model_not_available %></p>
+            <% } %>
           </div>
         </div>
-          <% } %>
       </div>
+      <% } %>
+    </div>
+      
+
+
     </script>
 <?php } else { ?>
 

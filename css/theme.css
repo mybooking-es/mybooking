@@ -17019,6 +17019,10 @@ ul.summary-modal_prices {
     font-size: 0.8rem; }
     .complete-summary-item p:first-child {
       margin-right: 1rem; }
+  .complete-summary-item p.complete-summary-item_price {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #fff; }
 
 @media (min-width: 768px) {
   .complete-summary-item {

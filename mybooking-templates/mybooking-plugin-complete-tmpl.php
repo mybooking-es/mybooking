@@ -78,7 +78,7 @@
         <div class="complete-summary-right">
           <div class="complete-summary-item">
               <p class="color-gray-500">Total</p>
-              <p class="color-white"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
+              <p class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
           </div>
           <!-- Button trigger modal -->
           <div class="modify-button">
