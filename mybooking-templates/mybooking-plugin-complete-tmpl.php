@@ -61,9 +61,7 @@
 </script>
 
 <!-- Reservation summary modal -->
-<script type="text/tmpl" id="script_reservation_summary">
-
-  <div class="sticky-top">
+<script type="text/tmpl" id="script_reservation_summary_sticky">
     <div class="complete-summary-sticky-wrapper">
       <div class="complete-summary-sticky">
         <div class="complete-summary-left">
@@ -91,7 +89,9 @@
         </div>
       </div>
     </div>
-  </div>
+</script>
+
+<script type="text/tmpl" id="script_reservation_summary">
 
   <!-- Descktop reservation detail -->
   <div class="product-detail-container d-none d-md-flex">
