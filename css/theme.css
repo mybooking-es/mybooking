@@ -15451,8 +15451,8 @@ input[type="text"]:disabled, select:disabled {
     background: #f3efe4;
     -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
-    -o-object-fit: cover;
-       object-fit: cover; }
+    -o-object-fit: contain;
+       object-fit: contain; }
 
 .card-static_body {
   -webkit-box-pack: end;
@@ -15523,14 +15523,6 @@ input[type="text"]:disabled, select:disabled {
 
 .card-static_header-catalog {
   width: 100%; }
-  .card-static_header-catalog h2.card-static_product-name {
-    color: #212121;
-    font-weight: 600;
-    font-size: 1rem; }
-  .card-static_header-catalog h3.card-static_product-short-description {
-    color: #9e9e9e;
-    font-weight: 400;
-    font-size: 0.8rem; }
 
 .card-static_price {
   width: 100px;
@@ -16234,12 +16226,14 @@ span.stopa {
   margin: 0 0 30px;
   width: 150px; }
 
-.product-detail {
+.product-detail-container {
   padding: 30px;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -16251,17 +16245,27 @@ span.stopa {
       -ms-flex-align: center;
           align-items: center;
   line-height: 1; }
-  .product-detail h5 {
+  .product-detail-container h5 {
     font-weight: 700;
     line-height: 1.2; }
-  .product-detail ul {
+  .product-detail-container ul {
     list-style: none;
     margin: 0;
     padding: 0;
     color: #757575;
     line-height: 1; }
-  .product-detail .img-fluid {
-    max-width: 600px !important; }
+
+.product-detail-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.product-detail-image img {
+  max-width: 300px; }
 
 .grupo {
   font-weight: 800;
@@ -16274,18 +16278,19 @@ span.stopa {
   line-height: 1.2; }
 
 .product-name {
-  font-family: "Inter", sans-serif;
   font-size: 3rem;
   line-height: 1;
   font-weight: 900; }
 
 @media (min-width: 768px) {
-  .product-detail {
+  .product-detail-container {
     margin-top: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; } }
+            flex-direction: row; }
+  .product-detail-image img {
+    max-width: 600px; } }
 
 .product_item {
   margin-bottom: 1rem;
