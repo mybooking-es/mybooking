@@ -14,7 +14,7 @@
 <div class="reservation-step custom-form">
 
   <!-- Reservation : Selected product -->
-  <div id="selected_product" class="sticky-top"></div>
+  <!--div id="selected_product" class="sticky-top"></div-->
   <!-- Reservation summary modal -->
   <div id="reservation_detail"></div>
 

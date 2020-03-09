@@ -11,33 +11,7 @@
 ?>
 <!-- Complete sticky bar -->
 <script type="text/tpml" id="script_product_detail">
-  <div class="complete-summary-sticky-wrapper">
-    <div class="complete-summary-sticky">
-      <div class="complete-summary-left">
-        <div class="complete-summary-item">
-            <!-- primer bloque Recogida -->
-            <p class="color-gray-500"><%=shopping_cart.pickup_place_customer_translation%></p>
-            <p class="color-white"><%=shopping_cart.days%> <?php _e('día/s', 'mybooking') ?></p>
-        </div>
-        <!-- Button trigger modal -->
-        <div class="modify-button">
-          <button id="modify_reservation_button" data-toggle="modal" data-target="#choose_productModal"><i class="fa fa-edit"></i></button>
-        </div>
-      </div>
-      <div class="complete-summary-right">
-        <div class="complete-summary-item">
-            <p class="color-gray-500">Total</p>
-            <p class="color-white"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
-        </div>
-        <!-- Button trigger modal -->
-        <div class="modify-button">
-          <button data-toggle="modal" data-target="#viewReservationModal">
-            <i class="fa fa-info-circle"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </script>
 <!-- Extra representation -->
 <script type="text/template" id="script_detailed_extra">
@@ -88,6 +62,64 @@
 
 <!-- Reservation summary modal -->
 <script type="text/tmpl" id="script_reservation_summary">
+
+  <div class="sticky-top">
+    <div class="complete-summary-sticky-wrapper">
+      <div class="complete-summary-sticky">
+        <div class="complete-summary-left">
+          <div class="complete-summary-item">
+              <!-- primer bloque Recogida -->
+              <p class="color-gray-500"><%=shopping_cart.pickup_place_customer_translation%></p>
+              <p class="color-white"><%=shopping_cart.days%> <?php _e('día/s', 'mybooking') ?></p>
+          </div>
+          <!-- Button trigger modal -->
+          <div class="modify-button">
+            <button id="modify_reservation_button" data-toggle="modal" data-target="#choose_productModal"><i class="fa fa-edit"></i></button>
+          </div>
+        </div>
+        <div class="complete-summary-right">
+          <div class="complete-summary-item">
+              <p class="color-gray-500">Total</p>
+              <p class="color-white"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
+          </div>
+          <!-- Button trigger modal -->
+          <div class="modify-button">
+            <button data-toggle="modal" data-target="#viewReservationModal">
+              <i class="fa fa-info-circle"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Descktop reservation detail -->
+  <div class="product-detail-container d-none d-md-flex">
+    <div class="product-detail-content">
+      <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
+        <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
+        <p class="detail-text">
+        <?php _e('Duración del alquiler','mybooking') ?>: <%=shopping_cart.days%> <?php _e('día/s','mybooking') ?></p>
+      <% } %>
+      <h5><?php _e('Entrega', 'mybooking') ?></h5>
+      <ul>
+        <li><%=shopping_cart.date_from_full_format%> / <%=shopping_cart.time_from%></li>
+        <li><%=shopping_cart.pickup_place_customer_translation%></li>
+      </ul>
+      <h5 class="mt-3"><?php _e('Devolución', 'mybooking') ?></h5>
+      <ul>
+        <li><%=shopping_cart.date_to_full_format%> / <%=shopping_cart.time_to%></li>
+        <li><%=shopping_cart.return_place_customer_translation%></li>
+      </ul>
+    </div>
+    <div class="product-detail-image">
+      <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
+        <img class="img-fluid" src="<%=shopping_cart.items[idx].photo_full%>" alt="">
+      <% } %>
+    </div>
+  </div>
+
+
   <div class="modal fade" id="viewReservationModal" tabindex="-1" role="dialog" aria-labelledby="viewModal"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
