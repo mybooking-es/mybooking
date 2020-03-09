@@ -11,12 +11,11 @@
 ?>
 <!-- Complete sticky bar -->
 <script type="text/tpml" id="script_product_detail">
-
 </script>
 <!-- Extra representation -->
 <script type="text/template" id="script_detailed_extra">
   <% if (extras.length > 0) { %>
-  <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-5">
+  <div class="bg-white shadow-bottom p-3 mt-5">
     <h4 class="brand-primary my-3"><?php _e('Extras', 'mybooking') ?></h4>
     <div class="extras-container">
       <% for (var idx=0;idx<extras.length;idx++) { %>
