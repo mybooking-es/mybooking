@@ -7,15 +7,25 @@
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
+*
+*   Areas managed by the Reservation engine
+*
+*   Container                        Script
+*   ----------------------------     ------------------------
+*   id=reservation_detail_sticky ->  script_reservation_summary_sticky
+*   id=reservation_detail        ->  script_reservation_summary
+*   id=extras_listing            ->  script_detailed_extra
+*   id=payment_detail            ->  script_payment_detail
 */
 ?>
 <?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
 
 <div class="reservation-step custom-form">
 
-  <!-- Reservation : Selected product -->
-  <div id="selected_product" class="sticky-top"></div>
-  <!-- Reservation summary modal -->
+  <!-- Reservation Summary sticky -->
+  <div id="reservation_detail_sticky" class="sticky-top"></div>
+
+  <!-- Reservation summary detail -->
   <div id="reservation_detail"></div>
 
   <div class="bg-gray-200">

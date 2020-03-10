@@ -13,13 +13,10 @@
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
 
-  <% for (var idx=0; idx < booking.booking_lines.length; idx++) { %>
-      <%   var booking_line = booking.booking_lines[idx]; %>
-  <% } %>
-
   <div class="product-detail">
     <div>
       <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
+        <% var booking_line = booking.booking_lines[idx]; %>
         <h2 class="product-name"><%=booking_line.item_description_customer_translation%></h2>
         <p class="detail-text"><?php _e('LOCALIZADOR','mybooking') ?>: <%= booking.id %></br>
             <?php _e('Duración del alquiler','mybooking') ?>: <%=booking.days%> <?php _e('día/s','mybooking') ?></p>
@@ -37,6 +34,7 @@
     </div>
     <div>
     <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
+        <% var booking_line = booking.booking_lines[idx]; %>
         <img class="img-fluid" src="<%=booking_line.photo_full%>" alt="">
     <% } %>
     </div>
@@ -1401,11 +1399,15 @@
 <!-- Payment detail -->
 <script type="text/tmpl" id="script_payment_detail">
   <h4 class="brand-primary my-3"><?php _e('Pago', 'mybooking') ?></h4>
-  <% if (booking.total_paid == 0) {%>
+  <% if (booking.total_paid == 0 && booking.status == 'pending_confirmation') {%>
     <div id="payment_amount_container" class="alert alert-info">
-      <%= i18next.t('complete.reservationForm.booking_amount', {amount:configuration.formatCurrency(booking.booking_amount) }) %>
+      <%= i18next.t('myReservation.pay.booking_amount', {amount:configuration.formatCurrency(booking.booking_amount) }) %>
     </div>
-  <% } %>
+  <% } else if (booking.total_pending > 0 && booking.status != 'pending_confirmation' && booking.status != 'cancelled') { %>
+    <div id="payment_amount_container" class="alert alert-info">
+      <%= i18next.t('myReservation.pay.pending_amount', {amount:configuration.formatCurrency(booking.total_pending) }) %>
+    </div>      
+  <% } %> 
   <form name="payment_form">
     <% if (sales_process.payment_methods.paypal_standard && sales_process.payment_methods.tpv_virtual) { %>
     <div class="form-row">

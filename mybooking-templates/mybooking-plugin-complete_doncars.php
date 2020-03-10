@@ -397,8 +397,10 @@
                   style="width: 100%; height: 100px; padding: 0.8rem;"></textarea>
               </div>
             </div>
+
             <!-- Reservation : payment -->
             <div id="payment_detail"></div>
+
           </form>
         </div>
       </div>

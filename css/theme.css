@@ -14786,6 +14786,9 @@ input.form-reservation-error {
   border-top: 1px solid #6c757d;
   border-bottom: 1px solid #6c757d; }
 
+input[type="text"]:disabled, select:disabled {
+  background-color: #ddd; }
+
 .flex-form, .flex-form-sticky {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14859,6 +14862,27 @@ input.form-reservation-error {
   background-color: #fff;
   padding: 0.8rem;
   height: 48px;
+  color: #616161; }
+
+.form_selector-select_label_wrap {
+  width: 100%; }
+
+.form_selector-select_dropdown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.form_selector-select_label_wrap:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  font-size: 20px;
+  z-index: 1;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
   color: #616161; }
 
 .flex-form-horizontal {
@@ -17002,6 +17026,17 @@ ul.summary-modal_prices {
             flex-direction: row; }
     .complete-summary-item span {
       float: left; } }
+
+/**
+ * Module for product detail page with calendar
+ */
+.date-picker-wrapper .date-available {
+  background-color: #aeecbc;
+  color: black; }
+
+.date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected, .date-picker-wrapper .date-selected {
+  background-color: #4499ee !important;
+  color: white !important; }
 
 .full-height {
   height: 100%; }
