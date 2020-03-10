@@ -16485,6 +16485,9 @@ span.stopa {
   background: url(../images/quote-left-solid.svg) 0 0/contain no-repeat;
   content: ""; }
 
+.extras {
+  margin-top: 60px; }
+
 .extras-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16532,6 +16535,10 @@ span.stopa {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+
+@media (min-width: 576px) {
+  .extras {
+    margin-top: 0; } }
 
 @media (min-width: 768px) {
   .extras-container {
