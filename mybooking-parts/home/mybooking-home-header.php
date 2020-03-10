@@ -7,6 +7,13 @@
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
+*
+*   Notes:
+*   ------
+*
+*   The wizard container is included in order to be able to show the selection
+*   wizard in the home page
+*
 */
 
 // Exit if accessed directly.
