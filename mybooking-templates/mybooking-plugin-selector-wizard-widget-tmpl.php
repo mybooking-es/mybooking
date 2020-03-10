@@ -20,17 +20,17 @@
 
   <div class="wizard-summary container">
     <div class="row justify-content-between">
-      <div class="wizard-summary_item col">
-        <span class="wizard-summary_pickup"><%= summary.pickupPlace %></span>
+      <div class="wizard-summary_item col wizard-summary_delivery">
+        <div class="wizard-summary_pickup"><%= summary.pickupPlace %></div>
         <% if (summary.dateFrom != null) {%>
-          <span class="wizard-summary_datefrom"><%= summary.dateFrom %> <% if (summary.timeFrom != null) {%><%= summary.timeFrom %><% } %> </span>
+          <div class="wizard-summary_datefrom"><%= summary.dateFrom %> <% if (summary.timeFrom != null) {%><%= summary.timeFrom %><% } %> </div>
         <% } %>
       </div>
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icono_flecha_der.png" alt=">">
-      <div class="wizard-summary_item col">
-        <span class="wizard-summary_return"><%= summary.returnPlace %></span>
+      <img class="wizard-summary_separator" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icono_flecha_der.png" alt=">">
+      <div class="wizard-summary_item col wizard-summary_collection">
+        <div class="wizard-summary_return"><%= summary.returnPlace %></div>
         <% if (summary.dateTo != null) {%>
-          <span class="wizard-summary_dateto"><%= summary.dateTo %> <% if (summary.timeTo != null) {%><%= summary.timeTo %><% } %></span>
+          <div class="wizard-summary_dateto"><%= summary.dateTo %> <% if (summary.timeTo != null) {%><%= summary.timeTo %><% } %></div>
         <% } %>
       </div>
     </div>
