@@ -13,7 +13,7 @@
 <script type="text/tpml" id="script_product_detail">
 </script>
 <!-- Extra representation -->
-<script type="text/template" id="script_detailed_extra">
+<script type="text/tmpl" id="script_detailed_extra">
   <% if (extras.length > 0) { %>
   <div class="bg-white shadow-bottom p-3 mt-5">
     <h4 class="brand-primary my-3"><?php _e('Extras', 'mybooking') ?></h4>
@@ -117,7 +117,6 @@
       <% } %>
     </div>
   </div>
-
 
   <div class="modal fade" id="viewReservationModal" tabindex="-1" role="dialog" aria-labelledby="viewModal"
     aria-hidden="true">
