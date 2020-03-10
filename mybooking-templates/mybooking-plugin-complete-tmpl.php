@@ -11,13 +11,12 @@
 ?>
 <!-- Complete sticky bar -->
 <script type="text/tpml" id="script_product_detail">
-
 </script>
 
 <!-- Extra representation -->
 <script type="text/template" id="script_detailed_extra">
   <% if (extras.length > 0) { %>
-  <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-5">
+  <div class="bg-white shadow-bottom p-3 mt-5">
     <h4 class="brand-primary my-3"><?php _e('Extras', 'mybooking') ?></h4>
     <div class="extras-container">
       <% for (var idx=0;idx<extras.length;idx++) { %>
@@ -79,7 +78,7 @@
         <div class="complete-summary-right">
           <div class="complete-summary-item">
               <p class="color-gray-500">Total</p>
-              <p class="color-white"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
+              <p class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
           </div>
           <!-- Button trigger modal -->
           <div class="modify-button">

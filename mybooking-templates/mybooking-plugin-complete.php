@@ -32,10 +32,10 @@
     <div class="container">
       <div class="row justify-content-center">
           <!-- Reservation : Extras -->
-          <div id="extras_listing"></div>
-          <div class="col-md-12 bg-white shadow-bottom py-3 px-3 mt-3 mb-5">
+          <div id="extras_listing" class="col-md-12 extras"></div>
+          <div class="col-md-12">
             <!-- Reservation complete -->
-            <form id="form-reservation" name="reservation_form">
+            <form id="form-reservation" name="reservation_form" class="bg-white shadow-bottom py-3 px-3 mt-3 mb-5">
               <h4 class="brand-primary my-3"><?php _e('Información del cliente', 'mybooking') ?></h4>
               <div class="form-row">
                 <div class="form-group col-md-6">
@@ -90,5 +90,8 @@
       </div>
     </div>
   </div>
+  <!-- Modify reservation -->
+  <?php if ( $args['selector_in_process'] != 'wizard' ) { ?>
   <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
+  <?php } ?>
 </div>

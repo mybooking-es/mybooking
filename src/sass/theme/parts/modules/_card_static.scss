@@ -1,5 +1,5 @@
 // ==================================
-// ===== ROW CARDS CARDS static
+// ===== CARD static
 // ==================================
 .cards-static-container {
   display: flex;
@@ -47,9 +47,9 @@
     background: #f3efe4;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
     // For background transparent images use contain
-    // object-fit: contain;
+    object-fit: contain;
     // otherwise use cover
-    object-fit: cover;
+    // object-fit: cover;
   }
 }
 .card-static_body {
@@ -84,7 +84,6 @@
     }
   }
 }
-
 .card-static_header {
   display: inline-flex;
   flex-direction: column;
@@ -114,18 +113,6 @@
 .card-static_header-catalog {
   @extend .card-static_header;
   width: 100%;
-  // Grupo
-  h2.card-static_product-name {
-    color: $gray-900;
-    font-weight: 600;
-    font-size: 1rem;
-  }
-  // Nombre
-  h3.card-static_product-short-description {
-    color: $gray-500;
-    font-weight: 400;
-    font-size: 0.8rem;
-  }
 }
 
 .card-static_price {

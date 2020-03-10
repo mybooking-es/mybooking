@@ -23,6 +23,10 @@
       <div id="reservation_detail" class="sticky-top"></div>
       <div id="product_listing"></div>
   <?php } ?>
-  <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
+
+  <!-- Modify reservation -->
+  <?php if ( $args['selector_in_process'] != 'wizard' ) { ?>
+    <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
+  <?php } ?>
 
 </div>
