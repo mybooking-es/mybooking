@@ -12,7 +12,7 @@
 *
 *   Container                        Script
 *   ----------------------------     ------------------------
-*   id=reservation_detail_sticky ->  script_reservation_summary_sticky 
+*   id=reservation_detail_sticky ->  script_reservation_summary_sticky
 *   id=reservation_detail        ->  script_reservation_summary
 *   id=extras_listing            ->  script_detailed_extra
 *   id=payment_detail            ->  script_payment_detail
@@ -24,6 +24,7 @@
 
   <!-- Reservation Summary sticky -->
   <div id="reservation_detail_sticky" class="sticky-top"></div>
+
   <!-- Reservation summary detail -->
   <div id="reservation_detail"></div>
 

@@ -12,6 +12,7 @@
 <!-- Complete sticky bar -->
 <script type="text/tpml" id="script_product_detail">
 </script>
+
 <!-- Extra representation -->
 <script type="text/template" id="script_detailed_extra">
   <% if (extras.length > 0) { %>
@@ -54,7 +55,7 @@
           </div>
         </div>
       <% } %>
-    </div>  
+    </div>
   </div>
   <% } %>
 </script>

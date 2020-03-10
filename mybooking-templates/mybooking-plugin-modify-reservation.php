@@ -15,22 +15,26 @@
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
+
       <div class="modal-header">
         <h5 class="modal-title"><?php _e('Modificar reserva', 'mybooking') ?></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
       <form name="search_form" method="get" enctype="application/x-www-form-urlencoded"
         class="flex-form">
+
         <!-- Pickup place -->
         <div class="flex-form-item-box">
           <label><?php _e('Lugar Entrega ', 'mybooking') ?></label>
           <div class="flex-form-item pickup_place_group">
-            <label class="form_selector-select_label_wrap">
+            <span class="form_selector-select_label_wrap">
               <select id="pickup_place" name="pickup_place" class="form_selector-select_dropdown"></select>
-            </label>
+            </span>
           </div>
+
           <!-- Custom delivery place -->
           <div id="another_pickup_place_group" style="display: none;">
             <div class="flex-form-item justify-content-between">
@@ -42,6 +46,7 @@
             </div>
           </div>
         </div>
+
         <!-- Return place -->
         <div class="flex-form-item-box">
           <label><?php _e('Lugar Devolución ', 'mybooking') ?></label>
@@ -51,6 +56,7 @@
               </select>
             </label>
           </div>
+
           <!-- Custom collection place -->
           <div id="another_return_place_group" style="display: none;">
             <div class="flex-form-item justify-content-between">
@@ -62,6 +68,7 @@
             </div>
           </div>
         </div>
+
         <!-- Date/Time from -->
         <div class="flex-form-item-box">
           <label><?php _e('Fecha Entrega ', 'mybooking') ?></label>
@@ -72,6 +79,7 @@
             </select>
           </div>
         </div>
+
         <!-- Date/Time to -->
         <div class="flex-form-item-box">
           <label><?php _e('Fecha Devolución ', 'mybooking') ?></label>
@@ -82,9 +90,11 @@
             </select>
           </div>
         </div>
+
         <div class="flex-form-item-box mt-3">
           <input class="btn btn-primary btn-block" type="submit" value="<?php _e('Nueva búsqueda', 'mybooking') ?>" />
         </div>
+
       </form>
     </div>
   </div>
