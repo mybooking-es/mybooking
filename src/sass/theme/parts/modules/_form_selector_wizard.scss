@@ -135,20 +135,20 @@
 
 .wizard-summary_pickup,
 .wizard-summary_return {
-  font-size: 10px;
+  font-size: 1em;
 }
 
-.wizard-summary_pickup,
-.wizard-summary_datefrom {
-  width: 100%;
-  float: left;
+.wizard-summary_delivery {
+  text-align: right;
 }
 
-.wizard-summary_return,
-.wizard-summary_dateto {
-  width: 100%;
-  float: right;
-  text-align: right!important;
+.wizard-summary_collection {
+  text-align: left;
+}
+
+.wizard-summary_separator {
+  width: 20px;
+  height: 20px;
 }
 
 .wizard-time {

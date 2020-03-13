@@ -96,7 +96,7 @@
                 <a class="button btn btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
               </div>
               <% } else { %>
-              <p><%= choose_product.model_not_available %></p>
+              <p><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></p>
             <% } %>
           </div>
         </div>
