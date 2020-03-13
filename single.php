@@ -2,9 +2,8 @@
 /**
 *		SINGLE POST
 *  	-----------
-*		Parent document
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -14,24 +13,19 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'mybooking_container_type' );
 ?>
 
 <div class="wrapper page_content" id="single-wrapper">
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-		<div class="row">
-			<main class="site-main" id="main">
+		<main class="site-main" id="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'mybooking-parts/loops/mybooking-content-single' ); ?>
-					<?php understrap_post_nav(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'mybooking-parts/loops/mybooking-content-single' ); ?>
+				<?php mybooking_post_nav(); ?>
+			<?php endwhile; ?>
 
-					<!-- @Mybooking: We don't want comments on client's posts -->
-
-				<?php endwhile; ?>
-
-			</main>
-		</div>
+		</main>
 	</div>
 </div>
 

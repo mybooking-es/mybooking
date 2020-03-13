@@ -136,3 +136,6 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 ### 0.6.2
 - Elementor content area displacement solved
 - CSS adjustements
+
+### 0.6.3
+- Added old parent functions for posts
