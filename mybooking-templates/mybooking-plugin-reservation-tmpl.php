@@ -13,13 +13,14 @@
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
 
-  <div class="product-detail">
-    <div>
+  <!-- Desktop reservation detail -->
+  <div class="product-detail-container d-none d-md-flex">
+    <div class="product-detail-content">
       <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
         <% var booking_line = booking.booking_lines[idx]; %>
         <h2 class="product-name"><%=booking_line.item_description_customer_translation%></h2>
-        <p class="detail-text"><?php _e('LOCALIZADOR','mybooking') ?>: <%= booking.id %></br>
-            <?php _e('Duración del alquiler','mybooking') ?>: <%=booking.days%> <?php _e('día/s','mybooking') ?></p>
+        <p class="detail-text">
+        <?php _e('Duración del alquiler','mybooking') ?>: <%=booking.days%> <?php _e('día/s','mybooking') ?></p>
       <% } %>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>
@@ -32,13 +33,11 @@
         <li><%=booking.return_place_customer_translation%></li>
       </ul>
     </div>
-    <div>
-    <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-        <% var booking_line = booking.booking_lines[idx]; %>
+    <div class="product-detail-image">
+      <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
         <img class="img-fluid" src="<%=booking_line.photo_full%>" alt="">
-    <% } %>
+      <% } %>
     </div>
-
   </div>
 
   <div class="container-fluid">

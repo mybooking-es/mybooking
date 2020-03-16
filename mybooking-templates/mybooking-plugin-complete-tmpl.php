@@ -15,7 +15,7 @@
 
 <!-- Extra representation -->
 <script type="text/tmpl" id="script_detailed_extra">
-  <% if (coverages.length > 0) { %>
+  <% if (coverages && coverages.length > 0) { %>
     <div class="bg-white shadow-bottom p-3 mt-5">
       <h4 class="brand-primary my-3"><?php _e('Coberturas', 'mybooking') ?></h4>
       <div class="extras-container">
@@ -58,7 +58,7 @@
       </div>
     </div>
   <% } %>
-  <% if (extras.length > 0) { %>
+  <% if (extras && extras.length > 0) { %>
     <div class="bg-white shadow-bottom p-3 mt-5">
       <h4 class="brand-primary my-3"><?php _e('Extras', 'mybooking') ?></h4>
       <div class="extras-container">

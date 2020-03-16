@@ -13,14 +13,11 @@
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
 
-  <% for (var idx=0; idx < booking.booking_lines.length; idx++) { %>
-      <%   var booking_line = booking.booking_lines[idx]; %>
-  <% } %>
-
-  <!-- Descktop reservation detail -->
+  <!-- Desktop reservation detail -->
   <div class="product-detail-container d-none d-md-flex">
     <div class="product-detail-content">
       <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
+        <% var booking_line = booking.booking_lines[idx]; %>
         <h2 class="product-name"><%=booking_line.item_description_customer_translation%></h2>
         <p class="detail-text">
         <?php _e('Duración del alquiler','mybooking') ?>: <%=booking.days%> <?php _e('día/s','mybooking') ?></p>
