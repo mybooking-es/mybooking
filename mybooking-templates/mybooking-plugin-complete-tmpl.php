@@ -9,7 +9,7 @@
 *   @since Mybooking WordPress Theme 0.0.1
 */
 ?>
-<!-- Complete sticky bar -->
+<!-- Product detail -->
 <script type="text/tpml" id="script_product_detail">
 </script>
 
@@ -103,6 +103,37 @@
   <% } %>
 </script>
 
+
+<!-- Script that shows the extra detail -->
+<script type="text/tmpl" id="script_extra_modal">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <% for (var idx=0; idx<extra.photos.length; idx++) { %>
+            <div class="carousel-item <% if (idx==0) {%>active<%}%>">
+              <img class="d-block w-100" src="<%=extra.photos[idx].full_photo_path%>" alt="<%=extra.name%>">
+            </div>
+            <% } %>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">&lt;</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">&gt;</span>
+          </a>
+        </div>
+        <div class="mt-3 text-muted"><%=extra.description%></div>
+      </div>
+    </div>
+  </div>
+
+</script>
+
 <!-- Reservation summary modal -->
 <script type="text/tmpl" id="script_reservation_summary_sticky">
     <div class="complete-summary-sticky-wrapper">
@@ -134,6 +165,7 @@
     </div>
 </script>
 
+<!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
 
   <!-- Descktop reservation detail -->

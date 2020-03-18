@@ -16,23 +16,22 @@ if ($testimonial_carousel_visible == 1) { ?>
   <div class="container -carrusel-testimonials owl-theme">
 
     <?php
+    // Proper way to run WP query inside a plugin/theme
     $testimonial_args = array('post_type' => 'testimonial');
-    $testimonial_item = new WP_Query($testimonial_args);
-    while ( $testimonial_item->have_posts() ) : $testimonial_item->the_post();
+    $query = new WP_Query($testimonial_args);
+    $testimonial_items = $query->get_posts();
+    foreach($testimonial_items as $testimonial_item) :  
     ?>
-
       <div class="col-md-9 offset-md-1">
         <blockquote class="blockquote">
-
-            <?php the_content(); ?>
-
+            <?php echo $testimonial_item->post_content; ?>
           <footer class="blockquote-footer">
-            <?php the_title(); ?>
+            <?php echo $testimonial_item->post_title; ?>
           </footer>
         </blockquote>
       </div>
 
-    <?php endwhile; ?>
+    <?php endforeach; ?>
 
   </div>
   </div>
