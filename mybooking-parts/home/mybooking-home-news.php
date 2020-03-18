@@ -23,24 +23,25 @@ if ($news_visible == 1) { ?>
           'category_name' => 'mybooking-home',
           'posts_per_page'=> 3,
         );
-        $news_item = new WP_Query($news_args); ?>
-        <?php  while ( $news_item->have_posts() ) : $news_item->the_post(); ?>
-
+        
+        $query = new WP_Query($news_args); 
+        $news_items = $query->get_posts();
+        foreach($news_items as $news_item) :  
+        ?>
             <div class="col-md-4">
               <div class="news_thumbnail">
-                <a href="<?php echo get_the_permalink() ?>">
-                  <?php the_post_thumbnail(); ?>
+                <a href="<?php echo get_the_permalink( $news_item ) ?>">
+                  <?php echo get_the_post_thumbnail( $news_item ); ?>
                 </a>
               </div>
               <h2 class="news_title">
-                <?php the_title(); ?>
+                <?php echo $news_item->post_title; ?>
               </h2>
               <div class="news_extract">
-                <?php echo the_excerpt(); ?>
+                <?php echo get_the_excerpt( $news_item ); ?>
               </div>
             </div>
-
-        <?php endwhile; ?>
+        <?php endforeach; ?>
 
       </div>
     </div>

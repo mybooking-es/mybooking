@@ -16,7 +16,6 @@ if ($testimonial_carousel_visible == 1) { ?>
   <div class="container -carrusel-testimonials owl-theme">
 
     <?php
-    // Proper way to run WP query inside a plugin/theme
     $testimonial_args = array('post_type' => 'testimonial');
     $query = new WP_Query($testimonial_args);
     $testimonial_items = $query->get_posts();
