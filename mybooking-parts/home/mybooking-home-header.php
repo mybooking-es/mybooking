@@ -36,15 +36,15 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="home-header">
 
-  <!-- FONDOS -->
+  <!-- Backgrounds -->
   <?php $options_header_background = get_option( "home_header_background" );
   if ( $options_header_background == 0 ) { ?>
-
+    <!-- Image background -->
     <?php $image_header = get_option( "home_header_image" ); ?>
     <img class="home-header_background home-header_background_img" src="<?php echo $image_header ?>">
 
   <?php } elseif ( $options_header_background == 1 ) { ?>
-
+    <!-- Video background -->
     <?php $video_header = get_option( "home_header_video" ); ?>
     <?php $image_header = get_option( "home_header_image" ); ?>
     <video class="home-header_background_video" autoplay loop muted poster="<?php echo $image_header ?>">
@@ -52,23 +52,24 @@ defined( 'ABSPATH' ) || exit;
     </video>
 
   <?php } elseif ( $options_header_background == 2 ) { ?>
-
+    <!-- Carrousel backgrond -->
     <?php
     $carousel_args = array( 'post_type' => 'carousel' );
-    $carousel_item = new WP_Query( $carousel_args );
-    if( $carousel_item->have_posts() ) { ?>
+    $query = new WP_Query( $carousel_args );
+    if( $query->post_count > 0 ) { 
+      $carousel_items = $query->get_posts(); ?>
       <div class="home-header_background home-header_background_carrusel portada-carrusel -carrusel-portada">
-        <?php  while ( $carousel_item->have_posts() ) : $carousel_item->the_post(); ?>
+        <?php foreach($carousel_items as $carousel_item) :  ?>
           <div class="carrusel-item">
-            <?php the_post_thumbnail(); ?>
+            <?php echo get_the_post_thumbnail( $carousel_item ); ?>
           </div>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
       </div>
     <?php } ?>    
 
   <?php } ?>
 
-  <!-- ESTRUCTURAS -->
+  <!-- Structures -->
 
   <div id="home-header_content_container" class="container home-header_content_container" >
     <div class="row justify-content-center">
