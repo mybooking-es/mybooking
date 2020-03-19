@@ -3,7 +3,7 @@
 *		MYBOOKING HOME HEADER PARTIAL
 *  	-----------------------------
 *
-* 	Versión: 0.0.5
+* 	Versión: 0.0.6
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
