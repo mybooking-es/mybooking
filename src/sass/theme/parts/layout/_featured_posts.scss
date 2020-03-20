@@ -7,11 +7,14 @@
 }
 .news_thumbnail {
   border-radius: 3px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   img {
     border-radius: 4px;
   }
 }
 .news_extract {
   color: $gray-600;
+}
+.news_extract .mybooking-read-more-link {
+	margin-top: 10px
 }
