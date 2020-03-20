@@ -1,3 +1,6 @@
+if (typeof $ === 'undefined') {
+  var $ = window.jQuery;
+}
 /**
  *   MYBOOKING CUSTOM JS
  *   -------------------

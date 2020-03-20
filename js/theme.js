@@ -8812,6 +8812,9 @@ $.fn.euCookieLawPopup = (function() {
 
 }(jQuery));
 
+if (typeof $ === 'undefined') {
+  var $ = window.jQuery;
+}
 /**
  *   MYBOOKING CUSTOM JS
  *   -------------------
