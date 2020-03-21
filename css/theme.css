@@ -15264,8 +15264,9 @@ form[name=search_form] .flex-form-horizontal-item {
 .home .nav-container-absolute {
   position: absolute; }
 
-.home .nav-container-absolute .bg-nav {
-  background: none; }
+@media (min-width: 992px) {
+  .home .nav-container-absolute .bg-nav {
+    background: none; } }
 
 .navbar-brand {
   margin: 0;
