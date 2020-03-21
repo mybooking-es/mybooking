@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.6.5] 2020-03-20
+
+- Selector form using micro-templates integration
+
 ## [0.6.4] 2020-03-19
 
 ### Fixed

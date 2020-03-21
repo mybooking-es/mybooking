@@ -13,7 +13,8 @@
 <!-- FLEX-FORM-SELECTOR -->
 <section class="widget widget_mybooking_rent_engine_selector widget-reservation-step">
   <form id="form-selector" name="widget_search_form" method="get"
-        enctype="application/x-www-form-urlencoded" class="form flex-form" autocomplete="off">
+        enctype="application/x-www-form-urlencoded" 
+        class="flex-form-horizontal" autocomplete="off">
 
     <?php if ( $args['sales_channel_code'] != '' ) : ?>
 
@@ -25,66 +26,6 @@
       <input type="hidden" name="family_id" value="<?php echo $args['family_id']?>"/>
 
     <?php endif; ?>
-    <!-- Pickup place -->
-    <div class="flex-form-item-box">
-      <label for="widget_pickup_place"><?php _e('Lugar Entrega ', 'mybooking') ?></label>
-      <div class="flex-form-item widget_pickup_place_group">
-        <label class="form_selector-select_label_wrap">
-          <select id="widget_pickup_place" name="pickup_place" class="form_selector-select_dropdown"></select>
-        </label>
-      </div>
-      <!-- Custom delivery place -->
-      <div id="another_pickup_place_group" style="display: none;">
-        <div class="flex-form-item justify-content-between">
-          <input class="bg-white w-100" type="text" id="widget_pickup_place_other" name="pickup_place_other" />
-          <input type="hidden" name="custom_pickup_place" value="false" />
-          <button type="button" class="widget_another_pickup_place_group_close p-0">
-            <i class="fa fa-times flex-icon"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Return place -->
-    <div class="flex-form-item-box">
-      <label><?php _e('Lugar Devolución ', 'mybooking') ?></label>
-      <div class="flex-form-item widget_return_place_group">
-        <label class="form_selector-select_label_wrap">
-          <select id="widget_return_place" name="return_place" class="form_selector-select_dropdown"></select>
-        </label>
-      </div>
-      <!-- Custom delivery place -->
-      <div id="another_return_place_group" style="display: none;">
-        <div class="flex-form-item bg-white justify-content-between">
-          <input class="bg-white w-100" type="text" id="widget_return_place_other" name="return_place_other" />
-          <input type="hidden" name="custom_return_place" value="false" />
-          <button type="button" class="widget_another_return_place_group_close p-0">
-            <i class="fa fa-times flex-icon"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Date/Time From -->
-    <div class="flex-form-item-box">
-      <label><?php _e('Fecha Entrega ', 'mybooking') ?></label>
-      <div class="flex-form-item">
-        <label for="widget_date_from"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
-        <input type="text" id="widget_date_from" name="date_from" readonly="true"/>
-        <select class="ml-1" id="widget_time_from" name="time_from">
-        </select>
-      </div>
-    </div>
-    <!-- Date/Time To -->
-    <div class="flex-form-item-box">
-      <label><?php _e('Fecha Devolución ', 'mybooking') ?></label>
-      <div class="flex-form-item">
-        <label for="widget_date_to"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
-        <input type="text" id="widget_date_to" name="date_to" readonly="true"/>
-        <select class="ml-1" id="widget_time_to" name="time_to">
-        </select>
-      </div>
-    </div>
-    <div class="flex-form-item-box">
-      <input type="submit" class="btn btn-primary" value="<?php _e('Buscar', 'mybooking') ?>" />
-    </div>
+
   </form>
 </section>

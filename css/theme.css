@@ -14432,12 +14432,15 @@ ul.social-links,
 
 .news_thumbnail {
   border-radius: 3px;
-  margin-bottom: 30px; }
+  margin-bottom: 10px; }
   .news_thumbnail img {
     border-radius: 4px; }
 
 .news_extract {
   color: #757575; }
+
+.news_extract .mybooking-read-more-link {
+  margin-top: 10px; }
 
 .entry-title {
   font-weight: 900; }
@@ -14911,6 +14914,7 @@ input[type="text"]:disabled, select:disabled {
       -ms-flex-positive: 2;
           flex-grow: 2; }
 
+/* Form group */
 .flex-form-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14926,6 +14930,21 @@ input[type="text"]:disabled, select:disabled {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; }
+
+/* Form group without label (search button) */
+.flex-form-group-no-label {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end !important;
+      -ms-flex-align: end !important;
+          align-items: flex-end !important; }
+
+.flex-form-group-no-label input {
+  margin-left: 10px;
+  height: 48px;
+  /* To match the input height */ }
 
 .flex-form-horizontal-box {
   -webkit-box-flex: 1;
@@ -14952,12 +14971,6 @@ input[type="text"]:disabled, select:disabled {
         -ms-flex-positive: 1;
             flex-grow: 1; }
 
-.flex-form-group:nth-child(1n) {
-  margin-right: 5px; }
-
-.flex-form-group:nth-child(2n) {
-  margin-left: 5px; }
-
 .flex-form-sticky .flex-form-group {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -14978,6 +14991,9 @@ input[type="text"]:disabled, select:disabled {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
+
+form[name=search_form] .flex-form-horizontal-item {
+  border: 1px solid #ddd; }
 
 .button-group-pills {
   position: absolute;
@@ -15008,26 +15024,42 @@ input[type="text"]:disabled, select:disabled {
 @media (max-width: 575.98px) {
   .flex-form, .flex-form-sticky,
   .flex-form-horizontal {
-    min-width: 100vw; }
+    min-width: 100%; }
   input.hasDatepicker {
     max-width: 130px; } }
+
+@media (max-width: 768px) {
+  .flex-form-group-no-label {
+    margin-top: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: inherit !important;
+        -ms-flex-align: inherit !important;
+            align-items: inherit !important; }
+  .flex-form-group-no-label input {
+    width: 100% !important;
+    margin-left: 0; } }
 
 @media (min-width: 768px) {
   .flex-form-group-wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; } }
+            flex-direction: row; }
+  .flex-form-group:nth-child(2n) {
+    margin-left: 10px; } }
 
 @media (max-width: 992px) {
   .flex-form, .flex-form-sticky,
   .flex-form-horizontal {
-    width: 100vw;
+    width: 100%;
     padding: 20px; } }
 
 @media (max-width: 1199.98px) {
   .flex-form-horizontal-item select {
-    width: 100px; } }
+    width: 100%; } }
 
 .wizard-selector {
   margin-top: 1rem; }
@@ -16478,6 +16510,8 @@ span.stopa {
 
 .blockquote:before {
   position: absolute;
+  top: 25px;
+  left: -30px;
   height: 40px;
   width: 40px;
   background: url(../images/quote-left-solid.svg) 0 0/contain no-repeat;
