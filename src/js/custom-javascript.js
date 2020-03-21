@@ -35,8 +35,8 @@ $(document).ready(function() {
 
 // FORM SELECTOR STICKY
 $(document).ready(function() {
-  if (typeof $(".home .page_content").offset() !== "undefined") {
-    var height = $(".home .page_content").offset().top;
+  if (typeof $(".home-header_sticky-breakpoint").offset() !== "undefined") {
+    var height = $(".home-header_sticky-breakpoint").offset().top;
     var is_mobile = false;
 
     if ($(".navbar-toggler").is(":visible")) {

@@ -139,3 +139,9 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 
 ### 0.6.3
 - Added old parent functions for posts
+
+### 0.6.4
+- New wizard selector
+
+### 0.6.5
+- Solves header background issues reported at https://github.com/mybooking-es/mybooking-wp-theme/issues/8

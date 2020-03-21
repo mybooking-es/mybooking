@@ -37,13 +37,16 @@ defined( 'ABSPATH' ) || exit;
 <div class="home-header">
 
   <!-- Backgrounds -->
+
   <?php $options_header_background = get_option( "home_header_background" );
   if ( $options_header_background == 0 ) { ?>
+
     <!-- Image background -->
     <?php $image_header = get_option( "home_header_image" ); ?>
     <img class="home-header_background home-header_background_img" src="<?php echo $image_header ?>">
 
   <?php } elseif ( $options_header_background == 1 ) { ?>
+
     <!-- Video background -->
     <?php $video_header = get_option( "home_header_video" ); ?>
     <?php $image_header = get_option( "home_header_image" ); ?>
@@ -52,11 +55,12 @@ defined( 'ABSPATH' ) || exit;
     </video>
 
   <?php } elseif ( $options_header_background == 2 ) { ?>
+
     <!-- Carrousel backgrond -->
     <?php
     $carousel_args = array( 'post_type' => 'carousel' );
     $query = new WP_Query( $carousel_args );
-    if( $query->post_count > 0 ) { 
+    if( $query->post_count > 0 ) {
       $carousel_items = $query->get_posts(); ?>
       <div class="home-header_background home-header_background_carrusel portada-carrusel -carrusel-portada">
         <?php foreach($carousel_items as $carousel_item) :  ?>
@@ -65,7 +69,7 @@ defined( 'ABSPATH' ) || exit;
           </div>
         <?php endforeach; ?>
       </div>
-    <?php } ?>    
+    <?php } ?>
 
   <?php } ?>
 
@@ -108,3 +112,4 @@ defined( 'ABSPATH' ) || exit;
     </div>
   </div>
 </div>
+<span class="home-header_sticky-breakpoint"></div>

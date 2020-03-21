@@ -14253,7 +14253,6 @@ a {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
   .home-header_content_container_sticky {
-    position: initial;
     -webkit-transform: none !important;
             transform: none !important; } }
 
@@ -15146,20 +15145,6 @@ input[type="text"]:disabled, select:disabled {
 .wizard-summary_collection {
   text-align: left; }
 
-/*
-.wizard-summary_pickup,
-.wizard-summary_datefrom {
-  width: 100%;
-  float: left;
-}
-
-.wizard-summary_return,
-.wizard-summary_dateto {
-  width: 100%;
-  float: right;
-  text-align: right!important;
-}
-*/
 .wizard-summary_separator {
   width: 20px;
   height: 20px; }
