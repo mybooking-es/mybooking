@@ -147,4 +147,4 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Solves header background issues reported at https://github.com/mybooking-es/mybooking-wp-theme/issues/8
 
 ### 0.6.6
-- Fixing for news home posts
+- Fixing for news home posts and testimonials
