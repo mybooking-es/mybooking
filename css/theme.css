@@ -14436,6 +14436,15 @@ ul.social-links,
   .news_thumbnail img {
     border-radius: 4px; }
 
+.news_post-image {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 280px;
+  overflow: hidden; }
+
 .news_extract {
   color: #757575; }
 
@@ -15244,9 +15253,6 @@ form[name=search_form] .flex-form-horizontal-item {
   .topbar .info_link {
     margin: 0 2em; } }
 
-.custom-logo-link {
-  width: 200px; }
-
 /* Navbar */
 /* Occupies the top of the page */
 .home .navbar-container {
@@ -15271,6 +15277,9 @@ form[name=search_form] .flex-form-horizontal-item {
 .navbar-brand {
   margin: 0;
   float: left; }
+
+.custom-logo-link {
+  width: 200px; }
 
 .navbar-dark .navbar-toggler {
   border: none;

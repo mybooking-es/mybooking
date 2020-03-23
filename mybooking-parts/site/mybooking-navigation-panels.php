@@ -16,12 +16,12 @@ defined( 'ABSPATH' ) || exit;
 <!-- Panel triggers -->
 <?php $panel_one_image = get_option( 'global_navigation_image_one' );
   if ( $panel_one_image !== '' ) { ?>
-    <image class="navpanel_opener" src="<?php echo $panel_one_image ?>" aria-hidden="true" data-toggle="modal" data-target="#navpanel-one">
+    <image class="navpanel_opener navpanel_opener-one" src="<?php echo $panel_one_image ?>" aria-hidden="true" data-toggle="modal" data-target="#navpanel-one">
   <?php  } ?>
 
 <?php $panel_two_image = get_option( 'global_navigation_image_two' );
   if ( $panel_two_image !== '' ) { ?>
-    <image class="navpanel_opener" src="<?php echo $panel_two_image ?>" aria-hidden="true" data-toggle="modal" data-target="#navpanel-two">
+    <image class="navpanel_opener navpanel_opener-two" src="<?php echo $panel_two_image ?>" aria-hidden="true" data-toggle="modal" data-target="#navpanel-two">
   <?php  } ?>
 
 <!-- Panel content -->

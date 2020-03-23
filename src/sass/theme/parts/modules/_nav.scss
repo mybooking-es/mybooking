@@ -68,10 +68,6 @@
   }
 }
 
-.custom-logo-link {
-  width: 200px;
-}
-
 /* Navbar */
 /* Occupies the top of the page */
 .home .navbar-container {
@@ -101,6 +97,10 @@
 .navbar-brand {
   margin: 0;
   float: left;
+}
+
+.custom-logo-link {
+  width: 200px;
 }
 
 .navbar-dark .navbar-toggler {
