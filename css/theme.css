@@ -16511,17 +16511,15 @@ span.stopa {
       bottom: 30px; } }
 
 .blockquote {
-  padding: 4rem 0; }
+  padding: 4rem 0 4rem 3rem; }
   .blockquote p {
     font-size: 22px;
-    padding-left: 75px; }
-  .blockquote footer {
     padding-left: 75px; }
 
 .blockquote:before {
   position: absolute;
-  top: 25px;
-  left: -30px;
+  top: 50px;
+  left: 0;
   height: 40px;
   width: 40px;
   background: url(../images/quote-left-solid.svg) 0 0/contain no-repeat;
