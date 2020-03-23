@@ -3,7 +3,7 @@
 *		MYBOOKING THEME SETUP
 *  	---------------------
 *
-* 	Versión: 0.0.2
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.0
@@ -124,9 +124,7 @@ add_filter( 'excerpt_more', 'mybooking_custom_excerpt_more' );
 if ( ! function_exists( 'mybooking_custom_excerpt_more' ) ) {
 	/**
 	 * Removes the ... from the excerpt read more link
-	 *
 	 * @param string $more The excerpt.
-	 *
 	 * @return string
 	 */
 	function mybooking_custom_excerpt_more( $more ) {
@@ -142,15 +140,12 @@ add_filter( 'wp_trim_excerpt', 'mybooking_all_excerpts_get_more_link' );
 if ( ! function_exists( 'mybooking_all_excerpts_get_more_link' ) ) {
 	/**
 	 * Adds a custom read more link to all excerpts, manually or automatically generated
-	 *
 	 * @param string $post_excerpt Posts's excerpt.
-	 *
 	 * @return string
 	 */
 	function mybooking_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary mybooking-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
-			'mybooking' ) . '</a></p>';
+			$post_excerpt = $post_excerpt . '<p><a class="btn btn-secondary mybooking-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Leer', 'home-news-button','mybooking' ) . '</a></p>';
 		}
 		return $post_excerpt;
 	}
