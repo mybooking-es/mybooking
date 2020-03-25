@@ -92,46 +92,42 @@ defined( 'ABSPATH' ) || exit;
     <div class="col">
       <h6>Síguenos</h6>
       <ul class="social-links">
-        <li class="social__item">
 
-          <?php $company_facebook = get_option("company_info_facebook_url");
-            if ($company_facebook !== '') { ?>
-              <a href="<?php echo $company_facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a>
-          <?php } ?>
+        <?php $company_facebook = get_option("company_info_facebook_url");
+          if ($company_facebook !== '') { ?>
+          <li class="social__item">
+            <a href="<?php echo $company_facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+          </li>
+        <?php } ?>
 
-        </li>
-        <li class="social__item">
+        <?php $company_instagram = get_option("company_info_instagram_url");
+          if ($company_instagram !== '') { ?>
+          <li class="social__item">
+            <a href="<?php echo $company_instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+          </li>
+        <?php } ?>
 
-          <?php $company_instagram = get_option("company_info_instagram_url");
-            if ($company_instagram !== '') { ?>
-              <a href="<?php echo $company_instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a>
-          <?php } ?>
+        <?php $company_twitter = get_option("company_info_twitter_url");
+          if ($company_twitter !== '') { ?>
+          <li class="social__item">
+            <a href="<?php echo $company_twitter ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+          </li>
+        <?php } ?>
 
-        </li>
-        <li class="social__item">
+        <?php $company_linkedin = get_option("company_info_linkedin_url");
+          if ($company_linkedin !== '') { ?>
+          <li class="social__item">
+            <a href="<?php echo $company_linkedin ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+          </li>
+        <?php } ?>
 
-          <?php $company_twitter = get_option("company_info_twitter_url");
-            if ($company_twitter !== '') { ?>
-              <a href="<?php echo $company_twitter ?>" target="_blank"><i class="fa fa-twitter"></i></a>
-          <?php } ?>
-
-        </li>
-        <li class="social__item">
-
-          <?php $company_linkedin = get_option("company_info_linkedin_url");
-            if ($company_linkedin !== '') { ?>
-              <a href="<?php echo $company_linkedin ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
-          <?php } ?>
-
-        </li>
-        <li class="social__item">
-
-          <?php $company_youtube = get_option("company_info_youtube_url");
-            if ($company_youtube !== '') { ?>
-              <a href="<?php echo $company_youtube ?>" target="_blank"><i class="fa fa-youtube"></i></a>
-          <?php } ?>
-
-        </li>
+        <?php $company_youtube = get_option("company_info_youtube_url");
+          if ($company_youtube !== '') { ?>
+          <li class="social__item">
+            <a href="<?php echo $company_youtube ?>" target="_blank"><i class="fa fa-youtube"></i></a>
+          </li>
+        <?php } ?>
+        
       </ul>
       <br>
       <p class="info_bloc">
