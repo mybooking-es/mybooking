@@ -15074,6 +15074,11 @@ form[name=search_form] .flex-form-horizontal-item {
     width: 100%;
     padding: 20px; } }
 
+@media (min-width: 992px) {
+  .flex-form-horizontal {
+    max-width: 960px;
+    margin: 0 auto; } }
+
 @media (max-width: 1199.98px) {
   .flex-form-horizontal-item select {
     width: 100%; } }
