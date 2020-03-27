@@ -14211,6 +14211,11 @@ a {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.home-header_content_container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100%; }
+
 .home-alone:not(.form),
 .home-left:not(.form),
 .home-right:not(.form) {
@@ -14248,10 +14253,10 @@ a {
   .home-header_content_container {
     position: absolute;
     left: 50%;
-    /*top: 50%;*/
     top: calc(50% + 2em);
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+            transform: translate(-50%, -50%);
+    min-width: 960px !important; }
   .home-header_content_container_sticky {
     -webkit-transform: none !important;
             transform: none !important; } }
@@ -14799,6 +14804,9 @@ input.form-reservation-error {
 
 input[type="text"]:disabled, select:disabled {
   background-color: #ddd; }
+
+.widget_mybooking_rent_engine_selector {
+  width: 100%; }
 
 .flex-form, .flex-form-sticky {
   display: -webkit-box;

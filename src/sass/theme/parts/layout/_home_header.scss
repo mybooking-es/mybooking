@@ -71,6 +71,12 @@
   justify-content: center;
 }
 
+.home-header_content_container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100%;
+}
+
 .home-alone:not(.form),
 .home-left:not(.form),
 .home-right:not(.form) {
@@ -118,10 +124,11 @@
   .home-header_content_container {
     position: absolute;
     left: 50%;
-    /*top: 50%;*/
     top: calc(50% + 2em);
     transform: translate(-50%, -50%);
+    min-width: 960px!important;
   }
+
   .home-header_content_container_sticky {
     transform: none !important;
   }
