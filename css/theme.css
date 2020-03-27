@@ -14216,6 +14216,10 @@ a {
   padding-right: 0 !important;
   min-width: 100%; }
 
+.mybooking-widget_header-left,
+.mybooking-widget_header-right {
+  padding: 1rem; }
+
 .home-alone:not(.form),
 .home-left:not(.form),
 .home-right:not(.form) {
@@ -14923,6 +14927,12 @@ input[type="text"]:disabled, select:disabled {
       -ms-flex-positive: 2;
           flex-grow: 2; }
 
+.home-alone .flex-form-group-wrapper {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
 .flex-form-horizontal-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15060,11 +15070,6 @@ form[name=search_form] .flex-form-horizontal-item {
     margin-left: 0; } }
 
 @media (min-width: 768px) {
-  .flex-form-group-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
   .flex-form-group:nth-child(2n) {
     margin-left: 10px; } }
 
@@ -15077,7 +15082,14 @@ form[name=search_form] .flex-form-horizontal-item {
 @media (min-width: 992px) {
   .flex-form-horizontal {
     max-width: 760px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .home-header_content_container_sticky .flex-form-horizontal {
+    min-width: 100%; }
+  .home-alone .flex-form-group-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; } }
 
 @media (max-width: 1199.98px) {
   .flex-form-horizontal-item select {

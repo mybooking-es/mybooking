@@ -50,7 +50,7 @@ function mybooking_widgets_init() {
 			'name'          => __( 'Home Header Uno', 'mybooking' ),
 			'id'            => 'mybooking_home_izquierda',
 	    'description'    => __( 'Área de widgets a la izquierda de la cabecera de la Home', 'mybooking' ),
-			'before_widget' => '<div>',
+			'before_widget' => '<div class="mybooking-widget_header-left">',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -59,7 +59,7 @@ function mybooking_widgets_init() {
 			'name'          => __( 'Home Header Dos', 'mybooking' ),
 			'id'            => 'mybooking_home_derecha',
 	    'description'    => __( 'Área de widgets a la derecha de la cabecera de la Home', 'mybooking' ),
-			'before_widget' => '<div>',
+			'before_widget' => '<div class="mybooking-widget_header-right">',
 			'after_widget'  => '</div>',
 		)
 	);

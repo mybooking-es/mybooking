@@ -81,13 +81,13 @@ defined( 'ABSPATH' ) || exit;
       <?php $options_header_layout = get_option( 'home_header_layout' );
       if ( $options_header_layout == 0 ) { ?>
 
-        <div class="home-header_content home-left col">
+        <div class="home-header_content home-left col-12 col-lg-6">
           <!-- Widget Left -->
           <?php if ( is_active_sidebar( 'mybooking_home_izquierda' ) ) : ?>
             <?php dynamic_sidebar( 'mybooking_home_izquierda' ); ?>
           <?php endif; ?>
         </div>
-        <div class="home-header_content home-right col">
+        <div class="home-header_content home-right col-12 col-lg-6">
           <!-- Widget Right -->
           <?php if ( is_active_sidebar( 'mybooking_home_derecha' ) ) : ?>
             <?php dynamic_sidebar( 'mybooking_home_derecha' ); ?>
