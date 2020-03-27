@@ -20,6 +20,15 @@ defined( 'ABSPATH' ) || exit;
 function mybooking_widgets_init() {
 	register_sidebar(
 		array(
+			'name'          => __( 'Menú de navegación', 'mybooking' ),
+			'id'            => 'mybooking_primary_menu',
+	    'description'    => __( 'Área de widgets a continuación del menú principal', 'mybooking' ),
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name'          => __( 'Panel 1 del menú', 'mybooking' ),
 			'id'            => 'mybooking_panel_one',
 	    'description'    => __( 'Área de widgets en la barra de navegación', 'mybooking' ),

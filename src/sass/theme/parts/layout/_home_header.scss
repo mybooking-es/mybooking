@@ -74,7 +74,7 @@
 .home-header_content_container {
   padding-left: 0 !important;
   padding-right: 0 !important;
-  width: 100%;
+  min-width: 100%;
 }
 
 .home-alone:not(.form),

@@ -29,6 +29,11 @@ defined( 'ABSPATH' ) || exit;
       <!-- WordPress menu -->
       <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-walker' ) ?>
 
+      <!-- Widgets Main Menu -->
+      <?php if ( is_active_sidebar( 'mybooking_primary_menu' ) ) : ?>
+        <?php dynamic_sidebar( 'mybooking_primary_menu' ); ?>
+      <?php endif; ?>
+
       <!-- Panels -->
       <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-panels' ) ?>
 

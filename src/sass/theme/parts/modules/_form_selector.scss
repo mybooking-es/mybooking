@@ -49,14 +49,6 @@
   margin: 5px;
 }
 
-.flex-form-item {
-  display: flex;
-  select {
-    width: 100%;
-    min-width: 70px;
-  }
-}
-
 .flex-icon {
   display: flex;
   align-items: center;
@@ -105,6 +97,14 @@
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 2;
+}
+
+.flex-form-horizontal-item {
+  display: flex;
+  select {
+    width: 100%;
+    min-width: 70px;
+  }
 }
 
 /* Form group */
