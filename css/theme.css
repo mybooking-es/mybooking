@@ -14812,6 +14812,22 @@ input[type="text"]:disabled, select:disabled {
 .widget_mybooking_rent_engine_selector {
   width: 100%; }
 
+/*
+
+  This is the structure of the selector form
+
+  [form .flex-form-horizontal]
+      [div .flex-form-group-wrapper]   // Controls
+         [div .flex-form-group]        // flex-form-group acts as columns or rows
+         [/div]
+         [div .flex-form-group]
+         [/div]
+      [/div]
+      [div .flex-form-horizontal-box]  // Search button
+      [/div]
+  [/form]
+  
+*/
 .flex-form-horizontal {
   display: -webkit-box;
   display: -ms-flexbox;
