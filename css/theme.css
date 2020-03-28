@@ -15340,7 +15340,8 @@ form[name=search_form] .flex-form-horizontal-item {
   color: #333; }
 
 .navpanel_opener {
-  margin: 0 3px; }
+  margin: 0 3px;
+  height: 28px; }
 
 .navpanel-dialog .modal-header {
   border-bottom: none;
