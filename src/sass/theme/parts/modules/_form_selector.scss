@@ -8,7 +8,24 @@
   width: 100%;
 }
 
-// == Horizontal Selector
+/*
+
+  This is the structure of the selector form
+
+  [form .flex-form-horizontal]
+      [div .flex-form-group-wrapper]   // Controls
+         [div .flex-form-group]        // flex-form-group acts as columns or rows
+         [/div]
+         [div .flex-form-group]
+         [/div]
+      [/div]
+      [div .flex-form-horizontal-box]  // Search button
+      [/div]
+  [/form]
+  
+*/
+
+// == Horizontal Selector [form class]
 
 .flex-form-horizontal {
   display: flex;
@@ -18,7 +35,7 @@
   color: #333;
 }
 
-// Horzontal Selector on Desktop
+// Horizontal Selector on Desktop
 
 @media (min-width: 992px) {
   // 1 column : Max width 745px
@@ -36,10 +53,13 @@
     .flex-form-group-wrapper {
       flex-direction: column;
     }
+    .flex-form-group:nth-child(2n) { // 1 column avoid margin between place and date
+       margin-left: 0px;
+    }
   }
 }
 
-// == Form group wrapper
+// == Form group wrapper (wraps the controls)
 
 // Default : 2 columns : place / date - time
 
@@ -57,7 +77,7 @@
   }
 }
 
-// == Form group
+// == Form group (acts as columns -high resolutions- or rows -low resolutions- )
 
 .flex-form-group {
   display: flex;
@@ -70,8 +90,10 @@
 
 // Separation between place and date
 
-.flex-form-group:nth-child(2n) {
-  margin-left: 10px;
+@media (min-width: 575.98px) {
+  .flex-form-group:nth-child(2n) {
+    margin-left: 10px;
+  }
 }
 
 // Horizontal item
@@ -127,7 +149,7 @@
   background-color: #fff;
 }
 
-// == Search button
+// == Search button (wraps the search button)
 
 .flex-form-horizontal-box {
   flex-grow: 1;
@@ -146,7 +168,7 @@
   height: 48px; /* To match the input height */
 }
 
-// == Sticky behaviour (all controls in a row)
+// == Sticky behaviour (all controls in a row ALWAYS)
 
 .flex-form-sticky {
   display: flex;
@@ -158,9 +180,9 @@
   padding: 10px;
   z-index: 10000;
   color: #333;
-  min-width: 100% !important;
-  max-width: 100% !important;
-  width: 100% !important;
+  min-width: 100% !important; // Force always 100%
+  max-width: 100% !important; // Force always 100%
+  width: 100% !important; // Force always 100%
   left: 0;
   top: 0;
   // Form controls wrapper : Force place - date - time in a row
@@ -170,6 +192,9 @@
   // Form group
   .flex-form-group {
     flex-direction: row;
+  }
+  .flex-form-group:nth-child(2n) {
+    margin-left: 10px !important;
   }
   // Search button container
   .flex-form-horizontal-box:last-child {
