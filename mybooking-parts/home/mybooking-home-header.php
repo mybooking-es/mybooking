@@ -43,16 +43,17 @@ defined( 'ABSPATH' ) || exit;
 
     <!-- Image background -->
     <?php $image_header = get_option( "home_header_image" ); ?>
-    <img class="home-header_background home-header_background_img" src="<?php echo $image_header ?>">
+    <img class="home-header_background home-header_background-img" src="<?php echo $image_header ?>">
 
   <?php } elseif ( $options_header_background == 1 ) { ?>
 
     <!-- Video background -->
     <?php $video_header = get_option( "home_header_video" ); ?>
-    <?php $image_header = get_option( "home_header_image" ); ?>
-    <video class="home-header_background_video" autoplay loop muted poster="<?php echo $image_header ?>">
-      <source src="<?php echo $video_header ?>">
-    </video>
+    <div class="home-header_background-video-container">
+      <video class="home-header_background-video" autoplay loop muted poster="<?php echo $image_header ?>">
+        <source src="<?php echo $video_header ?>">
+      </video>
+    </div>
 
   <?php } elseif ( $options_header_background == 2 ) { ?>
 

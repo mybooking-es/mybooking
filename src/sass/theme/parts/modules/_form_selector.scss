@@ -38,7 +38,6 @@
 // Horizontal Selector on Desktop
 
 @media (min-width: 992px) {
-
   // 1 column : Max width 745px
   .home-alone .flex-form-horizontal {
     max-width: 745px;
@@ -47,14 +46,14 @@
 
   // 2 columns : Width between 350 and 400px
 
-  .home-left .flex-form-horizontal, .home-right .flex-form-horizontal {
+  .home-left .flex-form-horizontal,
+  .home-right .flex-form-horizontal {
     max-width: 400px;
     min-width: 350px;
     .flex-form-group-wrapper {
-       flex-direction: column;
+      flex-direction: column;
     }
   }
-
 }
 
 // == Form group wrapper (wraps the controls)
@@ -69,12 +68,10 @@
 }
 
 @media (min-width: 575.98px) {
-
   // Controls wrapper : 1 column : place - date - time
   .flex-form-group-wrapper {
     flex-direction: row;
   }
-
 }
 
 // == Form group (acts as columns -high resolutions- or rows -low resolutions- )
@@ -108,7 +105,7 @@
 
 // Date icon
 
-.flex-icon { 
+.flex-icon {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
@@ -121,27 +118,30 @@
 // Select wrapper for showing the arrow
 
 .form_selector-select_label_wrap {
-    width: 100%;
+  width: 100%;
 }
 
-.form_selector-select_dropdown{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+.form_selector-select_dropdown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .form_selector-select_label_wrap:after {
-    content:"\f107";
-    font-family: FontAwesome;
-    position: absolute;
-    right: 0;
-    top: 10px;
-    font-size: 20px;
-    z-index: 1;
-    width: 10%;
-    height: 100%;
-    pointer-events: none;
-    color: $gray-700;
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0;
+  padding: 11px;
+  top: 0;
+  font-size: 18px;
+  z-index: 1;
+  width: 38px;
+  height: 48px;
+  pointer-events: none;
+  color: $gray-700;
+  font-weight: 900;
+  background-color: #fff;
 }
 
 // == Search button (wraps the search button)
@@ -155,7 +155,7 @@
 
 .flex-form-group-no-label {
   flex-direction: row;
-  align-items: flex-end!important;
+  align-items: flex-end !important;
 }
 
 .flex-form-group-no-label input {
@@ -195,7 +195,7 @@
     align-self: flex-end;
   }
   // Search button
-  .btn { 
+  .btn {
     height: 48px;
     position: relative;
     top: -8px;
@@ -210,10 +210,8 @@
   }
 }
 
-
 // Search form components
 
-form[name=search_form] .flex-form-horizontal-item {
+form[name="search_form"] .flex-form-horizontal-item {
   border: 1px solid #ddd;
 }
-
