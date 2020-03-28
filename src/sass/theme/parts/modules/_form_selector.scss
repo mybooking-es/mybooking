@@ -53,6 +53,9 @@
     .flex-form-group-wrapper {
       flex-direction: column;
     }
+    .flex-form-group:nth-child(2n) { // 1 column avoid margin between place and date
+       margin-left: 0px;
+    }
   }
 }
 
@@ -87,8 +90,10 @@
 
 // Separation between place and date
 
-.flex-form-group:nth-child(2n) {
-  margin-left: 10px;
+@media (min-width: 575.98px) {
+  .flex-form-group:nth-child(2n) {
+    margin-left: 10px;
+  }
 }
 
 // Horizontal item
@@ -187,6 +192,9 @@
   // Form group
   .flex-form-group {
     flex-direction: row;
+  }
+  .flex-form-group:nth-child(2n) {
+    margin-left: 10px !important;
   }
   // Search button container
   .flex-form-horizontal-box:last-child {
