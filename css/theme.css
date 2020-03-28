@@ -14824,6 +14824,19 @@ input[type="text"]:disabled, select:disabled {
   padding: 10px;
   color: #333; }
 
+@media (min-width: 992px) {
+  .home-alone .flex-form-horizontal {
+    max-width: 745px;
+    margin: 0 auto; }
+  .home-left .flex-form-horizontal, .home-right .flex-form-horizontal {
+    max-width: 400px;
+    min-width: 350px; }
+    .home-left .flex-form-horizontal .flex-form-group-wrapper, .home-right .flex-form-horizontal .flex-form-group-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
 .flex-form-group-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14839,21 +14852,13 @@ input[type="text"]:disabled, select:disabled {
       -ms-flex-positive: 2;
           flex-grow: 2; }
 
-.home-alone .flex-form-group-wrapper {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
+@media (min-width: 575.98px) {
+  .flex-form-group-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; } }
 
-.flex-form-horizontal-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .flex-form-horizontal-item select {
-    width: 100%;
-    min-width: 70px; }
-
-/* Form group */
 .flex-form-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14870,33 +14875,8 @@ input[type="text"]:disabled, select:disabled {
         -ms-flex-positive: 1;
             flex-grow: 1; }
 
-/* Form group without label (search button) */
-.flex-form-group-no-label {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: end !important;
-      -ms-flex-align: end !important;
-          align-items: flex-end !important; }
-
-.flex-form-group-no-label input {
-  margin-left: 10px;
-  height: 48px;
-  /* To match the input height */ }
-
-.flex-form-horizontal-box {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 10px; }
+.flex-form-group:nth-child(2n) {
+  margin-left: 10px; }
 
 .flex-form-horizontal-item {
   display: -webkit-box;
@@ -14908,7 +14888,9 @@ input[type="text"]:disabled, select:disabled {
     display: flex;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
-            flex-grow: 1; }
+            flex-grow: 1;
+    width: 100%;
+    min-width: 70px; }
 
 .flex-icon {
   display: -webkit-box;
@@ -14944,6 +14926,33 @@ input[type="text"]:disabled, select:disabled {
   pointer-events: none;
   color: #616161; }
 
+.flex-form-horizontal-box {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px; }
+
+.flex-form-group-no-label {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end !important;
+      -ms-flex-align: end !important;
+          align-items: flex-end !important; }
+
+.flex-form-group-no-label input {
+  margin-left: 10px;
+  height: 48px;
+  /* To match the input height */ }
+
 .flex-form-sticky {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14963,9 +14972,16 @@ input[type="text"]:disabled, select:disabled {
   padding: 10px;
   z-index: 10000;
   color: #333;
-  width: 100%;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
   left: 0;
   top: 0; }
+  .flex-form-sticky .flex-form-group-wrapper {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important; }
   .flex-form-sticky .flex-form-group {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -14989,79 +15005,6 @@ input[type="text"]:disabled, select:disabled {
 
 form[name=search_form] .flex-form-horizontal-item {
   border: 1px solid #ddd; }
-
-.button-group-pills {
-  position: absolute;
-  top: -10px;
-  right: 0px; }
-  .button-group-pills .btn {
-    height: auto !important;
-    margin-top: 0 !important;
-    padding: 0.3rem;
-    cursor: pointer;
-    border-radius: 25px;
-    line-height: 1;
-    background-color: #8ac53f;
-    color: #fff;
-    width: 100px;
-    font-size: 12px;
-    -webkit-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out; }
-    .button-group-pills .btn:hover {
-      background-color: #6fa130;
-      color: #fff; }
-    .button-group-pills .btn.active {
-      background-color: #fff;
-      color: #8ac53f;
-      -webkit-box-shadow: none;
-              box-shadow: none; }
-
-@media (max-width: 575.98px) {
-  .flex-form,
-  .flex-form-horizontal {
-    min-width: 100%; }
-  input.hasDatepicker {
-    max-width: 130px; } }
-
-@media (max-width: 768px) {
-  .flex-form-group-no-label {
-    margin-top: 10px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: inherit !important;
-        -ms-flex-align: inherit !important;
-            align-items: inherit !important; }
-  .flex-form-group-no-label input {
-    width: 100% !important;
-    margin-left: 0; } }
-
-@media (min-width: 768px) {
-  .flex-form-group:nth-child(2n) {
-    margin-left: 10px; } }
-
-@media (max-width: 992px) {
-  .flex-form,
-  .flex-form-horizontal {
-    width: 100%;
-    padding: 20px; } }
-
-@media (min-width: 992px) {
-  .home-alone .flex-form-horizontal {
-    max-width: 745px;
-    margin: 0 auto; }
-  .home-header_content_container_sticky .flex-form-horizontal {
-    min-width: 100%; }
-  .home-alone .flex-form-group-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; } }
-
-@media (max-width: 1199.98px) {
-  .flex-form-horizontal-item select {
-    width: 100%; } }
 
 .wizard-selector {
   margin-top: 1rem; }
