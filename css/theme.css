@@ -14828,10 +14828,12 @@ input[type="text"]:disabled, select:disabled {
   .home-alone .flex-form-horizontal {
     max-width: 745px;
     margin: 0 auto; }
-  .home-left .flex-form-horizontal, .home-right .flex-form-horizontal {
+  .home-left .flex-form-horizontal,
+  .home-right .flex-form-horizontal {
     max-width: 400px;
     min-width: 350px; }
-    .home-left .flex-form-horizontal .flex-form-group-wrapper, .home-right .flex-form-horizontal .flex-form-group-wrapper {
+    .home-left .flex-form-horizontal .flex-form-group-wrapper,
+    .home-right .flex-form-horizontal .flex-form-group-wrapper {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -14918,13 +14920,16 @@ input[type="text"]:disabled, select:disabled {
   font-family: FontAwesome;
   position: absolute;
   right: 0;
-  top: 10px;
-  font-size: 20px;
+  padding: 11px;
+  top: 0;
+  font-size: 18px;
   z-index: 1;
-  width: 10%;
-  height: 100%;
+  width: 38px;
+  height: 48px;
   pointer-events: none;
-  color: #616161; }
+  color: #616161;
+  font-weight: 900;
+  background-color: #fff; }
 
 .flex-form-horizontal-box {
   -webkit-box-flex: 1;
@@ -15003,7 +15008,7 @@ input[type="text"]:disabled, select:disabled {
   .flex-form-sticky label {
     font-size: 13px; }
 
-form[name=search_form] .flex-form-horizontal-item {
+form[name="search_form"] .flex-form-horizontal-item {
   border: 1px solid #ddd; }
 
 .wizard-selector {
