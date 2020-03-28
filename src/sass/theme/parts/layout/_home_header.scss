@@ -55,6 +55,7 @@
   .home-header_background-video,
   .home-header_background_carrusel .carrusel-item img {
     padding-top: 0; // Resets height because navbar is not fixed
+    max-height: 100vh;
   }
 }
 
