@@ -14143,7 +14143,8 @@ a {
   --nav-bg-color: #8ac53f; }
 
 /**
- * Wraps the header : (Image | Video | Carrusel) + Widgets areas
+ * HEADER CONTAINER
+ * Wraps Widgets areas + Image || Video || Carrusel
  */
 .home-header {
   position: relative;
@@ -14154,44 +14155,58 @@ a {
   background-color: #8ac53f;
   z-index: 2; }
 
+@media (min-width: 768px) {
+  .home-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; } }
+
+@media (min-width: 992px) {
+  .home-left {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .home-right {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; } }
+
 /**
- * Image (img) | Video (video) | Carrusel (div) common class
+ * HEADER BACKGROUNDS
+ * NOTE: Due to the height of the selector form the background image & carousel
+ * images must be 580px at least. Also, video container is restricted to 600px
+ * height over 1200px screen resolution.
  */
 .home-header_background {
+  width: 100%; }
+
+/**
+ * Background image, video & carousel
+ */
+.home-header_background-img,
+.home-header_background-video,
+.home-header_background_carrusel .carrusel-item img {
   width: 100%;
   padding-top: 42px; }
 
-/**
- * Background image specific class
- */
-.home-header_background_img,
-.home-header_background_video {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
-  min-height: 220px;
-  width: 100%;
-  z-index: -1; }
+@media (min-width: 576px) {
+  .home-header_background-img,
+  .home-header_background-video,
+  .home-header_background_carrusel .carrusel-item img {
+    padding-top: 0; } }
+
+.home-header_background-video-container {
+  margin-bottom: -5px; }
+
+@media (min-width: 1200px) {
+  .home-header_background-video-container {
+    height: 600px;
+    overflow: hidden; } }
 
 /**
- * Background carousel
- */
-.home-header_background_carrusel {
-  min-height: 220px;
-  z-index: -1; }
-
-.home-header_background_carrusel .carrusel-item img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
-  min-height: 220px; }
-
-/**
- * Widget areas
+ * WIDGET AREAS
+ * They stacks on small screens
  */
 .home-header_content {
   display: -webkit-box;
@@ -14225,39 +14240,11 @@ a {
 .home-right:not(.form) {
   color: #fff; }
 
-@media (min-width: 576px) {
-  .home-header_background_img,
-  .home-header_background_video {
-    min-height: 560px;
-    max-height: 600px; }
-  .home-header_background_carrusel {
-    padding-top: 0;
-    height: 560px; }
-  .carrusel-item img {
-    height: 560px !important; } }
-
-@media (min-width: 768px) {
-  .home-header {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; } }
-
 @media (min-width: 992px) {
-  .home-header_background_img {
-    padding-top: 0; }
-  .home-left {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
-  .home-right {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end; }
   .home-header_content_container {
     position: absolute;
     left: 50%;
-    top: calc(50% + 2em);
+    top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     min-width: 960px !important; }
