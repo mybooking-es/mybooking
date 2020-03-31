@@ -8940,3 +8940,9 @@ $(document).ready( function() {
 $(document).bind("user_cookie_consent_changed", function(event, object) {
   console.log("User cookie consent changed: " + $(object).attr('consent') );
 });
+
+// CONTROLS SUBMENU OPENING ON MOBILE
+$(document).on('click', '.dropdown-menu li', function (e) {
+  $('.dropdown-menu li > .dropdown-menu').slide();
+  e.stopPropagation();
+});

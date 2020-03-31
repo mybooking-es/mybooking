@@ -15205,6 +15205,10 @@ form[name="search_form"] .flex-form-horizontal-item {
   .topbar .info_link {
     margin: 0 2em; } }
 
+@media (min-width: 1024px) {
+  .home .topbar {
+    background-color: rgba(66, 66, 66, 0.5); } }
+
 /* Navbar */
 /* Occupies the top of the page */
 .home .navbar-container {
@@ -15266,16 +15270,37 @@ form[name="search_form"] .flex-form-horizontal-item {
 .navbar-dark .navbar-nav .active .nav-link {
   color: #333; }
 
-.navpanel_opener {
-  margin: 0 3px;
-  height: 28px; }
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem; }
+  .navbar-brand {
+    margin: 0 1rem; }
+  .navbar-nav {
+    text-align: center;
+    margin-bottom: 50px; }
+  .navbar-nav .nav-link {
+    font-size: 1.3em; } }
 
-.navpanel-dialog .modal-header {
-  border-bottom: none;
-  padding-bottom: 0; }
+@media (min-width: 768px) {
+  .navbar > .container,
+  .navbar > .container-fluid {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
 
-.modal-backdrop {
-  display: none; }
+ul.dropdown-menu li > ul.dropdown-menu {
+  width: 100%;
+  top: 25px;
+  margin: 0;
+  color: #212529;
+  background-color: #fff;
+  border: 0; }
+
+ul.dropdown-menu li:hover > ul.dropdown-menu,
+ul.dropdown-menu li:focus > ul.dropdown-menu,
+ul.dropdown-menu li > ul.dropdown-menu:hover,
+ul.dropdown-menu li > ul.dropdown-menu:focus {
+  display: block; }
 
 @media (max-width: 575.98px) {
   .home .bg-nav .navbar-brand img {
@@ -15300,27 +15325,16 @@ form[name="search_form"] .flex-form-horizontal-item {
     vertical-align: middle;
     text-align: center; } }
 
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0.5rem 1rem; }
-  .navbar-brand {
-    margin: 0 1rem; }
-  .navbar-nav {
-    text-align: center;
-    margin-bottom: 50px; }
-  .navbar-nav .nav-link {
-    font-size: 1.3em; } }
+.navpanel_opener {
+  margin: 0 3px;
+  height: 28px; }
 
-@media (min-width: 768px) {
-  .navbar > .container,
-  .navbar > .container-fluid {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }
+.navpanel-dialog .modal-header {
+  border-bottom: none;
+  padding-bottom: 0; }
 
-@media (min-width: 1024px) {
-  .home .topbar {
-    background-color: rgba(66, 66, 66, 0.5); } }
+.modal-backdrop {
+  display: none; }
 
 .icons-wrapper {
   display: -webkit-box;
