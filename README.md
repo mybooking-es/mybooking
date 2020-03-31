@@ -153,3 +153,9 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Fixed navigation panel's icon height
 - Solves header widget areas issues reported at https://github.com/mybooking-es/mybooking-wp-theme/issues/10
 - New widget area next to primary menu requested at https://github.com/mybooking-es/mybooking-wp-theme/issues/11
+
+### 0.6.8
+- Refactorized Header background image/video/carousel CSS for better screen adaptation
+
+### 0.6.9
+- Now navigation walker supports 3 levels
