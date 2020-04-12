@@ -136,12 +136,12 @@
 
 <!-- Reservation summary modal -->
 <script type="text/tmpl" id="script_reservation_summary_sticky">
-    <div class="complete-summary-sticky-wrapper">
+  <div class="complete-summary-sticky-wrapper">
       <div class="complete-summary-sticky">
         <div class="complete-summary-left">
           <div class="complete-summary-item">
               <!-- primer bloque Recogida -->
-              <p class="color-gray-500"><%=shopping_cart.pickup_place_customer_translation%></p>
+              <p class="color-gray-400"><%=shopping_cart.pickup_place_customer_translation%></p>
               <p class="color-white"><%=shopping_cart.days%> <?php _e('día/s', 'mybooking') ?></p>
           </div>
           <!-- Button trigger modal -->
@@ -172,8 +172,8 @@
   <div class="product-detail-container d-none d-md-flex">
     <div class="product-detail-content">
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-        <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
-        <p class="detail-text">
+      <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
+      <p class="detail-text">
         <?php _e('Duración del alquiler','mybooking') ?>: <%=shopping_cart.days%> <?php _e('día/s','mybooking') ?></p>
       <% } %>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
@@ -189,7 +189,7 @@
     </div>
     <div class="product-detail-image">
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-        <img class="img-fluid" src="<%=shopping_cart.items[idx].photo_full%>" alt="">
+      <img class="img-fluid" src="<%=shopping_cart.items[idx].photo_full%>" alt="">
       <% } %>
     </div>
   </div>
@@ -294,9 +294,8 @@
         </div>
         <div class="modal-footer summary-modal_footer">
           <! -- TOTAL -->
-                <span class="extra-name fw-700"><?php _e('Total', 'mybooking') ?></span>
-                <span
-                  class="fw-900 brand-primary"><%=configuration.formatCurrency(shopping_cart.total_cost)%></span>
+            <span class="extra-name fw-700"><?php _e('Total', 'mybooking') ?></span>
+            <span class="fw-900 brand-primary"><%=configuration.formatCurrency(shopping_cart.total_cost)%></span>
         </div>
       </div>
     </div>

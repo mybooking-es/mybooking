@@ -1,0 +1,107 @@
+// ==========================================================================
+// MYBOOKING VARIABLES
+// ==========================================================================
+:root {
+  // Color tool material design
+  // https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+  // Additional UI colors
+  --white: #ffffff;
+  --black: #000000;
+  --error: #b00020;
+  // Theme colors
+  --brand-primary: #8ac53f;
+  --brand-primary-light: #bef870;
+  --brand-primary-dark: #599400;
+  // Secondary color is optional
+  --brand-secondary: #5c6ac4;
+  --brand-secondary-light: #8f98f7;
+  --brand-secondary-dark: #254093;
+  //  Gray  Colors
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #eeeeee;
+  --gray-300: #e0e0e0;
+  --gray-400: #bdbdbd;
+  --gray-500: #9e9e9e;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+  // Base
+  --font-family: "Inter", sans-serif;
+  --font-body: var(--font-family);
+  --font-heading: var(--font-family);
+  --body-bg: var(--white);
+  --body-color: var(--gray-900);
+  --color-link: var(--brand-primary);
+  --color-link-active: var(--brand-primary-dark);
+  --color-link-visited: var(--brand-primary-dark);
+  --color-link-hover: var(--brand-primary-light);
+  // Topbar
+  --home-topbar-bg: rgba(66, 66, 66, 0.5);
+  --topbar-bg: var(--gray-900);
+  --topbar-color: var(--white);
+  --topbar-link-color: var(--white);
+  --topbar-link-color-hover: var(--gray-50);
+  // Navbar
+  --navbar-bg: var(--brand-primary);
+  --navbar-link-color: var(--white);
+  --navbar-link-color-hover: var(--gray-50);
+  --toggler-icon-color: var(--white);
+  --navbar-box-shadow: none;
+  // Landing header
+  --header-bg: var(--white);
+  --header-color: var(--white);
+  // Footer
+  --footer-bg: var(--gray-800);
+  --footer-color: var(--gray-50);
+  --footer-color-link: var(--brand-primary);
+  --footer-color-link-hover: var(--brand-primary-light);
+  --footer-logo-width: 200px;
+  // Credits
+  --credits-bg: var(--gray-900);
+  --credits-color: var(--gray-100);
+  --credits-color-link: var(--color-link);
+  --credits-color-link-hover: var(--color-link-hover);
+  // Selector
+  --selector-bg: rgba(255, 255, 255, 0.6);
+  --selector-color: var(--body-color);
+  // Buttons
+  --btn-bg-color: var(--brand-primary);
+  --btn-bg-color-hover: var(--brand-primary-dark);
+  --btn-border-color: var(--brand-primary);
+  --btn-border-color-hover: var(--brand-primary-dark);
+  --btn-color: var(--white);
+  --btn-color-hover: var(--btn-color);
+  --btn-font-w: 600;
+  --btn-text-transform: uppercase;
+  // Steps
+  --step-active-color: var(--brand-secondary-light);
+  --step-done-color: var(--brand-secondary);
+  --step-active-text-color: var(--step-active-color);
+  --step-title-color: var(--step-done-color);
+  // Choose product summary sticky
+  // Choose product and Complete summary sticky bar
+  --summary-sticky-bg: var(--gray-900);
+  // Nav Panels
+  --nav-panel-color: ;
+  --nav-panel-bg: ;
+  // Modals
+  --modal-bg: ;
+  --modal-color: ;
+  --modal-title-color: ;
+  --modal-title-s: ;
+  --modal-title-w: ;
+  // Wizard form
+  --wizform-input-border: ;
+  --wizform-color: ;
+  --wizform-btn-bg: ;
+  --wizform-btn-color: ;
+  --wizform-btn-border: ;
+  --wizform-btn-color-h: ;
+  --wizform-btn-border-h: ;
+  // Wizard
+  // Modal form
+  // Cards
+  // Contact form
+}

@@ -1,10 +1,10 @@
-// $overrides
-@import "../parts/overrides/index";
-// $Utilities
-@import "../parts/utilities/index";
-// $Base
+// Base
 @import "../parts/base/index";
-// $Layout
-@import "../parts/layout/index";
-// $modules
-@import "../parts/modules/index";
+// Overrides
+@import "../parts/overrides/index";
+// Utilities
+@import "../parts/utilities/index";
+// Layout components
+@import "../parts/layout-components/index";
+// Engine components
+@import "../parts/engine-components/index";

@@ -1,9 +1,6 @@
 // Import theme parts
 @import "parts/index";
 
-
-// Utilities
-
 .full-height {
   height: 100%;
 }
@@ -32,35 +29,31 @@
   }
 }
 
-.wrapper-footer {
-  background-color: darken($brand-primary, 40%);
-  color: $white;
-}
-
-.btn.btn-secondary.understrap-read-more-link {
-  color: $brand-primary;
-  background-color: transparent;
-  border: 0;
-  padding-left: 0;
+a.btn.btn-secondary.mybooking-read-more-link {
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
   &:hover {
-    color: darken($brand-primary, 10%);
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark);
   }
 }
 
 /** Date Range picker **/
 
 .bg-warning {
-   background-color: #ffbe4a;
-   color: #000000 !important;
+  background-color: #ffbe4a;
+  color: #000000 !important;
 }
 
 .bg-danger {
-   background-color: #f18484;
-   color: #ffffff !important;
+  background-color: #f18484;
+  color: #ffffff !important;
 }
 
 .not-selectable-day {
-   color: #ccc !important;
+  color: #ccc !important;
 }
 
 .date-picker-wrapper .month-wrapper table .day {
@@ -73,12 +66,12 @@
 }
 .date-picker-wrapper .month-wrapper table .caption {
   height: 90px;
-}  
+}
 .date-picker-wrapper .month-wrapper table .week-name {
   height: 40px;
-}  
+}
 .week-name th {
-  font-size: 14px; 
+  font-size: 14px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -96,10 +89,10 @@
 .date-picker-wrapper.no-shortcuts {
   padding-bottom: 0;
 }
-.date-picker-wrapper{
+.date-picker-wrapper {
   background-color: transparent;
 }
-.date-picker-wrapper .footer {  
+.date-picker-wrapper .footer {
   background-color: transparent;
   padding-bottom: 0px;
 }
@@ -112,5 +105,5 @@
 }
 // Google Autocomplete
 .pac-container {
-    z-index: 10000 !important;
+  z-index: 10000 !important;
 }

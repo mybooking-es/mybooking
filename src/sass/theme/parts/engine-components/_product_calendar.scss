@@ -1,0 +1,17 @@
+/**
+ * Module for product detail page with calendar
+ */
+
+// Available date
+.date-picker-wrapper .date-available {
+  background-color: #aeecbc;
+  color: black;
+}
+
+// Selected date
+.date-picker-wrapper .first-date-selected,
+.date-picker-wrapper .last-date-selected,
+.date-picker-wrapper .date-selected {
+  background-color: #4499ee !important;
+  color: white !important;
+}

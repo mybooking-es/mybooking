@@ -1,0 +1,241 @@
+//==============================================
+// Form selector
+//==============================================
+
+// Widget Container
+
+.widget_mybooking_rent_engine_selector {
+  width: 100%;
+}
+
+/*
+
+This is the structure of the selector form
+
+[form .flex-form-horizontal]
+    [div .flex-form-group-wrapper]   // Controls
+        [div .flex-form-group]        // flex-form-group acts as columns or rows
+        [/div]
+        [div .flex-form-group]
+        [/div]
+    [/div]
+    [div .flex-form-horizontal-box]  // Search button
+    [/div]
+[/form]
+  
+*/
+
+// == Horizontal Selector [form class]
+
+.flex-form-horizontal-box {
+  .btn {
+    height: 48px;
+    position: relative;
+    top: -8px;
+    box-shadow: none;
+    background-color: var(--brand-primary);
+    &:hover {
+      background-color: var(--brand-primary-dark);
+    }
+  }
+}
+
+.flex-form-horizontal {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--selector-bg);
+  padding: 10px;
+  color: var(--selector-color);
+}
+
+// Horizontal Selector on Desktop
+
+@media (min-width: 992px) {
+  // 1 column : Max width 745px
+  .home-alone .flex-form-horizontal {
+    max-width: 745px;
+    margin: 0 auto;
+  }
+
+  // 2 columns : Width between 350 and 400px
+
+  .home-left .flex-form-horizontal,
+  .home-right .flex-form-horizontal {
+    max-width: 400px;
+    min-width: 350px;
+    .flex-form-group-wrapper {
+      flex-direction: column;
+    }
+    .flex-form-group:nth-child(2n) {
+      // 1 column avoid margin between place and date
+      margin-left: 0px;
+    }
+  }
+}
+
+// == Form group wrapper (wraps the controls)
+
+// Default : 2 columns : place / date - time
+
+.flex-form-group-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 2;
+}
+
+@media (min-width: 575.98px) {
+  // Controls wrapper : 1 column : place - date - time
+  .flex-form-group-wrapper {
+    flex-direction: row;
+  }
+}
+
+// == Form group (acts as columns -high resolutions- or rows -low resolutions- )
+
+.flex-form-group {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  input.hasDatepicker {
+    flex-grow: 1;
+  }
+}
+
+// Separation between place and date
+
+@media (min-width: 575.98px) {
+  .flex-form-group:nth-child(2n) {
+    margin-left: 10px;
+  }
+}
+
+// Horizontal item
+
+.flex-form-horizontal-item {
+  display: flex;
+  select {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    min-width: 70px;
+  }
+}
+
+// Date icon
+
+.flex-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  background-color: var(--white);
+  padding: 0.8rem;
+  height: 48px;
+  color: var(--gray-700);
+}
+
+// Select wrapper for showing the arrow
+
+.form_selector-select_label_wrap {
+  width: 100%;
+}
+
+.form_selector-select_dropdown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form_selector-select_label_wrap:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0;
+  padding: 11px;
+  top: 0;
+  font-size: 18px;
+  z-index: 1;
+  width: 38px;
+  height: 48px;
+  pointer-events: none;
+  color: var(--gray-700);
+  font-weight: 900;
+  background-color: var(--white);
+}
+
+// == Search button (wraps the search button)
+
+.flex-form-horizontal-box {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.flex-form-group-no-label {
+  flex-direction: row;
+  align-items: flex-end !important;
+}
+
+.flex-form-group-no-label input {
+  margin-left: 10px;
+  height: 48px; /* To match the input height */
+}
+
+// == Sticky behaviour (all controls in a row ALWAYS)
+
+.flex-form-sticky {
+  display: flex;
+  align-items: end;
+  flex-direction: row;
+  flex-grow: 1;
+  background-color: var(--gray-200);
+  position: fixed;
+  padding: 10px;
+  z-index: 10000;
+  color: var(--selector-color);
+  min-width: 100% !important; // Force always 100%
+  max-width: 100% !important; // Force always 100%
+  width: 100% !important; // Force always 100%
+  left: 0;
+  top: 0;
+  // Form controls wrapper : Force place - date - time in a row
+  .flex-form-group-wrapper {
+    flex-direction: row !important;
+  }
+  // Form group
+  .flex-form-group {
+    flex-direction: row;
+  }
+  .flex-form-group:nth-child(2n) {
+    margin-left: 10px !important;
+  }
+  // Search button container
+  .flex-form-horizontal-box:last-child {
+    margin-left: 5px;
+    flex-grow: 1;
+    align-self: flex-end;
+  }
+  // Flex-form-sticky > Search button
+  .btn {
+    height: 48px;
+    position: relative;
+    top: -8px;
+    background-color: var(--brand-primary);
+  }
+
+  // Date input
+  input.hasDatepicker {
+    max-width: 130px;
+  }
+  // Labels
+  label {
+    font-size: 13px;
+  }
+}
+
+// Search form components
+
+form[name="search_form"] .flex-form-horizontal-item {
+  border: 1px solid var(--gray-300);
+}
