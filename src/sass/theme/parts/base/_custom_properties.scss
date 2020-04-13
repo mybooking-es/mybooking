@@ -33,10 +33,12 @@
   --font-heading: var(--font-family);
   --body-bg: var(--white);
   --body-color: var(--gray-900);
+  // Links
   --color-link: var(--brand-primary);
+  --color-link-hover: var(--brand-primary-light);
   --color-link-active: var(--brand-primary-dark);
   --color-link-visited: var(--brand-primary-dark);
-  --color-link-hover: var(--brand-primary-light);
+
   // Topbar
   --home-topbar-bg: rgba(66, 66, 66, 0.5);
   --topbar-bg: var(--gray-900);
@@ -80,7 +82,6 @@
   --step-done-color: var(--brand-secondary);
   --step-active-text-color: var(--step-active-color);
   --step-title-color: var(--step-done-color);
-  // Choose product summary sticky
   // Choose product and Complete summary sticky bar
   --summary-sticky-bg: var(--gray-900);
   // Nav Panels

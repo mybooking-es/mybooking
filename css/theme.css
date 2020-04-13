@@ -13372,9 +13372,9 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --body-bg: var(--white);
   --body-color: var(--gray-900);
   --color-link: var(--brand-primary);
+  --color-link-hover: var(--brand-primary-light);
   --color-link-active: var(--brand-primary-dark);
   --color-link-visited: var(--brand-primary-dark);
-  --color-link-hover: var(--brand-primary-light);
   --home-topbar-bg: rgba(66, 66, 66, 0.5);
   --topbar-bg: var(--gray-900);
   --topbar-color: var(--white);
@@ -14779,6 +14779,9 @@ body .eupopup-style-compact .eupopup-button {
   .blockquote p {
     font-size: 22px;
     padding-left: 75px; }
+
+.blockquote-footer {
+  padding-left: 75px; }
 
 .blockquote:before {
   content: "\f10d";
