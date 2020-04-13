@@ -59,7 +59,7 @@
 		<br>
     <hr>
     <% if (product_available) { %>    
-	    <h4 class="brand-primary my-3">Reserva</h4>
+	    <h4 class="brand-primary my-3"><?php _e('Reserva', 'mybooking') ?></h4>
 
 	    <% if (shopping_cart.days) { %>
 	    <p class="color-gray-600"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=shopping_cart.days%> <?php _e('día/s','mybooking') ?></span></p>
@@ -103,12 +103,12 @@
 	  <% } else { %>
       <% if (product_type == 'resource') { %>
         <div class="alert alert-danger">
-          <p>Lo sentimos, no hay disponibilidad en este horario.</p>
+          <p><?php _e('Lo sentimos, no hay disponibilidad en este horario.','mybooking') ?></p>
         </div>
       <% } else if (product_type == 'category_of_resources') { %>
         <div class="alert alert-warning">
-          <p>Lo sentimos, no hay disponibilidad para todo el período. El calendario muestra aquellos días en los que hay 
-          disponibilidad, pero es posible que para determinadas fechas no seamos capaces de ofrecerle el mismo producto.</p>
+          <p><?php _e('Lo sentimos, no hay disponibilidad para todo el período. El calendario muestra aquellos días en los que hay disponibilidad, pero es posible que para determinadas fechas no seamos capaces de ofrecerle el mismo producto.','mybooking') ?></p>
+          <p></p>
         </div>
       <% } %>
 	  <% } %>  

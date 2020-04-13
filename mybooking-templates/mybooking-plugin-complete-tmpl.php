@@ -306,7 +306,6 @@
 
 <!-- Payment detail -->
 <script type="text/tmpl" id="script_payment_detail">
-  <input type="hidden" name="payment" value="none">
 
     <%
        var paymentAmount = 0;
@@ -330,6 +329,25 @@
          }
        }
     %>
+
+    <!-- Payment -->
+
+    <% if (sales_process.can_pay) { %>
+      <% if (sales_process.payment_methods.paypal_standard && sales_process.payment_methods.tpv_virtual) { %>
+        <!-- The payment method will be selected later -->
+        <input type="hidden" name="payment" value="none">
+      <% } else if (sales_process.payment_methods.paypal_standard) { %>   
+        <!-- Fixed paypal standard -->
+        <input type="hidden" name="payment" value="paypal_standard">
+      <% } else  if (sales_process.payment_methods.tpv_virtual) { %>
+        <!-- Fixed tpv -->
+        <input type="hidden" name="payment" value="<%=sales_process.payment_methods.tpv_virtual%>">  
+      <% } %>  
+    <% } else { %>
+      <input type="hidden" name="payment" value="none"> 
+    <% } %>   
+
+    <!-- More than one option : request / pay on delivery / pay -->
 
     <% if (selectionOptions > 1) { %>
       <hr>
@@ -361,50 +379,49 @@
     <!-- Request reservation -->
 
     <% if (sales_process.can_request) { %>
-    <div id="request_reservation_container" <% if (selectionOptions > 1 || !sales_process.can_request) { %>style="display:none"<%}%>>
+      <div id="request_reservation_container" <% if (selectionOptions > 1 || !sales_process.can_request) { %>style="display:none"<%}%>>
 
-        <div class="border p-4">
-          <div class="form-row">
-            <div class="form-group col-md-12">
-              <label for="payments_paypal_standard">
-                <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;<?php _e('Acepto los términos y condiciones y la política de privacidad','mybooking') ?>
-              </label>
+          <div class="border p-4">
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="payments_paypal_standard">
+                  <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;<?php _e('Acepto los términos y condiciones y la política de privacidad','mybooking') ?>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <button type="submit" class="btn btn-outline-dark"><?php _e('Solicitud de reserva','mybooking') ?></button>
+              </div>
             </div>
           </div>
 
-          <div class="form-row">
-            <div class="form-group col-md-12">
-              <button type="submit" class="btn btn-outline-dark"><?php _e('Solicitud de reserva','mybooking') ?></button>
-            </div>
-          </div>
-        </div>
-
-    </div>
+      </div>
     <% } %>
 
     <% if (sales_process.can_pay) { %>
 
         <% if (sales_process.can_pay_on_delivery) { %>
-        <!-- Pay on delivery -->
-        <div id="payment_on_delivery_container" <% if (selectionOptions > 1 || !sales_process.can_pay_on_delivery) { %>style="display:none"<%}%>>
+          <!-- Pay on delivery -->
+          <div id="payment_on_delivery_container" <% if (selectionOptions > 1 || !sales_process.can_pay_on_delivery) { %>style="display:none"<%}%>>
 
-            <div class="border p-4">
-                <div class="form-row">
-                  <div class="form-group col-md-12">
-                    <label for="payments_paypal_standard">
-                      <input type="checkbox" id="conditions_read_payment_on_delivery" name="conditions_read_payment_on_delivery">&nbsp;<?php _e('Acepto los términos y condiciones y la política de privacidad','mybooking') ?>
-                    </label>
+              <div class="border p-4">
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="payments_paypal_standard">
+                        <input type="checkbox" id="conditions_read_payment_on_delivery" name="conditions_read_payment_on_delivery">&nbsp;<?php _e('Acepto los términos y condiciones y la política de privacidad','mybooking') ?>
+                      </label>
+                    </div>
                   </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group col-md-12">
-                    <button type="submit" class="btn btn-outline-dark"><?php _e('Confirmar', 'mybooking') ?></button>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <button type="submit" class="btn btn-outline-dark"><?php _e('Confirmar', 'mybooking') ?></button>
+                    </div>
                   </div>
-                </div>
-            </div>
+              </div>
 
-        </div>
+          </div>
         <% } %>
 
         <!-- Pay now -->
@@ -442,11 +459,9 @@
                     </div>
                 <% } else if (sales_process.payment_methods.paypal_standard) { %>
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-paypal.jpg"/>
-                    <input type="hidden" id="payment_method_value" value="paypal_standard">
                 <% } else if (sales_process.payment_methods.tpv_virtual) { %>
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-mastercard.jpg"/>
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-visa.jpg"/>
-                    <input type="hidden" id="payment_method_value" value="<%=sales_process.payment_methods.tpv_virtual%>">
                 <% } %>
 
                 <hr>

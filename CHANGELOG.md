@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.6.10] 2020-04-13
+
+### Fixed
+
+- Renting module. Complete step. Just pay now (without request reservation) not connecting to payment gateway
+
+### Updated
+
+- Product calendar. JS Library. Single date => Just one month
+
 ## [0.6.5] 2020-03-20
 
 - Selector form using micro-templates integration
