@@ -159,3 +159,9 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 
 ### 0.6.9
 - Now navigation walker supports 3 levels
+
+### 0.6.10
+- Connection to external payment gateways
+
+### 0.6.11
+- Testimonials can have images now, with default avatar fallback
