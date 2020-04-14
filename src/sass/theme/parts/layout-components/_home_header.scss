@@ -8,8 +8,6 @@
  */
 .home-header {
   position: relative;
-  max-height: 100vh;
-  overflow: hidden;
   flex-direction: column;
   background-color: var(--home-header-bg);
   z-index: 2;
@@ -49,6 +47,16 @@
 .home-header_background_carrusel .carrusel-item img {
   width: 100%;
   padding-top: 42px; // Set to the client's navbar height
+  object-fit: cover;
+  height: 700px;
+}
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .home-header_background-img,
+  .home-header_background-video,
+  .home-header_background_carrusel .carrusel-item img {
+    height: 300px;
+  }
 }
 
 @media (min-width: 576px) {

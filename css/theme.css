@@ -13875,8 +13875,6 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
  */
 .home-header {
   position: relative;
-  max-height: 100vh;
-  overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -13917,7 +13915,16 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
 .home-header_background-video,
 .home-header_background_carrusel .carrusel-item img {
   width: 100%;
-  padding-top: 42px; }
+  padding-top: 42px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 700px; }
+
+@media (max-width: 991.98px) {
+  .home-header_background-img,
+  .home-header_background-video,
+  .home-header_background_carrusel .carrusel-item img {
+    height: 300px; } }
 
 @media (min-width: 576px) {
   .home-header_background-img,
