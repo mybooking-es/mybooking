@@ -33,9 +33,9 @@ This is the structure of the selector form
     position: relative;
     top: -8px;
     box-shadow: none;
-    background-color: var(--brand-primary);
+    background-color: var(--btn-bg-color);
     &:hover {
-      background-color: var(--brand-primary-dark);
+      background-color: var(--btn-bg-color-hover);
     }
   }
 }
@@ -99,6 +99,9 @@ This is the structure of the selector form
   flex-direction: column;
   input.hasDatepicker {
     flex-grow: 1;
+  }
+  label {
+    font-size: 0.8rem;
   }
 }
 
@@ -221,7 +224,7 @@ This is the structure of the selector form
     height: 48px;
     position: relative;
     top: -8px;
-    background-color: var(--brand-primary);
+    background-color: var(--selector-btn-bg-color);
   }
 
   // Date input

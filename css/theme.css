@@ -13385,8 +13385,8 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --navbar-link-color-hover: var(--gray-50);
   --toggler-icon-color: var(--white);
   --navbar-box-shadow: none;
-  --header-bg: var(--white);
-  --header-color: var(--white);
+  --home-header-bg: var(--brand-secondary);
+  --home-header-color: var(--white);
   --footer-bg: var(--gray-800);
   --footer-color: var(--gray-50);
   --footer-color-link: var(--brand-primary);
@@ -13881,7 +13881,7 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #8ac53f;
+  background-color: var(--home-header-bg);
   z-index: 2; }
 
 @media (min-width: 768px) {
@@ -14941,9 +14941,9 @@ This is the structure of the selector form
   top: -8px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: var(--brand-primary); }
+  background-color: var(--btn-bg-color); }
   .flex-form-horizontal-box .btn:hover {
-    background-color: var(--brand-primary-dark); }
+    background-color: var(--btn-bg-color-hover); }
 
 .flex-form-horizontal {
   display: -webkit-box;
@@ -15012,6 +15012,8 @@ This is the structure of the selector form
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; }
+  .flex-form-group label {
+    font-size: 0.8rem; }
 
 @media (min-width: 575.98px) {
   .flex-form-group:nth-child(2n) {
@@ -15142,7 +15144,7 @@ This is the structure of the selector form
     height: 48px;
     position: relative;
     top: -8px;
-    background-color: var(--brand-primary); }
+    background-color: var(--selector-btn-bg-color); }
   .flex-form-sticky input.hasDatepicker {
     max-width: 130px; }
   .flex-form-sticky label {

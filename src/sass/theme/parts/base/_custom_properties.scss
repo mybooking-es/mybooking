@@ -38,7 +38,6 @@
   --color-link-hover: var(--brand-primary-light);
   --color-link-active: var(--brand-primary-dark);
   --color-link-visited: var(--brand-primary-dark);
-
   // Topbar
   --home-topbar-bg: rgba(66, 66, 66, 0.5);
   --topbar-bg: var(--gray-900);
@@ -51,9 +50,9 @@
   --navbar-link-color-hover: var(--gray-50);
   --toggler-icon-color: var(--white);
   --navbar-box-shadow: none;
-  // Landing header
-  --header-bg: var(--white);
-  --header-color: var(--white);
+  // Home header
+  --home-header-bg: var(--brand-secondary);
+  --home-header-color: var(--white);
   // Footer
   --footer-bg: var(--gray-800);
   --footer-color: var(--gray-50);
