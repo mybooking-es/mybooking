@@ -50,16 +50,16 @@
   align-items: center;
   justify-content: center;
   i {
-    color: $gray-400;
+    color: var(--gray-400);
   }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 575.98px) {
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
   .sticky-top {
     width: 100%;
     position: fixed;
-    top: 58px;
+    top: var(--sticky-top-mobile-top-position);
     z-index: 25;
   }
 }

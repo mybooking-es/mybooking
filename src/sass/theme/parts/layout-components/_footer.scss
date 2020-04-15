@@ -13,9 +13,11 @@
     height: 30px;
   }
 
-  .logo-footer {
+  .logo-footer a img {
     margin-bottom: 0.5rem;
     width: var(--footer-logo-width);
+    height: var(--footer-logo-height);
+    overflow: hidden;
   }
   a {
     color: var(--footer-color-link);

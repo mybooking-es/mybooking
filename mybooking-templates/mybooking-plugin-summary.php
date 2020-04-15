@@ -16,10 +16,10 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <h4 id="reservation_title" class="color-gray-500 py-5"></h4>
+          <h4 id="reservation_title" class="color-gray-500 py-5 summary-reservation-title"></h4>
         </div>
       </div>
     </div>
-    <div id="reservation_detail"></div>  
+    <div id="reservation_detail" class="summary-detail"></div>
   </div>
 </div>

@@ -1,6 +1,12 @@
 // Import theme parts
 @import "parts/index";
 
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .summary-reservation-title {
+    margin-top: var(--summary-reservation-title-margin-top-mobile);
+  }
+}
 .full-height {
   height: 100%;
 }

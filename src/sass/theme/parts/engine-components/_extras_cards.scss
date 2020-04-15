@@ -2,7 +2,7 @@
 // Module/extras cards
 //==============================================
 .extras {
-  margin-top: 60px;
+  margin-top: var(--extras-margin-top-mobile);
 }
 .extras-container {
   display: flex;
@@ -22,7 +22,6 @@
   width: 50%;
   overflow: hidden;
   display: flex;
-
   img {
     max-width: 150px;
   }
@@ -34,12 +33,6 @@
   justify-content: center;
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .extras {
-    margin-top: 0;
-  }
-}
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .extras-container {
@@ -47,6 +40,9 @@
   }
   .extra-wrapper {
     width: calc(50% - 20px);
+  }
+  .extras {
+    margin-top: 0;
   }
 }
 

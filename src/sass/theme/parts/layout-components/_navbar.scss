@@ -2,68 +2,6 @@
 // Module/nav
 //==============================================
 
-// Topbar
-.topbar {
-  font-size: 0.9em;
-  margin-top: 0;
-  position: relative;
-  z-index: 30;
-  padding: 0.3rem 1rem;
-  background-color: var(--topbar-bg);
-  float: left;
-  width: 100%;
-  a {
-    color: var(--topbar-link-color);
-    &:hover {
-      color: var(--topbar-link-color-hover);
-      text-decoration: none;
-    }
-  }
-  i {
-    color: var(--white);
-  }
-  .info_link {
-    margin: 0 0 0 1em;
-  }
-  .topbar_menu {
-    float: right;
-    .menu {
-      margin: 0;
-    }
-    li {
-      display: inline-block;
-      margin: 0 0.5em;
-    }
-  }
-}
-
-@media (max-width: 798px) {
-  .topbar {
-    text-align: center;
-  }
-
-  .topbar .topbar_menu {
-    float: none;
-    margin: 0.5rem auto;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .topbar .menu,
-  .topbar .info_text {
-    display: none;
-  }
-  .topbar .info_link {
-    margin: 0 2em;
-  }
-}
-
-@media (min-width: 1024px) {
-  .home .topbar {
-    background-color: var(--home-topbar-bg);
-  }
-}
-
 /* Navbar */
 /* Occupies the top of the page */
 .home .navbar-container {
@@ -94,8 +32,10 @@
   float: left;
 }
 
-.custom-logo-link {
-  width: 200px;
+.custom-logo-link img {
+  width: var(--custom-logo-width);
+  height: var(--custom-logo-height);
+  overflow: hidden;
 }
 
 .navbar-dark .navbar-toggler {
@@ -185,7 +125,7 @@ ul.dropdown-menu li > ul.dropdown-menu:focus {
   display: block;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 992px) {
   .home .bg-nav .navbar-brand img {
     display: block;
   }

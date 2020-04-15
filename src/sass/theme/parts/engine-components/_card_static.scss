@@ -35,6 +35,12 @@
     }
   }
 }
+@media (max-width: 991.98px) {
+  .cards-static-container:first-child {
+    margin-top: var(--card-static-margin-top-mobile);
+  }
+}
+
 .card-static_image {
   width: 100%;
   height: 300px;

@@ -50,6 +50,8 @@
   --navbar-link-color-hover: var(--gray-50);
   --toggler-icon-color: var(--white);
   --navbar-box-shadow: none;
+  --custom-logo-width: auto;
+  --custom-logo-height: 40px;
   // Home header
   --home-header-bg: var(--brand-secondary);
   --home-header-color: var(--white);
@@ -60,7 +62,8 @@
   --footer-color: var(--gray-50);
   --footer-color-link: var(--brand-primary);
   --footer-color-link-hover: var(--brand-primary-light);
-  --footer-logo-width: 200px;
+  --footer-logo-width: auto;
+  --footer-logo-height: 30px;
   // Credits
   --credits-bg: var(--gray-900);
   --credits-color: var(--gray-100);
@@ -84,7 +87,16 @@
   --step-active-text-color: var(--step-active-color);
   --step-title-color: var(--step-done-color);
   // Choose product and Complete summary sticky bar
+  --sticky-top-mobile-top-position: 95px; // This depends on logo height
   --summary-sticky-bg: var(--gray-900);
+  // Card static
+  --card-static-margin-top-mobile: 175px; // This depends on logo height
+  // Extras
+  --extras-margin-top-mobile: 165px; // This depends on logo height
+  // Product detail on complete and summary
+  --product-detail-margin-top-mobile: 145px; // This depends on logo height
+  // Summary
+  --summary-reservation-title-margin-top-mobile: 95px; // This depends on logo height
   // Nav Panels
   --nav-panel-color: ;
   --nav-panel-bg: ;
@@ -104,6 +116,5 @@
   --wizform-btn-border-h: ;
   // Wizard
   // Modal form
-  // Cards
   // Contact form
 }
