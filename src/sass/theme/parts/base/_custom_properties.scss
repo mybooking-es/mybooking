@@ -46,17 +46,19 @@
   --topbar-link-color-hover: var(--gray-50);
   // Navbar
   --navbar-bg: var(--brand-primary);
-  --navbar-link-color: var(--white);
-  --navbar-link-color-hover: var(--gray-50);
-  --toggler-icon-color: var(--white);
   --navbar-box-shadow: none;
-  --custom-logo-width: auto;
-  --custom-logo-height: 40px;
+  --navbar-link-color: #FFF;
+  --navbar-link-hover: .5;
+  --navbar-link-active: #333;
+  --navbar-link-collapse: #FFF;
+  --toggler-icon-color: var(--white);
+  --custom-logo-height: 30px;
   // Home header
   --home-header-bg: var(--brand-secondary);
   --home-header-color: var(--white);
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
+  --home-header-top: 58px; // Active when .nav-container-absolute is active
   // Footer
   --footer-bg: var(--gray-800);
   --footer-color: var(--gray-50);

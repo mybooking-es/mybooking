@@ -28,7 +28,9 @@ defined( 'ABSPATH' ) || exit;
     </h1>
   <?php else : ?>
     <a
-      class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+      class="navbar-brand"
+      rel="home"
+      href="<?php echo esc_url( home_url( '/' ) ); ?>"
       title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
       itemprop="url">
         <?php bloginfo( 'name' ); ?>

@@ -1,0 +1,40 @@
+/** Overrides WPML **/
+
+// Controls dropdown length
+.wpml-ls-legacy-dropdown {
+  width: 5.5em; // Fits on 360px devices
+}
+
+@media ( min-width: 400px ) {
+  .wpml-ls-legacy-dropdown {
+    width: 7.5em;
+  }
+}
+
+@media ( min-width: 575px ) {
+  .wpml-ls-legacy-dropdown {
+    width: 10.5em;
+  }
+}
+
+// Forces white links on .navbar-dark
+.navbar-dark .wpml-ls-legacy-list-horizontal a {
+  color: #FFF;
+}
+
+// Hides link's text on small screens
+.wpml-ls-legacy-list-horizontal .wpml-ls-flag + span {
+  display: none;
+}
+
+@media ( min-width: 992px ) {
+  .wpml-ls-legacy-list-horizontal .wpml-ls-flag + span {
+    display: inline-block;
+  }
+}
+
+// Removes margin to get full colorized WPML footer
+.wpml-ls-legacy-list-horizontal.wpml-ls-statics-footer {
+  margin-bottom: 0;
+  padding: 20px
+}

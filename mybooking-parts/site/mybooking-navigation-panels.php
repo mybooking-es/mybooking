@@ -13,6 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
+<div>
 <!-- Panel triggers -->
 <?php $panel_one_image = get_option( 'global_navigation_image_one' );
   if ( $panel_one_image !== '' ) { ?>
@@ -23,6 +24,7 @@ defined( 'ABSPATH' ) || exit;
   if ( $panel_two_image !== '' ) { ?>
     <image class="navpanel_opener navpanel_opener-two" src="<?php echo $panel_two_image ?>" aria-hidden="true" data-toggle="modal" data-target="#navpanel-two">
   <?php  } ?>
+</div>
 
 <!-- Panel content -->
 <?php $panel_one_active = get_option( 'global_navigation_panel_one' );
