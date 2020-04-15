@@ -13420,7 +13420,6 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --card-static-margin-top-mobile: 175px;
   --extras-margin-top-mobile: 165px;
   --product-detail-margin-top-mobile: 145px;
-  --product-detail-margin-top-mobile: 145px;
   --summary-reservation-title-margin-top-mobile: 95px;
   --nav-panel-color: ;
   --nav-panel-bg: ;
@@ -14974,8 +14973,8 @@ This is the structure of the selector form
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: var(--selector-bg);
-  padding: 10px;
-  color: var(--selector-color); }
+  color: var(--selector-color);
+  padding: 10px; }
 
 @media (min-width: 992px) {
   .home-alone .flex-form-horizontal {
@@ -15163,8 +15162,7 @@ This is the structure of the selector form
   .flex-form-sticky .btn {
     height: 48px;
     position: relative;
-    top: -8px;
-    background-color: var(--selector-btn-bg-color); }
+    top: -8px; }
   .flex-form-sticky input.hasDatepicker {
     max-width: 130px; }
   .flex-form-sticky label {

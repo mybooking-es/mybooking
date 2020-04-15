@@ -44,8 +44,8 @@ This is the structure of the selector form
   display: flex;
   flex-direction: column;
   background-color: var(--selector-bg);
-  padding: 10px;
   color: var(--selector-color);
+  padding: 10px;
 }
 
 // Horizontal Selector on Desktop
@@ -224,7 +224,6 @@ This is the structure of the selector form
     height: 48px;
     position: relative;
     top: -8px;
-    background-color: var(--selector-btn-bg-color);
   }
 
   // Date input
