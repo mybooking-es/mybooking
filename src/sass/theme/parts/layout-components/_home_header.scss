@@ -48,14 +48,14 @@
   width: 100%;
   padding-top: 42px; // Set to the client's navbar height
   object-fit: cover;
-  height: 700px;
+  height: var(--home-header-bg-height);
 }
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
   .home-header_background-img,
   .home-header_background-video,
   .home-header_background_carrusel .carrusel-item img {
-    height: 300px;
+    height: var(--home-header-bg-height-lg);
   }
 }
 

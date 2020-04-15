@@ -13387,6 +13387,8 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --navbar-box-shadow: none;
   --home-header-bg: var(--brand-secondary);
   --home-header-color: var(--white);
+  --home-header-bg-height: 300px;
+  --home-header-bg-height-lg: 700px;
   --footer-bg: var(--gray-800);
   --footer-color: var(--gray-50);
   --footer-color-link: var(--brand-primary);
@@ -13918,13 +13920,13 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   padding-top: 42px;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 700px; }
+  height: var(--home-header-bg-height); }
 
-@media (max-width: 991.98px) {
+@media (min-width: 992px) {
   .home-header_background-img,
   .home-header_background-video,
   .home-header_background_carrusel .carrusel-item img {
-    height: 300px; } }
+    height: var(--home-header-bg-height-lg); } }
 
 @media (min-width: 576px) {
   .home-header_background-img,
