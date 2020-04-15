@@ -13415,12 +13415,22 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --step-done-color: var(--brand-secondary);
   --step-active-text-color: var(--step-active-color);
   --step-title-color: var(--step-done-color);
-  --sticky-top-mobile-top-position: 95px;
+  --sticky-top-mobile-top-position: calc(
+    var(--custom-logo-height) + 95px - 40px
+  );
   --summary-sticky-bg: var(--gray-900);
-  --card-static-margin-top-mobile: 175px;
-  --extras-margin-top-mobile: 165px;
-  --product-detail-margin-top-mobile: 145px;
-  --summary-reservation-title-margin-top-mobile: 95px;
+  --card-static-margin-top-mobile: calc(
+    var(--custom-logo-height) + 175px - 40px
+  );
+  --extras-margin-top-mobile: calc(
+    var(--custom-logo-height) + 165px - 40px
+  );
+  --product-detail-margin-top-mobile: calc(
+    var(--custom-logo-height) + 145px - 40px
+  );
+  --summary-reservation-title-margin-top-mobile: calc(
+    var(--custom-logo-height) + 95px - 40px
+  );
   --nav-panel-color: ;
   --nav-panel-bg: ;
   --modal-bg: ;

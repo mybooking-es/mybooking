@@ -87,16 +87,26 @@
   --step-active-text-color: var(--step-active-color);
   --step-title-color: var(--step-done-color);
   // Choose product and Complete summary sticky bar
-  --sticky-top-mobile-top-position: 95px; // This depends on logo height
+  --sticky-top-mobile-top-position: calc(
+    var(--custom-logo-height) + 95px - 40px
+  ); // This depends on logo height
   --summary-sticky-bg: var(--gray-900);
   // Card static
-  --card-static-margin-top-mobile: 175px; // This depends on logo height
+  --card-static-margin-top-mobile: calc(
+    var(--custom-logo-height) + 175px - 40px
+  ); // This depends on logo height
   // Extras
-  --extras-margin-top-mobile: 165px; // This depends on logo height
+  --extras-margin-top-mobile: calc(
+    var(--custom-logo-height) + 165px - 40px
+  ); // This depends on logo height
   // Product detail on complete and summary
-  --product-detail-margin-top-mobile: 145px; // This depends on logo height
+  --product-detail-margin-top-mobile: calc(
+    var(--custom-logo-height) + 145px - 40px
+  ); // This depends on logo height
   // Summary
-  --summary-reservation-title-margin-top-mobile: 95px; // This depends on logo height
+  --summary-reservation-title-margin-top-mobile: calc(
+    var(--custom-logo-height) + 95px - 40px
+  ); // This depends on logo height
   // Nav Panels
   --nav-panel-color: ;
   --nav-panel-bg: ;
