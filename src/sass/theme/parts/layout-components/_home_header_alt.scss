@@ -1,5 +1,5 @@
 //==============================================
-// Hero header
+// Layout/Hero header
 //==============================================
 
 /**
@@ -8,52 +8,63 @@
  */
 .home-header {
   position: relative;
+  max-height: 100vh;
+  overflow: hidden;
   flex-direction: column;
-  background-color: var(--home-header-bg);
+  background-color: #8ac53f;
   z-index: 2;
-}
-
-@media (min-width: 768px) {
-  .home-header {
-    flex-direction: row;
-  }
-  .home-left {
-    align-items: flex-start;
-  }
-  .home-right {
-    align-items: flex-end;
-  }
-}
-
-.home-header_background {
-  width: 100%;
 }
 
 .nav-container-absolute ~ .home-header {
   padding-top: var(--home-header-top);
 }
 
-@media ( min-width: 992px ) {
-  .nav-container-absolute ~ .home-header {
-    padding-top: 0;
+@media (min-width: 768px) {
+  .home-header {
+    flex-direction: row;
   }
 }
 
-// Background image, video & carousel
+@media (min-width: 992px) {
+  .nav-container-absolute ~ .home-header {
+    padding-top: 0;
+  }
+
+  .home-left {
+    align-items: flex-start;
+  }
+
+  .home-right {
+    align-items: flex-end;
+  }
+}
+
+
+/**
+ * HEADER BACKGROUNDS
+ * NOTE: Due to the height of the selector form the background image & carousel
+ * images must be 580px at least. Also, video container is restricted to 600px
+ * height over 1200px screen resolution.
+ */
+
+.home-header_background {
+  width: 100%;
+}
+
+/**
+ * Background image, video & carousel
+ */
 .home-header_background-img,
 .home-header_background-video,
 .home-header_background_carrusel .carrusel-item img {
   width: 100%;
-  object-fit: cover;
-  height: var(--home-header-bg-height-sm);
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .home-header_background-img,
   .home-header_background-video,
   .home-header_background_carrusel .carrusel-item img {
-    height: var(--home-header-bg-height-lg); // min 700px
+    padding-top: 0; // Resets height because navbar is not fixed
   }
 }
 
@@ -67,6 +78,7 @@
     overflow: hidden;
   }
 }
+
 
 /**
  * WIDGET AREAS
@@ -94,7 +106,7 @@
 .home-alone:not(.form),
 .home-left:not(.form),
 .home-right:not(.form) {
-  color: var(--white);
+  color: #fff;
 }
 
 @media (min-width: 992px) {
@@ -103,8 +115,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    min-width: 960px !important;
+    min-width: 960px!important;
   }
+
   .home-header_content_container_sticky {
     transform: none !important;
   }

@@ -165,3 +165,8 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 
 ### 0.6.11
 - Testimonials can have images now, with default avatar fallback
+
+### 0.6.12
+- Custom properties rocks!
+- Navigation refactorized
+- WPML support
