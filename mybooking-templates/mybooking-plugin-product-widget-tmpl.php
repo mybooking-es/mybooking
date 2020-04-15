@@ -90,7 +90,7 @@
 		  <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.return_place_cost)%></p>
 		  <% } %>
 
-	    <h4 class="brand-primary my-3">Importe total</h4>
+	    <h4 class="color-brand-primary my-3">Importe total</h4>
 	    <p class="total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
 	    
 	    <hr>

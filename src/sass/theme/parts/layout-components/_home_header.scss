@@ -1,0 +1,100 @@
+//==============================================
+// Hero header
+//==============================================
+
+/**
+ * HEADER CONTAINER
+ * Wraps Widgets areas + Image || Video || Carrusel
+ */
+.home-header {
+  position: relative;
+  flex-direction: column;
+  background-color: var(--home-header-bg);
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .home-header {
+    flex-direction: row;
+  }
+  .home-left {
+    align-items: flex-start;
+  }
+  .home-right {
+    align-items: flex-end;
+  }
+}
+
+.home-header_background {
+  width: 100%;
+}
+
+// Background image, video & carousel
+.home-header_background-img,
+.home-header_background-video,
+.home-header_background_carrusel .carrusel-item img {
+  width: 100%;
+  object-fit: cover;
+  height: var(--home-header-bg-height-sm);
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .home-header_background-img,
+  .home-header_background-video,
+  .home-header_background_carrusel .carrusel-item img {
+    height: var(--home-header-bg-height-lg); // min 700px
+  }
+}
+
+.home-header_background-video-container {
+  margin-bottom: -6px;
+}
+
+@media (min-width: 1200px) {
+  .home-header_background-video-container {
+    height: 600px;
+    overflow: hidden;
+  }
+}
+
+/**
+ * WIDGET AREAS
+ * They stacks on small screens
+ */
+.home-header_content {
+  display: flex;
+  flex-direction: column;
+  min-height: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-header_content_container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  min-width: 100%;
+}
+
+.mybooking-widget_header-left,
+.mybooking-widget_header-right {
+  padding: 1rem;
+}
+
+.home-alone:not(.form),
+.home-left:not(.form),
+.home-right:not(.form) {
+  color: var(--white);
+}
+
+@media (min-width: 992px) {
+  .home-header_content_container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 960px !important;
+  }
+  .home-header_content_container_sticky {
+    transform: none !important;
+  }
+}

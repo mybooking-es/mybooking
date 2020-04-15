@@ -1,0 +1,29 @@
+//==============================================
+// Module/buttons
+//==============================================
+// Overwriting bootstrap styles
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: var(--btn-bg-color);
+  border-color: var(--btn-border-color);
+  letter-spacing: 1px;
+  font-weight: var(--btn-font-w);
+  text-transform: var(--btn-text-transform);
+  &:hover {
+    background-color: var(--btn-bg-hover);
+    border-color: var(--btn-border-color-hover);
+  }
+}
+
+// Deben ir en el CSS del plugin
+.footer-card a.btn {
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-outline-dark {
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}

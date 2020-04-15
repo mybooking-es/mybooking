@@ -1,4 +1,4 @@
-if (typeof $ === 'undefined') {
+if (typeof $ === "undefined") {
   var $ = window.jQuery;
 }
 /**
@@ -12,15 +12,15 @@ if (typeof $ === 'undefined') {
  */
 
 // OWL CAROUSEL
-$(document).ready(function() {
-  // Home page carousel
+$(document).ready(function () {
+  //Home page carousel
   $(".-carrusel-portada").owlCarousel({
     autoPlay: true,
     slideSpeed: 3600,
     paginationSpeed: 600,
     navigation: false,
     pagination: false,
-    singleItem: true
+    singleItem: true,
   });
 
   // Testimonials
@@ -29,12 +29,12 @@ $(document).ready(function() {
     slideSpeed: 300,
     paginationSpeed: 400,
     singleItem: true,
-    pagination: false
+    pagination: false,
   });
 });
 
 // FORM SELECTOR STICKY
-$(document).ready(function() {
+$(document).ready(function () {
   if (typeof $(".home-header_sticky-breakpoint").offset() !== "undefined") {
     var height = $(".home-header_sticky-breakpoint").offset().top;
     var is_mobile = false;
@@ -43,7 +43,7 @@ $(document).ready(function() {
       is_mobile = true;
     }
     if (!is_mobile) {
-      $(window).on("scroll", function() {
+      $(window).on("scroll", function () {
         if ($(".navbar-toggler").is(":visible")) {
           $("#form-selector").removeClass("flex-form-sticky");
           $("#home-header_content_container").removeClass(
@@ -66,7 +66,7 @@ $(document).ready(function() {
 });
 
 // GO TOP BUTTON
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   // browser window scroll (in pixels) after which the "back to top" link is shown
   var offset = 300,
     //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
@@ -77,7 +77,7 @@ jQuery(document).ready(function($) {
     $back_to_top = $(".cd-top");
 
   //hide or show the "back to top" link
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     $(this).scrollTop() > offset
       ? $back_to_top.addClass("cd-is-visible")
       : $back_to_top.removeClass("cd-is-visible cd-fade-out");
@@ -87,11 +87,11 @@ jQuery(document).ready(function($) {
   });
 
   //smooth scroll to top
-  $back_to_top.on("click", function(event) {
+  $back_to_top.on("click", function (event) {
     event.preventDefault();
     $("body,html").animate(
       {
-        scrollTop: 0
+        scrollTop: 0,
       },
       scroll_top_duration
     );
@@ -99,12 +99,10 @@ jQuery(document).ready(function($) {
 });
 
 // RESERVATION STEPS
-$(document).ready(function() {
-  $(".step").each(function(index, element) {
+$(document).ready(function () {
+  $(".step").each(function (index, element) {
     //element == this
-    $(element)
-      .not(".active")
-      .addClass("done");
+    $(element).not(".active").addClass("done");
     $(".done").html('<i class="fa fa-check" aria-hidden="true"></i>');
     if ($(this).is(".active")) {
       return false;
@@ -113,22 +111,23 @@ $(document).ready(function() {
 });
 
 // COOKIES POLICY
-$(document).ready( function() {
+$(document).ready(function () {
   if ($(".eupopup").length > 0) {
     $(document).euCookieLawPopup().init({
-      'info' : 'YOU_CAN_ADD_MORE_SETTINGS_HERE',
-      'popupTitle' : 'This website is using cookies. ',
-      'popupText' : 'We use them to give you the best experience. If you continue using our website, we\'ll assume that you are happy to receive all cookies on this website.'
+      info: "YOU_CAN_ADD_MORE_SETTINGS_HERE",
+      popupTitle: "This website is using cookies. ",
+      popupText:
+        "We use them to give you the best experience. If you continue using our website, we'll assume that you are happy to receive all cookies on this website.",
     });
   }
 });
 
-$(document).bind("user_cookie_consent_changed", function(event, object) {
-  console.log("User cookie consent changed: " + $(object).attr('consent') );
+$(document).bind("user_cookie_consent_changed", function (event, object) {
+  console.log("User cookie consent changed: " + $(object).attr("consent"));
 });
 
 // CONTROLS SUBMENU OPENING ON MOBILE
-$(document).on('click', '.dropdown-menu li', function (e) {
-  $('.dropdown-menu li > .dropdown-menu').slide();
+$(document).on("click", ".dropdown-menu li", function (e) {
+  $(".dropdown-menu li > .dropdown-menu").slide();
   e.stopPropagation();
 });

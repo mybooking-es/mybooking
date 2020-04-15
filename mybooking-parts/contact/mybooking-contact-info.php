@@ -37,7 +37,7 @@
     </div>
 
     <div class="info">
-      <h4 class="brand-primary">
+      <h4 class="color-brand-primary">
         <i class="fa fa-map-marker" aria-hidden="true"></i>
         <?php _e("Localización",'mybooking'); ?>
       </h4>
@@ -47,7 +47,7 @@
           <p><?php echo $company_adress ?></p>
       <?php } ?>
 
-      <h4 class="brand-primary">
+      <h4 class="color-brand-primary">
         <i class="fa fa-phone" aria-hidden="true"></i>
         <?php _e("Teléfono",'mybooking'); ?>
       </h4>
@@ -62,7 +62,7 @@
       <?php } ?>
 
 
-      <h4 class="brand-primary">
+      <h4 class="color-brand-primary">
         <i class="fa fa-envelope" aria-hidden="true"></i>
         <?php _e("Correo electrónico",'mybooking'); ?>
       </h4>

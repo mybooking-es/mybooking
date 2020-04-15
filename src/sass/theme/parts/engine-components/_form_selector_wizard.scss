@@ -1,0 +1,172 @@
+// WIZARD FORM
+
+.wizard-selector {
+  margin-top: 1rem;
+}
+
+.wizard-selector_field input {
+  border: 1px solid #777;
+  margin-bottom: 10px;
+}
+
+.wizard-selector_btn {
+  width: 100%;
+  padding: 0.7rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 13px;
+  background-color: #8ac53f;
+}
+
+.wizard-selector_btn:hover {
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+@media (max-width: 598.75px) {
+  .wizard-selector_btn {
+    background-color: transparent;
+    border: 1px solid #333;
+  }
+}
+
+// WIZARD CONTAINERS
+
+.wizard-container  {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.wizard-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  margin-right: 10px;
+}
+
+.wizard-step_title {
+  margin-bottom: 1rem;
+  font-size: 28px;
+  font-weight: 700;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  cursor: pointer;
+}
+
+.wizard-step_container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 6em !important;
+}
+
+#wizard_container #date_from {
+  width: 100%;
+  height: 100%;
+}
+
+// WIZARD PLACE
+
+.wizard-multi-place {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.wizard-multi-place_selectors {
+  margin-bottom: 2rem;
+}
+
+.wizard-multi-place_btn {
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+  padding: 0.2rem 0.7rem;
+  margin: 3px 0;
+  font-size: 0.7em;
+}
+
+.wizard-multi-place_info {
+  padding: 0 1rem;
+}
+
+.wizard-place_title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.wizard-place_list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.wizard-place_item {
+  padding: 0.1rem 0;
+}
+
+.selector_place {
+  font-size: 14px;
+  font-weight: 500 !important;
+  cursor: pointer;
+}
+
+.selector_place:hover {
+  color: #fff !important;
+  background-color: #6fa130;
+  padding: 0.2rem 0.5rem;
+}
+
+// WIZARD SUMMARY
+
+.wizard-summary {
+  margin-bottom: 2rem;
+}
+
+.wizard-summary_pickup,
+.wizard-summary_return {
+  font-size: 1em;
+}
+
+.wizard-summary_delivery {
+  text-align: right;
+}
+
+.wizard-summary_collection {
+  text-align: left;
+}
+
+.wizard-summary_separator {
+  width: 20px;
+  height: 20px;
+}
+
+.wizard-time {
+  width: 80%;
+}
+
+.wizard-time_btn {
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+  padding: 0.3rem 0.9rem;
+  margin: 5px 0;
+  font-size: 1.4em;
+  width: 100%;
+}
+
+// WIZARD CALENDAR
+
+.wizard-date_calendar .ui-widget-content {
+  background: transparent !important;
+}

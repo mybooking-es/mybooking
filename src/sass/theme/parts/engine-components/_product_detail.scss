@@ -1,0 +1,60 @@
+// Product detail for summary
+.product-detail-container {
+  margin-top: var(--product-detail-margin-top-mobile);
+  padding: 30px;
+  background: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  h5 {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: var(--gray-600);
+    line-height: 1;
+  }
+}
+.product-detail-content {
+  display: flex;
+  flex-direction: column;
+}
+.product-detail-image {
+  img {
+    max-width: 400px;
+  }
+}
+.grupo {
+  font-weight: 800;
+  color: var(--gray-600);
+  margin-bottom: 0;
+  line-height: 1;
+}
+.detail-text {
+  font-weight: 200;
+  line-height: 1.2;
+}
+.product-name {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .summary-detail .product-detail-container {
+    margin-top: 0;
+  }
+}
+// Unlike summary, the complete page has a sticky bar and  needs the margin-top on tablets
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .product-detail-container {
+    margin-top: 0;
+  }
+}

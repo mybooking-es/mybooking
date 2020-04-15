@@ -44,7 +44,7 @@
     <div class="row">
       <div class="col-md-8">
         <div class="col bg-white shadow-bottom py-3 px-3 mt-5">
-          <h4 class="brand-primary my-3"><?php _e('Datos del cliente', 'mybooking') ?></h4>
+          <h4 class="color-brand-primary my-3"><?php _e('Datos del cliente', 'mybooking') ?></h4>
           <div class="table-responsive">
             <table class="table table-borderless">
                 <tbody>
@@ -71,7 +71,7 @@
       <!-- Sidebar -->
       <div class="col-md-4">
         <div class="col sidebar bg-white shadow-bottom py-3 px-3 my-5">
-          <h4 class="brand-primary my-3"><?php _e('Detalle de la reserva', 'mybooking') ?></h4>
+          <h4 class="color-brand-primary my-3"><?php _e('Detalle de la reserva', 'mybooking') ?></h4>
           <h5><?php _e('Total producto', 'mybooking') ?></h5>
           <p class="color-gray-600"><%=configuration.formatCurrency(booking.item_cost)%></p>
 
@@ -132,7 +132,7 @@
           <% } %>
 
           <hr>
-          <h5 class="brand-primary"><?php _e('Importe total', 'mybooking') ?></h5>
+          <h5 class="color-brand-primary"><?php _e('Importe total', 'mybooking') ?></h5>
           <p class="total-price"><%=configuration.formatCurrency(booking.total_cost)%></p>
 
           <hr>

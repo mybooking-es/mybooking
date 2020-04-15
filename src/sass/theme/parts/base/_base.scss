@@ -1,9 +1,84 @@
-/*
-base styles
-*/
+// ==========================================================================
+// Base Rules
+// ==========================================================================
+
+//Inter font family
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/Inter-ExtraLight.woff2?v=3.13") format("woff2"),
+    url("../fonts/Inter-ExtraLight.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2?v=3.13") format("woff2"),
+    url("../fonts/Inter-Light.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2?v=3.13") format("woff2"),
+    url("../fonts/Inter-Regular.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2?v=3.13") format("woff2"),
+    url("../fonts/Inter-Medium.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Inter-SemiBold.woff2?v=3.13") format("woff2"),
+    url("../fonts/Inter-SemiBold.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2?v=3.13") format("woff2"),
+    url("../fonts/Inter-Bold.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/Inter-ExtraBold.woff2?v=3.13") format("woff2"),
+    url("../fonts/Inter-ExtraBold.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/Inter-Black.woff2?v=3.13") format("woff2"),
+    url("../fonts/Inter-Black.woff?v=3.13") format("woff");
+}
 
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -13,12 +88,37 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  color: $black;
+  color: var(--body-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+a:link {
+  color: var(--color-link);
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-link-hover);
+}
+
+a:active {
+  color: var(--color-link-active);
 }
 
 .btn {
@@ -28,13 +128,4 @@ button,
 [type="button"] {
   -webkit-appearance: none;
   border: none;
-}
-
-a {
-  color: $brand-primary;
-  transition: ease-in-out 0.25s;
-  &:hover {
-    color: darken($brand-primary, 10%);
-    text-decoration: none;
-  }
 }

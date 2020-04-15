@@ -1,0 +1,133 @@
+//==============================================
+// Layout/Contact
+//==============================================
+
+.bg-contact {
+  background-image: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: var(--gray-50);
+  background-blend-mode: multiply;
+  padding: 30px;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: calc(100% -60px);
+  color: $white;
+}
+
+.contact-content hr {
+  width: 50px;
+  margin: auto 0 30px 0;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.contact-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+  }
+}
+
+.contact-left-info {
+  width: 100%;
+  background-color: var(--gray-800);
+  padding: 20px 10% 20px 20px;
+}
+
+.contact-left-map,
+.contact-right {
+  width: 100%;
+}
+.contact-right {
+  margin-top: 30px;
+}
+
+.contact-form {
+  padding: 20px;
+  background-color: var(--gray-800);
+}
+
+.contact-form input,
+.contact-form form textarea {
+  width: 100%;
+  border: none;
+  margin-bottom: 2em;
+}
+
+ul.social-links,
+.social-links li {
+  padding: 0;
+}
+
+.social-links li {
+  float: left;
+  margin-left: 20px;
+  list-style: none;
+  font-size: 1.8em;
+}
+
+.social-links > li:first-child {
+  margin-left: 0;
+}
+
+.social-links a {
+  color: var(--brand-secondary);
+  transition: ease-in-out 0.5ms;
+  &:hover {
+    color: var(--brand-secondary-light);
+  }
+}
+
+//==============================================
+// media queries
+//==============================================
+
+@media (max-width: 575.98px) {
+  .contact-left-map {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-left {
+    flex-direction: row;
+  }
+  .contact-left-info {
+    width: 50%;
+  }
+  .contact-left-map {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-content {
+    margin: 0 10%;
+    height: fit-content;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-content {
+    padding: 50px 0;
+    flex-direction: row;
+    margin: 0 10%;
+    height: fit-content;
+  }
+  .contact-left {
+    width: 70%;
+  }
+  .contact-right {
+    width: 30%;
+    margin-top: 0;
+  }
+}
