@@ -13389,7 +13389,7 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --custom-logo-height: 40px;
   --home-header-bg: var(--brand-secondary);
   --home-header-color: var(--white);
-  --home-header-bg-height: 300px;
+  --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
   --footer-bg: var(--gray-800);
   --footer-color: var(--gray-50);
@@ -13897,9 +13897,7 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; } }
-
-@media (min-width: 992px) {
+            flex-direction: row; }
   .home-left {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -13909,38 +13907,22 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
         -ms-flex-align: end;
             align-items: flex-end; } }
 
-/**
- * HEADER BACKGROUNDS
- * NOTE: Due to the height of the selector form the background image & carousel
- * images must be 580px at least. Also, video container is restricted to 600px
- * height over 1200px screen resolution.
- */
 .home-header_background {
   width: 100%; }
 
-/**
- * Background image, video & carousel
- */
 .home-header_background-img,
 .home-header_background-video,
 .home-header_background_carrusel .carrusel-item img {
   width: 100%;
-  padding-top: 42px;
   -o-object-fit: cover;
      object-fit: cover;
-  height: var(--home-header-bg-height); }
+  height: var(--home-header-bg-height-sm); }
 
 @media (min-width: 992px) {
   .home-header_background-img,
   .home-header_background-video,
   .home-header_background_carrusel .carrusel-item img {
     height: var(--home-header-bg-height-lg); } }
-
-@media (min-width: 576px) {
-  .home-header_background-img,
-  .home-header_background-video,
-  .home-header_background_carrusel .carrusel-item img {
-    padding-top: 0; } }
 
 .home-header_background-video-container {
   margin-bottom: -6px; }
@@ -13984,7 +13966,7 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
 .home-alone:not(.form),
 .home-left:not(.form),
 .home-right:not(.form) {
-  color: #fff; }
+  color: var(--white); }
 
 @media (min-width: 992px) {
   .home-header_content_container {
