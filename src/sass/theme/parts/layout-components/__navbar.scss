@@ -2,167 +2,120 @@
 // Module/nav
 //==============================================
 
-/* Navbar */
-/* Occupies the top of the page */
-.home .navbar-container {
+// Navbar container
+.navbar-container {
   width: 100%;
   top: 0;
   z-index: 30;
 }
 
-.bg-nav {
-  width: 100%;
-  margin-top: 0;
-  background-color: var(--navbar-bg);
-}
-
-/* Nav bar in front of the image and transparent */
+// Controls behaviour when is set to overlap on home
 .home .nav-container-absolute {
   position: absolute;
 }
 
-@media (min-width: 992px) {
-  .home .nav-container-absolute .bg-nav {
+.home .nav-container-absolute {
+  position: absolute;
+}
+
+@media ( min-width: 992px ) {
+  .home .nav-container-absolute .navbar {
     background: none;
   }
 }
 
-.navbar-brand {
-  margin: 0;
-  float: left;
-}
-
-.custom-logo-link img {
-  width: var(--custom-logo-width);
-  height: var(--custom-logo-height);
-  overflow: hidden;
-}
-
-.navbar-dark .navbar-toggler {
-  border: none;
-  padding: 0;
-}
-
-.navbar-toggler-icon {
-  color: var(--toggler-icon-color);
-}
-
+// Navbar apperance
 .navbar {
-  z-index: 10;
-  padding: 0.5rem 0;
+  background: var(--navbar-bg);
+  box-shadow: var(--navbar-box-shadow);
 }
 
-.navbar-collapse {
-  .navbar-nav .nav-link {
-    color: var(--white);
+@media ( min-width: 992px ) {
+  .navbar {
+    box-shadow: none;
   }
 }
 
-.navbar-nav .nav-link {
-  color: var(--white);
+.custom-logo-link img {
+  max-height: var(--custom-logo-height);
+  width: auto;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+// All menu items
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--navbar-link-color);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
 }
 
-.navbar .dropdown-item {
-  color: var(--gray-800);
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: var(--white);
-}
-
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
-  opacity: 0.5;
+  opacity: var(--navbar-link-hover);
 }
 
-.navbar-dark .navbar-nav .active .nav-link {
-  color: var(--gray-800);
+// Active menu items inherits :hover & :focus
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: var(--navbar-link-active)!important;
+  border-bottom: 2px solid var(--navbar-link-active);
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0.5rem 1rem;
-  }
-
-  .navbar-brand {
-    margin: 0 1rem;
-  }
-
-  .navbar-nav {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 1.3em;
-  }
+// Active menu on small devices
+.navbar-dark .navbar-collapse.show .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-collapse.show .navbar-nav .nav-link.active
+.navbar-dark .navbar-collapse.show .navbar-nav .nav-link.show,
+.navbar-dark .navbar-collapse.show .navbar-nav .show > .nav-link {
+  color: var(--navbar-link-active)!important; // Mybe you want other color
+  border-bottom: none;
 }
 
-@media (min-width: 768px) {
-  .navbar > .container,
-  .navbar > .container-fluid {
-    justify-content: center;
-  }
+// Dropdown navigation full height
+.navbar-collapse {
+  transition: height 0.01s; // Resets Bootstrap's animation
 }
 
-// Third level
-ul.dropdown-menu li > ul.dropdown-menu {
+.navbar-collapse.show {
+  margin: 1rem 0;
+  height: calc(100vh - 120px); // Makes .navbar-extras don't disappear!
+  display: table;
+}
+
+// Dropdown elements centering
+.navbar-collapse.show .navbar-nav {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.navbar-collapse.show .nav-item {
+  text-align: center;
+}
+
+.navbar-collapse.show + .navbar-extras {
   width: 100%;
-  top: 25px;
-  margin: 0;
-  color: var(--gray-900);
-  background-color: var(--white);
-  border: 0;
+  justify-content: center!important;
+  margin-bottom: 1rem;
 }
 
-ul.dropdown-menu li:hover > ul.dropdown-menu,
-ul.dropdown-menu li:focus > ul.dropdown-menu,
-ul.dropdown-menu li > ul.dropdown-menu:hover,
-ul.dropdown-menu li > ul.dropdown-menu:focus {
-  display: block;
+// Dropdown active menu item
+.navbar-dark .navbar-collapse .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-collapse .navbar-nav .nav-link.active
+.navbar-dark .navbar-collapse .navbar-nav .nav-link.show,
+.navbar-dark .navbar-collapse .navbar-nav .show > .nav-link {
+  color: var(--navbar-link-collapse);
 }
 
-@media (max-width: 992px) {
-  .home .bg-nav .navbar-brand img {
-    display: block;
-  }
-
-  .navbar-container {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 30;
-  }
-
-  .home .nav-container-absolute {
-    position: fixed;
-  }
-
-  .bg-nav {
-    box-shadow: var(--navbar-box-shadow);
-  }
-
-  .navbar-collapse {
-    display: table;
-    width: 100%;
-    height: 100vh;
-  }
-
-  .navbar-nav {
-    display: table-cell;
-    padding-bottom: 150px;
-    vertical-align: middle;
-    text-align: center;
-  }
-}
-
-// Navpanels
+// Navbar panels & icons
 .navpanel_opener {
   margin: 0 3px;
-  height: 28px;
+  height: 20px;
 }
 
 .navpanel-dialog .modal-header {
