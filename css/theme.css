@@ -13382,10 +13382,10 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --topbar-link-color-hover: var(--gray-50);
   --navbar-bg: var(--brand-primary);
   --navbar-box-shadow: none;
-  --navbar-link-color: #FFF;
-  --navbar-link-hover: .5;
+  --navbar-link-color: #fff;
+  --navbar-link-hover: 0.5;
   --navbar-link-active: #333;
-  --navbar-link-collapse: #FFF;
+  --navbar-link-collapse: #fff;
   --toggler-icon-color: var(--white);
   --custom-logo-height: 30px;
   --home-header-bg: var(--brand-secondary);
@@ -13398,7 +13398,7 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --footer-color-link: var(--brand-primary);
   --footer-color-link-hover: var(--brand-primary-light);
   --footer-logo-width: auto;
-  --footer-logo-height: 30px;
+  --footer-logo-height: 20px;
   --credits-bg: var(--gray-900);
   --credits-color: var(--gray-100);
   --credits-color-link: var(--color-link);
@@ -13417,21 +13417,13 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --step-done-color: var(--brand-secondary);
   --step-active-text-color: var(--step-active-color);
   --step-title-color: var(--step-done-color);
-  --sticky-top-mobile-top-position: calc(
-    var(--custom-logo-height) + 95px - 40px
-  );
   --summary-sticky-bg: var(--gray-900);
-  --card-static-margin-top-mobile: calc(
-    var(--custom-logo-height) + 175px - 40px
-  );
-  --extras-margin-top-mobile: calc(
-    var(--custom-logo-height) + 165px - 40px
-  );
-  --product-detail-margin-top-mobile: calc(
-    var(--custom-logo-height) + 145px - 40px
-  );
+  --sticky-top-mobile-top-position: calc(var(--custom-logo-height) + 55px);
+  --card-static-margin-top-mobile: calc(var(--custom-logo-height) + 135px);
+  --extras-margin-top-mobile: calc(var(--custom-logo-height) + 125px);
+  --product-detail-margin-top-mobile: calc(var(--custom-logo-height) + 105px);
   --summary-reservation-title-margin-top-mobile: calc(
-    var(--custom-logo-height) + 95px - 40px
+    var(--custom-logo-height) + 55px
   );
   --nav-panel-color: ;
   --nav-panel-bg: ;
