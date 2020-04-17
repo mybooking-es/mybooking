@@ -27,7 +27,7 @@
 .testimonial-item_content:before {
   content: "\f10d";
   font-family: FontAwesome;
-  font-size: 1.3rem;
+  font-size: 30px;
   position: absolute;
   top: 0;
   left: 2px;
@@ -42,6 +42,7 @@
   .testimonial-item_content:before {
     position: relative;
     margin: 0 auto;
+    margin-left: -13.93px;
   }
 }
 
