@@ -8,6 +8,7 @@
   width: 100%;
   top: 0;
   z-index: 30;
+  align-items: center;
 }
 
 .bg-nav {
@@ -43,8 +44,16 @@
   padding: 0;
 }
 
+button.navbar-toggler:focus {
+  outline: none;
+}
 .navbar-toggler-icon {
-  color: var(--toggler-icon-color);
+  background-image: none !important;
+  i {
+    color: var(--toggler-icon-color);
+    font-size: var(--toggler-icon-font-size);
+    margin-top: var(--toggler-icon-mt);
+  }
 }
 
 .navbar {
@@ -53,9 +62,16 @@
 }
 
 .navbar-collapse {
+  transition: height 0.01s; // Resets Bootstrap's animation
   .navbar-nav .nav-link {
     color: var(--white);
   }
+}
+
+.navbar-collapse.show {
+  margin: 1rem 0;
+  height: calc(100vh - 120px); // Makes .navbar-extras don't disappear!
+  display: table;
 }
 
 .navbar-nav .nav-link {

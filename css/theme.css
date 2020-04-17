@@ -13386,13 +13386,17 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --navbar-link-hover: 0.5;
   --navbar-link-active: var(--gray-900);
   --navbar-link-collapse: var(--white);
+  --custom-logo-height: 40px;
+  --toggler-icon-font-size: 1.3rem;
   --toggler-icon-color: var(--white);
-  --custom-logo-height: 30px;
+  --toggler-icon-mt: 6px;
   --home-header-bg: var(--brand-secondary);
   --home-header-color: var(--white);
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
-  --home-header-top: 58px;
+  --home-header-top: calc(
+    16px + 38.19px + var(--custom-logo-height)
+  );
   --footer-bg: var(--gray-800);
   --footer-color: var(--gray-50);
   --footer-color-link: var(--brand-primary);
@@ -13973,6 +13977,12 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   .home-header_background_carrusel .carrusel-item img {
     height: var(--home-header-bg-height-lg); } }
 
+@media (max-width: 991.98px) {
+  .home-header_background-img,
+  .home-header_background-video,
+  .home-header_background_carrusel .carrusel-item img {
+    padding-top: var(--home-header-top); } }
+
 .home-header_background-video-container {
   margin-bottom: -6px; }
 
@@ -14364,7 +14374,10 @@ img.wp-post-image {
 .home .navbar-container {
   width: 100%;
   top: 0;
-  z-index: 30; }
+  z-index: 30;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .bg-nav {
   width: 100%;
@@ -14392,15 +14405,30 @@ img.wp-post-image {
   border: none;
   padding: 0; }
 
+button.navbar-toggler:focus {
+  outline: none; }
+
 .navbar-toggler-icon {
-  color: var(--toggler-icon-color); }
+  background-image: none !important; }
+  .navbar-toggler-icon i {
+    color: var(--toggler-icon-color);
+    font-size: var(--toggler-icon-font-size);
+    margin-top: var(--toggler-icon-mt); }
 
 .navbar {
   z-index: 10;
   padding: 0.5rem 0; }
 
-.navbar-collapse .navbar-nav .nav-link {
-  color: var(--white); }
+.navbar-collapse {
+  -webkit-transition: height 0.01s;
+  transition: height 0.01s; }
+  .navbar-collapse .navbar-nav .nav-link {
+    color: var(--white); }
+
+.navbar-collapse.show {
+  margin: 1rem 0;
+  height: calc(100vh - 120px);
+  display: table; }
 
 .navbar-nav .nav-link {
   color: var(--white);

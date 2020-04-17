@@ -51,14 +51,19 @@
   --navbar-link-hover: 0.5;
   --navbar-link-active: var(--gray-900);
   --navbar-link-collapse: var(--white);
+  --custom-logo-height: 40px;
+  --toggler-icon-font-size: 1.3rem;
   --toggler-icon-color: var(--white);
-  --custom-logo-height: 30px;
+  --toggler-icon-mt: 6px;
+
   // Home header
   --home-header-bg: var(--brand-secondary);
   --home-header-color: var(--white);
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
-  --home-header-top: 58px; // Active when .nav-container-absolute is active
+  --home-header-top: calc(
+    16px + 38.19px + var(--custom-logo-height)
+  ); // Active when .nav-container-absolute is active
   // Footer
   --footer-bg: var(--gray-800);
   --footer-color: var(--gray-50);
