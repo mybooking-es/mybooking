@@ -11,6 +11,7 @@
   flex-direction: column;
   background-color: var(--home-header-bg);
   z-index: 2;
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -33,7 +34,7 @@
   padding-top: var(--home-header-top);
 }
 
-@media ( min-width: 992px ) {
+@media (min-width: 992px) {
   .nav-container-absolute ~ .home-header {
     padding-top: 0;
   }

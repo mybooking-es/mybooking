@@ -13499,7 +13499,10 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0; }
 
 *,
 *:before,
@@ -13508,11 +13511,19 @@ html {
           box-sizing: inherit; }
 
 body {
-  font-family: var(--font-body);
-  font-size: 16px;
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  font-family: var(--font-body);
+  font-size: 16px;
   color: var(--body-color); }
+
+@media (max-width: 575.98px) {
+  body.home {
+    overflow-y: scroll; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading); }
@@ -13920,7 +13931,8 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: var(--home-header-bg);
-  z-index: 2; }
+  z-index: 2;
+  overflow-x: hidden; }
 
 @media (min-width: 768px) {
   .home-header {
@@ -14829,15 +14841,34 @@ body .eupopup-style-compact .eupopup-button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  position: relative; }
 
 .testimonial-item_content {
   max-width: 100%;
   padding-top: 25px;
-  margin-left: -20px;
+  margin-left: 25px;
   text-align: center;
   font-size: 1.2em;
   font-weight: 300; }
+
+.testimonial-item_content:before {
+  content: "\f10d";
+  font-family: FontAwesome;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  color: var(--brand-primary);
+  font-weight: 900;
+  background-color: transparent; }
+
+@media (max-width: 575.98px) {
+  .testimonial-item_content {
+    margin-left: 0; }
+  .testimonial-item_content:before {
+    position: relative;
+    margin: 0 auto; } }
 
 .testimonial-item_quote {
   max-height: 20px;
@@ -14848,7 +14879,7 @@ body .eupopup-style-compact .eupopup-button {
 
 .testimonial-item_image {
   max-height: 80px;
-  margin-bottom: .5rem; }
+  margin-bottom: 0.5rem; }
 
 @media (min-width: 578px) {
   .testimonial-item_content {
