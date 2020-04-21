@@ -61,9 +61,9 @@
     <% if (product_available) { %>    
 	    <h4 class="brand-primary my-3"><?php _e('Reserva', 'mybooking') ?></h4>
 
-	    <% if (shopping_cart.days) { %>
+	    <% if (shopping_cart.days > 0) { %>
 	    <p class="color-gray-600"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=shopping_cart.days%> <?php _e('día/s','mybooking') ?></span></p>
-	    <% } else if (shopping_cart.hours) { %>
+	    <% } else if (shopping_cart.hours > 0) { %>
 			<p class="color-gray-600"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=shopping_cart.hours%> <?php _e('hora/s','mybooking') ?></span></p>
 	    <% } %>
 

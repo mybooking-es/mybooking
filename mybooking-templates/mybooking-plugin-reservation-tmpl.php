@@ -19,8 +19,11 @@
       <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
         <% var booking_line = booking.booking_lines[idx]; %>
         <h2 class="product-name"><%=booking_line.item_description_customer_translation%></h2>
-        <p class="detail-text">
-        <?php _e('Duración del alquiler','mybooking') ?>: <%=booking.days%> <?php _e('día/s','mybooking') ?></p>
+        <% if (booking.days > 0) { %>
+        <p class="detail-text"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=booking.days%> <?php _e('día/s','mybooking') ?></span></p>
+        <% } else if (booking.hours > 0) { %>
+        <p class="detail-text"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=booking.hours%> <?php _e('hora/s','mybooking') ?></span></p>
+        <% } %>
       <% } %>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>

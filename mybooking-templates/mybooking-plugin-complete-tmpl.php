@@ -142,7 +142,11 @@
           <div class="complete-summary-item">
               <!-- primer bloque Recogida -->
               <p class="color-gray-400"><%=shopping_cart.pickup_place_customer_translation%></p>
+              <% if (shopping_cart.days > 0) { %>              
               <p class="color-white"><%=shopping_cart.days%> <?php _e('día/s', 'mybooking') ?></p>
+              <% } else if (shopping_cart.hours > 0) { %>
+              <p class="color-white"><%=shopping_cart.hours%> <?php _e('hora/s', 'mybooking') ?></p> 
+              <% } %>
           </div>
           <!-- Button trigger modal -->
           <div class="modify-button">
@@ -172,9 +176,12 @@
   <div class="product-detail-container d-none d-md-flex">
     <div class="product-detail-content">
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-      <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
-      <p class="detail-text">
-        <?php _e('Duración del alquiler','mybooking') ?>: <%=shopping_cart.days%> <?php _e('día/s','mybooking') ?></p>
+        <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
+        <% if (shopping_cart.days > 0) { %>
+        <p class="detail-text"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=shopping_cart.days%> <?php _e('día/s','mybooking') ?></span></p>
+        <% } else if (shopping_cart.hours > 0) { %>
+        <p class="detail-text"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=shopping_cart.hours%> <?php _e('hora/s','mybooking') ?></span></p>
+        <% } %>
       <% } %>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>
@@ -212,8 +219,13 @@
             </div>
             <div class="product-view_text">
               <p class="fw-700"><%=shopping_cart.items[idx].item_description_customer_translation%></p>
+              <% if (shopping_cart.days > 0) { %>
               <p class="color-gray-500"><?php _e('Duración del alquiler', 'mybooking') ?>: <%=shopping_cart.days%>
                 <?php _e('día/s', 'mybooking') ?></p>
+              <% } else if (shopping_cart.hours > 0) { %>
+              <p class="color-gray-500"><?php _e('Duración del alquiler', 'mybooking') ?>: <%=shopping_cart.hours%>
+                <?php _e('horas/s', 'mybooking') ?></p>  
+              <% } %>  
             </div>
           </div>
           <div class="product-summary-wrapper">
