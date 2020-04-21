@@ -1778,6 +1778,9 @@ $(document).bind("user_cookie_consent_changed", function(event, object) {
 
 }(jQuery));
 
+if (typeof $ === "undefined") {
+  var $ = window.jQuery;
+}
 // Add your custom JS here.
 // OWL CAROUSEL
 $(document).ready(function() {

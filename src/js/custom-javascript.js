@@ -1,3 +1,6 @@
+if (typeof $ === "undefined") {
+  var $ = window.jQuery;
+}
 // Add your custom JS here.
 // OWL CAROUSEL
 $(document).ready(function() {
