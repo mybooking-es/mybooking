@@ -24,7 +24,7 @@
           <div class="extra-wrapper">
             <div class="extra-image">
               <% if (coverage.photo_path != null) { %>
-                <img src="<%=coverage.photo_path%>" class="card-img" />
+                <img src="<%=coverage.photo_path%>" class="card-img js-extra-info-btn" data-extra="<%=coverage.code%>"/>
               <% } %>
             </div>
             <div class="extra-content">
@@ -67,7 +67,7 @@
           <div class="extra-wrapper">
             <div class="extra-image">
               <% if (extra.photo_path != null) { %>
-                <img src="<%=extra.photo_path%>" class="card-img" />
+                <img src="<%=extra.photo_path%>" class="card-img js-extra-info-btn" data-extra="<%=coverage.code%>" />
               <% } %>
             </div>
             <div class="extra-content">
