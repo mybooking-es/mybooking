@@ -20,6 +20,11 @@
 ?>
 <?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
 
+<!-- Modify reservation -->
+<?php if ( $args['selector_in_process'] != 'wizard' ) { ?>
+<?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
+<?php } ?>
+
 <div class="reservation-step custom-form">
 
   <!-- Reservation Summary sticky -->
@@ -90,10 +95,6 @@
       </div>
     </div>
   </div>
-  <!-- Modify reservation -->
-  <?php if ( $args['selector_in_process'] != 'wizard' ) { ?>
-  <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
-  <?php } ?>
 </div>
 
 <!-- Show extra detail modal -->
