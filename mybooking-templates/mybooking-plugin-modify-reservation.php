@@ -11,7 +11,7 @@
 ?>
 <!-- FLEX-FORM-MODIFY MODAL -->
 <!-- Modal -->
-<div class="modal fade" id="choose_productModal" tabindex="-1" role="dialog" aria-labelledby="choose_productModal"
+<div class="modal fade modal-mybooking" id="modify_reservation_modal" tabindex="-1" role="dialog" aria-labelledby="modifyReservationModal"
   aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">

@@ -150,7 +150,7 @@
           </div>
           <!-- Button trigger modal -->
           <div class="modify-button">
-            <button id="modify_reservation_button" data-toggle="modal" data-target="#choose_productModal"><i class="fa fa-edit"></i></button>
+            <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"><i class="fa fa-edit"></i></button>
           </div>
         </div>
         <div class="complete-summary-right">

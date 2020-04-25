@@ -99,6 +99,8 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   color: var(--body-color);
+  /* Avoid modal issues on Desktop when showing boostrap modals*/
+  padding-right: 0px !important;
 }
 // This fixes the horizontal displacement on mobile
 @media (max-width: 575.98px) {

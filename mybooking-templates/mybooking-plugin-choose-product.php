@@ -31,7 +31,7 @@
 
 </div>
 
-<div class="modal" tabindex="-1" role="dialog" id="modalProductDetail">
+<div class="modal modal-mybooking" tabindex="-1" role="dialog" id="modalProductDetail">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
