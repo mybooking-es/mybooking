@@ -67,7 +67,7 @@
           <div class="extra-wrapper">
             <div class="extra-image">
               <% if (extra.photo_path != null) { %>
-                <img src="<%=extra.photo_path%>" class="card-img js-extra-info-btn" data-extra="<%=coverage.code%>" />
+                <img src="<%=extra.photo_path%>" class="card-img js-extra-info-btn" data-extra="<%=extra.code%>" />
               <% } %>
             </div>
             <div class="extra-content">
