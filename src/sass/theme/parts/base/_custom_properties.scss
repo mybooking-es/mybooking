@@ -48,8 +48,10 @@
   --navbar-bg: var(--brand-primary);
   --navbar-box-shadow: none;
   --navbar-link-color: var(--white);
-  --navbar-link-hover: 0.5;
+  --navbar-link-hover-opacity: 0.5;
   --navbar-link-active: var(--gray-900);
+  --navbar-dropdown-item-color: var(--gray-900);
+  --navbar-dropdown-item-active-bg: var(--brand-secondary);
   --navbar-link-collapse: var(--white);
   --custom-logo-height: 40px;
   --toggler-icon-font-size: 1.3rem;
