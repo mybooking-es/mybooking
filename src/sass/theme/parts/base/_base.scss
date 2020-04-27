@@ -101,12 +101,12 @@ body {
   color: var(--body-color);
 }
 // This fixes the horizontal displacement on mobile
-@media (max-width: 575.98px) {
-  body.home {
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-}
+// @media (max-width: 575.98px) {
+//   body.home {
+//     overflow-x: hidden;
+//     overflow-y: scroll;
+//   }
+// }
 
 h1,
 h2,
