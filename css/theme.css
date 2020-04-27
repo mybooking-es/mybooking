@@ -13530,8 +13530,10 @@ body {
 body.modal-open {
   height: 100vh;
   overflow-y: hidden; }
+
+@media (max-width: 991.98px) {
   body.modal-open .navbar-container {
-    padding-right: 15px; }
+    padding-right: 15px; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading); }
@@ -14438,7 +14440,7 @@ button.navbar-toggler:focus {
   height: calc(100vh - 120px);
   display: table; }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .navbar {
     padding: 0.5rem 1rem; }
   .navbar-brand {
@@ -14470,7 +14472,7 @@ ul.dropdown-menu li > ul.dropdown-menu:hover,
 ul.dropdown-menu li > ul.dropdown-menu:focus {
   display: block; }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   .home .bg-nav .navbar-brand img {
     display: block; }
   .navbar-container {

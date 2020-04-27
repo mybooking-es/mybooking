@@ -104,7 +104,9 @@ body {
 body.modal-open {
   height: 100vh;
   overflow-y: hidden;
-  .navbar-container {
+}
+@media (max-width: 991.98px) {
+  body.modal-open .navbar-container {
     padding-right: 15px;
   }
 }
