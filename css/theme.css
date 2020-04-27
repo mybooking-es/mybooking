@@ -13522,7 +13522,9 @@ body {
   position: relative;
   font-family: var(--font-body);
   font-size: 16px;
-  color: var(--body-color); }
+  color: var(--body-color);
+  /* Avoid modal issues on Desktop when showing boostrap modals*/
+  padding-right: 0px !important; }
 
 @media (max-width: 575.98px) {
   body.home {
@@ -14411,7 +14413,7 @@ button.navbar-toggler:focus {
 
 .navbar {
   z-index: 10;
-  padding: 0.5rem 0; }
+  /*padding: 0.5rem 0;*/ }
 
 .navbar-collapse {
   -webkit-transition: height 0.01s;

@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.6.13] 2020-04-25
+
+### Fixed
+
+- Body 15px padding right when showing modal
+
 ## [0.6.10] 2020-04-13
 
 ### Fixed

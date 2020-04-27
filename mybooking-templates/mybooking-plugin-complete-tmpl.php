@@ -24,7 +24,7 @@
           <div class="extra-wrapper">
             <div class="extra-image">
               <% if (coverage.photo_path != null) { %>
-                <img src="<%=coverage.photo_path%>" class="card-img" />
+                <img src="<%=coverage.photo_path%>" class="card-img js-extra-info-btn" data-extra="<%=coverage.code%>"/>
               <% } %>
             </div>
             <div class="extra-content">
@@ -67,7 +67,7 @@
           <div class="extra-wrapper">
             <div class="extra-image">
               <% if (extra.photo_path != null) { %>
-                <img src="<%=extra.photo_path%>" class="card-img" />
+                <img src="<%=extra.photo_path%>" class="card-img js-extra-info-btn" data-extra="<%=extra.code%>" />
               <% } %>
             </div>
             <div class="extra-content">
@@ -142,11 +142,15 @@
           <div class="complete-summary-item">
               <!-- primer bloque Recogida -->
               <p class="color-gray-400"><%=shopping_cart.pickup_place_customer_translation%></p>
+              <% if (shopping_cart.days > 0) { %>              
               <p class="color-white"><%=shopping_cart.days%> <?php _e('día/s', 'mybooking') ?></p>
+              <% } else if (shopping_cart.hours > 0) { %>
+              <p class="color-white"><%=shopping_cart.hours%> <?php _e('hora/s', 'mybooking') ?></p> 
+              <% } %>
           </div>
           <!-- Button trigger modal -->
           <div class="modify-button">
-            <button id="modify_reservation_button" data-toggle="modal" data-target="#choose_productModal"><i class="fa fa-edit"></i></button>
+            <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"><i class="fa fa-edit"></i></button>
           </div>
         </div>
         <div class="complete-summary-right">
@@ -172,9 +176,12 @@
   <div class="product-detail-container d-none d-md-flex">
     <div class="product-detail-content">
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-      <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
-      <p class="detail-text">
-        <?php _e('Duración del alquiler','mybooking') ?>: <%=shopping_cart.days%> <?php _e('día/s','mybooking') ?></p>
+        <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
+        <% if (shopping_cart.days > 0) { %>
+        <p class="detail-text"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=shopping_cart.days%> <?php _e('día/s','mybooking') ?></span></p>
+        <% } else if (shopping_cart.hours > 0) { %>
+        <p class="detail-text"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=shopping_cart.hours%> <?php _e('hora/s','mybooking') ?></span></p>
+        <% } %>
       <% } %>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>
@@ -212,8 +219,13 @@
             </div>
             <div class="product-view_text">
               <p class="fw-700"><%=shopping_cart.items[idx].item_description_customer_translation%></p>
+              <% if (shopping_cart.days > 0) { %>
               <p class="color-gray-500"><?php _e('Duración del alquiler', 'mybooking') ?>: <%=shopping_cart.days%>
                 <?php _e('día/s', 'mybooking') ?></p>
+              <% } else if (shopping_cart.hours > 0) { %>
+              <p class="color-gray-500"><?php _e('Duración del alquiler', 'mybooking') ?>: <%=shopping_cart.hours%>
+                <?php _e('horas/s', 'mybooking') ?></p>  
+              <% } %>  
             </div>
           </div>
           <div class="product-summary-wrapper">

@@ -21,14 +21,14 @@
   <div class="wizard-summary container">
     <div class="row justify-content-between">
       <div class="wizard-summary_item col wizard-summary_delivery">
-        <div class="wizard-summary_pickup"><%= summary.pickupPlace %></div>
+        <div class="wizard-summary_pickup"><%= summary.pickupPlaceDescription || summary.pickupPlace %></div>
         <% if (summary.dateFrom != null) {%>
           <div class="wizard-summary_datefrom"><%= summary.dateFrom %> <% if (summary.timeFrom != null) {%><%= summary.timeFrom %><% } %> </div>
         <% } %>
       </div>
       <img class="wizard-summary_separator" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icono_flecha_der.png" alt=">">
       <div class="wizard-summary_item col wizard-summary_collection">
-        <div class="wizard-summary_return"><%= summary.returnPlace %></div>
+        <div class="wizard-summary_return"><%= summary.returnPlaceDescription || summary.returnPlace %></div>
         <% if (summary.dateTo != null) {%>
           <div class="wizard-summary_dateto"><%= summary.dateTo %> <% if (summary.timeTo != null) {%><%= summary.timeTo %><% } %></div>
         <% } %>
@@ -47,7 +47,7 @@
       <div class="col-md-12">
         <ul class="wizard-place_list">
           <% for (var idx=0; idx<places.length; idx++) { %>
-          <li><a class="wizard-place_item selector_place text-primary" role="button" data-place-id="<%=places[idx].name%>"><%=places[idx].name%></a></li>
+          <li><a class="wizard-place_item selector_place text-primary" role="button" data-place-id="<%=places[idx].id%>" data-place-name="<%=places[idx].name%>"><%=places[idx].name%></a></li>
           <% } %>
         </ul>
       </div>
@@ -78,7 +78,7 @@
           <h3 class="wizard-place_title destination-group" data-destination-id="<%=places.destinations[idx].id%>"><a name="<%=places.destinations[idx].id%>"><%=places.destinations[idx].name%></a></h3>
           <ul class="wizard-place_list destination-group" data-destination-id="<%=places.destinations[idx].id%>">
           <% for (var idy=0; idy<places.destinations[idx].places.length; idy++) { %>
-            <li class="wizard-place_item"><a class="selector_place" role="button" data-place-id="<%=places.destinations[idx].places[idy].name%>"><%=places.destinations[idx].places[idy].name%></a></li>
+            <li class="wizard-place_item"><a class="selector_place" role="button" data-place-id="<%=places.destinations[idx].places[idy].id%>" data-place-name="<%=places.destinations[idx].places[idy].name%>"><%=places.destinations[idx].places[idy].name%></a></li>
           <% } %>
           </ul>
         <% } %>
