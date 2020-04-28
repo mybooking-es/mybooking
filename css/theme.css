@@ -13715,7 +13715,7 @@ textarea,
   border: 1px solid var(--gray-400);
   border-radius: 3px; }
 
-.custom-form label {
+label {
   position: relative; }
 
 .custom-icon, .custom-icon-select {
