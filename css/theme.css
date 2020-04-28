@@ -13383,6 +13383,7 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --navbar-bg: var(--brand-primary);
   --navbar-box-shadow: none;
   --navbar-link-color: var(--white);
+  --navbar-link-color-hover: var(--white);
   --navbar-link-hover-opacity: 0.5;
   --navbar-link-active: var(--gray-900);
   --navbar-dropdown-item-color: var(--gray-900);
@@ -13396,9 +13397,7 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --home-header-color: var(--white);
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
-  --home-header-top: calc(
-    16px + 38.19px + var(--custom-logo-height)
-  );
+  --home-header-top: calc(16px + 38.19px + var(--custom-logo-height));
   --footer-bg: var(--gray-800);
   --footer-color: var(--gray-50);
   --footer-color-link: var(--brand-primary);
@@ -13423,28 +13422,16 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --step-done-color: var(--brand-secondary);
   --step-active-text-color: var(--step-active-color);
   --step-title-color: var(--step-done-color);
-  --summary-sticky-bg: var(--gray-900);
+  --summary-sticky-bg: var(--gray-900); }
+
+:root {
   --sticky-top-mobile-top-position: calc(var(--custom-logo-height) + 55px);
   --card-static-margin-top-mobile: calc(var(--custom-logo-height) + 135px);
   --extras-margin-top-mobile: calc(var(--custom-logo-height) + 125px);
   --product-detail-margin-top-mobile: calc(var(--custom-logo-height) + 105px);
   --summary-reservation-title-margin-top-mobile: calc(
     var(--custom-logo-height) + 55px
-  );
-  --nav-panel-color: ;
-  --nav-panel-bg: ;
-  --modal-bg: ;
-  --modal-color: ;
-  --modal-title-color: ;
-  --modal-title-s: ;
-  --modal-title-w: ;
-  --wizform-input-border: ;
-  --wizform-color: ;
-  --wizform-btn-bg: ;
-  --wizform-btn-color: ;
-  --wizform-btn-border: ;
-  --wizform-btn-color-h: ;
-  --wizform-btn-border-h: ; }
+  ); }
 
 @font-face {
   font-family: "Inter";
@@ -13526,7 +13513,6 @@ body {
   font-size: 16px;
   color: var(--body-color); }
 
-/* Avoid modal issues on Desktop when showing boostrap modals*/
 body.modal-open {
   height: 100vh;
   overflow-y: hidden; }
@@ -13552,12 +13538,16 @@ a:active {
   color: var(--color-link-active); }
 
 .btn {
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 0; }
 
 button,
 [type="button"] {
   -webkit-appearance: none;
   border: none; }
+
+.card {
+  border-radius: 0; }
 
 .color-white {
   color: var(--white); }
@@ -13664,8 +13654,8 @@ select {
   border: 0;
   font-size: 0.8rem;
   height: 48px;
-  color: #495057;
-  background-color: #fff;
+  color: var(--gray-700);
+  background-color: var(--white);
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none; }
@@ -13679,7 +13669,7 @@ select {
   height: 48px; }
 
 .form-group select.form-control {
-  border: 1px solid #ced4da;
+  border: 1px solid var(--gray-400);
   border-radius: 3px;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -13689,15 +13679,13 @@ select {
   padding: 0 0.8rem;
   font-size: 0.8rem;
   line-height: 18px;
-  color: #495057;
+  color: var(--gray-700);
   height: 48px;
   margin-top: 8px; }
 
 .input-group-prepend > .input-group-text {
   border-radius: 0; }
 
-.card,
-.btn,
 .form-control {
   border-radius: 0; }
 
@@ -13712,7 +13700,7 @@ textarea,
   padding: 0 0.8rem;
   font-size: 0.8rem;
   line-height: 18px;
-  color: #495057;
+  color: var(--gray-700);
   height: 48px;
   border: none;
   border-radius: 0;
@@ -13724,16 +13712,16 @@ textarea,
 .custom-form .ui-autocomplete-input,
 .custom-form textarea,
 .custom-form .uneditable-input {
-  border: 1px solid #ced4da;
+  border: 1px solid var(--gray-400);
   border-radius: 3px; }
 
-label {
+.custom-form label {
   position: relative; }
 
 .custom-icon, .custom-icon-select {
   position: absolute;
   font-size: 18px;
-  color: #495057;
+  color: var(--gray-700);
   right: 8px;
   top: 48px; }
 
@@ -13741,10 +13729,10 @@ label {
   top: 16px; }
 
 .form-reservation-error {
-  color: #dc3545; }
+  color: var(--error); }
 
 input.form-reservation-error {
-  border-color: #dc3545 !important; }
+  color: var(--error) !important; }
 
 .custom-date-form {
   display: -webkit-box;
@@ -13773,23 +13761,16 @@ input.form-reservation-error {
     margin-top: 0; }
 
 .input-group > .form-control.extra-input {
-  border-top: 1px solid #6c757d;
-  border-bottom: 1px solid #6c757d; }
+  border-top: 1px solid var(--gray-500);
+  border-bottom: 1px solid var(--gray-500); }
 
-input[type="text"]:disabled, select:disabled {
-  background-color: #ddd; }
+input[type="text"]:disabled,
+select:disabled {
+  background-color: var(--gray-200); }
 
-/*
-
-  Para que se ha creado este estilo?
-  Tal vez para el sumario final?
-  Es demasiado general se debe acotar a su objetivo
-
-*/
-td {
-  border-top: 1px solid #ededed;
-  border-bottom: 1px solid #ededed;
-  padding: 0.5rem 0; }
+@media (max-width: 575.98px) {
+  .flex-form-group input.hasDatepicker {
+    max-width: 145px; } }
 
 /** Override JQUERY UI **/
 @font-face {
@@ -14369,29 +14350,27 @@ img.wp-post-image {
   .home .topbar {
     background-color: var(--home-topbar-bg); } }
 
-/* Navbar */
-/* Occupies the top of the page */
-.home .navbar-container {
+.navbar-container {
   width: 100%;
   top: 0;
   z-index: 30; }
 
-.bg-nav {
-  width: 100%;
-  margin-top: 0;
-  background-color: var(--navbar-bg); }
-
-/* Nav bar in front of the image and transparent */
 .home .nav-container-absolute {
   position: absolute; }
 
 @media (min-width: 992px) {
-  .home .nav-container-absolute .bg-nav {
+  .home .nav-container-absolute .navbar {
     background: none; } }
 
-.navbar-brand {
-  margin: 0;
-  float: left; }
+.navbar {
+  background: var(--navbar-bg);
+  -webkit-box-shadow: var(--navbar-box-shadow);
+          box-shadow: var(--navbar-box-shadow); }
+
+@media (min-width: 992px) {
+  .navbar {
+    -webkit-box-shadow: none;
+            box-shadow: none; } }
 
 .custom-logo-link img {
   width: var(--custom-logo-width);
@@ -14412,92 +14391,61 @@ button.navbar-toggler:focus {
     font-size: var(--toggler-icon-font-size);
     margin-top: var(--toggler-icon-mt); }
 
-.navbar {
-  z-index: 10; }
-  .navbar .dropdown-item {
-    color: var(--navbar-dropdown-item-color); }
-    .navbar .dropdown-item:active {
-      background-color: var(--navbar-dropdown-item-active-bg); }
-
-.navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link {
   color: var(--navbar-link-color);
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 600;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out; }
-  .navbar-nav .nav-link:hover {
-    opacity: var(--navbar-link-hover-opacity); }
+  font-weight: 600; }
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--navbar-link-color-hover);
+  opacity: var(--navbar-link-hover-opacity); }
+
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active .navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: var(--navbar-link-active) !important;
+  border-bottom: 2px solid var(--navbar-link-active); }
+
+.navbar-dark .navbar-collapse.show .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-collapse.show .navbar-nav .nav-link.active .navbar-dark .navbar-collapse.show .navbar-nav .nav-link.show,
+.navbar-dark .navbar-collapse.show .navbar-nav .show > .nav-link {
+  color: var(--navbar-link-active) !important;
+  border-bottom: none; }
 
 .navbar-collapse {
   -webkit-transition: height 0.01s;
   transition: height 0.01s; }
-  .navbar-collapse .navbar-nav .nav-link {
-    color: var(--navbar-link-color); }
 
 .navbar-collapse.show {
   margin: 1rem 0;
   height: calc(100vh - 120px);
   display: table; }
 
-@media (max-width: 767.98px) {
-  .navbar {
-    padding: 0.5rem 1rem; }
-  .navbar-brand {
-    margin: 0 1rem; }
-  .navbar-nav {
-    text-align: center;
-    margin-bottom: 50px; }
-  .navbar-nav .nav-link {
-    font-size: 1.3em; } }
+.navbar-collapse.show .navbar-nav {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle; }
 
-@media (min-width: 768px) {
-  .navbar > .container,
-  .navbar > .container-fluid {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }
+.navbar-collapse.show .nav-item {
+  text-align: center; }
 
-ul.dropdown-menu li > ul.dropdown-menu {
+.navbar-collapse.show + .navbar-extras {
   width: 100%;
-  top: 25px;
-  margin: 0;
-  color: var(--gray-900);
-  background-color: var(--white);
-  border: 0; }
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  margin-bottom: 1rem; }
 
-ul.dropdown-menu li:hover > ul.dropdown-menu,
-ul.dropdown-menu li:focus > ul.dropdown-menu,
-ul.dropdown-menu li > ul.dropdown-menu:hover,
-ul.dropdown-menu li > ul.dropdown-menu:focus {
-  display: block; }
-
-@media (max-width: 991.98px) {
-  .home .bg-nav .navbar-brand img {
-    display: block; }
-  .navbar-container {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 30; }
-  .home .nav-container-absolute {
-    position: fixed; }
-  .bg-nav {
-    -webkit-box-shadow: var(--navbar-box-shadow);
-            box-shadow: var(--navbar-box-shadow); }
-  .navbar-collapse {
-    display: table;
-    width: 100%;
-    height: 100vh; }
-  .navbar-nav {
-    display: table-cell;
-    padding-bottom: 150px;
-    vertical-align: middle;
-    text-align: center; } }
+.navbar-dark .navbar-collapse .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-collapse .navbar-nav .nav-link.active .navbar-dark .navbar-collapse .navbar-nav .nav-link.show,
+.navbar-dark .navbar-collapse .navbar-nav .show > .nav-link {
+  color: var(--navbar-link-collapse); }
 
 .navpanel_opener {
   margin: 0 3px;
-  height: 28px; }
+  height: 20px; }
 
 .navpanel-dialog .modal-header {
   border-bottom: none;
