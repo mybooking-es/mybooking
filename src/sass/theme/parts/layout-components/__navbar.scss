@@ -1,0 +1,135 @@
+//==============================================
+// Module/nav
+//==============================================
+
+// Navbar container
+.navbar-container {
+  width: 100%;
+  top: 0;
+  z-index: 30;
+}
+
+// Controls behaviour when is set to overlap on home
+.home .nav-container-absolute {
+  position: absolute;
+}
+
+@media ( min-width: 992px ) {
+  .home .nav-container-absolute .navbar {
+    background: none;
+  }
+}
+
+// Navbar apperance
+.navbar {
+  background: var(--navbar-bg);
+  box-shadow: var(--navbar-box-shadow);
+  padding: .5rem 0;
+}
+
+@media ( min-width: 992px ) {
+  .navbar {
+    box-shadow: none;
+  }
+}
+
+.navbar .col {
+  padding: 0;
+}
+
+.custom-logo-link img {
+  max-height: 30px;
+  width: auto;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: none!important;
+}
+
+.navbar-toggler-icon i {
+  color: var(--toggler-icon-color);
+  font-size: var(--toggler-icon-font-size);
+  margin-top: var(--toggler-icon-mt);
+}
+
+// All menu items
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--navbar-link-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  opacity: var(--navbar-link-hover);
+}
+
+// Active menu items inherits :hover & :focus
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: var(--navbar-link-active)!important;
+  border-bottom: 2px solid var(--navbar-link-active);
+}
+
+// Active menu on small devices
+.navbar-dark .navbar-collapse.show .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-collapse.show .navbar-nav .nav-link.active
+.navbar-dark .navbar-collapse.show .navbar-nav .nav-link.show,
+.navbar-dark .navbar-collapse.show .navbar-nav .show > .nav-link {
+  color: var(--navbar-link-active)!important; // Mybe you want other color
+  border-bottom: none;
+}
+
+// Dropdown navigation full height
+.navbar-collapse {
+  transition: height 0.01s; // Resets Bootstrap's animation
+}
+
+.navbar-collapse.show {
+  margin: 1rem 0;
+  height: calc(100vh - 120px); // Makes .navbar-extras don't disappear!
+  display: table;
+}
+
+// Dropdown elements centering
+.navbar-collapse.show .navbar-nav {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.navbar-collapse.show .nav-item {
+  text-align: center;
+}
+
+.navbar-collapse.show + .navbar-extras {
+  width: 100%;
+  justify-content: center!important;
+  margin-bottom: 1rem;
+}
+
+// Dropdown active menu item
+.navbar-dark .navbar-collapse .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-collapse .navbar-nav .nav-link.active
+.navbar-dark .navbar-collapse .navbar-nav .nav-link.show,
+.navbar-dark .navbar-collapse .navbar-nav .show > .nav-link {
+  color: var(--navbar-link-collapse);
+}
+
+// Navbar panels & icons
+.navpanel_opener {
+  margin: 0 3px;
+  height: 20px!important;
+}
+
+.navpanel-dialog .modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}

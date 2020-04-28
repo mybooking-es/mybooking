@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
   <div class="container-fluid">
     <?php endif; ?>
 
-    <div class="navbar-main">
+    <div class="col navbar-main">
 
       <!-- Menu toggler -->
       <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-toggler' ) ?>
@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
     <!-- WordPress menu walker -->
     <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-walker' ) ?>
 
-    <div class="navbar-extras d-flex justify-content-end align-items-center">
+    <div class="col-4 col-lg-3 navbar-extras d-flex justify-content-end align-items-center">
 
       <!-- Widgets Main Menu -->
       <?php if ( is_active_sidebar( 'mybooking_primary_menu' ) ) : ?>
