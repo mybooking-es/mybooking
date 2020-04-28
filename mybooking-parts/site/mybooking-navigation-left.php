@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
   <div class="container-fluid">
     <?php endif; ?>
 
-    <div class="col navbar-main">
+    <div class="navbar-main">
 
       <!-- Menu toggler -->
       <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-toggler' ) ?>
@@ -33,17 +33,18 @@ defined( 'ABSPATH' ) || exit;
     <!-- WordPress menu walker -->
     <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-walker' ) ?>
 
-    <div class="col-4 col-lg-3 navbar-extras d-flex justify-content-end align-items-center">
+    <!-- Conditional Extras Zone -->
+    <?php
+    $panel_one_image = get_option( 'global_navigation_image_one' );
+    $panel_two_image = get_option( 'global_navigation_image_two' );
+    if ( $panel_one_image !== '' || $panel_two_image !== '' ) : ?>
 
-      <!-- Widgets Main Menu -->
-      <?php if ( is_active_sidebar( 'mybooking_primary_menu' ) ) : ?>
-      <?php dynamic_sidebar( 'mybooking_primary_menu' ); ?>
-      <?php endif; ?>
+      <div class="col col-lg-1 navbar-extras d-flex justify-content-end align-items-center">
+        <!-- Panels -->
+        <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-panels' ) ?>
+      </div>
 
-      <!-- Panels -->
-      <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-panels' ) ?>
-
-    </div>
+    <?php endif; ?>
 
     <?php if ( 'container' == $container ) : ?>
   </div>

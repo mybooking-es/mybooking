@@ -24,4 +24,9 @@ defined( 'ABSPATH' ) || exit;
     'depth'           => 3,
     'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
   )
-); ?>
+);
+?>
+
+<?php if ( is_active_sidebar( 'mybooking_primary_menu' ) ) : ?>
+  <?php dynamic_sidebar( 'mybooking_primary_menu' ); ?>
+<?php endif; ?>

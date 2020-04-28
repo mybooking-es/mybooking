@@ -14365,31 +14365,32 @@ img.wp-post-image {
 .navbar {
   background: var(--navbar-bg);
   -webkit-box-shadow: var(--navbar-box-shadow);
-          box-shadow: var(--navbar-box-shadow); }
+          box-shadow: var(--navbar-box-shadow);
+  padding: .5rem 0; }
 
 @media (min-width: 992px) {
   .navbar {
     -webkit-box-shadow: none;
             box-shadow: none; } }
 
-.custom-logo-link img {
-  width: var(--custom-logo-width);
-  height: var(--custom-logo-height);
-  overflow: hidden; }
-
-.navbar-toggler {
-  border: none;
+.navbar .col {
   padding: 0; }
 
-button.navbar-toggler:focus {
-  outline: none; }
+.custom-logo-link img {
+  max-height: 30px;
+  width: auto;
+  margin-left: 10px; }
 
-.navbar-toggler-icon {
+.navbar-toggler {
+  border: none; }
+
+.navbar-dark .navbar-toggler-icon {
   background-image: none !important; }
-  .navbar-toggler-icon i {
-    color: var(--toggler-icon-color);
-    font-size: var(--toggler-icon-font-size);
-    margin-top: var(--toggler-icon-mt); }
+
+.navbar-toggler-icon i {
+  color: var(--toggler-icon-color);
+  font-size: var(--toggler-icon-font-size);
+  margin-top: var(--toggler-icon-mt); }
 
 .navbar-dark .navbar-nav .nav-link {
   color: var(--navbar-link-color);
@@ -14399,8 +14400,7 @@ button.navbar-toggler:focus {
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: var(--navbar-link-color-hover);
-  opacity: var(--navbar-link-hover-opacity); }
+  opacity: var(--navbar-link-hover); }
 
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.active .navbar-dark .navbar-nav .nav-link.show,
@@ -14445,7 +14445,7 @@ button.navbar-toggler:focus {
 
 .navpanel_opener {
   margin: 0 3px;
-  height: 20px; }
+  height: 20px !important; }
 
 .navpanel-dialog .modal-header {
   border-bottom: none;
