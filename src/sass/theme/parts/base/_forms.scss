@@ -69,9 +69,10 @@ textarea,
     border: 1px solid var(--gray-400);
     border-radius: 3px;
   }
-  label {
-    position: relative;
-  }
+}
+// Labels
+label {
+  position: relative;
 }
 // Custom icons
 .custom-icon {
