@@ -1,5 +1,5 @@
 //==============================================
-// Module/inputs, forms, textarea
+// Base/ forms
 //==============================================
 
 select {
@@ -10,8 +10,8 @@ select {
   border: 0;
   font-size: 0.8rem;
   height: 48px;
-  color: $gray-700;
-  background-color: #fff;
+  color: var(--gray-700);
+  background-color: var(--white);
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -21,33 +21,29 @@ select {
     border: 0;
   }
 }
-// Machacando estilos de formulario de Bootstrap para el form completar datos
-// También sobreescribo mis propias reglas pues en este caso quiero un borde gris rounded
+// Bootstrap forms overrides
 .input-group > .form-control {
   height: 48px;
 }
 .form-group select.form-control {
-  border: 1px solid $gray-400;
+  border: 1px solid var(--gray-400);
   border-radius: 3px;
   box-shadow: none;
   display: inline-flex;
   padding: 0 0.8rem;
   font-size: 0.8rem;
   line-height: 18px;
-  color: $gray-700;
+  color: var(--gray-700);
   height: 48px;
   margin-top: 8px;
 }
 .input-group-prepend > .input-group-text {
   border-radius: 0;
 }
-.card,
-.btn,
 .form-control {
   border-radius: 0;
 }
-
-// Machacando estilos de jquery ui para el form completar datos
+// jquery ui overrides
 input[type="text"],
 input[type="password"],
 .ui-autocomplete-input,
@@ -57,30 +53,31 @@ textarea,
   padding: 0 0.8rem;
   font-size: 0.8rem;
   line-height: 18px;
-  color: $gray-700;
+  color: var(--gray-700);
   height: 48px;
   border: none;
   border-radius: 0;
   box-shadow: none;
 }
+// Custom forms
 .custom-form {
   input[type="text"],
   input[type="password"],
   .ui-autocomplete-input,
   textarea,
   .uneditable-input {
-    border: 1px solid $gray-400;
+    border: 1px solid var(--gray-400);
     border-radius: 3px;
   }
+  label {
+    position: relative;
+  }
 }
-// Custom icon para los arrow-down en los select maquetados con Bootstrap
-label {
-  position: relative;
-}
+// Custom icons
 .custom-icon {
   position: absolute;
   font-size: 18px;
-  color: $gray-700;
+  color: var(--gray-700);
   right: 8px;
   top: 48px;
 }
@@ -88,12 +85,12 @@ label {
   @extend .custom-icon;
   top: 16px;
 }
-
+// Error styles
 .form-reservation-error {
-  color: #dc3545;
+  color: var(--error);
 }
 input.form-reservation-error {
-  border-color: #dc3545 !important;
+  color: var(--error) !important;
 }
 // Form Dates
 .custom-date-form {
@@ -119,10 +116,17 @@ input.form-reservation-error {
 }
 // Extra inputs
 .input-group > .form-control.extra-input {
-  border-top: 1px solid #6c757d;
-  border-bottom: 1px solid #6c757d;
+  border-top: 1px solid var(--gray-500);
+  border-bottom: 1px solid var(--gray-500);
 }
 // Disabled components
-input[type="text"]:disabled, select:disabled {
-    background-color: #ddd;
+input[type="text"]:disabled,
+select:disabled {
+  background-color: var(--gray-200);
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .flex-form-group input.hasDatepicker {
+    max-width: 145px;
+  }
 }

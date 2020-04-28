@@ -2,80 +2,6 @@
 // Base Rules
 // ==========================================================================
 
-//Inter font family
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url("../fonts/Inter-ExtraLight.woff2?v=3.13") format("woff2"),
-    url("../fonts/Inter-ExtraLight.woff?v=3.13") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("../fonts/Inter-Light.woff2?v=3.13") format("woff2"),
-    url("../fonts/Inter-Light.woff?v=3.13") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2?v=3.13") format("woff2"),
-    url("../fonts/Inter-Regular.woff?v=3.13") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2?v=3.13") format("woff2"),
-    url("../fonts/Inter-Medium.woff?v=3.13") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2?v=3.13") format("woff2"),
-    url("../fonts/Inter-SemiBold.woff?v=3.13") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2?v=3.13") format("woff2"),
-    url("../fonts/Inter-Bold.woff?v=3.13") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("../fonts/Inter-ExtraBold.woff2?v=3.13") format("woff2"),
-    url("../fonts/Inter-ExtraBold.woff?v=3.13") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../fonts/Inter-Black.woff2?v=3.13") format("woff2"),
-    url("../fonts/Inter-Black.woff?v=3.13") format("woff");
-}
-
 html {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -83,13 +9,11 @@ html {
   margin: 0;
   padding: 0;
 }
-
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
-
 body {
   height: 100%;
   width: 100%;
@@ -100,7 +24,7 @@ body {
   font-size: 16px;
   color: var(--body-color);
 }
-/* Avoid modal issues on Desktop when showing boostrap modals*/
+// Avoid issues when showing modals
 body.modal-open {
   height: 100vh;
   overflow-y: hidden;
@@ -110,7 +34,7 @@ body.modal-open {
     padding-right: 15px;
   }
 }
-
+// Typo
 h1,
 h2,
 h3,
@@ -119,29 +43,31 @@ h5,
 h6 {
   font-family: var(--font-heading);
 }
-
+// Links
 a:link {
   color: var(--color-link);
 }
-
 a:visited {
   color: var(--color-link-visited);
 }
-
 a:hover,
 a:focus {
   color: var(--color-link-hover);
 }
-
 a:active {
   color: var(--color-link-active);
 }
-
+// Buttons
 .btn {
   cursor: pointer;
+  border-radius: 0;
 }
 button,
 [type="button"] {
   -webkit-appearance: none;
   border: none;
+}
+// Card
+.card {
+  border-radius: 0;
 }
