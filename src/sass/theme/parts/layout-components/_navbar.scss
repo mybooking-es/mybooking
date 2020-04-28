@@ -1,9 +1,9 @@
 //==============================================
-// Layout/nav
+// Layout/ nav
 //==============================================
 
 // Navbar container
-.navbar-container {
+.home .navbar-container {
   width: 100%;
   top: 0;
   z-index: 30;
@@ -24,6 +24,9 @@
 .navbar {
   background: var(--navbar-bg);
   box-shadow: var(--navbar-box-shadow);
+  .col {
+    padding: 0;
+  }
 }
 
 @media (min-width: 992px) {
@@ -32,6 +35,7 @@
   }
 }
 
+// Logo
 .custom-logo-link img {
   width: var(--custom-logo-width);
   height: var(--custom-logo-height);
@@ -66,7 +70,7 @@ button.navbar-toggler:focus {
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
   color: var(--navbar-link-color-hover);
-  opacity: var(--navbar-link-hover-opacity);
+  opacity: var(--navbar-link-hover);
 }
 
 // Active menu items inherits :hover & :focus
@@ -79,7 +83,7 @@ button.navbar-toggler:focus {
   .nav-link.show,
 .navbar-dark .navbar-nav .show > .nav-link {
   color: var(--navbar-link-active) !important;
-  border-bottom: 2px solid var(--navbar-link-active);
+  //border-bottom: 2px solid var(--navbar-link-active);
 }
 
 // Active menu on small devices
@@ -93,7 +97,7 @@ button.navbar-toggler:focus {
   .navbar-nav
   .nav-link.show,
 .navbar-dark .navbar-collapse.show .navbar-nav .show > .nav-link {
-  color: var(--navbar-link-active) !important;
+  color: var(--navbar-link-active) !important; // Mybe you want other color
   border-bottom: none;
 }
 
@@ -142,7 +146,7 @@ button.navbar-toggler:focus {
 // Navbar panels & icons
 .navpanel_opener {
   margin: 0 3px;
-  height: 20px;
+  height: 20px !important;
 }
 
 .navpanel-dialog .modal-header {
@@ -150,7 +154,16 @@ button.navbar-toggler:focus {
   padding-bottom: 0;
 }
 
-// I leave this provisionally commented
-// .modal-backdrop {
-//   display: none;
-// }
+// ==========================
+
+@media (max-width: 992px) {
+  .navbar-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 30;
+  }
+  .home .nav-container-absolute {
+    position: fixed;
+  }
+}
