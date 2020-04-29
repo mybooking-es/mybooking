@@ -1,7 +1,6 @@
 // Import theme parts
 @import "parts/index";
 
-// Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
   .summary-reservation-title {
     margin-top: var(--summary-reservation-title-margin-top-mobile);
@@ -46,7 +45,7 @@ a.btn.btn-secondary.mybooking-read-more-link {
   }
 }
 
-/** Date Range picker **/
+// Date Range picker
 
 .bg-warning {
   background-color: #ffbe4a;

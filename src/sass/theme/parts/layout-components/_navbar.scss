@@ -14,12 +14,6 @@
   position: absolute;
 }
 
-@media (min-width: 992px) {
-  .home .nav-container-absolute .navbar {
-    background: none;
-  }
-}
-
 // Navbar apperance
 .navbar {
   background: var(--navbar-bg);
@@ -29,16 +23,10 @@
   }
 }
 
-@media (min-width: 992px) {
-  .navbar {
-    box-shadow: none;
-  }
-}
-
 // Logo
 .custom-logo-link img {
-  width: var(--custom-logo-width);
   height: var(--custom-logo-height);
+  width: var(--custom-logo-width);
   overflow: hidden;
 }
 
@@ -70,7 +58,7 @@ button.navbar-toggler:focus {
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
   color: var(--navbar-link-color-hover);
-  opacity: var(--navbar-link-hover);
+  opacity: var(--navbar-link-hover-opacity);
 }
 
 // Active menu items inherits :hover & :focus
@@ -83,7 +71,6 @@ button.navbar-toggler:focus {
   .nav-link.show,
 .navbar-dark .navbar-nav .show > .nav-link {
   color: var(--navbar-link-active) !important;
-  //border-bottom: 2px solid var(--navbar-link-active);
 }
 
 // Active menu on small devices
@@ -97,8 +84,7 @@ button.navbar-toggler:focus {
   .navbar-nav
   .nav-link.show,
 .navbar-dark .navbar-collapse.show .navbar-nav .show > .nav-link {
-  color: var(--navbar-link-active) !important; // Mybe you want other color
-  border-bottom: none;
+  color: var(--navbar-link-active) !important;
 }
 
 // Dropdown navigation full height
@@ -129,18 +115,15 @@ button.navbar-toggler:focus {
   margin-bottom: 1rem;
 }
 
+// Dropdown menu item
+a.dropdown-item {
+  color: var(--navbar-dropdown-item-color);
+}
 // Dropdown active menu item
-.navbar-dark .navbar-collapse .navbar-nav .active > .nav-link,
-.navbar-dark
-  .navbar-collapse
-  .navbar-nav
-  .nav-link.active
-  .navbar-dark
-  .navbar-collapse
-  .navbar-nav
-  .nav-link.show,
-.navbar-dark .navbar-collapse .navbar-nav .show > .nav-link {
-  color: var(--navbar-link-collapse);
+.dropdown-item.active,
+.dropdown-item:active {
+  color: var(--white);
+  background-color: var(--navbar-dropdown-item-active-bg);
 }
 
 // Navbar panels & icons
@@ -154,9 +137,15 @@ button.navbar-toggler:focus {
   padding-bottom: 0;
 }
 
-// ==========================
-
-@media (max-width: 992px) {
+@media (min-width: 992px) {
+  .navbar {
+    box-shadow: none;
+  }
+  .home .nav-container-absolute .navbar {
+    background: none;
+  }
+}
+@media (max-width: 991.98px) {
   .navbar-container {
     width: 100%;
     position: fixed;
