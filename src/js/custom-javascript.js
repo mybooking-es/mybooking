@@ -1,6 +1,7 @@
 if (typeof $ === "undefined") {
   var $ = window.jQuery;
 }
+<<<<<<< HEAD
 /**
  *   MYBOOKING CUSTOM JS
  *   -------------------
@@ -10,6 +11,20 @@ if (typeof $ === "undefined") {
  *   @subpackage Mybooking WordPress Theme
  *   @since Mybooking WordPress Theme 0.0.1
  */
+=======
+// Add your custom JS here.
+// OWL CAROUSEL
+$(document).ready(function() {
+  $(".-carrusel-un-item").owlCarousel({
+    autoPlay: true,
+    slideSpeed: 300,
+    paginationSpeed: 400,
+    singleItem: true,
+    pagination: false
+    /*navigation: true,
+    navigationText: ["«", "»"]*/
+  });
+>>>>>>> 1ac3bc4e3c81863d86d49c4fad796b95e8341650
 
 // OWL CAROUSEL
 $(document).ready(function () {
