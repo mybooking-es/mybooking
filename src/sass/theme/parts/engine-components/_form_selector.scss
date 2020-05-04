@@ -47,6 +47,9 @@ This is the structure of the selector form
   color: var(--selector-color);
   padding: 10px;
 }
+.home .flex-form-horizontal {
+  background-color: var(--home-selector-bg);
+}
 
 // Horizontal Selector on Desktop
 
@@ -107,7 +110,7 @@ This is the structure of the selector form
 
 // Separation between place and date
 
-@media (min-width: 575.98px) {
+@media (min-width: 576px) {
   .flex-form-group:nth-child(2n) {
     margin-left: 10px;
   }
@@ -151,8 +154,8 @@ This is the structure of the selector form
 }
 
 .form_selector-select_label_wrap:after {
-  content: "\f107";
-  font-family: FontAwesome;
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
   position: absolute;
   right: 0;
   padding: 11px;
