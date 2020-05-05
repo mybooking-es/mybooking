@@ -117,7 +117,7 @@ gulp.task("scripts", function () {
     // End - All BS4 stuff
 
     `${paths.dev}/js/skip-link-focus-fix.js`,
-
+    `${paths.dev}/js/vendor/mobile-detect/mobile-detect.js`,
     `${paths.dev}/js/vendor/owl.carousel/owl.carousel.js`,
     `${paths.dev}/js/vendor/jquery-eu-cookie/jquery-eu-cookie-law-popup.js`,
 
