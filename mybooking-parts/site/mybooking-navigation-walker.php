@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
     'fallback_cb'     => '',
     'menu_id'         => 'main-menu',
     'depth'           => 3,
-    'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+    'walker'          => new Mybooking_WP_Bootstrap_Navwalker(),
   )
 );
 ?>
