@@ -1,12 +1,11 @@
 {
-  "browserSyncWatchFiles": ["./css/*.min.css", 
-                            "./js/*.min.js", 
-                            "./**/*.php"],
-  "paths" : {
+  "browserSyncWatchFiles": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"],
+  "paths": {
     "js": "./js",
     "css": "./css",
     "img": "./img",
-	"imgsrc": "./src/img",
+    "fonts": "./fonts",
+    "imgsrc": "./src/img",
     "sass": "./sass",
     "node": "./node_modules/",
     "bower": "./bower_components/",

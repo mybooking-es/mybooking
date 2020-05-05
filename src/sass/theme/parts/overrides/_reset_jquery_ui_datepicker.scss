@@ -1,7 +1,7 @@
 /** Override JQUERY UI **/
 
 @font-face {
-  font-family: "FontAwesome";
+  font-family: "Font Awesome 5 Free";
   font-weight: normal;
   font-style: normal;
 }
@@ -60,14 +60,14 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
 
 .ui-datepicker-prev:before {
   content: "\f053";
-  font-family: "FontAwesome";
+  font-family: "Font Awesome 5 Free";
   font-size: 20px;
   /*left: -6px !important;*/
 }
 
 .ui-datepicker-next:before {
   content: "\f054";
-  font-family: "FontAwesome";
+  font-family: "Font Awesome 5 Free";
   font-size: 20px;
   /*right: -6px !important;*/
 }

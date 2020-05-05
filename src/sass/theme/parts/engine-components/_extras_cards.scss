@@ -1,5 +1,5 @@
 //==============================================
-// Module/extras cards
+// Engine components/ extras cards
 //==============================================
 .extras {
   margin-top: var(--extras-margin-top-mobile);
@@ -11,7 +11,7 @@
 }
 .extra-wrapper {
   display: flex;
-  border: 1px solid $gray-300;
+  border: 1px solid var(--gray-300);
   border-radius: 4px;
   margin: 10px;
   justify-content: space-between;
@@ -24,6 +24,7 @@
   display: flex;
   img {
     max-width: 150px;
+    object-fit: contain;
   }
 }
 .extra-content {

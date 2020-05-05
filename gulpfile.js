@@ -19,14 +19,14 @@ var paths = cfg.paths;
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
-gulp.task("watch", function() {
+gulp.task("watch", function () {
   gulp.watch(`${paths.dev}/sass/**/*.scss`, gulp.series("styles"));
   gulp.watch(
     [
       `${paths.dev}/js/**/*.js`,
       "js/**/*.js",
       "!js/theme.js",
-      "!js/theme.min.js"
+      "!js/theme.min.js",
     ],
     gulp.series("scripts")
   );
@@ -35,7 +35,7 @@ gulp.task("watch", function() {
 // ---------- SASS + CSS MANAGEMENT ---------------------------
 
 // Copy jQuery UI images into dist images folder
-gulp.task("cssimages", function() {
+gulp.task("cssimages", function () {
   return gulp
     .src(paths.dev + "/sass/vendor/jquery.ui.custom/images/*.{jpg,gif,png}")
     .pipe(gulp.dest(paths.css + "/images"));
@@ -44,16 +44,16 @@ gulp.task("cssimages", function() {
 // Run:
 // gulp sass
 // Compiles SCSS files in CSS
-gulp.task("sass", function() {
+gulp.task("sass", function () {
   var stream = gulp
     .src(`${paths.dev}/sass/*.scss`)
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(
       plumber({
-        errorHandler: function(err) {
+        errorHandler: function (err) {
           console.log(err);
           this.emit("end");
-        }
+        },
       })
     )
     .pipe(sass({ errLogToConsole: true }))
@@ -66,17 +66,17 @@ gulp.task("sass", function() {
 // Run:
 // gulp minifycss
 // Minify theme.css
-gulp.task("minifycss", function() {
+gulp.task("minifycss", function () {
   return gulp
     .src(paths.css + "/theme.css")
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(cleanCSS({ compatibility: "*" }))
     .pipe(
       plumber({
-        errorHandler: function(err) {
+        errorHandler: function (err) {
           console.log(err);
           this.emit("end");
-        }
+        },
       })
     )
     .pipe(rename({ suffix: ".min" }))
@@ -94,7 +94,7 @@ gulp.task("styles", gulp.series("sass", "minifycss", "cssimages"));
 // Run:
 // gulp browser-sync
 // Starts browser-sync task for starting the server.
-gulp.task("browser-sync", function() {
+gulp.task("browser-sync", function () {
   var cfgdev = require("./gulpenv.json");
   browserSync.init(cfg.browserSyncWatchFiles, cfgdev.browserSyncOptions);
 });
@@ -109,22 +109,21 @@ gulp.task("watch-bs", gulp.parallel("browser-sync", "watch"));
 // Run:
 // gulp scripts.
 // Uglifies and concat all JS files into one
-gulp.task("scripts", function() {
+gulp.task("scripts", function () {
   var scripts = [
-
     // Start - All BS4 stuff
     `${paths.dev}/js/bootstrap4/bootstrap.bundle.js`,
 
     // End - All BS4 stuff
 
     `${paths.dev}/js/skip-link-focus-fix.js`,
-
+    `${paths.dev}/js/vendor/mobile-detect/mobile-detect.js`,
     `${paths.dev}/js/vendor/owl.carousel/owl.carousel.js`,
     `${paths.dev}/js/vendor/jquery-eu-cookie/jquery-eu-cookie-law-popup.js`,
 
     // Adding currently empty javascript file to add on for your own themes´ customizations
     // Please add any customizations to this .js file only!
-    `${paths.dev}/js/custom-javascript.js`
+    `${paths.dev}/js/custom-javascript.js`,
   ];
   gulp
     .src(scripts, { allowEmpty: true })
@@ -138,3 +137,13 @@ gulp.task("scripts", function() {
     .pipe(gulp.dest(paths.js));
 });
 
+// Copy Fontawesome fonts into dist folder
+function fontawesome() {
+  return gulp
+    .src(
+      "./node_modules/@fortawesome/fontawesome-free/webfonts/*.{woff,woff2,eot,svg,ttf}"
+    )
+    .pipe(gulp.dest(paths.fonts + "/fontawesome"));
+}
+
+exports.fontawesome = fontawesome;
