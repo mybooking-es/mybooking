@@ -1,15 +1,15 @@
-if (typeof $ === "undefined") {
-  var $ = window.jQuery;
-}
 /**
  *   MYBOOKING CUSTOM JS
  *   -------------------
  *
- * 	Versión: 0.0.2
+ *  Versión: 0.0.2
  *   @package WordPress
  *   @subpackage Mybooking WordPress Theme
  *   @since Mybooking WordPress Theme 0.0.1
  */
+if (typeof $ === "undefined") {
+  var $ = window.jQuery;
+}
 
 // OWL CAROUSEL
 $(document).ready(function () {
@@ -37,12 +37,15 @@ $(document).ready(function () {
 $(document).ready(function () {
   if (typeof $(".home-header_sticky-breakpoint").offset() !== "undefined") {
     var height = $(".home-header_sticky-breakpoint").offset().top;
-    var is_mobile = false;
 
+    var md = new MobileDetect(window.navigator.userAgent);
+/*
+    var is_mobile = false;
     if ($(".navbar-toggler").is(":visible")) {
       is_mobile = true;
     }
-    if (!is_mobile) {
+*/
+    if (!md.mobile()) {
       $(window).on("scroll", function () {
         if ($(".navbar-toggler").is(":visible")) {
           $("#form-selector").removeClass("flex-form-sticky");
@@ -54,11 +57,13 @@ $(document).ready(function () {
           $("#home-header_content_container").addClass(
             "home-header_content_container_sticky"
           );
+          // Elementor compatibility
         } else {
           $("#form-selector").removeClass("flex-form-sticky");
           $("#home-header_content_container").removeClass(
             "home-header_content_container_sticky"
           );
+          // Elementor compatibility
         }
       });
     }
