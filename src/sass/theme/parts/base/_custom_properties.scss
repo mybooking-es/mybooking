@@ -52,7 +52,10 @@
   --navbar-dropdown-item-color: var(--gray-900);
   --navbar-dropdown-item-active-bg: var(--brand-secondary);
   --navbar-link-collapse: var(--white);
+  // Logo
   --custom-logo-height: 40px;
+  --custom-logo-width: auto;
+  // Toggler
   --toggler-icon-font-size: 1.3rem;
   --toggler-icon-color: var(--white);
   --toggler-icon-mt: 6px;
@@ -75,7 +78,8 @@
   --credits-color-link: var(--color-link);
   --credits-color-link-hover: var(--color-link-hover);
   // Selector
-  --selector-bg: rgba(255, 255, 255, 0.6);
+  --selector-bg: var(--brand-secondary-light);
+  --home-selector-bg: rgba(255, 255, 255, 0.6);
   --selector-color: var(--body-color);
   // Buttons
   --btn-bg-color: var(--brand-primary);

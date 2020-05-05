@@ -18,6 +18,7 @@
   "author": "@mybooking_es",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0"
   },
