@@ -196,9 +196,9 @@ This is the structure of the selector form
   align-items: end;
   flex-direction: row;
   flex-grow: 1;
-  background-color: var(--gray-200);
+  background-color: var(--selector-sticky-bg) !important;
   position: fixed;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   z-index: 10000;
   color: var(--selector-color);
   min-width: 100% !important; // Force always 100%
@@ -221,13 +221,11 @@ This is the structure of the selector form
   .flex-form-horizontal-box:last-child {
     margin-left: 5px;
     flex-grow: 1;
-    align-self: flex-end;
   }
   // Flex-form-sticky > Search button
   .btn {
     height: 48px;
-    position: relative;
-    top: -8px;
+    margin-top: 35px !important;
   }
 
   // Date input
