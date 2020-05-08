@@ -18,61 +18,61 @@ $container = get_theme_mod( 'mybooking_container_type' );
 ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-  <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-    <div class="page_header">
+  <div class="page_header">
 
-      <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+    <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-    </div>
+  </div>
 
-    <div class="wrapper page_content mybooking_page" id="page-wrapper">
-    	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-    		<div class="row">
-          <div class="col-md-6">
+  <div class="wrapper page_content mybooking_page" id="page-wrapper">
+    <div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+      <div class="row">
+        <div class="col-md-6">
 
-            <h1 class="entry-title"><?php the_title(); ?></h1>
+          <h1 class="entry-title"><?php the_title(); ?></h1>
+
+        </div>
+        <main class="site-main" id="main">
+
+          <!-- Widgets Sidebar -->
+          <?php if ( is_active_sidebar( 'mybooking_page_sidebar' ) ) : ?>
+          <div class="col-md-5 page_sidebar">
+
+            <?php dynamic_sidebar( 'mybooking_page_sidebar' ); ?>
 
           </div>
-    			<main class="site-main" id="main">
+          <?php endif; ?>
 
-            <!-- Widgets Sidebar -->
-            <?php if ( is_active_sidebar( 'mybooking_page_sidebar' ) ) : ?>
-    					<div class="col-md-5 page_sidebar">
+          <div class="col-md-6">
 
-    						<?php dynamic_sidebar( 'mybooking_page_sidebar' ); ?>
+            <!-- Page Content -->
+            <div class="entry-content">
 
-    					</div>
-            <?php endif; ?>
+              <?php the_content(); ?>
+              <?php
+              wp_link_pages(
+                array(
+                  'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+                  'after'  => '</div>',
+                )
+              );
+              ?>
 
-    				<div class="col-md-6">
+            </div>
+            <footer class="entry-footer">
 
-    					<!-- Page Content -->
-              <div class="entry-content">
+              <?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
 
-            		<?php the_content(); ?>
-            		<?php
-            		wp_link_pages(
-            			array(
-            				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-            				'after'  => '</div>',
-            			)
-            		);
-            		?>
+            </footer>
+          </div>
 
-            	</div>
-            	<footer class="entry-footer">
-
-            		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
-
-            	</footer>
-    				</div>
-
-    			</main>
-    		</div>
-    	</div>
+        </main>
+      </div>
     </div>
   </div>
+</div>
 
 <?php endwhile; ?>
 
