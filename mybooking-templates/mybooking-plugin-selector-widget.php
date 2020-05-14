@@ -16,12 +16,12 @@
         enctype="application/x-www-form-urlencoded" 
         class="flex-form-horizontal" autocomplete="off">
 
-    <?php if ( $args['sales_channel_code'] != '' ) : ?>
+    <?php if ( array_key_exists('sales_channel_code', $args) && $args['sales_channel_code'] != '' ) : ?>
 
       <input type="hidden" name="sales_channel_code" value="<?php echo $args['sales_channel_code']?>"/>
 
     <?php endif; ?>
-    <?php if ( $args['family_id'] != '' ) : ?>
+    <?php if ( array_key_exists('family_id', $args) && $args['family_id'] != '' ) : ?>
 
       <input type="hidden" name="family_id" value="<?php echo $args['family_id']?>"/>
 
