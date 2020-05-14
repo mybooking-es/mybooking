@@ -24496,10 +24496,12 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --credits-color: var(--gray-100);
   --credits-color-link: var(--color-link);
   --credits-color-link-hover: var(--color-link-hover);
-  --selector-bg: var(--brand-secondary-light);
   --home-selector-bg: rgba(255, 255, 255, 0.6);
+  --selector-bg: var(--brand-secondary-light);
   --selector-sticky-bg: var(--brand-secondary-light);
   --selector-color: var(--body-color);
+  --selector-sticky-color: var(--body-color);
+  --modal-summary-label-color: var(--body-color);
   --btn-bg-color: var(--brand-primary);
   --btn-bg-color-hover: var(--brand-primary-dark);
   --btn-border-color: var(--brand-primary);
@@ -26298,7 +26300,7 @@ This is the structure of the selector form
   position: fixed;
   padding: 10px 10px 0 10px;
   z-index: 10000;
-  color: var(--selector-color);
+  color: var(--selector-sticky-color);
   min-width: 100% !important;
   max-width: 100% !important;
   width: 100% !important;
@@ -27346,6 +27348,19 @@ a.magic-button.btn {
 @media (max-width: 767.98px) {
   .bold-on-mobile {
     font-weight: 800; } }
+
+.modal .custom-form input[type="text"],
+.custom-form textarea,
+.modal .flex-form-horizontal-box .flex-form-horizontal-item,
+.modal .custom-form .ui-autocomplete-input,
+.custom-form .uneditable-input,
+.custom-form input[type="password"],
+.custom-form textarea {
+  border: none !important;
+  border-radius: 0 !important; }
+
+.modal label {
+  color: var(--modal-summary-label-color); }
 
 .modal-body.summary-modal {
   padding: 0;
