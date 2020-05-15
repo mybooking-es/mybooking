@@ -24496,6 +24496,8 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --credits-color: var(--gray-100);
   --credits-color-link: var(--color-link);
   --credits-color-link-hover: var(--color-link-hover);
+  --cookies-bg-color: var(--brand-primary);
+  --cookies-text-color: var(--body-color);
   --home-selector-bg: rgba(255, 255, 255, 0.6);
   --selector-bg: var(--brand-secondary-light);
   --selector-sticky-bg: var(--brand-secondary-light);
@@ -25789,8 +25791,8 @@ a.dropdown-item {
   clear: both; }
 
 .eupopup-container {
-  background-color: #8ac53f;
-  color: #111;
+  background-color: var(--cookies-bg-color);
+  color: var(--cookies-text-color);
   padding: 5px 20px;
   font-size: 12px;
   line-height: 1.2em;
@@ -25826,22 +25828,19 @@ a.dropdown-item {
   right: 10px;
   width: 300px; }
 
-.eupopup-closebutton {
+a.eupopup-closebutton {
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
-  color: #FFF;
-  filter: alpha(opacity=20);
+  color: var(--body-color);
   position: absolute;
-  font-family: 'Inter', helvetica, 'Helvetica Neue', 'Segoe UI', 'Open Sans', 'Ubuntu', sans-serif;
   top: 0;
   left: 0;
-  padding: 12px 15px; }
-
-.eupopup-closebutton:hover,
-.eupopup-closebutton:active {
-  color: #111;
-  text-decoration: none; }
+  padding: 12px 15px;
+  -webkit-transition: 0.4 ease-in-out;
+  transition: 0.4 ease-in-out; }
+  a.eupopup-closebutton:hover {
+    color: var(--gray-700); }
 
 .eupopup-head {
   font-size: 1.2em;
@@ -25849,46 +25848,41 @@ a.dropdown-item {
   text-transform: uppercase;
   padding: 7px;
   margin-right: 2rem;
-  color: #fff; }
+  color: var(--white); }
 
 .eupopup-body {
-  color: #111; }
+  color: var(--cookies-text-color); }
 
 .eupopup-buttons {
   float: right;
   padding: 7px 0 5px 0; }
 
-.eupopup-button_1 {
-  background-color: #111;
-  padding: 5px 10px;
-  color: #8ac53f;
-  font-weight: normal;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
-
+.eupopup-button_1,
 .eupopup-button_2 {
-  background-color: #111;
+  background-color: var(--black);
   padding: 5px 10px;
-  color: #8ac53f;
+  color: var(--cookies-bg-color);
   font-weight: normal;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px; }
+  .eupopup-button_1:hover,
+  .eupopup-button_2:hover {
+    text-decoration: none; }
 
 .eupopup-button {
   margin: 0 10px; }
 
 .eupopup-button:hover,
 .eupopup-button:focus {
-  opacity: .5; }
+  opacity: 0.5; }
 
 body .eupopup-color-inverse {
-  color: #000;
+  color: var(black);
   background-color: rgba(255, 255, 255, 0.9); }
 
 body .eupopup-color-inverse .eupopup-head {
-  color: #000; }
+  color: var(black); }
 
 body .eupopup-style-compact {
   text-align: left;
