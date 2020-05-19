@@ -3,7 +3,7 @@
 *		SINGLE PRODUCT POST
 *  	-------------------
 *
-* 	Versión: 0.0.2
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.4
