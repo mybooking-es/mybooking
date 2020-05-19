@@ -18,11 +18,11 @@ $container = get_theme_mod( 'mybooking_container_type' );
 ?>
 
 <div class="wrapper page_content" id="index-wrapper">
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-		<div class="row">
-			<main class="site-main" id="main">
+  <div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+    <div class="row">
+      <main class="site-main" id="main">
 
-				<?php the_content(); ?>
+        <?php the_content(); ?>
 
         <?php
           $args=array(
@@ -30,105 +30,107 @@ $container = get_theme_mod( 'mybooking_container_type' );
         );
         $product_item = new WP_Query($args);
         if( $product_item->have_posts() ) { ?>
-          <?php  while ( $product_item->have_posts() ) : $product_item->the_post(); ?>
+        <?php  while ( $product_item->have_posts() ) : $product_item->the_post(); ?>
 
-            <article class="row article product_item">
-              <div class="col-md-3">
-                <div class="product_image">
-                  <a class="product_image-link" href="<?php the_permalink(); ?>" title="<?php esc_attr__('Ver','mybooking'); ?> <?php the_title(); ?>">
+        <article class="row article product_item">
+          <div class="col-md-3">
+            <div class="product_image">
+              <a class="product_image-link" href="<?php the_permalink(); ?>"
+                title="<?php esc_attr__('Ver','mybooking'); ?> <?php the_title(); ?>">
 
-                    <?php the_post_thumbnail(); ?>
+                <?php the_post_thumbnail(); ?>
 
-                  </a>
-                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="product_body">
+              <h2 class="product_title">
+                <a href="<?php the_permalink(); ?>"
+                  title="<?php esc_attr__('Ver','mybooking'); ?> <?php the_title(); ?>">
+
+                  <?php the_title(); ?>
+
+                </a>
+              </h2>
+              <div class="product_excerpt">
+
+                <p>
+
+                  <?php
+                      $info_fuel = get_post_meta(
+                        get_the_id(),
+                        'product_info_fuel',
+                        true
+                      );
+                      echo $info_fuel ?>
+
+                  <br>
+
+                  <?php
+                      $info_drive = get_post_meta(
+                        get_the_id(),
+                        'product_info_drive',
+                        true
+                      );
+                      echo $info_drive ?>
+
+                  <br>
+
+                  <?php
+                      $info_km = get_post_meta(
+                        get_the_id(),
+                        'product_info_km',
+                        true
+                      );
+                      echo $info_km ?> km
+
+                </p>
+
               </div>
-              <div class="col-md-7">
-                <div class="product_body">
-                  <h2 class="product_title">
-                    <a href="<?php the_permalink(); ?>" title="<?php esc_attr__('Ver','mybooking'); ?> <?php the_title(); ?>">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="product_info_list">
+              <h2 class="product_price">
 
-                      <?php the_title(); ?>
+                <?php
+                    $info_price_auto = get_post_meta(
+                      get_the_id(),
+                      'product_info_price_auto',
+                      true
+                    );
+                    echo $info_price_auto;
 
-                    </a>
-                  </h2>
-                  <div class="product_excerpt">
+                    $info_price_manual = get_post_meta(
+                      get_the_id(),
+                      'product_info_price_manual',
+                      true
+                    );
+                    echo $info_price_manual;
 
-										<p>
+                    $info_price_diesel = get_post_meta(
+                      get_the_id(),
+                      'product_info_price_diesel',
+                      true
+                    );
+                    echo $info_price_diesel
+                  ?>
 
-											<?php
-												$info_fuel = get_post_meta(
-													get_the_id(),
-													'product_info_fuel',
-													true
-												);
-		                		echo $info_fuel ?>
+              </h2>
+            </div>
+          </div>
+        </article>
 
-										<br>
-
-											<?php
-												$info_drive = get_post_meta(
-													get_the_id(),
-													'product_info_drive',
-													true
-												);
-		                		echo $info_drive ?>
-
-										<br>
-
-											<?php
-												$info_km = get_post_meta(
-													get_the_id(),
-													'product_info_km',
-													true
-												);
-		                		echo $info_km ?> km
-
-		                 </p>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-								<div class="product_info_list">
-									<h2 class="product_price">
-
-										<?php
-											$info_price_auto = get_post_meta(
-												get_the_id(),
-												'product_info_price_auto',
-												true
-											);
-		                  echo $info_price_auto;
-
-											$info_price_manual = get_post_meta(
-												get_the_id(),
-												'product_info_price_manual',
-												true
-											);
-		                  echo $info_price_manual;
-
-											$info_price_diesel = get_post_meta(
-												get_the_id(),
-												'product_info_price_diesel',
-												true
-											);
-		                  echo $info_price_diesel
-										?>
-
-	                </h2>
-								</div>
-              </div>
-            </article>
-
-          <?php endwhile; ?>
+        <?php endwhile; ?>
         <?php } ?>
 
-			</main>
+      </main>
 
-			<?php understrap_pagination(); ?>
+      <?php understrap_pagination(); ?>
 
-		</div>
-	</div>
+    </div>
+  </div>
 </div>
 
 <?php get_footer();

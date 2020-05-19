@@ -81,3 +81,18 @@
     font-weight: 800;
   }
 }
+
+// Form modificar reserva
+.modal .custom-form input[type="text"],
+.custom-form textarea,
+.modal .flex-form-horizontal-box .flex-form-horizontal-item,
+.modal .custom-form .ui-autocomplete-input,
+.custom-form .uneditable-input,
+.custom-form input[type="password"],
+.custom-form textarea {
+  border: none !important;
+  border-radius: 0 !important;
+}
+.modal label {
+  color: var(--modal-summary-label-color);
+}

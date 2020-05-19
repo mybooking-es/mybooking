@@ -3,136 +3,132 @@
 //==============================================
 
 .clearfix {
-	clear: both;
+  clear: both;
 }
 
 .eupopup-container {
-	background-color: #8ac53f;
-	color: #111;
-	padding: 5px 20px;
-	font-size: 12px;
-	line-height: 1.2em;
-	text-align: center;
-	display: none;
-	z-index: 9999999;
+  background-color: var(--cookies-bg-color);
+  color: var(--cookies-text-color);
+  padding: 5px 20px;
+  font-size: 12px;
+  line-height: 1.2em;
+  text-align: center;
+  display: none;
+  z-index: 9999999;
 }
 
 .eupopup-container-top,
 .eupopup-container-fixedtop {
-	position: absolute;
-	top: 0; left: 0; right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .eupopup-container-fixedtop {
-	position: fixed;
+  position: fixed;
 }
 
 .eupopup-container-bottom {
-	position: fixed;
-	bottom: 0; left: 0; right: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .eupopup-container-bottomleft {
-	position: fixed;
-	bottom: 10px;
-	left: 10px;
-	width: 300px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 300px;
 }
 
 .eupopup-container-bottomright {
-	position: fixed;
-	bottom: 10px;
-	right: 10px;
-	width: 300px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
 }
 
-.eupopup-closebutton {
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 1;
-	color: #FFF;
-	filter: alpha(opacity=20);
-	position: absolute;
-	font-family: 'Inter', helvetica, 'Helvetica Neue', 'Segoe UI', 'Open Sans', 'Ubuntu', sans-serif;
-	top: 0; left: 0;
-	padding: 12px 15px;
-}
-.eupopup-closebutton:hover,
-.eupopup-closebutton:active {
-	color: #111;
-	text-decoration: none;
+a.eupopup-closebutton {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--body-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 12px 15px;
+  transition: 0.4 ease-in-out;
+  &:hover {
+    color: var(--gray-700);
+  }
 }
 
 .eupopup-head {
-	font-size: 1.2em;
-	font-weight: bold;
-	text-transform: uppercase;
-	padding: 7px;
-	margin-right: 2rem;
-	color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 7px;
+  margin-right: 2rem;
+  color: var(--white);
 }
 
 .eupopup-body {
-	color: #111;
+  color: var(--cookies-text-color);
 }
 
 .eupopup-buttons {
-	float: right;
-	padding: 7px 0 5px 0;
+  float: right;
+  padding: 7px 0 5px 0;
 }
 
-.eupopup-button_1 {
-	background-color: #111;
-	padding: 5px 10px;
-	color: #8ac53f;
-	font-weight: normal;
-	font-size: 12px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
+.eupopup-button_1,
 .eupopup-button_2 {
-	background-color: #111;
-	padding: 5px 10px;
-	color: #8ac53f;
-	font-weight: normal;
-	font-size: 12px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+  background-color: var(--black);
+  padding: 5px 10px;
+  color: var(--cookies-bg-color);
+  font-weight: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .eupopup-button {
-	margin: 0 10px;
+  margin: 0 10px;
 }
 
 .eupopup-button:hover,
 .eupopup-button:focus {
-	opacity: .5;
+  opacity: 0.5;
 }
 
 body .eupopup-color-inverse {
-	color: #000;
-	background-color: rgba(255, 255, 255, 0.9);
+  color: var(black);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 body .eupopup-color-inverse .eupopup-head {
-	color: #000;
+  color: var(black);
 }
 
 body .eupopup-style-compact {
-	text-align: left;
-	padding: 15px 10px 15px 35px;
-	line-height: 15px;
+  text-align: left;
+  padding: 15px 10px 15px 35px;
+  line-height: 15px;
 }
 
 body .eupopup-style-compact .eupopup-head,
 body .eupopup-style-compact .eupopup-body,
 body .eupopup-style-compact .eupopup-buttons {
-	display: inline;
-	padding: 0;
-	margin: 0;
+  display: inline;
+  padding: 0;
+  margin: 0;
 }
 
 body .eupopup-style-compact .eupopup-button {
-	margin: 0 5px;
+  margin: 0 5px;
 }

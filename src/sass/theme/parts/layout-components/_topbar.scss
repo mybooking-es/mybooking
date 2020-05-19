@@ -1,6 +1,6 @@
 // Topbar
 .topbar {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   margin-top: 0;
   position: relative;
   z-index: 30;
@@ -35,8 +35,8 @@
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-  .topbar .menu,
-  .topbar .info_text {
+  .topbar .info_text,
+  .topbar_menu {
     display: none;
   }
   .topbar .info_link {
@@ -44,14 +44,13 @@
   }
   .topbar {
     text-align: center;
-    .topbar_menu {
-      float: none;
-      margin: 0.5rem auto;
-    }
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
-@media (min-width: 1024px) {
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
   .home .topbar {
     background-color: var(--home-topbar-bg);
   }

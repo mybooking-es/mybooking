@@ -24447,25 +24447,12 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
             transform: scale(1.5); } }
 
 :root {
-  --white: #ffffff;
-  --black: #000000;
-  --error: #b00020;
   --brand-primary: #8ac53f;
   --brand-primary-light: #bef870;
   --brand-primary-dark: #599400;
   --brand-secondary: #5c6ac4;
   --brand-secondary-light: #8f98f7;
   --brand-secondary-dark: #254093;
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #eeeeee;
-  --gray-300: #e0e0e0;
-  --gray-400: #bdbdbd;
-  --gray-500: #9e9e9e;
-  --gray-600: #757575;
-  --gray-700: #616161;
-  --gray-800: #424242;
-  --gray-900: #212121;
   --font-family: "Inter", sans-serif;
   --font-body: var(--font-family);
   --font-heading: var(--font-family);
@@ -24498,7 +24485,7 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --home-header-color: var(--white);
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
-  --home-header-top: calc(16px + 38.19px + var(--custom-logo-height));
+  --home-header-top: calc(37px + 1rem + var(--custom-logo-height));
   --footer-bg: var(--gray-800);
   --footer-color: var(--gray-50);
   --footer-color-link: var(--brand-primary);
@@ -24509,10 +24496,14 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --credits-color: var(--gray-100);
   --credits-color-link: var(--color-link);
   --credits-color-link-hover: var(--color-link-hover);
-  --selector-bg: var(--brand-secondary-light);
+  --cookies-bg-color: var(--brand-primary);
+  --cookies-text-color: var(--body-color);
   --home-selector-bg: rgba(255, 255, 255, 0.6);
+  --selector-bg: var(--brand-secondary-light);
   --selector-sticky-bg: var(--brand-secondary-light);
   --selector-color: var(--body-color);
+  --selector-sticky-color: var(--body-color);
+  --modal-summary-label-color: var(--body-color);
   --btn-bg-color: var(--brand-primary);
   --btn-bg-color-hover: var(--brand-primary-dark);
   --btn-border-color: var(--brand-primary);
@@ -24527,13 +24518,30 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   --step-title-color: var(--step-done-color);
   --summary-sticky-bg: var(--gray-900); }
 
+/*
+these properties do not need to be edited */
 :root {
-  --sticky-top-mobile-top-position: calc(var(--custom-logo-height) + 55px);
-  --card-static-margin-top-mobile: calc(var(--custom-logo-height) + 135px);
-  --extras-margin-top-mobile: calc(var(--custom-logo-height) + 125px);
-  --product-detail-margin-top-mobile: calc(var(--custom-logo-height) + 105px);
+  --white: #ffffff;
+  --black: #000000;
+  --error: #b00020;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #eeeeee;
+  --gray-300: #e0e0e0;
+  --gray-400: #bdbdbd;
+  --gray-500: #9e9e9e;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+  /*
+   Margin calc functions */
+  --sticky-top-mobile-top-position: calc(var(--custom-logo-height) + 53px);
+  --card-static-margin-top-mobile: calc(var(--custom-logo-height) + 129px);
+  --extras-margin-top-mobile: calc(var(--custom-logo-height) + 132px);
+  --product-detail-margin-top-mobile: calc(var(--custom-logo-height) + 102px);
   --summary-reservation-title-margin-top-mobile: calc(
-    var(--custom-logo-height) + 55px
+    var(--custom-logo-height) + 53px
   ); }
 
 @font-face {
@@ -25412,7 +25420,7 @@ img.wp-post-image {
     margin-bottom: 3rem; } }
 
 .topbar {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   margin-top: 0;
   position: relative;
   z-index: 30;
@@ -25438,18 +25446,17 @@ img.wp-post-image {
       margin: 0 0.5em; }
 
 @media (max-width: 991.98px) {
-  .topbar .menu,
-  .topbar .info_text {
+  .topbar .info_text,
+  .topbar_menu {
     display: none; }
   .topbar .info_link {
     margin: 0 2em; }
   .topbar {
-    text-align: center; }
-    .topbar .topbar_menu {
-      float: none;
-      margin: 0.5rem auto; } }
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; } }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .home .topbar {
     background-color: var(--home-topbar-bg); } }
 
@@ -25784,8 +25791,8 @@ a.dropdown-item {
   clear: both; }
 
 .eupopup-container {
-  background-color: #8ac53f;
-  color: #111;
+  background-color: var(--cookies-bg-color);
+  color: var(--cookies-text-color);
   padding: 5px 20px;
   font-size: 12px;
   line-height: 1.2em;
@@ -25821,22 +25828,19 @@ a.dropdown-item {
   right: 10px;
   width: 300px; }
 
-.eupopup-closebutton {
+a.eupopup-closebutton {
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
-  color: #FFF;
-  filter: alpha(opacity=20);
+  color: var(--body-color);
   position: absolute;
-  font-family: 'Inter', helvetica, 'Helvetica Neue', 'Segoe UI', 'Open Sans', 'Ubuntu', sans-serif;
   top: 0;
   left: 0;
-  padding: 12px 15px; }
-
-.eupopup-closebutton:hover,
-.eupopup-closebutton:active {
-  color: #111;
-  text-decoration: none; }
+  padding: 12px 15px;
+  -webkit-transition: 0.4 ease-in-out;
+  transition: 0.4 ease-in-out; }
+  a.eupopup-closebutton:hover {
+    color: var(--gray-700); }
 
 .eupopup-head {
   font-size: 1.2em;
@@ -25844,46 +25848,41 @@ a.dropdown-item {
   text-transform: uppercase;
   padding: 7px;
   margin-right: 2rem;
-  color: #fff; }
+  color: var(--white); }
 
 .eupopup-body {
-  color: #111; }
+  color: var(--cookies-text-color); }
 
 .eupopup-buttons {
   float: right;
   padding: 7px 0 5px 0; }
 
-.eupopup-button_1 {
-  background-color: #111;
-  padding: 5px 10px;
-  color: #8ac53f;
-  font-weight: normal;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
-
+.eupopup-button_1,
 .eupopup-button_2 {
-  background-color: #111;
+  background-color: var(--black);
   padding: 5px 10px;
-  color: #8ac53f;
+  color: var(--cookies-bg-color);
   font-weight: normal;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px; }
+  .eupopup-button_1:hover,
+  .eupopup-button_2:hover {
+    text-decoration: none; }
 
 .eupopup-button {
   margin: 0 10px; }
 
 .eupopup-button:hover,
 .eupopup-button:focus {
-  opacity: .5; }
+  opacity: 0.5; }
 
 body .eupopup-color-inverse {
-  color: #000;
+  color: var(black);
   background-color: rgba(255, 255, 255, 0.9); }
 
 body .eupopup-color-inverse .eupopup-head {
-  color: #000; }
+  color: var(black); }
 
 body .eupopup-style-compact {
   text-align: left;
@@ -26295,7 +26294,7 @@ This is the structure of the selector form
   position: fixed;
   padding: 10px 10px 0 10px;
   z-index: 10000;
-  color: var(--selector-color);
+  color: var(--selector-sticky-color);
   min-width: 100% !important;
   max-width: 100% !important;
   width: 100% !important;
@@ -27343,6 +27342,19 @@ a.magic-button.btn {
 @media (max-width: 767.98px) {
   .bold-on-mobile {
     font-weight: 800; } }
+
+.modal .custom-form input[type="text"],
+.custom-form textarea,
+.modal .flex-form-horizontal-box .flex-form-horizontal-item,
+.modal .custom-form .ui-autocomplete-input,
+.custom-form .uneditable-input,
+.custom-form input[type="password"],
+.custom-form textarea {
+  border: none !important;
+  border-radius: 0 !important; }
+
+.modal label {
+  color: var(--modal-summary-label-color); }
 
 .modal-body.summary-modal {
   padding: 0;

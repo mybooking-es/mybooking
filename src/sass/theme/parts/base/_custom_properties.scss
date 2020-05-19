@@ -2,10 +2,6 @@
 // MYBOOKING VARIABLES
 // ==========================================================================
 :root {
-  // Additional UI colors
-  --white: #ffffff;
-  --black: #000000;
-  --error: #b00020;
   // Theme colors
   --brand-primary: #8ac53f;
   --brand-primary-light: #bef870;
@@ -14,17 +10,6 @@
   --brand-secondary: #5c6ac4;
   --brand-secondary-light: #8f98f7;
   --brand-secondary-dark: #254093;
-  //  Gray  Colors
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #eeeeee;
-  --gray-300: #e0e0e0;
-  --gray-400: #bdbdbd;
-  --gray-500: #9e9e9e;
-  --gray-600: #757575;
-  --gray-700: #616161;
-  --gray-800: #424242;
-  --gray-900: #212121;
   // Base
   --font-family: "Inter", sans-serif;
   --font-body: var(--font-family);
@@ -64,7 +49,7 @@
   --home-header-color: var(--white);
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
-  --home-header-top: calc(16px + 38.19px + var(--custom-logo-height));
+  --home-header-top: calc(37px + 1rem + var(--custom-logo-height));
   // Footer
   --footer-bg: var(--gray-800);
   --footer-color: var(--gray-50);
@@ -77,11 +62,18 @@
   --credits-color: var(--gray-100);
   --credits-color-link: var(--color-link);
   --credits-color-link-hover: var(--color-link-hover);
+  // Cookies
+  --cookies-bg-color: var(--brand-primary);
+  --cookies-text-color: var(--body-color);
+
   // Selector
-  --selector-bg: var(--brand-secondary-light);
   --home-selector-bg: rgba(255, 255, 255, 0.6);
+  --selector-bg: var(--brand-secondary-light);
   --selector-sticky-bg: var(--brand-secondary-light);
   --selector-color: var(--body-color);
+  --selector-sticky-color: var(--body-color);
+  // Modidfy reservation selector inside modal
+  --modal-summary-label-color: var(--body-color);
   // Buttons
   --btn-bg-color: var(--brand-primary);
   --btn-bg-color-hover: var(--brand-primary-dark);
@@ -98,26 +90,38 @@
   --step-title-color: var(--step-done-color);
   // Summary
   --summary-sticky-bg: var(--gray-900);
-  // Nav Panels
-  // Modals
-  // Wizard form
-  // Wizard
-  // Modal form
-  // Contact form
 }
-// This does not need to be edited and maybe we could put it somewhere else
-// Margin calc functions
+
+/*
+these properties do not need to be edited */
 :root {
+  // Additional UI colors
+  --white: #ffffff;
+  --black: #000000;
+  --error: #b00020;
+  //  Gray  Colors
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #eeeeee;
+  --gray-300: #e0e0e0;
+  --gray-400: #bdbdbd;
+  --gray-500: #9e9e9e;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+  /*
+   Margin calc functions */
   // Choose product and Complete summary sticky bar
-  --sticky-top-mobile-top-position: calc(var(--custom-logo-height) + 55px);
+  --sticky-top-mobile-top-position: calc(var(--custom-logo-height) + 53px);
   // Card static
-  --card-static-margin-top-mobile: calc(var(--custom-logo-height) + 135px);
-  // Extras
-  --extras-margin-top-mobile: calc(var(--custom-logo-height) + 125px);
-  // Product detail on complete and summary
-  --product-detail-margin-top-mobile: calc(var(--custom-logo-height) + 105px);
-  // Summary
+  --card-static-margin-top-mobile: calc(var(--custom-logo-height) + 129px);
+  // Extras complete
+  --extras-margin-top-mobile: calc(var(--custom-logo-height) + 132px);
+  // Product detail on complete and summary (tablet sizes)
+  --product-detail-margin-top-mobile: calc(var(--custom-logo-height) + 102px);
+  // Summary reservation title
   --summary-reservation-title-margin-top-mobile: calc(
-    var(--custom-logo-height) + 55px
+    var(--custom-logo-height) + 53px
   );
 }

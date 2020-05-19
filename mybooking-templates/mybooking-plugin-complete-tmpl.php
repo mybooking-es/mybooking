@@ -30,7 +30,7 @@
             <div class="extra-content">
                 <h6 class="lead"><%=coverage.name%></h6>
                     <% if (coverage.max_quantity > 1) { %>
-                      <div class="input-group input-group-sm" style="width:90px;">
+                      <div class="input-group input-group-sm" style="width:100px;">
                           <div class="input-group-prepend">
                             <button class="btn btn-outline-secondary btn-minus-extra"
                               data-value="<%=coverage.code%>"
@@ -73,7 +73,7 @@
             <div class="extra-content">
                 <h6 class="lead"><%=extra.name%></h6>
                     <% if (extra.max_quantity > 1) { %>
-                      <div class="input-group input-group-sm" style="width:90px;">
+                      <div class="input-group input-group-sm" style="width:100px;">
                           <div class="input-group-prepend">
                             <button class="btn btn-outline-secondary btn-minus-extra"
                               data-value="<%=extra.code%>"
@@ -171,8 +171,6 @@
 
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
-
-  <!-- Descktop reservation detail -->
   <div class="product-detail-container d-none d-md-flex">
     <div class="product-detail-content">
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
