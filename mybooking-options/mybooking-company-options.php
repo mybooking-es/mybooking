@@ -21,9 +21,9 @@ function mybookinges_create_menu_company_info() {
   if (!current_user_can('manage_options') || current_user_can('administrator')) {
 
     add_submenu_page(
-      "configuracion",
-    	__("Información corporativa", 'mybooking'),
-    	__("Información corporativa", 'mybooking'),
+      "config",
+    	__("Datos del negocio", 'mybooking'),
+    	__("Datos del negocio", 'mybooking'),
     	"edit_pages",
     	"info",
     	"mybookinges_configuration_company_info"

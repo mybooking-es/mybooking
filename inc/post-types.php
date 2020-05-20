@@ -26,13 +26,16 @@ if ( $testimonial_active == 1 ) {
  require_once( get_template_directory() . '/mybooking-posts/mybooking-testimonial.php' );
 }
 
-$promo_active = get_option( "global_promo_active" );
-if ( $promo_active == 1 ) {
- require_once( get_template_directory() . '/mybooking-posts/mybooking-promo.php' );
+// $promo_active = get_option( "global_promo_active" );
+// if ( $promo_active == 1 ) {
+//  require_once( get_template_directory() . '/mybooking-posts/mybooking-promo.php' );
+// }
+
+$vehicle_active = get_option( "global_vehicle_active" );
+if ( $vehicle_active == 1 ) {
+ require_once( get_template_directory() . '/mybooking-posts/mybooking-vehicle.php' );
 }
 
-$product_active = get_option( "global_product_active" );
-if ( $product_active == 1 ) {
- require_once( get_template_directory() . '/mybooking-posts/mybooking-product.php' );
-}
+// Just for developement
+require_once( get_template_directory() . '/mybooking-posts/mybooking-popup.php' );
 ?>

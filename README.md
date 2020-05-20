@@ -175,3 +175,6 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Navigation panels with titles
 - Contact page options now on Global settings
 - Added topbar message area
+
+### 0.7.0
+- Added new module that brings new ways to promote content

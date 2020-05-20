@@ -36,7 +36,9 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		 */
 		load_theme_textdomain( 'mybooking', get_template_directory() . '/languages' );
 
-		// Add default posts and comments RSS feed links to head.
+		/*
+		* Add default posts and comments RSS feed links to head.
+		*/
 		add_theme_support( 'automatic-feed-links' );
 
 		/*
@@ -47,7 +49,9 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		 */
 		add_theme_support( 'title-tag' );
 
-		// This theme uses wp_nav_menu() in one location.
+		/*
+		* This theme uses wp_nav_menu() in one location.
+		*/
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'mybooking' ),
 		) );
@@ -86,19 +90,32 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 			'link',
 		) );
 
-		// Set up the WordPress core custom background feature.
+		/*
+		* Set up the WordPress core custom background feature.
+		*/
 		add_theme_support( 'custom-background', apply_filters( 'mybooking_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
 
-		// Set up the WordPress Theme logo feature.
+		/*
+		* Set up the WordPress Theme logo feature.
+		*/
 		add_theme_support( 'custom-logo' );
 
-		// Add support for responsive embedded content.
+		/*
+		* Add support for responsive embedded content.
+		*/
 		add_theme_support( 'responsive-embeds' );
 
-		// Check and setup theme default settings.
+		/*
+		* Gutenberg support
+		*/
+		add_theme_support( 'align-wide' );
+
+		/*
+		* Check and setup theme default settings.
+		*/
 		mybooking_setup_theme_default_settings();
 
 	}
@@ -106,18 +123,20 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 
 /**
  * Mybooking Configuration & functions
- *
  */
+
+// Options
 require_once( get_template_directory() . '/mybooking-options/mybooking-home-options.php' );
 require_once( get_template_directory() . '/mybooking-options/mybooking-company-options.php' );
 require_once( get_template_directory() . '/mybooking-options/mybooking-global-options.php' );
+require_once( get_template_directory() . '/mybooking-options/mybooking-promo-options.php' );
+// Functions
 require_once( get_template_directory() . '/mybooking-functions/mybooking-menus.php' );
 require_once( get_template_directory() . '/mybooking-functions/mybooking-categories.php' );
 
 
 /**
  * Post excerpts
- *
  */
 add_filter( 'excerpt_more', 'mybooking_custom_excerpt_more' );
 

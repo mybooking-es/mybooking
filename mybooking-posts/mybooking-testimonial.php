@@ -27,10 +27,10 @@ function create_testimonial() {
         'not_found_in_trash' => __('Ningún testimonio encontrado en la Papelera', 'mybooking'),
         'parent' => __('Testimonio padre', 'mybooking')
       ),
+      'show_ui' => true,
       'public' => true,
-      'menu_position' => 50,
+      'show_in_menu' => 'config',
       'supports' => array( 'title', 'editor', 'thumbnail' ),
-      'taxonomies' => array( '' ),
       'menu_icon' => 'dashicons-format-quote',
       'has_archive' => true
     )

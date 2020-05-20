@@ -24,9 +24,9 @@ function mybookinges_create_menu_global() {
   if (!current_user_can('manage_options') || current_user_can('administrator')) {
 
     add_submenu_page(
-      "configuracion",
-    	__("Opciones globales", 'mybooking'),
-    	__("Opciones globales", 'mybooking'),
+      "config",
+    	__("Sitio", 'mybooking'),
+    	__("Sitio", 'mybooking'),
     	"edit_pages",
     	"global",
     	"mybookinges_configuration_global"
