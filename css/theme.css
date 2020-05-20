@@ -26027,27 +26027,27 @@ body .eupopup-style-compact .eupopup-button {
   .icon-panel {
     width: 25%; } }
 
-.product_item {
+.vehicle_item {
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--gray-200); }
 
-.product_price {
+.vehicle_price {
   font-weight: 900;
   color: var(--brand-primary); }
 
-.product_image-link {
+.vehicle_image-link {
   display: block;
   height: 150px;
   overflow: hidden;
   margin-bottom: 1rem; }
 
-.product_title {
+.vehicle_title {
   font-weight: bolder; }
 
-.product_info-table {
+.vehicle_info-table {
   width: 100%; }
 
-.product_description {
+.vehicle_description {
   padding-top: 1rem; }
 
 .gallery {

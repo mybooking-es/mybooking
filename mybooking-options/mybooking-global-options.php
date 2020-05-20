@@ -3,10 +3,18 @@
 *		GLOBAL CONFIGURATION
 *  	--------------------
 *
-* 	Versión: 0.0.3
+* 	Versión: 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.2
+*
+*   Topbar activation
+*   Toggle button align
+*   Navigation panels
+*   Footer layout
+*   Choose page layout (deprecated)
+*   Module activation
+*   Contact page settings
 */
 
 add_action('admin_menu', 'mybookinges_create_menu_global');
@@ -29,32 +37,53 @@ function mybookinges_create_menu_global() {
 
 function mybookinges_register_options_global() {
 
-  // Definición de opciones
+  // Define options
   add_option("global_topbar","","","yes");
+  add_option("global_topbar_message","","","yes");
+
   add_option("global_navigation_layout","","","yes");
+
   add_option("global_navigation_panel_one","","","yes");
-  add_option("global_navigation_panel_two","","","yes");
   add_option("global_navigation_image_one","","","yes");
+  add_option("global_navigation_title_one","","","yes");
+  add_option("global_navigation_panel_two","","","yes");
   add_option("global_navigation_image_two","","","yes");
+  add_option("global_navigation_title_two","","","yes");
+
   add_option("global_footer_layout","","","yes");
-  add_option("global_list_layout","","","yes");
+
   add_option("global_testimonials_active","","","yes");
   add_option("global_promo_active","","","yes");
-  add_option("global_product_active","","","yes");
+  add_option("global_vehicle_active","","","yes");
 
-  // Registro de opciones
+  add_option("contact_section_title","","","yes");
+  add_option("contact_section_subtitle","","","yes");
+  add_option("contact_section_text","","","yes");
+  add_option("contact_map_code","","","yes");
+
+  // Register options
   register_setting("options_global", "global_topbar");
+  register_setting("options_global", "global_topbar_message");
+
   register_setting("options_global", "global_navigation_layout");
+
   register_setting("options_global", "global_navigation_panel_one");
-  register_setting("options_global", "global_navigation_panel_two");
   register_setting("options_global", "global_navigation_image_one");
+  register_setting("options_global", "global_navigation_title_one");
+  register_setting("options_global", "global_navigation_panel_two");
   register_setting("options_global", "global_navigation_image_two");
+  register_setting("options_global", "global_navigation_title_two");
+
   register_setting("options_global", "global_footer_layout");
-  register_setting("options_global", "global_list_layout");
+
   register_setting("options_global", "global_testimonial_active");
   register_setting("options_global", "global_promo_active");
-  register_setting("options_global", "global_product_active");
+  register_setting("options_global", "global_vehicle_active");
 
+  register_setting("options_company_info", "contact_section_title");
+  register_setting("options_company_info", "contact_section_subtitle");
+  register_setting("options_company_info", "contact_section_text");
+  register_setting("options_company_info", "contact_map_code");
 }
 
 function mybookinges_configuration_global() {
@@ -93,6 +122,14 @@ function mybookinges_configuration_global() {
             <input type="checkbox" name="global_topbar" <?php checked( $topbar_active, 1 ); ?> value="1"> <span class="description"><?php _e('Selecciona para activar el topbar', 'mybooking') ?></span>
           </td>
         </tr>
+        <tr valign="top">
+          <th scope="row"><?php _e('Mensaje destacado', 'mybooking') ?></th>
+          <td>
+            <?php $topbar_active = get_option( "global_topbar_message" ); ?>
+            <textarea name="global_topbar_message" cols="37" rows="10"><?php echo get_option('global_topbar_message'); ?></textarea>
+            <br><span class="description"><?php _e( 'Añade encima del topbar un texto o html destacado.', 'mybooking' ) ?></span>
+          </td>
+        </tr>
       </table>
 
       <hr>
@@ -102,6 +139,8 @@ function mybookinges_configuration_global() {
       <h2><?php _e('Navegación', 'mybooking') ?></h2>
 
       <table class="form-table">
+
+        <!-- Toggle button align -->
         <tr valign="top">
           <th scope="row"><?php _e( 'Escoge el estilo de navegación para móvil', 'mybooking' ) ?></th>
           <td>
@@ -110,31 +149,56 @@ function mybookinges_configuration_global() {
             <input type="radio" name="global_navigation_layout" <?php checked( $options_navigation, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Menú a la izquierda','mybooking') ?></strong></span>
           </td>
         </tr>
+
+        <!-- Panel 1 -->
         <tr valign="top">
-          <th scope="row"><?php _e( 'Activa o desactiva los paneles desplegables', 'mybooking' ) ?></th>
+          <th scope="row"><?php _e( 'Activar Panel 1', 'mybooking' ) ?></th>
           <td>
             <?php $panel_one_active = get_option( "global_navigation_panel_one" ); ?>
-            <input type="checkbox" name="global_navigation_panel_one" <?php checked( $panel_one_active, 1 ); ?> value="1"> <span class="description"><?php _e( 'Activa el panel desplegable uno', 'mybooking' ) ?></span><br><br>
-            <?php $panel_two_active = get_option( "global_navigation_panel_two" ); ?>
-            <input type="checkbox" name="global_navigation_panel_two" <?php checked( $panel_two_active, 1 ); ?> value="1"> <span class="description"><?php _e( 'Activa el panel desplegable dos', 'mybooking' ) ?></span>
+            <input type="checkbox" name="global_navigation_panel_one" <?php checked( $panel_one_active, 1 ); ?> value="1"> <span class="description"><?php _e( 'Activa el panel desplegable uno', 'mybooking' ) ?></span>
           </td>
         </tr>
 
         <?php if ( $panel_one_active == 1 ) { ?>
           <tr valign="top">
             <th scope="row"><?php _e( 'Icono del panel 1', 'mybooking' ) ?></th>
-            <td><input type="text" name="global_navigation_image_one" size="40" value="<?php echo get_option( 'global_navigation_image_one' ); ?>" />
-            <br><span class="description"><?php _e( 'Pega aquí la URL del icono para el panel uno', 'mybooking' ) ?></span></td>
+            <td>
+              <input type="text" name="global_navigation_image_one" size="40" value="<?php echo get_option( 'global_navigation_image_one' ); ?>" />
+              <br><span class="description"><?php _e( 'Pega aquí la URL del icono para el panel uno', 'mybooking' ) ?></span>
+            </td>
           </tr>
-        <?php } ?>
-        <?php if ( $panel_two_active == 1 ) { ?>
           <tr valign="top">
-            <th scope="row"><?php _e( 'Icono del panel 2', 'mybooking' ) ?></th>
-            <td><input type="text" name="global_navigation_image_two" size="40" value="<?php echo get_option( 'global_navigation_image_two' ); ?>" />
-            <br><span class="description"><?php _e( 'Pega aquí la URL del icono para el panel dos', 'mybooking' ) ?></span></td>
+            <th scope="row"><?php _e( 'Título Panel ', 'mybooking' ) ?></th>
+            <td>
+              <input type="text" name="global_navigation_title_one" size="40" value="<?php echo get_option( 'global_navigation_title_one' ); ?>" />
+            </td>
           </tr>
         <?php } ?>
 
+        <!-- Panel 2 -->
+        <tr valign="top">
+          <th scope="row"><?php _e( 'Activar Panel 2', 'mybooking' ) ?></th>
+          <td>
+            <?php $panel_two_active = get_option( "global_navigation_panel_two" ); ?>
+            <input type="checkbox" name="global_navigation_panel_two" <?php checked( $panel_two_active, 1 ); ?> value="1"> <span class="description"><?php _e( 'Activa el panel desplegable dos', 'mybooking' ) ?></span>
+          </td>
+        </tr>
+
+        <?php if ( $panel_two_active == 1 ) { ?>
+          <tr valign="top">
+            <th scope="row"><?php _e( 'Icono del panel 2', 'mybooking' ) ?></th>
+            <td>
+              <input type="text" name="global_navigation_image_two" size="40" value="<?php echo get_option( 'global_navigation_image_two' ); ?>" />
+              <br><span class="description"><?php _e( 'Pega aquí la URL del icono para el panel dos', 'mybooking' ) ?></span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <th scope="row"><?php _e( 'Título Panel 2', 'mybooking' ) ?></th>
+            <td>
+              <input type="text" name="global_navigation_title_two" size="40" value="<?php echo get_option( 'global_navigation_title_two' ); ?>" />
+            </td>
+          </tr>
+        <?php } ?>
       </table>
 
       <hr>
@@ -156,21 +220,6 @@ function mybookinges_configuration_global() {
 
       <hr>
 
-      <h2><?php _e('Listado de productos', 'mybooking') ?></h2>
-
-      <table class="form-table">
-        <tr valign="top">
-          <th scope="row"><?php _e('Estilo de presentación', 'mybooking') ?></th>
-          <td>
-            <?php $options_list = get_option( "global_list_layout" ); ?>
-            <input type="radio" name="global_list_layout" <?php checked( $options_list, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Cuadrícula','mybooking') ?></strong><br><?php _e('Muestra los vehiculos en una cuadrícula', 'mybooking') ?></span><br><br>
-            <input type="radio" name="global_list_layout" <?php checked( $options_list, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Lista', 'mybooking') ?></strong><br><?php _e('Muestra los vehiculos en una lista', 'mybooking') ?></span>
-          </td>
-        </tr>
-      </table>
-
-      <hr>
-
       <!-- Modules -->
 
       <h2><?php _e('Módulos extra', 'mybooking') ?></h2>
@@ -185,11 +234,42 @@ function mybookinges_configuration_global() {
             <?php $promo_active = get_option( "global_promo_active" ); ?>
             <input type="checkbox" name="global_promo_active" <?php checked( $promo_active, 1 ); ?> value="1"> <span class="description"><?php _e('Activar el módulo Promociones', 'mybooking') ?></span>
           <br>
-            <?php $product_active = get_option( "global_product_active" ); ?>
-            <input type="checkbox" name="global_product_active" <?php checked( $product_active, 1 ); ?> value="1"> <span class="description"><?php _e('Activar el módulo Productos', 'mybooking') ?></span>
+            <?php $vehicle_active = get_option( "global_vehicle_active" ); ?>
+            <input type="checkbox" name="global_vehicle_active" <?php checked( $vehicle_active, 1 ); ?> value="1"> <span class="description"><?php _e('Activar el módulo Vehículos', 'mybooking') ?></span>
           </td>
         </tr>
       </table>
+
+      <hr>
+
+      <!-- Contact page setup -->
+
+      <h2><?php _e('Página Contacto', 'mybooking') ?></h2>
+
+      <table class="form-table">
+        <tr valign="top">
+          <th scope="row"><?php _e('Título de la sección', 'mybooking') ?></th>
+          <td><input type="text" name="contact_section_title" size="40" value="<?php echo get_option('contact_section_title'); ?>" />
+          <br><span class="description"><?php _e('Aparece en el template Mybooking-contact', 'mybooking') ?></span></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><?php _e('Subtítulo de la sección', 'mybooking') ?></th>
+          <td><input type="text" name="contact_section_subtitle" size="40" value="<?php echo get_option('contact_section_subtitle'); ?>" />
+          <br><span class="description"><?php _e('Aparece en el template Mybooking-contact', 'mybooking') ?></span></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><?php _e('Texto de la sección', 'mybooking') ?></th>
+          <td><textarea name="contact_section_text" cols="37" rows="10"><?php echo get_option('contact_section_text'); ?></textarea>
+          <br><span class="description"><?php _e('Aparece en el template Mybooking-contact', 'mybooking') ?></span></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><?php _e('Mapa de localización', 'mybooking') ?></th>
+          <td><textarea name="contact_map_code" cols="37" rows="10"><?php echo get_option('contact_map_code'); ?></textarea>
+          <br><span class="description"><?php _e('Pega aquí el código de Google Maps', 'mybooking') ?></span></td>
+        </tr>
+      </table>
+
+      <hr>
 
       <p class="submit">
       	<input name="global_save" type="submit" class="button-primary" value="<?php _e('Guardar cambios', 'mybooking') ?>" />

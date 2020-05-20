@@ -1,9 +1,9 @@
 <?php
 /**
-*		Template Name: Mybooking Product Loop
-*  	-------------------------------------
+*		Template Name: Mybooking Vehicles
+*  	---------------------------------
 *
-* 	Versión: 0.0.3
+* 	Versión: 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.4
@@ -25,17 +25,15 @@ $container = get_theme_mod( 'mybooking_container_type' );
         <?php the_content(); ?>
 
         <?php
-          $args=array(
-          'post_type' => 'product',
-        );
-        $product_item = new WP_Query($args);
-        if( $product_item->have_posts() ) { ?>
-        <?php  while ( $product_item->have_posts() ) : $product_item->the_post(); ?>
+        $args=array( 'post_type' => 'vehicle' );
+        $vehicle_item = new WP_Query( $args );
+        if( $vehicle_item->have_posts() ) { ?>
+        <?php  while ( $vehicle_item->have_posts() ) : $vehicle_item->the_post(); ?>
 
-        <article class="row article product_item">
+        <article class="row article vehicle_item">
           <div class="col-md-3">
-            <div class="product_image">
-              <a class="product_image-link" href="<?php the_permalink(); ?>"
+            <div class="vehicle_image">
+              <a class="vehicle_image-link" href="<?php the_permalink(); ?>"
                 title="<?php esc_attr__('Ver','mybooking'); ?> <?php the_title(); ?>">
 
                 <?php the_post_thumbnail(); ?>
@@ -44,46 +42,46 @@ $container = get_theme_mod( 'mybooking_container_type' );
             </div>
           </div>
           <div class="col-md-7">
-            <div class="product_body">
-              <h2 class="product_title">
+            <div class="vehicle_body">
+              <h2 class="vehicle_title">
                 <a href="<?php the_permalink(); ?>"
-                  title="<?php esc_attr__('Ver','mybooking'); ?> <?php the_title(); ?>">
+                  title="<?php esc_attr__( 'Ver','mybooking' ); ?> <?php the_title(); ?>">
 
                   <?php the_title(); ?>
 
                 </a>
               </h2>
-              <div class="product_excerpt">
+              <div class="vehicle_excerpt">
 
                 <p>
 
                   <?php
-                      $info_fuel = get_post_meta(
+                      $vehicle_fuel = get_post_meta(
                         get_the_id(),
-                        'product_info_fuel',
+                        'vehicle_info_fuel',
                         true
                       );
-                      echo $info_fuel ?>
+                      echo $vehicle_fuel ?>
 
                   <br>
 
                   <?php
-                      $info_drive = get_post_meta(
+                      $vehicle_drive = get_post_meta(
                         get_the_id(),
-                        'product_info_drive',
+                        'vehicle_info_drive',
                         true
                       );
-                      echo $info_drive ?>
+                      echo $vehicle_drive ?>
 
                   <br>
 
                   <?php
-                      $info_km = get_post_meta(
+                      $vehicle_km = get_post_meta(
                         get_the_id(),
-                        'product_info_km',
+                        'vehicle_info_km',
                         true
                       );
-                      echo $info_km ?> km
+                      echo $vehicle_km ?> km
 
                 </p>
 
@@ -91,30 +89,30 @@ $container = get_theme_mod( 'mybooking_container_type' );
             </div>
           </div>
           <div class="col-md-2">
-            <div class="product_info_list">
-              <h2 class="product_price">
+            <div class="vehicle_info_list">
+              <h2 class="vehicle_price">
 
                 <?php
-                    $info_price_auto = get_post_meta(
+                    $vehicle_price_auto = get_post_meta(
                       get_the_id(),
-                      'product_info_price_auto',
+                      'vehicle_info_price_auto',
                       true
                     );
-                    echo $info_price_auto;
+                    echo $vehicle_price_auto;
 
-                    $info_price_manual = get_post_meta(
+                    $vehicle_price_manual = get_post_meta(
                       get_the_id(),
-                      'product_info_price_manual',
+                      'vehicle_info_price_manual',
                       true
                     );
-                    echo $info_price_manual;
+                    echo $vehicle_price_manual;
 
-                    $info_price_diesel = get_post_meta(
+                    $vehicle_price_diesel = get_post_meta(
                       get_the_id(),
-                      'product_info_price_diesel',
+                      'vehicle_info_price_diesel',
                       true
                     );
-                    echo $info_price_diesel
+                    echo $vehicle_price_diesel
                   ?>
 
               </h2>
@@ -127,7 +125,7 @@ $container = get_theme_mod( 'mybooking_container_type' );
 
       </main>
 
-      <?php understrap_pagination(); ?>
+      <?php mybooking_pagination(); ?>
 
     </div>
   </div>
