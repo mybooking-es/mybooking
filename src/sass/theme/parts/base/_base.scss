@@ -22,6 +22,7 @@ body {
   position: relative;
   font-family: var(--font-body);
   font-size: 16px;
+  background-color: var(--body-bg);
   color: var(--body-color);
 }
 // Avoid issues when showing modals

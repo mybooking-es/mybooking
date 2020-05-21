@@ -87,11 +87,13 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		) );
 
 		// Set up the WordPress core custom background feature.
+		// It has been removed because is managed through customizer
+/*		
 		add_theme_support( 'custom-background', apply_filters( 'mybooking_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
-
+*/
 		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
 
