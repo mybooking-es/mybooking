@@ -24544,6 +24544,10 @@ these properties do not need to be edited */
     var(--custom-logo-height) + 53px
   ); }
 
+@media (max-width: 991.98px) {
+  .margin-top-required {
+    margin-top: var(--sticky-top-mobile-top-position); } }
+
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -27134,13 +27138,6 @@ a.magic-button.btn {
     width: calc(50% - 20px); }
   .extras {
     margin-top: 0; } }
-
-@media (min-width: 1200px) {
-  .extra-wrapper {
-    width: calc(33% - 20px);
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0; } }
 
 .counter .center {
   width: 150px;

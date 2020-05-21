@@ -125,3 +125,10 @@ these properties do not need to be edited */
     var(--custom-logo-height) + 53px
   );
 }
+
+// Margin top required
+@media (max-width: 991.98px) {
+  .margin-top-required {
+    margin-top: var(--sticky-top-mobile-top-position);
+  }
+}
