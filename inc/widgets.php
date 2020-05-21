@@ -18,33 +18,19 @@ defined( 'ABSPATH' ) || exit;
  */
 
 function mybooking_widgets_init() {
+
+	// Navigation
 	register_sidebar(
 		array(
-			'name'          => __( 'Menú de navegación', 'mybooking' ),
+			'name'          => __( 'Menú Principal', 'mybooking' ),
 			'id'            => 'mybooking_primary_menu',
-	    'description'    => __( 'Área de widgets a continuación del menú principal', 'mybooking' ),
+	    'description'    => __( 'Área de widgets a la derecha del menú principal', 'mybooking' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 		)
 	);
-	register_sidebar(
-		array(
-			'name'          => __( 'Panel 1 del menú', 'mybooking' ),
-			'id'            => 'mybooking_panel_one',
-	    'description'    => __( 'Área de widgets en la barra de navegación', 'mybooking' ),
-			'before_widget' => '<div>',
-			'after_widget'  => '</div>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => __( 'Panel 2 del menú', 'mybooking' ),
-			'id'            => 'mybooking_panel_two',
-	    'description'    => __( 'Área de widgets en la barra de navegación', 'mybooking' ),
-			'before_widget' => '<div>',
-			'after_widget'  => '</div>',
-		)
-	);
+
+	// Home Header
 	register_sidebar(
 		array(
 			'name'          => __( 'Home Header Uno', 'mybooking' ),
@@ -63,6 +49,8 @@ function mybooking_widgets_init() {
 			'after_widget'  => '</div>',
 		)
 	);
+
+	// Landings
 	register_sidebar(
 		array(
 			'name'          => __( 'Lateral Páginas Mybooking', 'mybooking' ),
@@ -72,6 +60,8 @@ function mybooking_widgets_init() {
 			'after_widget'  => '</div>',
 		)
 	);
+
+	// Footer
 	register_sidebar(
 		array(
 			'name'          => __( 'Footer Uno', 'mybooking' ),
@@ -108,6 +98,66 @@ function mybooking_widgets_init() {
 			'after_widget'  => '</div>',
 		)
 	);
+
+	// Home Widgets
+	$widgets_visible = get_option("promo_home_widgets_active");
+	if ($widgets_visible == 1) {
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Home Widgets Uno','mybooking' ),
+				'id'            => 'home_widgets_1',
+				'description'   => __( 'Primera área de widgets en la Home','mybooking' ),
+				'before_widget' => '<div class="home-widgets widget-1">',
+				'after_widget'  => '</div>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => __( 'Home Widgets Dos','mybooking' ),
+				'id'            => 'home_widgets_2',
+				'description'   => __( 'Segunda área de widgets en la Home','mybooking' ),
+				'before_widget' => '<div class="home-widgets widget-2">',
+				'after_widget'  => '</div>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => __( 'Home Widgets Tres','mybooking' ),
+				'id'            => 'home_widgets_3',
+				'description'   => __( 'Tercera área de widgets en la Home','mybooking' ),
+				'before_widget' => '<div class="home-widgets widget-3">',
+				'after_widget'  => '</div>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => __( 'Home Widgets Cuatro','mybooking' ),
+				'id'            => 'home_widgets_4',
+				'description'   => __( 'Cuarta área de widgets en la Home','mybooking' ),
+				'before_widget' => '<div class="home-widgets widget-4">',
+				'after_widget'  => '</div>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => __( 'Home Widgets Cinco','mybooking' ),
+				'id'            => 'home_widgets_5',
+				'description'   => __( 'Quinta área de widgets en la Home','mybooking' ),
+				'before_widget' => '<div class="home-widgets widget-5">',
+				'after_widget'  => '</div>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => __( 'Home Widgets Seis','mybooking' ),
+				'id'            => 'home_widgets_6',
+				'description'   => __( 'Sexta área de widgets en la Home','mybooking' ),
+				'before_widget' => '<div class="home-widgets widget-6">',
+				'after_widget'  => '</div>',
+			)
+		);
+	}
 
 }
 add_action( 'widgets_init', 'mybooking_widgets_init' );

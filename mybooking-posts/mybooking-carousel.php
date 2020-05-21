@@ -27,10 +27,10 @@ function create_carousel() {
         'not_found_in_trash' => __( 'Ninguna imagen de carrusel encontrada en la Papelera','mybooking' ),
         'parent' => __( 'Imagen de carrusel superior','mybooking' )
       ),
+      'show_ui' => true,
       'public' => true,
-      'menu_position' => 50,
+      'show_in_menu' => 'config',
       'supports' => array( 'title', 'thumbnail' ),
-      'taxonomies' => array( '' ),
       'menu_icon' => 'dashicons-images-alt2',
       'has_archive' => true
     )

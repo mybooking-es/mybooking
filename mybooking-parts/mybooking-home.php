@@ -20,11 +20,11 @@ defined( 'ABSPATH' ) || exit;
 <!-- Header -->
 <?php get_template_part( 'mybooking-parts/home/mybooking-home-header' ); ?>
 
-<!-- Mybooking Promo Module -->
-<!-- <?php get_template_part( 'mybooking-parts/home/mybooking-home-promo' ); ?> -->
-
 <!-- WordPress Content -->
 <?php get_template_part( 'mybooking-parts/home/mybooking-home-content' ); ?>
+
+<!-- Mybooking Widgets Module -->
+<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets' ); ?>
 
 <!-- Mybooking News Module -->
 <?php get_template_part( 'mybooking-parts/home/mybooking-home-news' ); ?>

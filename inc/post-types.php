@@ -14,28 +14,29 @@ defined( 'ABSPATH' ) || exit;
 
 /**
  * Mybooking custom post types
- *
  */
+
+// Activates the Header background carousel if checked on Home options page
 $options_header_background = get_option( 'home_header_background' );
 if ( $options_header_background == 2 ) {
  require_once( get_template_directory() . '/mybooking-posts/mybooking-carousel.php' );
 }
 
-$testimonial_active = get_option( "global_testimonial_active" );
+// Activates the Testimonials carousel if checked on Home options page
+$testimonial_active = get_option( "home_testimonial_carousel_visibility" );
 if ( $testimonial_active == 1 ) {
  require_once( get_template_directory() . '/mybooking-posts/mybooking-testimonial.php' );
 }
 
-// $promo_active = get_option( "global_promo_active" );
-// if ( $promo_active == 1 ) {
-//  require_once( get_template_directory() . '/mybooking-posts/mybooking-promo.php' );
-// }
-
+// Activates the Vehicles custom post type if checked on Global options page
 $vehicle_active = get_option( "global_vehicle_active" );
 if ( $vehicle_active == 1 ) {
  require_once( get_template_directory() . '/mybooking-posts/mybooking-vehicle.php' );
 }
 
-// Just for developement
+// Activates the Popup custom post type if checked on Promo options page
+$popup_active = get_option( "promo_popup_active" );
+if ( $popup_active == 1 ) {
 require_once( get_template_directory() . '/mybooking-posts/mybooking-popup.php' );
+}
 ?>

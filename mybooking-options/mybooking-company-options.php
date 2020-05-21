@@ -11,19 +11,21 @@
 *   Company data
 *   Contact info
 *   Social links
-*   Google analytics ID
+*   Google Analytics ID
 */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 add_action('admin_menu', 'mybookinges_create_menu_company_info');
-add_action('admin_init', 'mybookinges_register_options_company_info');
 
 function mybookinges_create_menu_company_info() {
   if (!current_user_can('manage_options') || current_user_can('administrator')) {
 
     add_submenu_page(
       "config",
-    	__("Datos del negocio", 'mybooking'),
-    	__("Datos del negocio", 'mybooking'),
+    	__("Company info", 'mybooking'),
+    	__("Company info", 'mybooking'),
     	"edit_pages",
     	"info",
     	"mybookinges_configuration_company_info"
@@ -31,6 +33,8 @@ function mybookinges_create_menu_company_info() {
 
   }
 }
+
+add_action('admin_init', 'mybookinges_register_options_company_info');
 
 function mybookinges_register_options_company_info() {
 
