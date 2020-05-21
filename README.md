@@ -170,3 +170,11 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Custom properties rocks!
 - Navigation refactorized
 - WPML support
+
+### 0.6.13
+- Navigation panels with titles
+- Contact page options now on Global settings
+- Added topbar message area
+
+### 0.7.0
+- Added new module that brings new ways to promote content

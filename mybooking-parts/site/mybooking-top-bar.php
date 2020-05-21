@@ -8,14 +8,24 @@
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
 *
+*   Topbar message
+*   Topbar info links
+*   Top menu
 */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 ?>
 
+<div class="topbar-message" style="padding:.5rem 2rem;text-align:center;background-color:#333;color:#FFF;">
+  <?php $topbar_message = get_option("global_topbar_message");
+      if ($topbar_message !== '') { ?>
+        <?php echo $topbar_message ?>
+  <?php } ?>
+</div>
+
 <div class="topbar">
-  
+
   <span>
     <?php $company_phone = get_option("company_info_phone");
         if ($company_phone !== '') { ?>

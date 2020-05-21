@@ -3,10 +3,15 @@
 *		COMPANY INFO CONFIGURATION
 *  	--------------------------
 *
-* 	Versión: 0.0.4
+* 	Versión: 0.0.5
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
+*
+*   Company data
+*   Contact info
+*   Social links
+*   Google analytics ID
 */
 
 add_action('admin_menu', 'mybookinges_create_menu_company_info');
@@ -16,9 +21,9 @@ function mybookinges_create_menu_company_info() {
   if (!current_user_can('manage_options') || current_user_can('administrator')) {
 
     add_submenu_page(
-      "configuracion",
-    	__("Información corporativa", 'mybooking'),
-    	__("Información corporativa", 'mybooking'),
+      "config",
+    	__("Datos del negocio", 'mybooking'),
+    	__("Datos del negocio", 'mybooking'),
     	"edit_pages",
     	"info",
     	"mybookinges_configuration_company_info"
@@ -29,7 +34,7 @@ function mybookinges_create_menu_company_info() {
 
 function mybookinges_register_options_company_info() {
 
-  // Definición de opciones
+  // Define options
   add_option("company_info_trade_name","","","yes");
   add_option("company_info_name","","","yes");
   add_option("company_info_nif","","","yes");
@@ -47,12 +52,7 @@ function mybookinges_register_options_company_info() {
 
   add_option("company_info_google_analytics","","","yes");
 
-  add_option("contact_section_title","","","yes");
-  add_option("contact_section_subtitle","","","yes");
-  add_option("contact_section_text","","","yes");
-  add_option("contact_map_code","","","yes");
-
-  // Registro de opciones
+  // Register options
   register_setting("options_company_info", "company_info_trade_name");
   register_setting("options_company_info", "company_info_name");
   register_setting("options_company_info", "company_info_nif");
@@ -69,11 +69,6 @@ function mybookinges_register_options_company_info() {
   register_setting("options_company_info", "company_info_youtube_url");
 
   register_setting("options_company_info", "company_info_google_analytics");
-
-  register_setting("options_company_info", "contact_section_title");
-  register_setting("options_company_info", "contact_section_subtitle");
-  register_setting("options_company_info", "contact_section_text");
-  register_setting("options_company_info", "contact_map_code");
 
 }
 
@@ -190,39 +185,6 @@ function mybookinges_configuration_company_info() {
         <tr valign="top">
           <th scope="row"><?php _e('Introduce el ID de Google Analytics', 'mybooking') ?></th>
           <td><input type="text" name="company_info_google_analytics" size="40" value="<?php echo get_option('company_info_google_analytics', 'mybooking'); ?>" /></td>
-        </tr>
-      </table>
-
-      <hr>
-
-      <!-- Contact page setup -->
-
-      <div class="notice notice-error settings-error">
-        <p><strong>¡Los ajustes de la sección Contacto se eliminarán en próximas versiones!</strong></p>
-      </div>
-
-      <h2><?php _e('Página Contacto', 'mybooking') ?></h2>
-
-      <table class="form-table">
-        <tr valign="top">
-          <th scope="row"><?php _e('Título de la sección', 'mybooking') ?></th>
-          <td><input type="text" name="contact_section_title" size="40" value="<?php echo get_option('contact_section_title'); ?>" />
-          <br><span class="description"><?php _e('Aparece en el template Mybooking-contact', 'mybooking') ?></span></td>
-        </tr>
-        <tr valign="top">
-          <th scope="row"><?php _e('Subtítulo de la sección', 'mybooking') ?></th>
-          <td><input type="text" name="contact_section_subtitle" size="40" value="<?php echo get_option('contact_section_subtitle'); ?>" />
-          <br><span class="description"><?php _e('Aparece en el template Mybooking-contact', 'mybooking') ?></span></td>
-        </tr>
-        <tr valign="top">
-          <th scope="row"><?php _e('Texto de la sección', 'mybooking') ?></th>
-          <td><textarea name="contact_section_text" cols="37" rows="10"><?php echo get_option('contact_section_text'); ?></textarea>
-          <br><span class="description"><?php _e('Aparece en el template Mybooking-contact', 'mybooking') ?></span></td>
-        </tr>
-        <tr valign="top">
-          <th scope="row"><?php _e('Mapa de localización', 'mybooking') ?></th>
-          <td><textarea name="contact_map_code" cols="37" rows="10"><?php echo get_option('contact_map_code'); ?></textarea>
-          <br><span class="description"><?php _e('Pega aquí el código de Google Maps', 'mybooking') ?></span></td>
         </tr>
       </table>
 

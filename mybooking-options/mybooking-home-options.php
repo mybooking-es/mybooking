@@ -20,25 +20,25 @@ function mybookinges_create_menu_home() {
   if (!current_user_can('manage_options') || current_user_can('administrator')) {
 
     add_menu_page(
-    	__("MyBooking", 'mybooking'),
-    	__("MyBooking", 'mybooking'),
+    	__("Mybooking", 'mybooking'),
+    	__("Mybooking", 'mybooking'),
     	"edit_pages",
-    	"configuracion",
+    	"config",
     	"mybookinges_configuration_home",
     	"dashicons-admin-generic",
     	4.1
     	);
 
     add_submenu_page(
-    	"configuracion",
-    	__("Página de inicio", 'mybooking'),
-    	__("Página de inicio", 'mybooking'),
+    	"config",
+    	__("Home", 'mybooking'),
+    	__("Home", 'mybooking'),
     	"edit_pages",
     	"home",
     	"mybookinges_configuration_home"
     	);
     // Remove the 'automatic' add option with the same slug
-    remove_submenu_page('configuracion', 'configuracion');
+    remove_submenu_page('config', 'config');
   }
 
 }
