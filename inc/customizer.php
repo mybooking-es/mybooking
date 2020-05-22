@@ -506,32 +506,34 @@ class MyBookingCustomizer {
 			      'capability' => 'edit_theme_options', 
 			   )
 			);
-/*
-$wp_customize->add_setting( 'sample_default_radio',
-   array(
-      'default' => 'spider-man',
-      'transport' => 'refresh',
-      'sanitize_callback' => 'skyrocket_radio_sanitization'
-   )
-);
- 
-$wp_customize->add_control( 'sample_default_radio',
-   array(
-      'label' => __( 'Standard Radio Control' ),
-      'description' => esc_html__( 'Sample description' ),
-      'section' => 'default_controls_section',
-      'priority' => 10, // Optional. Order priority to load the control. Default: 10
-      'type' => 'radio',
-      'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
-      'choices' => array( // Optional.
-         'captain-america' => __( 'Captain America' ),
-         'iron-man' => __( 'Iron Man' ),
-         'spider-man' => __( 'Spider-Man' ),
-         'thor' => __( 'Thor' )
-      )
-   )
-);
-*/
+
+			// Columns
+			$wp_customize->add_setting( 'mybooking_home_header_layout',
+			   array(
+			      'default' => '0',
+			      'transport' => 'refresh',
+//			      'sanitize_callback' => 'skyrocket_radio_sanitization'
+			   )
+			);
+			 
+			$wp_customize->add_control( 'mybooking_home_header_layout',
+			   array(
+			      'label' => _x( 'Layout', 'customizer_home', 'mybooking' ),
+			      'description' => esc_html_x( 'Define the widget areas on header layout', 'customizer_home', 'mybooking'  ),
+			      'section' => 'mybooking_theme_home_options',
+			      'priority' => 20, 
+			      'type' => 'radio',
+			      'capability' => 'edit_theme_options',
+			      'choices' => array( 
+			         '0' => _x( 'Two columns (50% - 50%)', 'customizer_home', 'mybooking' ),
+			         '1' => _x( 'Two columns (25% - 75%)', 'customizer_home', 'mybooking' ),
+			         '2' => _x( 'Two columns (75% - 25%)', 'customizer_home', 'mybooking' ),			         
+			         '3' => _x( 'One column', 'customizer_home', 'mybooking' ),
+
+			      )
+			   )
+			);
+
 
     }
 

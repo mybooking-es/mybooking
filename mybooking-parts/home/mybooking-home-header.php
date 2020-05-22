@@ -79,34 +79,64 @@ defined( 'ABSPATH' ) || exit;
   <div id="home-header_content_container" class="container home-header_content_container">
     <div class="row justify-content-center">
 
-      <?php $options_header_layout = get_option( 'home_header_layout' );
+      <?php $options_header_layout = get_theme_mod( 'mybooking_home_header_layout' );
       if ( $options_header_layout == 0 ) { ?>
 
-      <div class="home-header_content home-left col-12 col-lg-6 col-xl-4">
-        <!-- Widget Left -->
-        <?php if ( is_active_sidebar( 'mybooking_home_izquierda' ) ) : ?>
-        <?php dynamic_sidebar( 'mybooking_home_izquierda' ); ?>
-        <?php endif; ?>
-      </div>
-      <div class="home-header_content home-right col-12 col-lg-6 offset-xl-4 col-xl-4">
-        <!-- Widget Right -->
-        <?php if ( is_active_sidebar( 'mybooking_home_derecha' ) ) : ?>
-        <?php dynamic_sidebar( 'mybooking_home_derecha' ); ?>
-        <?php endif; ?>
-      </div>
+        <div class="home-header_content home-left col-12 col-lg-6">
+          <!-- Widget Left -->
+          <?php if ( is_active_sidebar( 'mybooking_home_izquierda' ) ) : ?>
+          <?php dynamic_sidebar( 'mybooking_home_izquierda' ); ?>
+          <?php endif; ?>
+        </div>
+        <div class="home-header_content home-right col-12 col-lg-6">
+          <!-- Widget Right -->
+          <?php if ( is_active_sidebar( 'mybooking_home_derecha' ) ) : ?>
+          <?php dynamic_sidebar( 'mybooking_home_derecha' ); ?>
+          <?php endif; ?>
+        </div>
 
       <?php } elseif ( $options_header_layout == 1 ) { ?>
 
-      <div class="home-header_content home-alone col">
-        <!-- Widget Left -->
-        <?php if ( is_active_sidebar( 'mybooking_home_izquierda' ) ) : ?>
-        <?php dynamic_sidebar( 'mybooking_home_izquierda' ); ?>
-        <?php endif; ?>
-        <!-- Widget Right -->
-        <?php if ( is_active_sidebar( 'mybooking_home_derecha' ) ) : ?>
-        <?php dynamic_sidebar( 'mybooking_home_derecha' ); ?>
-        <?php endif; ?>
-      </div>
+        <div class="home-header_content home-left col-12 col-lg-3">
+          <!-- Widget Left -->
+          <?php if ( is_active_sidebar( 'mybooking_home_izquierda' ) ) : ?>
+          <?php dynamic_sidebar( 'mybooking_home_izquierda' ); ?>
+          <?php endif; ?>
+        </div>
+        <div class="home-header_content home-right col-12 col-lg-9">
+          <!-- Widget Right -->
+          <?php if ( is_active_sidebar( 'mybooking_home_derecha' ) ) : ?>
+          <?php dynamic_sidebar( 'mybooking_home_derecha' ); ?>
+          <?php endif; ?>
+        </div>
+
+      <?php } elseif ( $options_header_layout == 2 ) { ?>
+
+        <div class="home-header_content home-left col-12 col-lg-9">
+          <!-- Widget Left -->
+          <?php if ( is_active_sidebar( 'mybooking_home_izquierda' ) ) : ?>
+          <?php dynamic_sidebar( 'mybooking_home_izquierda' ); ?>
+          <?php endif; ?>
+        </div>
+        <div class="home-header_content home-right col-12 col-lg-3">
+          <!-- Widget Right -->
+          <?php if ( is_active_sidebar( 'mybooking_home_derecha' ) ) : ?>
+          <?php dynamic_sidebar( 'mybooking_home_derecha' ); ?>
+          <?php endif; ?>
+        </div>
+
+      <?php } elseif ( $options_header_layout == 3 ) { ?>
+
+        <div class="home-header_content home-alone col">
+          <!-- Widget Left -->
+          <?php if ( is_active_sidebar( 'mybooking_home_izquierda' ) ) : ?>
+          <?php dynamic_sidebar( 'mybooking_home_izquierda' ); ?>
+          <?php endif; ?>
+          <!-- Widget Right -->
+          <?php if ( is_active_sidebar( 'mybooking_home_derecha' ) ) : ?>
+          <?php dynamic_sidebar( 'mybooking_home_derecha' ); ?>
+          <?php endif; ?>
+        </div>
 
       <?php } ?>
 

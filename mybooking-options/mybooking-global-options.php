@@ -28,7 +28,7 @@ function mybookinges_create_menu_global() {
     	"edit_pages",
     	"config",
     	"mybookinges_configuration_home",
-    	"dashicons-admin-generic",
+    	get_template_directory_uri()."/images/mybooking-logo-bn.png",
     	4.1
     	);
 

@@ -39,7 +39,6 @@ add_action('admin_init', 'mybookinges_register_options_home');
 function mybookinges_register_options_home() {
 
   // Define options
-  add_option("home_header_layout","","","yes");
   add_option("home_header_background","","","yes");
   add_option("home_header_image","","","yes");
   add_option("home_header_video","","","yes");
@@ -47,7 +46,6 @@ function mybookinges_register_options_home() {
   add_option("home_testimonial_carousel_visibility","","","yes");
 
   // Register options
-  register_setting("options_home", "home_header_layout");
   register_setting("options_home", "home_header_background");
   register_setting("options_home", "home_header_image");
   register_setting("options_home", "home_header_video");
@@ -81,18 +79,6 @@ function mybookinges_configuration_home() {
       <?php settings_fields('options_home'); ?>
 
       <!-- Home Header -->
-
-      <h2><?php _e('Cabecera de la página de inicio', 'mybooking') ?></h2>
-
-      <table class="form-table">
-        <tr valign="top">
-          <th scope="row"><?php _e( 'Estructura de la cabecera', 'mybooking' ) ?></th>
-          <td>
-          <?php $options_header_layout = get_option( "home_header_layout" ); ?>
-          <input type="radio" name="home_header_layout" <?php checked( $options_header_layout, 0 ); ?> value="0"><span class="description"><strong><?php _e('Dos columnas','mybooking') ?></strong><br><?php _e('Dos columnas con dos areas para widgets', 'mybooking', 'mybooking') ?></span><br><br>
-          <input type="radio" name="home_header_layout" <?php checked( $options_header_layout, 1 ); ?> value="1"><span class="description"><strong><?php _e('Una columna', 'mybooking') ?></strong><br><?php _e('Una columna con dos zonas para widgets', 'mybooking') ?></span>
-        </tr>
-      </table>
 
       <table class="form-table">
         <tr valign="top">
