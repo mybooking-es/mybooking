@@ -38,17 +38,17 @@ defined( 'ABSPATH' ) || exit;
 
   <!-- Backgrounds -->
 
-  <?php $options_header_background = get_theme_mod( "mybooking_home_header_bg" );
+  <?php $options_header_background = MyBookingCustomizer::getInstance()->get_theme_options()['mybooking_home_header_bg'];
   if ( $options_header_background == 0 ) { ?>
 
   <!-- Image background -->
-  <?php $image_header = get_theme_mod( "mybooking_home_header_image_bg" ); ?>
+  <?php $image_header = MyBookingCustomizer::getInstance()->get_theme_options()['mybooking_home_header_image_bg']; ?>
   <img class="home-header_background home-header_background-img" src="<?php echo $image_header ?>">
 
   <?php } elseif ( $options_header_background == 1 ) { ?>
 
   <!-- Video background -->
-  <?php $video_header = get_theme_mod( "mybooking_home_header_video_bg" ); ?>
+  <?php $video_header = MyBookingCustomizer::getInstance()->get_theme_options()['mybooking_home_header_video_bg']; ?>
   <div class="home-header_background-video-container">
     <video class="home-header_background-video" autoplay loop muted poster="<?php echo $image_header ?>">
       <source src="<?php echo $video_header ?>">
@@ -58,19 +58,14 @@ defined( 'ABSPATH' ) || exit;
   <?php } elseif ( $options_header_background == 2 ) { ?>
 
   <!-- Carrousel backgrond -->
-  <?php
-    $carousel_args = array( 'post_type' => 'carousel' );
-    $query = new WP_Query( $carousel_args );
-    if( $query->post_count > 0 ) {
-      $carousel_items = $query->get_posts(); ?>
   <div class="home-header_background home-header_background_carrusel portada-carrusel -carrusel-portada">
+    <?php $carousel_items = MyBookingCustomizer::getInstance()->get_theme_options()['mybooking_home_header_video_bg']; ?>
     <?php foreach($carousel_items as $carousel_item) :  ?>
     <div class="carrusel-item">
-      <?php echo get_the_post_thumbnail( $carousel_item ); ?>
+      <img src="<?php echo $carousel_item?>">
     </div>
     <?php endforeach; ?>
   </div>
-  <?php } ?>
 
   <?php } ?>
 

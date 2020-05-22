@@ -21,6 +21,8 @@ class MyBookingCustomizer {
 		// Hold the class instance.
 	  private static $instance = null;
 
+	  private $theme_options = null;
+
 	  // The constructor is private
 	  // to prevent initiation with outer code.
 	  private function __construct()
@@ -74,8 +76,11 @@ class MyBookingCustomizer {
 
 			$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 			$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-			//$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+			// Register control type for Gallery
+			$wp_customize->register_control_type( 'CustomizeGalleryControl' );
+
+			// Customize sections
 			$this->customize_layout_section( $wp_customize );
 			$this->customize_typography_section( $wp_customize );
 			$this->customize_colors_section( $wp_customize );
@@ -99,6 +104,58 @@ class MyBookingCustomizer {
 				'20130508',
 				true
 			);
+
+	  }
+
+    /**
+     * Get theme options
+     */
+	  function get_theme_options() {
+
+	  	if ( $this->$theme_options == null ) {
+		  	$this->$theme_options = array();
+		  	$header_bg = get_theme_mod( 'mybooking_home_header_bg' );
+		  	$this->$theme_options['mybooking_home_header_bg'] = $header_bg;
+
+		  	switch ( $header_bg ) {
+
+		  		case '0':
+				  	$header_image_bg = get_theme_mod( 'mybooking_home_header_image_bg' );
+						if ( empty( $header_image_bg ) ) {
+							$header_image_bg = get_template_directory_uri().'/images/bg-image.jpg';
+						}
+						$this->$theme_options['mybooking_home_header_image_bg'] = $header_image_bg;
+		  			break;
+
+		  		case '1':
+						$header_video_bg = get_theme_mod( 'mybooking_home_header_video_bg' );
+						if ( empty( $header_video_bg ) ) {
+							$header_video_bg = get_template_directory_uri().'/images/video-portada.m4v';
+						} else {
+							$header_video_bg = wp_get_attachment_url( $header_video_bg );
+						}
+						$this->$theme_options['mybooking_home_header_video_bg'] = $header_video_bg;
+		  		  break;
+
+		  		case '2':
+		  		  $header_carrousel_images = [];
+		  		  $header_carrousel_bg = get_theme_mod( 'mybooking_home_header_carrousel_bg' );
+		  		  if ( is_array( $header_carrousel_bg ) && !empty( $header_carrousel_bg ) ) {
+	  		  		foreach ( $header_carrousel_bg as $carrousel_img ) {
+	  		  			$img_src = wp_get_attachment_image_src( $carrousel_img, 'full' );
+	  		  			if ( is_array($img_src) ) {
+	  		  				$header_carrousel_images[] = $img_src[0];
+	  		  			}
+	  		  		}
+		  		  }
+		  		  $this->$theme_options['mybooking_home_header_video_bg'] = $header_carrousel_images;
+		  		  break;
+
+		  	}
+	  	}
+
+
+	  	return $this->$theme_options;
 
 	  }
 
@@ -180,6 +237,8 @@ class MyBookingCustomizer {
 			wp_add_inline_style( 'mybooking_customizer', $custom_css );
 
     }
+
+    // ----------------------- Customize Sections -----------------------------
 
     /**
      * Customize layout
@@ -840,7 +899,6 @@ class MyBookingCustomizer {
 	    $wp_customize->add_setting(
 	        'mybooking_home_header_image_bg',
 	        array(
-	            'default' => get_template_directory_uri().'/images/bg-image.jpg',
 	            'transport' => 'refresh'
 	        )
 	    );
@@ -862,7 +920,6 @@ class MyBookingCustomizer {
 	    $wp_customize->add_setting(
 	        'mybooking_home_header_video_bg',
 	        array(
-	           // 'default' => get_template_directory_uri().'/images/video-portada.m4v',
 	            'transport' => 'refresh'
 	        )
 	    );
@@ -880,6 +937,26 @@ class MyBookingCustomizer {
 	        )
 	    );
 
+	    // Background carrousel
+
+			$wp_customize->add_setting( 'mybooking_home_header_carrousel_bg', 
+				  array(
+			        'default' => array(),
+			        'transport' => 'refresh',
+			        'sanitize_callback' => 'wp_parse_id_list',
+			    ) 
+			);
+			
+			$wp_customize->add_control( new CustomizeGalleryControl(
+			        $wp_customize,
+			        'mybooking_home_header_carrouse_bgl',
+			        array(
+			            'label'    => _x( 'Background Carrousel', 'customizer_home', 'mybooking' ),
+			            'section'  => 'mybooking_theme_home_options',
+			            'settings' => 'mybooking_home_header_carrousel_bg',
+			            'type'     => 'image_gallery',
+			        )
+			    ) );
 
 			// Columns
 			$wp_customize->add_setting( 'mybooking_home_header_layout',
@@ -940,6 +1017,7 @@ class MyBookingCustomizer {
 
 require_once('customizer/alpha-color-picker.php');
 require_once('customizer/class-font-selector.php');
+require_once('customizer/gallery-control.php');
 MyBookingCustomizer::getInstance();
 
 

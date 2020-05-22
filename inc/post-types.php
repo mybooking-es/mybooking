@@ -16,12 +16,6 @@ defined( 'ABSPATH' ) || exit;
  * Mybooking custom post types
  */
 
-// Activates the Header background carousel if checked on Home options page
-$options_header_background = get_option( 'home_header_background' );
-if ( $options_header_background == 2 ) {
- require_once( get_template_directory() . '/mybooking-posts/mybooking-carousel.php' );
-}
-
 // Activates the Testimonials carousel if checked on Home options page
 $testimonial_active = get_option( "home_testimonial_carousel_visibility" );
 if ( $testimonial_active == 1 ) {
