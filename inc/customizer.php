@@ -78,10 +78,12 @@ class MyBookingCustomizer {
 
 			$this->customize_layout_section( $wp_customize );
 			$this->customize_typography_section( $wp_customize );
-			$this->customize_home_section( $wp_customize );
-			$this->customize_topbar_section( $wp_customize );
-			$this->customize_navbar_section( $wp_customize );			
 			$this->customize_colors_section( $wp_customize );
+			$this->customize_topbar_section( $wp_customize );
+			$this->customize_navbar_section( $wp_customize );
+			$this->customize_footer_section( $wp_customize );			
+			$this->customize_home_section( $wp_customize );
+
 
 	  }
 
@@ -734,6 +736,49 @@ class MyBookingCustomizer {
 		}
 
 		/**
+     * Customize Footer
+     */
+    private function customize_footer_section( $wp_customize ) {
+
+			// Section
+			$wp_customize->add_section(
+				'mybooking_theme_footer_options',
+				array(
+					'title'       => _x( 'Footer', 'customizer_footer', 'mybooking' ),
+					'capability'  => 'edit_theme_options',
+					'description' => _x( 'Footer', 'customizer_footer', 'mybooking' ),
+					'priority'    => 155,
+				)
+			);
+
+			// Mobile Toggler Position
+
+			// Columns
+			$wp_customize->add_setting( 'mybooking_global_footer_layout',
+			   array(
+			      'default' => '0',
+			      'transport' => 'refresh',
+//			      'sanitize_callback' => 'skyrocket_radio_sanitization'
+			   )
+			);
+			 
+			$wp_customize->add_control( 'mybooking_global_footer_layout',
+			   array(
+			      'label' => _x( 'Footer layout', 'customizer_footer', 'mybooking' ),
+			      'description' => esc_html_x( 'Footer layout (managed with widget areas)', 'customizer_footer', 'mybooking'  ),
+			      'section' => 'mybooking_theme_footer_options',
+			      'type' => 'radio',
+			      'capability' => 'edit_theme_options',
+			      'choices' => array( 
+			         '0' => _x( 'Four columns', 'customizer_footer', 'mybooking' ),
+			         '1' => _x( 'Minimal (show only copyright)', 'customizer_footer', 'mybooking' )
+			      )
+			   )
+			);
+
+		}
+
+		/**
      * Customize Home
      */
     private function customize_home_section( $wp_customize ) {
@@ -745,7 +790,7 @@ class MyBookingCustomizer {
 					'title'       => _x( 'Home Page', 'customizer_home', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
 					'description' => _x( 'Home Page', 'customizer_home', 'mybooking' ),
-					'priority'    => 155,
+					'priority'    => 156,
 				)
 			);
 

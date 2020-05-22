@@ -51,12 +51,10 @@ add_action('admin_init', 'mybookinges_register_options_global');
 function mybookinges_register_options_global() {
 
   // Define options
-  add_option("global_footer_layout","","","yes");
   add_option("global_testimonials_active","","","yes");
   add_option("global_vehicle_active","","","yes");
 
   // Register options
-  register_setting("options_global", "global_footer_layout");
   register_setting("options_global", "global_testimonial_active");
   register_setting("options_global", "global_vehicle_active");
 }
@@ -84,23 +82,6 @@ function mybookinges_configuration_global() {
     <form method="post" action="options.php">
 
       <?php settings_fields('options_global'); ?>
-
-      <!-- Footer -->
-
-      <h2><?php _e('Pie de página', 'mybooking') ?></h2>
-
-      <table class="form-table">
-        <tr valign="top">
-          <th scope="row"><?php _e('Footer', 'mybooking') ?></th>
-          <td>
-            <?php $options_footer = get_option( "global_footer_layout" ); ?>
-            <input type="radio" name="global_footer_layout" <?php checked( $options_footer, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Normal', 'mybooking') ?></strong><br><?php _e('Muestra cuatro columnas para widgets, información corporativa y enlaces sociales', 'mybooking') ?></span><br><br>
-            <input type="radio" name="global_footer_layout" <?php checked( $options_footer, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Mínimal','mybooking') ?></strong><br><?php _e('Solo muestra el copyright', 'mybooking') ?></span>
-          </td>
-        </tr>
-      </table>
-
-      <hr>
 
       <!-- Vehicle CPT -->
 
