@@ -38,17 +38,17 @@ defined( 'ABSPATH' ) || exit;
 
   <!-- Backgrounds -->
 
-  <?php $options_header_background = get_option( "home_header_background" );
+  <?php $options_header_background = get_theme_mod( "mybooking_home_header_bg" );
   if ( $options_header_background == 0 ) { ?>
 
   <!-- Image background -->
-  <?php $image_header = get_option( "home_header_image" ); ?>
+  <?php $image_header = get_theme_mod( "mybooking_home_header_image_bg" ); ?>
   <img class="home-header_background home-header_background-img" src="<?php echo $image_header ?>">
 
   <?php } elseif ( $options_header_background == 1 ) { ?>
 
   <!-- Video background -->
-  <?php $video_header = get_option( "home_header_video" ); ?>
+  <?php $video_header = get_theme_mod( "mybooking_home_header_video_bg" ); ?>
   <div class="home-header_background-video-container">
     <video class="home-header_background-video" autoplay loop muted poster="<?php echo $image_header ?>">
       <source src="<?php echo $video_header ?>">

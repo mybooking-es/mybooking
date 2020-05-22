@@ -811,6 +811,76 @@ class MyBookingCustomizer {
 			   )
 			);
 
+
+			// Background
+			$wp_customize->add_setting( 'mybooking_home_header_bg',
+			   array(
+			      'default' => '0',
+			      'transport' => 'refresh',
+//			      'sanitize_callback' => 'skyrocket_radio_sanitization'
+			   )
+			);
+			 
+			$wp_customize->add_control( 'mybooking_home_header_bg',
+			   array(
+			      'label' => _x( 'Header section background', 'customizer_home', 'mybooking' ),
+			      'description' => esc_html_x( 'Define the header section background', 'customizer_home', 'mybooking'  ),
+			      'section' => 'mybooking_theme_home_options',
+			      'type' => 'radio',
+			      'capability' => 'edit_theme_options',
+			      'choices' => array( 
+			         '0' => _x( 'Background Image', 'customizer_home', 'mybooking' ),
+			         '1' => _x( 'Video', 'customizer_home', 'mybooking' ),			         
+			         '2' => _x( 'Carrousel', 'customizer_home', 'mybooking' )
+			      )
+			   )
+			);
+
+			// Background Image
+	    $wp_customize->add_setting(
+	        'mybooking_home_header_image_bg',
+	        array(
+	            'default' => get_template_directory_uri().'/images/bg-image.jpg',
+	            'transport' => 'refresh'
+	        )
+	    );
+
+	    $wp_customize->add_control(
+	        new WP_Customize_Image_Control(
+	            $wp_customize,
+	            'mybooking_home_header_image',
+	            array(
+	                'label' => _x( 'Background Image', 'customizer_home', 'mybooking' ),
+	                'section' => 'mybooking_theme_home_options',
+	                'settings' => 'mybooking_home_header_image_bg'
+	            )
+	        )
+	    );
+
+	    // Background Video
+
+	    $wp_customize->add_setting(
+	        'mybooking_home_header_video_bg',
+	        array(
+	           // 'default' => get_template_directory_uri().'/images/video-portada.m4v',
+	            'transport' => 'refresh'
+	        )
+	    );
+
+	    $wp_customize->add_control(
+	        new WP_Customize_Media_Control(
+	            $wp_customize,
+	            'mybooking_home_header_video',
+	            array(
+	                'label' => _x( 'Background Video', 'customizer_home', 'mybooking' ),
+	                'section' => 'mybooking_theme_home_options',
+	                'settings' => 'mybooking_home_header_video_bg',
+	                'mime_type' => 'video'
+	            )
+	        )
+	    );
+
+
 			// Columns
 			$wp_customize->add_setting( 'mybooking_home_header_layout',
 			   array(
