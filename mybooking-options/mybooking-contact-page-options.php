@@ -30,7 +30,7 @@ function mybookinges_create_menu_contact() {
   	"edit_pages",
   	"contact",
   	"mybookinges_configuration_contact",
-    2
+    3
   	);
 
   }

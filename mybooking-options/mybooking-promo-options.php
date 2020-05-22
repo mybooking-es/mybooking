@@ -24,7 +24,8 @@ function mybookinges_create_menu_promo() {
   	__("Promo setup", 'mybooking'),
   	"edit_pages",
   	"promo",
-  	"mybookinges_configuration_promo"
+  	"mybookinges_configuration_promo",
+    2
   	);
 
   }
