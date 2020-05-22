@@ -51,13 +51,11 @@ add_action('admin_init', 'mybookinges_register_options_global');
 function mybookinges_register_options_global() {
 
   // Define options
-  add_option("global_navigation_layout","","","yes");
   add_option("global_footer_layout","","","yes");
   add_option("global_testimonials_active","","","yes");
   add_option("global_vehicle_active","","","yes");
 
   // Register options
-  register_setting("options_global", "global_navigation_layout");
   register_setting("options_global", "global_footer_layout");
   register_setting("options_global", "global_testimonial_active");
   register_setting("options_global", "global_vehicle_active");
@@ -86,25 +84,6 @@ function mybookinges_configuration_global() {
     <form method="post" action="options.php">
 
       <?php settings_fields('options_global'); ?>
-
-      <!-- Navigation -->
-
-      <h2><?php _e('Navegación', 'mybooking') ?></h2>
-
-      <table class="form-table">
-
-        <!-- Toggle button align -->
-        <tr valign="top">
-          <th scope="row"><?php _e( 'Escoge el estilo de navegación para móvil', 'mybooking' ) ?></th>
-          <td>
-            <?php $options_navigation = get_option( "global_navigation_layout" ); ?>
-            <input type="radio" name="global_navigation_layout" <?php checked( $options_navigation, 0 ); ?> value="0"> <span class="description"><strong><?php _e('Menú a la derecha', 'mybooking') ?></strong></span><br><br>
-            <input type="radio" name="global_navigation_layout" <?php checked( $options_navigation, 1 ); ?> value="1"> <span class="description"><strong><?php _e('Menú a la izquierda','mybooking') ?></strong></span>
-          </td>
-        </tr>
-      </table>
-
-      <hr>
 
       <!-- Footer -->
 

@@ -44,7 +44,7 @@ defined( 'ABSPATH' ) || exit;
           } ?>
 
       <!-- Navigation -->
-      <?php $options_navigation = get_option( 'global_navigation_layout' );
+      <?php $options_navigation = get_theme_mod( 'mybooking_global_navigation_layout' );
         if ( $options_navigation == 0 ) {
             get_template_part( 'mybooking-parts/site/mybooking-navigation-right' );
           } else {
