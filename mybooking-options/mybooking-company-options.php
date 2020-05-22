@@ -28,7 +28,8 @@ function mybookinges_create_menu_company_info() {
     	__("Company info", 'mybooking'),
     	"edit_pages",
     	"info",
-    	"mybookinges_configuration_company_info"
+    	"mybookinges_configuration_company_info",
+      1
     	);
 
   }

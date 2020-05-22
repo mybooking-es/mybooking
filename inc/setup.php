@@ -131,7 +131,6 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 
 // Options
 require_once( get_template_directory() . '/mybooking-options/mybooking-global-options.php' );
-require_once( get_template_directory() . '/mybooking-options/mybooking-home-options.php' );
 require_once( get_template_directory() . '/mybooking-options/mybooking-company-options.php' );
 require_once( get_template_directory() . '/mybooking-options/mybooking-promo-options.php' );
 require_once( get_template_directory() . '/mybooking-options/mybooking-contact-page-options.php' );

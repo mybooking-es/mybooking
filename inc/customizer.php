@@ -985,6 +985,45 @@ class MyBookingCustomizer {
 			   )
 			);
 
+			// == News visibility
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_home_news_visibility' , array(
+			    'default'   => '1',
+			    'transport' => 'refresh'
+			) );
+
+			$wp_customize->add_control( 'mybooking_home_news_visibility',
+			   array(
+			      'label' => _x( 'Activate news', 'customizer_home', 'mybooking' ),
+			      'description' => _x( 'Show last three posts on Home Page', 'customizer_topbar', 'mybooking' ),
+			      'section'  => 'mybooking_theme_home_options',
+			      'priority' => 30, // Optional. Order priority to load the control. Default: 10
+			      'type'=> 'checkbox',
+			      'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+			   )
+			);
+
+			// == Testimonials visibility
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_home_testimonial_carousel_visibility' , array(
+			    'default'   => '1',
+			    'transport' => 'refresh'
+			) );
+
+			$wp_customize->add_control( 'mybooking_home_testimonial_carousel_visibility',
+			   array(
+			      'label' => _x( 'Activate testimonials', 'customizer_home', 'mybooking' ),
+			      'description' => _x( 'Show testimonials in home page (it also activates the content type)', 'customizer_topbar', 'mybooking' ),
+			      'section'  => 'mybooking_theme_home_options',
+			      'priority' => 30, // Optional. Order priority to load the control. Default: 10
+			      'type'=> 'checkbox',
+			      'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+			   )
+			);
+
+
 
     }
 

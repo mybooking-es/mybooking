@@ -29,7 +29,8 @@ function mybookinges_create_menu_contact() {
   	__("Contact page", 'mybooking'),
   	"edit_pages",
   	"contact",
-  	"mybookinges_configuration_contact"
+  	"mybookinges_configuration_contact",
+    2
   	);
 
   }

@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
  */
 
 // Activates the Testimonials carousel if checked on Home options page
-$testimonial_active = get_option( "home_testimonial_carousel_visibility" );
+$testimonial_active = get_theme_mod( "mybooking_home_testimonial_carousel_visibility" );
 if ( $testimonial_active == 1 ) {
  require_once( get_template_directory() . '/mybooking-posts/mybooking-testimonial.php' );
 }
