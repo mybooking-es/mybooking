@@ -80,6 +80,7 @@ class MyBookingCustomizer {
 			$this->customize_typography_section( $wp_customize );
 			$this->customize_home_section( $wp_customize );
 			$this->customize_topbar_section( $wp_customize );
+			$this->customize_navbar_section( $wp_customize );			
 			$this->customize_colors_section( $wp_customize );
 
 	  }
@@ -475,6 +476,158 @@ class MyBookingCustomizer {
     }
 
 		/**
+     * Customize Top Bar
+     */
+    private function customize_navbar_section( $wp_customize ) {
+
+			// Section
+			$wp_customize->add_section(
+				'mybooking_theme_navbar_options',
+				array(
+					'title'       => _x( 'Nav Bar', 'customizer_navbar', 'mybooking' ),
+					'capability'  => 'edit_theme_options',
+					'description' => _x( 'Nav Bar', 'customizer_navbar', 'mybooking' ),
+					'priority'    => 153,
+				)
+			);
+
+			// == NavBar
+
+			// -- Background color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_navbar_bg' , array(
+			    'default'   => '#8ac53f',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
+					$wp_customize, 'navbar_bg', array(
+						'label'      => _x( 'NavBar background color', 'customizer_colors', 'mybooking' ),
+						'section'    => 'mybooking_theme_navbar_options',
+						'settings'   => 'mybooking_navbar_bg'
+			) ) );
+
+
+			// -- Link color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_navbar_link_color' , array(
+			    'default'   => '#ffffff',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
+					$wp_customize, 'navbar_link_color', array(
+						'label'      => _x( 'NavBar Link color', 'customizer_colors', 'mybooking' ),
+						'section'    => 'mybooking_theme_navbar_options',
+						'settings'   => 'mybooking_navbar_link_color'
+			) ) );
+
+			// -- Link hover color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_navbar_link_hover_color' , array(
+			    'default'   => '#ffffff',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
+					$wp_customize, 'navbar_link_hover_color', array(
+						'label'      => _x( 'NavBar Link hover color', 'customizer_colors', 'mybooking' ),
+						'section'    => 'mybooking_theme_navbar_options',
+						'settings'   => 'mybooking_navbar_link_hover_color'
+			) ) );
+
+			// -- Link active color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_navbar_link_active' , array(
+			    'default'   => '#212121',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
+					$wp_customize, 'navbar_link_active_color', array(
+						'label'      => _x( 'NavBar Link active color', 'customizer_colors', 'mybooking' ),
+						'section'    => 'mybooking_theme_navbar_options',
+						'settings'   => 'mybooking_navbar_link_active'
+			) ) );
+
+
+			// -- Drop Down Item Color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_navbar_dropdown_item_color' , array(
+			    'default'   => '#212121',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
+					$wp_customize, 'navbar_dropdown_item_color', array(
+						'label'      => _x( 'NavBar DropDown Item color', 'customizer_colors', 'mybooking' ),
+						'section'    => 'mybooking_theme_navbar_options',
+						'settings'   => 'mybooking_navbar_dropdown_item_color'
+			) ) );
+
+			// -- Drop Down Item Active Color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_navbar_dropdown_item_active_color' , array(
+			    'default'   => '#5c6ac4',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
+					$wp_customize, 'navbar_dropdown_item_active_color', array(
+						'label'      => _x( 'NavBar DropDown Item Active color', 'customizer_colors', 'mybooking' ),
+						'section'    => 'mybooking_theme_navbar_options',
+						'settings'   => 'mybooking_navbar_dropdown_item_active_color'
+			) ) );
+
+			// -- Link collapse color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_navbar_link_collapse' , array(
+			    'default'   => '#212121',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
+					$wp_customize, 'navbar_link_collapse', array(
+						'label'      => _x( 'NavBar Link collapse color', 'customizer_colors', 'mybooking' ),
+						'section'    => 'mybooking_theme_navbar_options',
+						'settings'   => 'mybooking_navbar_link_collapse'
+			) ) );
+
+			// --Toggler icon color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_navbar_toggler_icon' , array(
+			    'default'   => '#ffffff',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
+					$wp_customize, 'navbar_toggler_icon', array(
+						'label'      => _x( 'NavBar Toggler Icon color', 'customizer_colors', 'mybooking' ),
+						'section'    => 'mybooking_theme_navbar_options',
+						'settings'   => 'mybooking_navbar_toggler_icon'
+			) ) );
+
+
+
+		}
+
+		/**
      * Customize Home
      */
     private function customize_home_section( $wp_customize ) {
@@ -486,7 +639,7 @@ class MyBookingCustomizer {
 					'title'       => _x( 'Home Page', 'customizer_home', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
 					'description' => _x( 'Home Page', 'customizer_home', 'mybooking' ),
-					'priority'    => 153,
+					'priority'    => 154,
 				)
 			);
 
@@ -549,7 +702,7 @@ class MyBookingCustomizer {
 					'title'       => _x( 'Colors', 'customizer_colors', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
 					'description' => _x( 'Theme colors', 'customizer_colors', 'mybooking' ),
-					'priority'    => 154,
+					'priority'    => 155,
 				)
 			);
 
@@ -613,137 +766,6 @@ class MyBookingCustomizer {
 				'settings'   => 'mybooking_body_color',
 			) ) );
 
-			// == NavBar
-
-			// -- Background color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_navbar_bg' , array(
-			    'default'   => '#8ac53f',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
-					$wp_customize, 'navbar_bg', array(
-						'label'      => _x( 'NavBar background color', 'customizer_colors', 'mybooking' ),
-						'section'    => 'mybooking_theme_colors_options',
-						'settings'   => 'mybooking_navbar_bg'
-			) ) );
-
-
-			// -- Link color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_navbar_link_color' , array(
-			    'default'   => '#ffffff',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
-					$wp_customize, 'navbar_link_color', array(
-						'label'      => _x( 'NavBar Link color', 'customizer_colors', 'mybooking' ),
-						'section'    => 'mybooking_theme_colors_options',
-						'settings'   => 'mybooking_navbar_link_color'
-			) ) );
-
-			// -- Link hover color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_navbar_link_hover_color' , array(
-			    'default'   => '#ffffff',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
-					$wp_customize, 'navbar_link_hover_color', array(
-						'label'      => _x( 'NavBar Link hover color', 'customizer_colors', 'mybooking' ),
-						'section'    => 'mybooking_theme_colors_options',
-						'settings'   => 'mybooking_navbar_link_hover_color'
-			) ) );
-
-			// -- Link active color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_navbar_link_active' , array(
-			    'default'   => '#212121',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
-					$wp_customize, 'navbar_link_active_color', array(
-						'label'      => _x( 'NavBar Link active color', 'customizer_colors', 'mybooking' ),
-						'section'    => 'mybooking_theme_colors_options',
-						'settings'   => 'mybooking_navbar_link_active'
-			) ) );
-
-
-			// -- Drop Down Item Color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_navbar_dropdown_item_color' , array(
-			    'default'   => '#212121',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
-					$wp_customize, 'navbar_dropdown_item_color', array(
-						'label'      => _x( 'NavBar DropDown Item color', 'customizer_colors', 'mybooking' ),
-						'section'    => 'mybooking_theme_colors_options',
-						'settings'   => 'mybooking_navbar_dropdown_item_color'
-			) ) );
-
-			// -- Drop Down Item Active Color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_navbar_dropdown_item_active_color' , array(
-			    'default'   => '#5c6ac4',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
-					$wp_customize, 'navbar_dropdown_item_active_color', array(
-						'label'      => _x( 'NavBar DropDown Item Active color', 'customizer_colors', 'mybooking' ),
-						'section'    => 'mybooking_theme_colors_options',
-						'settings'   => 'mybooking_navbar_dropdown_item_active_color'
-			) ) );
-
-			// -- Link collapse color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_navbar_link_collapse' , array(
-			    'default'   => '#212121',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
-					$wp_customize, 'navbar_link_collapse', array(
-						'label'      => _x( 'NavBar Link collapse color', 'customizer_colors', 'mybooking' ),
-						'section'    => 'mybooking_theme_colors_options',
-						'settings'   => 'mybooking_navbar_link_collapse'
-			) ) );
-
-			// --Toggler icon color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_navbar_toggler_icon' , array(
-			    'default'   => '#ffffff',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
-					$wp_customize, 'navbar_toggler_icon', array(
-						'label'      => _x( 'NavBar Toggler Icon color', 'customizer_colors', 'mybooking' ),
-						'section'    => 'mybooking_theme_colors_options',
-						'settings'   => 'mybooking_navbar_toggler_icon'
-			) ) );
 
 
     }
