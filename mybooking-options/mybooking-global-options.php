@@ -51,16 +51,12 @@ add_action('admin_init', 'mybookinges_register_options_global');
 function mybookinges_register_options_global() {
 
   // Define options
-  add_option("global_topbar","","","yes");
-  add_option("global_topbar_message","","","yes");
   add_option("global_navigation_layout","","","yes");
   add_option("global_footer_layout","","","yes");
   add_option("global_testimonials_active","","","yes");
   add_option("global_vehicle_active","","","yes");
 
   // Register options
-  register_setting("options_global", "global_topbar");
-  register_setting("options_global", "global_topbar_message");
   register_setting("options_global", "global_navigation_layout");
   register_setting("options_global", "global_footer_layout");
   register_setting("options_global", "global_testimonial_active");
@@ -90,30 +86,6 @@ function mybookinges_configuration_global() {
     <form method="post" action="options.php">
 
       <?php settings_fields('options_global'); ?>
-
-      <!-- Topbar -->
-
-      <h2><?php _e('Topbar', 'mybooking') ?></h2>
-
-      <table class="form-table">
-        <tr valign="top">
-          <th scope="row"><?php _e('Activa o desactiva el topbar global', 'mybooking') ?></th>
-          <td>
-            <?php $topbar_active = get_option( "global_topbar" ); ?>
-            <input type="checkbox" name="global_topbar" <?php checked( $topbar_active, 1 ); ?> value="1"> <span class="description"><?php _e('Selecciona para activar el topbar', 'mybooking') ?></span>
-          </td>
-        </tr>
-        <tr valign="top">
-          <th scope="row"><?php _e('Mensaje destacado', 'mybooking') ?></th>
-          <td>
-            <?php $topbar_active = get_option( "global_topbar_message" ); ?>
-            <textarea name="global_topbar_message" cols="37" rows="10"><?php echo get_option('global_topbar_message'); ?></textarea>
-            <br><span class="description"><?php _e( 'Añade encima del topbar un texto o html destacado.', 'mybooking' ) ?></span>
-          </td>
-        </tr>
-      </table>
-
-      <hr>
 
       <!-- Navigation -->
 

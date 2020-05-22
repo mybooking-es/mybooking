@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 <body <?php body_class(); ?>>
   <?php do_action( 'wp_body_open' ); ?>
   <?php 
-    $navbar_integrated = get_option( "home_navbar_integrated" ); 
+    $navbar_integrated = get_theme_mod( "mybooking_home_navbar_integrated" ); 
     $navbar_class = ($navbar_integrated == 1 ? 'nav-container-absolute' : '');  
 
   ?>
@@ -38,7 +38,7 @@ defined( 'ABSPATH' ) || exit;
         href="#content"><?php esc_html_e( 'Skip to content', 'mybooking' ); ?></a>
 
       <!-- Topbar -->
-      <?php $topbar_active = get_option( "global_topbar" );
+      <?php $topbar_active = get_theme_mod( "mybooking_global_topbar" );
         if ( $topbar_active == 1 ) {
             get_template_part( 'mybooking-parts/site/mybooking-top-bar' );
           } ?>

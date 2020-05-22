@@ -20,8 +20,9 @@ $mybooking_includes = array(
 	'/pagination.php',                      // Custom pagination for this theme.
 	'/customizer.php',                      // Customizer additions.
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
-  '/post-types.php',                       // Custom Post Types.
-  '/post-functions.php'                    // Custom Post functions.
+  '/post-types.php',                      // Custom Post Types.
+  '/post-functions.php',                  // Custom Post functions.
+  '/typography.php'                       // Typography 
 );
 
 foreach ( $mybooking_includes as $file ) {

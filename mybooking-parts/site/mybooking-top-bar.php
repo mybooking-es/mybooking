@@ -17,12 +17,12 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="topbar-message" style="padding:.5rem 2rem;text-align:center;background-color:#333;color:#FFF;">
-  <?php $topbar_message = get_option("global_topbar_message");
-      if ($topbar_message !== '') { ?>
-        <?php echo $topbar_message ?>
-  <?php } ?>
-</div>
+<?php $topbar_message = get_theme_mod("mybooking_global_topbar_message");
+      if ( !empty( $topbar_message ) ) { ?>
+        <div class="topbar-message">
+          <?php echo $topbar_message ?>
+        </div>
+<?php } ?>
 
 <div class="topbar">
 

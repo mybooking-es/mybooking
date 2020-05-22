@@ -39,7 +39,6 @@ add_action('admin_init', 'mybookinges_register_options_home');
 function mybookinges_register_options_home() {
 
   // Define options
-  add_option("home_navbar_integrated", "1", "", "yes");
   add_option("home_header_layout","","","yes");
   add_option("home_header_background","","","yes");
   add_option("home_header_image","","","yes");
@@ -48,7 +47,6 @@ function mybookinges_register_options_home() {
   add_option("home_testimonial_carousel_visibility","","","yes");
 
   // Register options
-  register_setting("options_home", "home_navbar_integrated");
   register_setting("options_home", "home_header_layout");
   register_setting("options_home", "home_header_background");
   register_setting("options_home", "home_header_image");
@@ -83,24 +81,6 @@ function mybookinges_configuration_home() {
       <?php settings_fields('options_home'); ?>
 
       <!-- Home Header -->
-
-      <h2><?php _e('Navegación de la página de inicio', 'mybooking') ?></h2>
-
-      <table class="form-table">
-        <tr valign="top">
-          <th scope="row"><?php _e( 'Posición de la barra de navegación', 'mybooking' ) ?></th>
-          <td>
-          <?php $options_navbar_integrated = get_option( "home_navbar_integrated" ); ?>
-          <input type="radio" name="home_navbar_integrated" <?php checked( $options_navbar_integrated, 1 ); ?> value="1">
-            <span class="description"><strong><?php _e('Solapada con la cabecera','mybooking') ?></strong>
-            <br>
-            <?php _e('La barra de navegación queda integrada con la cabecera y tendrá un color de fondo transparente. <br>Diseño predeterminado del tema.',
-                     'mybooking', 'mybooking') ?></span><br><br>
-          <input type="radio" name="home_navbar_integrated" <?php checked( $options_navbar_integrated, 0 ); ?> value="0">
-            <span class="description"><strong><?php _e('Por encima de la cabecera', 'mybooking') ?></strong><br>
-            <?php _e('La barra de navegación queda por encima de la cabecera y tendrá el color de fondo corporativo', 'mybooking') ?></span>
-        </tr>
-      </table>
 
       <h2><?php _e('Cabecera de la página de inicio', 'mybooking') ?></h2>
 

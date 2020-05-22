@@ -76,11 +76,11 @@ class MyBookingCustomizer {
 			$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 			//$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-			//$wp_customize->register_control_type( 'ColorAlpha' );
-
 			$this->customize_layout_section( $wp_customize );
-			$this->customize_colors_section( $wp_customize );
+			$this->customize_typography_section( $wp_customize );
+			$this->customize_home_section( $wp_customize );
 			$this->customize_topbar_section( $wp_customize );
+			$this->customize_colors_section( $wp_customize );
 
 	  }
 
@@ -103,6 +103,9 @@ class MyBookingCustomizer {
 	   * Enqueue -> css-properties as inline styles
 	   */
     function customize_enqueue() {
+
+    	$typography_body = get_theme_mod( 'mybooking_font_body', 'default');
+    	$typography_heading = get_theme_mod( 'mybooking_font_heading', 'default');
 
     	$brand_primary = get_theme_mod( 'mybooking_brand_primary', '#8ac53f' );
     	$brand_secondary = get_theme_mod( 'mybooking_brand_secondary', '#5c6ac4' );
@@ -127,6 +130,21 @@ class MyBookingCustomizer {
 
 			// ==Build the css-properties
 		  $custom_css = ":root {";
+
+		  // Typography
+		  if ( !empty( $typography_body ) && $typography_body != 'default' ) {
+		  	$custom_css.= "--font-family: '".$typography_body."';";
+		  	$custom_css.= "--font-body: '".$typography_body."';";
+		  	font_selector_enqueue_google_font($typography_body);
+		  }
+
+		  if ( !empty ( $typography_heading ) && $typography_heading != 'default' && $typography_heading != $typography_body  ) {
+		  	$custom_css.= "--font-heading: '".$typography_heading."';";
+		  	font_selector_enqueue_google_font($typography_heading);
+		  }
+		  else if ( !empty ( $typography_heading ) && $typography_heading != $typography_body ) {
+		  	$custom_css.= "--font-heading: '".$typography_body."';";
+		  }
 
 		  // Brand primary & secondary
 		  $custom_css.= "--brand-primary: ".$brand_primary.';';
@@ -249,6 +267,71 @@ class MyBookingCustomizer {
 
     }
 
+
+    /**
+     * Customize layout
+     */
+    private function customize_typography_section( $wp_customize ) {
+
+			// Theme layout settings.
+			$wp_customize->add_section(
+				'mybooking_theme_typography_options',
+				array(
+					'title'       => _x( 'Typography', 'customizer_typography', 'mybooking' ),
+					'capability'  => 'edit_theme_options',
+					'description' => _x( 'Typography defaults', 
+															 'customizer_typography', 'mybooking' ),
+					'priority'    => 151,
+				)
+			);
+
+			// == Font body
+ 			
+ 			if ( class_exists( 'Font_Selector' ) ) {
+
+				$wp_customize->add_setting( 'mybooking_font_body', 
+	          array(
+	          	'transport' => 'refresh',
+	            'type' => 'theme_mod'
+	          )
+	      );
+	  
+	      $wp_customize->add_control(
+	          new Font_Selector(
+	              $wp_customize, 'mybooking_font_body', array(
+	                  'label'             => esc_html_x( 'Font Body family', 'customizer_typography', 'mybooking' ),
+	                  'description'       => _x('Select the body typography', 'customizer_typography', 'mybooking'),
+	                  'section'           => 'mybooking_theme_typography_options',
+	                  'priority'          => 20,
+	                  'type'              => 'select',
+	              )
+	          )
+	   	  );
+    
+				$wp_customize->add_setting( 'mybooking_font_heading', 
+	          array(
+	          	'transport' => 'refresh',
+	            'type' => 'theme_mod'
+	          )
+	      );
+	  
+	      $wp_customize->add_control(
+	          new Font_Selector(
+	              $wp_customize, 'mybooking_font_heading', array(
+	                  'label'             => esc_html_x( 'Font Heading family', 'customizer_typography', 'mybooking' ),
+	                  'description'       => _x('Select the heading typography', 'customizer_typography', 'mybooking'),
+	                  'section'           => 'mybooking_theme_typography_options',
+	                  'priority'          => 20,
+	                  'type'              => 'select',
+	              )
+	          )
+	   	  );
+
+    	}
+
+
+		}
+
 		/**
      * Customize Top Bar
      */
@@ -260,21 +343,23 @@ class MyBookingCustomizer {
 				array(
 					'title'       => _x( 'Top Bar', 'customizer_topbar', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
-					'description' => _x( 'Theme colors', 'customizer_topbar', 'mybooking' ),
-					'priority'    => 151,
+					'description' => _x( 'Top Bar', 'customizer_topbar', 'mybooking' ),
+					'priority'    => 152,
 				)
 			);
 
+			// == TopBar active
+
 			// Setting
-			$wp_customize->add_setting( 'mybooking_topbar_active' , array(
+			$wp_customize->add_setting( 'mybooking_global_topbar' , array(
 			    'default'   => '1',
 			    'transport' => 'refresh'
 			) );
 
-			$wp_customize->add_control( 'mybooking_topbar_active',
+			$wp_customize->add_control( 'mybooking_global_topbar',
 			   array(
 			      'label' => _x( 'Top Bar active', 'customizer_topbar', 'mybooking' ),
-			      'description' => _x( 'Top Bar active', 'customizer_topbar', 'mybooking' ),
+			      'description' => _x( 'If checked the TopBar will be shown on top of pages with company information and warning message. Uncheck to hide the TopBar', 'customizer_topbar', 'mybooking' ),
 			      'section'  => 'mybooking_theme_topbar_options',
 			      'priority' => 10, // Optional. Order priority to load the control. Default: 10
 			      'type'=> 'checkbox',
@@ -282,6 +367,171 @@ class MyBookingCustomizer {
 			   )
 			);
 
+			// == TopBar Notification message
+
+			$wp_customize->add_setting( 'mybooking_global_topbar_message',
+			   array(
+			      'default' => '',
+			      'transport' => 'refresh'
+			   )
+			);
+			 
+			$wp_customize->add_control( 'mybooking_global_topbar_message',
+			   array(
+			      'label' => _x( 'Hightlight message', 'customizer_topbar', 'mybooking' ),
+			      'description' => esc_html_x( 'Show a warning message to the users', 'customizer_topbar', 'mybooking' ),
+			      'section' => 'mybooking_theme_topbar_options',
+			      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+			      'type' => 'textarea',
+			      'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+			      'input_attrs' => array( // Optional.
+			         'class' => 'my-custom-class',
+			         'style' => 'border: 1px solid #999',
+			         'placeholder' => _x( 'Highlight text or HTML on top of Topbar.', 'customizer_topbar', 'mybooking' ),
+			      ),
+			   )
+			);
+
+			// == Colors
+
+			// Home background color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_home_topbar_bg' , array(
+			    'default'   => '#42424280',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
+					$wp_customize, 'home_topbar_bg', array(
+							'label'      => _x( 'Home TopBar background color', 'customizer_topbar', 'mybooking' ),
+							'section'    => 'mybooking_theme_topbar_options',
+							'settings'   => 'mybooking_home_topbar_bg'
+			) ) );
+
+			// -- Background color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_topbar_bg' , array(
+			    'default'   => '#212121',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
+					$wp_customize, 'topbar_bg', array(
+						'label'      => _x( 'TopBar background color', 'customizer_topbar', 'mybooking' ),
+						'section'    => 'mybooking_theme_topbar_options',
+						'settings'   => 'mybooking_topbar_bg'
+			) ) );
+
+			// -- Color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_topbar_color' , array(
+			    'default'   => '#212121',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'topbar_color', array(
+				'label'      => _x( 'TopBar color', 'customizer_topbar', 'mybooking' ),
+				'section'    => 'mybooking_theme_topbar_options',
+				'settings'   => 'mybooking_topbar_color',
+			) ) );
+
+			// -- Link Color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_topbar_link_color' , array(
+			    'default'   => '#212121',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'topbar_link_color', array(
+				'label'      => _x( 'TopBar link color', 'customizer_topbar', 'mybooking' ),
+				'section'    => 'mybooking_theme_topbar_options',
+				'settings'   => 'mybooking_topbar_link_color',
+			) ) );
+
+			// -- Link Hover
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_topbar_link_hover_color' , array(
+			    'default'   => '#fafafa',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'topbar_link_hover_color', array(
+				'label'      => _x( 'TopBar link hover color', 'customizer_topbar', 'mybooking' ),
+				'section'    => 'mybooking_theme_topbar_options',
+				'settings'   => 'mybooking_topbar_link_hover_color',
+			) ) );
+
+
+    }
+
+		/**
+     * Customize Home
+     */
+    private function customize_home_section( $wp_customize ) {
+
+			// Section
+			$wp_customize->add_section(
+				'mybooking_theme_home_options',
+				array(
+					'title'       => _x( 'Home Page', 'customizer_home', 'mybooking' ),
+					'capability'  => 'edit_theme_options',
+					'description' => _x( 'Home Page', 'customizer_home', 'mybooking' ),
+					'priority'    => 153,
+				)
+			);
+
+			// NavBar Integrated
+			$wp_customize->add_setting( 'mybooking_home_navbar_integrated' , array(
+			    'default'   => '1',
+			    'transport' => 'refresh'
+			) );
+
+			$wp_customize->add_control( 'mybooking_home_navbar_integrated',
+			   array(
+			      'label' => _x( 'NavBar integrated', 'customizer_home', 'mybooking' ),
+			      'description' => _x( 'If <b>checked</b> the navbar will be shown overlapped with header Section and transparent. Uncheck to be shown colored on top of Header section', 'customizer_home', 'mybooking' ),
+			      'section'  => 'mybooking_theme_home_options',
+			      'priority' => 10, 
+			      'type'=> 'checkbox',
+			      'capability' => 'edit_theme_options', 
+			   )
+			);
+/*
+$wp_customize->add_setting( 'sample_default_radio',
+   array(
+      'default' => 'spider-man',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'skyrocket_radio_sanitization'
+   )
+);
+ 
+$wp_customize->add_control( 'sample_default_radio',
+   array(
+      'label' => __( 'Standard Radio Control' ),
+      'description' => esc_html__( 'Sample description' ),
+      'section' => 'default_controls_section',
+      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'type' => 'radio',
+      'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+      'choices' => array( // Optional.
+         'captain-america' => __( 'Captain America' ),
+         'iron-man' => __( 'Iron Man' ),
+         'spider-man' => __( 'Spider-Man' ),
+         'thor' => __( 'Thor' )
+      )
+   )
+);
+*/
 
     }
 
@@ -297,7 +547,7 @@ class MyBookingCustomizer {
 					'title'       => _x( 'Colors', 'customizer_colors', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
 					'description' => _x( 'Theme colors', 'customizer_colors', 'mybooking' ),
-					'priority'    => 152,
+					'priority'    => 154,
 				)
 			);
 
@@ -359,85 +609,6 @@ class MyBookingCustomizer {
 				'label'      => _x( 'Body body color', 'customizer_colors', 'mybooking' ),
 				'section'    => 'mybooking_theme_colors_options',
 				'settings'   => 'mybooking_body_color',
-			) ) );
-
-			// == TopBar
-
-			// Home background color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_home_topbar_bg' , array(
-			    'default'   => '#42424280',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
-					$wp_customize, 'home_topbar_bg', array(
-							'label'      => _x( 'Home TopBar background color', 'customizer_colors', 'mybooking' ),
-							'section'    => 'mybooking_theme_colors_options',
-							'settings'   => 'mybooking_home_topbar_bg'
-			) ) );
-
-			// -- Background color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_topbar_bg' , array(
-			    'default'   => '#212121',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( 
-					$wp_customize, 'topbar_bg', array(
-						'label'      => _x( 'TopBar background color', 'customizer_colors', 'mybooking' ),
-						'section'    => 'mybooking_theme_colors_options',
-						'settings'   => 'mybooking_topbar_bg'
-			) ) );
-
-			// -- Color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_topbar_color' , array(
-			    'default'   => '#212121',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'topbar_color', array(
-				'label'      => _x( 'TopBar color', 'customizer_colors', 'mybooking' ),
-				'section'    => 'mybooking_theme_colors_options',
-				'settings'   => 'mybooking_topbar_color',
-			) ) );
-
-			// -- Link Color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_topbar_link_color' , array(
-			    'default'   => '#212121',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'topbar_link_color', array(
-				'label'      => _x( 'TopBar link color', 'customizer_colors', 'mybooking' ),
-				'section'    => 'mybooking_theme_colors_options',
-				'settings'   => 'mybooking_topbar_link_color',
-			) ) );
-
-			// -- Link Hover
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_topbar_link_hover_color' , array(
-			    'default'   => '#fafafa',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'topbar_link_hover_color', array(
-				'label'      => _x( 'TopBar link hover color', 'customizer_colors', 'mybooking' ),
-				'section'    => 'mybooking_theme_colors_options',
-				'settings'   => 'mybooking_topbar_link_hover_color',
 			) ) );
 
 			// == NavBar
@@ -601,6 +772,7 @@ class MyBookingCustomizer {
 }
 
 require_once('customizer/alpha-color-picker.php');
+require_once('customizer/class-font-selector.php');
 MyBookingCustomizer::getInstance();
 
 
