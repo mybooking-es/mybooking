@@ -13,16 +13,10 @@
 
 <div class="reservation-step">
   <!-- Reservation : Pickup/Return information -->
-  <?php $list_layout = get_option('global_list_layout');
-  if ($list_layout == 0) { ?>
-    <div class="">
-      <div id="reservation_detail" class="sticky-top"></div>
-      <div id="product_listing"></div>
-    </div>
-  <?php } else { ?>
-      <div id="reservation_detail" class="sticky-top"></div>
-      <div id="product_listing"></div>
-  <?php } ?>
+  <div class="">
+    <div id="reservation_detail" class="sticky-top"></div>
+    <div id="product_listing"></div>
+  </div>
 
   <!-- Modify reservation -->
   <?php if ( $args['selector_in_process'] != 'wizard' ) { ?>

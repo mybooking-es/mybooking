@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'mybooking_container_type' );
 ?>
 
-<?php $widgets_visible = get_option("promo_home_widgets_active");
+<?php $widgets_visible = MyBookingThemeSettings::getInstance()->get_theme_option( "promo_home_widgets_active" );
 if ($widgets_visible == 1) { ?>
 
   <div class="home-widgets">

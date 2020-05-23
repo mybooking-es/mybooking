@@ -21,6 +21,7 @@ class MyBookingCustomizer {
 		// Hold the class instance.
 	  private static $instance = null;
 
+	  // Holds the theme options
 	  private $theme_options = null;
 
 	  // The constructor is private
@@ -114,8 +115,17 @@ class MyBookingCustomizer {
 
 	  	if ( $this->$theme_options == null ) {
 		  	$this->$theme_options = array();
+		  		
+		  	// Global TopBar message
+		  	$this->$theme_options['mybooking_global_topbar_message'] = get_theme_mod( "mybooking_global_topbar_message" );
+
+		  	// Testimonials
+		  	$this->$theme_options['mybooking_home_testimonial_carousel_visibility'] = get_theme_mod( 'mybooking_home_testimonial_carousel_visibility' );
+
+		  	// Header
 		  	$header_bg = get_theme_mod( 'mybooking_home_header_bg' );
 		  	$this->$theme_options['mybooking_home_header_bg'] = $header_bg;
+
 
 		  	switch ( $header_bg ) {
 
@@ -154,8 +164,13 @@ class MyBookingCustomizer {
 		  	}
 	  	}
 
-
 	  	return $this->$theme_options;
+
+	  }
+
+	  function get_theme_option( $option ) {
+
+	  	return $this->get_theme_options()[ $option ];
 
 	  }
 

@@ -24,7 +24,7 @@
           <?php _e('¿Alguna duda?','mybooking') ?>
         </h3>
         <a class="action-block_text" href="<?php echo get_site_url(); ?>/contacto">
-          <?php $company_name = get_option("company_info_name");
+          <?php $company_name = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_name");
             if ($company_name !== '') { ?>
               <?php _e('Contacta con ','mybooking') ?>
               <?php echo $company_name ?>

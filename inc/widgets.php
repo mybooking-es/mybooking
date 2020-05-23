@@ -99,8 +99,21 @@ function mybooking_widgets_init() {
 		)
 	);
 
+	register_sidebar(
+		array(
+			'name'          => __( 'Contact Form', 'mybooking' ),
+			'id'            => 'mybooking_contact_form',
+			'description'   => __( 'Contact Form area', 'mybooking' ),
+			'before_widget' => '<div>',
+			'after_widget'  => '</div>',
+		)
+	);
+
+
+
+
 	// Home Widgets
-	$widgets_visible = get_option("promo_home_widgets_active");
+	$widgets_visible = MyBookingThemeSettings::getInstance()->get_theme_option( "promo_home_widgets_active" );
 	if ($widgets_visible == 1) {
 
 		register_sidebar(

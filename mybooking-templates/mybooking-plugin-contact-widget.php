@@ -56,7 +56,7 @@
 
           <div class="field is-grouped">
             <div class="control">
-              <button id="send_message_button" type="submit" class="button is-primary"><?php _e('Enviar','mybooking') ?></a>
+              <button id="send_message_button" type="submit" class="btn btn-primary is-primary"><?php _e('Enviar','mybooking') ?></a>
             </div>
           </div>
 

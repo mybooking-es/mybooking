@@ -121,9 +121,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 // Options
 // Prepare the theme settings page
 require_once( get_template_directory() . '/mybooking-options/mybooking-settings.php' );
-$settings = new MyBookingThemeSettings();
-require_once( get_template_directory() . '/mybooking-options/mybooking-promo-options.php' );
-require_once( get_template_directory() . '/mybooking-options/mybooking-contact-page-options.php' );
+MyBookingThemeSettings::getInstance();
 // Functions
 require_once( get_template_directory() . '/mybooking-functions/mybooking-menus.php' );
 require_once( get_template_directory() . '/mybooking-functions/mybooking-categories.php' );
