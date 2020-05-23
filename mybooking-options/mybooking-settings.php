@@ -379,6 +379,8 @@
 	             if ($active_tab == 'contact') {
 	            ?>
 	               <h2><?php echo _x('Contact Page', 'theme_settings', 'mybooking') ?></h2>
+	               <p><?php echo _x('It is used by <b>MyBooking Contact</b> template to render a full contact page.',
+	               								  'theme_settings', 'mybooking')?>
 	            <?php
             
 	             	 settings_fields('mybooking_theme_settings_group_contact');
