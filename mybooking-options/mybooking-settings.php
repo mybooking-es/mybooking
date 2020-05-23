@@ -370,6 +370,11 @@
             <?php   
 
 	             if ($active_tab == 'company_options') { 
+	            ?>
+	               <h2><?php echo _x('Company Data', 'theme_settings', 'mybooking') ?></h2>
+	               <p><?php echo _x('It is used on <b>TopBar</b>, <b>Footer</b> and <b>Contact Page</b> to render <u>company information</u>.',
+	               								  'theme_settings', 'mybooking')?></p>
+	             <?php  								  
 	             	 settings_fields('mybooking_theme_settings_group_company_info');
 	             	 echo '<table class="form-table">';
 	             	 do_settings_fields('settings', 'company_info_section');
@@ -537,14 +542,14 @@
 		public function field_mybooking_theme_promo_popup_active_callback() {
 
 			$this->checkbox_field( "mybooking_theme_settings_promo", "promo_popup_active", 
-														 _x( 'Activate Promotion Pop-ups.', 'theme_settings', 'mybooking')	);
+														 _x( 'Activate <b>Promotion Pop-ups</b> Custom Post Type in order to create promotions.', 'theme_settings', 'mybooking')	);
 
 		}
 
 		public function field_mybooking_theme_promo_home_widgets_active_callback() {
 
 			$this->checkbox_field( "mybooking_theme_settings_promo", "promo_home_widgets_active", 
-														 _x( 'Activate Promotion Widget Area in Home.', 'theme_settings', 'mybooking')	);
+														 _x( 'It activates up to 6 widgets areas on <b>MyBooking Home</b> template to show banners and promotions.', 'theme_settings', 'mybooking')	);
 
 		}
 
@@ -556,7 +561,7 @@
 		public function field_mybooking_theme_global_vehicle_active_callback() {
 
 			$this->checkbox_field( "mybooking_theme_settings_options_global", "global_vehicle_active", 
-														 _x( 'Activate Vehicles Custom Post Type extension.', 'theme_settings', 'mybooking')	);
+														 _x( 'Activate <b>Vehicles</b> Custom Post Type in order to create Fleet Page and Offers.', 'theme_settings', 'mybooking')	);
 
 		}
 
