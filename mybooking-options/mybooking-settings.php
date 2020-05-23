@@ -339,7 +339,7 @@
 
 		?>
 		  <div class="wrap">
-		  	  <h1>Mybooking</h1>
+		  	  <h1><?php echo _x("MyBooking Theme Setup", 'theme_settings', 'mybooking') ?></h1>
 
 					<?php
 	            $active_tab = isset( $_GET[ 'tab' ] ) ? sanitize_title( $_GET[ 'tab' ] ) : 'company_options';
@@ -371,7 +371,6 @@
 
 	             if ($active_tab == 'company_options') { 
 	            ?>
-	               <h2><?php echo _x('Company Data', 'theme_settings', 'mybooking') ?></h2>
 	               <p><?php echo _x('It is used on <b>TopBar</b>, <b>Footer</b> and <b>Contact Page</b> to render <u>company information</u>.',
 	               								  'theme_settings', 'mybooking')?></p>
 	             <?php  								  
@@ -383,9 +382,8 @@
 
 	             if ($active_tab == 'contact') {
 	            ?>
-	               <h2><?php echo _x('Contact Page', 'theme_settings', 'mybooking') ?></h2>
 	               <p><?php echo _x('It is used by <b>MyBooking Contact</b> template to render a full contact page.',
-	               								  'theme_settings', 'mybooking')?>
+	               								  'theme_settings', 'mybooking')?></p>
 	            <?php
             
 	             	 settings_fields('mybooking_theme_settings_group_contact');
@@ -397,7 +395,8 @@
 
 	             if ($active_tab == 'promotions') {
 	            ?>
-	               <h2><?php echo _x('Promotions', 'theme_settings', 'mybooking') ?></h2>
+	               <p><?php echo _x('Promotions module.',
+	               								  'theme_settings', 'mybooking')?></p>
 	            <?php
             
 	             	 settings_fields('mybooking_theme_settings_group_promo');
@@ -409,7 +408,8 @@
 
 	             if ($active_tab == 'global_settings') {
 	            ?>
-	               <h2><?php echo _x('Vehicles', 'theme_settings', 'mybooking') ?></h2>
+	               <p><?php echo _x('Global settings.',
+	               								  'theme_settings', 'mybooking')?></p>
 	            <?php
 	             	 settings_fields('mybooking_theme_settings_group_options_global');
 	             	 echo '<table class="form-table">';
