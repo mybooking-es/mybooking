@@ -16,8 +16,7 @@ defined( 'ABSPATH' ) || exit;
 <div class="container-fluid copy">
   <div class="row">
     <div class="col text-center">
-
-      <?php $company_trade_name = get_option("company_info_trade_name");
+      <?php $company_trade_name = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_trade_name");
       if ($company_trade_name !== '') { ?>
         <p class="footer_copyright">
           <small>

@@ -12,9 +12,9 @@
 
 <div class="contact-left-map">
 
-  <?php $contact_map = get_option("contact_map_code");
+  <?php $contact_map = MyBookingThemeSettings::getInstance()->get_theme_option("contact_map_code");
     if ($contact_map !== '') { ?>
-        <?php echo $contact_map ?>
+        <?php echo html_entity_decode( $contact_map ) ?>
   <?php } ?>
 
 </div>

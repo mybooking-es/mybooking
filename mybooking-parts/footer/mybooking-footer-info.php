@@ -35,7 +35,7 @@ defined( 'ABSPATH' ) || exit;
       <ul>
         <li>
 
-          <?php $company_name = get_option("company_info_name");
+          <?php $company_name = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_name");
             if ($company_name !== '') { ?>
               <?php echo $company_name ?>
           <?php } ?>
@@ -43,7 +43,7 @@ defined( 'ABSPATH' ) || exit;
         </li>
         <li>
 
-          <?php $company_id = get_option("company_info_nif");
+          <?php $company_id = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_nif");
             if ($company_id !== '') { ?>
               NIF: <?php echo $company_id ?>
           <?php } ?>
@@ -51,7 +51,7 @@ defined( 'ABSPATH' ) || exit;
         </li>
         <li>
 
-          <?php $company_adress = get_option("company_info_adress");
+          <?php $company_adress = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_adress");
             if ($company_adress !== '') { ?>
               <?php echo $company_adress ?>
           <?php } ?>
@@ -93,35 +93,35 @@ defined( 'ABSPATH' ) || exit;
       <h6>Síguenos</h6>
       <ul class="social-links">
 
-        <?php $company_facebook = get_option("company_info_facebook_url");
+        <?php $company_facebook = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_facebook_url");
           if ($company_facebook !== '') { ?>
           <li class="social__item">
             <a href="<?php echo $company_facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a>
           </li>
         <?php } ?>
 
-        <?php $company_instagram = get_option("company_info_instagram_url");
+        <?php $company_instagram = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_instagram_url");
           if ($company_instagram !== '') { ?>
           <li class="social__item">
             <a href="<?php echo $company_instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a>
           </li>
         <?php } ?>
 
-        <?php $company_twitter = get_option("company_info_twitter_url");
+        <?php $company_twitter = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_twitter_url");
           if ($company_twitter !== '') { ?>
           <li class="social__item">
             <a href="<?php echo $company_twitter ?>" target="_blank"><i class="fa fa-twitter"></i></a>
           </li>
         <?php } ?>
 
-        <?php $company_linkedin = get_option("company_info_linkedin_url");
+        <?php $company_linkedin = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_linkedin_url");
           if ($company_linkedin !== '') { ?>
           <li class="social__item">
             <a href="<?php echo $company_linkedin ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
           </li>
         <?php } ?>
 
-        <?php $company_youtube = get_option("company_info_youtube_url");
+        <?php $company_youtube = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_youtube_url");
           if ($company_youtube !== '') { ?>
           <li class="social__item">
             <a href="<?php echo $company_youtube ?>" target="_blank"><i class="fa fa-youtube"></i></a>
@@ -132,7 +132,7 @@ defined( 'ABSPATH' ) || exit;
       <br>
       <p class="info_bloc">
 
-        <?php $company_phone = get_option("company_info_phone");
+        <?php $company_phone = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_phone");
           if ($company_phone !== '') { ?>
             <a class="info_link" href="tel:<?php echo $company_phone ?>">
               <i class="fa fa-phone" aria-hidden="true"></i>
@@ -142,7 +142,7 @@ defined( 'ABSPATH' ) || exit;
 
         <br>
 
-        <?php $company_email = get_option("company_info_email");
+        <?php $company_email = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_email");
           if ($company_email !== '') { ?>
             <a class="info_link" href="mailto:<?php echo $company_email ?>">
               <i class="fa fa-envelope-o" aria-hidden="true"></i>

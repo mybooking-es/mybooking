@@ -13,7 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php $testimonial_carousel_visible = get_option("home_testimonial_carousel_visibility");
+<?php $testimonial_carousel_visible = get_theme_mod( "mybooking_home_testimonial_carousel_visibility" );
 if ($testimonial_carousel_visible == 1) { ?>
 <div class="rideon-home_testimonials">
   <div class="container -carrusel-testimonials owl-theme">

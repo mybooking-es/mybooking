@@ -100,7 +100,7 @@ function mybooking_widgets_init() {
 	);
 
 	// Home Widgets
-	$widgets_visible = get_option("promo_home_widgets_active");
+	$widgets_visible = MyBookingThemeSettings::getInstance()->get_theme_option( "promo_home_widgets_active" );
 	if ($widgets_visible == 1) {
 
 		register_sidebar(

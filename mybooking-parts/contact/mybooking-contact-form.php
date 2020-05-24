@@ -16,9 +16,5 @@ defined( 'ABSPATH' ) || exit;
 <div class="contact-form contact-right">
   <h4>Form</h4>
   <hr />
-  <?php if ( is_active_sidebar( 'mybooking_contact_form' ) ) : ?>
-    <div class="col">
-      <?php dynamic_sidebar( 'mybooking_contact_form' ); ?>
-    </div>
-  <?php endif; ?>
+  <?php echo do_shortcode("[mybooking_contact]"); ?> 
 </div>

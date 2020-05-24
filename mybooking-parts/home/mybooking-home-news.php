@@ -10,7 +10,7 @@
 */
 ?>
 
-<?php $news_visible = get_option("home_news_visibility");
+<?php $news_visible = get_theme_mod("mybooking_home_news_visibility");
 if ($news_visible == 1) { ?>
 
   <div class="news_container">
