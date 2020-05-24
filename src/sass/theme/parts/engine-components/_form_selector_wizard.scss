@@ -5,7 +5,7 @@
 }
 
 .wizard-selector_field input {
-  border: 1px solid #777;
+  border: 1px solid var(--wizard-input-border-color);
   margin-bottom: 10px;
 }
 
@@ -17,19 +17,11 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 13px;
-  background-color: #8ac53f;
-}
-
-.wizard-selector_btn:hover {
-  background-color: #333;
-  border-color: #333;
-  color: #fff;
-}
-
-@media (max-width: 598.75px) {
-  .wizard-selector_btn {
-    background-color: transparent;
-    border: 1px solid #333;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-color);
+  &:hover {
+    background-color: var(--btn-bg-color-hover);
+    color: var(--btn-color-hover);
   }
 }
 
@@ -45,7 +37,7 @@
   height: 100%;
   padding-top: 1rem;
   overflow: hidden;
-  background-color: #eee;
+  background-color: var(--wizard-bg-color);
 }
 
 .wizard-close {
@@ -119,12 +111,11 @@
   font-size: 14px;
   font-weight: 500 !important;
   cursor: pointer;
-}
-
-.selector_place:hover {
-  color: #fff !important;
-  background-color: #6fa130;
-  padding: 0.2rem 0.5rem;
+  &:hover {
+    background-color: var(--btn-bg-color-hover);
+    color: var(--btn-color-hover);
+    padding: 0.2rem 0.5rem;
+  }
 }
 
 // WIZARD SUMMARY

@@ -1,97 +1,3 @@
-// ==========================================================================
-// MYBOOKING VARIABLES
-// ==========================================================================
-:root {
-  // Theme colors
-  --brand-primary: #8ac53f;
-  --brand-primary-light: #bef870;
-  --brand-primary-dark: #599400;
-  // Secondary colors
-  --brand-secondary: #5c6ac4;
-  --brand-secondary-light: #8f98f7;
-  --brand-secondary-dark: #254093;
-  // Base
-  --font-family: "Inter", sans-serif;
-  --font-body: var(--font-family);
-  --font-heading: var(--font-family);
-  --body-bg: var(--white);
-  --body-color: var(--gray-900);
-  // Links
-  --color-link: var(--brand-primary);
-  --color-link-hover: var(--brand-primary-light);
-  --color-link-active: var(--brand-primary-dark);
-  --color-link-visited: var(--brand-primary-dark);
-  // Topbar
-  --home-topbar-bg: rgba(66, 66, 66, 0.5);
-  --topbar-bg: var(--gray-900);
-  --topbar-color: var(--white);
-  --topbar-link-color: var(--white);
-  --topbar-link-color-hover: var(--gray-50);
-  // Navbar
-  --navbar-bg: var(--brand-primary);
-  --navbar-box-shadow: none;
-  --navbar-link-color: var(--white);
-  --navbar-link-color-hover: var(--white);
-  --navbar-link-hover-opacity: 0.5;
-  --navbar-link-active: var(--gray-900);
-  --navbar-dropdown-item-color: var(--gray-900);
-  --navbar-dropdown-item-active-bg: var(--brand-secondary);
-  --navbar-link-collapse: var(--white);
-  // Logo
-  --custom-logo-height: 40px;
-  --custom-logo-width: auto;
-  // Toggler
-  --toggler-icon-font-size: 1.3rem;
-  --toggler-icon-color: var(--white);
-  --toggler-icon-mt: 6px;
-  // Home header
-  --home-header-bg: var(--brand-secondary);
-  --home-header-color: var(--white);
-  --home-header-bg-height-sm: 300px;
-  --home-header-bg-height-lg: 700px;
-  --home-header-top: calc(37px + 1rem + var(--custom-logo-height));
-  // Footer
-  --footer-bg: var(--gray-800);
-  --footer-color: var(--gray-50);
-  --footer-color-link: var(--brand-primary);
-  --footer-color-link-hover: var(--brand-primary-light);
-  --footer-logo-width: auto;
-  --footer-logo-height: 20px;
-  // Credits
-  --credits-bg: var(--gray-900);
-  --credits-color: var(--gray-100);
-  --credits-color-link: var(--color-link);
-  --credits-color-link-hover: var(--color-link-hover);
-  // Cookies
-  --cookies-bg-color: var(--brand-primary);
-  --cookies-text-color: var(--body-color);
-
-  // Selector
-  --home-selector-bg: rgba(255, 255, 255, 0.6);
-  --selector-bg: var(--brand-secondary-light);
-  --selector-sticky-bg: var(--brand-secondary-light);
-  --selector-color: var(--body-color);
-  --selector-sticky-color: var(--body-color);
-  // Modidfy reservation selector inside modal
-  --modal-summary-label-color: var(--body-color);
-  // Buttons
-  --btn-bg-color: var(--brand-primary);
-  --btn-bg-color-hover: var(--brand-primary-dark);
-  --btn-border-color: var(--brand-primary);
-  --btn-border-color-hover: var(--brand-primary-dark);
-  --btn-color: var(--white);
-  --btn-color-hover: var(--white);
-  --btn-font-w: 600;
-  --btn-text-transform: uppercase;
-  // Steps
-  --step-active-color: var(--brand-secondary-light);
-  --step-done-color: var(--brand-secondary);
-  --step-active-text-color: var(--step-active-color);
-  --step-title-color: var(--step-done-color);
-  // Summary
-  --summary-sticky-bg: var(--gray-900);
-}
-
 /*
 these properties do not need to be edited */
 :root {
@@ -110,7 +16,7 @@ these properties do not need to be edited */
   --gray-700: #616161;
   --gray-800: #424242;
   --gray-900: #212121;
-  /*
+  /**
    Margin calc functions */
   // Choose product and Complete summary sticky bar
   --sticky-top-mobile-top-position: calc(var(--custom-logo-height) + 53px);
@@ -124,11 +30,4 @@ these properties do not need to be edited */
   --summary-reservation-title-margin-top-mobile: calc(
     var(--custom-logo-height) + 53px
   );
-}
-
-// Margin top required
-@media (max-width: 991.98px) {
-  .margin-top-required {
-    margin-top: var(--sticky-top-mobile-top-position);
-  }
 }

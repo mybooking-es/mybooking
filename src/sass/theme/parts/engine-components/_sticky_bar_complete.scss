@@ -1,9 +1,9 @@
 // ==================================
-// ===== COMPLETE SUMMARY STICKY
+// ===== STICKY-BAR IN COMPLETE
 // ==================================
 .complete-summary-sticky-wrapper {
   text-align: center;
-  background-color: var(--summary-sticky-bg);
+  background-color: var(--sticky-bar-bg);
 }
 .complete-summary-sticky {
   margin: 0 auto;
@@ -17,10 +17,10 @@
     }
     i {
       font-size: 1.5rem;
-      color: var(--brand-primary);
+      color: var(--sticky-bar-icons-color);
       transition: 0.2s ease-in-out;
       &:hover {
-        color: var(--brand-primary-light);
+        color: var(--sticky-bar-icons-color-hover);
       }
     }
   }
@@ -65,13 +65,13 @@
   }
 }
 .complete-summary-text {
-  color: var(--gray-400);
+  color: var(--sticky-bar-color);
   min-width: 50px;
 }
 .complete-summary-item_price {
   font-weight: 800;
   font-size: 1.2rem;
-  color: var(--white);
+  color: var(--sticky-bar-price-color);
 }
 
 // Medium devices (tablets, 768px and up)

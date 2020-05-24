@@ -12,14 +12,14 @@
 
 This is the structure of the selector form
 
-[form .flex-form-horizontal]
+[form .flex-form]
     [div .flex-form-group-wrapper]   // Controls
         [div .flex-form-group]        // flex-form-group acts as columns or rows
         [/div]
         [div .flex-form-group]
         [/div]
     [/div]
-    [div .flex-form-horizontal-box]  // Search button
+    [div .flex-form-box]  // Search button
     [/div]
 [/form]
   
@@ -27,7 +27,7 @@ This is the structure of the selector form
 
 // == Horizontal Selector [form class]
 
-.flex-form-horizontal-box {
+.flex-form-box {
   .btn {
     height: 48px;
     position: relative;
@@ -40,14 +40,14 @@ This is the structure of the selector form
   }
 }
 
-.flex-form-horizontal {
+.flex-form {
   display: flex;
   flex-direction: column;
   background-color: var(--selector-bg);
   color: var(--selector-color);
   padding: 10px;
 }
-.home .flex-form-horizontal {
+.home .flex-form {
   background-color: var(--home-selector-bg);
 }
 
@@ -55,15 +55,15 @@ This is the structure of the selector form
 
 @media (min-width: 992px) {
   // 1 column : Max width 745px
-  .home-alone .flex-form-horizontal {
+  .home-alone .flex-form {
     max-width: 745px;
     margin: 0 auto;
   }
 
   // 2 columns : Width between 350 and 400px
 
-  .home-left .flex-form-horizontal,
-  .home-right .flex-form-horizontal {
+  .home-left .flex-form,
+  .home-right .flex-form {
     max-width: 400px;
     min-width: 350px;
     .flex-form-group-wrapper {
@@ -118,7 +118,7 @@ This is the structure of the selector form
 
 // Horizontal item
 
-.flex-form-horizontal-item {
+.flex-form-item {
   display: flex;
   select {
     display: flex;
@@ -172,7 +172,7 @@ This is the structure of the selector form
 
 // == Search button (wraps the search button)
 
-.flex-form-horizontal-box {
+.flex-form-box {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -218,7 +218,7 @@ This is the structure of the selector form
     margin-left: 10px !important;
   }
   // Search button container
-  .flex-form-horizontal-box:last-child {
+  .flex-form-box:last-child {
     margin-left: 5px;
     flex-grow: 1;
   }
@@ -240,7 +240,7 @@ This is the structure of the selector form
 
 // Search form components
 
-form[name="search_form"] .flex-form-horizontal-item {
+form[name="search_form"] .flex-form-item {
   border: 1px solid var(--gray-300);
 }
 
@@ -254,4 +254,19 @@ button.widget_another_return_place_group_close {
 div#another_pickup_place_group,
 div#another_return_place_group {
   height: 48px;
+}
+
+// Modify reservation form selector inside modal
+.modal .custom-form input[type="text"],
+.custom-form textarea,
+.modal .flex-form-box .flex-form-item,
+.modal .custom-form .ui-autocomplete-input,
+.custom-form .uneditable-input,
+.custom-form input[type="password"],
+.custom-form textarea {
+  border: none !important;
+  border-radius: 0 !important;
+}
+.modal .flex-form-group-wrapper label {
+  color: var(--modal-selector-label-color);
 }

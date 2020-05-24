@@ -1,0 +1,139 @@
+// ==========================================================================
+// MYBOOKING THEME CUSTOMIZATION VARIABLES
+// ==========================================================================
+
+// BASIC CUSTOMIZATION
+:root {
+  // Theme colors
+  --brand-primary: #8ac53f;
+  --brand-primary-light: #bef870;
+  --brand-primary-dark: #599400;
+  // Secondary colors
+  --brand-secondary: #5c6ac4;
+  --brand-secondary-light: #8f98f7;
+  --brand-secondary-dark: #254093;
+  // Base
+  --font-family: "Inter", sans-serif;
+  --font-body: var(--font-family);
+  --font-heading: var(--font-family);
+  --body-bg: var(--white);
+  --body-color: var(--gray-900);
+  // Links
+  --color-link: var(--brand-primary);
+  --color-link-hover: var(--brand-primary-light);
+  --color-link-active: var(--brand-primary-dark);
+  --color-link-visited: var(--brand-primary-dark);
+  // Topbar
+  --home-topbar-bg: rgba(66, 66, 66, 0.5);
+  --topbar-bg: var(--gray-900);
+  --topbar-color: var(--white);
+  --topbar-link-color: var(--white);
+  --topbar-link-color-hover: var(--gray-50);
+  // Navbar
+  --navbar-bg: var(--brand-primary);
+  --navbar-box-shadow: none;
+  --navbar-link-color: var(--white);
+  --navbar-link-color-hover: var(--white);
+  --navbar-link-hover-opacity: 0.5;
+  --navbar-link-active: var(--gray-900);
+  --navbar-dropdown-item-color: var(--gray-900);
+  --navbar-dropdown-item-active-bg: var(--brand-secondary);
+  --navbar-link-collapse: var(--white);
+  // Logo
+  --custom-logo-height: 40px;
+  --custom-logo-width: auto;
+  // Toggler
+  --toggler-icon-font-size: 1.3rem;
+  --toggler-icon-color: var(--white);
+  --toggler-icon-mt: 6px;
+  // Home header
+  --home-header-bg: var(--brand-secondary);
+  --home-header-color: var(--white);
+  --home-header-bg-height-sm: 300px;
+  --home-header-bg-height-lg: 700px;
+  --home-header-top: calc(37px + 1rem + var(--custom-logo-height));
+  // Footer
+  --footer-bg: var(--gray-800);
+  --footer-color: var(--gray-50);
+  --footer-color-link: var(--brand-primary);
+  --footer-color-link-hover: var(--brand-primary-light);
+  --footer-logo-width: auto;
+  --footer-logo-height: 20px;
+  // Credits
+  --credits-bg: var(--gray-900);
+  --credits-color: var(--gray-100);
+  --credits-color-link: var(--color-link);
+  --credits-color-link-hover: var(--color-link-hover);
+  // Cookies
+  --cookies-bg-color: var(--brand-primary);
+  --cookies-text-color: var(--body-color);
+  // Selector
+  --home-selector-bg: rgba(255, 255, 255, 0.6);
+  --selector-sticky-bg: var(--brand-secondary-light);
+  --selector-color: var(--body-color);
+  --selector-sticky-color: var(--body-color);
+  // Selector inside modal
+  --modal-selector-label-color: var(--body-color);
+  // Selector outside home-page
+  --selector-bg: var(--brand-secondary-light);
+  // Buttons
+  --btn-bg-color: var(--brand-primary);
+  --btn-bg-color-hover: var(--brand-primary-dark);
+  --btn-border-color: var(--brand-primary);
+  --btn-border-color-hover: var(--brand-primary-dark);
+  --btn-color: var(--white);
+  --btn-color-hover: var(--white);
+  --btn-font-w: 600;
+  --btn-text-transform: uppercase;
+  // Steps
+  --steps-wrapper-bg-color: var(--gray-200);
+  --step-title-color: var(--brand-secondary);
+  --step-circle-text-color: var(--gray-700);
+  --step-circle-bg-color: var(--white);
+  --step-done-color: var(--brand-secondary);
+  --step-active-color: var(--brand-secondary-light);
+  --step-active-text-color: var(--brand-secondary-light);
+  --step-line-color: var(--white);
+  --step-text-color: var(--gray-500);
+  --step-done-ckeck-icon-color: var(--white);
+  // Wizard
+  --wizard-bg-color: var(--gray-200);
+  --wizard-input-border-color: var(--gray-700);
+}
+
+// ADVANCED CUSTOMIZATION
+
+:root {
+  // Forms
+  --form-control-bg-color: var(--white);
+  --form-control-color: var(--gray-700);
+  --form-control-border-color: var(--gray-400);
+  --form-control-height: 48px;
+  --form-control-font-size: 0.8rem;
+  --flex-form-control-border-radius: 0;
+  --bootstrap-form-control-border-radius: 3px;
+  --text-area-bg: var(--gray-50);
+  --textarea-bg: var(--gray-50);
+  --form-control-disabled: var(--gray-200);
+  // Card static
+  --card-image-bg-color: var(--white);
+  --card-body-bg-color: var(--white);
+  --card-info-icon-color: var(--gray-300);
+  --card-info-icon-color-hover: var(--gray-400);
+  --card-product-name-color: var(--gray-900);
+  --card-short-description-color: var(--gray-500);
+  --card-key-characteristics-text-color: var(--gray-900);
+  // Sticky bars in choose product and complete
+  --sticky-bar-bg: var(--gray-900);
+  --sticky-bar-icons-color: var(--brand-primary);
+  --sticky-bar-icons-color-hover: var(--brand-primary-light);
+  --sticky-bar-color: var(--gray-400);
+  --sticky-bar-arrow-icon-color: var(--gray-400);
+  --sticky-bar-price-color: var(--white);
+  // Product detail
+  --product-detail-bg-color: var(--white);
+  --product-detail-dates-titles: var(--gray-900);
+  --product-detail-dates-text: var(--gray-500);
+  --product-detail-group-name: var(--gray-900);
+  --product-detail-duration-text: var(--gray-900);
+}

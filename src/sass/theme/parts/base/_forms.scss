@@ -2,47 +2,57 @@
 // Base/ forms
 //==============================================
 
-select {
-  border-radius: 0px;
-  padding: 0 0.8rem;
-  text-indent: 1px;
-  text-overflow: "";
-  border: 0;
-  font-size: 0.8rem;
-  height: 48px;
-  color: var(--gray-700);
-  background-color: var(--white);
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  &:focus {
-    outline: none;
-    box-shadow: none;
+// Flex-form we use them in form selector and in modify forms
+.flex-form-group-wrapper {
+  select {
+    border-radius: var(--form-control-border-radius);
+    padding: 0 0.8rem;
+    text-indent: 1px;
+    text-overflow: "";
+    border: 0;
+    font-size: var(--form-control-font-size);
+    height: var(--form-control-height);
+    color: var(--form-control-color);
+    background-color: var(--form-control-bg-color);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border: 0;
+    }
+  }
+  input[type="text"] {
     border: 0;
   }
 }
-// Bootstrap forms overrides
-.input-group > .form-control {
-  height: 48px;
+
+// Bootstrap forms we use them in complete page
+
+.form-group {
+  textarea {
+    background-color: var(--textarea-bg);
+  }
+  select {
+    border: 1px solid var(--form-control-border-color);
+    border-radius: var(--bootstrap-form-control-border-radius);
+    box-shadow: none;
+    display: inline-flex;
+    padding: 0 0.8rem;
+    font-size: var(--form-control-font-size);
+    color: var(--form-control-color);
+    height: var(--form-control-height);
+    margin-top: 8px;
+  }
 }
-.form-group select.form-control {
-  border: 1px solid var(--gray-400);
-  border-radius: 3px;
-  box-shadow: none;
-  display: inline-flex;
-  padding: 0 0.8rem;
-  font-size: 0.8rem;
-  line-height: 18px;
-  color: var(--gray-700);
-  height: 48px;
-  margin-top: 8px;
+.input-group > .form-control {
+  height: var(--form-control-height);
 }
 .input-group-prepend > .input-group-text {
   border-radius: 0;
 }
-.form-control {
-  border-radius: 0;
-}
+
 // jquery ui overrides
 input[type="text"],
 input[type="password"],
@@ -51,12 +61,12 @@ textarea,
 .uneditable-input {
   display: inline-flex;
   padding: 0 0.8rem;
-  font-size: 0.8rem;
+  font-size: var(--form-control-font-size);
   line-height: 18px;
-  color: var(--gray-700);
-  height: 48px;
-  border: none;
+  color: var(--form-control-color);
+  border: 1px solid var(--form-control-border-color);
   border-radius: 0;
+  height: var(--form-control-height);
   box-shadow: none;
 }
 // Custom forms
@@ -66,8 +76,8 @@ textarea,
   .ui-autocomplete-input,
   textarea,
   .uneditable-input {
-    border: 1px solid var(--gray-400);
-    border-radius: 3px;
+    border: 1px solid var(--form-control-border-color);
+    border-radius: var(--bootstrap-form-control-border-radius);
   }
 }
 // Labels
@@ -78,7 +88,7 @@ label {
 .custom-icon {
   position: absolute;
   font-size: 18px;
-  color: var(--gray-700);
+  color: var(--form-control-color);
   right: 8px;
   top: 48px;
 }
@@ -117,13 +127,13 @@ input.form-reservation-error {
 }
 // Extra inputs
 .input-group > .form-control.extra-input {
-  border-top: 1px solid var(--gray-500);
-  border-bottom: 1px solid var(--gray-500);
+  border-top: 1px solid var(--form-control-border-color);
+  border-bottom: 1px solid var(--form-control-border-color);
 }
 // Disabled components
 input[type="text"]:disabled,
 select:disabled {
-  background-color: var(--gray-200);
+  background-color: var(--form-control-disabled);
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
@@ -131,5 +141,3 @@ select:disabled {
     max-width: 145px;
   }
 }
-
-

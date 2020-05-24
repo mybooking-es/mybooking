@@ -58,16 +58,7 @@ a:focus {
 a:active {
   color: var(--color-link-active);
 }
-// Buttons
-.btn {
-  cursor: pointer;
-  border-radius: 0;
-}
-button,
-[type="button"] {
-  -webkit-appearance: none;
-  border: none;
-}
+
 // Card
 .card {
   border-radius: 0;

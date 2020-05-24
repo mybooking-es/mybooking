@@ -1,5 +1,5 @@
 // ==================================
-// ===== ROW CARDS MAGIC-CARDS HORIZONTAL
+// ===== CARD DYNAMIC
 // ==================================
 .magic-card-horizontal-wrapper {
   display: flex;
@@ -103,7 +103,7 @@ a.magic-button.btn {
   &:hover {
     background-color: var(--btn-bg-color-hover);
     border-color: var(--btn-border-color-hover);
-    color: darken($white, 10%);
+    color: var(--white);
     cursor: pointer;
   }
 }
@@ -168,7 +168,7 @@ a.magic-button.btn {
       text-align: center;
       span {
         font-size: 13px;
-        color: $gray-500;
+        color: var(--gray-500);
       }
       img {
         height: 30px;

@@ -2,7 +2,7 @@
 .product-detail-container {
   margin-top: var(--product-detail-margin-top-mobile);
   padding: 30px;
-  background: var(--white);
+  background: var(--product-detail-bg-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -11,12 +11,13 @@
   h5 {
     font-weight: 700;
     line-height: 1.2;
+    color: var(--product-detail-dates-titles);
   }
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    color: var(--gray-600);
+    color: var(--product-detail-dates-text);
     line-height: 1;
   }
 }
@@ -29,20 +30,17 @@
     max-width: 400px;
   }
 }
-.grupo {
-  font-weight: 800;
-  color: var(--gray-600);
-  margin-bottom: 0;
-  line-height: 1;
-}
+
 .detail-text {
   font-weight: 200;
   line-height: 1.2;
+  color: var(--product-detail-duration-text);
 }
 .product-name {
   font-size: 3rem;
   line-height: 1;
   font-weight: 900;
+  color: var(--product-detail-group-name);
 }
 
 // Medium devices (tablets, 768px and up)

@@ -25,9 +25,9 @@
 }
 
 .news_extract {
-  color: $gray-600;
+  color: var(--gray-600);
 }
 
 .news_extract .mybooking-read-more-link {
-	margin-top: 10px
+  margin-top: 10px;
 }

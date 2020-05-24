@@ -16,9 +16,9 @@
     <% if (configuration.pickupReturnPlace) { %> 
       <!-- Pickup / Return place -->
       <div class="flex-form-group">
-        <div class="flex-form-horizontal-box">
+        <div class="flex-form-box">
           <label><?php _e('Lugar Entrega ', 'mybooking') ?></label>
-          <div class="flex-form-horizontal-item pickup_place_group">
+          <div class="flex-form-item pickup_place_group">
             <label class="form_selector-select_label_wrap mb-0">
               <select id="pickup_place" name="pickup_place" class="form_selector-select_dropdown"></select>
             </label>
@@ -34,9 +34,9 @@
             </div>
           </div>
         </div>
-        <div class="flex-form-horizontal-box">
+        <div class="flex-form-box">
           <label><?php _e('Lugar Devolución ', 'mybooking') ?></label>
-          <div class="flex-form-horizontal-item return_place_group">
+          <div class="flex-form-item return_place_group">
             <label class="form_selector-select_label_wrap mb-0">
               <select id="return_place" name="return_place" class="form_selector-select_dropdown">
               </select>
@@ -58,9 +58,9 @@
 
     <!-- Date/Time from / to -->
     <div class="flex-form-group">
-      <div class="flex-form-horizontal-box">
+      <div class="flex-form-box">
         <label><?php _e('Fecha Entrega ', 'mybooking') ?></label>
-        <div class="flex-form-horizontal-item">
+        <div class="flex-form-item">
           <label class="mb-0" for="date_from"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
           <input type="text" id="date_from" name="date_from" readonly="true"/>
           <% if (configuration.timeToFrom) { %>
@@ -71,9 +71,9 @@
           <% } %>
         </div>
       </div>
-      <div class="flex-form-horizontal-box">
+      <div class="flex-form-box">
         <label><?php _e('Fecha Devolución ', 'mybooking') ?></label>
-        <div class="flex-form-horizontal-item">
+        <div class="flex-form-item">
           <label class="mb-0" for="date_to"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
           <input type="text" id="date_to" name="date_to" readonly="true"/>
           <% if (configuration.timeToFrom) { %>
@@ -86,7 +86,7 @@
       </div>
     </div>
   </div>
-  <div class="flex-form-horizontal-box">
+  <div class="flex-form-box">
     <input type="submit" class="btn btn-primary mt-3" value="<?php _e('Buscar', 'mybooking') ?>" />
   </div>
 

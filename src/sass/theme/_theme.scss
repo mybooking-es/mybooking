@@ -1,9 +1,15 @@
 // Import theme parts
 @import "parts/index";
-
+// Margin top for summary title
 @media (max-width: 991.98px) {
   .summary-reservation-title {
     margin-top: var(--summary-reservation-title-margin-top-mobile);
+  }
+}
+// Margin top required
+@media (max-width: 991.98px) {
+  .margin-top-required {
+    margin-top: var(--sticky-top-mobile-top-position);
   }
 }
 .full-height {

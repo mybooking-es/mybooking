@@ -1,6 +1,10 @@
+// ===================================================
+// =====  STICKY-BAR IN CHOOSE PRODUCT
+// ===================================================
+
 .reservation-summary-sticky-wrapper {
   text-align: center;
-  background-color: var(--summary-sticky-bg);
+  background-color: var(--sticky-bar-bg);
 }
 
 .reservation-summary-sticky {
@@ -16,10 +20,10 @@
     }
     i {
       font-size: 1.5rem;
-      color: var(--brand-primary);
+      color: var(--sticky-bar-icons-color);
       transition: 0.2s ease-in-out;
       &:hover {
-        color: var(--brand-primary-light);
+        color: var(--sticky-bar-icons-color-hover);
       }
     }
   }
@@ -33,7 +37,7 @@
 
   p {
     text-align: left;
-    color: $gray-400;
+    color: var(--sticky-bar-color);
     margin: 0;
     padding: 0;
     font-size: 0.8rem;
@@ -50,7 +54,7 @@
   align-items: center;
   justify-content: center;
   i {
-    color: var(--gray-400);
+    color: var(--sticky-bar-arrow-icon-color);
   }
 }
 
@@ -80,19 +84,4 @@
   .bold-on-mobile {
     font-weight: 800;
   }
-}
-
-// Form modificar reserva
-.modal .custom-form input[type="text"],
-.custom-form textarea,
-.modal .flex-form-horizontal-box .flex-form-horizontal-item,
-.modal .custom-form .ui-autocomplete-input,
-.custom-form .uneditable-input,
-.custom-form input[type="password"],
-.custom-form textarea {
-  border: none !important;
-  border-radius: 0 !important;
-}
-.modal label {
-  color: var(--modal-summary-label-color);
 }

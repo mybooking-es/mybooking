@@ -14,6 +14,15 @@
     border-color: var(--btn-border-color-hover);
   }
 }
+.btn {
+  cursor: pointer;
+  border-radius: 0;
+}
+button,
+[type="button"] {
+  -webkit-appearance: none;
+  border: none;
+}
 
 // Deben ir en el CSS del plugin
 .footer-card a.btn {
