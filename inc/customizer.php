@@ -183,7 +183,12 @@ class MyBookingCustomizer {
     	$typography_heading = get_theme_mod( 'mybooking_font_heading', 'default');
 
     	$brand_primary = get_theme_mod( 'mybooking_brand_primary', '#8ac53f' );
+    	$brand_primary_light = get_theme_mod( 'mybooking_brand_primary_light', '#bef870' );
+    	$brand_primary_dark = get_theme_mod( 'mybooking_brand_primary_dark', '#599400' );
+
     	$brand_secondary = get_theme_mod( 'mybooking_brand_secondary', '#5c6ac4' );
+    	$brand_secondary_light = get_theme_mod( 'mybooking_brand_secondary_light', '#8f98f7' );
+    	$brand_secondary_dark = get_theme_mod( 'mybooking_brand_secondary_dark', '#254093' );
 
     	$body_bg = get_theme_mod( 'mybooking_body_bg', '#ffffff' );
     	$body_color = get_theme_mod( 'mybooking_body_color', '#212121' );    	
@@ -223,8 +228,12 @@ class MyBookingCustomizer {
 
 		  // Brand primary & secondary
 		  $custom_css.= "--brand-primary: ".$brand_primary.';';
-		  $custom_css.= "--brand-seconday: ".$brand_secondary.';';
-		  
+		  $custom_css.= "--brand-primary-light: ".$brand_primary_light.';';
+		  $custom_css.= "--brand-primary-dark: ".$brand_primary_dark.';';		  
+		  $custom_css.= "--brand-secondary: ".$brand_secondary.';';
+		  $custom_css.= "--brand-secondary-light: ".$brand_secondary_light.';';
+		  $custom_css.= "--brand-secondary-dark: ".$brand_secondary_dark.';';
+
 		  // Body
 		  $custom_css.= "--body-bg: ".$body_bg.';';
 		  $custom_css.= "--body-color: ".$body_color.';';
@@ -440,6 +449,35 @@ class MyBookingCustomizer {
 				'settings'   => 'mybooking_brand_primary',
 			) ) );
 
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_brand_primary_light' , array(
+			    'default'   => '#bef870',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_primary_light', array(
+				'label'      => _x( 'Brand primary light color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_brand_primary_light',
+			) ) );
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_brand_primary_dark' , array(
+			    'default'   => '#599400',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_primary_dark', array(
+				'label'      => _x( 'Brand primary dark color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_brand_primary_dark',
+			) ) );
+
+
+
 			// == Brand Seconday color
 
 			// Setting
@@ -450,10 +488,37 @@ class MyBookingCustomizer {
 
 			// Control
 			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_seconday', array(
-				'label'      => _x( 'Brand seconday color', 'customizer_colors', 'mybooking' ),
+				'label'      => _x( 'Brand secondary color', 'customizer_colors', 'mybooking' ),
 				'section'    => 'mybooking_theme_colors_options',
 				'settings'   => 'mybooking_brand_secondary',
 			) ) );
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_brand_secondary_light' , array(
+			    'default'   => '#8f98f7',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_secondary_light', array(
+				'label'      => _x( 'Brand secondary light color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_brand_secondary_light',
+			) ) );
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_brand_secondary_dark' , array(
+			    'default'   => '#254093',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_secondary_dark', array(
+				'label'      => _x( 'Brand secondary dark color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_brand_secondary_dark',
+			) ) );
+
 
 			// == Body background
 
@@ -484,8 +549,6 @@ class MyBookingCustomizer {
 				'section'    => 'mybooking_theme_colors_options',
 				'settings'   => 'mybooking_body_color',
 			) ) );
-
-
 
     }
 
