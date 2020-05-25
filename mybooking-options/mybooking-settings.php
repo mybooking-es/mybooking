@@ -5,7 +5,7 @@
 	  private static $instance = null;
 
 	  // Holds the theme settings
-	  private $theme_settings = null;
+	  private $theme_options = null;
 
 	  // The constructor is private
 	  // to prevent initiation with outer code.
@@ -43,44 +43,44 @@
 
     public function get_theme_options() {
 
-	  	if ( $this->$theme_options == null ) {
-		  	$this->$theme_options = array();
+	  	if ( $this->theme_options == null ) {
+		  	$this->theme_options = array();
 
 		  	// Company
 		  	$settings = (array) get_option( 'mybooking_theme_settings_company_info' );
-		  	$this->$theme_options['company_info_trade_name'] = $this->get_option_value( $settings, 'company_info_trade_name');
-		  	$this->$theme_options['company_info_name'] = $this->get_option_value( $settings, 'company_info_name');
-		  	$this->$theme_options['company_info_nif'] = $this->get_option_value( $settings, 'company_info_nif');
-		  	$this->$theme_options['company_info_adress'] = $this->get_option_value( $settings, 'company_info_address');
-		  	$this->$theme_options['company_info_phone'] = $this->get_option_value( $settings, 'company_info_phone');
-		  	$this->$theme_options['company_info_chat'] = $this->get_option_value( $settings, 'company_info_chat');
-		  	$this->$theme_options['company_info_email'] = $this->get_option_value( $settings, 'company_info_email');
-		  	$this->$theme_options['company_info_twitter_url'] = $this->get_option_value( $settings, 'company_info_twitter_url');
-		  	$this->$theme_options['company_info_facebook_url'] = $this->get_option_value( $settings, 'company_info_facebook_url');
-		  	$this->$theme_options['company_info_instagram_url'] = $this->get_option_value( $settings, 'company_info_instagram_url');
-		  	$this->$theme_options['company_info_linkedin_url'] = $this->get_option_value( $settings, 'company_info_linkedin_url');
-		  	$this->$theme_options['company_info_youtube_url'] = $this->get_option_value( $settings, 'company_info_youtube_url');
-		  	$this->$theme_options['company_info_google_analytics'] = $this->get_option_value( $settings, 'company_info_google_analytics');
+		  	$this->theme_options['company_info_trade_name'] = $this->get_option_value( $settings, 'company_info_trade_name');
+		  	$this->theme_options['company_info_name'] = $this->get_option_value( $settings, 'company_info_name');
+		  	$this->theme_options['company_info_nif'] = $this->get_option_value( $settings, 'company_info_nif');
+		  	$this->theme_options['company_info_adress'] = $this->get_option_value( $settings, 'company_info_address');
+		  	$this->theme_options['company_info_phone'] = $this->get_option_value( $settings, 'company_info_phone');
+		  	$this->theme_options['company_info_chat'] = $this->get_option_value( $settings, 'company_info_chat');
+		  	$this->theme_options['company_info_email'] = $this->get_option_value( $settings, 'company_info_email');
+		  	$this->theme_options['company_info_twitter_url'] = $this->get_option_value( $settings, 'company_info_twitter_url');
+		  	$this->theme_options['company_info_facebook_url'] = $this->get_option_value( $settings, 'company_info_facebook_url');
+		  	$this->theme_options['company_info_instagram_url'] = $this->get_option_value( $settings, 'company_info_instagram_url');
+		  	$this->theme_options['company_info_linkedin_url'] = $this->get_option_value( $settings, 'company_info_linkedin_url');
+		  	$this->theme_options['company_info_youtube_url'] = $this->get_option_value( $settings, 'company_info_youtube_url');
+		  	$this->theme_options['company_info_google_analytics'] = $this->get_option_value( $settings, 'company_info_google_analytics');
 
 		  	// Contact Page
 		  	$settings = (array) get_option( 'mybooking_theme_settings_contact' );
-		  	$this->$theme_options['contact_section_title'] = $this->get_option_value( $settings, 'contact_section_title');
-		  	$this->$theme_options['contact_section_subtitle'] = $this->get_option_value( $settings, 'contact_section_subtitle');
-		  	$this->$theme_options['contact_section_text'] = $this->get_option_value( $settings, 'contact_section_text');
-		  	$this->$theme_options['contact_map_code'] = $this->get_option_value( $settings, 'contact_map_code');
+		  	$this->theme_options['contact_section_title'] = $this->get_option_value( $settings, 'contact_section_title');
+		  	$this->theme_options['contact_section_subtitle'] = $this->get_option_value( $settings, 'contact_section_subtitle');
+		  	$this->theme_options['contact_section_text'] = $this->get_option_value( $settings, 'contact_section_text');
+		  	$this->theme_options['contact_map_code'] = $this->get_option_value( $settings, 'contact_map_code');
 
 			  // Promotion
 		  	$settings = (array) get_option( 'mybooking_theme_settings_promo' );
-		  	$this->$theme_options['promo_popup_active'] = $this->get_option_value( $settings, 'promo_popup_active');
-		  	$this->$theme_options['promo_home_widgets_active'] = $this->get_option_value( $settings, 'promo_home_widgets_active');
+		  	$this->theme_options['promo_popup_active'] = $this->get_option_value( $settings, 'promo_popup_active');
+		  	$this->theme_options['promo_home_widgets_active'] = $this->get_option_value( $settings, 'promo_home_widgets_active');
 
 		  	// Global
 		  	$settings = (array) get_option( 'mybooking_theme_settings_options_global' );
-		  	$this->$theme_options['global_vehicle_active'] = $this->get_option_value( $settings, 'global_vehicle_active');
+		  	$this->theme_options['global_vehicle_active'] = $this->get_option_value( $settings, 'global_vehicle_active');
 
 		  }
 
-		  return $this->$theme_options;
+		  return $this->theme_options;
 
     }
 
@@ -330,18 +330,18 @@
 		 * setting_fields: Settings section id
 		 * setting_sections :Plugin menu slug
 		 *
-		 * <?php settings_fields('mybooking_plugin_settings_group'); ?> 
-		 */
-		public function mybooking_theme_settings_page() {
+		 * <?php settings_fields('mybooking_plugin_settings_group'); ?>
+*/
+public function mybooking_theme_settings_page() {
 
-			if (!current_user_can('edit_pages'))
-			  wp_die(__("No tienes acceso a esta página.", 'mybooking'));
+if (!current_user_can('edit_pages'))
+wp_die(__("No tienes acceso a esta página.", 'mybooking'));
 
-		?>
-		  <div class="wrap">
-		  	  <h1><?php echo _x("MyBooking Theme Setup", 'theme_settings', 'mybooking') ?></h1>
+?>
+<div class="wrap">
+  <h1><?php echo _x("MyBooking Theme Setup", 'theme_settings', 'mybooking') ?></h1>
 
-					<?php
+  <?php
 	            $active_tab = isset( $_GET[ 'tab' ] ) ? sanitize_title( $_GET[ 'tab' ] ) : 'company_options';
 	            $tabs = array('company_options', 'contact', 'promotions', 'global_settings');
 	            if ( !in_array( $active_tab, $tabs) ) {
@@ -349,31 +349,35 @@
 	            }
 	        ?>
 
-					<h2 class="nav-tab-wrapper">
-					    <a href="?page=settings&tab=company_options" class="nav-tab <?php echo $active_tab == 'company_options' ? 'nav-tab-active' : ''; ?>">
-					    	<?php echo _x("My company", 'theme_settings', 'mybooking') ?>
-					    </a>
-							<a href="?page=settings&tab=contact" class="nav-tab <?php echo $active_tab == 'contact' ? 'nav-tab-active' : ''; ?>">
-								<?php echo _x("Contact Page", 'theme_settings', 'mybooking') ?>
-							</a>	
-							<a href="?page=settings&tab=promotions" class="nav-tab <?php echo $active_tab == 'promotions' ? 'nav-tab-active' : ''; ?>">
-								<?php echo _x("Promotions", 'theme_settings', 'mybooking') ?>
-							</a>					    
-					    <a href="?page=settings&tab=global_settings" class="nav-tab <?php echo $active_tab == 'global_settings' ? 'nav-tab-active' : ''; ?>">
-					    	<?php echo _x("Global Settings", 'theme_settings', 'mybooking') ?>
-					    </a>
-					</h2>
+  <h2 class="nav-tab-wrapper">
+    <a href="?page=settings&tab=company_options"
+      class="nav-tab <?php echo $active_tab == 'company_options' ? 'nav-tab-active' : ''; ?>">
+      <?php echo _x("My company", 'theme_settings', 'mybooking') ?>
+    </a>
+    <a href="?page=settings&tab=contact"
+      class="nav-tab <?php echo $active_tab == 'contact' ? 'nav-tab-active' : ''; ?>">
+      <?php echo _x("Contact Page", 'theme_settings', 'mybooking') ?>
+    </a>
+    <a href="?page=settings&tab=promotions"
+      class="nav-tab <?php echo $active_tab == 'promotions' ? 'nav-tab-active' : ''; ?>">
+      <?php echo _x("Promotions", 'theme_settings', 'mybooking') ?>
+    </a>
+    <a href="?page=settings&tab=global_settings"
+      class="nav-tab <?php echo $active_tab == 'global_settings' ? 'nav-tab-active' : ''; ?>">
+      <?php echo _x("Global Settings", 'theme_settings', 'mybooking') ?>
+    </a>
+  </h2>
 
-					<?php settings_errors(); ?>
+  <?php settings_errors(); ?>
 
-		      <form action="options.php" method="POST">
-            <?php   
+  <form action="options.php" method="POST">
+    <?php   
 
 	             if ($active_tab == 'company_options') { 
 	            ?>
-	               <p><?php echo _x('It is used on <b>TopBar</b>, <b>Footer</b> and <b>Contact Page</b> to render <u>company information</u>.',
+    <p><?php echo _x('It is used on <b>TopBar</b>, <b>Footer</b> and <b>Contact Page</b> to render <u>company information</u>.',
 	               								  'theme_settings', 'mybooking')?></p>
-	             <?php  								  
+    <?php  								  
 	             	 settings_fields('mybooking_theme_settings_group_company_info');
 	             	 echo '<table class="form-table">';
 	             	 do_settings_fields('settings', 'company_info_section');
@@ -382,9 +386,9 @@
 
 	             if ($active_tab == 'contact') {
 	            ?>
-	               <p><?php echo _x('It is used by <b>MyBooking Contact</b> template to render a full contact page.',
+    <p><?php echo _x('It is used by <b>MyBooking Contact</b> template to render a full contact page.',
 	               								  'theme_settings', 'mybooking')?></p>
-	            <?php
+    <?php
             
 	             	 settings_fields('mybooking_theme_settings_group_contact');
 	             	 echo '<table class="form-table">';
@@ -395,9 +399,9 @@
 
 	             if ($active_tab == 'promotions') {
 	            ?>
-	               <p><?php echo _x('Promotions module.',
+    <p><?php echo _x('Promotions module.',
 	               								  'theme_settings', 'mybooking')?></p>
-	            <?php
+    <?php
             
 	             	 settings_fields('mybooking_theme_settings_group_promo');
 	             	 echo '<table class="form-table">';
@@ -408,9 +412,9 @@
 
 	             if ($active_tab == 'global_settings') {
 	            ?>
-	               <p><?php echo _x('Global settings.',
+    <p><?php echo _x('Global settings.',
 	               								  'theme_settings', 'mybooking')?></p>
-	            <?php
+    <?php
 	             	 settings_fields('mybooking_theme_settings_group_options_global');
 	             	 echo '<table class="form-table">';
 	             	 do_settings_fields('settings', 'options_global_section');
@@ -420,11 +424,11 @@
 	             echo '<input type="hidden" name="tab" value="' . esc_attr( $active_tab ) . '" />';
 	             submit_button();
 
-	          ?>   	
-						
-		      </form>
-		  </div>
-		<?php 
+	          ?>
+
+  </form>
+</div>
+<?php 
 		}
 
 		public function field_mybooking_theme_company_info_trade_name_callback() {
