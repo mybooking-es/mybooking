@@ -73,7 +73,7 @@ class MyBookingCustomizer {
 	  /**
 	   * Register the customizer
 	   */
-	  private function customize_register( $wp_customize ) {
+	  public function customize_register( $wp_customize ) {
 
 			$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 			$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -96,7 +96,7 @@ class MyBookingCustomizer {
     /**
      * Preview JS
      */
-	  private function customize_preview_js() {
+	  public function customize_preview_js() {
 
 			wp_enqueue_script(
 				'mybooking_customizer',
