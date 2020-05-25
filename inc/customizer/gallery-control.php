@@ -40,8 +40,8 @@ class CustomizeGalleryControl extends WP_Customize_Control {
 	 * @access public
 	 */
 	public function enqueue() {
-		wp_enqueue_script( 'customize-gallery-control-js', get_template_directory_uri() . '/js/customize-gallery-control.js', array( 'jquery' ), null, true );
-		wp_enqueue_style( 'customize-gallery-control-css', get_template_directory_uri() . '/css/customize-gallery-control.css', null );
+		wp_enqueue_script( 'customize-gallery-control-js', get_template_directory_uri() . '/inc/customizer/js/customize-gallery-control.js', array( 'jquery' ), null, true );
+		wp_enqueue_style( 'customize-gallery-control-css', get_template_directory_uri() . '/inc/customizer/css/customize-gallery-control.css', null );
 	}
 
 

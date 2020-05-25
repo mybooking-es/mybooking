@@ -29,10 +29,10 @@ class Font_Selector extends WP_Customize_Control {
 	 * @access public
 	 */
 	public function enqueue() {
-		wp_enqueue_script( 'select-script', get_template_directory_uri() . '/js/select.js', array( 'jquery' ), FONT_SELECTOR_VERSION, true );
-		wp_enqueue_style( 'select-style', get_template_directory_uri() . '/css/select.css', null, FONT_SELECTOR_VERSION );
-		wp_enqueue_script( 'typography-js', get_template_directory_uri() . '/js/typography.js', array( 'jquery', 'select-script' ), FONT_SELECTOR_VERSION, true );
-		wp_enqueue_style( 'typography', get_template_directory_uri() . '/css/typography.css', null );
+		wp_enqueue_script( 'select-script', get_template_directory_uri() . '/inc/customizer/js/select.js', array( 'jquery' ), FONT_SELECTOR_VERSION, true );
+		wp_enqueue_style( 'select-style', get_template_directory_uri() . '/inc/customizer/css/select.css', null, FONT_SELECTOR_VERSION );
+		wp_enqueue_script( 'typography-js', get_template_directory_uri() . '/inc/customizer/js/typography.js', array( 'jquery', 'select-script' ), FONT_SELECTOR_VERSION, true );
+		wp_enqueue_style( 'typography', get_template_directory_uri() . '/inc/customizer/css/typography.css', null );
 	}
 
 	/**
