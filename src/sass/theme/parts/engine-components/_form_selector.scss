@@ -33,9 +33,12 @@ This is the structure of the selector form
     position: relative;
     top: -8px;
     box-shadow: none;
-    background-color: var(--btn-bg-color);
+    background-color: var(--selector-btn-bg-color);
+    border-color: var(--selector-btn-border-color);
+    color: var(--selector-btn-color);
     &:hover {
-      background-color: var(--btn-bg-color-hover);
+      background-color: var(--selector-btn-hover-bg-color);
+      border-color: var(--selector-btn-hover-border-color);
     }
   }
 }
@@ -44,8 +47,10 @@ This is the structure of the selector form
   display: flex;
   flex-direction: column;
   background-color: var(--selector-bg);
-  color: var(--selector-color);
   padding: 10px;
+  label {
+    color: var(--selector-label-color);
+  }
 }
 .home .flex-form {
   background-color: var(--home-selector-bg);
@@ -200,7 +205,6 @@ This is the structure of the selector form
   position: fixed;
   padding: 10px 10px 0 10px;
   z-index: 10000;
-  color: var(--selector-sticky-color);
   min-width: 100% !important; // Force always 100%
   max-width: 100% !important; // Force always 100%
   width: 100% !important; // Force always 100%
@@ -224,8 +228,16 @@ This is the structure of the selector form
   }
   // Flex-form-sticky > Search button
   .btn {
-    height: 48px;
     margin-top: 35px !important;
+    position: relative;
+    box-shadow: none;
+    background-color: var(--selector-btn-sticky-bg-color);
+    border-color: var(--selector-btn-sticky-border-color);
+    color: var(--selector-btn-color);
+    &:hover {
+      background-color: var(--selector-btn-hover-bg-color);
+      border-color: var(--selector-btn-hover-border-color);
+    }
   }
 
   // Date input
@@ -235,6 +247,7 @@ This is the structure of the selector form
   // Labels
   label {
     font-size: 13px;
+    color: var(--selector-sticky-labels-color);
   }
 }
 
@@ -267,6 +280,9 @@ div#another_return_place_group {
   border: none !important;
   border-radius: 0 !important;
 }
-.modal .flex-form-group-wrapper label {
-  color: var(--modal-selector-label-color);
+.modal .flex-form {
+  background-color: var(--modal-selector-bg);
+  label {
+    color: var(--modal-selector-label-color);
+  }
 }

@@ -37,8 +37,8 @@
 .topbar-message {
   padding: 0.5rem 2rem;
   text-align: center;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--topbar-message-bg-color);
+  color: var(--topbar-color);
 }
 
 // Medium devices (tablets, less than 992px)
