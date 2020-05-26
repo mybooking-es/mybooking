@@ -181,3 +181,8 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Popup content post type
 - Theme configuration refactorized and unified
 - Deprecated functions cleaned
+### 0.9.0
+- Customizer on steroids! Now we have all style options grouped on native WordPress panels
+- Mybooking settings menu cleaned and tabbed
+### 0.9.1
+- Contact Page setting titles fixed
