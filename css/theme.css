@@ -24466,11 +24466,26 @@ these properties do not need to be edited */
   /**
    Margin calc functions */
   --sticky-top-mobile-top-position: calc(var(--custom-logo-height) + 53px);
+  --sticky-top-mobile-top-position-message: calc(
+    var(--custom-logo-height) + 53px + 40px
+  );
   --card-static-margin-top-mobile: calc(var(--custom-logo-height) + 129px);
+  --card-static-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 129px + 40px
+  );
   --extras-margin-top-mobile: calc(var(--custom-logo-height) + 132px);
+  --extras-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 132px + 40px
+  );
   --product-detail-margin-top-mobile: calc(var(--custom-logo-height) + 102px);
+  --product-detail-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 102px + 40px
+  );
   --summary-reservation-title-margin-top-mobile: calc(
     var(--custom-logo-height) + 53px
+  );
+  --summary-reservation-title-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 53px + 40px
   ); }
 
 @font-face {
