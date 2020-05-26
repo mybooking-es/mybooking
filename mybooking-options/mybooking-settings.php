@@ -22,13 +22,13 @@
 	    {
 	      self::$instance = new MyBookingThemeSettings();
 	    }
-	 
+
 	    return self::$instance;
-	  }  	
+	  }
 
 	  /**
 	   * Initialize
-	   */ 
+	   */
     private function wp_init() {
 
 			// Create menu in settings
@@ -155,20 +155,20 @@
      *   - renting
      *   - activities
 		 *
-		 */ 
+		 */
 		public function wp_settings_init() {
 
 
-		  register_setting("mybooking_theme_settings_group_company_info", 
+		  register_setting("mybooking_theme_settings_group_company_info",
 		  								 "mybooking_theme_settings_company_info");
 
-		  register_setting("mybooking_theme_settings_group_contact", 
+		  register_setting("mybooking_theme_settings_group_contact",
 		  								 "mybooking_theme_settings_contact");
 
-		  register_setting("mybooking_theme_settings_group_options_global", 
+		  register_setting("mybooking_theme_settings_group_options_global",
 		  								 "mybooking_theme_settings_options_global");
 
-		  register_setting("mybooking_theme_settings_group_promo", 
+		  register_setting("mybooking_theme_settings_group_promo",
 		  								 "mybooking_theme_settings_promo");
 
 		  // Sections
@@ -282,20 +282,20 @@
 		                     "contact_section");
 
 		  add_settings_field("contact_section_subtitle",
-		                     _x('Section Title', 'theme_settings', 'mybooking'),
+		                     _x('Section Subtitle', 'theme_settings', 'mybooking'),
 		                     array($this, 'field_mybooking_theme_contact_section_subtitle_callback'),
 		                     "settings",
 		                     "contact_section");
 
 		  add_settings_field("contact_section_text",
-		                     _x('Section Title', 'theme_settings', 'mybooking'),
+		                     _x('Section Text', 'theme_settings', 'mybooking'),
 		                     array($this, 'field_mybooking_theme_contact_section_text_callback'),
 		                     "settings",
 		                     "contact_section");
 
 
 		  add_settings_field("contact_map_code",
-		                     _x('Section Title', 'theme_settings', 'mybooking'),
+		                     _x('Google Maps code', 'theme_settings', 'mybooking'),
 		                     array($this, 'field_mybooking_theme_contact_map_code_callback'),
 		                     "settings",
 		                     "contact_section");
@@ -371,13 +371,13 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
   <?php settings_errors(); ?>
 
   <form action="options.php" method="POST">
-    <?php   
+    <?php
 
-	             if ($active_tab == 'company_options') { 
+	             if ($active_tab == 'company_options') {
 	            ?>
     <p><?php echo _x('It is used on <b>TopBar</b>, <b>Footer</b> and <b>Contact Page</b> to render <u>company information</u>.',
 	               								  'theme_settings', 'mybooking')?></p>
-    <?php  								  
+    <?php
 	             	 settings_fields('mybooking_theme_settings_group_company_info');
 	             	 echo '<table class="form-table">';
 	             	 do_settings_fields('settings', 'company_info_section');
@@ -389,12 +389,12 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
     <p><?php echo _x('It is used by <b>MyBooking Contact</b> template to render a full contact page.',
 	               								  'theme_settings', 'mybooking')?></p>
     <?php
-            
+
 	             	 settings_fields('mybooking_theme_settings_group_contact');
 	             	 echo '<table class="form-table">';
 	             	 do_settings_fields('settings', 'contact_section');
 	             	 echo '</table>';
-           	 
+
 	             }
 
 	             if ($active_tab == 'promotions') {
@@ -402,12 +402,12 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
     <p><?php echo _x('Promotions module.',
 	               								  'theme_settings', 'mybooking')?></p>
     <?php
-            
+
 	             	 settings_fields('mybooking_theme_settings_group_promo');
 	             	 echo '<table class="form-table">';
 	             	 do_settings_fields('settings', 'promo_section');
 	             	 echo '</table>';
-           	 
+
 	             }
 
 	             if ($active_tab == 'global_settings') {
@@ -428,85 +428,85 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
 
   </form>
 </div>
-<?php 
+<?php
 		}
 
 		public function field_mybooking_theme_company_info_trade_name_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_trade_name", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_trade_name",
 													_x( 'Company Trade Name.', 'theme_settings', 'mybooking')	);
 
 		}
 
 		public function field_mybooking_theme_company_info_name_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_name", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_name",
 													_x( 'Company Legal Name.', 'theme_settings', 'mybooking')	);
 
 		}
 		public function field_mybooking_theme_company_info_nif_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_nif", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_nif",
 													_x( 'Company VAT Number.', 'theme_settings', 'mybooking')	);
 
 		}
 		public function field_mybooking_theme_company_info_adress_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_address", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_address",
 													_x( 'Company Address.', 'theme_settings', 'mybooking')	);
 
 		}
 		public function field_mybooking_theme_company_info_phone_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_phone", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_phone",
 													_x( 'Company Phone Number.', 'theme_settings', 'mybooking')	);
 
 		}
 		public function field_mybooking_theme_company_info_chat_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_chat", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_chat",
 													_x( 'Company WhatsApp Number.', 'theme_settings', 'mybooking')	);
 
 		}
 		public function field_mybooking_theme_company_info_email_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_email", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_email",
 													_x( 'Company E-mail address.', 'theme_settings', 'mybooking')	);
 
 		}
 		public function field_mybooking_theme_company_info_twitter_url_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_twitter_url", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_twitter_url",
 													_x( 'Company Twitter URL.', 'theme_settings', 'mybooking')	);
 
 		}
 		public function field_mybooking_theme_company_info_facebook_url_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_facebook_url", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_facebook_url",
 													_x( 'Company Facebook URL.', 'theme_settings', 'mybooking')	);
 
 		}
 		public function field_mybooking_theme_company_info_instagram_url_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_instagram_url", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_instagram_url",
 													_x( 'Company Instagram URL.', 'theme_settings', 'mybooking')	);
 
 		}
 		public function field_mybooking_theme_company_info_linkedin_url_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_linkedin_url", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_linkedin_url",
 													_x( 'Company Linkedin URL.', 'theme_settings', 'mybooking')	);
 
 		}
 		public function field_mybooking_theme_company_info_youtube_url_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_youtube_url", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_youtube_url",
 													_x( 'Company Youtube URL.', 'theme_settings', 'mybooking')	);
 
 		}
 		public function field_mybooking_theme_company_info_google_analytics_callback() {
 
-			$this->text_field( "mybooking_theme_settings_company_info", "company_info_info_google_analytics", 
+			$this->text_field( "mybooking_theme_settings_company_info", "company_info_info_google_analytics",
 													_x( 'Google Analytics ID.', 'theme_settings', 'mybooking')	);
 
 		}
@@ -515,28 +515,28 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
 
 		public function field_mybooking_theme_contact_section_title_callback() {
 
-			$this->text_field( "mybooking_theme_settings_contact", "contact_section_title", 
+			$this->text_field( "mybooking_theme_settings_contact", "contact_section_title",
 													_x( 'Page title', 'theme_settings', 'mybooking')	);
 
 		}
 
 		public function field_mybooking_theme_contact_section_subtitle_callback() {
 
-			$this->text_field( "mybooking_theme_settings_contact", "contact_section_subtitle", 
+			$this->text_field( "mybooking_theme_settings_contact", "contact_section_subtitle",
 													_x( 'Page subtitle', 'theme_settings', 'mybooking')	);
 
 		}
 
 		public function field_mybooking_theme_contact_section_text_callback() {
 
-			$this->textarea_field( "mybooking_theme_settings_contact", "contact_section_text", 
+			$this->textarea_field( "mybooking_theme_settings_contact", "contact_section_text",
 														 _x( 'Text message', 'theme_settings', 'mybooking')	);
 
 		}
 
 		public function field_mybooking_theme_contact_map_code_callback() {
 
-			$this->textarea_field( "mybooking_theme_settings_contact", "contact_map_code", 
+			$this->textarea_field( "mybooking_theme_settings_contact", "contact_map_code",
 														 _x( 'Copy Google Maps iframe', 'theme_settings', 'mybooking')	);
 
 		}
@@ -545,14 +545,14 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
 
 		public function field_mybooking_theme_promo_popup_active_callback() {
 
-			$this->checkbox_field( "mybooking_theme_settings_promo", "promo_popup_active", 
+			$this->checkbox_field( "mybooking_theme_settings_promo", "promo_popup_active",
 														 _x( 'Activate <b>Promotion Pop-ups</b> Custom Post Type in order to create promotions.', 'theme_settings', 'mybooking')	);
 
 		}
 
 		public function field_mybooking_theme_promo_home_widgets_active_callback() {
 
-			$this->checkbox_field( "mybooking_theme_settings_promo", "promo_home_widgets_active", 
+			$this->checkbox_field( "mybooking_theme_settings_promo", "promo_home_widgets_active",
 														 _x( 'It activates up to 6 widgets areas on <b>MyBooking Home</b> template to show banners and promotions.', 'theme_settings', 'mybooking')	);
 
 		}
@@ -564,7 +564,7 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
 		 */
 		public function field_mybooking_theme_global_vehicle_active_callback() {
 
-			$this->checkbox_field( "mybooking_theme_settings_options_global", "global_vehicle_active", 
+			$this->checkbox_field( "mybooking_theme_settings_options_global", "global_vehicle_active",
 														 _x( 'Activate <b>Vehicles</b> Custom Post Type in order to create Fleet Page and Offers.', 'theme_settings', 'mybooking')	);
 
 		}
@@ -580,9 +580,9 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
 		  else {
 		  	$value = '';
 		  }
-		  
+
 		  echo "<textarea name='".$option_group."[$field]' class='regular-text' rows='10'>".$value.'</textarea>';
-		  echo "<p class=\"description\">$description</p>"; 
+		  echo "<p class=\"description\">$description</p>";
 
 		}
 
@@ -595,9 +595,9 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
 		  else {
 		  	$value = '';
 		  }
-		  
+
 		  echo "<input type='text' name='".$option_group."[$field]' value='$value' class='regular-text' />";
-		  echo "<p class=\"description\">$description</p>"; 
+		  echo "<p class=\"description\">$description</p>";
 
 		}
 
@@ -609,8 +609,8 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
 		  }
 		  else {
         $value = '';
-		  } 
-		  
+		  }
+
 		  $checked = ($value == '1') ? 'checked' : '';
 
       echo "<input type='hidden' name='".$option_group."[$field]' value=''/>";
