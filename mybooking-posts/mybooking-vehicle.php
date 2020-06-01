@@ -3,7 +3,7 @@
 *   VEHICLE POST TYPE
 *   -----------------
 *
-* 	Versión: 0.0.2
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.4
@@ -30,6 +30,7 @@ function create_vehicle() {
       'show_ui' => true,
       'public' => true,
       'show_in_menu' => 'config',
+      'show_in_rest' => true, // Gutenberg activation!
       'supports' => array( 'title', 'editor', 'thumbnail' ),
       'menu_icon' => 'dashicons-id',
       'has_archive' => true

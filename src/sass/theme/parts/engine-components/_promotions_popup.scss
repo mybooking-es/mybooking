@@ -1,0 +1,24 @@
+//==============================================
+// Promotions Popup
+//==============================================
+
+.mybooking-popup {}
+
+button.mybooking-popup_close {
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 45;
+}
+
+.mybooking-popup_content {
+	padding: 1rem;
+	border: none;
+	border-radius: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.mybooking-popup_post {}

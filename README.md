@@ -186,3 +186,4 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Mybooking settings menu cleaned and tabbed
 ### 0.9.1
 - Contact Page setting titles fixed
+### 0.9.2
