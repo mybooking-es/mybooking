@@ -182,13 +182,13 @@ class MyBookingCustomizer {
     	$typography_body = get_theme_mod( 'mybooking_font_body', 'default');
     	$typography_heading = get_theme_mod( 'mybooking_font_heading', 'default');
 
-    	$brand_primary = get_theme_mod( 'mybooking_brand_primary', '#8ac53f' );
-    	$brand_primary_light = get_theme_mod( 'mybooking_brand_primary_light', '#bef870' );
-    	$brand_primary_dark = get_theme_mod( 'mybooking_brand_primary_dark', '#599400' );
+    	$brand_primary = get_theme_mod( 'mybooking_brand_primary', '#2194f3' );
+    	$brand_primary_light = get_theme_mod( 'mybooking_brand_primary_light', '#6ec4ff' );
+    	$brand_primary_dark = get_theme_mod( 'mybooking_brand_primary_dark', '#0067c0' );
 
-    	$brand_secondary = get_theme_mod( 'mybooking_brand_secondary', '#424242' );
-    	$brand_secondary_light = get_theme_mod( 'mybooking_brand_secondary_light', '#6d6d6d' );
-    	$brand_secondary_dark = get_theme_mod( 'mybooking_brand_secondary_dark', '#1b1b1b' );
+    	$brand_secondary = get_theme_mod( 'mybooking_brand_secondary', '#9e9e9e' );
+    	$brand_secondary_light = get_theme_mod( 'mybooking_brand_secondary_light', '#cfcfcf' );
+    	$brand_secondary_dark = get_theme_mod( 'mybooking_brand_secondary_dark', '#707070' );
 
     	$body_bg = get_theme_mod( 'mybooking_body_bg', '#ffffff' );
     	$body_color = get_theme_mod( 'mybooking_body_color', '#212121' );    	
@@ -199,7 +199,7 @@ class MyBookingCustomizer {
     	$topbar_link_color = get_theme_mod( 'mybooking_topbar_link_color', '#ffffff' );    	
     	$topbar_link_hover_color = get_theme_mod( 'mybooking_topbar_link_hover_color', '#fafafa' );
 
-    	$navbar_bg = get_theme_mod( 'mybooking_navbar_bg', '#8ac53f');
+    	$navbar_bg = get_theme_mod( 'mybooking_navbar_bg', '#2194f3');
     	$navbar_link_color = get_theme_mod( 'mybooking_navbar_link_color', '#ffffff' );
     	$navbar_link_color_hover = get_theme_mod( 'mybooking_navbar_link_hover_color', '#ffffff' ); 
     	$navbar_link_active = get_theme_mod( 'mybooking_navbar_link_active', '#212121' ); 
