@@ -6,7 +6,7 @@
 * 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.0.1
+*   @since Mybooking WordPress Theme 0.0.1º
 */
 
 // Exit if accessed directly.
@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 <?php $testimonial_carousel_visible = get_theme_mod( "mybooking_home_testimonial_carousel_visibility" );
 if ($testimonial_carousel_visible == 1) { ?>
-<div class="rideon-home_testimonials">
+<div class="mybooking-home_testimonials">
   <div class="container -carrusel-testimonials owl-theme">
 
     <?php

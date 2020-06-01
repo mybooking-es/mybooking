@@ -3,7 +3,7 @@
 *		MYBOOKING FOOTER INFO PARTIAL
 *  	-----------------------------
 *
-* 	Versión: 0.0.3
+* 	Versión: 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.2
@@ -90,7 +90,6 @@ defined( 'ABSPATH' ) || exit;
   <?php } else { ?>
 
     <div class="col">
-      <h6>Síguenos</h6>
       <ul class="social-links">
 
         <?php $company_facebook = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_facebook_url");
@@ -127,7 +126,7 @@ defined( 'ABSPATH' ) || exit;
             <a href="<?php echo $company_youtube ?>" target="_blank"><i class="fa fa-youtube"></i></a>
           </li>
         <?php } ?>
-        
+
       </ul>
       <br>
       <p class="info_bloc">

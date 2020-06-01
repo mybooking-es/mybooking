@@ -13,7 +13,9 @@
 <?php get_template_part('mybooking-parts/site/mybooking-contact-block') ?>
 */
 
-// TODO: Integrate in process template, add CSS and do hide/show controls
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 ?>
 
 <section class="blank-section reservation-process_contact">
