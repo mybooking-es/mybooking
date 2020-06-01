@@ -9,9 +9,9 @@
   --brand-primary-light: #bef870;
   --brand-primary-dark: #599400;
   // Secondary colors
-  --brand-secondary: #5c6ac4;
-  --brand-secondary-light: #8f98f7;
-  --brand-secondary-dark: #254093;
+  --brand-secondary: #424242;
+  --brand-secondary-light: #6d6d6d;
+  --brand-secondary-dark: #1b1b1b;
   // Base
   --font-family: "Inter", sans-serif;
   --font-body: var(--font-family);
@@ -23,6 +23,9 @@
   --color-link-hover: var(--brand-primary-light);
   --color-link-active: var(--brand-primary-dark);
   --color-link-visited: var(--brand-primary-dark);
+  // Topbar message
+  --topbar-message-bg-color: var(--alert);
+  --topbar-color: #fff;
   // Topbar
   --home-topbar-bg: rgba(66, 66, 66, 0.5);
   --topbar-bg: var(--gray-900);
@@ -67,15 +70,32 @@
   // Cookies
   --cookies-bg-color: var(--brand-primary);
   --cookies-text-color: var(--body-color);
-  // Selector
+  // Home Selector bg
   --home-selector-bg: rgba(255, 255, 255, 0.6);
-  --selector-sticky-bg: var(--brand-secondary-light);
-  --selector-color: var(--body-color);
-  --selector-sticky-color: var(--body-color);
+  // Selector bg outside home-page
+  --selector-bg: var(--brand-secondary-light);
+  // Selector search btn
+  --selector-btn-bg-color: var(--brand-primary);
+  --selector-btn-border-color: var(--brand-primary);
+  --selector-btn-color: var(--white);
+  --selector-btn-hover-bg-color: var(--brand-primary-dark);
+  --selector-btn-hover-border-color: var(--brand-primary-dark);
+  --selector-btn-hover-color: var(--white);
+  // Selector labels
+  --selector-label-color: var(--body-color);
+  // Selector sticky
+  --selector-sticky-bg: var(--brand-primary);
+  --selector-sticky-labels-color: var(--white);
+  // Selector sticky search btn
+  --selector-btn-sticky-bg-color: var(--brand-primary);
+  --selector-btn-sticky-border-color: var(--white);
+  --selector-btn-sticky-color: var(--white);
+  --selector-btn-sticky-hover-bg-color: var(--prbrand-primary-dark);
+  --selector-btn-sticky-hover-border-color: var(--brand-primary-dark);
+  --selector-btn-sticky-hover-color: var(--white);
   // Selector inside modal
   --modal-selector-label-color: var(--body-color);
-  // Selector outside home-page
-  --selector-bg: var(--brand-secondary-light);
+  --modal-selector-bg: var(--gray-200);
   // Buttons
   --btn-bg-color: var(--brand-primary);
   --btn-bg-color-hover: var(--brand-primary-dark);

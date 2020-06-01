@@ -186,9 +186,9 @@ class MyBookingCustomizer {
     	$brand_primary_light = get_theme_mod( 'mybooking_brand_primary_light', '#bef870' );
     	$brand_primary_dark = get_theme_mod( 'mybooking_brand_primary_dark', '#599400' );
 
-    	$brand_secondary = get_theme_mod( 'mybooking_brand_secondary', '#5c6ac4' );
-    	$brand_secondary_light = get_theme_mod( 'mybooking_brand_secondary_light', '#8f98f7' );
-    	$brand_secondary_dark = get_theme_mod( 'mybooking_brand_secondary_dark', '#254093' );
+    	$brand_secondary = get_theme_mod( 'mybooking_brand_secondary', '#424242' );
+    	$brand_secondary_light = get_theme_mod( 'mybooking_brand_secondary_light', '#6d6d6d' );
+    	$brand_secondary_dark = get_theme_mod( 'mybooking_brand_secondary_dark', '#1b1b1b' );
 
     	$body_bg = get_theme_mod( 'mybooking_body_bg', '#ffffff' );
     	$body_color = get_theme_mod( 'mybooking_body_color', '#212121' );    	

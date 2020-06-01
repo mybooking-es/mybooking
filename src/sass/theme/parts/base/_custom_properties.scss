@@ -5,6 +5,7 @@ these properties do not need to be edited */
   --white: #ffffff;
   --black: #000000;
   --error: #b00020;
+  --alert: #ffb74d;
   //  Gray  Colors
   --gray-50: #fafafa;
   --gray-100: #f5f5f5;
@@ -20,14 +21,29 @@ these properties do not need to be edited */
    Margin calc functions */
   // Choose product and Complete summary sticky bar
   --sticky-top-mobile-top-position: calc(var(--custom-logo-height) + 53px);
+  --sticky-top-mobile-top-position-message: calc(
+    var(--custom-logo-height) + 53px + 40px
+  );
   // Card static
   --card-static-margin-top-mobile: calc(var(--custom-logo-height) + 129px);
+  --card-static-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 129px + 40px
+  );
   // Extras complete
   --extras-margin-top-mobile: calc(var(--custom-logo-height) + 132px);
+  --extras-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 132px + 40px
+  );
   // Product detail on complete and summary (tablet sizes)
   --product-detail-margin-top-mobile: calc(var(--custom-logo-height) + 102px);
+  --product-detail-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 102px + 40px
+  );
   // Summary reservation title
   --summary-reservation-title-margin-top-mobile: calc(
     var(--custom-logo-height) + 53px
+  );
+  --summary-reservation-title-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 53px + 40px
   );
 }

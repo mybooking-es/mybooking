@@ -127,3 +127,36 @@ $(document).on("click", ".dropdown-menu li", function (e) {
   $(".dropdown-menu li > .dropdown-menu").slide();
   e.stopPropagation();
 });
+
+// MARGINS CALC FUNCTIONS
+$(document).ready(function () {
+  var bodyStyles = document.body.style;
+
+  if ($(".topbar-message")[0]) {
+    // Choose product and Complete summary sticky bar
+    bodyStyles.setProperty(
+      "--sticky-top-mobile-top-position",
+      "var(--sticky-top-mobile-top-position-message)"
+    );
+    // Card static
+    bodyStyles.setProperty(
+      "--card-static-margin-top-mobile",
+      "var(--card-static-margin-top-mobile-message)"
+    );
+    // Extras complete
+    bodyStyles.setProperty(
+      "--extras-margin-top-mobile",
+      "var(--extras-margin-top-mobile-message)"
+    );
+    // Product detail on complete and summary (tablet sizes)
+    bodyStyles.setProperty(
+      "--product-detail-margin-top-mobile",
+      "var(--product-detail-margin-top-mobile-message)"
+    );
+    // Summary reservation title
+    bodyStyles.setProperty(
+      "--summary-reservation-title-margin-top-mobile",
+      "var(--summary-reservation-title-margin-top-mobile-message)"
+    );
+  }
+});

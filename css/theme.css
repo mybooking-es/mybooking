@@ -24452,6 +24452,7 @@ these properties do not need to be edited */
   --white: #ffffff;
   --black: #000000;
   --error: #b00020;
+  --alert: #ffb74d;
   --gray-50: #fafafa;
   --gray-100: #f5f5f5;
   --gray-200: #eeeeee;
@@ -24465,11 +24466,26 @@ these properties do not need to be edited */
   /**
    Margin calc functions */
   --sticky-top-mobile-top-position: calc(var(--custom-logo-height) + 53px);
+  --sticky-top-mobile-top-position-message: calc(
+    var(--custom-logo-height) + 53px + 40px
+  );
   --card-static-margin-top-mobile: calc(var(--custom-logo-height) + 129px);
+  --card-static-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 129px + 40px
+  );
   --extras-margin-top-mobile: calc(var(--custom-logo-height) + 132px);
+  --extras-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 132px + 40px
+  );
   --product-detail-margin-top-mobile: calc(var(--custom-logo-height) + 102px);
+  --product-detail-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 102px + 40px
+  );
   --summary-reservation-title-margin-top-mobile: calc(
     var(--custom-logo-height) + 53px
+  );
+  --summary-reservation-title-margin-top-mobile-message: calc(
+    var(--custom-logo-height) + 53px + 40px
   ); }
 
 @font-face {
@@ -24588,6 +24604,12 @@ a:active {
 
 .color-error {
   color: var(--error); }
+
+.color-alert {
+  color: var(--alert); }
+
+.bg-alert {
+  background-color: var(--alert); }
 
 .color-brand-primary {
   color: var(--brand-primary); }
@@ -24818,9 +24840,9 @@ select:disabled {
   --brand-primary: #8ac53f;
   --brand-primary-light: #bef870;
   --brand-primary-dark: #599400;
-  --brand-secondary: #5c6ac4;
-  --brand-secondary-light: #8f98f7;
-  --brand-secondary-dark: #254093;
+  --brand-secondary: #424242;
+  --brand-secondary-light: #6d6d6d;
+  --brand-secondary-dark: #1b1b1b;
   --font-family: "Inter", sans-serif;
   --font-body: var(--font-family);
   --font-heading: var(--font-family);
@@ -24830,6 +24852,8 @@ select:disabled {
   --color-link-hover: var(--brand-primary-light);
   --color-link-active: var(--brand-primary-dark);
   --color-link-visited: var(--brand-primary-dark);
+  --topbar-message-bg-color: var(--alert);
+  --topbar-color: #fff;
   --home-topbar-bg: rgba(66, 66, 66, 0.5);
   --topbar-bg: var(--gray-900);
   --topbar-color: var(--white);
@@ -24867,11 +24891,24 @@ select:disabled {
   --cookies-bg-color: var(--brand-primary);
   --cookies-text-color: var(--body-color);
   --home-selector-bg: rgba(255, 255, 255, 0.6);
-  --selector-sticky-bg: var(--brand-secondary-light);
-  --selector-color: var(--body-color);
-  --selector-sticky-color: var(--body-color);
-  --modal-selector-label-color: var(--body-color);
   --selector-bg: var(--brand-secondary-light);
+  --selector-btn-bg-color: var(--brand-primary);
+  --selector-btn-border-color: var(--brand-primary);
+  --selector-btn-color: var(--white);
+  --selector-btn-hover-bg-color: var(--brand-primary-dark);
+  --selector-btn-hover-border-color: var(--brand-primary-dark);
+  --selector-btn-hover-color: var(--white);
+  --selector-label-color: var(--body-color);
+  --selector-sticky-bg: var(--brand-primary);
+  --selector-sticky-labels-color: var(--white);
+  --selector-btn-sticky-bg-color: var(--brand-primary);
+  --selector-btn-sticky-border-color: var(--white);
+  --selector-btn-sticky-color: var(--white);
+  --selector-btn-sticky-hover-bg-color: var(--prbrand-primary-dark);
+  --selector-btn-sticky-hover-border-color: var(--brand-primary-dark);
+  --selector-btn-sticky-hover-color: var(--white);
+  --modal-selector-label-color: var(--body-color);
+  --modal-selector-bg: var(--gray-200);
   --btn-bg-color: var(--brand-primary);
   --btn-bg-color-hover: var(--brand-primary-dark);
   --btn-border-color: var(--brand-primary);
@@ -25488,8 +25525,8 @@ img.wp-post-image {
 .topbar-message {
   padding: 0.5rem 2rem;
   text-align: center;
-  background-color: #333;
-  color: #fff; }
+  background-color: var(--topbar-message-bg-color);
+  color: var(--topbar-color); }
 
 @media (max-width: 991.98px) {
   .topbar .info_text,
@@ -26162,9 +26199,12 @@ This is the structure of the selector form
   top: -8px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: var(--btn-bg-color); }
+  background-color: var(--selector-btn-bg-color);
+  border-color: var(--selector-btn-border-color);
+  color: var(--selector-btn-color); }
   .flex-form-box .btn:hover {
-    background-color: var(--btn-bg-color-hover); }
+    background-color: var(--selector-btn-hover-bg-color);
+    border-color: var(--selector-btn-hover-border-color); }
 
 .flex-form {
   display: -webkit-box;
@@ -26175,8 +26215,9 @@ This is the structure of the selector form
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: var(--selector-bg);
-  color: var(--selector-color);
   padding: 10px; }
+  .flex-form label {
+    color: var(--selector-label-color); }
 
 .home .flex-form {
   background-color: var(--home-selector-bg); }
@@ -26340,7 +26381,6 @@ This is the structure of the selector form
   position: fixed;
   padding: 10px 10px 0 10px;
   z-index: 10000;
-  color: var(--selector-sticky-color);
   min-width: 100% !important;
   max-width: 100% !important;
   width: 100% !important;
@@ -26364,12 +26404,21 @@ This is the structure of the selector form
         -ms-flex-positive: 1;
             flex-grow: 1; }
   .flex-form-sticky .btn {
-    height: 48px;
-    margin-top: 35px !important; }
+    margin-top: 35px !important;
+    position: relative;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: var(--selector-btn-sticky-bg-color);
+    border-color: var(--selector-btn-sticky-border-color);
+    color: var(--selector-btn-color); }
+    .flex-form-sticky .btn:hover {
+      background-color: var(--selector-btn-hover-bg-color);
+      border-color: var(--selector-btn-hover-border-color); }
   .flex-form-sticky input.hasDatepicker {
     max-width: 130px; }
   .flex-form-sticky label {
-    font-size: 13px; }
+    font-size: 13px;
+    color: var(--selector-sticky-labels-color); }
 
 form[name="search_form"] .flex-form-item {
   border: 1px solid var(--gray-300); }
@@ -26394,8 +26443,10 @@ div#another_return_place_group {
   border: none !important;
   border-radius: 0 !important; }
 
-.modal .flex-form-group-wrapper label {
-  color: var(--modal-selector-label-color); }
+.modal .flex-form {
+  background-color: var(--modal-selector-bg); }
+  .modal .flex-form label {
+    color: var(--modal-selector-label-color); }
 
 .wizard-selector {
   margin-top: 1rem; }
