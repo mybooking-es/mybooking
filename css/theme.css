@@ -24947,6 +24947,7 @@ select:disabled {
   --card-info-icon-color-hover: var(--gray-400);
   --card-product-name-color: var(--gray-900);
   --card-short-description-color: var(--gray-500);
+  --card-image-object-fit: contain;
   --card-key-characteristics-text-color: var(--gray-900);
   --sticky-bar-bg: var(--gray-900);
   --sticky-bar-icons-color: var(--brand-primary);
@@ -26581,7 +26582,8 @@ div#another_return_place_group {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  background-color: var(--gray-200); }
 
 .card-static-wrapper {
   display: -webkit-box;
@@ -26638,14 +26640,14 @@ div#another_return_place_group {
   .card-static_image img {
     height: 100%;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     background-color: var(--card-image-bg-color);
-    -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
-    -o-object-fit: contain;
-       object-fit: contain; }
+    -o-object-fit: var(--card-image-object-fit);
+       object-fit: var(--card-image-object-fit);
+    -webkit-box-shadow: #cccccc -6px 12px 50px -10px;
+            box-shadow: #cccccc -6px 12px 50px -10px; }
 
 .card-static_body {
   -webkit-box-pack: end;
@@ -26662,12 +26664,12 @@ div#another_return_place_group {
   width: 100%;
   min-height: 200px;
   padding: 80px 20px 20px 20px;
-  -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
   background-color: var(--card-body-bg-color);
-  border-radius: 4px;
+  border-radius: 10px;
   border-top-left-radius: 0;
-  border-top-right-radius: 0; }
+  border-top-right-radius: 0;
+  -webkit-box-shadow: -6px 12px 50px -10px #cccccc;
+          box-shadow: -6px 12px 50px -10px #cccccc; }
 
 .card-static_btn {
   -ms-flex-item-align: self-end;
@@ -26793,6 +26795,7 @@ div#another_return_place_group {
 
 @media (min-width: 992px) {
   .card-static-wrapper {
+    padding: 16px;
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
     -webkit-box-flex: 0;
@@ -27192,27 +27195,38 @@ a.magic-button.btn {
   border: 1px solid var(--gray-300);
   border-radius: 4px;
   margin: 10px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 1rem;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
 
-.extra-image {
-  width: 50%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .extra-image img {
-    max-width: 150px;
-    -o-object-fit: contain;
-       object-fit: contain; }
+.extras-left {
+  width: 70%; }
+  .extras-left .extras-text p span {
+    font-family: var(--font-body) !important;
+    text-align: left !important;
+    background-color: transparent !important;
+    font-size: 13px !important; }
+  .extras-left .extra-title {
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .extras-left .extra-title img {
+      width: 70px;
+      -o-object-fit: contain;
+         object-fit: contain; }
 
-.extra-content {
-  width: 50%;
+.extras-right {
+  padding-left: 30px;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27220,11 +27234,20 @@ a.magic-button.btn {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  .extras-right .extras-price {
+    padding-top: 20px;
+    font-weight: 700; }
+  .extras-right .counter .center {
+    width: 150px;
+    margin: 40px auto; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .extras-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -27235,9 +27258,20 @@ a.magic-button.btn {
   .extras {
     margin-top: 0; } }
 
-.counter .center {
-  width: 150px;
-  margin: 40px auto; }
+@media (max-width: 575.98px) {
+  .extras-right,
+  .extras-left {
+    width: 100%; }
+  .extra-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .extras-right {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-left: 0; } }
 
 .reservation-detail-container {
   display: -webkit-box;
@@ -27657,6 +27691,21 @@ ul.summary-modal_prices {
 .date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected, .date-picker-wrapper .date-selected {
   background-color: #4499ee !important;
   color: white !important; }
+
+button.mybooking-popup_close {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 45; }
+
+.mybooking-popup_content {
+  padding: 1rem;
+  border: none;
+  border-radius: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 @media (max-width: 991.98px) {
   .summary-reservation-title {

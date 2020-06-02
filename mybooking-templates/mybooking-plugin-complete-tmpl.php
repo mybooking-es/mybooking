@@ -22,13 +22,19 @@
         <% for (var idx=0;idx<coverages.length;idx++) { %>
           <% var coverage = coverages[idx]; %>
           <div class="extra-wrapper">
-            <div class="extra-image">
-              <% if (coverage.photo_path != null) { %>
-                <img src="<%=coverage.photo_path%>" class="card-img js-extra-info-btn" data-extra="<%=coverage.code%>"/>
-              <% } %>
-            </div>
-            <div class="extra-content">
+            <div class="extras-left">
+              <div class="extra-title">
+                <% if (coverage.photo_path != null) { %>
+                <img src="<%=coverage.photo_path%>" class="card-img js-extra-info-btn"
+                  data-extra="<%=coverage.code%>" />
+                <% } %>
                 <h6 class="lead"><%=coverage.name%></h6>
+              </div>
+              <div class="extras-text"><%=coverage.description%></div>
+
+            </div>
+            <div class="extras-right">
+                    <p class="extras-price"><%= configuration.formatCurrency(coverage.unit_price)%></p>
                     <% if (coverage.max_quantity > 1) { %>
                       <div class="input-group input-group-sm" style="width:100px;">
                           <div class="input-group-prepend">
@@ -51,7 +57,7 @@
                         <label class="custom-control-label" for="checkboxl<%=coverage.code%>"></label>
                       </div>
                     <% } %>
-                    <p class="fw-700 mt-2"><%= configuration.formatCurrency(coverage.unit_price)%></p>
+                
             </div>
           </div>
         <% } %>
@@ -65,36 +71,39 @@
         <% for (var idx=0;idx<extras.length;idx++) { %>
           <% var extra = extras[idx]; %>
           <div class="extra-wrapper">
-            <div class="extra-image">
-              <% if (extra.photo_path != null) { %>
-                <img src="<%=extra.photo_path%>" class="card-img js-extra-info-btn" data-extra="<%=extra.code%>" />
-              <% } %>
-            </div>
-            <div class="extra-content">
+            <div class="extras-left">
+              <div class="extra-title">
+                <% if (extra.photo_path != null) { %>
+                  <img src="<%=extra.photo_path%>" class="card-img js-extra-info-btn" data-extra="<%=extra.code%>" />
+                <% } %>
                 <h6 class="lead"><%=extra.name%></h6>
-                    <% if (extra.max_quantity > 1) { %>
-                      <div class="input-group input-group-sm" style="width:100px;">
-                          <div class="input-group-prepend">
-                            <button class="btn btn-outline-secondary btn-minus-extra"
-                              data-value="<%=extra.code%>"
-                              data-max-quantity="<%=extra.max_quantity%>">-</button>
-                          </div>
-                          <% value = (extrasInShoppingCart[extra.code]) ? extrasInShoppingCart[extra.code] : 0; %>
-                          <input type="text" id="extra-<%=extra.code%>-quantity"
-                              class="form-control disabled text-center extra-input" value="<%=value%>" data-extra-code="<%=extra.code%>"/>
-                          <div class="input-group-append">
-                              <button class="btn btn-outline-secondary btn-plus-extra"
-                              data-value="<%=extra.code%>"
-                              data-max-quantity="<%=extra.max_quantity%>">+</button>
-                            </div>
+              </div>
+              <div class="extras-text"><%=extra.description%></div>
+            </div>
+            <div class="extras-right">
+            <p class="extras-price"><%= configuration.formatCurrency(extra.unit_price)%></p>
+              <% if (extra.max_quantity > 1) { %>
+                <div class="input-group input-group-sm" style="width:100px;">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary btn-minus-extra"
+                        data-value="<%=extra.code%>"
+                        data-max-quantity="<%=extra.max_quantity%>">-</button>
+                    </div>
+                    <% value = (extrasInShoppingCart[extra.code]) ? extrasInShoppingCart[extra.code] : 0; %>
+                    <input type="text" id="extra-<%=extra.code%>-quantity"
+                        class="form-control disabled text-center extra-input" value="<%=value%>" data-extra-code="<%=extra.code%>"/>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary btn-plus-extra"
+                        data-value="<%=extra.code%>"
+                        data-max-quantity="<%=extra.max_quantity%>">+</button>
                       </div>
-                    <% } else { %>
-                      <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=extra.code%>" data-value="<%=extra.code%>" <% if (extrasInShoppingCart[extra.code] &&  extrasInShoppingCart[extra.code] > 0) { %> checked="checked" <% } %>>
-                        <label class="custom-control-label" for="checkboxl<%=extra.code%>"></label>
-                      </div>
-                    <% } %>
-                    <p class="fw-700 mt-2"><%= configuration.formatCurrency(extra.unit_price)%></p>
+                </div>
+              <% } else { %>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=extra.code%>" data-value="<%=extra.code%>" <% if (extrasInShoppingCart[extra.code] &&  extrasInShoppingCart[extra.code] > 0) { %> checked="checked" <% } %>>
+                  <label class="custom-control-label" for="checkboxl<%=extra.code%>"></label>
+                </div>
+              <% } %>
             </div>
           </div>
         <% } %>

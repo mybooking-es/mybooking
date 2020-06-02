@@ -142,6 +142,7 @@
   --card-info-icon-color-hover: var(--gray-400);
   --card-product-name-color: var(--gray-900);
   --card-short-description-color: var(--gray-500);
+  --card-image-object-fit: contain; // For background transparent images use contain otherwise use cover
   --card-key-characteristics-text-color: var(--gray-900);
   // Sticky bars in choose product and complete
   --sticky-bar-bg: var(--gray-900);

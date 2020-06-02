@@ -438,7 +438,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_primary' , array(
-			    'default'   => '#8ac53f',
+			    'default' => '#2194f3',
 			    'transport' => 'refresh'
 			) );
 
@@ -452,7 +452,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_primary_light' , array(
-			    'default'   => '#bef870',
+			    'default' => '#6ec4ff',
 			    'transport' => 'refresh'
 			) );
 
@@ -465,7 +465,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_primary_dark' , array(
-			    'default'   => '#599400',
+			    'default' => '#0067c0',
 			    'transport' => 'refresh'
 			) );
 
@@ -482,7 +482,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_secondary' , array(
-			    'default'   => '#5c6ac4',
+			    'default' => '#9e9e9e',
 			    'transport' => 'refresh'
 			) );
 
@@ -495,7 +495,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_secondary_light' , array(
-			    'default'   => '#8f98f7',
+			    'default' => '#cfcfcf',
 			    'transport' => 'refresh'
 			) );
 
@@ -508,7 +508,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_secondary_dark' , array(
-			    'default'   => '#254093',
+			    'default' => '#707070',
 			    'transport' => 'refresh'
 			) );
 
@@ -742,7 +742,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_bg' , array(
-			    'default'   => '#8ac53f',
+			    'default' => '#2194f3',
 			    'transport' => 'refresh'
 			) );
 

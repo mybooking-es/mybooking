@@ -4,6 +4,7 @@
 .cards-static-container {
   display: flex;
   flex-wrap: wrap;
+  background-color: var(--gray-200);
 }
 // This is just for the shadow
 .card-static-wrapper {
@@ -47,15 +48,12 @@
   img {
     height: 100%;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     background-color: var(--card-image-bg-color);
-    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
-    // For background transparent images use contain
-    object-fit: contain;
-    // otherwise use cover
-    // object-fit: cover;
+    object-fit: var(--card-image-object-fit);
+    box-shadow: rgb(204, 204, 204) -6px 12px 50px -10px;
   }
 }
 .card-static_body {
@@ -66,11 +64,11 @@
   width: 100%;
   min-height: 200px;
   padding: 80px 20px 20px 20px;
-  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
   background-color: var(--card-body-bg-color);
-  border-radius: 4px;
+  border-radius: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  box-shadow: -6px 12px 50px -10px rgb(204, 204, 204);
 }
 .card-static_btn {
   align-self: self-end;
@@ -191,6 +189,7 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .card-static-wrapper {
+    padding: 16px;
     flex-basis: 45%;
     flex-grow: 0;
   }
