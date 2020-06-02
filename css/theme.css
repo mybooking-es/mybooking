@@ -25638,6 +25638,15 @@ a.dropdown-item {
   border-bottom: none;
   padding-bottom: 0; }
 
+.navbar-main.nav-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
 @media (min-width: 992px) {
   .navbar {
     -webkit-box-shadow: none;
