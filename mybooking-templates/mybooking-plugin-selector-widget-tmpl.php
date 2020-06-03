@@ -18,14 +18,14 @@
       <label for="date_from"><?php _e('Fecha Entrega ', 'mybooking') ?></label>
       <div class="flex-form-item">
         <input type="text" class="form-control" name="date_from" id="widget_date_from" autocomplete="off">
-        <input type="hidden" name="time_from" value="10:00"/>
+        <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>"/>
       </div>
     </div>
     <div class="flex-form-group">
       <label for="date_from"><?php _e('Fecha Devolución ', 'mybooking') ?></label>
       <div class="flex-form-item">
         <input type="text" class="form-control" name="date_to" id="widget_date_to" autocomplete="off">
-        <input type="hidden" name="time_to" value="20:00"/>
+        <input type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>"/>
       </div>
     </div>
     <div class="flex-form-group flex-form-group-no-label">

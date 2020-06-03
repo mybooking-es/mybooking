@@ -46,6 +46,9 @@
             <select id="time_to" name="time_to" placeholder="hh:mm" disabled 
                     class="form-control w-100"> </select>
         </div>
+      <% } else { %>
+        <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>"/>
+        <input type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>"/>  
       <% } %>  
       <!-- Reservation detail -->
       <div id="reservation_detail">
