@@ -17,8 +17,8 @@ defined( 'ABSPATH' ) || exit;
 
   <?php $container = get_theme_mod( 'mybooking_container_type' );
   if ( 'container' == $container ) : ?>
-    <div class="container-fluid">
-  <?php endif; ?>
+  <div class="container-fluid">
+    <?php endif; ?>
 
     <div class="navbar-main nav-right">
 
@@ -28,14 +28,15 @@ defined( 'ABSPATH' ) || exit;
       <!-- Menu toggler -->
       <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-toggler' ) ?>
 
+
     </div>
 
     <!-- WordPress menu -->
     <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-walker' ) ?>
 
 
-  <?php if ( 'container' == $container ) : ?>
-    </div>
+    <?php if ( 'container' == $container ) : ?>
+  </div>
   <?php endif; ?>
 
 </nav>

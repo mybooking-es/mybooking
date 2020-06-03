@@ -9961,7 +9961,7 @@ $(document).on("click", ".dropdown-menu li", function (e) {
 $(document).ready(function () {
   var bodyStyles = document.body.style;
 
-  if ($(".topbar-message")[0]) {
+  if ($(".topbar-message").length > 0) {
     // Choose product and Complete summary sticky bar
     bodyStyles.setProperty(
       "--sticky-top-mobile-top-position",

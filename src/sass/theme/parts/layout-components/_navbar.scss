@@ -137,6 +137,12 @@ a.dropdown-item {
   padding-bottom: 0;
 }
 
+.navbar-main.nav-right {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 @media (min-width: 992px) {
   .navbar {
     box-shadow: none;
