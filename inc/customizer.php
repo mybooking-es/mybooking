@@ -85,9 +85,10 @@ class MyBookingCustomizer {
 			$this->customize_layout_section( $wp_customize );
 			$this->customize_typography_section( $wp_customize );
 			$this->customize_colors_section( $wp_customize );
+			$this->customize_home_section( $wp_customize );
 			$this->customize_topbar_section( $wp_customize );
 			$this->customize_navbar_section( $wp_customize );
-			$this->customize_home_section( $wp_customize );
+			$this->customize_header_section( $wp_customize );
 			$this->customize_footer_section( $wp_customize );
 
 	  }
@@ -263,9 +264,12 @@ class MyBookingCustomizer {
 
     // ----------------------- Customize Sections -----------------------------
 
+
     /**
-     * Customize layout
+     * Customize Layout
+		 *
      */
+
     private function customize_layout_section( $wp_customize ) {
 
 			// Theme layout settings.
@@ -276,7 +280,7 @@ class MyBookingCustomizer {
 					'capability'  => 'edit_theme_options',
 					'description' => _x( 'Container width and sidebar defaults',
 															 'customizer_layout', 'mybooking' ),
-					'priority'    => 150,
+					'priority'    => 50,
 				)
 			);
 
@@ -353,208 +357,11 @@ class MyBookingCustomizer {
     }
 
 
-    /**
-     * Customize layout
-     */
-    private function customize_typography_section( $wp_customize ) {
-
-			// Theme layout settings.
-			$wp_customize->add_section(
-				'mybooking_theme_typography_options',
-				array(
-					'title'       => _x( 'Typography', 'customizer_typography', 'mybooking' ),
-					'capability'  => 'edit_theme_options',
-					'description' => _x( 'Typography defaults',
-															 'customizer_typography', 'mybooking' ),
-					'priority'    => 151,
-				)
-			);
-
-			// == Font body
-
- 			if ( class_exists( 'Font_Selector' ) ) {
-
-				$wp_customize->add_setting( 'mybooking_font_body',
-	          array(
-	          	'transport' => 'refresh',
-	            'type' => 'theme_mod'
-	          )
-	      );
-
-	      $wp_customize->add_control(
-	          new Font_Selector(
-	              $wp_customize, 'mybooking_font_body', array(
-	                  'label'             => esc_html_x( 'Font Body family', 'customizer_typography', 'mybooking' ),
-	                  'description'       => _x('Select the body typography', 'customizer_typography', 'mybooking'),
-	                  'section'           => 'mybooking_theme_typography_options',
-	                  'priority'          => 20,
-	                  'type'              => 'select',
-	              )
-	          )
-	   	  );
-
-				$wp_customize->add_setting( 'mybooking_font_heading',
-	          array(
-	          	'transport' => 'refresh',
-	            'type' => 'theme_mod'
-	          )
-	      );
-
-	      $wp_customize->add_control(
-	          new Font_Selector(
-	              $wp_customize, 'mybooking_font_heading', array(
-	                  'label'             => esc_html_x( 'Font Heading family', 'customizer_typography', 'mybooking' ),
-	                  'description'       => _x('Select the heading typography', 'customizer_typography', 'mybooking'),
-	                  'section'           => 'mybooking_theme_typography_options',
-	                  'priority'          => 20,
-	                  'type'              => 'select',
-	              )
-	          )
-	   	  );
-
-    	}
-
-
-		}
-
-    /**
-     * Customize colors
-     */
-    private function customize_colors_section( $wp_customize ) {
-
-			// Section
-			$wp_customize->add_section(
-				'mybooking_theme_colors_options',
-				array(
-					'title'       => _x( 'Colors', 'customizer_colors', 'mybooking' ),
-					'capability'  => 'edit_theme_options',
-					'description' => _x( 'Theme colors', 'customizer_colors', 'mybooking' ),
-					'priority'    => 152,
-				)
-			);
-
-			// == Brand Primary color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_brand_primary' , array(
-			    'default'   => '#8ac53f',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_primary', array(
-				'label'      => _x( 'Brand primary color', 'customizer_colors', 'mybooking' ),
-				'section'    => 'mybooking_theme_colors_options',
-				'settings'   => 'mybooking_brand_primary',
-			) ) );
-
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_brand_primary_light' , array(
-			    'default'   => '#bef870',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_primary_light', array(
-				'label'      => _x( 'Brand primary light color', 'customizer_colors', 'mybooking' ),
-				'section'    => 'mybooking_theme_colors_options',
-				'settings'   => 'mybooking_brand_primary_light',
-			) ) );
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_brand_primary_dark' , array(
-			    'default'   => '#599400',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_primary_dark', array(
-				'label'      => _x( 'Brand primary dark color', 'customizer_colors', 'mybooking' ),
-				'section'    => 'mybooking_theme_colors_options',
-				'settings'   => 'mybooking_brand_primary_dark',
-			) ) );
-
-
-
-			// == Brand Seconday color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_brand_secondary' , array(
-			    'default'   => '#5c6ac4',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_seconday', array(
-				'label'      => _x( 'Brand secondary color', 'customizer_colors', 'mybooking' ),
-				'section'    => 'mybooking_theme_colors_options',
-				'settings'   => 'mybooking_brand_secondary',
-			) ) );
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_brand_secondary_light' , array(
-			    'default'   => '#8f98f7',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_secondary_light', array(
-				'label'      => _x( 'Brand secondary light color', 'customizer_colors', 'mybooking' ),
-				'section'    => 'mybooking_theme_colors_options',
-				'settings'   => 'mybooking_brand_secondary_light',
-			) ) );
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_brand_secondary_dark' , array(
-			    'default'   => '#254093',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_secondary_dark', array(
-				'label'      => _x( 'Brand secondary dark color', 'customizer_colors', 'mybooking' ),
-				'section'    => 'mybooking_theme_colors_options',
-				'settings'   => 'mybooking_brand_secondary_dark',
-			) ) );
-
-
-			// == Body background
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_body_bg' , array(
-			    'default'   => '#ffffff',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'body_bg', array(
-				'label'      => _x( 'Body background color', 'customizer_colors', 'mybooking' ),
-				'section'    => 'mybooking_theme_colors_options',
-				'settings'   => 'mybooking_body_bg',
-			) ) );
-
-			// == Body color
-
-			// Setting
-			$wp_customize->add_setting( 'mybooking_body_color' , array(
-			    'default'   => '#212121',
-			    'transport' => 'refresh'
-			) );
-
-			// Control
-			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'body_color', array(
-				'label'      => _x( 'Body body color', 'customizer_colors', 'mybooking' ),
-				'section'    => 'mybooking_theme_colors_options',
-				'settings'   => 'mybooking_body_color',
-			) ) );
-
-    }
-
-
 		/**
      * Customize Top Bar
+		 *
      */
+
     private function customize_topbar_section( $wp_customize ) {
 
 			// Section
@@ -564,7 +371,7 @@ class MyBookingCustomizer {
 					'title'       => _x( 'Top Bar', 'customizer_topbar', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
 					'description' => _x( 'Top Bar', 'customizer_topbar', 'mybooking' ),
-					'priority'    => 153,
+					'priority'    => 51,
 				)
 			);
 
@@ -694,9 +501,12 @@ class MyBookingCustomizer {
 
     }
 
+
 		/**
-     * Customize Top Bar
+     * Customize Nav Bar
+		 *
      */
+
     private function customize_navbar_section( $wp_customize ) {
 
 			// Section
@@ -706,11 +516,30 @@ class MyBookingCustomizer {
 					'title'       => _x( 'Nav Bar', 'customizer_navbar', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
 					'description' => _x( 'Settings for toggler position, header integration and background and menu colors', 'customizer_navbar', 'mybooking' ),
-					'priority'    => 154,
+					'priority'    => 52,
 				)
 			);
 
-			// Mobile Toggler Position
+			// -- NavBar behaivour
+
+			// Integration
+			$wp_customize->add_setting( 'mybooking_home_navbar_integrated' , array(
+			    'default'   => '1',
+			    'transport' => 'refresh'
+			) );
+
+			$wp_customize->add_control( 'mybooking_home_navbar_integrated',
+			   array(
+			      'label' => _x( 'Header integration', 'customizer_navbar', 'mybooking' ),
+			      'description' => _x( 'If <b>checked</b> the navbar will be shown overlapped with header Section and transparent. Uncheck to be shown colored on top of Header section', 'customizer_home', 'mybooking' ),
+			      'section'  => 'mybooking_theme_navbar_options',
+			      'priority' => 10,
+			      'type'=> 'checkbox',
+			      'capability' => 'edit_theme_options',
+			   )
+			);
+
+			// -- Mobile Toggler Position
 
 			// Columns
 			$wp_customize->add_setting( 'mybooking_global_navigation_layout',
@@ -724,7 +553,7 @@ class MyBookingCustomizer {
 			$wp_customize->add_control( 'mybooking_global_navigation_layout',
 			   array(
 			      'label' => _x( 'Mobile Toggler Position', 'customizer_navbar', 'mybooking' ),
-			      'description' => esc_html_x( 'Toggler Position on Mobile devices', 'customizer_navbar', 'mybooking'  ),
+			      'description' => esc_html_x( 'Toggler position on mobile devices', 'customizer_navbar', 'mybooking'  ),
 			      'section' => 'mybooking_theme_navbar_options',
 			      'type' => 'radio',
 			      'capability' => 'edit_theme_options',
@@ -732,27 +561,6 @@ class MyBookingCustomizer {
 			         '0' => _x( 'Right', 'customizer_navbar', 'mybooking' ),
 			         '1' => _x( 'Left', 'customizer_navbar', 'mybooking' )
 			      )
-			   )
-			);
-
-			// == NavBar
-
-			// -- NavBar behaivour
-
-			// Integration
-			$wp_customize->add_setting( 'mybooking_home_navbar_integrated' , array(
-			    'default'   => '1',
-			    'transport' => 'refresh'
-			) );
-
-			$wp_customize->add_control( 'mybooking_home_navbar_integrated',
-			   array(
-			      'label' => _x( 'Header integration', 'customizer_home', 'mybooking' ),
-			      'description' => _x( 'If <b>checked</b> the navbar will be shown overlapped with header Section and transparent. Uncheck to be shown colored on top of Header section', 'customizer_home', 'mybooking' ),
-			      'section'  => 'mybooking_theme_navbar_options',
-			      'priority' => 10,
-			      'type'=> 'checkbox',
-			      'capability' => 'edit_theme_options',
 			   )
 			);
 
@@ -886,66 +694,24 @@ class MyBookingCustomizer {
 						'settings'   => 'mybooking_navbar_toggler_icon'
 			) ) );
 
-
-
 		}
 
+
 		/**
-     * Customize Footer
+     * Customize Header
+		 *
      */
-    private function customize_footer_section( $wp_customize ) {
+
+    private function customize_header_section( $wp_customize ) {
 
 			// Section
 			$wp_customize->add_section(
-				'mybooking_theme_footer_options',
-				array(
-					'title'       => _x( 'Footer', 'customizer_footer', 'mybooking' ),
-					'capability'  => 'edit_theme_options',
-					'description' => _x( 'Footer', 'customizer_footer', 'mybooking' ),
-					'priority'    => 155,
-				)
-			);
-
-			// Mobile Toggler Position
-
-			// Columns
-			$wp_customize->add_setting( 'mybooking_global_footer_layout',
-			   array(
-			      'default' => '0',
-			      'transport' => 'refresh',
-//			      'sanitize_callback' => 'skyrocket_radio_sanitization'
-			   )
-			);
-
-			$wp_customize->add_control( 'mybooking_global_footer_layout',
-			   array(
-			      'label' => _x( 'Footer layout', 'customizer_footer', 'mybooking' ),
-			      'description' => esc_html_x( 'Footer layout (managed with widget areas)', 'customizer_footer', 'mybooking'  ),
-			      'section' => 'mybooking_theme_footer_options',
-			      'type' => 'radio',
-			      'capability' => 'edit_theme_options',
-			      'choices' => array(
-			         '0' => _x( 'Four columns', 'customizer_footer', 'mybooking' ),
-			         '1' => _x( 'Minimal (show only copyright)', 'customizer_footer', 'mybooking' )
-			      )
-			   )
-			);
-
-		}
-
-		/**
-     * Customize Home
-     */
-    private function customize_home_section( $wp_customize ) {
-
-			// Section
-			$wp_customize->add_section(
-				'mybooking_theme_home_options',
+				'mybooking_theme_header_options',
 				array(
 					'title'       => _x( 'Header', 'customizer_home', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
 					'description' => _x( 'Defines header\'s background type and widget\'s columns layout', 'customizer_home', 'mybooking' ),
-					'priority'    => 156,
+					'priority'    => 53,
 				)
 			);
 
@@ -954,7 +720,7 @@ class MyBookingCustomizer {
 			   array(
 			      'default' => '0',
 			      'transport' => 'refresh',
-//			      'sanitize_callback' => 'skyrocket_radio_sanitization'
+						// 'sanitize_callback' => 'skyrocket_radio_sanitization'
 			   )
 			);
 
@@ -962,7 +728,7 @@ class MyBookingCustomizer {
 			   array(
 			      'label' => _x( 'Header section background', 'customizer_home', 'mybooking' ),
 			      'description' => esc_html_x( 'Define the header section background', 'customizer_home', 'mybooking'  ),
-			      'section' => 'mybooking_theme_home_options',
+			      'section' => 'mybooking_theme_header_options',
 			      'type' => 'radio',
 			      'capability' => 'edit_theme_options',
 			      'choices' => array(
@@ -987,7 +753,7 @@ class MyBookingCustomizer {
 	            'mybooking_home_header_image',
 	            array(
 	                'label' => _x( 'Background Image', 'customizer_home', 'mybooking' ),
-	                'section' => 'mybooking_theme_home_options',
+	                'section' => 'mybooking_theme_header_options',
 	                'settings' => 'mybooking_home_header_image_bg'
 	            )
 	        )
@@ -1008,7 +774,7 @@ class MyBookingCustomizer {
 	            'mybooking_home_header_video',
 	            array(
 	                'label' => _x( 'Background Video', 'customizer_home', 'mybooking' ),
-	                'section' => 'mybooking_theme_home_options',
+	                'section' => 'mybooking_theme_header_options',
 	                'settings' => 'mybooking_home_header_video_bg',
 	                'mime_type' => 'video'
 	            )
@@ -1030,7 +796,7 @@ class MyBookingCustomizer {
 			        'mybooking_home_header_carrouse_bgl',
 			        array(
 			            'label'    => _x( 'Background Carrousel', 'customizer_home', 'mybooking' ),
-			            'section'  => 'mybooking_theme_home_options',
+			            'section'  => 'mybooking_theme_header_options',
 			            'settings' => 'mybooking_home_header_carrousel_bg',
 			            'type'     => 'image_gallery',
 			        )
@@ -1049,7 +815,7 @@ class MyBookingCustomizer {
 			   array(
 			      'label' => _x( 'Layout', 'customizer_home', 'mybooking' ),
 			      'description' => esc_html_x( 'Define the widget areas on header layout', 'customizer_home', 'mybooking'  ),
-			      'section' => 'mybooking_theme_home_options',
+			      'section' => 'mybooking_theme_header_options',
 			      'priority' => 20,
 			      'type' => 'radio',
 			      'capability' => 'edit_theme_options',
@@ -1061,6 +827,27 @@ class MyBookingCustomizer {
 
 			      )
 			   )
+			);
+
+    }
+
+
+		/**
+     * Customize Home Sections
+		 *
+     */
+
+    private function customize_home_section( $wp_customize ) {
+
+			// Section
+			$wp_customize->add_section(
+				'mybooking_theme_home_options',
+				array(
+					'title'       => _x( 'Home Sections', 'customizer_home', 'mybooking' ),
+					'capability'  => 'edit_theme_options',
+					'description' => _x( 'Activate or deactivate Home Template sections', 'customizer_home', 'mybooking' ),
+					'priority'    => 54,
+				)
 			);
 
 			// == News visibility
@@ -1101,7 +888,255 @@ class MyBookingCustomizer {
 			   )
 			);
 
+    }
 
+
+		/**
+     * Customize Footer
+		 *
+     */
+
+    private function customize_footer_section( $wp_customize ) {
+
+			// Section
+			$wp_customize->add_section(
+				'mybooking_theme_footer_options',
+				array(
+					'title'       => _x( 'Footer', 'customizer_footer', 'mybooking' ),
+					'capability'  => 'edit_theme_options',
+					'description' => _x( 'Footer', 'customizer_footer', 'mybooking' ),
+					'priority'    => 55,
+				)
+			);
+
+			// Mobile Toggler Position
+
+			// Columns
+			$wp_customize->add_setting( 'mybooking_global_footer_layout',
+			   array(
+			      'default' => '0',
+			      'transport' => 'refresh',
+						// 'sanitize_callback' => 'skyrocket_radio_sanitization'
+			   )
+			);
+
+			$wp_customize->add_control( 'mybooking_global_footer_layout',
+			   array(
+			      'label' => _x( 'Footer layout', 'customizer_footer', 'mybooking' ),
+			      'description' => esc_html_x( 'Footer layout (managed with widget areas)', 'customizer_footer', 'mybooking'  ),
+			      'section' => 'mybooking_theme_footer_options',
+			      'type' => 'radio',
+			      'capability' => 'edit_theme_options',
+			      'choices' => array(
+			         '0' => _x( 'Four columns', 'customizer_footer', 'mybooking' ),
+			         '1' => _x( 'Minimal (show only copyright)', 'customizer_footer', 'mybooking' )
+			      )
+			   )
+			);
+
+		}
+
+
+		/**
+     * Customize Typography
+		 *
+     */
+
+    private function customize_typography_section( $wp_customize ) {
+
+			// Theme layout settings.
+			$wp_customize->add_section(
+				'mybooking_theme_typography_options',
+				array(
+					'title'       => _x( 'Typography', 'customizer_typography', 'mybooking' ),
+					'capability'  => 'edit_theme_options',
+					'description' => _x( 'Typography defaults',
+															 'customizer_typography', 'mybooking' ),
+					'priority'    => 56,
+				)
+			);
+
+			// == Font body
+
+ 			if ( class_exists( 'Font_Selector' ) ) {
+
+				$wp_customize->add_setting( 'mybooking_font_body',
+	          array(
+	          	'transport' => 'refresh',
+	            'type' => 'theme_mod'
+	          )
+	      );
+
+	      $wp_customize->add_control(
+	          new Font_Selector(
+	              $wp_customize, 'mybooking_font_body', array(
+	                  'label'             => esc_html_x( 'Font Body family', 'customizer_typography', 'mybooking' ),
+	                  'description'       => _x('Select the body typography', 'customizer_typography', 'mybooking'),
+	                  'section'           => 'mybooking_theme_typography_options',
+	                  'priority'          => 20,
+	                  'type'              => 'select',
+	              )
+	          )
+	   	  );
+
+				$wp_customize->add_setting( 'mybooking_font_heading',
+	          array(
+	          	'transport' => 'refresh',
+	            'type' => 'theme_mod'
+	          )
+	      );
+
+	      $wp_customize->add_control(
+	          new Font_Selector(
+	              $wp_customize, 'mybooking_font_heading', array(
+	                  'label'             => esc_html_x( 'Font Heading family', 'customizer_typography', 'mybooking' ),
+	                  'description'       => _x('Select the heading typography', 'customizer_typography', 'mybooking'),
+	                  'section'           => 'mybooking_theme_typography_options',
+	                  'priority'          => 20,
+	                  'type'              => 'select',
+	              )
+	          )
+	   	  );
+
+    	}
+
+
+		}
+
+
+    /**
+     * Customize Colors
+		 *
+     */
+
+    private function customize_colors_section( $wp_customize ) {
+
+			// Section
+			$wp_customize->add_section(
+				'mybooking_theme_colors_options',
+				array(
+					'title'       => _x( 'Colors', 'customizer_colors', 'mybooking' ),
+					'capability'  => 'edit_theme_options',
+					'description' => _x( 'Theme colors', 'customizer_colors', 'mybooking' ),
+					'priority'    => 57,
+				)
+			);
+
+			// == Brand Primary color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_brand_primary' , array(
+			    'default'   => '#8ac53f',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_primary', array(
+				'label'      => _x( 'Brand primary color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_brand_primary',
+			) ) );
+
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_brand_primary_light' , array(
+			    'default'   => '#bef870',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_primary_light', array(
+				'label'      => _x( 'Brand primary light color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_brand_primary_light',
+			) ) );
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_brand_primary_dark' , array(
+			    'default'   => '#599400',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_primary_dark', array(
+				'label'      => _x( 'Brand primary dark color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_brand_primary_dark',
+			) ) );
+
+
+
+			// == Brand Seconday color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_brand_secondary' , array(
+			    'default'   => '#5c6ac4',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_seconday', array(
+				'label'      => _x( 'Brand secondary color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_brand_secondary',
+			) ) );
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_brand_secondary_light' , array(
+			    'default'   => '#8f98f7',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_secondary_light', array(
+				'label'      => _x( 'Brand secondary light color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_brand_secondary_light',
+			) ) );
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_brand_secondary_dark' , array(
+			    'default'   => '#254093',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'brand_secondary_dark', array(
+				'label'      => _x( 'Brand secondary dark color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_brand_secondary_dark',
+			) ) );
+
+
+			// == Body background
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_body_bg' , array(
+			    'default'   => '#ffffff',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'body_bg', array(
+				'label'      => _x( 'Body background color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_body_bg',
+			) ) );
+
+			// == Body color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_body_color' , array(
+			    'default'   => '#212121',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'body_color', array(
+				'label'      => _x( 'Body body color', 'customizer_colors', 'mybooking' ),
+				'section'    => 'mybooking_theme_colors_options',
+				'settings'   => 'mybooking_body_color',
+			) ) );
 
     }
 
