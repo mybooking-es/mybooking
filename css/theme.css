@@ -26174,6 +26174,102 @@ body .eupopup-style-compact .eupopup-button {
 .gallery br + br {
   display: none; }
 
+.home-widgets {
+  margin-bottom: 2rem; }
+
+/**
+*  Mybooking Widgets integration
+*
+**/
+/* Selector Widget on Home's Widget zone */
+.home-widgets .flex-form-group-wrapper input[type=text],
+.home-widgets .flex-form-group label i {
+  border: 1px solid #ccc;
+  width: 400%; }
+
+.home-widgets .flex-form-group label i {
+  border: 1px solid #ccc;
+  border-right: 0; }
+
+.home-widgets .flex-form-group select {
+  border: 1px solid #ccc;
+  color: #eee; }
+
+.home-widgets .form_selector-select_label_wrap:after {
+  border: 1px solid #ccc; }
+
+/* Mybooking Contact Widget */
+.widget_mybooking_engine_contact input {
+  width: 100%;
+  margin-bottom: 10px; }
+
+.widget_mybooking_engine_contact textarea {
+  width: 100%;
+  min-height: 150px;
+  padding-top: 1rem; }
+
+/**
+*  WordPress Widgets integration
+*
+**/
+/* General */
+.widgettitle {
+  font-size: 1.3em; }
+
+/* Gallery Widget */
+figure.gallery-item {
+  margin: 0; }
+
+/* Navigation Widget */
+.home-widgets ul.menu,
+.home-widgets ul.sub-menu {
+  display: block;
+  margin: 0 10px;
+  padding: 0;
+  list-style: none; }
+
+/* Search Widget */
+.search-form label {
+  width: 79% !important; }
+
+.search-form input.search-field {
+  width: 100% !important;
+  border: 1px solid #ccc;
+  padding: 1rem; }
+
+.search-form input[type="submit" i] {
+  width: 20% !important;
+  border-style: none; }
+
+.search-form [type=submit]:not(:disabled) {
+  padding: 1rem;
+  background-color: var(--btn-bg-color);
+  color: #FFF;
+  border-color: var(--btn-border-color);
+  letter-spacing: 1px;
+  font-weight: var(--btn-font-w);
+  text-transform: var(--btn-text-transform); }
+
+.search-form [type=submit]:hover {
+  opacity: .5; }
+
+/* Calendar Widget */
+.wp-calendar-table {
+  width: 100%;
+  margin: 5px; }
+
+/* Categories Widget */
+select#cat {
+  width: 100% !important;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: #FFF;
+  color: #888; }
+
+.home-widgets ul {
+  list-style: none;
+  padding: 0; }
+
 .widget_mybooking_rent_engine_selector {
   width: 100%; }
 
@@ -26191,7 +26287,7 @@ This is the structure of the selector form
     [div .flex-form-box]  // Search button
     [/div]
 [/form]
-  
+
 */
 .flex-form-box .btn {
   height: 48px;
@@ -26228,8 +26324,7 @@ This is the structure of the selector form
     margin: 0 auto; }
   .home-left .flex-form,
   .home-right .flex-form {
-    max-width: 400px;
-    min-width: 350px; }
+    max-width: 400px; }
     .home-left .flex-form .flex-form-group-wrapper,
     .home-right .flex-form .flex-form-group-wrapper {
       -webkit-box-orient: vertical;
@@ -26276,7 +26371,8 @@ This is the structure of the selector form
   .flex-form-group input.hasDatepicker {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
-            flex-grow: 1; }
+            flex-grow: 1;
+    width: 400%; }
   .flex-form-group label {
     font-size: 0.8rem; }
 
@@ -27657,6 +27753,21 @@ ul.summary-modal_prices {
 .date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected, .date-picker-wrapper .date-selected {
   background-color: #4499ee !important;
   color: white !important; }
+
+button.mybooking-popup_close {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 45; }
+
+.mybooking-popup_content {
+  padding: 1rem;
+  border: none;
+  border-radius: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 @media (max-width: 991.98px) {
   .summary-reservation-title {

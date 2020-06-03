@@ -22,7 +22,7 @@ This is the structure of the selector form
     [div .flex-form-box]  // Search button
     [/div]
 [/form]
-  
+
 */
 
 // == Horizontal Selector [form class]
@@ -70,7 +70,7 @@ This is the structure of the selector form
   .home-left .flex-form,
   .home-right .flex-form {
     max-width: 400px;
-    min-width: 350px;
+    // min-width: 350px; //This is making form overflows strecht containers like col-3/4 or col-md-3/4 and so on...
     .flex-form-group-wrapper {
       flex-direction: column;
     }
@@ -107,6 +107,7 @@ This is the structure of the selector form
   flex-direction: column;
   input.hasDatepicker {
     flex-grow: 1;
+    width: 400%; // This is a hack!
   }
   label {
     font-size: 0.8rem;
