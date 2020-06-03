@@ -6,7 +6,7 @@
 *   Section: Mybooking layout settings
 *
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.1
@@ -87,9 +87,8 @@ class MyBookingCustomizer {
 			$this->customize_colors_section( $wp_customize );
 			$this->customize_topbar_section( $wp_customize );
 			$this->customize_navbar_section( $wp_customize );
-			$this->customize_footer_section( $wp_customize );
 			$this->customize_home_section( $wp_customize );
-
+			$this->customize_footer_section( $wp_customize );
 
 	  }
 
@@ -182,13 +181,13 @@ class MyBookingCustomizer {
     	$typography_body = get_theme_mod( 'mybooking_font_body', 'default');
     	$typography_heading = get_theme_mod( 'mybooking_font_heading', 'default');
 
-    	$brand_primary = get_theme_mod( 'mybooking_brand_primary', '#2194f3' );
-    	$brand_primary_light = get_theme_mod( 'mybooking_brand_primary_light', '#6ec4ff' );
-    	$brand_primary_dark = get_theme_mod( 'mybooking_brand_primary_dark', '#0067c0' );
+    	$brand_primary = get_theme_mod( 'mybooking_brand_primary', '#8ac53f' );
+    	$brand_primary_light = get_theme_mod( 'mybooking_brand_primary_light', '#bef870' );
+    	$brand_primary_dark = get_theme_mod( 'mybooking_brand_primary_dark', '#599400' );
 
-    	$brand_secondary = get_theme_mod( 'mybooking_brand_secondary', '#9e9e9e' );
-    	$brand_secondary_light = get_theme_mod( 'mybooking_brand_secondary_light', '#cfcfcf' );
-    	$brand_secondary_dark = get_theme_mod( 'mybooking_brand_secondary_dark', '#707070' );
+    	$brand_secondary = get_theme_mod( 'mybooking_brand_secondary', '#424242' );
+    	$brand_secondary_light = get_theme_mod( 'mybooking_brand_secondary_light', '#6d6d6d' );
+    	$brand_secondary_dark = get_theme_mod( 'mybooking_brand_secondary_dark', '#1b1b1b' );
 
     	$body_bg = get_theme_mod( 'mybooking_body_bg', '#ffffff' );
     	$body_color = get_theme_mod( 'mybooking_body_color', '#212121' );
@@ -199,7 +198,7 @@ class MyBookingCustomizer {
     	$topbar_link_color = get_theme_mod( 'mybooking_topbar_link_color', '#ffffff' );
     	$topbar_link_hover_color = get_theme_mod( 'mybooking_topbar_link_hover_color', '#fafafa' );
 
-    	$navbar_bg = get_theme_mod( 'mybooking_navbar_bg', '#2194f3');
+    	$navbar_bg = get_theme_mod( 'mybooking_navbar_bg', '#8ac53f');
     	$navbar_link_color = get_theme_mod( 'mybooking_navbar_link_color', '#ffffff' );
     	$navbar_link_color_hover = get_theme_mod( 'mybooking_navbar_link_hover_color', '#ffffff' );
     	$navbar_link_active = get_theme_mod( 'mybooking_navbar_link_active', '#212121' );
@@ -208,7 +207,7 @@ class MyBookingCustomizer {
     	$navbar_link_collapse = get_theme_mod( 'mybooking_navbar_link_collapse', '#212121' );
     	$navbar_toggler_icon = get_theme_mod( 'mybooking_navbar_toggler_icon', '#ffffff' );
 
-			// ==Build the css-properties
+			// == Build the css-properties
 		  $custom_css = ":root {";
 
 		  // Typography
@@ -273,7 +272,7 @@ class MyBookingCustomizer {
 			$wp_customize->add_section(
 				'mybooking_theme_layout_options',
 				array(
-					'title'       => _x( 'Layout Settings', 'customizer_layout', 'mybooking' ),
+					'title'       => _x( 'Layout', 'customizer_layout', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
 					'description' => _x( 'Container width and sidebar defaults',
 															 'customizer_layout', 'mybooking' ),
@@ -438,7 +437,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_primary' , array(
-			    'default' => '#2194f3',
+			    'default'   => '#8ac53f',
 			    'transport' => 'refresh'
 			) );
 
@@ -452,7 +451,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_primary_light' , array(
-			    'default' => '#6ec4ff',
+			    'default'   => '#bef870',
 			    'transport' => 'refresh'
 			) );
 
@@ -465,7 +464,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_primary_dark' , array(
-			    'default' => '#0067c0',
+			    'default'   => '#599400',
 			    'transport' => 'refresh'
 			) );
 
@@ -482,7 +481,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_secondary' , array(
-			    'default' => '#9e9e9e',
+			    'default'   => '#5c6ac4',
 			    'transport' => 'refresh'
 			) );
 
@@ -495,7 +494,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_secondary_light' , array(
-			    'default' => '#cfcfcf',
+			    'default'   => '#8f98f7',
 			    'transport' => 'refresh'
 			) );
 
@@ -508,7 +507,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_secondary_dark' , array(
-			    'default' => '#707070',
+			    'default'   => '#254093',
 			    'transport' => 'refresh'
 			) );
 
@@ -706,7 +705,7 @@ class MyBookingCustomizer {
 				array(
 					'title'       => _x( 'Nav Bar', 'customizer_navbar', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
-					'description' => _x( 'Nav Bar', 'customizer_navbar', 'mybooking' ),
+					'description' => _x( 'Settings for toggler position, header integration and background and menu colors', 'customizer_navbar', 'mybooking' ),
 					'priority'    => 154,
 				)
 			);
@@ -738,11 +737,30 @@ class MyBookingCustomizer {
 
 			// == NavBar
 
+			// -- NavBar behaivour
+
+			// Integration
+			$wp_customize->add_setting( 'mybooking_home_navbar_integrated' , array(
+			    'default'   => '1',
+			    'transport' => 'refresh'
+			) );
+
+			$wp_customize->add_control( 'mybooking_home_navbar_integrated',
+			   array(
+			      'label' => _x( 'Header integration', 'customizer_home', 'mybooking' ),
+			      'description' => _x( 'If <b>checked</b> the navbar will be shown overlapped with header Section and transparent. Uncheck to be shown colored on top of Header section', 'customizer_home', 'mybooking' ),
+			      'section'  => 'mybooking_theme_navbar_options',
+			      'priority' => 10,
+			      'type'=> 'checkbox',
+			      'capability' => 'edit_theme_options',
+			   )
+			);
+
 			// -- Background color
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_bg' , array(
-			    'default' => '#2194f3',
+			    'default'   => '#8ac53f',
 			    'transport' => 'refresh'
 			) );
 
@@ -924,30 +942,12 @@ class MyBookingCustomizer {
 			$wp_customize->add_section(
 				'mybooking_theme_home_options',
 				array(
-					'title'       => _x( 'Home Page', 'customizer_home', 'mybooking' ),
+					'title'       => _x( 'Header', 'customizer_home', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
-					'description' => _x( 'Home Page', 'customizer_home', 'mybooking' ),
+					'description' => _x( 'Defines header\'s background type and widget\'s columns layout', 'customizer_home', 'mybooking' ),
 					'priority'    => 156,
 				)
 			);
-
-			// NavBar Integrated
-			$wp_customize->add_setting( 'mybooking_home_navbar_integrated' , array(
-			    'default'   => '1',
-			    'transport' => 'refresh'
-			) );
-
-			$wp_customize->add_control( 'mybooking_home_navbar_integrated',
-			   array(
-			      'label' => _x( 'NavBar integrated', 'customizer_home', 'mybooking' ),
-			      'description' => _x( 'If <b>checked</b> the navbar will be shown overlapped with header Section and transparent. Uncheck to be shown colored on top of Header section', 'customizer_home', 'mybooking' ),
-			      'section'  => 'mybooking_theme_home_options',
-			      'priority' => 10,
-			      'type'=> 'checkbox',
-			      'capability' => 'edit_theme_options',
-			   )
-			);
-
 
 			// Background
 			$wp_customize->add_setting( 'mybooking_home_header_bg',
@@ -1056,7 +1056,7 @@ class MyBookingCustomizer {
 			      'choices' => array(
 			         '0' => _x( 'Two columns (50% - 50%)', 'customizer_home', 'mybooking' ),
 			         '1' => _x( 'Two columns (33% - 66%)', 'customizer_home', 'mybooking' ),
-			         '2' => _x( 'Two columns (66% - 33%)', 'customizer_home', 'mybooking' ),			         
+			         '2' => _x( 'Two columns (66% - 33%)', 'customizer_home', 'mybooking' ),
 			         '3' => _x( 'One column', 'customizer_home', 'mybooking' ),
 
 			      )

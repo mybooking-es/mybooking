@@ -20,10 +20,6 @@ defined( 'ABSPATH' ) || exit;
 <!-- Header -->
 <?php get_template_part( 'mybooking-parts/home/mybooking-home-header' ); ?>
 
-<button data-toggle="modal" data-target="#modalPromotionsPopup">
-  Test Popup
-</button>
-
 <!-- WordPress Content -->
 <?php get_template_part( 'mybooking-parts/home/mybooking-home-content' ); ?>
 
