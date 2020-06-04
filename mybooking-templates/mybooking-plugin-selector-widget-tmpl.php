@@ -18,19 +18,27 @@
       <label for="date_from"><?php _e('Fecha Entrega ', 'mybooking') ?></label>
       <div class="flex-form-item">
         <input type="text" class="form-control" name="date_from" id="widget_date_from" autocomplete="off">
-        <input type="hidden" name="time_from" value="10:00"/>
+        <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>"/>
       </div>
     </div>
     <div class="flex-form-group">
       <label for="date_from"><?php _e('Fecha Devolución ', 'mybooking') ?></label>
       <div class="flex-form-item">
         <input type="text" class="form-control" name="date_to" id="widget_date_to" autocomplete="off">
-        <input type="hidden" name="time_to" value="20:00"/>
+        <input type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>"/>
       </div>
     </div>
+    <% if (configuration.promotionCode) { %>
+      <div class="flex-form-group">
+          <label for="promotion_code"><?php echo _x( 'Promotion code', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
+          <div class="flex-form-horizontal-item">
+            <input type="text" class="form-control" name="promotion_code" id="widget_promotion_code" autocomplete="off">
+          </div>
+      </div>
+    <% } %>
     <div class="flex-form-group flex-form-group-no-label">
       <div class="flex-form-item">
-        <input class="btn btn-success" type="submit" value="<?php _e('Buscar', 'mybooking') ?>" />
+        <input class="btn btn-primary mt-3" type="submit" value="<?php _e('Buscar', 'mybooking') ?>" />
       </div>
     </div>
   </div>
@@ -111,6 +119,18 @@
         </div>
       </div>
     </div>
+
+    <% if (configuration.promotionCode) { %>
+    <div class="flex-form-group">
+      <div class="flex-form-box">
+          <label for="promotion_code"><?php echo _x( 'Promotion code', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
+          <div class="flex-form-horizontal-item">
+            <input type="text" class="form-control" name="promotion_code" id="widget_promotion_code" autocomplete="off">
+          </div>
+      </div>
+    </div>
+    <% } %>
+
   </div>
   <div class="flex-form-box">
     <input type="submit" class="btn btn-primary mt-3" value="<?php _e('Buscar', 'mybooking') ?>" />

@@ -1375,17 +1375,17 @@
       <div class="form-group col-md-4">
         <label for="flight_company"><?php _e('Compañia', 'mybooking') ?></label>
         <input class="form-control" id="flight_company" name="flight_company" type="text"
-          placeholder="<%=configuration.escapeHtml("<?php _e('Compañia', 'mybooking') ?>")%>" value="<%=booking.flight_company%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Compañia', 'mybooking') ?>")%>" value="<%=booking.flight_company%>" maxlength="80">
       </div>
       <div class="form-group col-md-4">
         <label for="flight_number"><?php _e('Número de vuelo', 'mybooking') ?></label>
         <input class="form-control" id="flight_number" name="flight_number" type="text"
-          placeholder="<%=configuration.escapeHtml("<?php _e('Número de vuelo', 'mybooking') ?>")%>" value="<%=booking.flight_number%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Número de vuelo', 'mybooking') ?>")%>" value="<%=booking.flight_number%>" maxlength="10">
       </div>
       <div class="form-group col-md-4">
         <label for="flight_time"><?php _e('Hora prevista', 'mybooking') ?></label>
         <input class="form-control" id="flight_time" name="flight_time" type="text"
-          placeholder="<%=configuration.escapeHtml("<?php _e('Hora prevista', 'mybooking') ?>")%>" value="<%=booking.flight_time%>">
+          placeholder="<%=configuration.escapeHtml("<?php _e('Hora prevista', 'mybooking') ?>")%>" value="<%=booking.flight_time%>" maxlength="5">
       </div>
     </div>
     <hr>
