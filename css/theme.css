@@ -24686,7 +24686,7 @@ a:active {
   text-transform: var(--btn-text-transform); }
   .btn-primary:hover,
   .btn-primary:not(:disabled):not(.disabled):active:hover {
-    background-color: var(--btn-bg-hover);
+    background-color: var(--btn-bg-color-hover);
     border-color: var(--btn-border-color-hover); }
 
 .btn {
@@ -24697,11 +24697,6 @@ button,
 [type="button"] {
   -webkit-appearance: none;
   border: none; }
-
-.footer-card a.btn {
-  letter-spacing: 1px;
-  font-weight: 600;
-  text-transform: uppercase; }
 
 .btn-outline-dark {
   letter-spacing: 1px;
@@ -24793,7 +24788,7 @@ label {
   top: 16px; }
 
 .form-reservation-error {
-  color: var(--error); }
+  color: var(--error) !important; }
 
 input.form-reservation-error {
   color: var(--error) !important; }
@@ -26532,8 +26527,7 @@ form[name="search_form"] .flex-form-item {
 button.widget_another_pickup_place_group_close,
 button.widget_another_return_place_group_close {
   position: relative;
-  float: right;
-  top: -48px; }
+  float: right; }
 
 div#another_pickup_place_group,
 div#another_return_place_group {
