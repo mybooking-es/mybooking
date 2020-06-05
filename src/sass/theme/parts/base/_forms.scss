@@ -98,7 +98,7 @@ label {
 }
 // Error styles
 .form-reservation-error {
-  color: var(--error);
+  color: var(--error) !important;
 }
 input.form-reservation-error {
   color: var(--error) !important;

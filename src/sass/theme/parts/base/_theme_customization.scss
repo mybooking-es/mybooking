@@ -9,9 +9,9 @@
   --brand-primary-light: #6ec4ff;
   --brand-primary-dark: #0067c0;
   // Secondary colors
-  --brand-secondary: #9e9e9e;
-  --brand-secondary-light: #cfcfcf;
-  --brand-secondary-dark: #707070;
+  --brand-secondary: #424242;
+  --brand-secondary-light: #6d6d6d;
+  --brand-secondary-dark: #1b1b1b;
   // Base
   --font-family: "Inter", sans-serif;
   --font-body: var(--font-family);
@@ -137,6 +137,13 @@
   --text-area-bg: var(--gray-50);
   --textarea-bg: var(--gray-50);
   --form-control-disabled: var(--gray-200);
+  // Sticky bars in choose product and complete
+  --sticky-bar-bg: var(--gray-900);
+  --sticky-bar-icons-color: var(--brand-primary);
+  --sticky-bar-icons-color-hover: var(--brand-primary-light);
+  --sticky-bar-color: var(--gray-400);
+  --sticky-bar-arrow-icon-color: var(--gray-400);
+  --sticky-bar-price-color: var(--white);
   // Card static
   --card-image-bg-color: var(--white);
   --card-body-bg-color: var(--white);
@@ -146,13 +153,6 @@
   --card-short-description-color: var(--gray-500);
   --card-image-object-fit: contain; // For background transparent images use contain otherwise use cover
   --card-key-characteristics-text-color: var(--gray-900);
-  // Sticky bars in choose product and complete
-  --sticky-bar-bg: var(--gray-900);
-  --sticky-bar-icons-color: var(--brand-primary);
-  --sticky-bar-icons-color-hover: var(--brand-primary-light);
-  --sticky-bar-color: var(--gray-400);
-  --sticky-bar-arrow-icon-color: var(--gray-400);
-  --sticky-bar-price-color: var(--white);
   // Product detail
   --product-detail-bg-color: var(--white);
   --product-detail-dates-titles: var(--gray-900);

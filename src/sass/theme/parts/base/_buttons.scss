@@ -10,7 +10,7 @@
   font-weight: var(--btn-font-w);
   text-transform: var(--btn-text-transform);
   &:hover {
-    background-color: var(--btn-bg-hover);
+    background-color: var(--btn-bg-color-hover);
     border-color: var(--btn-border-color-hover);
   }
 }
@@ -22,13 +22,6 @@ button,
 [type="button"] {
   -webkit-appearance: none;
   border: none;
-}
-
-// Deben ir en el CSS del plugin
-.footer-card a.btn {
-  letter-spacing: 1px;
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
 .btn-outline-dark {

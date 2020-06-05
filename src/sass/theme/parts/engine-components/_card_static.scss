@@ -38,7 +38,7 @@
 }
 @media (max-width: 991.98px) {
   .cards-static-container:first-child {
-    margin-top: var(--card-static-margin-top-mobile);
+    padding-top: var(--card-static-margin-top-mobile);
   }
 }
 
@@ -53,7 +53,7 @@
     border-bottom-right-radius: 0;
     background-color: var(--card-image-bg-color);
     object-fit: var(--card-image-object-fit);
-    box-shadow: rgb(204, 204, 204) -6px 12px 50px -10px;
+    box-shadow: -6px 12px 50px -10px rgb(204, 204, 204);
   }
 }
 .card-static_body {
