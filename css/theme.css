@@ -24852,8 +24852,10 @@ select:disabled {
   --color-link-hover: var(--brand-primary-light);
   --color-link-active: var(--brand-primary-dark);
   --color-link-visited: var(--brand-primary-dark);
-  --topbar-message-bg-color: var(--alert);
-  --topbar-color: #fff;
+  --topbar-message-bg: var(--alert);
+  --topbar-message-text: var(--white);
+  --topbar-message-link: var(--white);
+  --topbar-message-link-hover: var(--gray-50);
   --home-topbar-bg: rgba(66, 66, 66, 0.5);
   --topbar-bg: var(--gray-900);
   --topbar-color: var(--white);
@@ -25526,8 +25528,11 @@ img.wp-post-image {
 .topbar-message {
   padding: 0.5rem 2rem;
   text-align: center;
-  background-color: var(--topbar-message-bg-color);
-  color: var(--topbar-color); }
+  background-color: var(--topbar-message-bg);
+  color: var(--topbar-message-text); }
+
+.topbar-message a {
+  color: var(--topbar-message-link); }
 
 @media (max-width: 991.98px) {
   .topbar .info_text,

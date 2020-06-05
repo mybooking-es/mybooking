@@ -24,8 +24,10 @@
   --color-link-active: var(--brand-primary-dark);
   --color-link-visited: var(--brand-primary-dark);
   // Topbar message
-  --topbar-message-bg-color: var(--alert);
-  --topbar-color: #fff;
+  --topbar-message-bg: var(--alert);
+  --topbar-message-text: var(--white);
+  --topbar-message-link: var(--white);
+  --topbar-message-link-hover: var(--gray-50);
   // Topbar
   --home-topbar-bg: rgba(66, 66, 66, 0.5);
   --topbar-bg: var(--gray-900);

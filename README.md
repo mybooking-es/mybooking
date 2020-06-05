@@ -187,3 +187,11 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 ### 0.9.1
 - Contact Page setting titles fixed
 ### 0.9.2
+- Header Widget areas overlaping solved
+### 0.9.3
+- Customizer menu order rearrangement
+- Footer color controls
+### 0.9.4
+- Panelized cutomizer settings
+- Home settings shown only when editing home page
+- Color controls for topbar notice
