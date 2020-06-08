@@ -6,6 +6,13 @@
   flex-wrap: wrap;
   background-color: var(--gray-200);
 }
+// cards in fleet page
+.cards-static-container.fleet {
+  .card-static_body {
+    height: fit-content !important;
+    min-height: 0;
+  }
+}
 // This is just for the shadow
 .card-static-wrapper {
   display: flex;

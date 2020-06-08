@@ -1,26 +1,26 @@
-<section  class="cards-static-container">
+<section class="cards-static-container fleet">
   <!-- Products -->
-    <?php foreach( $args['data']->data as $product ) { ?>
-    <div class="card-static-wrapper">
-      <div class="card-static">
-        <div class="card-static_image">
-          <img src="<?php echo $product->photo_path?>"  alt="?php echo $product->name?>">
+  <?php foreach( $args['data']->data as $product ) { ?>
+  <div class="card-static-wrapper">
+    <div class="card-static">
+      <div class="card-static_image">
+        <img src="<?php echo $product->photo_path?>" alt="?php echo $product->name?>">
+      </div>
+      <div class="card-static_body">
+        <div class="card-static_header">
+          <h2 class="card-static_product-name"><?php echo $product->name ?></h2>
+          <h3 class="card-static_product-short-description"><?php echo $product->short_description ?></h3>
         </div>
-        <div class="card-static_body">
-          <div class="card-static_header-catalog">
-            <h2 class="card-static_product-name"><?php echo $product->name ?></h2>
-            <h3 class="card-static_product-short-description"><?php echo $product->short_description ?></h3>
-          </div>
-          
-          <div class="card-static_btn">
-            <a href="/<?php echo $args['url_detail']?>/<?php echo $product->code?>" class="button btn">Más
-                  información</a>
-          </div>
+        <div class="card-static_btn">
+          <a href="/<?php echo $args['url_detail']?>/<?php echo $product->code?>" class="button btn">Más
+            información</a>
         </div>
       </div>
-    </div>  
-    <?php  } ?>
- 
+
+    </div>
+  </div>
+  <?php  } ?>
+
   <!-- Pagination -->
   <?php if ($args['total_pages'] > 1) { ?>
   <div class="row">
