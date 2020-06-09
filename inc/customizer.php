@@ -6,7 +6,7 @@
 *   Section: Mybooking layout settings
 *
 *
-* 	Versión: 0.0.3
+* 	Versión: 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.1
@@ -82,7 +82,6 @@ class MyBookingCustomizer {
 			$wp_customize->register_control_type( 'CustomizeGalleryControl' );
 
 			// Register panel
-			// $wp_customize->add_panel( 'mybooking_settings_panel' );
 			$this->mybooking_settings_panel( $wp_customize );
 
 			// Customize sections
@@ -120,11 +119,14 @@ class MyBookingCustomizer {
 	  	if ( $this->theme_options == null ) {
 		  	$this->theme_options = array();
 
-		  	// Global TopBar message
+		  	// Global Topbar Message
 		  	$this->theme_options['mybooking_global_topbar_message'] = get_theme_mod( "mybooking_global_topbar_message" );
 
 		  	// Testimonials
 		  	$this->theme_options['mybooking_home_testimonial_carousel_visibility'] = get_theme_mod( 'mybooking_home_testimonial_carousel_visibility' );
+
+				// Home Content Widgets
+				$this->theme_options['mybooking_home_content_widgets_visibility'] = get_theme_mod( 'mybooking_home_content_widgets_visibility' );
 
 		  	// Header
 		  	$header_bg = get_theme_mod( 'mybooking_home_header_bg' );
@@ -1290,6 +1292,25 @@ class MyBookingCustomizer {
 
     private function customize_home_section( $wp_customize ) {
 
+			// == Widgets visibility
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_home_content_widgets_visibility' , array(
+			    'default'   => '1',
+			    'transport' => 'refresh'
+			) );
+
+			$wp_customize->add_control( 'mybooking_home_content_widgets_visibility',
+			   array(
+			      'label' => _x( 'Activate content widgets', 'customizer_home', 'mybooking' ),
+			      'description' => _x( 'Shows a widgets area on top of home\'s content', 'customizer_home', 'mybooking' ),
+			      'section'  => 'static_front_page',
+			      'priority' => 10,
+			      'type'=> 'checkbox',
+			      'capability' => 'edit_theme_options',
+			   )
+			);
+
 			// == News visibility
 
 			// Setting
@@ -1303,7 +1324,7 @@ class MyBookingCustomizer {
 			      'label' => _x( 'Activate news', 'customizer_home', 'mybooking' ),
 			      'description' => _x( 'Show last three posts on Home Page', 'customizer_home', 'mybooking' ),
 			      'section'  => 'static_front_page',
-			      'priority' => 30,
+			      'priority' => 20,
 			      'type'=> 'checkbox',
 			      'capability' => 'edit_theme_options',
 			   )

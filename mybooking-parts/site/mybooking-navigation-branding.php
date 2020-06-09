@@ -11,12 +11,16 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
+// NOTE: This line is single client legacy code, we need to refactorize in orden to
+// avoid debug warnings messages
+$custom_logo = get_post_meta($post->ID, 'logo_personalizado', true)
 ?>
 
-<?php $custom_logo = get_post_meta($post->ID, 'logo_personalizado', true) ?>
 <?php if ( ! has_custom_logo() ) { ?>
 
   <?php if ( is_front_page() && is_home() ) : ?>
+
     <h1 class="navbar-brand mb-0">
       <a
         rel="home"
@@ -26,7 +30,9 @@ defined( 'ABSPATH' ) || exit;
           <?php bloginfo( 'name' ); ?>
       </a>
     </h1>
+
   <?php else : ?>
+
     <a
       class="navbar-brand"
       rel="home"
@@ -35,10 +41,18 @@ defined( 'ABSPATH' ) || exit;
       itemprop="url">
         <?php bloginfo( 'name' ); ?>
     </a>
+
   <?php endif; ?>
 
-<?php } elseif ( !empty($custom_logo) ) { ?>
+<?php
+} elseif ( !empty( $custom_logo ) ) { ?>
+
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand custom-logo-link" rel="home">
       <img src="<?php echo $custom_logo; ?>" class="img-fluid">
     </a>
-<?php } else { the_custom_logo(); } ?>
+
+<?php } else { ?>
+
+  <?php the_custom_logo(); ?>
+
+<?php } ?>

@@ -72,7 +72,7 @@
 			  // Promotion
 		  	$settings = (array) get_option( 'mybooking_theme_settings_promo' );
 		  	$this->theme_options['promo_popup_active'] = $this->get_option_value( $settings, 'promo_popup_active');
-		  	$this->theme_options['promo_home_widgets_active'] = $this->get_option_value( $settings, 'promo_home_widgets_active');
+		  	// $this->theme_options['promo_home_widgets_active'] = $this->get_option_value( $settings, 'promo_home_widgets_active');
 
 		  	// Global
 		  	$settings = (array) get_option( 'mybooking_theme_settings_options_global' );
@@ -307,11 +307,11 @@
 		                     "settings",
 		                     "promo_section");
 
-		  add_settings_field("promo_home_widgets_active",
-		                     _x('Activate promotion widget areas in Home', 'theme_settings', 'mybooking'),
-		                     array($this, 'field_mybooking_theme_promo_home_widgets_active_callback'),
-		                     "settings",
-		                     "promo_section");
+		  // add_settings_field("promo_home_widgets_active",
+		  //                    _x('Activate promotion widget areas in Home', 'theme_settings', 'mybooking'),
+		  //                    array($this, 'field_mybooking_theme_promo_home_widgets_active_callback'),
+		  //                    "settings",
+		  //                    "promo_section");
 
 		  // == Global
 		  add_settings_field("global_vehicle_active",
@@ -550,12 +550,12 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
 
 		}
 
-		public function field_mybooking_theme_promo_home_widgets_active_callback() {
-
-			$this->checkbox_field( "mybooking_theme_settings_promo", "promo_home_widgets_active",
-														 _x( 'It activates up to 6 widgets areas on <b>MyBooking Home</b> template to show banners and promotions.', 'theme_settings', 'mybooking')	);
-
-		}
+		// public function field_mybooking_theme_promo_home_widgets_active_callback() {
+    //
+		// 	$this->checkbox_field( "mybooking_theme_settings_promo", "promo_home_widgets_active",
+		// 												 _x( 'It activates up to 6 widgets areas on <b>MyBooking Home</b> template to show banners and promotions.', 'theme_settings', 'mybooking')	);
+    //
+		// }
 
 		// ------------------ Global fields callbacks --------------------------
 

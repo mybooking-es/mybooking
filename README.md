@@ -195,3 +195,5 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Panelized cutomizer settings
 - Home settings shown only when editing home page
 - Color controls for topbar notice
+### 0.9.4.1
+- Simplified home content widgets areas and control now on customizer

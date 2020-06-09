@@ -3,7 +3,7 @@
 *		SIDEBARS
 *  	--------
 *
-* 	Versión: 0.0.5
+* 	Versión: 0.0.6
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -49,6 +49,39 @@ function mybooking_widgets_init() {
 			'after_widget'  => '</div>',
 		)
 	);
+
+	// Home Widgets
+	$widgets_visible = get_theme_mod( "mybooking_home_content_widgets_visibility" );
+	if ($widgets_visible == 1) {
+
+		register_sidebar(
+			array(
+				'name'          => _x( 'Home Content Uno','mybooking_widgets','mybooking' ),
+				'id'            => 'home_widgets_1',
+				'description'   => _x( 'Primera área de widgets en área de contenido de la Home','mybooking_widgets','mybooking' ),
+				'before_widget' => '<div class="home-widgets widget-1">',
+				'after_widget'  => '</div>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => _x( 'Home Content Dos','mybooking_widgets','mybooking' ),
+				'id'            => 'home_widgets_2',
+				'description'   => _x( 'Segunda área de widgets en área de contenido de la Home','mybooking_widgets','mybooking' ),
+				'before_widget' => '<div class="home-widgets widget-2">',
+				'after_widget'  => '</div>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => _x( 'Home Content Tres','mybooking_widgets','mybooking' ),
+				'id'            => 'home_widgets_3',
+				'description'   => _x( 'Tercera área de widgets en área de contenido de la Home','mybooking_widgets','mybooking' ),
+				'before_widget' => '<div class="home-widgets widget-3">',
+				'after_widget'  => '</div>',
+			)
+		);
+	}
 
 	// Landings
 	register_sidebar(
@@ -98,66 +131,6 @@ function mybooking_widgets_init() {
 			'after_widget'  => '</div>',
 		)
 	);
-
-	// Home Widgets
-	$widgets_visible = MyBookingThemeSettings::getInstance()->get_theme_option( "promo_home_widgets_active" );
-	if ($widgets_visible == 1) {
-
-		register_sidebar(
-			array(
-				'name'          => _x( 'Home Content Uno','mybooking_widgets','mybooking' ),
-				'id'            => 'home_widgets_1',
-				'description'   => _x( 'Primera área de widgets en área de contenido de la Home','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="home-widgets widget-1">',
-				'after_widget'  => '</div>',
-			)
-		);
-		register_sidebar(
-			array(
-				'name'          => _x( 'Home Content Dos','mybooking_widgets','mybooking' ),
-				'id'            => 'home_widgets_2',
-				'description'   => _x( 'Segunda área de widgets en área de contenido de la Home','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="home-widgets widget-2">',
-				'after_widget'  => '</div>',
-			)
-		);
-		register_sidebar(
-			array(
-				'name'          => _x( 'Home Content Tres','mybooking_widgets','mybooking' ),
-				'id'            => 'home_widgets_3',
-				'description'   => _x( 'Tercera área de widgets en área de contenido de la Home','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="home-widgets widget-3">',
-				'after_widget'  => '</div>',
-			)
-		);
-		register_sidebar(
-			array(
-				'name'          => _x( 'Home Content Cuatro','mybooking_widgets','mybooking' ),
-				'id'            => 'home_widgets_4',
-				'description'   => _x( 'Cuarta área de widgets en área de contenido de la Home','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="home-widgets widget-4">',
-				'after_widget'  => '</div>',
-			)
-		);
-		register_sidebar(
-			array(
-				'name'          => _x( 'Home Content Cinco','mybooking_widgets','mybooking' ),
-				'id'            => 'home_widgets_5',
-				'description'   => _x( 'Quinta área de widgets en área de contenido de la Home','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="home-widgets widget-5">',
-				'after_widget'  => '</div>',
-			)
-		);
-		register_sidebar(
-			array(
-				'name'          => _x( 'Home Content Seis','mybooking_widgets','mybooking' ),
-				'id'            => 'home_widgets_6',
-				'description'   => _x( 'Sexta área de widgets en área de contenido de la Home','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="home-widgets widget-6">',
-				'after_widget'  => '</div>',
-			)
-		);
-	}
 
 }
 add_action( 'widgets_init', 'mybooking_widgets_init' );
