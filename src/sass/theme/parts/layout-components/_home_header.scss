@@ -14,6 +14,28 @@
   overflow-x: hidden;
 }
 
+.home-header h1,
+.home-header h2,
+.home-header h3,
+.home-header h4,
+.home-header h5,
+.home-header h6 {
+  color: var(--home-header-widget-title);
+  text-align: var(--home-header-widget-title-align);
+}
+
+.home-header p {
+  color: var(--home-header-widget-text);
+  text-align: var(--home-header-widget-text-align);
+}
+
+.home-header a {
+  color: var(--home-header-widget-link);
+  &:hover {
+    opacity: .5;
+  }
+}
+
 @media (min-width: 768px) {
   .home-header {
     flex-direction: row;

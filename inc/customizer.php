@@ -221,6 +221,12 @@ class MyBookingCustomizer {
 	    	$navbar_link_collapse = get_theme_mod( 'mybooking_navbar_link_collapse', '#212121' );
 	    	$navbar_toggler_icon = get_theme_mod( 'mybooking_navbar_toggler_icon', '#FFFFFF' );
 
+				$header_widget_title = get_theme_mod( 'mybooking_header_widget_title', '#FFFFFF' );
+				$header_widget_title_align = get_theme_mod( 'mybooking_header_widget_title_align', 'left' );
+				$header_widget_text = get_theme_mod( 'mybooking_header_widget_text', '#FFFFFF' );
+				$header_widget_text_align = get_theme_mod( 'mybooking_header_widget_text_align', 'left' );
+				$header_widget_link = get_theme_mod( 'mybooking_header_widget_link', '#FFFFFF' );
+
 				$footer_bg = get_theme_mod( 'mybooking_footer_bg', '#424242' );
 				$footer_link_color = get_theme_mod( 'footer_link_color', '#2193F2' );
 				$footer_link_hover_color = get_theme_mod( 'footer_link_hover_color', '#FFFFFF' );
@@ -278,6 +284,13 @@ class MyBookingCustomizer {
 	    	$custom_css.= "--navbar-dropdown-item-active-bg: ".$navbar_dropdown_item_active_color.';';
 	    	$custom_css.= "--navbar-link-collapse: ".$navbar_link_collapse.';';
 	    	$custom_css.= "--toggler-icon-color: ".$navbar_toggler_icon.';';
+
+				// Header
+				$custom_css.= "--home-header-widget-title: ".$header_widget_title.';';
+				$custom_css.= "--home-header-widget-title-align: ".$header_widget_title_align.';';
+				$custom_css.= "--home-header-widget-text: ".$header_widget_text.';';
+				$custom_css.= "--home-header-widget-text-align: ".$header_widget_text_align.';';
+				$custom_css.= "--home-header-widget-link: ".$header_widget_link.';';
 
 				// Footer
 				$custom_css.= "--footer-bg: ".$footer_bg.';';
@@ -538,7 +551,7 @@ class MyBookingCustomizer {
 
     private function customize_layout_section( $wp_customize ) {
 
-			// Theme layout settings.
+			// Theme layout section
 			$wp_customize->add_section(
 				'mybooking_theme_layout_options',
 				array(
@@ -551,8 +564,9 @@ class MyBookingCustomizer {
 				)
 			);
 
-			// Container type
+			// == Container type
 
+			// Setting
 			$wp_customize->add_setting(
 				'mybooking_container_type',
 				array(
@@ -563,6 +577,7 @@ class MyBookingCustomizer {
 				)
 			);
 
+			// Control
 			$wp_customize->add_control(
 				new WP_Customize_Control(
 					$wp_customize,
@@ -1150,12 +1165,12 @@ class MyBookingCustomizer {
 			        )
 			    ) );
 
-			// Columns
+			// Header Columns
+
 			$wp_customize->add_setting( 'mybooking_home_header_layout',
 			   array(
 			      'default' => '0',
 			      'transport' => 'refresh',
-//			      'sanitize_callback' => 'skyrocket_radio_sanitization'
 			   )
 			);
 
@@ -1164,7 +1179,6 @@ class MyBookingCustomizer {
 			      'label' => _x( 'Layout', 'customizer_home', 'mybooking' ),
 			      'description' => esc_html_x( 'Define the widget areas on header layout', 'customizer_home', 'mybooking'  ),
 			      'section' => 'mybooking_theme_header_options',
-			      'priority' => 20,
 			      'type' => 'radio',
 			      'capability' => 'edit_theme_options',
 			      'choices' => array(
@@ -1176,6 +1190,124 @@ class MyBookingCustomizer {
 			      )
 			   )
 			);
+
+			// Advance mode settings
+			$options_advanced_mode = get_theme_mod( 'mybooking_colors_advanced', '0' );
+      if ( $options_advanced_mode == '1' ) {
+
+				// --Header Title color
+
+				// Setting
+				$wp_customize->add_setting( 'mybooking_header_widget_title' , array(
+				    'default'   => '#ffffff',
+				    'transport' => 'refresh'
+				) );
+
+				// Control
+				$wp_customize->add_control( new Customizer_Alpha_Color_Control(
+						$wp_customize, 'header_widget_title', array(
+							'label'      => _x( 'Header Widget Title color', 'customizer_header', 'mybooking' ),
+							'section'    => 'mybooking_theme_header_options',
+							'settings'   => 'mybooking_header_widget_title'
+				) ) );
+
+				// --Header Text color
+
+				// Setting
+				$wp_customize->add_setting( 'mybooking_header_widget_text' , array(
+				    'default'   => '#ffffff',
+				    'transport' => 'refresh'
+				) );
+
+				// Control
+				$wp_customize->add_control( new Customizer_Alpha_Color_Control(
+						$wp_customize, 'header_widget_text', array(
+							'label'      => _x( 'Header Widget Text color', 'customizer_header', 'mybooking' ),
+							'section'    => 'mybooking_theme_header_options',
+							'settings'   => 'mybooking_header_widget_text'
+				) ) );
+
+				// --Header Text color
+
+				// Setting
+				$wp_customize->add_setting( 'mybooking_header_widget_link' , array(
+				    'default'   => '#ffffff',
+				    'transport' => 'refresh'
+				) );
+
+				// Control
+				$wp_customize->add_control( new Customizer_Alpha_Color_Control(
+						$wp_customize, 'header_widget_link', array(
+							'label'      => _x( 'Header Widget Link color', 'customizer_header', 'mybooking' ),
+							'section'    => 'mybooking_theme_header_options',
+							'settings'   => 'mybooking_header_widget_link'
+				) ) );
+
+				// --Header align
+
+				// Setting
+				$wp_customize->add_setting(
+					'mybooking_header_widget_title_align',
+					array(
+						'default'           => 'left',
+						'type'              => 'theme_mod',
+						// 'sanitize_callback' => array( $this, 'slug_sanitize_select'),
+						'capability'        => 'edit_theme_options',
+					)
+				);
+
+				// Control
+				$wp_customize->add_control(
+					new WP_Customize_Control(
+						$wp_customize,
+						'header_widget_title_align',
+						array(
+							'label'       => _x( 'Widget Title Align', 'customizer_header', 'mybooking' ),
+							'section'     => 'mybooking_theme_header_options',
+							'settings'    => 'mybooking_header_widget_title_align',
+							'type'        => 'select',
+							'choices'     => array(
+								'left'      	=> _x( 'Default to the left', 'customizer_header', 'mybooking' ),
+								'center'    	=> _x( 'Align center', 'customizer_header', 'mybooking' ),
+								'right'				=> _x( 'Align right', 'customizer_header', 'mybooking' ),
+							),
+						)
+					)
+				);
+
+				// --Text align
+
+				// Setting
+				$wp_customize->add_setting(
+					'mybooking_header_widget_text_align',
+					array(
+						'default'           => 'left',
+						'type'              => 'theme_mod',
+						// 'sanitize_callback' => array( $this, 'slug_sanitize_select'),
+						'capability'        => 'edit_theme_options',
+					)
+				);
+
+				// Control
+				$wp_customize->add_control(
+					new WP_Customize_Control(
+						$wp_customize,
+						'header_widget_text_align',
+						array(
+							'label'       => _x( 'Widget Text Align', 'customizer_header', 'mybooking' ),
+							'section'     => 'mybooking_theme_header_options',
+							'settings'    => 'mybooking_header_widget_text_align',
+							'type'        => 'select',
+							'choices'     => array(
+								'left'      	=> _x( 'Default to the left', 'customizer_header', 'mybooking' ),
+								'center'    	=> _x( 'Align center', 'customizer_header', 'mybooking' ),
+								'right'				=> _x( 'Align right', 'customizer_header', 'mybooking' ),
+							),
+						)
+					)
+				);
+
+			}
 
     }
 

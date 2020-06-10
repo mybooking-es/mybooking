@@ -24875,6 +24875,11 @@ select:disabled {
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
   --home-header-top: calc(37px + 1rem + var(--custom-logo-height));
+  --home-header-widget-title: #fff;
+  --home-header-widget-title-align: left;
+  --home-header-widget-text: #fff;
+  --home-header-widget-text-align: left;
+  --home-header-widget-link: #FFF;
   --footer-bg: var(--gray-800);
   --footer-color: var(--gray-50);
   --footer-color-link: var(--brand-primary);
@@ -25110,6 +25115,24 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   background-color: var(--home-header-bg);
   z-index: 2;
   overflow-x: hidden; }
+
+.home-header h1,
+.home-header h2,
+.home-header h3,
+.home-header h4,
+.home-header h5,
+.home-header h6 {
+  color: var(--home-header-widget-title);
+  text-align: var(--home-header-widget-title-align); }
+
+.home-header p {
+  color: var(--home-header-widget-text);
+  text-align: var(--home-header-widget-text-align); }
+
+.home-header a {
+  color: var(--home-header-widget-link); }
+  .home-header a:hover {
+    opacity: .5; }
 
 @media (min-width: 768px) {
   .home-header {

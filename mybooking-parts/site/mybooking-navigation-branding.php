@@ -21,6 +21,8 @@ $custom_logo = get_post_meta($post->ID, 'logo_personalizado', true)
 
   <?php if ( is_front_page() && is_home() ) : ?>
 
+    <!-- Puts sitename and description inside H1 tag only at home -->
+
     <h1 class="navbar-brand mb-0">
       <a
         rel="home"
@@ -32,6 +34,8 @@ $custom_logo = get_post_meta($post->ID, 'logo_personalizado', true)
     </h1>
 
   <?php else : ?>
+
+    <!-- Puts sitename and description everywhere but home -->
 
     <a
       class="navbar-brand"
@@ -45,6 +49,8 @@ $custom_logo = get_post_meta($post->ID, 'logo_personalizado', true)
   <?php endif; ?>
 
 <?php
+// NOTE: This block is single client legacy code, we need to refactorize in orden to
+// avoid debug warnings messages
 } elseif ( !empty( $custom_logo ) ) { ?>
 
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand custom-logo-link" rel="home">
