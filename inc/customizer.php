@@ -6,7 +6,7 @@
 *   Section: Mybooking layout settings
 *
 *
-* 	Versión: 0.0.4
+* 	Versión: 0.0.6
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.1
@@ -1071,38 +1071,58 @@ class MyBookingCustomizer {
 				array(
 					'title'       => _x( 'Header', 'customizer_home', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
-					'description' => _x( 'Defines header\'s background type and widget\'s columns layout', 'customizer_home', 'mybooking' ),
+					'description' => _x( 'Defines header\'s background type and widget\'s columns layout', 'customizer_header', 'mybooking' ),
 					'priority'    => 55,
 					'active_callback' => 'is_front_page',
 					'panel'				=> 'mybooking_settings_panel',
 				)
 			);
 
-			// Background
+			// --Visibility
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_home_header_visibility' , array(
+			    'default'   => '1',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( 'mybooking_home_header_visibility',
+			   array(
+			      'label' => _x( 'Home Header visible', 'customizer_header', 'mybooking' ),
+
+			      'section'  => 'mybooking_theme_header_options',
+			      'type'=> 'checkbox',
+			      'capability' => 'edit_theme_options',
+			   )
+			);
+
+			// == Background
+
 			$wp_customize->add_setting( 'mybooking_home_header_bg',
 			   array(
 			      'default' => '0',
 			      'transport' => 'refresh',
-						// 'sanitize_callback' => 'skyrocket_radio_sanitization'
 			   )
 			);
 
 			$wp_customize->add_control( 'mybooking_home_header_bg',
 			   array(
-			      'label' => _x( 'Header section background', 'customizer_home', 'mybooking' ),
-			      'description' => esc_html_x( 'Define the header section background', 'customizer_home', 'mybooking'  ),
+			      'label' => _x( 'Header section background', 'customizer_header', 'mybooking' ),
+			      'description' => esc_html_x( 'Define the header section background', 'customizer_header', 'mybooking'  ),
 			      'section' => 'mybooking_theme_header_options',
 			      'type' => 'radio',
 			      'capability' => 'edit_theme_options',
 			      'choices' => array(
-			         '0' => _x( 'Background Image', 'customizer_home', 'mybooking' ),
-			         '1' => _x( 'Video', 'customizer_home', 'mybooking' ),
-			         '2' => _x( 'Carrousel', 'customizer_home', 'mybooking' )
+			         '0' => _x( 'Background Image', 'customizer_header', 'mybooking' ),
+			         '1' => _x( 'Video', 'customizer_header', 'mybooking' ),
+			         '2' => _x( 'Carrousel', 'customizer_header', 'mybooking' )
 			      )
 			   )
 			);
 
-			// Background Image
+			// --Background Image
+
 	    $wp_customize->add_setting(
 	        'mybooking_home_header_image_bg',
 	        array(
@@ -1115,14 +1135,14 @@ class MyBookingCustomizer {
 	            $wp_customize,
 	            'mybooking_home_header_image',
 	            array(
-	                'label' => _x( 'Background Image', 'customizer_home', 'mybooking' ),
+	                'label' => _x( 'Background Image', 'customizer_header', 'mybooking' ),
 	                'section' => 'mybooking_theme_header_options',
 	                'settings' => 'mybooking_home_header_image_bg'
 	            )
 	        )
 	    );
 
-	    // Background Video
+	    // --Background Video
 
 	    $wp_customize->add_setting(
 	        'mybooking_home_header_video_bg',
@@ -1136,7 +1156,7 @@ class MyBookingCustomizer {
 	            $wp_customize,
 	            'mybooking_home_header_video',
 	            array(
-	                'label' => _x( 'Background Video', 'customizer_home', 'mybooking' ),
+	                'label' => _x( 'Background Video', 'customizer_header', 'mybooking' ),
 	                'section' => 'mybooking_theme_header_options',
 	                'settings' => 'mybooking_home_header_video_bg',
 	                'mime_type' => 'video'
@@ -1144,7 +1164,7 @@ class MyBookingCustomizer {
 	        )
 	    );
 
-	    // Background carrousel
+	    // --Background carrousel
 
 			$wp_customize->add_setting( 'mybooking_home_header_carrousel_bg',
 				  array(
@@ -1158,14 +1178,14 @@ class MyBookingCustomizer {
 			        $wp_customize,
 			        'mybooking_home_header_carrouse_bgl',
 			        array(
-			            'label'    => _x( 'Background Carrousel', 'customizer_home', 'mybooking' ),
+			            'label'    => _x( 'Background Carrousel', 'customizer_header', 'mybooking' ),
 			            'section'  => 'mybooking_theme_header_options',
 			            'settings' => 'mybooking_home_header_carrousel_bg',
 			            'type'     => 'image_gallery',
 			        )
 			    ) );
 
-			// Header Columns
+			// --Header Columns
 
 			$wp_customize->add_setting( 'mybooking_home_header_layout',
 			   array(
@@ -1176,15 +1196,15 @@ class MyBookingCustomizer {
 
 			$wp_customize->add_control( 'mybooking_home_header_layout',
 			   array(
-			      'label' => _x( 'Layout', 'customizer_home', 'mybooking' ),
-			      'description' => esc_html_x( 'Define the widget areas on header layout', 'customizer_home', 'mybooking'  ),
+			      'label' => _x( 'Layout', 'customizer_header', 'mybooking' ),
+			      'description' => esc_html_x( 'Define the widget areas on header layout', 'customizer_header', 'mybooking'  ),
 			      'section' => 'mybooking_theme_header_options',
 			      'type' => 'radio',
 			      'capability' => 'edit_theme_options',
 			      'choices' => array(
-			         '0' => _x( 'Two columns (50% - 50%)', 'customizer_home', 'mybooking' ),
-			         '1' => _x( 'Two columns (33% - 66%)', 'customizer_home', 'mybooking' ),
-			         '2' => _x( 'Two columns (66% - 33%)', 'customizer_home', 'mybooking' ),
+			         '0' => _x( 'Two columns (50% - 50%)', 'customizer_header', 'mybooking' ),
+			         '1' => _x( 'Two columns (33% - 66%)', 'customizer_header', 'mybooking' ),
+			         '2' => _x( 'Two columns (66% - 33%)', 'customizer_header', 'mybooking' ),
 			         '3' => _x( 'One column', 'customizer_home', 'mybooking' ),
 
 			      )
@@ -1424,7 +1444,88 @@ class MyBookingCustomizer {
 
     private function customize_home_section( $wp_customize ) {
 
-			// == Widgets visibility
+			// == Content section positioning and visibility
+
+			// --Positioning
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_home_content_position',
+				array(
+					'default'           => '1',
+					'type'              => 'theme_mod',
+					'capability'        => 'edit_theme_options',
+				)
+			);
+
+			// Control
+			$wp_customize->add_control( 'mybooking_home_content_position',
+				array(
+					'label'       => _x( 'Default content area', 'customizer_home', 'mybooking' ),
+					'description' => _x( 'Get control of default content section position and visibility. Shows WordPress editor\'s content', 'customizer_home', 'mybooking' ),
+
+					'section'     => 'static_front_page',
+					'settings'    => 'mybooking_home_content_position',
+					'type'        => 'select',
+					'choices'     => array(
+						'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
+						'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
+						'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
+						'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
+					),
+				)
+			);
+
+			// --Visibility
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_home_content_visibility' , array(
+			    'default'   => '1',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( 'mybooking_home_content_visibility',
+			   array(
+			      'label' => _x( 'Activate deafult content area', 'customizer_home', 'mybooking' ),
+
+			      'section'  => 'static_front_page',
+			      'type'=> 'checkbox',
+			      'capability' => 'edit_theme_options',
+			   )
+			);
+
+			// == Widgets section positioning and visibility
+
+			// --Positioning
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_home_content_widgets_position',
+				array(
+					'default'           => '2',
+					'type'              => 'theme_mod',
+					'capability'        => 'edit_theme_options',
+				)
+			);
+
+			// Control
+			$wp_customize->add_control( 'mybooking_home_content_widgets_position',
+				array(
+					'label'       => _x( 'Widgets area', 'customizer_home', 'mybooking' ),
+					'description' => _x( 'Get control of Widgets section position and visibility. Shows three widget areas called Home Content 1, 2 and 3', 'customizer_home', 'mybooking' ),
+
+					'section'     => 'static_front_page',
+					'settings'    => 'mybooking_home_content_widgets_position',
+					'type'        => 'select',
+					'choices'     => array(
+						'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
+						'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
+						'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
+						'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
+					),
+				)
+			);
+
+			// --Visibility
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_home_content_widgets_visibility' , array(
@@ -1432,10 +1533,11 @@ class MyBookingCustomizer {
 			    'transport' => 'refresh'
 			) );
 
+			// Control
 			$wp_customize->add_control( 'mybooking_home_content_widgets_visibility',
 			   array(
 			      'label' => _x( 'Activate content widgets', 'customizer_home', 'mybooking' ),
-			      'description' => _x( 'Shows a widgets area on top of home\'s content', 'customizer_home', 'mybooking' ),
+
 			      'section'  => 'static_front_page',
 			      'priority' => 10,
 			      'type'=> 'checkbox',
@@ -1443,7 +1545,38 @@ class MyBookingCustomizer {
 			   )
 			);
 
-			// == News visibility
+			// == News section positioning and visibility
+
+			// --Positioning
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_home_news_position',
+				array(
+					'default'           => '3',
+					'type'              => 'theme_mod',
+					'capability'        => 'edit_theme_options',
+				)
+			);
+
+			// Control
+			$wp_customize->add_control( 'mybooking_home_news_position',
+				array(
+					'label'       => _x( 'News area', 'customizer_home', 'mybooking' ),
+					'description' => _x( 'Get control of News section position and visibility. Shows last three posts of Home Page category', 'customizer_home', 'mybooking' ),
+
+					'section'     => 'static_front_page',
+					'settings'    => 'mybooking_home_news_position',
+					'type'        => 'select',
+					'choices'     => array(
+						'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
+						'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
+						'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
+						'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
+					),
+				)
+			);
+
+			// --Visibility
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_home_news_visibility' , array(
@@ -1451,18 +1584,49 @@ class MyBookingCustomizer {
 			    'transport' => 'refresh'
 			) );
 
+			// Content
 			$wp_customize->add_control( 'mybooking_home_news_visibility',
 			   array(
 			      'label' => _x( 'Activate news', 'customizer_home', 'mybooking' ),
-			      'description' => _x( 'Show last three posts on Home Page', 'customizer_home', 'mybooking' ),
+
 			      'section'  => 'static_front_page',
-			      'priority' => 20,
 			      'type'=> 'checkbox',
 			      'capability' => 'edit_theme_options',
 			   )
 			);
 
-			// == Testimonials visibility
+			// == Testimonials section positioning and visibility
+
+			// --Positioning
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_home_testimonial_carousel_position',
+				array(
+					'default'           => '4',
+					'type'              => 'theme_mod',
+					'capability'        => 'edit_theme_options',
+				)
+			);
+
+			// Control
+			$wp_customize->add_control( 'mybooking_home_testimonial_carousel_position',
+				array(
+					'label'       => _x( 'Testimonials area', 'customizer_home', 'mybooking' ),
+					'description' => _x( 'Get control of Testimonials section position and visibility (also the enables Testimonials post type)', 'customizer_home', 'mybooking' ),
+
+					'section'     => 'static_front_page',
+					'settings'    => 'mybooking_home_testimonial_carousel_position',
+					'type'        => 'select',
+					'choices'     => array(
+						'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
+						'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
+						'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
+						'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
+					),
+				)
+			);
+
+			// --Visibility
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_home_testimonial_carousel_visibility' , array(
@@ -1470,12 +1634,12 @@ class MyBookingCustomizer {
 			    'transport' => 'refresh'
 			) );
 
+			// Control
 			$wp_customize->add_control( 'mybooking_home_testimonial_carousel_visibility',
 			   array(
 			      'label' => _x( 'Activate testimonials', 'customizer_home', 'mybooking' ),
-			      'description' => _x( 'Show testimonials in home page (it also activates the content type)', 'customizer_home', 'mybooking' ),
+
 			      'section'  => 'static_front_page',
-			      'priority' => 30,
 			      'type'=> 'checkbox',
 			      'capability' => 'edit_theme_options',
 			   )
