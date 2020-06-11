@@ -181,19 +181,29 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Popup content post type
 - Theme configuration refactorized and unified
 - Deprecated functions cleaned
+
 ### 0.9.0
 - Customizer on steroids! Now we have all style options grouped on native WordPress panels
 - Mybooking settings menu cleaned and tabbed
+
 ### 0.9.1
 - Contact Page setting titles fixed
+
 ### 0.9.2
 - Header Widget areas overlaping solved
+
 ### 0.9.3
 - Customizer menu order rearrangement
 - Footer color controls
+
 ### 0.9.4
 - Panelized cutomizer settings
 - Home settings shown only when editing home page
 - Color controls for topbar notice
+
 ### 0.9.4.1
 - Simplified home content widgets areas and control now on customizer
+
+### 0.9.4.2
+- New hide home header control. Now is possible to make totaly customized homepages.
+- New controls on customizer to allow change home sections order's

@@ -13,14 +13,19 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="container page_content">
-  <div class="row">
-    <div class="col">
+<?php $content_visible = get_theme_mod("mybooking_home_content_visibility");
+if ($content_visible == 1) { ?>
 
-      <?php while ( have_posts() ) : the_post(); ?>
-        <?php the_content(); ?>
-      <?php endwhile;?>
+  <div class="container page_content">
+    <div class="row">
+      <div class="col">
 
+        <?php while ( have_posts() ) : the_post(); ?>
+          <?php the_content(); ?>
+        <?php endwhile;?>
+
+      </div>
     </div>
   </div>
-</div>
+
+<?php } ?>
