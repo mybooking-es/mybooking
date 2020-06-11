@@ -35,7 +35,7 @@ defined( 'ABSPATH' ) || exit;
 </div>
 
 <?php $news_visible = get_theme_mod("mybooking_home_header_visibility");
-if ($news_visible == 1) { ?>
+if ($news_visible != '') { ?>
 
   <div class="home-header">
 
