@@ -1,17 +1,20 @@
 //==============================================
 // Module/steps
 //==============================================
-
+.steps-bg-color {
+  background-color: var(--steps-wrapper-bg-color);
+}
 .steps-wrapper {
+  margin: 0 auto;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: var(--steps-wrapper-bg-color);
   #steps {
     padding-left: 30px;
   }
+  max-width: 1140px;
 }
 .steps_title {
   color: var(--step-title-color);

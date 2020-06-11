@@ -157,15 +157,16 @@
               <p class="color-white"><%=shopping_cart.hours%> <?php _e('hora/s', 'mybooking') ?></p> 
               <% } %>
           </div>
-          <!-- Button trigger modal -->
-          <div class="modify-button">
-            <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"><i class="fa fa-edit"></i></button>
+          <div class="complete-summary-item">
+            <p class="complete-summary-text"><?php _e('Total', 'mybooking') ?>:</p>
+            <p class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
           </div>
         </div>
         <div class="complete-summary-right">
-          <div class="complete-summary-item">
-              <p class="complete-summary-text"><?php _e('Total', 'mybooking') ?></p>
-              <p class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
+          <!-- Button trigger modal -->
+          <div class="modify-button">
+            <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"><i
+                class="fa fa-edit"></i></button>
           </div>
           <!-- Button trigger modal -->
           <div class="modify-button">

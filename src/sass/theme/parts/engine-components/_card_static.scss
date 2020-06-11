@@ -1,11 +1,17 @@
 // ==================================
 // ===== CARD static
 // ==================================
-.cards-static-container {
-  display: flex;
-  flex-wrap: wrap;
+
+.bg-cards-color {
   background-color: var(--gray-200);
 }
+.cards-static-container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1140px;
+}
+
 // cards in fleet page
 .cards-static-container.fleet {
   .card-static_body {
@@ -204,7 +210,7 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards-static-container {
-    padding: 30px 5%;
+    padding: 30px 0;
   }
   .card-static-wrapper {
     flex-basis: 33%;

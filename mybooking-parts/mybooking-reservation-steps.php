@@ -32,10 +32,11 @@
   </div>
 </div>
 
-<div class="steps-wrapper">
-  <div id="steps">
+<div class="steps-bg-color">
+  <div class="steps-wrapper">
+    <div id="steps">
 
-    <?php
+      <?php
       $classes = get_body_class();
 
       if ( in_array('choose_product',$classes) ) {
@@ -49,11 +50,13 @@
         $step = __('Resumen', 'mybooking');
       } ?>
 
-    <div data-desc="<?php _e( 'Lugar y Fecha', 'mybooking' ) ?>" class="step">1</div>
-    <div data-desc="<?php _e( 'Seleccionar producto', 'mybooking' ) ?>" class="<?php echo $choose_active ?> step">2
+      <div data-desc="<?php _e( 'Lugar y Fecha', 'mybooking' ) ?>" class="step">1</div>
+      <div data-desc="<?php _e( 'Seleccionar producto', 'mybooking' ) ?>" class="<?php echo $choose_active ?> step">2
+      </div>
+      <div data-desc="<?php _e( 'Completar Reserva', 'mybooking' ) ?>" class="<?php echo $complete_active ?> step">3
+      </div>
+      <div data-desc="<?php _e( 'Sumario', 'mybooking' ) ?>" class="<?php echo $summary_active ?> step">4</div>
     </div>
-    <div data-desc="<?php _e( 'Completar Reserva', 'mybooking' ) ?>" class="<?php echo $complete_active ?> step">3</div>
-    <div data-desc="<?php _e( 'Sumario', 'mybooking' ) ?>" class="<?php echo $summary_active ?> step">4</div>
+    <h2 class="steps_title"><?php echo _e( $step, 'mybooking') ?></h2>
   </div>
-  <h2 class="steps_title"><?php echo _e( $step, 'mybooking') ?></h2>
 </div>
