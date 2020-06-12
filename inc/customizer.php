@@ -93,6 +93,8 @@ class MyBookingCustomizer {
 			$this->customize_navbar_section( $wp_customize );
 			$this->customize_header_section( $wp_customize );
 			$this->customize_footer_section( $wp_customize );
+			$this->customize_selector_section( $wp_customize );
+			$this->customize_identity_section( $wp_customize );
 
 	  }
 
@@ -227,9 +229,16 @@ class MyBookingCustomizer {
 				$header_widget_text_align = get_theme_mod( 'mybooking_header_widget_text_align', 'left' );
 				$header_widget_link = get_theme_mod( 'mybooking_header_widget_link', '#FFFFFF' );
 
+				$home_selector_background = get_theme_mod( 'mybooking_home_selector_background', '#FFFFFF50' );
+				$home_selector_labels = get_theme_mod( 'mybooking_home_selector_labels', '#212121' );
+				$sticky_selector_background = get_theme_mod( 'mybooking_sticky_selector_background', '#2193F2' );
+				$sticky_selector_labels = get_theme_mod( 'mybooking_sticky_selector_labels', '#212121' );
+
 				$footer_bg = get_theme_mod( 'mybooking_footer_bg', '#424242' );
 				$footer_link_color = get_theme_mod( 'footer_link_color', '#2193F2' );
 				$footer_link_hover_color = get_theme_mod( 'footer_link_hover_color', '#FFFFFF' );
+
+				$logo_height = get_theme_mod( 'mybooking_logo_height', '40px' );
 
 			}
 
@@ -292,10 +301,19 @@ class MyBookingCustomizer {
 				$custom_css.= "--home-header-widget-text-align: ".$header_widget_text_align.';';
 				$custom_css.= "--home-header-widget-link: ".$header_widget_link.';';
 
+				// Selector
+				$custom_css.= "--home-selector-bg: ".$home_selector_background.';';
+				$custom_css.= "--selector-label-color: ".$home_selector_labels.';';
+				$custom_css.= "--selector-sticky-bg: ".$sticky_selector_background.';';
+				$custom_css.= "--selector-sticky-labels-color: ".$sticky_selector_labels.';';
+
 				// Footer
 				$custom_css.= "--footer-bg: ".$footer_bg.';';
 				$custom_css.= "--footer-color-link: ".$footer_link_color.';';
 				$custom_css.= "--footer-color-link-hover: ".$footer_link_hover_color.';';
+
+				// Identity
+				$custom_css.= "--custom-logo-height: ".$logo_height.';';
 			}
 
 		  $custom_css.= "}";
@@ -1339,7 +1357,7 @@ class MyBookingCustomizer {
 
     private function customize_footer_section( $wp_customize ) {
 
-			// Section
+			// == Section
 			$wp_customize->add_section(
 				'mybooking_theme_footer_options',
 				array(
@@ -1435,8 +1453,107 @@ class MyBookingCustomizer {
 
 
 		/**
-     * 	Customize Home Sections
-		 *	-----------------------
+     * 	Customize Selector
+		 *	------------------
+		 *
+		 *	Triggered only in Advanced Mode
+     */
+
+		 private function customize_selector_section( $wp_customize ) {
+
+				$options_advanced_mode = get_theme_mod( 'mybooking_colors_advanced', '0' );
+				 if ( $options_advanced_mode == '1' ) {
+
+					 // == Section
+	 	 			$wp_customize->add_section(
+	 	 				'mybooking_theme_selector_options',
+	 	 				array(
+	 	 					'title'       => _x( 'Booking Forms', 'customizer_selector', 'mybooking' ),
+	 	 					'description' => _x( 'Controls the booking forms apperance on Home and process pages.', 'customizer_selector', 'mybooking' ),
+
+							'capability'  => 'edit_theme_options',
+	 	 					'priority'    => 57,
+	 	 					'panel'				=> 'mybooking_settings_panel',
+	 	 				)
+	 	 			);
+
+	 				// -- Home Form background
+
+	 				// Setting
+	 				$wp_customize->add_setting( 'mybooking_home_selector_background' , array(
+	 						'default'   => '#FFFFFF60',
+	 						'transport' => 'refresh'
+	 				) );
+
+	 				// Control
+	 				$wp_customize->add_control( new Customizer_Alpha_Color_Control(
+	 						$wp_customize, 'home_selector_background', array(
+	 							'label'      => _x( 'Home Booking Form background', 'customizer_selector', 'mybooking' ),
+	 							'description' => _x( 'Usefull when the form is placed inside the Header and needs some transparency.', 'customizer_selector', 'mybooking' ),
+
+	 							'section'    => 'mybooking_theme_selector_options',
+	 							'settings'   => 'mybooking_home_selector_background'
+	 				) ) );
+
+					// -- Labels color
+
+	 				// Setting
+	 				$wp_customize->add_setting( 'mybooking_home_selector_labels' , array(
+	 						'default'   => '#212121',
+	 						'transport' => 'refresh'
+	 				) );
+
+	 				// Control
+	 				$wp_customize->add_control( new Customizer_Alpha_Color_Control(
+	 						$wp_customize, 'home_selector_labels', array(
+	 							'label'      => _x( 'General Form labels', 'customizer_selector', 'mybooking' ),
+
+	 							'section'    => 'mybooking_theme_selector_options',
+	 							'settings'   => 'mybooking_home_selector_labels'
+	 				) ) );
+
+					// -- Sticky Form background
+
+	 				// Setting
+	 				$wp_customize->add_setting( 'mybooking_sticky_selector_background' , array(
+	 						'default'   => '#2193F2',
+	 						'transport' => 'refresh'
+	 				) );
+
+	 				// Control
+	 				$wp_customize->add_control( new Customizer_Alpha_Color_Control(
+	 						$wp_customize, 'sticky_selector_background', array(
+	 							'label'      => _x( 'Sticky Booking Form background', 'customizer_selector', 'mybooking' ),
+
+	 							'section'    => 'mybooking_theme_selector_options',
+	 							'settings'   => 'mybooking_sticky_selector_background'
+	 				) ) );
+
+					// -- Sticky Form Labels color
+
+	 				// Setting
+	 				$wp_customize->add_setting( 'mybooking_sticky_selector_labels' , array(
+	 						'default'   => '#FFFFFF',
+	 						'transport' => 'refresh'
+	 				) );
+
+	 				// Control
+	 				$wp_customize->add_control( new Customizer_Alpha_Color_Control(
+	 						$wp_customize, 'sticky_selector_labels', array(
+	 							'label'      => _x( 'Sticky Form labels', 'customizer_selector', 'mybooking' ),
+
+	 							'section'    => 'mybooking_theme_selector_options',
+	 							'settings'   => 'mybooking_sticky_selector_labels'
+	 				) ) );
+
+		 	 }
+
+		}
+
+
+		/**
+     * 	Customize Home Section
+		 *	----------------------
 		 *
 		 *	We don't use section declaration here because these controls appears in
 		 *	Homepage Settings section
@@ -1647,6 +1764,40 @@ class MyBookingCustomizer {
 
     }
 
+
+		/**
+     * 	Customize Identity Section
+		 *	--------------------------
+		 *
+		 *	We don't use section declaration here because these controls appears in
+		 *	Site Identity WordPress default section
+     */
+
+		 private function customize_identity_section( $wp_customize ) {
+
+			 	// -- Logo Height
+
+	 			// Setting
+
+	 			$wp_customize->add_setting( 'mybooking_logo_height' , array(
+	 			    'default'   => '40px',
+	 			    'transport' => 'refresh'
+	 			) );
+
+	 			// Control
+	 			$wp_customize->add_control( 'mybooking_logo_height',
+	 			   array(
+	 			      'label' => _x( 'Site\'s logo height', 'customizer_identity', 'mybooking' ),
+							'description' => _x( 'Put a value in pixels.', 'customizer_identity', 'mybooking' ),
+
+
+	 			      'section'  => 'title_tagline',
+	 			      'type'=> 'text',
+	 			      'capability' => 'edit_theme_options',
+	 			   )
+	 			);
+
+		 }
 
 
     // -----------

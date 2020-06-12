@@ -46,7 +46,6 @@
   --navbar-link-collapse: var(--white);
   // Logo
   --custom-logo-height: 40px;
-  --custom-logo-width: auto;
   // Toggler
   --toggler-icon-font-size: 1.3rem;
   --toggler-icon-color: var(--white);
@@ -68,7 +67,7 @@
   --footer-color-link: var(--brand-primary);
   --footer-color-link-hover: var(--brand-primary-light);
   --footer-logo-width: auto;
-  --footer-logo-height: 20px;
+  --footer-logo-height: 30px;
   // Credits
   --credits-bg: var(--gray-900);
   --credits-color: var(--gray-100);
@@ -95,7 +94,7 @@
   --selector-sticky-bg: var(--brand-primary);
   --selector-sticky-labels-color: var(--white);
   // Selector sticky search btn
-  --selector-btn-sticky-bg-color: var(--brand-primary);
+  --selector-btn-sticky-bg-color: transparent;
   --selector-btn-sticky-border-color: var(--white);
   --selector-btn-sticky-color: var(--white);
   --selector-btn-sticky-hover-bg-color: var(--prbrand-primary-dark);

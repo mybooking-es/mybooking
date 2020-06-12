@@ -24866,7 +24866,6 @@ select:disabled {
   --navbar-dropdown-item-active-bg: var(--brand-secondary);
   --navbar-link-collapse: var(--white);
   --custom-logo-height: 40px;
-  --custom-logo-width: auto;
   --toggler-icon-font-size: 1.3rem;
   --toggler-icon-color: var(--white);
   --toggler-icon-mt: 6px;
@@ -24885,7 +24884,7 @@ select:disabled {
   --footer-color-link: var(--brand-primary);
   --footer-color-link-hover: var(--brand-primary-light);
   --footer-logo-width: auto;
-  --footer-logo-height: 20px;
+  --footer-logo-height: 30px;
   --credits-bg: var(--gray-900);
   --credits-color: var(--gray-100);
   --credits-color-link: var(--color-link);
@@ -24903,7 +24902,7 @@ select:disabled {
   --selector-label-color: var(--body-color);
   --selector-sticky-bg: var(--brand-primary);
   --selector-sticky-labels-color: var(--white);
-  --selector-btn-sticky-bg-color: var(--brand-primary);
+  --selector-btn-sticky-bg-color: transparent;
   --selector-btn-sticky-border-color: var(--white);
   --selector-btn-sticky-color: var(--white);
   --selector-btn-sticky-hover-bg-color: var(--prbrand-primary-dark);
@@ -25362,9 +25361,10 @@ ul.social-links,
     height: 30px; }
   .footer .logo-footer a img {
     margin-bottom: 0.5rem;
-    width: var(--footer-logo-width);
     height: var(--footer-logo-height);
-    overflow: hidden; }
+    overflow: hidden;
+    -o-object-fit: contain;
+       object-fit: contain; }
   .footer a {
     color: var(--footer-color-link);
     text-decoration: none;
@@ -25587,8 +25587,9 @@ img.wp-post-image {
 
 .custom-logo-link img {
   height: var(--custom-logo-height);
-  width: var(--custom-logo-width);
-  overflow: hidden; }
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain; }
 
 .navbar-toggler {
   border: none;
