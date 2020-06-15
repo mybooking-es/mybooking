@@ -3,6 +3,10 @@
 //==============================================
 
 // WordPress Pages
+.site-main {
+  width: 100%;
+}
+
 .page .entry-title {
   text-transform: uppercase;
 }
@@ -24,10 +28,6 @@
   .single .page_content,
   .page .page_content {
     padding: 8rem 1rem;
-  }
-
-  .home .page_content {
-    padding: 2rem;
   }
 }
 

@@ -207,3 +207,6 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 ### 0.9.4.2
 - New hide home header control. Now is possible to make totaly customized homepages.
 - New controls on customizer to allow change home sections order's
+
+### 0.9.5
+- Woocommerce basic support
