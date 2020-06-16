@@ -24899,14 +24899,11 @@ select:disabled {
   --selector-btn-hover-bg-color: var(--brand-primary-dark);
   --selector-btn-hover-border-color: var(--brand-primary-dark);
   --selector-btn-hover-color: var(--white);
-<<<<<<< HEAD
   --selector-btn-sticky-bg-color: var(--brand-primary);
-=======
   --selector-label-color: var(--body-color);
   --selector-sticky-bg: var(--brand-primary);
   --selector-sticky-labels-color: var(--white);
   --selector-btn-sticky-bg-color: transparent;
->>>>>>> 4858ca1846631500b22ccd5692557436580e9ef0
   --selector-btn-sticky-border-color: var(--white);
   --selector-btn-sticky-color: var(--white);
   --selector-btn-sticky-hover-bg-color: var(--brand-primary-dark);
@@ -25481,7 +25478,7 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
 .home-header a {
   color: var(--home-header-widget-link); }
   .home-header a:hover {
-    opacity: .5; }
+    opacity: 0.5; }
 
 @media (min-width: 768px) {
   .home-header {
@@ -25573,7 +25570,8 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    min-width: 960px !important; }
+    min-width: 960px !important;
+    margin-top: 50px !important; }
   .home-header_content_container_sticky {
     -webkit-transform: none !important;
             transform: none !important; } }
@@ -25940,7 +25938,8 @@ img.wp-post-image {
   height: var(--custom-logo-height);
   overflow: hidden;
   -o-object-fit: contain;
-     object-fit: contain; }
+     object-fit: contain;
+  width: auto; }
 
 .navbar-toggler {
   border: none;

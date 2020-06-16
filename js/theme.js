@@ -9990,22 +9990,48 @@ $(document).ready(function () {
   }
 });
 
-/* Sticky footer */
+/* Sticky footer 
+   Requirement: The footer must not have margin
+*/
+function stickyFooter() {
+  var $copyWrapper = $(".copy-wrapper");
+  var copyWrapperHeight = $copyWrapper.outerHeight(true);
+  var $footer = $("#wrapper-footer");
+  var footerTop = $footer.position().top; // Footer top position
+  var footerHeight = $footer.outerHeight(false); //Footer FULL Height including and paddings (false not to apply margin because we calculate it)
+  var windowHeight = $(window).height();
+  var marginTop = windowHeight - footerTop - footerHeight - copyWrapperHeight;
+  /*
+    ----------------------------window         ------------------------window
+    CONTENT                                    CONTENT
+    ----------------------------footer         ..............................
+    top
+    outerHeight                                     MARGIN-TOP
+   
+    ----------------------------footer        -------------------------footer
+   
+                                              -------------------------footer   
+    ----------------------------window        -------------------------window
+   */
 
-$(window).bind("load", function () {
-  var footer = $("footer");
-  var pos = footer.position();
-  var height = $(window).height();
-  height = height - pos.top;
-  height = height - footer.height();
-  height -= 152;
-  if (height > 0) {
-    footer.css({
-      "margin-top": height + "px",
+  if (marginTop > 0) {
+    $footer.css({
+      "margin-top": marginTop + "px",
     });
   }
-  console.log("altura del navegador:" + " " + $(window).height());
-  console.log("valor .top del footer:" + " " + pos.top);
-  console.log("altura del footer:" + " " + $("footer").height());
-  console.log(height);
+}
+
+$(window).bind("load", function (event) {
+  console.log("load");
+  stickyFooter();
+});
+
+$(window).bind("scroll", function (event) {
+  console.log("scroll");
+  stickyFooter();
+});
+
+$(window).bind("resize", function (event) {
+  console.log("resize");
+  stickyFooter();
 });

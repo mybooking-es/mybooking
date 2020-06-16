@@ -28,19 +28,19 @@ $container = get_theme_mod( 'mybooking_container_type' );
 
 ?>
 
-<div class="wrapper page_content" id="page-wrapper">
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-		<div class="row">
-			<main class="site-main" id="main">
+<div class="wrapper page_content margin-top-required" id="page-wrapper">
+  <div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+    <div class="row">
+      <main class="site-main" id="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
-					<h2 class="entry-title"><?php the_title(); ?></h2>
-					<?php the_content(); ?>
-				<?php endwhile; ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+        <h2 class="entry-title"><?php the_title(); ?></h2>
+        <?php the_content(); ?>
+        <?php endwhile; ?>
 
-			</main>
-		</div>
-	</div>
+      </main>
+    </div>
+  </div>
 </div>
 
 <?php get_footer();
