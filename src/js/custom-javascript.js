@@ -160,3 +160,23 @@ $(document).ready(function () {
     );
   }
 });
+
+/* Sticky footer */
+
+$(window).bind("load", function () {
+  var footer = $("footer");
+  var pos = footer.position();
+  var height = $(window).height();
+  height = height - pos.top;
+  height = height - footer.height();
+  height -= 152;
+  if (height > 0) {
+    footer.css({
+      "margin-top": height + "px",
+    });
+  }
+  console.log("altura del navegador:" + " " + $(window).height());
+  console.log("valor .top del footer:" + " " + pos.top);
+  console.log("altura del footer:" + " " + $("footer").height());
+  console.log(height);
+});
