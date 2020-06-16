@@ -26,8 +26,8 @@
 // Logo
 .custom-logo-link img {
   height: var(--custom-logo-height);
-  width: var(--custom-logo-width);
   overflow: hidden;
+  object-fit: contain;
 }
 
 // Toggler
