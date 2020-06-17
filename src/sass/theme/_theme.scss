@@ -7,9 +7,11 @@
   }
 }
 // Margin top required
+// El 53 viene de la altura del topbar 37 + los padings del navbar 16
+// topbar = 37px + logo height = variable + paddings navbar = 16px + 20px extra
 @media (max-width: 991.98px) {
   .margin-top-required {
-    margin-top: var(--sticky-top-mobile-top-position);
+    margin-top: calc(var(--custom-logo-height) + 53px + 20px);
   }
 }
 .full-height {
