@@ -128,7 +128,8 @@ $(document).on("click", ".dropdown-menu li", function (e) {
   e.stopPropagation();
 });
 
-// MARGINS CALC FUNCTIONS
+// MARGINS CALC FUNCTIONS add 40px extra if message is active
+
 $(document).ready(function () {
   var bodyStyles = document.body.style;
 
@@ -162,15 +163,17 @@ $(document).ready(function () {
 });
 
 /* Sticky footer 
-   Requirement: The footer must not have margin
+  Requirement: The footer must not have margin
 */
 function stickyFooter() {
   var $copyWrapper = $(".copy-wrapper");
   var copyWrapperHeight = $copyWrapper.outerHeight(true);
   var $footer = $("#wrapper-footer");
   var footerTop = $footer.position().top; // Footer top position
-  var footerHeight = $footer.outerHeight(false); //Footer FULL Height including and paddings (false not to apply margin because we calculate it)
+  var footerHeight = $footer.outerHeight(false); //Footer FULL Height including paddings (false not to apply margin because we calculate it)
   var windowHeight = $(window).height();
+  var documentHeight = $(document).height();
+
   var marginTop = windowHeight - footerTop - footerHeight - copyWrapperHeight;
   /*
     ----------------------------window         ------------------------window
@@ -178,9 +181,9 @@ function stickyFooter() {
     ----------------------------footer         ..............................
     top
     outerHeight                                     MARGIN-TOP
-   
+  
     ----------------------------footer        -------------------------footer
-   
+  
                                               -------------------------footer   
     ----------------------------window        -------------------------window
    */
@@ -193,16 +196,19 @@ function stickyFooter() {
 }
 
 $(window).bind("load", function (event) {
-  console.log("load");
-  stickyFooter();
+  setTimeout(function () {
+    stickyFooter();
+  }, 3000);
 });
 
 $(window).bind("scroll", function (event) {
-  console.log("scroll");
-  stickyFooter();
+  setTimeout(function () {
+    stickyFooter();
+  }, 3000);
 });
 
 $(window).bind("resize", function (event) {
-  console.log("resize");
-  stickyFooter();
+  setTimeout(function () {
+    stickyFooter();
+  }, 3000);
 });
