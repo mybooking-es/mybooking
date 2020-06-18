@@ -10,8 +10,8 @@
 */
 ?>
 
-<?php $news_visible = get_theme_mod("mybooking_home_news_visibility");
-if ($news_visible == 1) { ?>
+<?php $news_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_news_visibility" );
+if ($news_visible) { ?>
 
   <div class="news_container">
     <div class="container">

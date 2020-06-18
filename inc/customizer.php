@@ -15,7 +15,15 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-
+/**
+ *
+ * mybooking_home_header_visibility
+ * mybooking_home_content_visibility
+ * mybooking_home_content_widgets_visibility
+ * mybooking_home_news_visibility
+ * mybooking_home_testimonial_carousel_visibility
+ *
+ */
 class MyBookingCustomizer {
 
 		// Hold the class instance.
@@ -151,9 +159,12 @@ class MyBookingCustomizer {
     	$body_bg = get_theme_mod( 'mybooking_body_bg', '#FFFFFF' );
     	$body_color = get_theme_mod( 'mybooking_body_color', '#212121' );
 
+			$logo_height = get_theme_mod( 'mybooking_logo_height', '40' );
+
+    	// If advaced colors is active, load extended values for topbar/navbar/header/footer
 			$options_advanced_mode = get_theme_mod( 'mybooking_colors_advanced', '0' );
       if ( $options_advanced_mode == '1' ) {
-
+      	// TopBar
 	    	$home_topbar_bg = get_theme_mod( 'mybooking_home_topbar_bg', '#42424280' );
 	    	$topbar_bg = get_theme_mod( 'mybooking_topbar_bg', '#212121' );
 	    	$topbar_color = get_theme_mod( 'mybooking_topbar_color', '#FFFFFF' );
@@ -163,7 +174,7 @@ class MyBookingCustomizer {
 				$topbar_message_text = get_theme_mod( 'mybooking_topbar_message_text', '#FFFFFF' );
 				$topbar_message_link = get_theme_mod( 'mybooking_topbar_message_link', '#FAFAFA' );
 				$topbar_message_hover = get_theme_mod( 'mybooking_topbar_message_link_hover', '#FAFAFA' );
-
+				// NavBar
 	    	$navbar_bg = get_theme_mod( 'mybooking_navbar_bg', '#2193F2');
 	    	$navbar_link_color = get_theme_mod( 'mybooking_navbar_link_color', '#FFFFFF' );
 	    	$navbar_link_color_hover = get_theme_mod( 'mybooking_navbar_link_hover_color', '#FFFFFF' );
@@ -172,24 +183,21 @@ class MyBookingCustomizer {
 	    	$navbar_dropdown_item_active_color = get_theme_mod( 'mybooking_navbar_dropdown_item_active_color', '#424242' );
 	    	$navbar_link_collapse = get_theme_mod( 'mybooking_navbar_link_collapse', '#212121' );
 	    	$navbar_toggler_icon = get_theme_mod( 'mybooking_navbar_toggler_icon', '#FFFFFF' );
-
+	    	// Header
 				$header_widget_title_color = get_theme_mod( 'mybooking_header_widget_title_color', '#FFFFFF' );
 				$header_widget_title_align = get_theme_mod( 'mybooking_header_widget_title_align', 'left' );
 				$header_widget_text_color = get_theme_mod( 'mybooking_header_widget_text_color', '#FFFFFF' );
 				$header_widget_text_align = get_theme_mod( 'mybooking_header_widget_text_align', 'left' );
 				$header_widget_link_color = get_theme_mod( 'mybooking_header_widget_link_color', '#FFFFFF' );
-
+				// Selector
 				$home_selector_background = get_theme_mod( 'mybooking_home_selector_background', '#FFFFFF50' );
 				$home_selector_labels = get_theme_mod( 'mybooking_home_selector_labels', '#212121' );
 				$sticky_selector_background = get_theme_mod( 'mybooking_sticky_selector_background', '#2193F2' );
 				$sticky_selector_labels = get_theme_mod( 'mybooking_sticky_selector_labels', '#212121' );
-
+				// Footer
 				$footer_bg = get_theme_mod( 'mybooking_footer_bg', '#424242' );
 				$footer_link_color = get_theme_mod( 'footer_link_color', '#2193F2' );
 				$footer_link_hover_color = get_theme_mod( 'footer_link_hover_color', '#FFFFFF' );
-
-				$logo_height = get_theme_mod( 'mybooking_logo_height', '40px' );
-
 			}
 
 			// == Build the css-properties
@@ -222,6 +230,9 @@ class MyBookingCustomizer {
 		  $custom_css.= "--body-bg: ".$body_bg.';';
 		  $custom_css.= "--body-color: ".$body_color.';';
 
+			// Identity
+  		$custom_css.= "--custom-logo-height: ".$logo_height.'px;';
+
 			if ( $options_advanced_mode == '1' ) {
 			  // Top bar
 			  $custom_css.= "--home-topbar-bg: ".$home_topbar_bg.';';
@@ -233,7 +244,6 @@ class MyBookingCustomizer {
 			  $custom_css.= "--topbar-message-text: ".$topbar_message_text.';';
 			  $custom_css.= "--topbar-message-link: ".$topbar_message_link.';';
 			  $custom_css.= "--topbar-message-link-hover: ".$topbar_message_hover.';';
-
 			  // NavBar
 	    	$custom_css.= "--navbar-bg: ".$navbar_bg.';';
 	    	$custom_css.= "--navbar-link-color: ".$navbar_link_color.';';
@@ -243,27 +253,21 @@ class MyBookingCustomizer {
 	    	$custom_css.= "--navbar-dropdown-item-active-bg: ".$navbar_dropdown_item_active_color.';';
 	    	$custom_css.= "--navbar-link-collapse: ".$navbar_link_collapse.';';
 	    	$custom_css.= "--toggler-icon-color: ".$navbar_toggler_icon.';';
-
 				// Header
 				$custom_css.= "--home-header-widget-title: ".$header_widget_title_color.';';
 				$custom_css.= "--home-header-widget-title-align: ".$header_widget_title_align.';';
 				$custom_css.= "--home-header-widget-text: ".$header_widget_text_color.';';
 				$custom_css.= "--home-header-widget-text-align: ".$header_widget_text_align.';';
 				$custom_css.= "--home-header-widget-link: ".$header_widget_link_color.';';
-
 				// Selector
 				$custom_css.= "--home-selector-bg: ".$home_selector_background.';';
 				$custom_css.= "--selector-label-color: ".$home_selector_labels.';';
 				$custom_css.= "--selector-sticky-bg: ".$sticky_selector_background.';';
 				$custom_css.= "--selector-sticky-labels-color: ".$sticky_selector_labels.';';
-
 				// Footer
 				$custom_css.= "--footer-bg: ".$footer_bg.';';
 				$custom_css.= "--footer-color-link: ".$footer_link_color.';';
 				$custom_css.= "--footer-color-link-hover: ".$footer_link_hover_color.';';
-
-				// Identity
-				$custom_css.= "--custom-logo-height: ".$logo_height.';';
 			}
 
 		  $custom_css.= "}";
@@ -281,27 +285,35 @@ class MyBookingCustomizer {
      */
 	  public function get_theme_options() {
 
-	  	if ( $this->theme_options == null ) {
+	  	if ( $this->theme_options == null ||  is_customize_preview() ) {
+
 		  	$this->theme_options = array();
 
-		  	// Global Topbar Message
-		  	$this->theme_options['mybooking_global_topbar_message'] = get_theme_mod( "mybooking_global_topbar_message" );
+		  	// Home header visibility
+		  	$this->theme_options['mybooking_home_header_visibility'] = get_theme_mod( "mybooking_home_header_visibility", true );
 
-		  	// Testimonials
-		  	$this->theme_options['mybooking_home_testimonial_carousel_visibility'] = get_theme_mod( 'mybooking_home_testimonial_carousel_visibility' );
+		  	// Home content visibility
+		  	$this->theme_options['mybooking_home_content_visibility'] = get_theme_mod( "mybooking_home_content_visibility", true );
 
-				// Home Content Widgets
-				$this->theme_options['mybooking_home_content_widgets_visibility'] = get_theme_mod( 'mybooking_home_content_widgets_visibility' );
+				// Home Content Widgets visibility
+				$this->theme_options['mybooking_home_content_widgets_visibility'] = get_theme_mod( 'mybooking_home_content_widgets_visibility', true );
+
+		  	// Home News visibility
+		  	$this->theme_options['mybooking_home_news_visibility'] = get_theme_mod( 'mybooking_home_news_visibility', true );
+
+		  	// Home Testimonials visibility
+		  	$this->theme_options['mybooking_home_testimonial_carousel_visibility'] = get_theme_mod( 'mybooking_home_testimonial_carousel_visibility', true );
+
+		  	// Topbar Global Message
+		  	$this->theme_options['mybooking_global_topbar_message'] = get_theme_mod( "mybooking_global_topbar_message", true );
 
 		  	// Header
 		  	$header_bg = get_theme_mod( 'mybooking_home_header_bg' );
 		  	$this->theme_options['mybooking_home_header_bg'] = $header_bg;
 
-
 		  	switch ( $header_bg ) {
-
 		  		case '0':
-				  	$header_image_bg = get_theme_mod( 'mybooking_home_header_image_bg' );
+				  	$header_image_bg = get_theme_mod( 'mybooking_home_header_image_bg', "" );
 						if ( empty( $header_image_bg ) ) {
 							$header_image_bg = get_template_directory_uri().'/images/bg-image.jpg';
 						}
@@ -309,7 +321,7 @@ class MyBookingCustomizer {
 		  			break;
 
 		  		case '1':
-						$header_video_bg = get_theme_mod( 'mybooking_home_header_video_bg' );
+						$header_video_bg = get_theme_mod( 'mybooking_home_header_video_bg', "" );
 						if ( empty( $header_video_bg ) ) {
 							$header_video_bg = get_template_directory_uri().'/images/video-portada.m4v';
 						} else {
@@ -320,7 +332,7 @@ class MyBookingCustomizer {
 
 		  		case '2':
 		  		  $header_carrousel_images = [];
-		  		  $header_carrousel_bg = get_theme_mod( 'mybooking_home_header_carrousel_bg' );
+		  		  $header_carrousel_bg = get_theme_mod( 'mybooking_home_header_carrousel_bg', "" );
 		  		  if ( is_array( $header_carrousel_bg ) && !empty( $header_carrousel_bg ) ) {
 	  		  		foreach ( $header_carrousel_bg as $carrousel_img ) {
 	  		  			$img_src = wp_get_attachment_image_src( $carrousel_img, 'full' );
@@ -1783,7 +1795,7 @@ class MyBookingCustomizer {
 	 			// Setting
 
 	 			$wp_customize->add_setting( 'mybooking_logo_height' , array(
-	 			    'default'   => '40px',
+	 			    'default'   => '40',
 	 			    'transport' => 'refresh'
 	 			) );
 
@@ -1791,12 +1803,16 @@ class MyBookingCustomizer {
 	 			$wp_customize->add_control( 'mybooking_logo_height',
 	 			   array(
 	 			      'label' => _x( 'Site\'s logo height', 'customizer_identity', 'mybooking' ),
-							'description' => _x( 'Put a value in pixels.', 'customizer_identity', 'mybooking' ),
-
-
+							'description' => _x( 'Value in pixels.', 'customizer_identity', 'mybooking' ),
 	 			      'section'  => 'title_tagline',
-	 			      'type'=> 'text',
+	 			      'type'=> 'number',
 	 			      'capability' => 'edit_theme_options',
+							'input_attrs' => array(
+							    'min' => 20,
+							    'max' => 150,
+							    'step' => 2,
+							  ),
+
 	 			   )
 	 			);
 
