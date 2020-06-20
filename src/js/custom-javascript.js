@@ -130,52 +130,42 @@ $(document).on("click", ".dropdown-menu li", function (e) {
 
 // MARGINS CALC FUNCTIONS add 40px extra if message is active
 
-$(document).ready(function () {
-  var bodyStyles = document.body.style;
+// $(document).ready(function () {
+//   var bodyStyles = document.body.style;
+//   // Home
+//   if ($(".topbar-message").length > 0) {
+//     bodyStyles.setProperty(
+//       "--sticky-navbar-margin:",
+//       "var(--sticky-navbar-margin-message-active)"
+//     );
+//   }
+// });
 
-  if ($(".topbar-message").length > 0) {
-    // Choose product and Complete summary sticky bar
-    bodyStyles.setProperty(
-      "--sticky-top-mobile-top-position",
-      "var(--sticky-top-mobile-top-position-message)"
-    );
-    // Card static
-    bodyStyles.setProperty(
-      "--card-static-margin-top-mobile",
-      "var(--card-static-margin-top-mobile-message)"
-    );
-    // Extras complete
-    bodyStyles.setProperty(
-      "--extras-margin-top-mobile",
-      "var(--extras-margin-top-mobile-message)"
-    );
-    // Product detail on complete and summary (tablet sizes)
-    bodyStyles.setProperty(
-      "--product-detail-margin-top-mobile",
-      "var(--product-detail-margin-top-mobile-message)"
-    );
-    // Summary reservation title
-    bodyStyles.setProperty(
-      "--summary-reservation-title-margin-top-mobile",
-      "var(--summary-reservation-title-margin-top-mobile-message)"
-    );
-  }
+// Avoid padding right when modal is open
+$(document).ready(function () {
+  $("body").on("show.bs.modal", function () {
+    $(".sticky-top").addClass("fixModal");
+  });
+  $("body").on("hidden.bs.modal", function () {
+    $(".sticky-top").removeClass("fixModal");
+  });
 });
 
 /* Sticky footer 
   Requirement: The footer must not have margin
 */
-function stickyFooter() {
-  var $copyWrapper = $(".copy-wrapper");
-  var copyWrapperHeight = $copyWrapper.outerHeight(true);
-  var $footer = $("#wrapper-footer");
-  var footerTop = $footer.position().top; // Footer top position
-  var footerHeight = $footer.outerHeight(false); //Footer FULL Height including paddings (false not to apply margin because we calculate it)
-  var windowHeight = $(window).height();
-  var documentHeight = $(document).height();
+$(document).ready(function () {
+  function stickyFooter() {
+    var $copyWrapper = $(".copy-wrapper");
+    var copyWrapperHeight = $copyWrapper.outerHeight(true);
+    var $footer = $("#wrapper-footer");
+    var footerTop = $footer.position().top; // Footer top position
+    var footerHeight = $footer.outerHeight(false); //Footer FULL Height including paddings (false not to apply margin because we calculate it)
+    var windowHeight = $(window).height();
+    var documentHeight = $(document).height();
 
-  var marginTop = windowHeight - footerTop - footerHeight - copyWrapperHeight;
-  /*
+    var marginTop = windowHeight - footerTop - footerHeight - copyWrapperHeight;
+    /*
     ----------------------------window         ------------------------window
     CONTENT                                    CONTENT
     ----------------------------footer         ..............................
@@ -188,27 +178,28 @@ function stickyFooter() {
     ----------------------------window        -------------------------window
    */
 
-  if (marginTop > 0) {
-    $footer.css({
-      "margin-top": marginTop + "px",
-    });
+    if (marginTop > 0) {
+      $footer.css({
+        "margin-top": marginTop + "px",
+      });
+    }
   }
-}
 
-$(window).bind("load", function (event) {
-  setTimeout(function () {
-    stickyFooter();
-  }, 3000);
-});
+  $(window).bind("load", function (event) {
+    setTimeout(function () {
+      stickyFooter();
+    }, 3000);
+  });
 
-$(window).bind("scroll", function (event) {
-  setTimeout(function () {
-    stickyFooter();
-  }, 3000);
-});
+  $(window).bind("scroll", function (event) {
+    setTimeout(function () {
+      stickyFooter();
+    }, 3000);
+  });
 
-$(window).bind("resize", function (event) {
-  setTimeout(function () {
-    stickyFooter();
-  }, 3000);
+  $(window).bind("resize", function (event) {
+    setTimeout(function () {
+      stickyFooter();
+    }, 3000);
+  });
 });

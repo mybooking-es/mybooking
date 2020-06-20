@@ -147,32 +147,54 @@
 <script type="text/tmpl" id="script_reservation_summary_sticky">
   <div class="complete-summary-sticky-wrapper">
       <div class="complete-summary-sticky">
-        <div class="complete-summary-left">
-          <div class="complete-summary-item">
-              <!-- primer bloque Recogida -->
-              <p class="complete-summary-text"><%=shopping_cart.pickup_place_customer_translation%></p>
-              <% if (shopping_cart.days > 0) { %>              
-              <p class="color-white"><%=shopping_cart.days%> <?php _e('día/s', 'mybooking') ?></p>
-              <% } else if (shopping_cart.hours > 0) { %>
-              <p class="color-white"><%=shopping_cart.hours%> <?php _e('hora/s', 'mybooking') ?></p> 
-              <% } %>
+        <div class="complete-summary-price-wrapper">
+          <div class="complete-summary-price">
+            <p class="total-title"><?php _e('Total', 'mybooking') ?></p>
+            <p class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
+            </p>
           </div>
-          <div class="complete-summary-item">
-            <p class="complete-summary-text"><?php _e('Total', 'mybooking') ?>:</p>
-            <p class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
+          <div class="see-summary-link">
+            <button data-toggle="modal" data-target="#viewReservationModal" class="see-summary-link">
+              resumen
+            </button>
           </div>
         </div>
-        <div class="complete-summary-right">
-          <!-- Button trigger modal -->
-          <div class="modify-button">
-            <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"><i
-                class="fa fa-edit"></i></button>
+        <div class="complete-summary-dates-wrapper">
+          <div class="flex-dates">
+            <div class="reservation-summary-item">
+              <!-- primer bloque Recogida -->
+              <p>
+                <span class="d-none d-lg-block mr-2 place-title"><?php _e('Recogida','mybooking') ?></span>
+                <span class="bold-on-mobile"><%=shopping_cart.pickup_place_customer_translation%></span>
+              </p>
+              <p><%=shopping_cart.date_from_short_format%> - <%=shopping_cart.time_from%></p>
+            </div>
+            <div class="reservation-summary-separator">
+              <i class="fa fa-long-arrow-right"></i>
+            </div>
+            <div class="reservation-summary-item">
+              <!-- Devolución (en móbil muestra lugar sólo cuando es diferente) -->
+              <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
+              <p>
+                <span class="d-none d-lg-block mr-2 place-title"><?php _e('Devolución','mybooking') ?></span>
+                <span class="bold-on-mobile"><%=shopping_cart.return_place_customer_translation%></span>
+              </p>
+              <% } else { %>
+              <p>
+                <span class="fw-700 d-none d-lg-block mr-2"><?php _e('Devolución','mybooking') ?></span>
+                <span
+                  class="bold-on-mobile d-none d-lg-block"><%=shopping_cart.return_place_customer_translation%></span>
+              </p>
+              <% } %>
+              <p><%=shopping_cart.date_to_short_format%> - <%=shopping_cart.time_to%></p>
+            </div>
           </div>
-          <!-- Button trigger modal -->
-          <div class="modify-button">
-            <button data-toggle="modal" data-target="#viewReservationModal">
-              <i class="fa fa-info-circle" style="margin-right:3px"></i>
-            </button>
+
+          <div class="modify-dates-button">
+            <div class="modify-button">
+              <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"><i
+                  class="fa fa-edit"></i></button>
+            </div>
           </div>
         </div>
       </div>
@@ -181,7 +203,7 @@
 
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
-  <div class="product-detail-container d-none d-md-flex">
+  <div class="product-detail-container d-none d--flex">
     <div class="product-detail-content">
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
       <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>

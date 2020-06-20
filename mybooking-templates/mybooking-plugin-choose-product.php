@@ -11,7 +11,7 @@
 ?>
 <?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
 
-<div class="reservation-step">
+<div class="reservation-step reservation-step-choose-product">
   <!-- Reservation : Pickup/Return information -->
   <div class="">
     <div id="reservation_detail" class="sticky-top"></div>
@@ -20,7 +20,7 @@
 
   <!-- Modify reservation -->
   <?php if ( $args['selector_in_process'] != 'wizard' ) { ?>
-    <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
+  <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
   <?php } ?>
 
 </div>

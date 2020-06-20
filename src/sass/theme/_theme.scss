@@ -1,19 +1,6 @@
 // Import theme parts
 @import "parts/index";
-// Margin top for summary title
-@media (max-width: 991.98px) {
-  .summary-reservation-title {
-    margin-top: var(--summary-reservation-title-margin-top-mobile);
-  }
-}
-// Margin top required
-// El 53 viene de la altura del topbar 37 + los padings del navbar 16
-// topbar = 37px + logo height = variable + paddings navbar = 16px + 20px extra
-@media (max-width: 991.98px) {
-  .margin-top-required {
-    margin-top: calc(var(--custom-logo-height) + 53px + 20px);
-  }
-}
+
 .full-height {
   height: 100%;
 }
@@ -123,4 +110,9 @@ a.btn.btn-secondary.mybooking-read-more-link {
 
 #wrapper-footer {
   width: 100%;
+}
+
+.fixModal {
+  padding-right: 0 !important;
+  margin-right: 0 !important;
 }

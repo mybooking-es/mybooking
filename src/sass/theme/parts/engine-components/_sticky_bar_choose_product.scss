@@ -6,7 +6,11 @@
   text-align: center;
   background-color: var(--sticky-bar-bg);
 }
-
+// sticky bar choose product & complete
+.sticky-top {
+  width: 100%;
+  z-index: 25;
+}
 .reservation-summary-sticky {
   margin: 0 auto;
   max-width: 1140px;
@@ -14,12 +18,14 @@
   padding: 0.6rem 1rem;
   justify-content: space-around;
   .modify-button {
+    display: flex;
+    align-items: center;
     button {
       background-color: transparent;
-      margin-left: 3rem;
+      margin-left: 1rem;
     }
     i {
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: var(--sticky-bar-icons-color);
       transition: 0.2s ease-in-out;
       &:hover {
@@ -34,16 +40,21 @@
   align-items: flex-start;
   justify-content: flex-end;
   flex-direction: column;
-
   p {
+    font-weight: 300;
     text-align: left;
     color: var(--sticky-bar-color);
     margin: 0;
     padding: 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    text-transform: uppercase;
     &:first-child {
       margin-right: 1rem;
     }
+  }
+  .place-title {
+    color: var(--gray-500);
+    font-weight: 700;
   }
 }
 
@@ -58,18 +69,13 @@
   }
 }
 
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {
-  .sticky-top {
-    width: 100%;
-    position: fixed;
-    top: var(--sticky-top-mobile-top-position);
-    z-index: 25;
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .modify-button {
+    button {
+      margin-left: 3rem;
+    }
   }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
   .reservation-summary-item {
     align-items: center;
     flex-direction: row;
@@ -79,9 +85,8 @@
   }
 }
 
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .bold-on-mobile {
-    font-weight: 800;
+    font-weight: 700;
   }
 }

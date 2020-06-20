@@ -17,7 +17,7 @@
         <div class="reservation-summary-item">
           <!-- primer bloque Recogida -->
           <p>
-            <span class="fw-700 d-none d-md-block mr-2"><?php _e('Recogida','mybooking') ?></span>
+            <span class="d-none d-lg-block mr-2 place-title"><?php _e('Recogida','mybooking') ?></span>
             <span class="bold-on-mobile"><%=shopping_cart.pickup_place_customer_translation%></span>
           </p>
           <p><%=shopping_cart.date_from_short_format%> - <%=shopping_cart.time_from%></p>
@@ -29,13 +29,13 @@
           <!-- Devolución (en móbil muestra lugar sólo cuando es diferente) -->
           <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
             <p>
-              <span class="fw-700 d-none d-md-block mr-2"><?php _e('Devolución','mybooking') ?></span>
+              <span class="d-none d-lg-block mr-2 place-title"><?php _e('Devolución','mybooking') ?></span>
               <span class="bold-on-mobile"><%=shopping_cart.return_place_customer_translation%></span>
             </p>
           <% } else { %>
             <p>
-              <span class="fw-700 d-none d-md-block mr-2"><?php _e('Devolución','mybooking') ?></span>
-              <span class="bold-on-mobile d-none d-md-block"><%=shopping_cart.return_place_customer_translation%></span>
+              <span class="fw-700 d-none d-lg-block mr-2"><?php _e('Devolución','mybooking') ?></span>
+              <span class="bold-on-mobile d-none d-lg-block"><%=shopping_cart.return_place_customer_translation%></span>
             </p>
           <% } %>
           <p><%=shopping_cart.date_to_short_format%> - <%=shopping_cart.time_to%></p>

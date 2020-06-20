@@ -9,11 +9,6 @@
   z-index: 30;
 }
 
-// Controls behaviour when is set to overlap on home
-.home .nav-container-absolute {
-  position: absolute;
-}
-
 // Navbar apperance
 .navbar {
   background: var(--navbar-bg);
@@ -144,7 +139,12 @@ a.dropdown-item {
   justify-content: space-between;
 }
 
+// Controls behaviour when is set to overlap on home
+
 @media (min-width: 992px) {
+  .home .nav-container-absolute {
+    position: absolute;
+  }
   .navbar {
     box-shadow: none;
   }
@@ -155,11 +155,7 @@ a.dropdown-item {
 @media (max-width: 991.98px) {
   .navbar-container {
     width: 100%;
-    position: fixed;
     top: 0;
     z-index: 30;
-  }
-  .home .nav-container-absolute {
-    position: fixed;
   }
 }

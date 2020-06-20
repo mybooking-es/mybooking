@@ -11,7 +11,7 @@
 ?>
 <?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
 
-<div class="reservation-step custom-form">
+<div class="reservation-step reservation-step-summary custom-form">
   <div class="bg-gray-100">
     <div class="container">
       <div class="row">

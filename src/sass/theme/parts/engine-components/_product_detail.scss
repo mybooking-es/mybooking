@@ -1,6 +1,5 @@
 // Product detail for summary
 .product-detail-container {
-  margin-top: var(--product-detail-margin-top-mobile);
   padding: 30px;
   background: var(--product-detail-bg-color);
   display: flex;
@@ -41,18 +40,4 @@
   line-height: 1;
   font-weight: 900;
   color: var(--product-detail-group-name);
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .summary-detail .product-detail-container {
-    margin-top: 0;
-  }
-}
-// Unlike summary, the complete page has a sticky bar and  needs the margin-top on tablets
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .product-detail-container {
-    margin-top: 0;
-  }
 }

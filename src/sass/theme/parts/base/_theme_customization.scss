@@ -55,7 +55,7 @@
   --home-header-color: var(--white);
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
-  --home-header-top: calc(37px + 1rem + var(--custom-logo-height));
+  //--home-header-top: calc(37px + 1rem + var(--custom-logo-height));
   --home-header-widget-title: #fff;
   --home-header-widget-title-align: left;
   --home-header-widget-text: #fff;
@@ -154,10 +154,11 @@
   --sticky-bar-bg: var(--gray-900);
   --sticky-bar-icons-color: var(--brand-primary);
   --sticky-bar-icons-color-hover: var(--brand-primary-light);
-  --sticky-bar-color: var(--gray-400);
+  --sticky-bar-color: var(--white);
   --sticky-bar-arrow-icon-color: var(--gray-400);
   --sticky-bar-price-color: var(--white);
   // Card static
+  --card-page-bg-body: var(--gray-200);
   --card-image-bg-color: var(--white);
   --card-body-bg-color: var(--white);
   --card-info-icon-color: var(--gray-300);
