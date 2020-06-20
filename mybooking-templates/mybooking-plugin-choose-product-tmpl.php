@@ -34,7 +34,7 @@
             </p>
           <% } else { %>
             <p>
-              <span class="fw-700 d-none d-lg-block mr-2"><?php _e('Devolución','mybooking') ?></span>
+              <span class="d-none d-lg-block mr-2 place-title"><?php _e('Devolución','mybooking') ?></span>
               <span class="bold-on-mobile d-none d-lg-block"><%=shopping_cart.return_place_customer_translation%></span>
             </p>
           <% } %>
