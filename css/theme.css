@@ -24828,12 +24828,12 @@ select:disabled {
   --topbar-color: var(--white);
   --topbar-link-color: var(--white);
   --topbar-link-color-hover: var(--gray-50);
-  --navbar-bg: var(--brand-primary);
+  --navbar-bg: var(--white);
   --navbar-box-shadow: none;
-  --navbar-link-color: var(--white);
-  --navbar-link-color-hover: var(--white);
+  --navbar-link-color: var(--black);
+  --navbar-link-color-hover: var(--brand-primary);
   --navbar-link-hover-opacity: 0.5;
-  --navbar-link-active: var(--gray-900);
+  --navbar-link-active: var(--brand-primary);
   --navbar-dropdown-item-color: var(--gray-900);
   --navbar-dropdown-item-active-bg: var(--brand-secondary);
   --navbar-link-collapse: var(--white);
@@ -24850,12 +24850,12 @@ select:disabled {
   --home-header-widget-text: #fff;
   --home-header-widget-text-align: left;
   --home-header-widget-link: #fff;
-  --footer-bg: var(--gray-800);
-  --footer-color: var(--gray-50);
-  --footer-color-link: var(--brand-primary);
-  --footer-color-link-hover: var(--brand-primary-light);
+  --footer-bg: var(--gray-50);
+  --footer-color: var(--black);
+  --footer-color-link: var(--black);
+  --footer-color-link-hover: var(--brand-primary);
   --footer-logo-width: auto;
-  --footer-logo-height: 30px;
+  --footer-logo-height: 40px;
   --credits-bg: var(--gray-900);
   --credits-color: var(--gray-100);
   --credits-color-link: var(--color-link);
@@ -25540,7 +25540,7 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     min-width: 960px !important;
-    margin-top: 50px !important; }
+    /*margin-top: 50px !important;*/ }
   .home-header_content_container_sticky {
     -webkit-transform: none !important;
             transform: none !important; } }
@@ -25922,10 +25922,7 @@ button.navbar-toggler:focus {
     margin-top: var(--toggler-icon-mt); }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: var(--navbar-link-color);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600; }
+  color: var(--navbar-link-color); }
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {

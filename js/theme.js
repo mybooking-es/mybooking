@@ -10014,21 +10014,13 @@ $(document).ready(function () {
     }
   }
 
-  $(window).bind("load", function (event) {
-    setTimeout(function () {
-      stickyFooter();
-    }, 3000);
-  });
+  stickyFooter();
 
   $(window).bind("scroll", function (event) {
-    setTimeout(function () {
       stickyFooter();
-    }, 3000);
   });
 
   $(window).bind("resize", function (event) {
-    setTimeout(function () {
       stickyFooter();
-    }, 3000);
   });
 });

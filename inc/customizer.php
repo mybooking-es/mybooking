@@ -158,7 +158,6 @@ class MyBookingCustomizer {
 
     	$body_bg = get_theme_mod( 'mybooking_body_bg', '#FFFFFF' );
     	$body_color = get_theme_mod( 'mybooking_body_color', '#212121' );
-
 			$logo_height = get_theme_mod( 'mybooking_logo_height', '40' );
 
     	// If advaced colors is active, load extended values for topbar/navbar/header/footer
@@ -175,10 +174,10 @@ class MyBookingCustomizer {
 				$topbar_message_link = get_theme_mod( 'mybooking_topbar_message_link', '#FAFAFA' );
 				$topbar_message_hover = get_theme_mod( 'mybooking_topbar_message_link_hover', '#FAFAFA' );
 				// NavBar
-	    	$navbar_bg = get_theme_mod( 'mybooking_navbar_bg', '#2193F2');
-	    	$navbar_link_color = get_theme_mod( 'mybooking_navbar_link_color', '#FFFFFF' );
-	    	$navbar_link_color_hover = get_theme_mod( 'mybooking_navbar_link_hover_color', '#FFFFFF' );
-	    	$navbar_link_active = get_theme_mod( 'mybooking_navbar_link_active', '#212121' );
+	    	$navbar_bg = get_theme_mod( 'mybooking_navbar_bg', '#ffffff');
+	    	$navbar_link_color = get_theme_mod( 'mybooking_navbar_link_color', '#000000' );
+	    	$navbar_link_color_hover = get_theme_mod( 'mybooking_navbar_link_hover_color', '#1e73be' );
+	    	$navbar_link_active = get_theme_mod( 'mybooking_navbar_link_active', '#1e73be' );
 	    	$navbar_dropdown_item_color = get_theme_mod( 'mybooking_navbar_dropdown_item_color', '#212121' );
 	    	$navbar_dropdown_item_active_color = get_theme_mod( 'mybooking_navbar_dropdown_item_active_color', '#424242' );
 	    	$navbar_link_collapse = get_theme_mod( 'mybooking_navbar_link_collapse', '#212121' );
@@ -196,8 +195,9 @@ class MyBookingCustomizer {
 				$sticky_selector_labels = get_theme_mod( 'mybooking_sticky_selector_labels', '#212121' );
 				// Footer
 				$footer_bg = get_theme_mod( 'mybooking_footer_bg', '#424242' );
-				$footer_link_color = get_theme_mod( 'footer_link_color', '#2193F2' );
-				$footer_link_hover_color = get_theme_mod( 'footer_link_hover_color', '#FFFFFF' );
+				$footer_color = get_theme_mod( 'mybooking_footer_color', '#9e9e9e' );
+				$footer_link_color = get_theme_mod( 'mybooking_footer_link_color', '#2193F2' );
+				$footer_link_hover_color = get_theme_mod( 'mybooking_footer_link_hover_color', '#FFFFFF' );
 			}
 
 			// == Build the css-properties
@@ -266,6 +266,7 @@ class MyBookingCustomizer {
 				$custom_css.= "--selector-sticky-labels-color: ".$sticky_selector_labels.';';
 				// Footer
 				$custom_css.= "--footer-bg: ".$footer_bg.';';
+				$custom_css.= "--footer-color: ".$footer_color.';';
 				$custom_css.= "--footer-color-link: ".$footer_link_color.';';
 				$custom_css.= "--footer-color-link-hover: ".$footer_link_hover_color.';';
 			}
@@ -972,7 +973,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_bg' , array(
-			    'default'   => '#2193F2',
+			    'default'   => '#ffffff',
 			    'transport' => 'refresh'
 			) );
 
@@ -989,7 +990,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_link_color' , array(
-			    'default'   => '#ffffff',
+			    'default'   => '#000000',
 			    'transport' => 'refresh'
 			) );
 
@@ -1005,7 +1006,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_link_hover_color' , array(
-			    'default'   => '#ffffff',
+			    'default'   => '#1e73be',
 			    'transport' => 'refresh'
 			) );
 
@@ -1021,7 +1022,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_link_active' , array(
-			    'default'   => '#212121',
+			    'default'   => '#1e73be',
 			    'transport' => 'refresh'
 			) );
 
@@ -1434,6 +1435,21 @@ class MyBookingCustomizer {
 						'settings'   => 'mybooking_footer_bg'
 			) ) );
 
+			// -- Footer Color
+
+			// Setting
+			$wp_customize->add_setting( 'mybooking_footer_color' , array(
+			    'default'   => '#9e9e9e',
+			    'transport' => 'refresh'
+			) );
+
+			// Control
+			$wp_customize->add_control( new Customizer_Alpha_Color_Control(
+					$wp_customize, 'footer_color', array(
+						'label'      => _x( 'Footer color', 'customizer_footer', 'mybooking' ),
+						'section'    => 'mybooking_theme_footer_options',
+						'settings'   => 'mybooking_footer_color'
+			) ) );
 
 			// -- Footer Link color
 

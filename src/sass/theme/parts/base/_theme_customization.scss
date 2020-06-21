@@ -35,12 +35,12 @@
   --topbar-link-color: var(--white);
   --topbar-link-color-hover: var(--gray-50);
   // Navbar
-  --navbar-bg: var(--brand-primary);
+  --navbar-bg: var(--white);
   --navbar-box-shadow: none;
-  --navbar-link-color: var(--white);
-  --navbar-link-color-hover: var(--white);
+  --navbar-link-color: var(--black);
+  --navbar-link-color-hover: var(--brand-primary);
   --navbar-link-hover-opacity: 0.5;
-  --navbar-link-active: var(--gray-900);
+  --navbar-link-active: var(--brand-primary);
   --navbar-dropdown-item-color: var(--gray-900);
   --navbar-dropdown-item-active-bg: var(--brand-secondary);
   --navbar-link-collapse: var(--white);
@@ -62,12 +62,12 @@
   --home-header-widget-text-align: left;
   --home-header-widget-link: #fff;
   // Footer
-  --footer-bg: var(--gray-800);
-  --footer-color: var(--gray-50);
-  --footer-color-link: var(--brand-primary);
-  --footer-color-link-hover: var(--brand-primary-light);
+  --footer-bg: var(--gray-50);
+  --footer-color: var(--black);
+  --footer-color-link: var(--black);
+  --footer-color-link-hover: var(--brand-primary);
   --footer-logo-width: auto;
-  --footer-logo-height: 30px;
+  --footer-logo-height: 40px;
   // Credits
   --credits-bg: var(--gray-900);
   --credits-color: var(--gray-100);
