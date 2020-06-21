@@ -167,7 +167,7 @@
                 <span class="d-none d-lg-block mr-2 place-title"><?php _e('Recogida','mybooking') ?></span>
                 <span class="bold-on-mobile"><%=shopping_cart.pickup_place_customer_translation%></span>
               </p>
-              <p><%=shopping_cart.date_from_short_format%> - <%=shopping_cart.time_from%></p>
+              <p><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></p>
             </div>
             <div class="reservation-summary-separator">
               <i class="fa fa-long-arrow-right"></i>
@@ -186,7 +186,7 @@
                   class="bold-on-mobile d-none d-lg-block"><%=shopping_cart.return_place_customer_translation%></span>
               </p>
               <% } %>
-              <p><%=shopping_cart.date_to_short_format%> - <%=shopping_cart.time_to%></p>
+              <p><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></p>
             </div>
           </div>
 

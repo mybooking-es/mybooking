@@ -24697,9 +24697,6 @@ button,
 .flex-form-group-wrapper input[type="text"] {
   border: 0; }
 
-.form-group textarea {
-  background-color: var(--textarea-bg); }
-
 .form-group select {
   border: 1px solid var(--form-control-border-color);
   border-radius: var(--bootstrap-form-control-border-radius);
@@ -26877,16 +26874,6 @@ div#another_pickup_place_group,
 div#another_return_place_group {
   height: 48px; }
 
-.modal .custom-form input[type="text"],
-.custom-form textarea,
-.modal .flex-form-box .flex-form-item,
-.modal .custom-form .ui-autocomplete-input,
-.custom-form .uneditable-input,
-.custom-form input[type="password"],
-.custom-form textarea {
-  border: none !important;
-  border-radius: 0 !important; }
-
 .modal .flex-form {
   background-color: var(--modal-selector-bg); }
   .modal .flex-form label {
@@ -27977,7 +27964,7 @@ a.magic-button.btn {
 
 .complete-summary-item_price {
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   color: var(--sticky-bar-price-color);
   line-height: 0.8; }
 
