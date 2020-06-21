@@ -203,7 +203,7 @@
 
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
-  <div class="product-detail-container d-none d--flex">
+  <div class="product-detail-container d--flex">
     <div class="product-detail-content">
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
       <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
@@ -217,12 +217,12 @@
       <% } %>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>
-        <li><%=shopping_cart.date_from_full_format%> / <%=shopping_cart.time_from%></li>
+        <li><%=shopping_cart.date_from_full_format%> <%=shopping_cart.time_from%></li>
         <li><%=shopping_cart.pickup_place_customer_translation%></li>
       </ul>
       <h5 class="mt-3"><?php _e('Devolución', 'mybooking') ?></h5>
       <ul>
-        <li><%=shopping_cart.date_to_full_format%> / <%=shopping_cart.time_to%></li>
+        <li><%=shopping_cart.date_to_full_format%> <%=shopping_cart.time_to%></li>
         <li><%=shopping_cart.return_place_customer_translation%></li>
       </ul>
     </div>
