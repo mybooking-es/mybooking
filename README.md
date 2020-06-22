@@ -210,3 +210,6 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 
 ### 0.9.5
 - Woocommerce basic support
+
+### 0.9.6
+- Gutenber support for blocks and editor
