@@ -1,9 +1,7 @@
 //==============================================
 // Engine components/ extras cards
 //==============================================
-.extras {
-  margin-top: var(--extras-margin-top-mobile);
-}
+
 .extras-container {
   display: flex;
   flex-wrap: wrap;
@@ -62,9 +60,6 @@
   }
   .extra-wrapper {
     width: calc(50% - 20px);
-  }
-  .extras {
-    margin-top: 0;
   }
 }
 // Extra small devices (portrait phones, less than 576px)

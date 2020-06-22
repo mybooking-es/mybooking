@@ -32,7 +32,7 @@
 .home-header a {
   color: var(--home-header-widget-link);
   &:hover {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -52,9 +52,7 @@
   width: 100%;
 }
 
-.nav-container-absolute ~ .home-header {
-  padding-top: var(--home-header-top);
-}
+
 
 @media (min-width: 992px) {
   .nav-container-absolute ~ .home-header {
@@ -127,6 +125,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     min-width: 960px !important;
+    /*margin-top: 50px !important;*/
   }
   .home-header_content_container_sticky {
     transform: none !important;

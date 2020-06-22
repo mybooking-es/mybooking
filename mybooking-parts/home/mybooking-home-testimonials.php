@@ -13,8 +13,8 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php $testimonial_carousel_visible = get_theme_mod( "mybooking_home_testimonial_carousel_visibility" );
-if ($testimonial_carousel_visible == 1) { ?>
+<?php $testimonial_carousel_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_testimonial_carousel_visibility" );
+if ($testimonial_carousel_visible) { ?>
 <div class="mybooking-home_testimonials">
   <div class="container -carrusel-testimonials owl-theme">
 

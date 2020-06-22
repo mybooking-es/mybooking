@@ -25,16 +25,18 @@ body {
   background-color: var(--body-bg);
   color: var(--body-color);
 }
+
 // Avoid issues when showing modals
 body.modal-open {
   height: 100vh;
   overflow-y: hidden;
 }
-@media (max-width: 991.98px) {
-  body.modal-open .navbar-container {
-    padding-right: 15px;
-  }
-}
+// Remove
+// @media (max-width: 991.98px) {
+//   body.modal-open .navbar-container {
+//     padding-right: 15px;
+//   }
+// }
 // Typo
 h1,
 h2,

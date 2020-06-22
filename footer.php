@@ -16,23 +16,23 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'mybooking_container_type' );
 ?>
 
-			<?php $footer_layout = get_theme_mod( 'mybooking_global_footer_layout' );
+<?php $footer_layout = get_theme_mod( 'mybooking_global_footer_layout' );
 				if ( $footer_layout == 0 ) { ?>
-					<div class="footer" id="wrapper-footer">
-						<div class="<?php echo esc_attr( $container ); ?>">
-							<?php get_template_part('mybooking-parts/mybooking-footer');?>
-						</div>
-					</div>
-			<?php } ?>
+<footer class="footer" id="wrapper-footer">
+  <div class="<?php echo esc_attr( $container ); ?>">
+    <?php get_template_part('mybooking-parts/mybooking-footer');?>
+</footer>
+</div>
+<?php } ?>
 
-			<?php get_template_part( 'mybooking-parts/footer/mybooking-footer-credits' ); ?>
-		</div>
+<?php get_template_part( 'mybooking-parts/footer/mybooking-footer-credits' ); ?>
+</div>
 
-		<?php get_template_part( 'mybooking-parts/site/mybooking-google-analytics' ) ?>
+<?php get_template_part( 'mybooking-parts/site/mybooking-google-analytics' ) ?>
 
-		<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 
-		<?php
+<?php
 
 			/**
 			*		Promotions modal loader
@@ -50,7 +50,8 @@ $container = get_theme_mod( 'mybooking_container_type' );
 			}
 		 ?>
 
-		<!-- Back top link -->
-		<a href="#0" class="cd-top">Top</a>
-	</body>
+<!-- Back top link -->
+<a href="#0" class="cd-top">Top</a>
+</body>
+
 </html>

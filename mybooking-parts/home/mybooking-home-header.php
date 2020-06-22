@@ -34,24 +34,24 @@ defined( 'ABSPATH' ) || exit;
   </div>
 </div>
 
-<?php $news_visible = get_theme_mod("mybooking_home_header_visibility");
-if ($news_visible != '') { ?>
+<?php $home_header_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_header_visibility" );
+if ($home_header_visible) { ?>
 
   <div class="home-header">
 
     <!-- Backgrounds -->
 
-    <?php $options_header_background = MyBookingCustomizer::getInstance()->get_theme_options()['mybooking_home_header_bg'];
+    <?php $options_header_background = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_bg' );
     if ( $options_header_background == 0 ) { ?>
 
     <!-- Image background -->
-    <?php $image_header = MyBookingCustomizer::getInstance()->get_theme_options()['mybooking_home_header_image_bg']; ?>
+    <?php $image_header = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_image_bg' ); ?>
     <img class="home-header_background home-header_background-img" src="<?php echo $image_header ?>">
 
     <?php } elseif ( $options_header_background == 1 ) { ?>
 
     <!-- Video background -->
-    <?php $video_header = MyBookingCustomizer::getInstance()->get_theme_options()['mybooking_home_header_video_bg']; ?>
+    <?php $video_header = MyBookingCustomizer::getInstance()->get_theme_options( 'mybooking_home_header_video_bg' ); ?>
     <div class="home-header_background-video-container">
       <video class="home-header_background-video" autoplay loop muted poster="<?php echo $image_header ?>">
         <source src="<?php echo $video_header ?>">
@@ -62,7 +62,7 @@ if ($news_visible != '') { ?>
 
     <!-- Carrousel backgrond -->
     <div class="home-header_background home-header_background_carrusel portada-carrusel -carrusel-portada">
-      <?php $carousel_items = MyBookingCustomizer::getInstance()->get_theme_options()['mybooking_home_header_video_bg']; ?>
+      <?php $carousel_items = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_video_bg' ); ?>
       <?php foreach($carousel_items as $carousel_item) :  ?>
       <div class="carrusel-item">
         <img src="<?php echo $carousel_item?>">
@@ -77,7 +77,7 @@ if ($news_visible != '') { ?>
     <div id="home-header_content_container" class="container home-header_content_container">
       <div class="row justify-content-center">
 
-        <?php $options_header_layout = get_theme_mod( 'mybooking_home_header_layout' );
+        <?php $options_header_layout = get_theme_mod( 'mybooking_home_header_layout', 0 );
         if ( $options_header_layout == 0 ) { ?>
 
           <div class="home-header_content home-left col-12 col-lg-6">

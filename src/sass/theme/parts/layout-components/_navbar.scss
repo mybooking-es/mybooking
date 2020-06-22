@@ -9,11 +9,6 @@
   z-index: 30;
 }
 
-// Controls behaviour when is set to overlap on home
-.home .nav-container-absolute {
-  position: absolute;
-}
-
 // Navbar apperance
 .navbar {
   background: var(--navbar-bg);
@@ -28,6 +23,7 @@
   height: var(--custom-logo-height);
   overflow: hidden;
   object-fit: contain;
+  width: auto;
 }
 
 // Toggler
@@ -50,9 +46,9 @@ button.navbar-toggler:focus {
 // All menu items
 .navbar-dark .navbar-nav .nav-link {
   color: var(--navbar-link-color);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
+//  text-transform: uppercase;
+//  letter-spacing: 1px;
+//  font-weight: 600;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
@@ -143,7 +139,12 @@ a.dropdown-item {
   justify-content: space-between;
 }
 
+// Controls behaviour when is set to overlap on home
+
 @media (min-width: 992px) {
+  .home .nav-container-absolute {
+    position: absolute;
+  }
   .navbar {
     box-shadow: none;
   }
@@ -154,11 +155,7 @@ a.dropdown-item {
 @media (max-width: 991.98px) {
   .navbar-container {
     width: 100%;
-    position: fixed;
     top: 0;
     z-index: 30;
-  }
-  .home .nav-container-absolute {
-    position: fixed;
   }
 }

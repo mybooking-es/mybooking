@@ -128,7 +128,6 @@ defined( 'ABSPATH' ) || exit;
         <?php } ?>
 
       </ul>
-      <br>
       <p class="info_bloc">
 
         <?php $company_phone = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_phone");

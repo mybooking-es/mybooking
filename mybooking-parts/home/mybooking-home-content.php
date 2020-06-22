@@ -13,8 +13,8 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php $content_visible = get_theme_mod("mybooking_home_content_visibility");
-if ($content_visible == 1) { ?>
+<?php $content_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_content_visibility" );
+if ($content_visible) { ?>
 
   <div class="container page_content">
     <div class="row">

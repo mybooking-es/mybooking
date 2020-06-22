@@ -35,12 +35,12 @@
   --topbar-link-color: var(--white);
   --topbar-link-color-hover: var(--gray-50);
   // Navbar
-  --navbar-bg: var(--brand-primary);
+  --navbar-bg: var(--white);
   --navbar-box-shadow: none;
-  --navbar-link-color: var(--white);
-  --navbar-link-color-hover: var(--white);
+  --navbar-link-color: var(--black);
+  --navbar-link-color-hover: var(--brand-primary);
   --navbar-link-hover-opacity: 0.5;
-  --navbar-link-active: var(--gray-900);
+  --navbar-link-active: var(--brand-primary);
   --navbar-dropdown-item-color: var(--gray-900);
   --navbar-dropdown-item-active-bg: var(--brand-secondary);
   --navbar-link-collapse: var(--white);
@@ -55,19 +55,19 @@
   --home-header-color: var(--white);
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
-  --home-header-top: calc(37px + 1rem + var(--custom-logo-height));
+  //--home-header-top: calc(37px + 1rem + var(--custom-logo-height));
   --home-header-widget-title: #fff;
   --home-header-widget-title-align: left;
   --home-header-widget-text: #fff;
   --home-header-widget-text-align: left;
-  --home-header-widget-link: #FFF;
+  --home-header-widget-link: #fff;
   // Footer
-  --footer-bg: var(--gray-800);
-  --footer-color: var(--gray-50);
-  --footer-color-link: var(--brand-primary);
-  --footer-color-link-hover: var(--brand-primary-light);
+  --footer-bg: var(--gray-50);
+  --footer-color: var(--black);
+  --footer-color-link: var(--black);
+  --footer-color-link-hover: var(--brand-primary);
   --footer-logo-width: auto;
-  --footer-logo-height: 30px;
+  --footer-logo-height: 40px;
   // Credits
   --credits-bg: var(--gray-900);
   --credits-color: var(--gray-100);
@@ -88,6 +88,8 @@
   --selector-btn-hover-bg-color: var(--brand-primary-dark);
   --selector-btn-hover-border-color: var(--brand-primary-dark);
   --selector-btn-hover-color: var(--white);
+  // Selector search btn when is sticky
+  --selector-btn-sticky-bg-color: var(--brand-primary);
   // Selector labels
   --selector-label-color: var(--body-color);
   // Selector sticky
@@ -97,9 +99,15 @@
   --selector-btn-sticky-bg-color: transparent;
   --selector-btn-sticky-border-color: var(--white);
   --selector-btn-sticky-color: var(--white);
-  --selector-btn-sticky-hover-bg-color: var(--prbrand-primary-dark);
+  --selector-btn-sticky-hover-bg-color: var(--brand-primary-dark);
   --selector-btn-sticky-hover-border-color: var(--brand-primary-dark);
   --selector-btn-sticky-hover-color: var(--white);
+  // Selector labels
+  --selector-label-color: var(--body-color);
+  // Selector sticky
+  --selector-sticky-bg: var(--brand-primary);
+  --selector-sticky-labels-color: var(--white);
+
   // Selector inside modal
   --modal-selector-label-color: var(--body-color);
   --modal-selector-bg: var(--gray-200);
@@ -146,10 +154,11 @@
   --sticky-bar-bg: var(--gray-900);
   --sticky-bar-icons-color: var(--brand-primary);
   --sticky-bar-icons-color-hover: var(--brand-primary-light);
-  --sticky-bar-color: var(--gray-400);
+  --sticky-bar-color: var(--white);
   --sticky-bar-arrow-icon-color: var(--gray-400);
   --sticky-bar-price-color: var(--white);
   // Card static
+  --card-page-bg-body: var(--gray-200);
   --card-image-bg-color: var(--white);
   --card-body-bg-color: var(--white);
   --card-info-icon-color: var(--gray-300);

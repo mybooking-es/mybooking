@@ -15,8 +15,8 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'mybooking_container_type' );
 ?>
 
-<?php $widgets_visible = get_theme_mod( "mybooking_home_content_widgets_visibility" );
-if ($widgets_visible == 1) { ?>
+<?php $widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_content_widgets_visibility" );
+if ($widgets_visible) { ?>
 
   <div class="home-widgets">
     <div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">

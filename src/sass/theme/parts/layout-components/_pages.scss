@@ -33,7 +33,7 @@
 
 // Mybooking Pages
 .mybooking_page {
-  background-color: #FFF;
+  background-color: #fff;
   z-index: 300;
   margin-top: 65vh;
 }
@@ -51,21 +51,21 @@
 .page_header img {
   position: relative;
   bottom: 10vh;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .mybooking_page .entry-title {
   margin-top: -50vh;
-  color: #FFF;
+  color: #fff;
 }
 
 .page_sidebar {
   float: right;
   padding: 2rem;
-  background-color: #FFF;
+  background-color: #fff;
 
   margin-top: -30vh;
-  box-shadow: rgba(0,0,0,0.25) 0px 3px 11px 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 11px 0;
 }
 
 // @media (max-width: 575.98px) {
@@ -97,7 +97,7 @@
 
   .col-md-5.page_sidebar {
     display: block;
-    max-width: 100%!important;
+    max-width: 100% !important;
     float: none;
   }
 
