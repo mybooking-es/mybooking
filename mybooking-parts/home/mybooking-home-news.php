@@ -53,7 +53,7 @@ if ($news_visible) { ?>
                 <?php echo get_the_excerpt( $news_item ); ?>
                 <p>
                   <a class="btn btn-secondary mybooking-read-more-link" href="<?php echo esc_url( get_permalink( $news_item ) ) ?>">
-                    <? echo _x( 'Leer', 'home-news-button','mybooking' ) ?>
+                    <?php echo _x( 'Leer', 'home-news-button','mybooking' ) ?>
                   </a>
                 </p>
               </div>
