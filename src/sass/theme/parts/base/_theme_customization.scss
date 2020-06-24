@@ -1,30 +1,8 @@
-/*
-these properties do not need to be edited */
-:root {
-  // Additional UI colors
-  --white: #ffffff;
-  --black: #000000;
-  --info: #6ec3ff;
-  --success: #3dd992;
-  --warning: #ffb74d;
-  --error: #e6546e;
-  //  Gray  Colors
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #eeeeee;
-  --gray-300: #e0e0e0;
-  --gray-400: #bdbdbd;
-  --gray-500: #9e9e9e;
-  --gray-600: #757575;
-  --gray-700: #616161;
-  --gray-800: #424242;
-  --gray-900: #212121;
-}
-
 // ==========================================================================
 // MYBOOKING THEME CUSTOMIZATION VARIABLES
 // ==========================================================================
 
+// BASIC CUSTOMIZATION
 :root {
   // Theme colors
   --brand-primary: #2194f3;
@@ -46,18 +24,16 @@ these properties do not need to be edited */
   --color-link-active: var(--brand-primary-dark);
   --color-link-visited: var(--brand-primary-dark);
   // Topbar message
-  --topbar-message-bg: var(--gray-400);
-  --topbar-message-text: var(--body-color);
+  --topbar-message-bg: var(--brand-secondary-dark);
+  --topbar-message-text: var(--white);
   --topbar-message-link: var(--white);
   --topbar-message-link-hover: var(--gray-50);
   // Topbar
   --home-topbar-bg: rgba(66, 66, 66, 0.5);
-  --topbar-bg: var(--white);
-  --topbar-color: var(--body-color);
-  --topbar-link-color: var(--gray-900);
-  --topbar-link-color-hover: var(--gray-500);
-  --topbar-icon-color: var(--gray-900);
-
+  --topbar-bg: var(--gray-900);
+  --topbar-color: var(--white);
+  --topbar-link-color: var(--white);
+  --topbar-link-color-hover: var(--gray-50);
   // Navbar
   --navbar-bg: var(--white);
   --navbar-box-shadow: none;
@@ -72,7 +48,7 @@ these properties do not need to be edited */
   --custom-logo-height: 40px;
   // Toggler
   --toggler-icon-font-size: 1.3rem;
-  --toggler-icon-color: var(--gray-900);
+  --toggler-icon-color: var(--white);
   --toggler-icon-mt: 6px;
   // Home header
   --home-header-bg: var(--brand-secondary);
@@ -158,27 +134,29 @@ these properties do not need to be edited */
   // Wizard
   --wizard-bg-color: var(--gray-200);
   --wizard-input-border-color: var(--gray-700);
+}
+
+// ADVANCED CUSTOMIZATION
+
+:root {
   // Forms
   --form-control-bg-color: var(--white);
   --form-control-color: var(--gray-700);
   --form-control-border-color: var(--gray-400);
-  --form-control-height: 38px;
+  --form-control-height: 48px;
   --form-control-font-size: 0.8rem;
-  --flex-form-control-border-radius: 3px;
+  --flex-form-control-border-radius: 0;
   --bootstrap-form-control-border-radius: 3px;
   --text-area-bg: var(--gray-50);
   --textarea-bg: var(--gray-50);
   --form-control-disabled: var(--gray-200);
   // Sticky bars in choose product and complete
   --sticky-bar-bg: var(--gray-900);
-  --sticky-bar-icons-color: var(--white);
+  --sticky-bar-icons-color: var(--brand-primary);
   --sticky-bar-icons-color-hover: var(--brand-primary-light);
   --sticky-bar-color: var(--white);
   --sticky-bar-arrow-icon-color: var(--gray-400);
   --sticky-bar-price-color: var(--white);
-  --sticky-bar-link-color: var(--white);
-  --sticky-bar-link-color-hover: var(--brand-primary-light);
-
   // Card static
   --card-page-bg-body: var(--gray-200);
   --card-image-bg-color: var(--white);
@@ -195,6 +173,4 @@ these properties do not need to be edited */
   --product-detail-dates-text: var(--gray-500);
   --product-detail-group-name: var(--gray-900);
   --product-detail-duration-text: var(--gray-900);
-  --margin-for-message: 0px;
-  --margin-for-message-active: 40px;
 }
