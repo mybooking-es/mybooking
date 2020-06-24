@@ -147,19 +147,7 @@
 <script type="text/tmpl" id="script_reservation_summary_sticky">
   <div class="complete-summary-sticky-wrapper">
       <div class="complete-summary-sticky">
-        <div class="complete-summary-price-wrapper">
-          <div class="complete-summary-price">
-            <p class="total-title"><?php _e('Total', 'mybooking') ?></p>
-            <p class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
-            </p>
-          </div>
-          <div class="see-summary-link">
-            <button data-toggle="modal" data-target="#viewReservationModal" class="see-summary-link">
-              resumen
-            </button>
-          </div>
-        </div>
-        <div class="complete-summary-dates-wrapper">
+        <div class="complete-summary-first-row">
           <div class="flex-dates">
             <div class="reservation-summary-item">
               <!-- primer bloque Recogida -->
@@ -181,7 +169,7 @@
               </p>
               <% } else { %>
               <p>
-                <span class="fw-700 d-none d-lg-block mr-2"><?php _e('Devolución','mybooking') ?></span>
+                <span class="fw-700 d-none d-lg-block mr-2 place-title"><?php _e('Devolución','mybooking') ?></span>
                 <span
                   class="bold-on-mobile d-none d-lg-block"><%=shopping_cart.return_place_customer_translation%></span>
               </p>
@@ -189,14 +177,32 @@
               <p><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></p>
             </div>
           </div>
-
-          <div class="modify-dates-button">
-            <div class="modify-button">
-              <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"><i
-                  class="fa fa-edit"></i></button>
-            </div>
-          </div>
         </div>
+
+        <!-- second row -->
+
+          <div class="complete-summary-second-row">
+            <div class="complete-summary-price">
+              <div class="total-title"><?php _e('Total', 'mybooking') ?></div>
+              <div class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
+              </div>
+            </div>
+
+            <div class="complete-buttons">
+            <div class="see-summary-link">
+              <button data-toggle="modal" data-target="#viewReservationModal" class="see-summary-link">
+                resumen
+              </button>
+            </div>
+            <div class="modify-dates-button">
+              <div class="modify-button">
+                <button id="modify_reservation_button" data-toggle="modal"
+                  data-target="#modify_reservation_modal"><i class="fa fa-edit"></i></button>
+              </div>
+            </div>
+            </div>
+
+          </div>
       </div>
     </div>
 </script>

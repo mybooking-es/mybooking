@@ -128,18 +128,18 @@ $(document).on("click", ".dropdown-menu li", function (e) {
   e.stopPropagation();
 });
 
-// MARGINS CALC FUNCTIONS add 40px extra if message is active
+//add 40px extra if message is active
 
-// $(document).ready(function () {
-//   var bodyStyles = document.body.style;
-//   // Home
-//   if ($(".topbar-message").length > 0) {
-//     bodyStyles.setProperty(
-//       "--sticky-navbar-margin:",
-//       "var(--sticky-navbar-margin-message-active)"
-//     );
-//   }
-// });
+$(document).ready(function () {
+  var bodyStyles = document.body.style;
+  // Home
+  if ($(".topbar-message").length > 0) {
+    bodyStyles.setProperty(
+      "--margin-for-message:",
+      "var(--margin-for-message-active)"
+    );
+  }
+});
 
 // Avoid padding right when modal is open
 $(document).ready(function () {
@@ -188,10 +188,10 @@ $(document).ready(function () {
   stickyFooter();
 
   $(window).bind("scroll", function (event) {
-      stickyFooter();
+    stickyFooter();
   });
 
   $(window).bind("resize", function (event) {
-      stickyFooter();
+    stickyFooter();
   });
 });
