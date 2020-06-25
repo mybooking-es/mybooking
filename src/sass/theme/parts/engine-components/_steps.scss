@@ -1,6 +1,9 @@
 //==============================================
 // Module/steps
 //==============================================
+#steps {
+  margin: 0 auto;
+}
 .steps-bg-color {
   background-color: var(--steps-wrapper-bg-color);
 }
@@ -11,13 +14,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  #steps {
-    padding-left: 30px;
-  }
   max-width: 1140px;
 }
 .steps_title {
   color: var(--step-title-color);
+  font-size: 1.5rem;
 }
 // Step circle
 .step {
@@ -37,15 +38,15 @@
   line-height: 30px;
 }
 .step:nth-child(n + 2) {
-  margin: 0 0 0 120px;
+  margin: 0 0 0 240px;
   transform: translate(0, -4px);
 }
 .step:nth-child(n + 2):before {
-  width: 100px;
+  width: 190px;
   height: 3px;
   display: block;
   background-color: var(--step-line-color);
-  transform: translate(-120px, 15px);
+  transform: translate(-220px, 15px);
   content: "";
 }
 .step:after {

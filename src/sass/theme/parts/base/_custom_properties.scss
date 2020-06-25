@@ -46,17 +46,18 @@ these properties do not need to be edited */
   --color-link-active: var(--brand-primary-dark);
   --color-link-visited: var(--brand-primary-dark);
   // Topbar message
-  --topbar-message-bg: var(--gray-400);
+  --topbar-message-bg: var(--warning);
   --topbar-message-text: var(--body-color);
   --topbar-message-link: var(--white);
   --topbar-message-link-hover: var(--gray-50);
   // Topbar
-  --home-topbar-bg: rgba(66, 66, 66, 0.5);
-  --topbar-bg: var(--white);
-  --topbar-color: var(--body-color);
-  --topbar-link-color: var(--gray-900);
-  --topbar-link-color-hover: var(--gray-500);
-  --topbar-icon-color: var(--gray-900);
+  //--home-topbar-bg: rgba(66, 66, 66, 0.5);
+  --home-topbar-bg: var(--brand-primary);
+  --topbar-bg: var(--brand-primary);
+  --topbar-color: var(--white);
+  --topbar-link-color: var(--white);
+  --topbar-link-color-hover: var(--brand-primary-dark);
+  --topbar-icon-color: var(--white);
 
   // Navbar
   --navbar-bg: var(--white);
@@ -146,14 +147,14 @@ these properties do not need to be edited */
   --btn-text-transform: uppercase;
   // Steps
   --steps-wrapper-bg-color: var(--gray-200);
-  --step-title-color: var(--brand-secondary);
+  --step-title-color: var(--brand-primary-dark);
   --step-circle-text-color: var(--gray-700);
   --step-circle-bg-color: var(--white);
-  --step-done-color: var(--brand-secondary);
-  --step-active-color: var(--brand-secondary-light);
-  --step-active-text-color: var(--brand-secondary-light);
+  --step-done-color: var(--brand-primary-light);
+  --step-active-color: var(--brand-primary-dark);
+  --step-active-text-color: var(--brand-primary-dark);
   --step-line-color: var(--white);
-  --step-text-color: var(--gray-500);
+  --step-text-color: var(--brand-primary-light);
   --step-done-ckeck-icon-color: var(--white);
   // Wizard
   --wizard-bg-color: var(--gray-200);
@@ -195,6 +196,6 @@ these properties do not need to be edited */
   --product-detail-dates-text: var(--gray-500);
   --product-detail-group-name: var(--gray-900);
   --product-detail-duration-text: var(--gray-900);
-  --margin-for-message: 0px;
-  --margin-for-message-active: 40px;
+  --margin-for-message: 30px;
+  --margin-for-message-active: 71px;
 }

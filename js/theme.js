@@ -9957,14 +9957,14 @@ $(document).on("click", ".dropdown-menu li", function (e) {
   e.stopPropagation();
 });
 
-//add 40px extra if message is active
+// Add 40px extra if message is active
 
 $(document).ready(function () {
   var bodyStyles = document.body.style;
   // Home
   if ($(".topbar-message").length > 0) {
     bodyStyles.setProperty(
-      "--margin-for-message:",
+      "--margin-for-message",
       "var(--margin-for-message-active)"
     );
   }
@@ -10022,5 +10022,15 @@ $(document).ready(function () {
 
   $(window).bind("resize", function (event) {
     stickyFooter();
+  });
+});
+
+$(document).ready(function () {
+  $("button.navbar-toggler").bind("click", function () {
+    if (!$(".navbar-collapse").hasClass("show")) {
+      $(".navbar").addClass("fixed-top");
+    } else {
+      $(".navbar").removeClass("fixed-top");
+    }
   });
 });
