@@ -150,9 +150,9 @@
         <div class="complete-summary-first-row">
           <div class="flex-dates">
             <div class="reservation-summary-item">
-              <!-- primer bloque Recogida -->
+              <!-- Delivery -->
               <p>
-                <span class="d-none d-lg-block mr-2 place-title"><?php _e('Recogida','mybooking') ?></span>
+                <span class="d-none d-lg-block mr-2 place-title"><?php _e('Entrega','mybooking') ?></span>
                 <span class="bold-on-mobile"><%=shopping_cart.pickup_place_customer_translation%></span>
               </p>
               <p><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></p>
@@ -161,7 +161,7 @@
               <i class="fa fa-long-arrow-right"></i>
             </div>
             <div class="reservation-summary-item">
-              <!-- Devolución (en móbil muestra lugar sólo cuando es diferente) -->
+              <!-- Collection (en móbil muestra lugar sólo cuando es diferente) -->
               <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
               <p>
                 <span class="d-none d-lg-block mr-2 place-title"><?php _e('Devolución','mybooking') ?></span>
