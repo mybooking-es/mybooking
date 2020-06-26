@@ -16,8 +16,8 @@
       <div class="reservation-summary-sticky">
         <div class="reservation-summary-item">
           <!-- Delivery -->
-          <p>
-            <span class="bold-on-mobile"><%=shopping_cart.pickup_place_customer_translation%></span>
+          <p class="overflow-ellipsis">
+            <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
           </p>
           <p><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></p>
         </div>
@@ -27,20 +27,19 @@
         <div class="reservation-summary-item">
           <!-- Collection (en móbil muestra lugar sólo cuando es diferente) -->
           <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
-            <p>
-              <span class="bold-on-mobile"><%=shopping_cart.return_place_customer_translation%></span>
+            <p class="overflow-ellipsis">
+              <span class="overflow-ellipsis"><%=shopping_cart.return_place_customer_translation%></span>
             </p>
           <% } else { %>
-            <p>
-              <span class="bold-on-mobile d-none d-lg-block"><%=shopping_cart.return_place_customer_translation%></span>
+            <p class="overflow-ellipsis">
+              <span
+                class="d-none d-lg-block overflow-ellipsis"><%=shopping_cart.return_place_customer_translation%></span>
             </p>
           <% } %>
           <p><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></p>
         </div>
         <!-- Button trigger modal -->
-        <div class="modify-button">
-        <button id="modify_reservation_button" class="color-white" style="text-decoration: underline red;"><?php _e('MODIFICAR','mybooking') ?></button>
-        </div>
+        <button id="modify_reservation_button" class="modify-button"><?php _e('MODIFICAR','mybooking') ?></button>
       </div>
     </div>
 </script>

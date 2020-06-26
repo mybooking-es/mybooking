@@ -119,19 +119,18 @@
         </div>
       </div>
     </div>
-
-    <% if (configuration.promotionCode) { %>
-    <div class="flex-form-group">
-      <div class="flex-form-box">
-          <label for="promotion_code"><?php echo _x( 'Promotion code', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
+  </div>
+      <% if (configuration.promotionCode) { %>
+      <div class="flex-form-group ml-0">
+        <div class="flex-form-box">
+          <label
+            for="promotion_code"><?php echo _x( 'Promotion code', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
           <div class="flex-form-horizontal-item">
             <input type="text" class="form-control" name="promotion_code" id="widget_promotion_code" autocomplete="off">
           </div>
+        </div>
       </div>
-    </div>
-    <% } %>
-
-  </div>
+      <% } %>
   <div class="flex-form-box">
     <input type="submit" class="btn btn-primary mt-3" value="<?php _e('Buscar', 'mybooking') ?>" />
   </div>

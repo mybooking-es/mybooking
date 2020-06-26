@@ -151,8 +151,8 @@
           <div class="flex-dates">
             <div class="reservation-summary-item">
               <!-- Delivery -->
-              <p>
-                <span class="bold-on-mobile"><%=shopping_cart.pickup_place_customer_translation%></span>
+              <p class="overflow-ellipsis">
+                <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
               </p>
               <p><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></p>
             </div>
@@ -162,13 +162,13 @@
             <div class="reservation-summary-item">
               <!-- Collection (en móbil muestra lugar sólo cuando es diferente) -->
               <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
-              <p>
-                <span class="bold-on-mobile"><%=shopping_cart.return_place_customer_translation%></span>
+              <p class="overflow-ellipsis">
+                <span class="overflow-ellipsis"><%=shopping_cart.return_place_customer_translation%></span>
               </p>
               <% } else { %>
-              <p>
+              <p class="overflow-ellipsis">
                 <span
-                  class="bold-on-mobile d-none d-lg-block"><%=shopping_cart.return_place_customer_translation%></span>
+                  class="overflow-ellipsis d-none d-lg-block"><%=shopping_cart.return_place_customer_translation%></span>
               </p>
               <% } %>
               <p><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></p>
@@ -185,20 +185,14 @@
               </div>
             </div>
 
-            <div class="complete-buttons">
-            <div class="see-summary-link">
-              <button data-toggle="modal" data-target="#viewReservationModal" class="see-summary-link">
-                resumen
-              </button>
-            </div>
-            <div class="modify-dates-button">
-              <div class="modify-button">
+            <div class="complete-buttons-wrapper">
+                <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
+                  resumen
+                </button>
                 <button id="modify_reservation_button" data-toggle="modal"
-                  data-target="#modify_reservation_modal" class="color-white" style="text-decoration: underline red;"><?php _e('MODIFICAR','mybooking') ?></button>
-              </div>
+                  data-target="#modify_reservation_modal" class="complete-button"><?php _e('MODIFICAR','mybooking') ?>
+                </button>
             </div>
-            </div>
-
           </div>
       </div>
     </div>

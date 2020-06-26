@@ -26020,7 +26020,6 @@ img.wp-post-image {
 .topbar {
   font-size: 0.9rem;
   margin-top: 0;
-  position: relative;
   z-index: 30;
   padding: 0.3rem 2rem 0.3rem 1rem;
   background-color: var(--topbar-bg);
@@ -26127,6 +26126,9 @@ button.navbar-toggler:focus {
 .navbar-collapse {
   -webkit-transition: height 0.01s;
   transition: height 0.01s; }
+
+.topbar-height {
+  margin-top: 37px; }
 
 .navbar-collapse.show {
   margin: 1rem 0;
@@ -28051,23 +28053,30 @@ a.magic-button.btn {
   padding: 0.6rem 1rem;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
-  .reservation-summary-sticky .modify-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .reservation-summary-sticky .modify-button button {
-      background-color: transparent;
-      margin-left: 1rem; }
-    .reservation-summary-sticky .modify-button i {
-      font-size: 2rem;
-      color: var(--sticky-bar-icons-color);
-      -webkit-transition: 0.2s ease-in-out;
-      transition: 0.2s ease-in-out; }
-      .reservation-summary-sticky .modify-button i:hover {
-        color: var(--sticky-bar-icons-color-hover); }
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px;
+  font-weight: 600; }
+
+.modify-button {
+  margin-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--sticky-bar-link-color);
+  text-decoration: underline; }
+  .modify-button:hover {
+    color: var(--sticky-bar-link-color-hover); }
+  .modify-button:first-child {
+    margin-right: 2rem; }
 
 .reservation-summary-item {
   display: -webkit-box;
@@ -28194,25 +28203,26 @@ a.magic-button.btn {
   line-height: 1;
   margin-right: 1rem; }
 
-.complete-buttons {
+.complete-buttons-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
-.see-summary-link {
+.complete-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-item-align: end;
-      align-self: flex-end; }
-  .see-summary-link button {
-    font-weight: 500;
-    text-transform: uppercase;
-    background-color: transparent;
-    color: var(--sticky-bar-link-color);
-    text-decoration: underline; }
-    .see-summary-link button:hover {
-      color: var(--sticky-bar-link-color-hover); }
+      align-self: flex-end;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--sticky-bar-link-color);
+  text-decoration: underline; }
+  .complete-button:hover {
+    color: var(--sticky-bar-link-color-hover); }
+  .complete-button:first-child {
+    margin-right: 2rem; }
 
 .complete-summary-item_price {
   font-weight: 800;

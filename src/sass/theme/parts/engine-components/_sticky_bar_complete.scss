@@ -49,21 +49,22 @@
   line-height: 1;
   margin-right: 1rem;
 }
-.complete-buttons {
+.complete-buttons-wrapper {
   display: flex;
 }
-.see-summary-link {
+.complete-button {
   display: flex;
   align-self: flex-end;
-  button {
-    font-weight: 500;
-    text-transform: uppercase;
-    background-color: transparent;
-    color: var(--sticky-bar-link-color);
-    text-decoration: underline;
-    &:hover {
-      color: var(--sticky-bar-link-color-hover);
-    }
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--sticky-bar-link-color);
+  text-decoration: underline;
+  &:hover {
+    color: var(--sticky-bar-link-color-hover);
+  }
+  &:first-child {
+    margin-right: 2rem;
   }
 }
 

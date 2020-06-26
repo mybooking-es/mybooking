@@ -199,9 +199,11 @@ $(document).ready(function () {
 $(document).ready(function () {
   $("button.navbar-toggler").bind("click", function () {
     if (!$(".navbar-collapse").hasClass("show")) {
-      $(".navbar").addClass("fixed-top");
+      $(".navbar").addClass("fixed-top topbar-height");
+      $(".topbar").addClass("fixed-top");
     } else {
-      $(".navbar").removeClass("fixed-top");
+      $(".navbar").removeClass("fixed-top topbar-height");
+      $(".topbar").removeClass("fixed-top");
     }
   });
 });
