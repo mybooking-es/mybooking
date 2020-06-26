@@ -29,9 +29,9 @@ This is the structure of the selector form
 
 .flex-form-box {
   .btn {
-    height: 48px;
+    border-radius: 3px;
+    height: 38px;
     position: relative;
-    top: -8px;
     box-shadow: none;
     background-color: var(--selector-btn-bg-color);
     border-color: var(--selector-btn-border-color);
@@ -48,6 +48,10 @@ This is the structure of the selector form
   flex-direction: column;
   background-color: var(--selector-bg);
   padding: 10px;
+  input {
+    border: 1px solid var(--gray-500);
+    border-radius: 3px;
+  }
   label {
     color: var(--selector-label-color);
   }
@@ -70,7 +74,6 @@ This is the structure of the selector form
   .home-left .flex-form,
   .home-right .flex-form {
     max-width: 400px;
-    // min-width: 350px; //This is making form overflows strecht containers like col-3/4 or col-md-3/4 and so on...
     .flex-form-group-wrapper {
       flex-direction: column;
     }
@@ -106,7 +109,10 @@ This is the structure of the selector form
   flex-grow: 1;
   flex-direction: column;
   input.hasDatepicker {
-    flex-grow: 1;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    //flex-grow: 1;
     width: 400%; // This is a hack!
   }
   label {
@@ -131,6 +137,10 @@ This is the structure of the selector form
     flex-grow: 1;
     width: 100%;
     min-width: 70px;
+    border: 1px solid var(--gray-500);
+    &:focus {
+      border: 1px solid var(--gray-500);
+    }
   }
 }
 
@@ -139,11 +149,15 @@ This is the structure of the selector form
 .flex-icon {
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
   background-color: var(--white);
   padding: 0.8rem;
-  height: 48px;
+  height: var(--form-control-height);
   color: var(--gray-700);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: 1px solid var(--gray-500);
+  border-right: none;
 }
 
 // Select wrapper for showing the arrow
@@ -164,16 +178,20 @@ This is the structure of the selector form
   font-family: "Font Awesome 5 Free";
   position: absolute;
   right: 0;
-  padding: 11px;
   top: 0;
-  font-size: 18px;
+  padding: 10px;
+  font-size: 13px;
   z-index: 1;
   width: 38px;
-  height: 48px;
+  height: var(--form-control-height);
   pointer-events: none;
   color: var(--gray-700);
   font-weight: 900;
   background-color: var(--white);
+  border: 1px solid var(--gray-500);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-left: none;
 }
 
 // == Search button (wraps the search button)
@@ -192,7 +210,7 @@ This is the structure of the selector form
 
 .flex-form-group-no-label input {
   margin-left: 10px;
-  height: 48px; /* To match the input height */
+  height: var(--form-control-height); /* To match the input height */
 }
 
 // == Sticky behaviour (all controls in a row ALWAYS)
@@ -229,7 +247,8 @@ This is the structure of the selector form
   }
   // Flex-form-sticky > Search button
   .btn {
-    margin-top: 35px !important;
+    height: var(--form-control-height);
+    margin-top: 27px !important;
     position: relative;
     box-shadow: none;
     background-color: var(--selector-btn-sticky-bg-color);
@@ -266,7 +285,7 @@ button.widget_another_return_place_group_close {
 }
 div#another_pickup_place_group,
 div#another_return_place_group {
-  height: 48px;
+  height: var(--form-control-height);
 }
 
 // Modify reservation form selector inside modal
@@ -277,8 +296,8 @@ div#another_return_place_group {
 .custom-form .uneditable-input,
 .custom-form input[type="password"],
 .custom-form textarea {
-//  border: none !important;
-//  border-radius: 0 !important;
+  //  border: none !important;
+  //  border-radius: 0 !important;
 }
 .modal .flex-form {
   background-color: var(--modal-selector-bg);

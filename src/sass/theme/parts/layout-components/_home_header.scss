@@ -52,11 +52,9 @@
   width: 100%;
 }
 
-
-
 @media (min-width: 992px) {
   .nav-container-absolute ~ .home-header {
-    padding-top: 0;
+    padding-top: var(--margin-for-message);
   }
 }
 
@@ -93,6 +91,10 @@
  * WIDGET AREAS
  * They stacks on small screens
  */
+.header-container_margin {
+  margin-top: 50px;
+}
+
 .home-header_content {
   display: flex;
   flex-direction: column;

@@ -23,9 +23,23 @@
     }
   }
 }
-.complete-summary-price-wrapper {
+.complete-summary-first-row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.flex-dates {
+  display: flex;
+  flex-grow: 2;
+}
+.complete-summary-second-row {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  align-items: center;
+}
+.complete-summary-price {
+  display: flex;
 }
 .total-title {
   color: var(--gray-500);
@@ -33,47 +47,34 @@
   text-align: left;
   text-transform: uppercase;
   line-height: 1;
+  margin-right: 1rem;
 }
-.see-summary-link {
-  button {
-    font-weight: 500;
-    text-transform: uppercase;
-    background-color: transparent;
-    color: var(--brand-primary);
-    text-decoration: underline;
-    &:hover {
-      color: var(--brand-primary-light);
-    }
+.complete-buttons-wrapper {
+  display: flex;
+}
+.complete-button {
+  display: flex;
+  align-self: flex-end;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--sticky-bar-link-color);
+  text-decoration: underline;
+  &:hover {
+    color: var(--sticky-bar-link-color-hover);
+  }
+  &:first-child {
+    margin-right: 2rem;
   }
 }
-.complete-summary-text {
-  color: var(--sticky-bar-color);
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 500;
-}
+
 .complete-summary-item_price {
   font-weight: 800;
   font-size: 1.7rem;
   color: var(--sticky-bar-price-color);
   line-height: 0.8;
 }
-.complete-summary-dates-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-.flex-dates {
-  display: flex;
-  flex-grow: 2;
-}
-.modify-dates-button {
-  display: flex;
-  align-items: center;
-}
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .modify-dates-button {
-    margin-left: 3rem;
-  }
+.modify-dates-button {
+  margin-left: 2rem;
 }

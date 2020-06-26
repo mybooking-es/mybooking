@@ -55,8 +55,8 @@
       </div>
       <div data-desc="<?php _e( 'Completar Reserva', 'mybooking' ) ?>" class="<?php echo $complete_active ?> step">3
       </div>
-      <div data-desc="<?php _e( 'Sumario', 'mybooking' ) ?>" class="<?php echo $summary_active ?> step">4</div>
+      <div data-desc="<?php _e( 'Resumen', 'mybooking' ) ?>" class="<?php echo $summary_active ?> step">4</div>
     </div>
-    <h2 class="steps_title"><?php echo _e( $step, 'mybooking') ?></h2>
+    <!--h2 class="steps_title"><?php echo _e( $step, 'mybooking') ?></h2-->
   </div>
 </div>

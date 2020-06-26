@@ -113,19 +113,19 @@
 
 		  if (!current_user_can('manage_options') || current_user_can('administrator')) {
 
+		  	// https://wordpress.stackexchange.com/questions/66498/add-menu-page-with-different-name-for-first-submenu-item
+		  	// https://codex.wordpress.org/Adding_Administration_Menus
+
 		    // Create mybooking Menu
 		    add_menu_page(
 		      _x("Mybooking", 'theme_settings', 'mybooking'),
 		      _x("Mybooking", 'theme_settings', 'mybooking'),
 		      "edit_pages",
-		      "config",
+		      "settings", // Slug
 		      '',
 		      get_template_directory_uri()."/images/mybooking-logo-bn.png",
 		      4.1
 		    );
-
-        // Remove the 'automatic' add option with the same slug
-		    remove_submenu_page('config', 'config');
 
 		    // Add settings submenu page
 		    add_submenu_page(
@@ -133,9 +133,9 @@
 		    	_x("Settings", 'theme_settings', 'mybooking'),
 		    	_x("Settings", 'theme_settings', 'mybooking'),
 		    	"manage_options",
-		    	"settings",
+		    	"settings", // The same slug as the main menu so it will be the default option
 		    	array($this, 'mybooking_theme_settings_page'),
-		      5
+  		    1
 		    	);
 
 		  }

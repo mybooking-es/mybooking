@@ -5,11 +5,11 @@
 // Flex-form we use them in form selector and in modify forms
 .flex-form-group-wrapper {
   select {
-    border-radius: var(--form-control-border-radius);
+    border-radius: var(--flex-form-control-border-radius);
     padding: 0 0.8rem;
     text-indent: 1px;
     text-overflow: "";
-    border: 0;
+    //border: 0;
     font-size: var(--form-control-font-size);
     height: var(--form-control-height);
     color: var(--form-control-color);
@@ -24,7 +24,7 @@
     }
   }
   input[type="text"] {
-    border: 0;
+    //border: 0;
   }
 }
 
@@ -32,7 +32,7 @@
 
 .form-group {
   textarea {
-//    background-color: var(--textarea-bg);
+    //  background-color: var(--textarea-bg);
   }
   select {
     border: 1px solid var(--form-control-border-color);
@@ -90,7 +90,7 @@ label {
   font-size: 18px;
   color: var(--form-control-color);
   right: 8px;
-  top: 48px;
+  top: var(--form-control-height);
 }
 .custom-icon-select {
   @extend .custom-icon;

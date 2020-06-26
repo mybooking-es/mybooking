@@ -2,9 +2,9 @@
 .topbar {
   font-size: 0.9rem;
   margin-top: 0;
-  position: relative;
+  //position: relative;
   z-index: 30;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 2rem 0.3rem 1rem;
   background-color: var(--topbar-bg);
   float: left;
   width: 100%;
@@ -16,7 +16,7 @@
     }
   }
   i {
-    color: var(--white);
+    color: var(--topbar-icon-color);
   }
   .info_link {
     margin: 0 0 0 1em;
