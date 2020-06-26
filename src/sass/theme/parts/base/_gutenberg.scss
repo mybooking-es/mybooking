@@ -241,3 +241,37 @@
 .wp-block-embed {
   margin-bottom: 3rem;
 }
+
+
+/*
+*  WOOCOMMERCE BLOCKS
+*
+*/
+
+// Products Grid Block
+.wc-block-grid {
+  margin-bottom: 3rem;
+}
+
+.wc-block-grid.alignfull {
+  padding: 0 2rem;
+}
+
+.wc-block-sort-select {
+  margin-bottom: 2rem;
+}
+
+.wc-block-sort-select select {
+  border: 1px solid #DDD;
+  padding: .5rem;
+}
+
+// Category Grid Block
+.wc-block-product-category {
+  margin-bottom: 3rem;
+}
+
+// Featured Product Block
+.wc-block-featured-product {
+  margin-bottom: 3rem;
+}

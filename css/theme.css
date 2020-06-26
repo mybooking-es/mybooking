@@ -25118,6 +25118,26 @@ select:disabled {
 .wp-block-embed {
   margin-bottom: 3rem; }
 
+/*
+*  WOOCOMMERCE BLOCKS
+*
+*/
+.wc-block-grid {
+  margin-bottom: 3rem; }
+
+.wc-block-grid.alignfull {
+  padding: 0 2rem; }
+
+.wc-block-sort-select {
+  margin-bottom: 2rem; }
+
+.wc-block-sort-select select {
+  border: 1px solid #DDD;
+  padding: .5rem; }
+
+.wc-block-featured-product {
+  margin-bottom: 3rem; }
+
 /** Override JQUERY UI **/
 @font-face {
   font-family: "Font Awesome 5 Free";
