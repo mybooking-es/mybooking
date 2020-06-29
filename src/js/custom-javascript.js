@@ -14,30 +14,37 @@ if (typeof $ === "undefined") {
 // OWL CAROUSEL
 $(document).ready(function () {
   //Home page carousel
-  // $('.-carrusel-portada').slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 2000,
-  // });
-  $(".-carrusel-portada").owlCarousel({
-    autoPlay: true,
-    slideSpeed: 3600,
-    paginationSpeed: 600,
-    navigation: false,
-    pagination: false,
-    singleItem: true,
+  $('.-carrusel-portada').slick({
+    // lazyLoad: 'ondemand',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 8000,
   });
+  // $(".-carrusel-portada").owlCarousel({
+  //   autoPlay: true,
+  //   slideSpeed: 3600,
+  //   paginationSpeed: 600,
+  //   navigation: false,
+  //   pagination: false,
+  //   singleItem: true,
+  // });
 
   // Testimonials
-  // $('.-carrusel-testimonials').slick();
-  $(".-carrusel-testimonials").owlCarousel({
-    autoPlay: true,
-    slideSpeed: 300,
-    paginationSpeed: 400,
-    singleItem: true,
-    pagination: false,
+  $('.-carrusel-testimonials').slick({
+    // lazyLoad: 'ondemand',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 8000,
   });
+  // $(".-carrusel-testimonials").owlCarousel({
+  //   autoPlay: true,
+  //   slideSpeed: 300,
+  //   paginationSpeed: 400,
+  //   singleItem: true,
+  //   pagination: false,
+  // });
 });
 
 // FORM SELECTOR STICKY

@@ -13,8 +13,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-get_header();
-?>
+get_header(); ?>
 
 <section class="bg-contact">
 
@@ -22,17 +21,14 @@ get_header();
     <div class="contact-left">
 
       <!-- Contact info -->
-      
       <?php get_template_part('mybooking-parts/contact/mybooking-contact-info') ?>
 
       <!-- Map -->
-
       <?php get_template_part('mybooking-parts/contact/mybooking-contact-map') ?>
 
     </div>
 
     <!-- Contact form -->
-
     <?php get_template_part('mybooking-parts/contact/mybooking-contact-form') ?>
 
   </div>

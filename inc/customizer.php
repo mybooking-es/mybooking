@@ -6,7 +6,7 @@
 *   Section: Mybooking layout settings
 *
 *
-* 	Versión: 0.0.6
+* 	Versión: 0.0.7
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.1
@@ -610,7 +610,7 @@ class MyBookingCustomizer {
 				array(
 					'title'       => _x( 'Layout', 'customizer_layout', 'mybooking' ),
 					'capability'  => 'edit_theme_options',
-					'description' => _x( 'Container width and sidebar defaults',
+					'description' => _x( 'Layout defaults',
 															 'customizer_layout', 'mybooking' ),
 					'priority'    => 52,
 					'panel'				=> 'mybooking_settings_panel',
@@ -636,7 +636,7 @@ class MyBookingCustomizer {
 					$wp_customize,
 					'mybooking_container_type',
 					array(
-						'label'       => _x( 'Container Width', 'customizer_layout', 'mybooking' ),
+						'label'       => _x( 'Navigation and Topbar container Width', 'customizer_layout', 'mybooking' ),
 						'description' => _x( 'Choose between Bootstrap\'s container and container-fluid',
 																 'customizer_layout',
 																 'mybooking' ),
@@ -644,50 +644,52 @@ class MyBookingCustomizer {
 						'settings'    => 'mybooking_container_type',
 						'type'        => 'select',
 						'choices'     => array(
-							'container'       => _x( 'Fixed width container', 'customizer_layout', 'mybooking' ),
-							'container-fluid' => _x( 'Full width container', 'customizer_layout', 'mybooking' ),
+							'container'       => _x( 'Boxed navbar and topbar', 'customizer_layout', 'mybooking' ),
+							'container-fluid' => _x( 'Full width navbar and topbar', 'customizer_layout', 'mybooking' ),
 						),
 						'priority'    => '10',
 					)
 				)
 			);
 
-			// Sidebar position
-			$wp_customize->add_setting(
-				'mybooking_sidebar_position',
-				array(
-					'default'           => 'right',
-					'type'              => 'theme_mod',
-					'sanitize_callback' => 'sanitize_text_field',
-					'capability'        => 'edit_theme_options',
-				)
-			);
+			// NOT STILL IMPLEMENTED
 
-			$wp_customize->add_control(
-				new WP_Customize_Control(
-					$wp_customize,
-					'mybooking_sidebar_position',
-					array(
-						'label'             => _x( 'Sidebar Positioning', 'customizer', 'mybooking' ),
-						'description'       => _x(
-							'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
-							'customizer',
-							'mybooking'
-						),
-						'section'           => 'mybooking_theme_layout_options',
-						'settings'          => 'mybooking_sidebar_position',
-						'type'              => 'select',
-						'sanitize_callback' => array( $this, 'slug_sanitize_select'),
-						'choices'           => array(
-							'right' => _x( 'Right sidebar', 'customizer_layout', 'mybooking' ),
-							'left'  => _x( 'Left sidebar', 'customizer_layout', 'mybooking' ),
-							'both'  => _x( 'Left & Right sidebars', 'customizer_layout', 'mybooking' ),
-							'none'  => _x( 'No sidebar', 'customizer_layout', 'mybooking' ),
-						),
-						'priority' => '20',
-					)
-				)
-			);
+			// Sidebar position
+			// $wp_customize->add_setting(
+			// 	'mybooking_sidebar_position',
+			// 	array(
+			// 		'default'           => 'right',
+			// 		'type'              => 'theme_mod',
+			// 		'sanitize_callback' => 'sanitize_text_field',
+			// 		'capability'        => 'edit_theme_options',
+			// 	)
+			// );
+			//
+			// $wp_customize->add_control(
+			// 	new WP_Customize_Control(
+			// 		$wp_customize,
+			// 		'mybooking_sidebar_position',
+			// 		array(
+			// 			'label'             => _x( 'Sidebar Positioning', 'customizer', 'mybooking' ),
+			// 			'description'       => _x(
+			// 				'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
+			// 				'customizer',
+			// 				'mybooking'
+			// 			),
+			// 			'section'           => 'mybooking_theme_layout_options',
+			// 			'settings'          => 'mybooking_sidebar_position',
+			// 			'type'              => 'select',
+			// 			'sanitize_callback' => array( $this, 'slug_sanitize_select'),
+			// 			'choices'           => array(
+			// 				'right' => _x( 'Right sidebar', 'customizer_layout', 'mybooking' ),
+			// 				'left'  => _x( 'Left sidebar', 'customizer_layout', 'mybooking' ),
+			// 				'both'  => _x( 'Left & Right sidebars', 'customizer_layout', 'mybooking' ),
+			// 				'none'  => _x( 'No sidebar', 'customizer_layout', 'mybooking' ),
+			// 			),
+			// 			'priority' => '20',
+			// 		)
+			// 	)
+			// );
 
     }
 

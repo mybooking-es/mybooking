@@ -64,7 +64,7 @@ if ($home_header_visible) { ?>
   <div class="home-header_background home-header_background_carrusel portada-carrusel -carrusel-portada">
     <?php $carousel_items = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_video_bg' ); ?>
     <?php foreach( $carousel_items as $carousel_item ) :  ?>
-    <div class="carrusel-item">
+    <div class="carrusel-item slick-slide">
       <img src="<?php echo $carousel_item ?>">
     </div>
     <?php endforeach; ?>
