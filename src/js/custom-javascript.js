@@ -14,6 +14,12 @@ if (typeof $ === "undefined") {
 // OWL CAROUSEL
 $(document).ready(function () {
   //Home page carousel
+  // $('.-carrusel-portada').slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  // });
   $(".-carrusel-portada").owlCarousel({
     autoPlay: true,
     slideSpeed: 3600,
@@ -24,6 +30,7 @@ $(document).ready(function () {
   });
 
   // Testimonials
+  // $('.-carrusel-testimonials').slick();
   $(".-carrusel-testimonials").owlCarousel({
     autoPlay: true,
     slideSpeed: 300,
@@ -151,7 +158,7 @@ $(document).ready(function () {
   });
 });
 
-/* Sticky footer 
+/* Sticky footer
   Requirement: The footer must not have margin
 */
 $(document).ready(function () {
@@ -171,10 +178,10 @@ $(document).ready(function () {
     ----------------------------footer         ..............................
     top
     outerHeight                                     MARGIN-TOP
-  
+
     ----------------------------footer        -------------------------footer
-  
-                                              -------------------------footer   
+
+                                              -------------------------footer
     ----------------------------window        -------------------------window
    */
 
