@@ -72,7 +72,7 @@ class MyBookingCustomizer {
 			add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
 			// Customizer JS
-			add_action( 'customize_controls_enqueue_scripts', array( $this, 'customize_js' ));			
+			add_action( 'customize_controls_enqueue_scripts', array( $this, 'customize_js' ));
 
 	  	// Enqueue css-properties customization
 			add_action( 'wp_enqueue_scripts', array( $this, 'customize_enqueue') );
@@ -164,13 +164,13 @@ class MyBookingCustomizer {
 			$options_advanced_mode = get_theme_mod( 'mybooking_colors_advanced', '0' );
       if ( $options_advanced_mode == '1' ) {
       	// TopBar
-	    	$home_topbar_bg = get_theme_mod( 'mybooking_home_topbar_bg', '#42424280' );
-	    	$topbar_bg = get_theme_mod( 'mybooking_topbar_bg', '#212121' );
+	    	$home_topbar_bg = get_theme_mod( 'mybooking_home_topbar_bg', '#2193F2' );
+	    	$topbar_bg = get_theme_mod( 'mybooking_topbar_bg', '#2193F2' );
 	    	$topbar_color = get_theme_mod( 'mybooking_topbar_color', '#FFFFFF' );
 	    	$topbar_link_color = get_theme_mod( 'mybooking_topbar_link_color', '#FAFAFA' );
 	    	$topbar_link_hover_color = get_theme_mod( 'mybooking_topbar_link_hover_color', '#FAFAFA' );
-				$topbar_message_bg = get_theme_mod( 'mybooking_topbar_message_bg', '#1B1B1B' );
-				$topbar_message_text = get_theme_mod( 'mybooking_topbar_message_text', '#FFFFFF' );
+				$topbar_message_bg = get_theme_mod( 'mybooking_topbar_message_bg', '#FFB74D' );
+				$topbar_message_text = get_theme_mod( 'mybooking_topbar_message_text', '#212121' );
 				$topbar_message_link = get_theme_mod( 'mybooking_topbar_message_link', '#FAFAFA' );
 				$topbar_message_hover = get_theme_mod( 'mybooking_topbar_message_link_hover', '#FAFAFA' );
 				// NavBar
@@ -181,7 +181,7 @@ class MyBookingCustomizer {
 	    	$navbar_dropdown_item_color = get_theme_mod( 'mybooking_navbar_dropdown_item_color', '#212121' );
 	    	$navbar_dropdown_item_active_color = get_theme_mod( 'mybooking_navbar_dropdown_item_active_color', '#424242' );
 	    	$navbar_link_collapse = get_theme_mod( 'mybooking_navbar_link_collapse', '#212121' );
-	    	$navbar_toggler_icon = get_theme_mod( 'mybooking_navbar_toggler_icon', '#FFFFFF' );
+	    	$navbar_toggler_icon = get_theme_mod( 'mybooking_navbar_toggler_icon', '#212121' );
 	    	// Header
 				$header_widget_title_color = get_theme_mod( 'mybooking_header_widget_title_color', '#FFFFFF' );
 				$header_widget_title_align = get_theme_mod( 'mybooking_header_widget_title_align', 'left' );
@@ -738,7 +738,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_home_topbar_bg' , array(
-			    'default'   => '#42424280',
+			    'default'   => '#2193F2',
 			    'transport' => 'refresh'
 			) );
 
@@ -755,7 +755,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_topbar_bg' , array(
-			    'default'   => '#212121',
+			    'default'   => '#2193F2',
 			    'transport' => 'refresh'
 			) );
 
@@ -844,7 +844,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_topbar_message_bg' , array(
-					'default'   => '#212121',
+					'default'   => '#FFB74D',
 					'transport' => 'refresh'
 			) );
 
@@ -860,7 +860,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_topbar_message_text' , array(
-					'default'   => '#FFFFFF',
+					'default'   => '#212121',
 					'transport' => 'refresh'
 			) );
 
@@ -1087,7 +1087,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_toggler_icon' , array(
-			    'default'   => '#ffffff',
+			    'default'   => '#212121',
 			    'transport' => 'refresh'
 			) );
 
