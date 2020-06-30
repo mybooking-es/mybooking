@@ -8334,36 +8334,19 @@ if (typeof $ === "undefined") {
 $(document).ready(function () {
   //Home page carousel
   $('.-carrusel-portada').slick({
-    // lazyLoad: 'ondemand',
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 8000,
+    autoplaySpeed: 4000,
   });
-  // $(".-carrusel-portada").owlCarousel({
-  //   autoPlay: true,
-  //   slideSpeed: 3600,
-  //   paginationSpeed: 600,
-  //   navigation: false,
-  //   pagination: false,
-  //   singleItem: true,
-  // });
 
   // Testimonials
   $('.-carrusel-testimonials').slick({
-    // lazyLoad: 'ondemand',
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 8000,
+    autoplaySpeed: 4000,
   });
-  // $(".-carrusel-testimonials").owlCarousel({
-  //   autoPlay: true,
-  //   slideSpeed: 300,
-  //   paginationSpeed: 400,
-  //   singleItem: true,
-  //   pagination: false,
-  // });
 });
 
 // FORM SELECTOR STICKY

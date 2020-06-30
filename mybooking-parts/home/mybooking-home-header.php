@@ -62,11 +62,13 @@ if ($home_header_visible) { ?>
 
   <!-- Carrousel backgrond -->
   <div class="home-header_background home-header_background_carrusel portada-carrusel -carrusel-portada">
-    <?php $carousel_items = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_video_bg' ); ?>
+    <?php $carousel_items = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_carrousel_bg' ); ?>
+    <?php $first = true; ?>
     <?php foreach( $carousel_items as $carousel_item ) :  ?>
-    <div class="carrusel-item slick-slide">
-      <img src="<?php echo $carousel_item ?>">
-    </div>
+      <div class="carrusel-item" <?php if (!$first) {?>style="display:none"<?php }?>>
+        <img src="<?php echo $carousel_item ?>">
+      </div>
+      <?php $first = false; ?>
     <?php endforeach; ?>
   </div>
 

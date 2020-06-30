@@ -1,11 +1,10 @@
 # Mybooking WordPress Theme
 
-Mybooking WordPress Theme is a child theme for UnderStrap Theme Framework: https://github.com/understrap/understrap
+Mybooking WordPress Theme is designed to integrate Mybooking Engine funtionalities over WordPress, and fast developement of rental sites using Mybooking Reservation Engine plugin: https://wordpress.org/plugins/mybooking-reservation-engine/.
 
 ## How it works
 
-Mybooking WordPress Theme shares with the parent theme all PHP files and adds its own
-funtions.php on top of the Understrap parent theme's functions.php.
+Mybooking WordPress Theme could be used and customized standalone or using a child theme.
 
 ## Installation
 
@@ -13,8 +12,6 @@ funtions.php on top of the Understrap parent theme's functions.php.
 2. Upload mybooking-wp-theme.zip
 3. Go to "Appearance -> Themes"
 4. Activate Mybooking WordPress Theme
-
-WordPress will install the [parent theme](https://github.com/understrap/understrap) automatically.
 
 ## Editing
 
@@ -29,6 +26,7 @@ WordPress will install the [parent theme](https://github.com/understrap/understr
 ### Build
 
 - To build styles run `$ gulp styles`
+- To build scripts run `$ gulp scripts`
 
 ### Browser Sync
 
@@ -42,7 +40,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
   }
 }
 ```
-**NOTE: Localhost port depends of local server configuration.**
+**NOTE: Localhost port depends of your local server configuration.**
 
 ## Changelog
 
@@ -202,7 +200,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Color controls for topbar notice
 
 ### 0.9.4.1
-- Simplified home content widgets areas and control now on customizer
+- Simplified home content widgets areas and controls now on customizer
 
 ### 0.9.4.2
 - New hide home header control. Now is possible to make totaly customized homepages.
@@ -212,4 +210,11 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Woocommerce basic support
 
 ### 0.9.6
-- Gutenber support for blocks and editor
+- Gutenberg support for blocks and editor
+- Container control for navigation and topbar
+- Default colors for advanced mode updated
+
+### 0.9.7
+- Little fixins on Gutenberg styles
+- Footer and Navbar color are no more an advanced option
+- Solved issue #18 related to stacked slider images on load
