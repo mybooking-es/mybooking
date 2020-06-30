@@ -129,13 +129,13 @@
 
 		    // Add settings submenu page
 		    add_submenu_page(
-		      "config",
+		      "settings",
 		    	_x("Settings", 'theme_settings', 'mybooking'),
 		    	_x("Settings", 'theme_settings', 'mybooking'),
 		    	"manage_options",
 		    	"settings", // The same slug as the main menu so it will be the default option
 		    	array($this, 'mybooking_theme_settings_page'),
-  		    1
+  		    -1
 		    	);
 
 		  }

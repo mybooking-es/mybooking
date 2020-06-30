@@ -12,13 +12,10 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-get_header();
-
-$container = get_theme_mod( 'mybooking_container_type' );
-?>
+get_header(); ?>
 
 <div class="wrapper page_content" id="index-wrapper">
-  <div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+  <div class="container" id="content" tabindex="-1">
     <div class="row">
       <main class="site-main" id="main">
 

@@ -32,7 +32,7 @@ function create_popup() {
       ),
       'show_ui' => true,
       'public' => true,
-      'show_in_menu' => 'config',
+      'show_in_menu' => 'settings',
       'show_in_rest' => true, // Gutenberg activation!
       'supports' => array( 'title', 'editor', 'thumbnail' ),
       'menu_icon' => 'dashicons-awards',

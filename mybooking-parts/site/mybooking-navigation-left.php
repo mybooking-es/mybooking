@@ -3,7 +3,7 @@
 *		SITE NAVIGATION LEFT PARTIAL
 *  	----------------------------
 *
-* 	Versión: 0.0.2
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.4.0
@@ -15,10 +15,8 @@ defined( 'ABSPATH' ) || exit;
 
 <nav class="navbar navbar-expand-lg navbar-dark">
 
-  <?php $container = get_theme_mod( 'mybooking_container_type' );
-  if ( 'container' == $container ) : ?>
-  <div class="container-fluid">
-    <?php endif; ?>
+  <?php $container = get_theme_mod( 'mybooking_container_type' ); ?>
+  <div class="<?php echo esc_attr( $container ); ?>">
 
     <div class="navbar-main nav-left">
 
@@ -33,8 +31,5 @@ defined( 'ABSPATH' ) || exit;
     <!-- WordPress menu walker -->
     <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-walker' ) ?>
 
-    <?php if ( 'container' == $container ) : ?>
   </div>
-  <?php endif; ?>
-
 </nav>

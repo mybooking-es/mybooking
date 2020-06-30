@@ -3,7 +3,7 @@
 *   Template Name: MyBooking Pages
 *  	------------------------------
 *
-* 	Versión: 0.0.2
+* 	Versión: 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.3
@@ -12,10 +12,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-get_header();
-
-$container = get_theme_mod( 'mybooking_container_type' );
-?>
+get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -27,7 +24,7 @@ $container = get_theme_mod( 'mybooking_container_type' );
   </div>
 
   <div class="wrapper page_content mybooking_page" id="page-wrapper">
-    <div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+    <div class="container" id="content" tabindex="-1">
       <div class="row">
         <div class="col-md-6">
 

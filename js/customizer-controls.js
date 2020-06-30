@@ -23,33 +23,20 @@
 				'topbar__message_text',
 				'topbar__message_link',
 				'topbar__message_link_hover',
-				// NavBar
-				'navbar_bg',
-				'navbar_link_color',
-				'navbar_link_hover_color',
-				'navbar_link_active_color',
-				'navbar_dropdown_item_color',
-				'navbar_dropdown_item_active_color',
-				'navbar_link_collapse',
-				'navbar_toggler_icon',
 				// Header
 				'header_widget_title_color',
 				'header_widget_text_color',
-				'header_widget_link_color',	
-				// Footer
-				'footer_bg',
-				'footer_link_color',
-				'footer_link_hover_color'
+				'header_widget_link_color'
 			];
 
 			if ( show ) {
 			  // Show advanced colors
-				$.each( colorControlIds, function ( i, value ) {	
+				$.each( colorControlIds, function ( i, value ) {
 					$(wp.customize.control(value).selector).show();
 				} );
 			} else {
   			// Hide advanced colors
-			  $.each( colorControlIds, function ( i, value ) { 
+			  $.each( colorControlIds, function ( i, value ) {
 			  	$(wp.customize.control(value).selector).hide();
 				} );
 			}
@@ -61,10 +48,10 @@
   	 */
   	function showHideBookingFormsSection(show) {
   		if (show) {
-				wp.customize.section( 'mybooking_theme_selector_options').container.show();			
+				wp.customize.section( 'mybooking_theme_selector_options').container.show();
   		}
   		else {
- 				wp.customize.section( 'mybooking_theme_selector_options').container.hide();	  			
+ 				wp.customize.section( 'mybooking_theme_selector_options').container.hide();
   		}
   	}
 
@@ -81,7 +68,7 @@
 				showHideBookingFormsSection(value);
 			});
 		});
-		
+
 
   });
 

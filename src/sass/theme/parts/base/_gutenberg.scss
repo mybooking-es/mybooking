@@ -124,6 +124,7 @@
   border-radius: 0;
   background-color: var(--btn-bg-color);
   border-color: var(--btn-border-color);
+  border-radius: 3px;
   letter-spacing: 1px;
   font-weight: var(--btn-font-w);
   text-transform: var(--btn-text-transform);
@@ -263,6 +264,7 @@
 
 .wc-block-sort-select select {
   border: 1px solid #DDD;
+  border-radius: 3px;
   padding: .5rem;
 }
 
