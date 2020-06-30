@@ -56,8 +56,7 @@
                         <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=coverage.code%>" data-value="<%=coverage.code%>" <% if (extrasInShoppingCart[coverage.code] &&  extrasInShoppingCart[coverage.code] > 0) { %> checked="checked" <% } %>>
                         <label class="custom-control-label" for="checkboxl<%=coverage.code%>"></label>
                       </div>
-                    <% } %>
-                
+                    <% } %> 
             </div>
           </div>
         <% } %>
@@ -65,7 +64,7 @@
     </div>
   <% } %>
   <% if (extras && extras.length > 0) { %>
-    <div class="bg-white shadow-bottom p-3 mt-5">
+    <div class="bg-white shadow-bottom p-3 mt-3">
       <h4 class="brand-primary my-3"><?php _e('Extras', 'mybooking') ?></h4>
       <div class="extras-container">
         <% for (var idx=0;idx<extras.length;idx++) { %>

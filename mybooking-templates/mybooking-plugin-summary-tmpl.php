@@ -17,13 +17,15 @@
   <div class="product-detail-container d-none d-md-flex">
     <div class="product-detail-content">
       <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-        <% var booking_line = booking.booking_lines[idx]; %>
-        <h2 class="product-name"><%=booking_line.item_description_customer_translation%></h2>
-        <% if (booking.days > 0) { %>
-        <p class="detail-text"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=booking.days%> <?php _e('día/s','mybooking') ?></span></p>
-        <% } else if (booking.hours > 0) { %>
-        <p class="detail-text"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=booking.hours%> <?php _e('hora/s','mybooking') ?></span></p>
-        <% } %>
+      <% var booking_line = booking.booking_lines[idx]; %>
+      <h2 class="product-name"><%=booking_line.item_description_customer_translation%></h2>
+      <% if (booking.days > 0) { %>
+      <p class="detail-text"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=booking.days%>
+          <?php _e('día/s','mybooking') ?></span></p>
+      <% } else if (booking.hours > 0) { %>
+      <p class="detail-text"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=booking.hours%>
+          <?php _e('hora/s','mybooking') ?></span></p>
+      <% } %>
       <% } %>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>
@@ -43,13 +45,13 @@
     </div>
   </div>
 
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <div class="col-md-8">
-        <div class="col bg-white shadow-bottom py-3 px-3 mt-3">
+      <div class="col-md-8 offset-md-2">
+        <div class="col bg-white shadow-bottom py-3 px-3 mt-5">
           <h4 class="color-brand-primary my-3"><?php _e('Datos del cliente', 'mybooking') ?></h4>
           <div class="table-responsive">
-            <table class="table table-borderless">
+            <table class="table table-borderless table-striped">
               <tbody>
                 <tr>
                   <th scope="row"><?php _e('Nombre', 'mybooking') ?>:</th>
@@ -71,8 +73,8 @@
         <div id="reservation_form_container" class="col bg-white shadow-bottom py-3 px-3" style="display:none"></div>
       </div>
       <!-- Sidebar -->
-      <div class="col-md-4">
-        <div class="col sidebar bg-white shadow-bottom py-3 px-3 my-3">
+      <div class="col-md-8 offset-md-2">
+        <div class="col sidebar bg-white shadow-bottom py-3 px-3 mb-5">
           <h4 class="color-brand-primary my-3"><?php _e('Detalle de la reserva', 'mybooking') ?></h4>
           <h5><?php _e('Total producto', 'mybooking') ?></h5>
           <p class="color-gray-600"><%=configuration.formatCurrency(booking.item_cost)%></p>
