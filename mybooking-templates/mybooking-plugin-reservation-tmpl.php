@@ -78,7 +78,7 @@
         </div>
 
         <div class="col sidebar bg-white shadow-bottom py-3 px-3 mt-3">
-          <h4 class="color-brand-primary my-3"><?php _e('Detalle de la reserva', 'mybooking') ?></h4>
+          <h4 class="color-brand-primary my-3"><?php _e('Resumen', 'mybooking') ?></h4>
           <!-- Products -->
           <ul class="list-group list-group-flush">
             <% for (var idx=0;idx<booking.booking_lines.length;idx++) { %>
