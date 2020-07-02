@@ -14,7 +14,7 @@ if (typeof $ === "undefined") {
 // OWL CAROUSEL
 $(document).ready(function () {
   //Home page carousel
-  $('.-carrusel-portada').slick({
+  $(".-carrusel-portada").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -22,7 +22,7 @@ $(document).ready(function () {
   });
 
   // Testimonials
-  $('.-carrusel-testimonials').slick({
+  $(".-carrusel-testimonials").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,

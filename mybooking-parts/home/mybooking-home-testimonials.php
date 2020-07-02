@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 <?php $testimonial_carousel_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_testimonial_carousel_visibility" );
 if ($testimonial_carousel_visible) { ?>
 <div class="mybooking-home_testimonials">
-  <div class="container -carrusel-testimonials owl-theme">
+  <div class="container -carrusel-testimonials">
 
     <?php
     $testimonial_args = array('post_type' => 'testimonial');
@@ -36,7 +36,8 @@ if ($testimonial_carousel_visible) { ?>
       <div class="testimonial-item_avatar col-md-2">
 
         <?php if ( !has_post_thumbnail( $testimonial_item->ID ) ) { ?>
-        <img class="testimonial-item_image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/default-avatar.png">
+        <img class="testimonial-item_image"
+          src="<?php echo get_stylesheet_directory_uri(); ?>/images/default-avatar.png">
         <?php } else { ?>
         <?php $featured_img_url = get_the_post_thumbnail_url( $testimonial_item,'full' ); ?>
         <img class="testimonial-item_image" src="<?php echo esc_url( $featured_img_url ) ?>">

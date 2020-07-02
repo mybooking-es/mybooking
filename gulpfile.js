@@ -118,7 +118,7 @@ gulp.task("scripts", function () {
 
     `${paths.dev}/js/skip-link-focus-fix.js`,
     `${paths.dev}/js/vendor/mobile-detect/mobile-detect.js`,
-    `${paths.dev}/js/vendor/slick/slick.min.js`,
+    `${paths.dev}/js/vendor/slick/slick.js`,
     `${paths.dev}/js/vendor/jquery-eu-cookie/jquery-eu-cookie-law-popup.js`,
 
     // Adding currently empty javascript file to add on for your own themes´ customizations
