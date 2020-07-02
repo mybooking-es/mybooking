@@ -75,77 +75,120 @@
       <!-- Sidebar -->
       <div class="col-md-8 offset-md-2">
         <div class="col sidebar bg-white shadow-bottom py-3 px-3 mb-5">
-          <h4 class="color-brand-primary my-3"><?php _e('Detalle de la reserva', 'mybooking') ?></h4>
-          <h5><?php _e('Total producto', 'mybooking') ?></h5>
-          <p class="color-gray-600"><%=configuration.formatCurrency(booking.item_cost)%></p>
-
-          <% if (booking.booking_extras.length > 0) { %>
-          <hr>
-          <h5><?php _e('Extras', 'mybooking') ?></h5>
-          <ul class="list-group">
-            <% for (var idx=0; idx<booking.booking_extras.length; idx++) { %>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span class="extra-name"><%=booking.booking_extras[idx].extra_description_customer_translation%></span>
-              <span class="badge badge-primary badge-pill"><%=booking.booking_extras[idx].quantity%></span>
-              <span class="extra-price"><%=configuration.formatCurrency(booking.booking_extras[idx].extra_cost)%></span>
-            </li>
+          <h4 class="color-brand-primary my-3"><?php _e('Resumen', 'mybooking') ?></h4>
+          <!-- Products -->
+          <ul class="list-group list-group-flush">
+            <% for (var idx=0;idx<booking.booking_lines.length;idx++) { %>
+              <li class="list-group-item reservation-summary-card-detail">
+                 <br>
+                 <!-- Description -->
+                 <span class="extra-name"><b><%=booking.booking_lines[idx].item_description_customer_translation%></b></span>
+                 <!-- Quantity -->
+                 <% if (configuration.multipleProductsSelection) { %>
+                 <span class="badge badge-info"><%=booking.booking_lines[idx].quantity%></span>
+                 <% } %>
+                 <!-- Price -->
+                 <span class="product-amount float-right"><%=configuration.formatCurrency(booking.booking_lines[idx].item_cost)%></span>
+                 <!-- Offer/Promotion Code Appliance -->
+                 <% if (booking.booking_lines[idx].item_unit_cost_base != booking.booking_lines[idx].item_unit_cost) { %>
+                   <br>
+                   <div class="float-right">
+                     <!-- Offer -->
+                     <% if (typeof booking.booking_lines[idx].offer_name !== 'undefined' && 
+                            booking.booking_lines[idx].offer_name !== null && booking.booking_lines[idx].offer_name !== '') { %>
+                        <span class="badge badge-info"><%=booking.booking_lines[idx].offer_name%></span>
+                        <% if (booking.booking_lines[idx].offer_discount_type === 'percentage' && booking.booking_lines[idx].offer_value !== '') {%>
+                          <span class="text-danger"><%=parseInt(booking.booking_lines[idx].offer_value)%>&#37;</span>
+                        <% } %>
+                     <% } %>
+                     <!-- Promotion Code -->
+                     <% if (typeof booking.promotion_code !== 'undefined' && booking.promotion_code !== '' && 
+                            typeof booking.booking_lines[idx].promotion_code_value !== 'undefined' && booking.booking_lines.promotion_code_value !== '') { %>
+                        <span class="badge badge-success"><%=booking.promotion_code%></span>
+                        <% if (booking.booking_lines[idx].promotion_code_discount_type === 'percentage' && booking.booking_lines[idx].promotion_code !== '') {%>
+                          <span class="text-danger"><%=parseInt(booking.booking_lines[idx].promotion_code_value)%>&#37;</span>
+                        <% } %>
+                     <% } %>
+                     <span class="text-muted">
+                       <del><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost_base * booking.booking_lines[idx].quantity)%></del>
+                     </span>
+                   </div>   
+                 <% } %> 
+              </li>
             <% } %>
-          </ul>
+          </ul> 
+          <!-- Extras -->
+          <% if (booking.booking_extras.length > 0) { %>
+            <ul class="list-group">
+              <% for (var idx=0; idx<booking.booking_extras.length; idx++) { %>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="extra-name"><%=booking.booking_extras[idx].extra_description_customer_translation%></span>
+                <span class="badge badge-primary badge-pill"><%=booking.booking_extras[idx].quantity%></span>
+                <span class="extra-price"><%=configuration.formatCurrency(booking.booking_extras[idx].extra_cost)%></span>
+              </li>
+              <% } %>
+            </ul>
           <% } %>
+          <!-- Supplements and Totals -->
+          <% if (booking.time_from_cost > 0 || booking.pickup_place_cost > 0 || 
+                 booking.time_to_cost > 0 || booking.return_place_cost > 0 ||
+                 booking.driver_age_cost > 0 || booking.category_supplement_1_cost > 0
+                ) { %>          
+            <ul class="list-group">
+              <% if (booking.time_from_cost > 0) { %>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span class="extra-name"><?php _e('Suplemento hora de entrega', 'mybooking') ?></span>
+                  <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.time_from_cost)%></span>
+                </li>
+              <% } %>
+              <% if (booking.pickup_place_cost > 0) { %>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span class="extra-name"><?php _e('Suplemento lugar de entrega', 'mybooking') ?></span>
+                  <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.pickup_place_cost)%></span>
+                </li>
+              <% } %>
+              <% if (booking.time_to_cost > 0) { %>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span class="extra-name"><?php _e('Suplemento hora de devolución', 'mybooking') ?></span>
+                  <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.time_to_cost)%></span>
+                </li>
+              <% } %>
+              <% if (booking.return_place_cost > 0) { %>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span class="extra-name"><?php _e('Suplemento lugar de devolución', 'mybooking') ?></span>
+                  <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.return_place_cost)%></span>
+                </li>
+              <% } %>
 
-          <% if (booking.extras_cost > 0) { %>
-          <hr>
-          <h5><?php _e('Total extras', 'mybooking') ?></h5>
-          <p class="color-gray-600"><%=configuration.formatCurrency(booking.extras_cost)%></p>
+              <% if (booking.driver_age_cost > 0) { %>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span class="extra-name"><?php _e('Suplemento edad del conductor', 'mybooking') ?></span>
+                  <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.driver_age_cost)%></span>
+                </li>
+              <% } %>
+              <% if (booking.category_supplement_1_cost > 0) { %>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span class="extra-name"><?php _e('Suplemento combustible', 'mybooking') ?></span>
+                  <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.category_supplement_1_cost)%></span>
+                </li>
+              <% } %>
+            </ul>
           <% } %>
-
-          <% if (booking.time_from_cost > 0) { %>
           <hr>
-          <h6><?php _e('Suplemento hora de entrega', 'mybooking') ?></h6>
-          <p class="color-gray-600"><%=configuration.formatCurrency(booking.time_from_cost)%></p>
-          <% } %>
-
-          <% if (booking.pickup_place_cost > 0) { %>
-          <hr>
-          <h6><?php _e('Suplemento lugar de entrega', 'mybooking') ?></h6>
-          <p class="color-gray-600"><%=configuration.formatCurrency(booking.pickup_place_cost)%></p>
-          <% } %>
-
-          <% if (booking.time_to_cost > 0) { %>
-          <hr>
-          <h6><?php _e('Suplemento hora de devolución', 'mybooking') ?></h6>
-          <p class="color-gray-600"><%=configuration.formatCurrency(booking.time_to_cost)%></p>
-          <% } %>
-
-          <% if (booking.return_place_cost > 0) { %>
-          <hr>
-          <h6><?php _e('Suplemento lugar de devolución', 'mybooking') ?></h6>
-          <p class="color-gray-600"><%=configuration.formatCurrency(booking.return_place_cost)%></p>
-          <% } %>
-
-          <% if (booking.driver_age_cost > 0) { %>
-          <hr>
-          <h6><?php _e('Suplemento edad del conductor', 'mybooking') ?></h6>
-          <p class="color-gray-600"><%=configuration.formatCurrency(booking.driver_age_cost)%></p>
-          <% } %>
-
-          <% if (booking.category_supplement_1_cost > 0) { %>
-          <hr>
-          <h6><?php _e('Suplemento combustible', 'mybooking') ?></h6>
-          <p class="color-gray-600"><%=configuration.formatCurrency(booking.category_supplement_1_cost)%></p>
-          <% } %>
-
-          <hr>
-          <h5 class="color-brand-primary"><?php _e('Importe total', 'mybooking') ?></h5>
-          <p class="total-price"><%=configuration.formatCurrency(booking.total_cost)%></p>
-
-          <hr>
-          <h6><?php _e('Importe pagado', 'mybooking') ?></h5>
-            <p class="total-price"><%=configuration.formatCurrency(booking.total_paid)%></p>
-
-            <hr>
-            <h6><?php _e('Importe pendiente', 'mybooking') ?></h5>
-              <p class="total-price <% if (booking.total_pending > 0){ %>text-danger<%}%>"><%=configuration.formatCurrency(booking.total_pending)%></p>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span class="extra-name"><b><?php _e('Total', 'mybooking') ?></b></span>
+              <span class="product-amount pull-right"><b><%=configuration.formatCurrency(booking.total_cost)%></b></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span class="extra-name"><b><?php _e('Importe pagado', 'mybooking') ?></b></span>
+              <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.total_paid)%></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span class="extra-name"><b><?php _e('Importe pendiente', 'mybooking') ?></b></span>
+              <span class="product-amount pull-right <% if (booking.total_pending > 0){ %>text-danger<%}%>"><b><%=configuration.formatCurrency(booking.total_pending)%></b></span>
+            </li>
+          </ul> 
 
         </div><!-- /.col.sidebar -->
 

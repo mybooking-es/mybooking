@@ -278,11 +278,46 @@
           <% } %>
 
           <ul class="list-group p-3 summary-modal_list">
-            <!-- Product -->
-            <li class="list-group-item">
-              <span class="extra-name"><?php _e('Total producto', 'mybooking') ?></span>
-              <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.item_cost)%></span>
-            </li>
+            <!-- Products -->
+            <% for (var idx=0;idx<shopping_cart.items.length;idx++) { %>
+              <li class="list-group-item">
+                 <!-- Description -->
+                 <span class="extra-name"><b><%=shopping_cart.items[idx].item_description_customer_translation%></b></span>
+                 <!-- Quantity -->
+                 <% if (configuration.multipleProductsSelection) { %>
+                   <span class="badge badge-info"><%=shopping_cart.items[idx].quantity%></span>
+                 <% } %>
+                 <!-- Price -->
+                 <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%></span>
+              </li>
+              <!-- Offer/Promotion Code Appliance -->
+              <% if (shopping_cart.items[idx].item_unit_cost_base != shopping_cart.items[idx].item_unit_cost) { %>
+                <li class="list-group-item">
+                   <span class="extra-name">&nbsp;</span>
+                   <span class="extra-price">
+                     <!-- Offer -->
+                     <% if (typeof shopping_cart.items[idx].offer_name !== 'undefined' && 
+                            shopping_cart.items[idx].offer_name !== null && shopping_cart.items[idx].offer_name !== '') { %>
+                        <span class="badge badge-info"><%=shopping_cart.items[idx].offer_name%></span>
+                        <% if (shopping_cart.items[idx].offer_discount_type === 'percentage' && shopping_cart.items[idx].offer_value !== '') {%>
+                          <span class="text-danger"><%=parseInt(shopping_cart.items[idx].offer_value)%>&#37;</span>
+                        <% } %>
+                     <% } %>
+                     <!-- Promotion Code -->
+                     <% if (typeof shopping_cart.promotion_code !== 'undefined' && shopping_cart.promotion_code !== '' && 
+                            typeof shopping_cart.items[idx].promotion_code_value !== 'undefined' && shopping_cart.items.promotion_code_value !== '') { %>
+                        <span class="badge badge-success"><%=shopping_cart.promotion_code%></span>
+                        <% if (shopping_cart.items[idx].promotion_code_discount_type === 'percentage' && shopping_cart.items[idx].promotion_code !== '') {%>
+                          <span class="text-danger"><%=parseInt(shopping_cart.items[idx].promotion_code_value)%>&#37;</span>
+                        <% } %>
+                     <% } %>
+                     <span class="text-muted">
+                       <del><%=configuration.formatCurrency(shopping_cart.items[idx].item_unit_cost_base * shopping_cart.items[idx].quantity)%></del>
+                     </span>
+                   </span>   
+                </li>
+              <% } %> 
+            <% } %>
             <!-- Extras -->
             <% if (shopping_cart.extras.length > 0) { %>
             <% for (var idx=0; idx<shopping_cart.extras.length; idx++) { %>
