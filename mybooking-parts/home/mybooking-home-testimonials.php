@@ -25,15 +25,14 @@ if ($testimonial_carousel_visible) { ?>
     foreach($testimonial_items as $testimonial_item) :
     ?>
 
-    <blockquote class="testimonial-item row">
-      <div class="testimonial-item_message col-md-10">
-
+    <blockquote class="testimonial-item">
+      <div class="testimonial-item_message">
         <div class="testimonial-item_content ">
           <?php echo $testimonial_item->post_content; ?>
         </div>
-
       </div>
-      <div class="testimonial-item_avatar col-md-2">
+
+      <div class="testimonial-item_avatar">
 
         <?php if ( !has_post_thumbnail( $testimonial_item->ID ) ) { ?>
         <img class="testimonial-item_image"

@@ -25036,14 +25036,16 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
 
-.select2-container--bootstrap4.select2-container--disabled .select2-selection, .select2-container--bootstrap4.select2-container--disabled.select2-container--focus .select2-selection {
+.select2-container--bootstrap4.select2-container--disabled .select2-selection,
+.select2-container--bootstrap4.select2-container--disabled.select2-container--focus .select2-selection {
   background-color: #e9ecef;
   cursor: not-allowed;
   border-color: #ced4da;
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-.select2-container--bootstrap4.select2-container--disabled .select2-search__field, .select2-container--bootstrap4.select2-container--disabled.select2-container--focus .select2-search__field {
+.select2-container--bootstrap4.select2-container--disabled .select2-search__field,
+.select2-container--bootstrap4.select2-container--disabled.select2-container--focus .select2-search__field {
   background-color: transparent; }
 
 select.is-invalid ~ .select2-container--bootstrap4 .select2-selection,
@@ -25068,18 +25070,18 @@ form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-select
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem; }
 
-.select2-container--bootstrap4 .select2-dropdown .select2-results__option[aria-selected=true] {
+.select2-container--bootstrap4 .select2-dropdown .select2-results__option[aria-selected="true"] {
   background-color: #e9ecef; }
 
 .select2-container--bootstrap4 .select2-results__option--highlighted,
-.select2-container--bootstrap4 .select2-results__option--highlighted.select2-results__option[aria-selected=true] {
+.select2-container--bootstrap4 .select2-results__option--highlighted.select2-results__option[aria-selected="true"] {
   background-color: #007bff;
   color: #f8f9fa; }
 
-.select2-container--bootstrap4 .select2-results__option[role=group] {
+.select2-container--bootstrap4 .select2-results__option[role="group"] {
   padding: 0; }
 
-.select2-container--bootstrap4 .select2-results__option[role=group] .select2-results__options--nested .select2-results__option {
+.select2-container--bootstrap4 .select2-results__option[role="group"] .select2-results__options--nested .select2-results__option {
   padding-left: 1em; }
 
 .select2-container--bootstrap4 .select2-results > .select2-results__options {
@@ -25261,8 +25263,8 @@ these properties do not need to be edited */
   --product-detail-dates-text: var(--gray-500);
   --product-detail-group-name: var(--gray-900);
   --product-detail-duration-text: var(--gray-900);
-  --margin-for-message: 30px;
-  --margin-for-message-active: 71px; }
+  --margin-for-message: 0;
+  --margin-for-message-active: 40px; }
 
 @font-face {
   font-family: "Inter";
@@ -27223,7 +27225,18 @@ body .eupopup-style-compact .eupopup-button {
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem 0;
-  margin: 0; }
+  margin: 0;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .testimonial-item_message {
   display: -webkit-box;
@@ -27254,36 +27267,65 @@ body .eupopup-style-compact .eupopup-button {
   font-weight: 900;
   background-color: transparent; }
 
-@media (max-width: 575.98px) {
-  .testimonial-item_content {
-    margin-left: 0; }
-  .testimonial-item_content:before {
-    position: relative;
-    margin: 0 auto;
-    margin-left: -13.93px; } }
+.testimonial-item_image {
+  max-height: 80px;
+  margin-bottom: 0.5rem; }
 
 .testimonial-item_quote {
   max-height: 20px;
   margin-top: -5px; }
 
 .testimonial-item_avatar {
-  text-align: center; }
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .testimonial-item_avatar img {
+    max-width: 50px; }
+
+.testimonial-item_avatar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%; }
+
+.testimonial-item_message {
+  margin-bottom: 0; }
+
+.testimonial-item_quote {
+  max-height: 20px; }
 
 .testimonial-item_image {
-  max-height: 80px;
-  margin-bottom: 0.5rem; }
+  max-height: 50px; }
 
-@media (min-width: 578px) {
+@media (min-width: 768px) {
+  .testimonial-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
   .testimonial-item_content {
-    max-width: 95%;
+    width: 80%;
     padding: 0;
     text-align: left; }
-  .testimonial-item_message {
-    margin-bottom: 0; }
-  .testimonial-item_quote {
-    max-height: 20px; }
-  .testimonial-item_image {
-    max-height: 50px; } }
+    .testimonial-item_content p {
+      padding-left: 30px; } }
+
+@media (max-width: 767.98px) {
+  .testimonial-item_content:before {
+    position: relative;
+    margin: 0 auto;
+    margin-left: -13.93px; } }
 
 .icons-wrapper {
   display: -webkit-box;
@@ -27633,7 +27675,7 @@ This is the structure of the selector form
     .flex-form-item select:focus {
       border: 1px solid var(--gray-500); }
 
-.flex-icon {
+.flex-icon, .flex-icon-absolute {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27642,13 +27684,23 @@ This is the structure of the selector form
           align-items: center;
   font-size: 1rem;
   background-color: var(--white);
-  padding: 0.8rem;
+  padding: 0.6rem;
   height: var(--form-control-height);
   color: var(--gray-700);
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border: 1px solid var(--gray-500);
   border-right: none; }
+
+.flex-icon-absolute {
+  position: absolute;
+  border-left: none;
+  border-right: 1px solid var(--gray-500);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  width: 40px; }
 
 .form_selector-select_label_wrap {
   width: 100%;
@@ -27769,12 +27821,9 @@ form[name="search_form"] .flex-form-item {
 
 button.widget_another_pickup_place_group_close,
 button.widget_another_return_place_group_close {
-  position: relative;
-  float: right; }
-
-div#another_pickup_place_group,
-div#another_return_place_group {
-  height: var(--form-control-height); }
+  position: absolute;
+  right: 40px;
+  top: 0; }
 
 .modal .flex-form {
   background-color: var(--modal-selector-bg); }
@@ -28052,14 +28101,16 @@ div#another_return_place_group {
     overflow: hidden;
     color: var(--card-product-name-color);
     font-weight: 600;
-    font-size: 1rem; }
+    font-size: 1rem;
+    max-width: 150px; }
   .card-static_header h3.card-static_product-short-description, .card-static_header-catalog h3.card-static_product-short-description {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     color: var(--gray-500);
     font-weight: 400;
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    max-width: 150px; }
 
 .card-static_header-catalog {
   width: 100%; }
@@ -28820,7 +28871,9 @@ a.magic-button.btn {
         -ms-flex-direction: row;
             flex-direction: row; }
     .reservation-summary-item span {
-      float: left; } }
+      float: left; }
+  .overflow-ellipsis {
+    max-width: 300px; } }
 
 @media (max-width: 991.98px) {
   .bold-on-mobile {

@@ -90,6 +90,9 @@
       float: left;
     }
   }
+  .overflow-ellipsis {
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 991.98px) {

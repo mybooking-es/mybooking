@@ -29,10 +29,6 @@ if ( $footer_layout == 0 ) { ?>
 </div>
 
 <?php get_template_part( 'mybooking-parts/site/mybooking-google-analytics' ) ?>
-
-<!-- slick carousell -->
-<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-
 <?php wp_footer(); ?>
 
 <?php

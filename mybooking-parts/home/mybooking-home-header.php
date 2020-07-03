@@ -66,9 +66,7 @@ if ($home_header_visible) { ?>
     <?php $first = true; ?>
     <?php foreach( $carousel_items as $carousel_item ) :  ?>
     <div class="carrusel-item" <?php if (!$first) {?>style="display:none" <?php }?>>
-      <div>
-        <img src="<?php echo $carousel_item ?>">
-      </div>
+      <img src="<?php echo $carousel_item ?>">
     </div>
     <?php $first = false; ?>
     <?php endforeach; ?>
@@ -152,7 +150,6 @@ if ($home_header_visible) { ?>
     </div>
   </div>
 </div>
-<span class="home-header_sticky-breakpoint">
-  </div>
+<span class="home-header_sticky-breakpoint"></div>
 
   <?php } ?>
