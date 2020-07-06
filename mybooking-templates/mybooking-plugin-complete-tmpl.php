@@ -56,7 +56,7 @@
                         <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=coverage.code%>" data-value="<%=coverage.code%>" <% if (extrasInShoppingCart[coverage.code] &&  extrasInShoppingCart[coverage.code] > 0) { %> checked="checked" <% } %>>
                         <label class="custom-control-label" for="checkboxl<%=coverage.code%>"></label>
                       </div>
-                    <% } %> 
+                    <% } %>
             </div>
           </div>
         <% } %>
@@ -296,7 +296,7 @@
                    <span class="extra-name">&nbsp;</span>
                    <span class="extra-price">
                      <!-- Offer -->
-                     <% if (typeof shopping_cart.items[idx].offer_name !== 'undefined' && 
+                     <% if (typeof shopping_cart.items[idx].offer_name !== 'undefined' &&
                             shopping_cart.items[idx].offer_name !== null && shopping_cart.items[idx].offer_name !== '') { %>
                         <span class="badge badge-info"><%=shopping_cart.items[idx].offer_name%></span>
                         <% if (shopping_cart.items[idx].offer_discount_type === 'percentage' && shopping_cart.items[idx].offer_value !== '') {%>
@@ -304,7 +304,7 @@
                         <% } %>
                      <% } %>
                      <!-- Promotion Code -->
-                     <% if (typeof shopping_cart.promotion_code !== 'undefined' && shopping_cart.promotion_code !== '' && 
+                     <% if (typeof shopping_cart.promotion_code !== 'undefined' && shopping_cart.promotion_code !== '' &&
                             typeof shopping_cart.items[idx].promotion_code_value !== 'undefined' && shopping_cart.items.promotion_code_value !== '') { %>
                         <span class="badge badge-success"><%=shopping_cart.promotion_code%></span>
                         <% if (shopping_cart.items[idx].promotion_code_discount_type === 'percentage' && shopping_cart.items[idx].promotion_code !== '') {%>
@@ -314,9 +314,9 @@
                      <span class="text-muted">
                        <del><%=configuration.formatCurrency(shopping_cart.items[idx].item_unit_cost_base * shopping_cart.items[idx].quantity)%></del>
                      </span>
-                   </span>   
+                   </span>
                 </li>
-              <% } %> 
+              <% } %>
             <% } %>
             <!-- Extras -->
             <% if (shopping_cart.extras.length > 0) { %>
@@ -410,16 +410,16 @@
       <% if (sales_process.payment_methods.paypal_standard && sales_process.payment_methods.tpv_virtual) { %>
         <!-- The payment method will be selected later -->
         <input type="hidden" name="payment" value="none">
-      <% } else if (sales_process.payment_methods.paypal_standard) { %>   
+      <% } else if (sales_process.payment_methods.paypal_standard) { %>
         <!-- Fixed paypal standard -->
         <input type="hidden" name="payment" value="paypal_standard">
       <% } else  if (sales_process.payment_methods.tpv_virtual) { %>
         <!-- Fixed tpv -->
-        <input type="hidden" name="payment" value="<%=sales_process.payment_methods.tpv_virtual%>">  
-      <% } %>  
+        <input type="hidden" name="payment" value="<%=sales_process.payment_methods.tpv_virtual%>">
+      <% } %>
     <% } else { %>
-      <input type="hidden" name="payment" value="none"> 
-    <% } %>   
+      <input type="hidden" name="payment" value="none">
+    <% } %>
 
     <!-- More than one option : request / pay on delivery / pay -->
 
