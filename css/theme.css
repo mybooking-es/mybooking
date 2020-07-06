@@ -25322,7 +25322,8 @@ these properties do not need to be edited */
   font-display: swap;
   src: url("../fonts/Inter-Black.woff2?v=3.13") format("woff2"), url("../fonts/Inter-Black.woff?v=3.13") format("woff"); }
 
-html {
+html,
+body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
@@ -25339,9 +25340,6 @@ html {
 body {
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
   font-family: var(--font-body);
   font-size: 16px;
   background-color: var(--body-bg);
@@ -28777,7 +28775,7 @@ a.magic-button.btn {
   background-color: var(--sticky-bar-bg); }
 
 .sticky-top {
-  width: 100%;
+  max-width: 100%;
   z-index: 25; }
 
 .reservation-summary-sticky {
@@ -28786,6 +28784,8 @@ a.magic-button.btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0.6rem 1rem;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
@@ -28879,6 +28879,17 @@ a.magic-button.btn {
   .bold-on-mobile {
     font-weight: 700; } }
 
+@media (max-width: 575.98px) {
+  .reservation-summary-sticky {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .overflow-ellipsis {
+    max-width: 100px;
+    font-weight: 400; }
+  .reservation-summary-item p {
+    font-size: 13px; } }
+
 .complete-summary-sticky-wrapper {
   text-align: center;
   background-color: var(--sticky-bar-bg); }
@@ -28928,11 +28939,6 @@ a.magic-button.btn {
       -ms-flex-align: center;
           align-items: center; }
 
-.complete-summary-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
 .total-title {
   color: var(--gray-500);
   font-weight: 700;
@@ -28962,6 +28968,11 @@ a.magic-button.btn {
   .complete-button:first-child {
     margin-right: 2rem; }
 
+.complete-summary-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .complete-summary-item_price {
   font-weight: 800;
   font-size: 1.7rem;
@@ -28970,6 +28981,15 @@ a.magic-button.btn {
 
 .modify-dates-button {
   margin-left: 2rem; }
+
+@media (max-width: 575.98px) {
+  .total-title {
+    display: none; }
+  .complete-summary-item_price {
+    font-weight: 700;
+    font-size: 1.2rem; }
+  .complete-button:first-child {
+    margin-right: 0.5rem; } }
 
 .modal-body.summary-modal {
   padding: 0;

@@ -8,13 +8,14 @@
 }
 // sticky bar choose product & complete
 .sticky-top {
-  width: 100%;
+  max-width: 100%;
   z-index: 25;
 }
 .reservation-summary-sticky {
   margin: 0 auto;
   max-width: 1140px;
   display: flex;
+  flex-wrap: wrap;
   padding: 0.6rem 1rem;
   justify-content: space-around;
 }
@@ -98,5 +99,20 @@
 @media (max-width: 991.98px) {
   .bold-on-mobile {
     font-weight: 700;
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .reservation-summary-sticky {
+    justify-content: flex-end;
+  }
+  .overflow-ellipsis {
+    max-width: 100px;
+    font-weight: 400;
+  }
+  .reservation-summary-item {
+    p {
+      font-size: 13px;
+    }
   }
 }

@@ -38,9 +38,7 @@
   padding-top: 15px;
   align-items: center;
 }
-.complete-summary-price {
-  display: flex;
-}
+
 .total-title {
   color: var(--gray-500);
   font-weight: 700;
@@ -67,7 +65,9 @@
     margin-right: 2rem;
   }
 }
-
+.complete-summary-price {
+  display: flex;
+}
 .complete-summary-item_price {
   font-weight: 800;
   font-size: 1.7rem;
@@ -77,4 +77,18 @@
 
 .modify-dates-button {
   margin-left: 2rem;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .total-title {
+    display: none;
+  }
+  .complete-summary-item_price {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .complete-button:first-child {
+    margin-right: 0.5rem;
+  }
 }
