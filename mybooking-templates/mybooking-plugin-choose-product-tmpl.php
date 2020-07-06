@@ -13,35 +13,35 @@
 <!-- Summary Sticky -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="reservation-summary-sticky-wrapper">
-      <div class="reservation-summary-sticky">
-        <div class="reservation-summary-item">
-          <!-- Delivery -->
-          <p class="overflow-ellipsis">
-            <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
-          </p>
-          <p><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></p>
-        </div>
-        <div class="reservation-summary-separator">
-          <i class="fa fa-long-arrow-right"></i>
-        </div>
-        <div class="reservation-summary-item">
-          <!-- Collection (en móbil muestra lugar sólo cuando es diferente) -->
-          <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
-            <p class="overflow-ellipsis">
-              <span class="overflow-ellipsis"><%=shopping_cart.return_place_customer_translation%></span>
-            </p>
-          <% } else { %>
-            <p class="overflow-ellipsis">
-              <span
-                class="d-none d-lg-block overflow-ellipsis"><%=shopping_cart.return_place_customer_translation%></span>
-            </p>
-          <% } %>
-          <p><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></p>
-        </div>
-        <!-- Button trigger modal -->
-        <button id="modify_reservation_button" class="modify-button"><?php _e('MODIFICAR','mybooking') ?></button>
+    <div class="reservation-summary-sticky">
+      <div class="reservation-summary-item">
+        <!-- Delivery -->
+        <p class="overflow-ellipsis">
+          <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
+        </p>
+        <p><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></p>
       </div>
+      <div class="reservation-summary-separator">
+        <i class="fa fa-long-arrow-right"></i>
+      </div>
+      <div class="reservation-summary-item">
+        <!-- Collection (en móbil muestra lugar sólo cuando es diferente) -->
+        <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
+          <p class="overflow-ellipsis">
+            <span class="overflow-ellipsis"><%=shopping_cart.return_place_customer_translation%></span>
+          </p>
+        <% } else { %>
+          <p class="overflow-ellipsis">
+            <span
+              class="d-none d-lg-block overflow-ellipsis"><%=shopping_cart.return_place_customer_translation%></span>
+          </p>
+        <% } %>
+        <p><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></p>
+      </div>
+      <!-- Button trigger modal -->
+      <button id="modify_reservation_button" class="modify-button"><?php _e('MODIFICAR','mybooking') ?></button>
     </div>
+  </div>
 </script>
 
 <!-- Static cards -->

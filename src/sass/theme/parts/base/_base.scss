@@ -2,7 +2,8 @@
 // Base Rules
 // ==========================================================================
 
-html {
+html,
+body {
   box-sizing: border-box;
   overflow-x: hidden;
   position: relative;
@@ -17,9 +18,7 @@ html {
 body {
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
+
   font-family: var(--font-body);
   font-size: 16px;
   background-color: var(--body-bg);

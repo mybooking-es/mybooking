@@ -17,10 +17,10 @@ defined( 'ABSPATH' ) || exit; ?>
 
 if ( $footer_layout == 0 ) { ?>
 
-	<footer class="footer" id="wrapper-footer">
-	  <div class="container">
-	    <?php get_template_part('mybooking-parts/mybooking-footer');?>
-	</footer>
+<footer class="footer" id="wrapper-footer">
+  <div class="container">
+    <?php get_template_part('mybooking-parts/mybooking-footer');?>
+</footer>
 </div>
 
 <?php } ?>
@@ -48,8 +48,8 @@ if ( $footer_layout == 0 ) { ?>
 	}
  ?>
 
-	<!-- Back top link -->
-	<a href="#0" class="cd-top">Top</a>
+<!-- Back top link -->
+<a href="#0" class="cd-top">Top</a>
 </body>
 
 </html>

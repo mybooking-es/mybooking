@@ -65,10 +65,10 @@ if ($home_header_visible) { ?>
     <?php $carousel_items = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_carrousel_bg' ); ?>
     <?php $first = true; ?>
     <?php foreach( $carousel_items as $carousel_item ) :  ?>
-      <div class="carrusel-item" <?php if (!$first) {?>style="display:none"<?php }?>>
-        <img src="<?php echo $carousel_item ?>">
-      </div>
-      <?php $first = false; ?>
+    <div class="carrusel-item" <?php if (!$first) {?>style="display:none" <?php }?>>
+      <img src="<?php echo $carousel_item ?>">
+    </div>
+    <?php $first = false; ?>
     <?php endforeach; ?>
   </div>
 

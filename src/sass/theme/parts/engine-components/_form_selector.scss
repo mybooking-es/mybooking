@@ -151,13 +151,24 @@ This is the structure of the selector form
   align-items: center;
   font-size: 1rem;
   background-color: var(--white);
-  padding: 0.8rem;
+  padding: 0.6rem;
   height: var(--form-control-height);
   color: var(--gray-700);
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border: 1px solid var(--gray-500);
   border-right: none;
+}
+.flex-icon-absolute {
+  @extend .flex-icon;
+  position: absolute;
+  border-left: none;
+  border-right: 1px solid var(--gray-500);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  width: 40px;
 }
 
 // Select wrapper for showing the arrow
@@ -280,12 +291,12 @@ form[name="search_form"] .flex-form-item {
 // Solves form close button displacement
 button.widget_another_pickup_place_group_close,
 button.widget_another_return_place_group_close {
-  position: relative;
-  float: right;
+  position: absolute;
+  right: 40px;
+  top: 0;
 }
 div#another_pickup_place_group,
 div#another_return_place_group {
-  height: var(--form-control-height);
 }
 
 // Modify reservation form selector inside modal
