@@ -25322,8 +25322,7 @@ these properties do not need to be edited */
   font-display: swap;
   src: url("../fonts/Inter-Black.woff2?v=3.13") format("woff2"), url("../fonts/Inter-Black.woff?v=3.13") format("woff"); }
 
-html,
-body {
+html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
@@ -25340,6 +25339,9 @@ body {
 body {
   height: 100%;
   width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
   font-family: var(--font-body);
   font-size: 16px;
   background-color: var(--body-bg);
@@ -28081,6 +28083,10 @@ button.widget_another_return_place_group_close {
       color: var(--white);
       cursor: pointer; }
 
+.card-static-not-available {
+  font-size: 13px;
+  margin-bottom: 0; }
+
 .card-static_header, .card-static_header-catalog {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -28552,8 +28558,12 @@ a.magic-button.btn {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-.product-detail-image img {
-  max-width: 400px; }
+.product-detail-image {
+  max-width: 100%; }
+
+@media (min-width: 576px) {
+  .product-detail-image {
+    max-width: 400px; } }
 
 .detail-text {
   font-weight: 200;

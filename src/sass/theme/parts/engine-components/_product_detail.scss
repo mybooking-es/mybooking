@@ -25,11 +25,14 @@
   flex-direction: column;
 }
 .product-detail-image {
-  img {
+  max-width: 100%;
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .product-detail-image {
     max-width: 400px;
   }
 }
-
 .detail-text {
   font-weight: 200;
   line-height: 1.2;
