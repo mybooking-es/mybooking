@@ -714,6 +714,26 @@
           placeholder="<%=configuration.escapeHtml("<?php _e('Hora prevista', 'mybooking') ?>")%>" value="<%=booking.flight_time%>" maxlength="5">
       </div>
     </div>
+
+    <h4 class="brand-primary my-3"><?php _e('Vuelo de regreso', 'mybooking') ?></h4>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="flight_company_departure"><?php _e('Compañia', 'mybooking') ?></label>
+        <input class="form-control" id="flight_company_departure" name="flight_company_departure" type="text"
+          placeholder="<%=configuration.escapeHtml("<?php _e('Compañia', 'mybooking') ?>")%>" value="<%=booking.flight_company_departure%>">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="flight_number_departure"><?php _e('Número de vuelo', 'mybooking') ?></label>
+        <input class="form-control" id="flight_number_departure" name="flight_number_departure" type="text"
+          placeholder="<%=configuration.escapeHtml("<?php _e('Número de vuelo', 'mybooking') ?>")%>" value="<%=booking.flight_number_departure%>">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="flight_time_departure"><?php _e('Hora prevista', 'mybooking') ?></label>
+        <input class="form-control" id="flight_time_departure" name="flight_time_departure" type="text"
+          placeholder="<%=configuration.escapeHtml("<?php _e('Hora prevista', 'mybooking') ?>")%>" value="<%=booking.flight_time_departure%>">
+      </div>
+    </div>
+
     <hr>
     <div class="form-row">
       <div class="form-group col-md-12">
