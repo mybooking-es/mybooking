@@ -459,7 +459,12 @@
             <div class="form-row">
               <div class="form-group col-md-12">
                 <label for="payments_paypal_standard">
-                  <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;<?php _e('Acepto los términos y condiciones y la política de privacidad','mybooking') ?>
+                  <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;
+                  <?php if ( empty($args['terms_and_conditions']) ) { ?>
+                    <?php echo _x( 'He leído y acepto los términos y condiciones y la política de privacidad','mybooking' ) ?>
+                  <?php } else { ?>  
+                    <?php printf( _x( 'He leído y acepto los <a href="%s" target="_blank">términos y condiciones y la política de privacidad</a>', 'mybooking' ), $args['terms_and_conditions'] ) ?>
+                  <?php } ?>  
                 </label>
               </div>
             </div>
@@ -484,7 +489,12 @@
                   <div class="form-row">
                     <div class="form-group col-md-12">
                       <label for="payments_paypal_standard">
-                        <input type="checkbox" id="conditions_read_payment_on_delivery" name="conditions_read_payment_on_delivery">&nbsp;<?php _e('Acepto los términos y condiciones y la política de privacidad','mybooking') ?>
+                        <input type="checkbox" id="conditions_read_payment_on_delivery" name="conditions_read_payment_on_delivery">&nbsp;
+                        <?php if ( empty($args['terms_and_conditions']) ) { ?>
+                          <?php echo _x( 'He leído y acepto los términos y condiciones y la política de privacidad', 'renting_complete', 'mybooking' ) ?>
+                        <?php } else { ?>  
+                          <?php printf( _x( 'He leído y acepto los <a href="%s" target="_blank">términos y condiciones y la política de privacidad</a>', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ?>
+                        <?php } ?>  
                       </label>
                     </div>
                   </div>
@@ -542,7 +552,12 @@
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="payments_paypal_standard">
-                      <input type="checkbox" id="conditions_read_pay_now" name="conditions_read_pay_now">&nbsp;<?php _e('Acepto los términos y condiciones y la política de privacidad','mybooking') ?>
+                      <input type="checkbox" id="conditions_read_pay_now" name="conditions_read_pay_now">&nbsp;
+                      <?php if ( empty($args['terms_and_conditions']) ) { ?>
+                        <?php echo _x( 'He leído y acepto los términos y condiciones y la política de privacidad', 'renting_complete', 'mybooking' ) ?>
+                      <?php } else { ?>  
+                        <?php printf( _x( 'He leído y acepto los <a href="%s" target="_blank">términos y condiciones y la política de privacidad</a>', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ?>
+                      <?php } ?>  
                     </label>
                   </div>
                 </div>
