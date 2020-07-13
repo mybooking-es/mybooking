@@ -2,117 +2,206 @@
 // =====  STICKY-BAR IN CHOOSE PRODUCT
 // ===================================================
 
-.reservation-summary-sticky-wrapper {
-  text-align: center;
-  background-color: var(--sticky-bar-bg);
-}
 // sticky bar choose product & complete
+// common clases for pickup == return & special clases for pickup != return inside sandwitch-wrapper
 .sticky-top {
   max-width: 100%;
   z-index: 25;
 }
+.separator {
+  display: none;
+}
+.reservation-summary-sticky-wrapper {
+  text-align: center;
+  background-color: var(--sticky-bar-bg);
+}
 .reservation-summary-sticky {
-  margin: 0 auto;
-  max-width: 1140px;
+  justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
-  padding: 0.6rem 1rem;
-  justify-content: space-around;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.reservation-summary_pickup_place {
+  color: var(--sticky-bar-color);
+  display: flex;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 10px 0 10px;
+}
+.reservation-summary_return_place {
+  display: none;
+}
+.reservation-summary_pickup_date {
+  color: var(--sticky-bar-color);
+  display: flex;
+  flex-wrap: nowrap;
+  font-weight: 300;
+  padding: 0 0 10px 10px;
+}
+.reservation-summary_return_date {
+  color: var(--sticky-bar-color);
+  display: flex;
+  flex-wrap: nowrap;
+  font-weight: 300;
+  justify-content: flex-end;
+  padding: 0 10px 10px 0;
 }
 .overflow-ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 200px;
-  font-weight: 600;
+  max-width: 100%;
+}
+.modify-button-wrapper {
+  border-top: 1px solid var(--gray-500);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
 }
 .modify-button {
-  margin-left: 1rem;
-  display: flex;
-  align-self: flex-end;
-  font-weight: 500;
+  height: 100%;
+  width: 100%;
+  font-weight: 300;
   text-transform: uppercase;
   background-color: transparent;
   color: var(--sticky-bar-link-color);
-  text-decoration: underline;
   &:hover {
     color: var(--sticky-bar-link-color-hover);
   }
-  &:first-child {
-    margin-right: 2rem;
-  }
 }
-
-.reservation-summary-item {
+// =============================
+// ===   Pickup != return mobile
+// =============================
+.sandwitch-wrapper {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  flex-direction: column;
-  p {
-    font-weight: 300;
-    text-align: left;
+  width: 100%;
+  .reservation-summary_pickup_place {
+    width: 70%;
+    padding: 10px 0 0 10px;
+  }
+  .reservation-summary_return_place {
     color: var(--sticky-bar-color);
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
+    display: flex;
     text-transform: uppercase;
-    &:first-child {
-      margin-right: 1rem;
-    }
-  }
-  .place-title {
-    color: var(--gray-500);
+    font-size: 1rem;
     font-weight: 700;
+    width: 70%;
+    padding: 0 0 10px 10px;
   }
-}
-
-.reservation-summary-separator {
-  width: 3rem;
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: center;
-  i {
-    color: var(--sticky-bar-arrow-icon-color);
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .modify-button {
-    button {
-      margin-left: 3rem;
-    }
-  }
-  .reservation-summary-item {
-    align-items: center;
-    flex-direction: row;
-    span {
-      float: left;
-    }
-  }
-  .overflow-ellipsis {
-    max-width: 300px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .bold-on-mobile {
-    font-weight: 700;
-  }
-}
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  .reservation-summary-sticky {
+  .reservation-summary_pickup_date {
+    width: 30%;
+    padding: 10px 10px 0 0;
     justify-content: flex-end;
   }
-  .overflow-ellipsis {
-    max-width: 100px;
-    font-weight: 400;
+  .reservation-summary_return_date {
+    width: 30%;
+    padding: 0 10px 10px 0;
   }
-  .reservation-summary-item {
-    p {
-      font-size: 13px;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .reservation-summary-sticky {
+    justify-content: initial;
+    padding: 10px 0;
+  }
+  // pickup == return desktop
+  .modify-button-wrapper {
+    margin: 0 10px 0 2rem;
+    padding: 0;
+    width: 100px;
+    border-top: none;
+  }
+  .push-to-the-right {
+    margin-left: auto;
+  }
+  // old long arrow
+  .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-500);
+    padding: 0 1rem;
+  }
+  .reservation-summary_pickup_place,
+  .reservation-summary_return_place {
+    color: var(--sticky-bar-color);
+    display: flex;
+    width: fit-content;
+    max-width: 23%;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0 10px;
+  }
+  .reservation-summary_return_place {
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+  .reservation-summary_pickup_date {
+    min-width: fit-content;
+    width: auto;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .reservation-summary_return_date {
+    min-width: fit-content;
+    width: auto;
+    padding: 0;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  // =============================
+  // ===   Pickup != return desktop
+  // =============================
+  .sandwitch-wrapper {
+    width: 40%;
+    justify-content: flex-end;
+    .reservation-summary_pickup_place {
+      padding: 0 10px;
+      width: 60%;
+      max-width: fit-content;
     }
+    .reservation-summary_return_place {
+      padding: 0 10px;
+      width: 60%;
+      max-width: fit-content;
+      justify-content: flex-start;
+    }
+    .reservation-summary_pickup_date {
+      width: auto; // reset width
+      padding: 0;
+      justify-content: flex-start;
+    }
+    .reservation-summary_return_date {
+      width: auto; // reset width
+      padding: 0;
+      text-align: left;
+      justify-content: flex-start;
+    }
+    &:first-child {
+      justify-content: flex-start;
+    }
+  }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .sandwitch-wrapper .reservation-summary_pickup_place {
+    width: 70%;
+  }
+  .reservation-summary_pickup_place,
+  .reservation-summary_return_place {
+    width: fit-content;
+    max-width: 28%;
+  }
+  .sandwitch-wrapper {
+    width: 40%;
   }
 }

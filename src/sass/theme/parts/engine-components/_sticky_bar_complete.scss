@@ -1,41 +1,13 @@
 // ==================================
 // ===== STICKY-BAR IN COMPLETE
 // ==================================
-.complete-summary-sticky-wrapper {
-  text-align: center;
-  background-color: var(--sticky-bar-bg);
-}
-.complete-summary-sticky {
-  margin: 0 auto;
-  max-width: 1140px;
-  padding: 0.6rem 1rem;
-  .modify-button {
-    button {
-      background-color: transparent;
-    }
-    i {
-      font-size: 2rem;
-      color: var(--sticky-bar-icons-color);
-      transition: 0.2s ease-in-out;
-      &:hover {
-        color: var(--sticky-bar-icons-color-hover);
-      }
-    }
-  }
-}
-.complete-summary-first-row {
+
+.complete-summary-row {
+  border-top: 1px solid var(--gray-500);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-.flex-dates {
-  display: flex;
-  flex-grow: 2;
-}
-.complete-summary-second-row {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 15px;
+  width: 100%;
+  padding-left: 10px;
   align-items: center;
 }
 
@@ -51,18 +23,18 @@
   display: flex;
 }
 .complete-button {
+  height: 50px;
   display: flex;
+  padding: 0 20px;
   align-self: flex-end;
-  font-weight: 500;
+  align-items: center;
+  font-weight: 300;
   text-transform: uppercase;
   background-color: transparent;
   color: var(--sticky-bar-link-color);
-  text-decoration: underline;
+  border-left: 1px solid var(--gray-500);
   &:hover {
     color: var(--sticky-bar-link-color-hover);
-  }
-  &:first-child {
-    margin-right: 2rem;
   }
 }
 .complete-summary-price {
@@ -74,21 +46,17 @@
   color: var(--sticky-bar-price-color);
   line-height: 0.8;
 }
-
 .modify-dates-button {
   margin-left: 2rem;
 }
-
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  .total-title {
-    display: none;
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .complete-summary-row {
+    border-top: none;
+    padding: 10px 0 0 10px;
   }
-  .complete-summary-item_price {
-    font-weight: 700;
-    font-size: 1.2rem;
-  }
-  .complete-button:first-child {
-    margin-right: 0.5rem;
+  .complete-button {
+    border-left: none;
+    height: auto;
   }
 }

@@ -31,7 +31,6 @@
                 <h6 class="lead"><%=coverage.name%></h6>
               </div>
               <div class="extras-text"><%=coverage.description%></div>
-
             </div>
             <div class="extras-right">
                     <p class="extras-price"><%= configuration.formatCurrency(coverage.unit_price)%></p>
@@ -111,7 +110,6 @@
   <% } %>
 </script>
 
-
 <!-- Script that shows the extra detail -->
 <script type="text/tmpl" id="script_extra_modal">
 
@@ -142,61 +140,91 @@
 
 </script>
 
-<!-- Reservation summary modal -->
+<!-- Sticky bar complete -->
 <script type="text/tmpl" id="script_reservation_summary_sticky">
-  <div class="complete-summary-sticky-wrapper">
-      <div class="complete-summary-sticky">
-        <div class="complete-summary-first-row">
-          <div class="flex-dates">
-            <div class="reservation-summary-item">
-              <!-- Delivery -->
-              <p class="overflow-ellipsis">
-                <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
-              </p>
-              <p><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></p>
+  <div class="reservation-summary-sticky-wrapper">
+    <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
+    <div class="reservation-summary-sticky">
+      <div class="sandwitch-wrapper">
+        <div class="reservation-summary_pickup_place">
+          <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
+        </div>
+        <div class="reservation-summary_pickup_date">
+          <span><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></span>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="sandwitch-wrapper push-to-the-right">
+        <div class="reservation-summary_return_place">
+          <span class="overflow-ellipsis">
+            <%=shopping_cart.return_place_customer_translation%>
+          </span>
+        </div>
+        <div class="reservation-summary_return_date">
+          <span><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></span>
+        </div>
+      </div>
+        <!-- Row for price & buttons -->
+        <div class="complete-summary-row">
+          <div class="complete-summary-price">
+            <div class="total-title"><?php _e('Total', 'mybooking') ?></div>
+            <div class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
             </div>
-            <div class="reservation-summary-separator">
-              <i class="fa fa-long-arrow-right"></i>
-            </div>
-            <div class="reservation-summary-item">
-              <!-- Collection (en móbil muestra lugar sólo cuando es diferente) -->
-              <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
-              <p class="overflow-ellipsis">
-                <span class="overflow-ellipsis"><%=shopping_cart.return_place_customer_translation%></span>
-              </p>
-              <% } else { %>
-              <p class="overflow-ellipsis">
-                <span
-                  class="overflow-ellipsis d-none d-lg-block"><%=shopping_cart.return_place_customer_translation%></span>
-              </p>
-              <% } %>
-              <p><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></p>
-            </div>
+          </div>
+
+          <div class="complete-buttons-wrapper">
+            <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
+              class="complete-button"><i class="fas fa-pen mr-2"></i><?php _e('Editar','mybooking') ?>
+            </button>
+            <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
+              <i class="fas fa-info-circle mr-2"></i><?php _e('Info','mybooking') ?>
+            </button>
           </div>
         </div>
+      </div>
 
-        <!-- second row -->
+    </div>
 
-          <div class="complete-summary-second-row">
-            <div class="complete-summary-price">
-              <div class="total-title"><?php _e('Total', 'mybooking') ?></div>
-              <div class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
-              </div>
-            </div>
+    <% } else { %>
 
-            <div class="complete-buttons-wrapper">
-                <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
-                  resumen
-                </button>
-                <button id="modify_reservation_button" data-toggle="modal"
-                  data-target="#modify_reservation_modal" class="complete-button"><?php _e('MODIFICAR','mybooking') ?>
-                </button>
+    <div class="reservation-summary-sticky">
+      <div class="reservation-summary_pickup_place">
+        <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
+      </div>
+      <div class="reservation-summary_pickup_date">
+        <span><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></span>
+      </div>
+      <div class="separator"></div>
+      <div class="reservation-summary_return_place d-none d-md-flex">
+        <span class="overflow-ellipsis">
+          <%=shopping_cart.return_place_customer_translation%>
+        </span>
+      </div>
+      <div class="reservation-summary_return_date">
+        <span><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></span>
+      </div>
+        <!-- Row for price & buttons -->
+        <div class="complete-summary-row">
+          <div class="complete-summary-price">
+            <div class="total-title"><?php _e('Total', 'mybooking') ?></div>
+            <div class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
             </div>
           </div>
-      </div>
-    </div>
-</script>
 
+          <div class="complete-buttons-wrapper">
+            <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
+              class="complete-button"><i class="fas fa-pen mr-2"></i><?php _e('Editar','mybooking') ?>
+            </button>
+            <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
+              <i class="fas fa-info-circle mr-2"></i><?php _e('Info','mybooking') ?>
+            </button>
+          </div>
+        </div>
+    </div>
+
+    <% } %>
+  </div>
+</script>
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="product-detail-container d--flex">
