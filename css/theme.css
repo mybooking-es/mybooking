@@ -25554,9 +25554,7 @@ label {
 .custom-icon-select {
   top: 16px; }
 
-.form-reservation-error {
-  color: var(--error) !important; }
-
+.form-reservation-error,
 input.form-reservation-error {
   color: var(--error) !important; }
 
@@ -27816,17 +27814,21 @@ This is the structure of the selector form
     font-size: 13px;
     color: var(--selector-sticky-labels-color); }
 
-form[name="search_form"] .flex-form-item {
-  border: 1px solid var(--gray-300); }
-
 button.widget_another_pickup_place_group_close,
-button.widget_another_return_place_group_close {
+button.widget_another_return_place_group_close,
+button.another_pickup_place_group_close,
+button.another_return_place_group_close {
   position: absolute;
   right: 40px;
   top: 0; }
 
+.another_pickup_place_group input {
+  border-right: 1px solid red !important; }
+
 .modal .flex-form {
-  background-color: var(--modal-selector-bg); }
+  background-color: var(--modal-selector-bg);
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem; }
   .modal .flex-form label {
     color: var(--modal-selector-label-color); }
 

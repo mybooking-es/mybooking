@@ -282,36 +282,24 @@ This is the structure of the selector form
   }
 }
 
-// Search form components
-
-form[name="search_form"] .flex-form-item {
-  border: 1px solid var(--gray-300);
-}
-
 // Solves form close button displacement
 button.widget_another_pickup_place_group_close,
-button.widget_another_return_place_group_close {
+button.widget_another_return_place_group_close,
+button.another_pickup_place_group_close,
+button.another_return_place_group_close {
   position: absolute;
   right: 40px;
   top: 0;
 }
-div#another_pickup_place_group,
-div#another_return_place_group {
+
+.another_pickup_place_group input {
+  border-right: 1px solid red !important  ;
 }
 
-// Modify reservation form selector inside modal
-.modal .custom-form input[type="text"],
-.custom-form textarea,
-.modal .flex-form-box .flex-form-item,
-.modal .custom-form .ui-autocomplete-input,
-.custom-form .uneditable-input,
-.custom-form input[type="password"],
-.custom-form textarea {
-  //  border: none !important;
-  //  border-radius: 0 !important;
-}
 .modal .flex-form {
   background-color: var(--modal-selector-bg);
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
   label {
     color: var(--modal-selector-label-color);
   }
