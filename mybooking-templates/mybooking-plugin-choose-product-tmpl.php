@@ -96,12 +96,12 @@
             <% } %>
             <% if (product.price != product.base_price) { %>
               <% if (product.offer_discount_type == 'percentage' || product.offer_discount_type == 'amount') { %>
-                <p class="card-static_discount"><%=new Number(product.offer_value)%>% <%=product.offer_name%><br>
-                <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small><span class="ml-2"><%=configuration.formatCurrency(product.price)%></span></p>
+                <p class="card-static_discount"><span class="badge badge-info"><%=new Number(product.offer_value)%>% <%=product.offer_name%></span><br>
+                <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small></p>
               <% } else if (typeof shoppingCart.promotion_code !== 'undefined' && shoppingCart.promotion_code !== null && shoppingCart.promotion_code !== '' &&
                             (product.promotion_code_discount_type == 'percentage' || product.promotion_code_discount_type == 'amount') ) { %>
-                <p class="card-static_discount"><%=new Number(product.promotion_code_value)%>% <%=shoppingCart.promotion_code%><br>
-                <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small><span class="ml-2"><%=configuration.formatCurrency(product.price)%></span></p>
+                <p class="card-static_discount"><span class="badge badge-success"><%=new Number(product.promotion_code_value)%>% <%=shoppingCart.promotion_code%></span><br>
+                <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small></p>
               <% } %>
             <% } %>
             
