@@ -26364,9 +26364,6 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
  * WIDGET AREAS
  * They stacks on small screens
  */
-.header-container_margin {
-  margin-top: 50px; }
-
 .home-header_content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26390,16 +26387,21 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   padding-right: 0 !important;
   min-width: 100%; }
 
-.mybooking-widget_header-left,
-.mybooking-widget_header-right {
-  padding: 1rem; }
-
 .home-alone:not(.form),
 .home-left:not(.form),
 .home-right:not(.form) {
   color: var(--white); }
 
+.mybooking-widget_header-left,
+.mybooking-widget_header-right {
+  padding: 1rem; }
+
 @media (min-width: 992px) {
+  .mybooking-widget_header-left,
+  .mybooking-widget_header-right {
+    padding: 1rem; }
+  .header-container_margin {
+    margin-top: 50px; }
   .home-header_content_container {
     position: absolute;
     left: 50%;
@@ -28814,7 +28816,8 @@ a.magic-button.btn {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 700;
-  padding: 10px 10px 0 10px; }
+  padding: 10px 10px 0 10px;
+  font-size: 0.8rem; }
 
 .reservation-summary_return_place {
   display: none; }
@@ -28827,7 +28830,8 @@ a.magic-button.btn {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   font-weight: 300;
-  padding: 0 0 10px 10px; }
+  padding: 0 0 10px 10px;
+  font-size: 0.8rem; }
 
 .reservation-summary_return_date {
   color: var(--sticky-bar-color);
@@ -28840,7 +28844,8 @@ a.magic-button.btn {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 0 10px 10px 0; }
+  padding: 0 10px 10px 0;
+  font-size: 0.8rem; }
 
 .overflow-ellipsis {
   text-overflow: ellipsis;
@@ -28862,6 +28867,7 @@ a.magic-button.btn {
 .modify-button {
   height: 100%;
   width: 100%;
+  font-size: 0.8rem;
   font-weight: 300;
   text-transform: uppercase;
   background-color: transparent;
@@ -28875,7 +28881,7 @@ a.magic-button.btn {
   display: flex;
   width: 100%; }
   .sandwitch-wrapper .reservation-summary_pickup_place {
-    width: 70%;
+    width: 65%;
     padding: 10px 0 0 10px; }
   .sandwitch-wrapper .reservation-summary_return_place {
     color: var(--sticky-bar-color);
@@ -28885,16 +28891,17 @@ a.magic-button.btn {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
-    width: 70%;
-    padding: 0 0 10px 10px; }
+    width: 65%;
+    padding: 0 0 10px 10px;
+    font-size: 0.8rem; }
   .sandwitch-wrapper .reservation-summary_pickup_date {
-    width: 30%;
+    width: 40%;
     padding: 10px 10px 0 0;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
   .sandwitch-wrapper .reservation-summary_return_date {
-    width: 30%;
+    width: 40%;
     padding: 0 10px 10px 0; }
 
 @media (min-width: 768px) {
@@ -28955,7 +28962,8 @@ a.magic-button.btn {
             align-items: center;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: flex-start; }
+            justify-content: flex-start;
+    font-size: 1rem; }
   .reservation-summary_return_date {
     min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
@@ -28968,12 +28976,10 @@ a.magic-button.btn {
             align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end; }
+            justify-content: flex-end;
+    font-size: 1rem; }
   .sandwitch-wrapper {
-    width: 40%;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
+    width: 40%; }
     .sandwitch-wrapper .reservation-summary_pickup_place {
       padding: 0 10px;
       width: 60%;
@@ -28986,38 +28992,26 @@ a.magic-button.btn {
       max-width: -webkit-fit-content;
       max-width: -moz-fit-content;
       max-width: fit-content;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; }
+      font-size: 1rem; }
     .sandwitch-wrapper .reservation-summary_pickup_date {
       width: auto;
       padding: 0;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; }
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
     .sandwitch-wrapper .reservation-summary_return_date {
       width: auto;
       padding: 0;
       text-align: left;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; }
-    .sandwitch-wrapper:first-child {
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; } }
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; } }
 
 @media (min-width: 992px) {
-  .sandwitch-wrapper .reservation-summary_pickup_place {
-    width: 70%; }
   .reservation-summary_pickup_place,
   .reservation-summary_return_place {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    max-width: 28%; }
-  .sandwitch-wrapper {
-    width: 40%; } }
+    max-width: 28%; } }
 
 .complete-summary-row {
   border-top: 1px solid var(--gray-500);
@@ -29034,12 +29028,21 @@ a.magic-button.btn {
           align-items: center; }
 
 .total-title {
-  color: var(--gray-500);
-  font-weight: 700;
-  text-align: left;
-  text-transform: uppercase;
-  line-height: 1;
-  margin-right: 1rem; }
+  display: none; }
+
+.complete-summary-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.complete-summary-price {
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--sticky-bar-price-color);
+  line-height: 0.8; }
 
 .complete-buttons-wrapper {
   display: -webkit-box;
@@ -29051,7 +29054,8 @@ a.magic-button.btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 20px;
+  font-size: 0.8rem;
+  padding: 0 15px;
   -ms-flex-item-align: end;
       align-self: flex-end;
   -webkit-box-align: center;
@@ -29065,27 +29069,30 @@ a.magic-button.btn {
   .complete-button:hover {
     color: var(--sticky-bar-link-color-hover); }
 
-.complete-summary-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.complete-summary-item_price {
-  font-weight: 800;
-  font-size: 1.7rem;
-  color: var(--sticky-bar-price-color);
-  line-height: 0.8; }
-
-.modify-dates-button {
-  margin-left: 2rem; }
-
 @media (min-width: 768px) {
+  .complete-sticky .sandwitch-wrapper {
+    width: 45%; }
+  .total-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: var(--gray-500);
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-right: 1rem; }
+  .complete-summary-item_price {
+    font-size: 1.3rem; }
   .complete-summary-row {
     border-top: none;
     padding: 10px 0 0 10px; }
   .complete-button {
     border-left: none;
-    height: auto; } }
+    height: auto;
+    font-size: 1rem; }
+  .complete-button:nth-child(2n) {
+    padding-right: 10px; } }
 
 .modal-body.summary-modal {
   padding: 0;

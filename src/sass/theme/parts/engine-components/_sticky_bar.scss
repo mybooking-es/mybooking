@@ -1,5 +1,5 @@
 // ===================================================
-// =====  STICKY-BAR IN CHOOSE PRODUCT
+// =====  STICKY-BAR CHOOSE PRODUCT
 // ===================================================
 
 // sticky bar choose product & complete
@@ -30,6 +30,7 @@
   font-size: 1rem;
   font-weight: 700;
   padding: 10px 10px 0 10px;
+  font-size: 0.8rem;
 }
 .reservation-summary_return_place {
   display: none;
@@ -40,6 +41,7 @@
   flex-wrap: nowrap;
   font-weight: 300;
   padding: 0 0 10px 10px;
+  font-size: 0.8rem;
 }
 .reservation-summary_return_date {
   color: var(--sticky-bar-color);
@@ -48,6 +50,7 @@
   font-weight: 300;
   justify-content: flex-end;
   padding: 0 10px 10px 0;
+  font-size: 0.8rem;
 }
 .overflow-ellipsis {
   text-overflow: ellipsis;
@@ -65,6 +68,7 @@
 .modify-button {
   height: 100%;
   width: 100%;
+  font-size: 0.8rem;
   font-weight: 300;
   text-transform: uppercase;
   background-color: transparent;
@@ -80,7 +84,7 @@
   display: flex;
   width: 100%;
   .reservation-summary_pickup_place {
-    width: 70%;
+    width: 65%;
     padding: 10px 0 0 10px;
   }
   .reservation-summary_return_place {
@@ -89,16 +93,17 @@
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
-    width: 70%;
+    width: 65%;
     padding: 0 0 10px 10px;
+    font-size: 0.8rem;
   }
   .reservation-summary_pickup_date {
-    width: 30%;
+    width: 40%;
     padding: 10px 10px 0 0;
     justify-content: flex-end;
   }
   .reservation-summary_return_date {
-    width: 30%;
+    width: 40%;
     padding: 0 10px 10px 0;
   }
 }
@@ -149,6 +154,7 @@
     padding: 0;
     align-items: center;
     justify-content: flex-start;
+    font-size: 1rem;
   }
   .reservation-summary_return_date {
     min-width: fit-content;
@@ -157,13 +163,13 @@
     margin-right: 10px;
     align-items: center;
     justify-content: flex-end;
+    font-size: 1rem;
   }
-  // =============================
-  // ===   Pickup != return desktop
-  // =============================
+  // =============================================================
+  // ===   Pickup != return Medium devices (tablets, 768px and up)
+  // =============================================================
   .sandwitch-wrapper {
     width: 40%;
-    justify-content: flex-end;
     .reservation-summary_pickup_place {
       padding: 0 10px;
       width: 60%;
@@ -173,40 +179,33 @@
       padding: 0 10px;
       width: 60%;
       max-width: fit-content;
-      justify-content: flex-start;
+      font-size: 1rem;
     }
     .reservation-summary_pickup_date {
       width: auto; // reset width
       padding: 0;
-      justify-content: flex-start;
+      flex-wrap: nowrap;
     }
     .reservation-summary_return_date {
       width: auto; // reset width
       padding: 0;
       text-align: left;
-      justify-content: flex-start;
-    }
-    &:first-child {
-      justify-content: flex-start;
+      flex-wrap: nowrap;
     }
   }
 }
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .sandwitch-wrapper .reservation-summary_pickup_place {
-    width: 70%;
-  }
   .reservation-summary_pickup_place,
   .reservation-summary_return_place {
     width: fit-content;
     max-width: 28%;
   }
-  .sandwitch-wrapper {
-    width: 40%;
-  }
 }
 
-// ===== STICKY-BAR COMPLETE
+// ======================
+// STICKY-BAR COMPLETE
+// =======================
 
 .complete-summary-row {
   border-top: 1px solid var(--gray-500);
@@ -217,12 +216,17 @@
   align-items: center;
 }
 .total-title {
-  color: var(--gray-500);
-  font-weight: 700;
-  text-align: left;
-  text-transform: uppercase;
-  line-height: 1;
-  margin-right: 1rem;
+  display: none;
+}
+.complete-summary-price {
+  display: flex;
+  align-items: center;
+}
+.complete-summary-price {
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--sticky-bar-price-color);
+  line-height: 0.8;
 }
 .complete-buttons-wrapper {
   display: flex;
@@ -230,7 +234,8 @@
 .complete-button {
   height: 50px;
   display: flex;
-  padding: 0 20px;
+  font-size: 0.8rem;
+  padding: 0 15px;
   align-self: flex-end;
   align-items: center;
   font-weight: 300;
@@ -242,20 +247,26 @@
     color: var(--sticky-bar-link-color-hover);
   }
 }
-.complete-summary-price {
-  display: flex;
-}
-.complete-summary-item_price {
-  font-weight: 800;
-  font-size: 1.7rem;
-  color: var(--sticky-bar-price-color);
-  line-height: 0.8;
-}
-.modify-dates-button {
-  margin-left: 2rem;
-}
+
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .complete-sticky {
+    .sandwitch-wrapper {
+      width: 45%;
+    }
+  }
+  .total-title {
+    display: flex;
+    color: var(--gray-500);
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-right: 1rem;
+  }
+  .complete-summary-item_price {
+    font-size: 1.3rem;
+  }
   .complete-summary-row {
     border-top: none;
     padding: 10px 0 0 10px;
@@ -263,5 +274,9 @@
   .complete-button {
     border-left: none;
     height: auto;
+    font-size: 1rem;
+  }
+  .complete-button:nth-child(2n) {
+    padding-right: 10px;
   }
 }
