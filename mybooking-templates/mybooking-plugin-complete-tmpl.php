@@ -33,29 +33,29 @@
               <div class="extras-text"><%=coverage.description%></div>
             </div>
             <div class="extras-right">
-                    <p class="extras-price"><%= configuration.formatCurrency(coverage.unit_price)%></p>
-                    <% if (coverage.max_quantity > 1) { %>
-                      <div class="input-group input-group-sm" style="width:100px;">
-                          <div class="input-group-prepend">
-                            <button class="btn btn-outline-secondary btn-minus-extra"
-                              data-value="<%=coverage.code%>"
-                              data-max-quantity="<%=coverage.max_quantity%>">-</button>
-                          </div>
-                          <% value = (extrasInShoppingCart[coverage.code]) ? extrasInShoppingCart[coverage.code] : 0; %>
-                          <input type="text" id="extra-<%=coverage.code%>-quantity"
-                              class="form-control disabled text-center extra-input" value="<%=value%>" data-extra-code="<%=coverage.code%>"/>
-                          <div class="input-group-append">
-                              <button class="btn btn-outline-secondary btn-plus-extra"
-                              data-value="<%=coverage.code%>"
-                              data-max-quantity="<%=coverage.max_quantity%>">+</button>
-                            </div>
+              <p class="extras-price"><%= configuration.formatCurrency(coverage.unit_price)%></p>
+              <% if (coverage.max_quantity > 1) { %>
+                <div class="input-group input-group-sm" style="width:100px;">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary btn-minus-extra"
+                        data-value="<%=coverage.code%>"
+                        data-max-quantity="<%=coverage.max_quantity%>">-</button>
+                    </div>
+                    <% value = (extrasInShoppingCart[coverage.code]) ? extrasInShoppingCart[coverage.code] : 0; %>
+                    <input type="text" id="extra-<%=coverage.code%>-quantity"
+                        class="form-control disabled text-center extra-input" value="<%=value%>" data-extra-code="<%=coverage.code%>"/>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary btn-plus-extra"
+                        data-value="<%=coverage.code%>"
+                        data-max-quantity="<%=coverage.max_quantity%>">+</button>
                       </div>
-                    <% } else { %>
-                      <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=coverage.code%>" data-value="<%=coverage.code%>" <% if (extrasInShoppingCart[coverage.code] &&  extrasInShoppingCart[coverage.code] > 0) { %> checked="checked" <% } %>>
-                        <label class="custom-control-label" for="checkboxl<%=coverage.code%>"></label>
-                      </div>
-                    <% } %>
+                </div>
+              <% } else { %>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=coverage.code%>" data-value="<%=coverage.code%>" <% if (extrasInShoppingCart[coverage.code] &&  extrasInShoppingCart[coverage.code] > 0) { %> checked="checked" <% } %>>
+                  <label class="custom-control-label" for="checkboxl<%=coverage.code%>"></label>
+                </div>
+              <% } %>
             </div>
           </div>
         <% } %>
@@ -231,7 +231,6 @@
     <div class="product-detail-content">
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
       <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
-      <p class="detail-text"><%=shopping_cart.short_description%></p>
       <h5 class="mt-3"><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>
         <li><%=shopping_cart.date_from_full_format%> <%=shopping_cart.time_from%></li>
@@ -491,9 +490,9 @@
                   <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;
                   <?php if ( empty($args['terms_and_conditions']) ) { ?>
                     <?php echo _x( 'He leído y acepto los términos y condiciones y la política de privacidad','mybooking' ) ?>
-                  <?php } else { ?>  
+                  <?php } else { ?>
                     <?php printf( _x( 'He leído y acepto los <a href="%s" target="_blank">términos y condiciones y la política de privacidad</a>', 'mybooking' ), $args['terms_and_conditions'] ) ?>
-                  <?php } ?>  
+                  <?php } ?>
                 </label>
               </div>
             </div>
@@ -521,9 +520,9 @@
                         <input type="checkbox" id="conditions_read_payment_on_delivery" name="conditions_read_payment_on_delivery">&nbsp;
                         <?php if ( empty($args['terms_and_conditions']) ) { ?>
                           <?php echo _x( 'He leído y acepto los términos y condiciones y la política de privacidad', 'renting_complete', 'mybooking' ) ?>
-                        <?php } else { ?>  
+                        <?php } else { ?>
                           <?php printf( _x( 'He leído y acepto los <a href="%s" target="_blank">términos y condiciones y la política de privacidad</a>', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ?>
-                        <?php } ?>  
+                        <?php } ?>
                       </label>
                     </div>
                   </div>
@@ -584,9 +583,9 @@
                       <input type="checkbox" id="conditions_read_pay_now" name="conditions_read_pay_now">&nbsp;
                       <?php if ( empty($args['terms_and_conditions']) ) { ?>
                         <?php echo _x( 'He leído y acepto los términos y condiciones y la política de privacidad', 'renting_complete', 'mybooking' ) ?>
-                      <?php } else { ?>  
+                      <?php } else { ?>
                         <?php printf( _x( 'He leído y acepto los <a href="%s" target="_blank">términos y condiciones y la política de privacidad</a>', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ?>
-                      <?php } ?>  
+                      <?php } ?>
                     </label>
                   </div>
                 </div>

@@ -20,7 +20,6 @@
       <% var booking_line = booking.booking_lines[idx]; %>
       <h2 class="product-name mb-3"><%=booking_line.item_description_customer_translation%></h2>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
-      <p class="detail-text mt-3"><%=product.short_description%></p>
       <ul>
         <li><%=booking.date_from_full_format%> / <%=booking.time_from%></li>
         <li><%=booking.pickup_place_customer_translation%></li>
@@ -72,7 +71,7 @@
               <br>
               <div class="float-right">
                 <!-- Offer -->
-                <% if (typeof booking.booking_lines[idx].offer_name !== 'undefined' && 
+                <% if (typeof booking.booking_lines[idx].offer_name !== 'undefined' &&
                             booking.booking_lines[idx].offer_name !== null && booking.booking_lines[idx].offer_name !== '') { %>
                 <span class="badge badge-info"><%=booking.booking_lines[idx].offer_name%></span>
                 <% if (booking.booking_lines[idx].offer_discount_type === 'percentage' && booking.booking_lines[idx].offer_value !== '') {%>
@@ -80,7 +79,7 @@
                 <% } %>
                 <% } %>
                 <!-- Promotion Code -->
-                <% if (typeof booking.promotion_code !== 'undefined' && booking.promotion_code !== '' && 
+                <% if (typeof booking.promotion_code !== 'undefined' && booking.promotion_code !== '' &&
                             typeof booking.booking_lines[idx].promotion_code_value !== 'undefined' && booking.booking_lines.promotion_code_value !== '') { %>
                 <span class="badge badge-success"><%=booking.promotion_code%></span>
                 <% if (booking.booking_lines[idx].promotion_code_discount_type === 'percentage' && booking.booking_lines[idx].promotion_code !== '') {%>
@@ -108,7 +107,7 @@
           </ul>
           <% } %>
           <!-- Supplements and Totals -->
-          <% if (booking.time_from_cost > 0 || booking.pickup_place_cost > 0 || 
+          <% if (booking.time_from_cost > 0 || booking.pickup_place_cost > 0 ||
                  booking.time_to_cost > 0 || booking.return_place_cost > 0 ||
                  booking.driver_age_cost > 0 || booking.category_supplement_1_cost > 0
                 ) { %>
@@ -170,7 +169,7 @@
               <span class="extra-name"><b><?php _e('Importe pendiente', 'mybooking') ?></b></span>
               <span class="product-amount pull-right <% if (booking.total_pending > 0){ %>text-danger<%}%>"><b><%=configuration.formatCurrency(booking.total_pending)%></b></span>
             </li>
-          </ul> 
+          </ul>
 
         </div><!-- /.col.sidebar -->
       </div><!-- /col -->
