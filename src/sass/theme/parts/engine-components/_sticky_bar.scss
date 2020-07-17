@@ -110,11 +110,13 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .modify-button {
+    font-size: 1rem;
+  }
   .reservation-summary-sticky {
     justify-content: initial;
     padding: 10px 0;
   }
-  // pickup == return desktop
   .modify-button-wrapper {
     margin: 0 10px 0 2rem;
     padding: 0;
@@ -215,18 +217,19 @@
   padding-left: 10px;
   align-items: center;
 }
-.total-title {
-  display: none;
-}
-.complete-summary-price {
+
+.complete-summary-price-wrapper {
   display: flex;
   align-items: center;
-}
-.complete-summary-price {
   font-weight: 800;
   font-size: 1rem;
-  color: var(--sticky-bar-price-color);
   line-height: 0.8;
+}
+.complete-summary-total-title {
+  display: none;
+}
+.complete-summary-total-price {
+  color: var(--sticky-bar-price-color);
 }
 .complete-buttons-wrapper {
   display: flex;
@@ -255,7 +258,7 @@
       width: 45%;
     }
   }
-  .total-title {
+  .complete-summary-total-title {
     display: flex;
     color: var(--gray-500);
     font-weight: 700;
@@ -264,7 +267,7 @@
     line-height: 1;
     margin-right: 1rem;
   }
-  .complete-summary-item_price {
+  .complete-summary-total-price {
     font-size: 1.3rem;
   }
   .complete-summary-row {

@@ -167,8 +167,8 @@
         <!-- Row for price & buttons -->
         <div class="complete-summary-row">
           <div class="complete-summary-price-wrapper">
-            <div class="total-title"><?php _e('Total', 'mybooking') ?></div>
-            <div class="complete-summary-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
+            <div class="complete-summary-total-title"><?php _e('Total', 'mybooking') ?></div>
+            <div class="complete-summary-total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
             </div>
           </div>
 
