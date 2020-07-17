@@ -13,36 +13,62 @@
 <!-- Summary Sticky -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="reservation-summary-sticky-wrapper">
-    <div class="reservation-summary-sticky">
-      <div class="reservation-summary-item">
-        <!-- Delivery -->
-        <p class="overflow-ellipsis">
-          <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
-        </p>
-        <p><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></p>
-      </div>
-      <div class="reservation-summary-separator">
-        <i class="fa fa-long-arrow-right"></i>
-      </div>
-      <div class="reservation-summary-item">
-        <!-- Collection (en móbil muestra lugar sólo cuando es diferente) -->
         <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
-          <p class="overflow-ellipsis">
-            <span class="overflow-ellipsis"><%=shopping_cart.return_place_customer_translation%></span>
-          </p>
+        <div class="reservation-summary-sticky">
+          <div class="sandwitch-wrapper">
+            <div class="reservation-summary_pickup_place">
+              <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
+            </div>
+            <div class="reservation-summary_pickup_date">
+              <span><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></span>
+            </div>
+          </div>
+          <div class="separator"></div>
+          <div class="sandwitch-wrapper">
+            <div class="reservation-summary_return_place">
+              <span class="overflow-ellipsis">
+                <%=shopping_cart.return_place_customer_translation%>
+              </span>
+            </div>
+            <div class="reservation-summary_return_date">
+              <span><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></span>
+            </div>
+          </div>
+          <div class="modify-button-wrapper push-to-the-right">
+            <button id="modify_reservation_button"
+              class="modify-button"><i
+                class="d-none d-md-inline mr-2 fas fa-pencil-alt"></i><?php _e('Editar','mybooking') ?></button>
+          </div>
+        </div>
+
         <% } else { %>
-          <p class="overflow-ellipsis">
-            <span
-              class="d-none d-lg-block overflow-ellipsis"><%=shopping_cart.return_place_customer_translation%></span>
-          </p>
+        
+        <div class="reservation-summary-sticky">
+          <div class="reservation-summary_pickup_place">
+            <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
+          </div>
+          <div class="reservation-summary_pickup_date">
+            <span><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></span>
+          </div>
+          <div class="separator"></div>
+          <div class="reservation-summary_return_place d-none d-md-flex">
+            <span class="overflow-ellipsis">
+              <%=shopping_cart.return_place_customer_translation%>
+            </span>
+          </div>
+          <div class="reservation-summary_return_date">
+            <span><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></span>
+          </div>
+          <div class="modify-button-wrapper">
+            <button id="modify_reservation_button"
+              class="modify-button"><i class="d-none d-lg-inline mr-2 fas fa-pencil-alt"></i><?php _e('Editar','mybooking') ?></button>
+          </div>
+        </div>
+    
         <% } %>
-        <p><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></p>
-      </div>
-      <!-- Button trigger modal -->
-      <button id="modify_reservation_button" class="modify-button"><?php _e('MODIFICAR','mybooking') ?></button>
-    </div>
   </div>
 </script>
+
 
 <!-- Static cards -->
 <script type="text/tpml" id="script_detailed_product">
@@ -69,9 +95,13 @@
               <p class="text-danger card-static_low-availability"><?php _e('¡Quedan pocas unidades!') ?></p>
             <% } %>
             <% if (product.price != product.base_price) { %>
-              <% if (product.offer_discount_type == 'percentage') { %>
-                <p class="card-static_discount"><%=new Number(product.offer_value)%>% <%=product.offer_name%><br>
-                <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small><span class="ml-2"><%=configuration.formatCurrency(product.price)%></span></p>
+              <% if (product.offer_discount_type == 'percentage' || product.offer_discount_type == 'amount') { %>
+                <p class="card-static_discount"><span class="badge badge-info"><%=new Number(product.offer_value)%>% <%=product.offer_name%></span><br>
+                <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small></p>
+              <% } else if (typeof shoppingCart.promotion_code !== 'undefined' && shoppingCart.promotion_code !== null && shoppingCart.promotion_code !== '' &&
+                            (product.promotion_code_discount_type == 'percentage' || product.promotion_code_discount_type == 'amount') ) { %>
+                <p class="card-static_discount"><span class="badge badge-success"><%=new Number(product.promotion_code_value)%>% <%=shoppingCart.promotion_code%></span><br>
+                <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small></p>
               <% } %>
             <% } %>
             
@@ -91,7 +121,7 @@
                 <a class="button btn btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
               </div>
               <% } else { %>
-              <p><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></p>
+              <span class="card-static-not-available"><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></span>
             <% } %>
           </div>
         </div>

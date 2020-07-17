@@ -91,9 +91,6 @@
  * WIDGET AREAS
  * They stacks on small screens
  */
-.header-container_margin {
-  margin-top: 50px;
-}
 
 .home-header_content {
   display: flex;
@@ -109,18 +106,26 @@
   min-width: 100%;
 }
 
-.mybooking-widget_header-left,
-.mybooking-widget_header-right {
-  padding: 1rem;
-}
-
 .home-alone:not(.form),
 .home-left:not(.form),
 .home-right:not(.form) {
   color: var(--white);
 }
 
+.mybooking-widget_header-left,
+.mybooking-widget_header-right {
+  padding: 1rem;
+}
+
 @media (min-width: 992px) {
+  .mybooking-widget_header-left,
+  .mybooking-widget_header-right {
+    padding: 1rem;
+  }
+  .header-container_margin {
+    margin-top: 50px;
+  }
+
   .home-header_content_container {
     position: absolute;
     left: 50%;

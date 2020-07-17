@@ -9,7 +9,6 @@
     padding: 0 0.8rem;
     text-indent: 1px;
     text-overflow: "";
-    //border: 0;
     font-size: var(--form-control-font-size);
     height: var(--form-control-height);
     color: var(--form-control-color);
@@ -23,17 +22,11 @@
       border: 0;
     }
   }
-  input[type="text"] {
-    //border: 0;
-  }
 }
 
 // Bootstrap forms we use them in complete page
 
 .form-group {
-  textarea {
-    //  background-color: var(--textarea-bg);
-  }
   select {
     border: 1px solid var(--form-control-border-color);
     border-radius: var(--bootstrap-form-control-border-radius);
@@ -97,12 +90,11 @@ label {
   top: 16px;
 }
 // Error styles
-.form-reservation-error {
-  color: var(--error) !important;
-}
+.form-reservation-error,
 input.form-reservation-error {
   color: var(--error) !important;
 }
+
 // Form Dates
 .custom-date-form {
   display: flex;
