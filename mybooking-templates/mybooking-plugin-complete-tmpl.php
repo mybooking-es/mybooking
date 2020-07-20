@@ -164,8 +164,9 @@
           <span><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></span>
         </div>
       </div>
-        <!-- Row for price & buttons -->
+        <!-- Row for price & buttons  -->
         <div class="complete-summary-row">
+
           <div class="complete-summary-price-wrapper">
             <div class="complete-summary-total-title"><?php _e('Total', 'mybooking') ?></div>
             <div class="complete-summary-total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
@@ -205,9 +206,9 @@
       </div>
         <!-- Row for price & buttons -->
         <div class="complete-summary-row">
-          <div class="complete-summary-price">
-            <div class="total-title"><?php _e('Total', 'mybooking') ?></div>
-            <div class="complete-summary-item_price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
+          <div class="complete-summary-price-wrapper">
+            <div class="complete-summary-total-title"><?php _e('Total', 'mybooking') ?></div>
+            <div class="complete-summary-total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
             </div>
           </div>
 

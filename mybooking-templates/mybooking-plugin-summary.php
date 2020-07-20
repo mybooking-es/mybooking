@@ -15,8 +15,8 @@
   <div class="bg-gray-100">
     <div class="container">
       <div class="row">
-        <div class="col">
-          <h4 id="reservation_title" class="color-gray-900 py-4 summary-reservation-title text-center"></h4>
+        <div class="col col-md-8 offset-md-2">
+          <h4 id="reservation_title" class="color-gray-900 pt-3 summary-reservation-title"></h4>
         </div>
       </div>
     </div>
