@@ -28584,17 +28584,11 @@ a.magic-button.btn {
   font-weight: 900;
   color: var(--product-detail-group-name); }
 
-.product-detail-summary-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .product-detail-summary-header .product-detail-summary-image {
-    width: 100px; }
+.product-detail-img {
+  width: 200px; }
 
 .product-detail-summary-dates {
+  background-color: var(--gray-50);
   margin-top: 30px;
   border-top: 1px solid var(--gray-300);
   border-bottom: 1px solid var(--gray-300);
@@ -28609,8 +28603,7 @@ a.magic-button.btn {
     list-style: none;
     margin: 0;
     padding: 0;
-    color: var(--product-detail-dates-text);
-    line-height: 1; }
+    line-height: auto; }
 
 @media (min-width: 576px) {
   .product-detail-image {

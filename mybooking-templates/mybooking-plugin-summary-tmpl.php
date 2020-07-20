@@ -18,77 +18,65 @@
         <div class="col sidebar bg-white shadow-bottom py-3 px-3 my-3">
           <h4 class="color-brand-primary my-3"><?php _e('Resumen', 'mybooking') ?></h4>
 
-          <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-          <% var booking_line = booking.booking_lines[idx]; %>
-        <div class="product-detail-summary-header">
-            <div>
-            <p class="fw-800 mb-3"><%=booking_line.item_description_customer_translation%></p>
-            <% if (booking.days > 0) { %>
-            <p class="detail-text mt-3"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=booking.days%>
-                <?php _e('día/s','mybooking') ?></span></p>
-            <% } else if (booking.hours > 0) { %>
-            <p class="detail-text"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=booking.hours%>
-                <?php _e('hora/s','mybooking') ?></span></p>
-            <% } %>
-            <% } %>
-          </div>
-          <div class="product-detail-summary-image">
-            <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-            <img class="img-fluid" src="<%=booking_line.photo_full%>" alt="">
-            <% } %>
-          </div>
-        </div>
           <div class="product-detail-summary-dates">
             <ul>
-              <li><%=booking.date_from_full_format%> / <%=booking.time_from%></li>
+              <li><%=booking.date_from_full_format%> <%=booking.time_from%></li>
               <li><%=booking.pickup_place_customer_translation%></li>
             </ul>
             <div class="product-detail-separator"> <i class="fa fa-long-arrow-right"></i> </div>
             <ul>
-              <li><%=booking.date_to_full_format%> / <%=booking.time_to%></li>
+              <li><%=booking.date_to_full_format%> <%=booking.time_to%></li>
               <li><%=booking.return_place_customer_translation%></li>
             </ul>
           </div>
 
           <!-- Products -->
           <ul class="list-group list-group-flush">
+            <!-- Show all the products in the reservation -->
             <% for (var idx=0;idx<booking.booking_lines.length;idx++) { %>
-            <li class="list-group-item">
-              <!-- Description -->
-              <span
-                class="extra-name"><b><%=booking.booking_lines[idx].item_description_customer_translation%></b></span>
-              <!-- Quantity -->
-              <% if (configuration.multipleProductsSelection) { %>
-              <span class="badge badge-info"><%=booking.booking_lines[idx].quantity%></span>
-              <% } %>
-              <!-- Price -->
-              <span
-                class="product-amount float-right"><%=configuration.formatCurrency(booking.booking_lines[idx].item_cost)%></span>
-              <!-- Offer/Promotion Code Appliance -->
-              <% if (booking.booking_lines[idx].item_unit_cost_base != booking.booking_lines[idx].item_unit_cost) { %>
-                <!-- Offer -->
-                <% if (typeof booking.booking_lines[idx].offer_name !== 'undefined' &&
-                            booking.booking_lines[idx].offer_name !== null && booking.booking_lines[idx].offer_name !== '') { %>
-                <span class="badge badge-info"><%=booking.booking_lines[idx].offer_name%></span>
-                <% if (booking.booking_lines[idx].offer_discount_type === 'percentage' && booking.booking_lines[idx].offer_value !== '') {%>
-                <span class="text-danger"><%=parseInt(booking.booking_lines[idx].offer_value)%>&#37;</span>
+              <li class="list-group-item">
+                <div class="w-100">
+                  <img class="img-fluid product-detail-img" src="<%=booking.booking_lines[idx].photo_full%>" alt="">
+                </div>
+                <!-- Description -->
+                <span
+                  class="extra-name"><b><%=booking.booking_lines[idx].item_description_customer_translation%></b></span>
+                <!-- Quantity -->
+                <% if (configuration.multipleProductsSelection) { %>
+                <span class="badge badge-info"><%=booking.booking_lines[idx].quantity%></span>
                 <% } %>
-                <% } %>
-                <!-- Promotion Code -->
-                <% if (typeof booking.promotion_code !== 'undefined' && booking.promotion_code !== '' &&
-                            typeof booking.booking_lines[idx].promotion_code_value !== 'undefined' && booking.booking_lines.promotion_code_value !== '') { %>
-                <span class="badge badge-success"><%=booking.promotion_code%></span>
-                <% if (booking.booking_lines[idx].promotion_code_discount_type === 'percentage' && booking.booking_lines[idx].promotion_code !== '') {%>
-                <span class="text-danger"><%=parseInt(booking.booking_lines[idx].promotion_code_value)%>&#37;</span>
-                <% } %>
-                <% } %>
-                <span class="text-muted">
-                  <del><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost_base * booking.booking_lines[idx].quantity)%></del>
+                <!-- Price -->
+                <span
+                  class="product-amount float-right"><%=configuration.formatCurrency(booking.booking_lines[idx].item_cost)%>
                 </span>
-                <% } %>
-                </li>
+                <!-- Offer/Promotion Code Appliance -->
+                <% if (booking.booking_lines[idx].item_unit_cost_base != booking.booking_lines[idx].item_unit_cost) { %>
+                  <span class="float-right mr-2">
+                  <!-- Offer -->
+                  <% if (typeof booking.booking_lines[idx].offer_name !== 'undefined' &&
+                              booking.booking_lines[idx].offer_name !== null && booking.booking_lines[idx].offer_name !== '') { %>
+                  <span class="badge badge-info"><%=booking.booking_lines[idx].offer_name%></span>
+                  <% if (booking.booking_lines[idx].offer_discount_type === 'percentage' && booking.booking_lines[idx].offer_value !== '') {%>
+                  <span class="text-danger"><%=parseInt(booking.booking_lines[idx].offer_value)%>&#37;</span>
+                  <% } %>
+                  <% } %> 
+                  <!-- Promotion Code -->
+                  <% if (typeof booking.promotion_code !== 'undefined' && booking.promotion_code !== '' &&
+                              typeof booking.booking_lines[idx].promotion_code_value !== 'undefined' && booking.booking_lines.promotion_code_value !== '') { %>
+                  <span class="badge badge-success"><%=booking.promotion_code%></span>
+                  <% if (booking.booking_lines[idx].promotion_code_discount_type === 'percentage' && booking.booking_lines[idx].promotion_code !== '') {%>
+                  <span class="text-danger"><%=parseInt(booking.booking_lines[idx].promotion_code_value)%>&#37;</span>
+                  <% } %>
+                  <% } %>
+                  <span class="text-muted">
+                    <del><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost_base * booking.booking_lines[idx].quantity)%></del>
+                  </span>
+                  <% } %>
+                  </span>
+                  </li>
                 <% } %>
         </ul>
+        
         <!-- Extras -->
         <% if (booking.booking_extras.length > 0) { %>
         <ul class="list-group">
