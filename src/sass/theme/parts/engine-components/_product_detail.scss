@@ -1,4 +1,4 @@
-// Product detail for summary
+// Product detail for complete, mi reserva and summary
 .product-detail-container {
   padding: 30px;
   background: var(--product-detail-bg-color);
@@ -20,13 +20,6 @@
     line-height: 1;
   }
 }
-.product-detail-separator {
-  display: none;
-  align-items: center;
-  i {
-    color: var(--brand-primary);
-  }
-}
 .product-detail-content {
   display: flex;
   flex-direction: column;
@@ -45,8 +38,24 @@
   font-weight: 900;
   color: var(--product-detail-group-name);
 }
+// Product detail inside list in summary
+.product-detail-list {
+}
+.product-detail-separator {
+  display: none;
+  align-items: center;
+  i {
+    color: var(--brand-primary);
+  }
+}
 // Product detail summary
-.product-detail-img {
+.product-detail-list-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem 0;
+}
+.product-detail-list-img {
   width: 200px;
 }
 .product-detail-summary-dates {
@@ -56,7 +65,7 @@
   border-bottom: 1px solid var(--gray-300);
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 1rem;
   ul {
     list-style: none;
     margin: 0;

@@ -34,9 +34,9 @@
           <ul class="list-group list-group-flush">
             <!-- Show all the products in the reservation -->
             <% for (var idx=0;idx<booking.booking_lines.length;idx++) { %>
-              <li class="list-group-item">
-                <div class="w-100">
-                  <img class="img-fluid product-detail-img" src="<%=booking.booking_lines[idx].photo_full%>" alt="">
+              <li class="list-group-item product-detail-list">
+                <div class="product-detail-list-img-wrapper">
+                  <img class="product-detail-list-img" src="<%=booking.booking_lines[idx].photo_full%>" alt="">
                 </div>
                 <!-- Description -->
                 <span
