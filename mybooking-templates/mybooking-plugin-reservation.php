@@ -10,14 +10,12 @@
 */
 ?>
 <div class="reservation-step reservation-step-reservation custom-form">
-  <div class="bg-gray-200">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h4 id="reservation_title" class="py-5 reservation-title"></h4>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h4 id="reservation_title" class="process-message "></h4>
       </div>
     </div>
-    <div id="reservation_detail"></div>
   </div>
+  <div id="reservation_detail"></div>
 </div>

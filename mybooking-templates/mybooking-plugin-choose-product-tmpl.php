@@ -37,7 +37,7 @@
           <div class="modify-button-wrapper push-to-the-right">
             <button id="modify_reservation_button"
               class="modify-button"><i
-                class="d-none d-md-inline mr-2 fas fa-pencil-alt"></i><?php _e('Editar','mybooking') ?></button>
+                class="d-none d-md-inline mr-2 fas fa-pen"></i><?php _e('Editar','mybooking') ?></button>
           </div>
         </div>
 
@@ -61,7 +61,7 @@
           </div>
           <div class="modify-button-wrapper">
             <button id="modify_reservation_button"
-              class="modify-button"><i class="d-none d-lg-inline mr-2 fas fa-pencil-alt"></i><?php _e('Editar','mybooking') ?></button>
+              class="modify-button"><i class="d-none d-lg-inline mr-2 fas fa-pen"></i><?php _e('Editar','mybooking') ?></button>
           </div>
         </div>
     

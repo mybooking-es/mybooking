@@ -87,7 +87,7 @@ these properties do not need to be edited */
   --home-header-widget-text-align: left;
   --home-header-widget-link: #fff;
   // Footer
-  --footer-bg: var(--gray-50);
+  --footer-bg: var(--gray-100);
   --footer-color: var(--black);
   --footer-color-link: var(--black);
   --footer-color-link-hover: var(--brand-primary);
@@ -146,7 +146,7 @@ these properties do not need to be edited */
   --btn-font-w: 600;
   --btn-text-transform: uppercase;
   // Steps
-  --steps-wrapper-bg-color: var(--gray-200);
+  --steps-wrapper-bg-color: var(--gray-100);
   --step-title-color: var(--brand-primary-dark);
   --step-circle-text-color: var(--gray-700);
   --step-circle-bg-color: var(--white);
@@ -181,7 +181,7 @@ these properties do not need to be edited */
   --sticky-bar-link-color-hover: var(--brand-primary-light);
 
   // Card static
-  --card-page-bg-body: var(--gray-200);
+  --card-page-bg-body: var(--white);
   --card-image-bg-color: var(--white);
   --card-body-bg-color: var(--white);
   --card-info-icon-color: var(--gray-300);

@@ -33,14 +33,15 @@
   <!-- Reservation summary detail -->
   <div id="reservation_detail"></div>
 
-  <div class="bg-gray-200">
-    <div class="container">
-      <div class="row justify-content-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
         <!-- Reservation : Extras -->
-        <div id="extras_listing" class="col-md-12 extras"></div>
-        <div class="col-md-12">
+        <div id="extras_listing" class="extras"></div>
+
+        <div class="process-section-box">
           <!-- Reservation complete -->
-          <form id="form-reservation" name="reservation_form" class="bg-white shadow-bottom py-3 px-3 mt-3 mb-5">
+          <form id="form-reservation" name="reservation_form" class="">
             <h4 class="brand-primary my-3"><?php _e('Información del cliente', 'mybooking') ?></h4>
             <div class="form-row">
               <div class="form-group col-md-6">

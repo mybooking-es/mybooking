@@ -13,12 +13,12 @@
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
 
-  <!-- Desktop reservation detail -->
   <div class="product-detail-container">
     <div class="product-detail-content">
       <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
       <% var booking_line = booking.booking_lines[idx]; %>
       <h2 class="product-name mb-3"><%=booking_line.item_description_customer_translation%></h2>
+      <p> <%=booking.id%> </p>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>
         <li><%=booking.date_from_full_format%> / <%=booking.time_from%></li>
@@ -48,15 +48,15 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-8 order-12 lg-order-lg-1">
-        <div id="reservation_form_container" class="col bg-white shadow-bottom p-3 my-3" style="display:none">
+        <div id="reservation_form_container" class="col process-section-box" style="display:none">
         </div>
       </div>
 
       <!-- Sidebar -->
 
       <div class="col-12 col-lg-4 order-1 order-lg-12">
-        <div class="col sidebar bg-white shadow-bottom py-3 px-3 mt-3">
-          <h4 class="color-brand-primary my-3"><?php _e('Mi reserva', 'mybooking') ?></h4>
+        <div class="col process-section-box">
+          <h4 class="my-3"><?php _e('Mi reserva', 'mybooking') ?></h4>
           <!-- Products -->
           <ul class="list-group list-group-flush">
             <% for (var idx=0;idx<booking.booking_lines.length;idx++) { %>
@@ -176,10 +176,10 @@
               <span class="product-amount pull-right <% if (booking.total_pending > 0){ %>text-danger<%}%>"><b><%=configuration.formatCurrency(booking.total_pending)%></b></span>
             </li>
           </ul> 
-        </div><!-- /.col.sidebar -->
+        </div>
 
-        <div class=" col bg-white shadow-bottom py-3 px-3 mt-3">
-                <h4 class="color-brand-primary my-3"><?php _e('Datos del cliente', 'mybooking') ?></h4>
+        <div class=" col process-section-box">
+                <h4 class="my-3"><?php _e('Datos del cliente', 'mybooking') ?></h4>
                 <div class="table-responsive">
                   <table class="table table-borderless table-striped">
                     <tbody>
@@ -200,7 +200,7 @@
                 </div>
         </div>
 
-        <div id="payment_detail" class="col bg-white shadow-bottom py-3 px-3" style="display:none">
+        <div id="payment_detail" class="col process-section-box" style="display:none">
         </div>
 
       </div><!-- /col -->
@@ -214,7 +214,7 @@
 
   <form id="form-reservation" name="booking_information_form" autocomplete="off">
     <!-- Customer address -->
-    <h4 class="color-brand-primary my-3"><?php _e('Dirección del cliente', 'mybooking') ?></h4>
+    <h4 class="my-3"><?php _e('Dirección del cliente', 'mybooking') ?></h4>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="street"><?php _e('Dirección', 'mybooking') ?></label>
@@ -254,7 +254,7 @@
       </div>
     </div>
     <!-- Driver information -->
-    <h4 class="color-brand-primary my-3"><?php _e('Datos del conductor', 'mybooking') ?></h4>
+    <h4 class="my-3"><?php _e('Datos del conductor', 'mybooking') ?></h4>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="driver_name"><?php _e('Nombre del conductor', 'mybooking') ?></label>
@@ -355,7 +355,7 @@
       </div>
     </div>
     <!-- Additional drivers -->
-    <h4 class="color-brand-primary my-3"><?php _e('Conductores adicionales', 'mybooking') ?></h4>
+    <h4 class="my-3"><?php _e('Conductores adicionales', 'mybooking') ?></h4>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="driver_name"><?php _e('Nombre del conductor', 'mybooking') ?></label>
@@ -465,9 +465,8 @@
       </div>
     </div>
 
-
     <!-- Flight information -->
-    <h4 class="brand-primary my-3"><?php _e('Vuelo', 'mybooking') ?></h4>
+    <h4 class="my-3"><?php _e('Vuelo', 'mybooking') ?></h4>
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="flight_company"><?php _e('Compañia', 'mybooking') ?></label>
@@ -486,7 +485,7 @@
       </div>
     </div>
 
-    <h4 class="brand-primary my-3"><?php _e('Vuelo de regreso', 'mybooking') ?></h4>
+    <h4 class="my-3"><?php _e('Vuelo de regreso', 'mybooking') ?></h4>
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="flight_company_departure"><?php _e('Compañia', 'mybooking') ?></label>
@@ -517,7 +516,7 @@
 
 <!-- Payment detail -->
 <script type="text/tmpl" id="script_payment_detail">
-  <h4 class="brand-primary my-3"><?php _e('Pago', 'mybooking') ?></h4>
+  <h4 class="my-3"><?php _e('Pago', 'mybooking') ?></h4>
   <% if (booking.total_paid == 0 && booking.status == 'pending_confirmation') {%>
     <div id="payment_amount_container" class="alert alert-info">
       <%= i18next.t('myReservation.pay.booking_amount', {amount:configuration.formatCurrency(booking.booking_amount) }) %>

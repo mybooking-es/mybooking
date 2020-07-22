@@ -25176,7 +25176,7 @@ these properties do not need to be edited */
   --home-header-widget-text: #fff;
   --home-header-widget-text-align: left;
   --home-header-widget-link: #fff;
-  --footer-bg: var(--gray-50);
+  --footer-bg: var(--gray-100);
   --footer-color: var(--black);
   --footer-color-link: var(--black);
   --footer-color-link-hover: var(--brand-primary);
@@ -25219,7 +25219,7 @@ these properties do not need to be edited */
   --btn-color-hover: var(--white);
   --btn-font-w: 600;
   --btn-text-transform: uppercase;
-  --steps-wrapper-bg-color: var(--gray-200);
+  --steps-wrapper-bg-color: var(--gray-100);
   --step-title-color: var(--brand-primary-dark);
   --step-circle-text-color: var(--gray-700);
   --step-circle-bg-color: var(--white);
@@ -25249,7 +25249,7 @@ these properties do not need to be edited */
   --sticky-bar-price-color: var(--white);
   --sticky-bar-link-color: var(--white);
   --sticky-bar-link-color-hover: var(--brand-primary-light);
-  --card-page-bg-body: var(--gray-200);
+  --card-page-bg-body: var(--white);
   --card-image-bg-color: var(--white);
   --card-body-bg-color: var(--white);
   --card-info-icon-color: var(--gray-300);
@@ -27327,64 +27327,6 @@ body .eupopup-style-compact .eupopup-button {
     margin: 0 auto;
     margin-left: -13.93px; } }
 
-.icons-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-bottom: 2rem; }
-
-.icon-panel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  margin-bottom: 1rem;
-  width: 100%; }
-  .icon-panel img {
-    width: 100%; }
-  .icon-panel h6 {
-    margin-top: 30px;
-    max-width: 90%;
-    font-weight: 400;
-    height: 90px;
-    overflow: hidden; }
-
-@media (min-width: 576px) {
-  .icons-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-  .icon-panel {
-    width: 50%; } }
-
-@media (min-width: 992px) {
-  .icons-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-  .icon-panel {
-    width: 25%; } }
-
 .vehicle_item {
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--gray-200); }
@@ -28528,16 +28470,17 @@ a.magic-button.btn {
     display: none; } }
 
 .product-detail-container {
-  padding: 30px;
   background: var(--product-detail-bg-color);
+  padding: 30px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -28620,10 +28563,16 @@ a.magic-button.btn {
     max-width: 400px; } }
 
 @media (min-width: 992px) {
+  .product-detail-container {
+    max-width: 960px; }
   .product-detail-separator {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; } }
+
+@media (min-width: 1200px) {
+  .product-detail-container {
+    max-width: 1140px; } }
 
 .extras-container {
   display: -webkit-box;
@@ -28719,60 +28668,13 @@ a.magic-button.btn {
             align-items: flex-start;
     padding-left: 0; } }
 
-.reservation-detail-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-
-.reservation-detail-image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2; }
-  .reservation-detail-image-container .reservation-detail-image-wrapper {
-    max-width: 200px; }
-
-.reservation-detail-content {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-
-@media (min-width: 768px) {
-  .reservation-detail-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; } }
-
 .custom-control-input:checked ~ .custom-control-label::before {
   color: var(--white);
   border-color: var(--brand-primary);
   background-color: var(--brand-primary); }
 
-.card {
-  border: none; }
-
-.card-img {
-  padding: 12px;
-  max-width: 100%; }
-
 .list-group li {
-  border: 0;
-  padding-left: 0;
-  margin-left: 0; }
+  border: 0; }
   .list-group li .extra-name {
     width: 60%; }
   .list-group li .extra-price {
@@ -29374,5 +29276,14 @@ a.btn.btn-secondary.mybooking-read-more-link {
 .fixModal {
   padding-right: 0 !important;
   margin-right: 0 !important; }
+
+.process-message {
+  padding: 3rem 0; }
+
+.process-section-box {
+  border: 1px solid var(--gray-200);
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0; }
 
 /*# sourceMappingURL=theme.css.map */

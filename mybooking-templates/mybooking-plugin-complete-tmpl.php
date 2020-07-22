@@ -16,7 +16,7 @@
 <!-- Extra representation -->
 <script type="text/tmpl" id="script_detailed_extra">
   <% if (coverages && coverages.length > 0) { %>
-    <div class="bg-white shadow-bottom p-3 mt-3">
+    <div class="process-section-box">
       <h4 class="brand-primary my-3"><?php _e('Coberturas', 'mybooking') ?></h4>
       <div class="extras-container">
         <% for (var idx=0;idx<coverages.length;idx++) { %>
@@ -63,7 +63,7 @@
     </div>
   <% } %>
   <% if (extras && extras.length > 0) { %>
-    <div class="bg-white shadow-bottom p-3 mt-3">
+    <div class="process-section-box">
       <h4 class="brand-primary my-3"><?php _e('Extras', 'mybooking') ?></h4>
       <div class="extras-container">
         <% for (var idx=0;idx<extras.length;idx++) { %>
@@ -258,9 +258,10 @@
     </div>
   </div>
 
-  <div class="modal fade" id="viewReservationModal" tabindex="-1" role="dialog" aria-labelledby="viewModal"
+  <div class="modal fade" id="viewReservationModal" tabindex="-1" role="dialog"
+    aria-labelledby="viewModal"
     aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="viewModal"><?php _e('Detalle de la reserva', 'mybooking') ?></h5>
@@ -305,8 +306,7 @@
             </div>
           </div>
           <% } %>
-
-          <ul class="list-group p-3 summary-modal_list">
+          <ul class="list-group  summary-modal_list">
             <!-- Products -->
             <% for (var idx=0;idx<shopping_cart.items.length;idx++) { %>
               <li class="list-group-item">
