@@ -12,13 +12,14 @@
 
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
-
+ <div class="product-detail-bg-color">
   <div class="product-detail-container">
     <div class="product-detail-content">
       <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
       <% var booking_line = booking.booking_lines[idx]; %>
       <h2 class="product-name mb-3"><%=booking_line.item_description_customer_translation%></h2>
-      <p> <%=booking.id%> </p>
+      <small class="detail-text"><?php _e('Localizador','mybooking') ?></small>
+      <h3> <%=booking.id%> </h3>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>
         <li><%=booking.date_from_full_format%> / <%=booking.time_from%></li>
@@ -42,6 +43,7 @@
       <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
       <img class="img-fluid" src="<%=booking_line.photo_full%>" alt="">
       <% } %>
+    </div>
     </div>
   </div>
 
@@ -178,7 +180,7 @@
           </ul> 
         </div>
 
-        <div class=" col process-section-box">
+        <div class="col process-section-box">
                 <h4 class="my-3"><?php _e('Datos del cliente', 'mybooking') ?></h4>
                 <div class="table-responsive">
                   <table class="table table-borderless table-striped">

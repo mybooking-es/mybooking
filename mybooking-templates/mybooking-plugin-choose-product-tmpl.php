@@ -72,7 +72,6 @@
 
 <!-- Static cards -->
 <script type="text/tpml" id="script_detailed_product">
-  <div class="bg-cards-color">
   <div class="cards-static-container">
   <% for (var idx=0;idx<products.length; idx++) { %>
     <% var product = products[idx]; %>
@@ -127,7 +126,6 @@
         </div>
       </div>
       <% } %>
-    </div>
     </div>
       
   </script>

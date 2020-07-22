@@ -25138,8 +25138,12 @@ these properties do not need to be edited */
   --font-family: "Inter", sans-serif;
   --font-body: var(--font-family);
   --font-heading: var(--font-family);
+  --font-heading-color: var(--brand-primary);
   --body-bg: var(--white);
   --body-color: var(--gray-900);
+  --process-container-bg: var(--gray-200);
+  --process-message-bg: var(--brand-primary);
+  --process-message-color: var(--white);
   --color-link: var(--brand-primary);
   --color-link-hover: var(--brand-primary-light);
   --color-link-active: var(--brand-primary-dark);
@@ -25249,7 +25253,6 @@ these properties do not need to be edited */
   --sticky-bar-price-color: var(--white);
   --sticky-bar-link-color: var(--white);
   --sticky-bar-link-color-hover: var(--brand-primary-light);
-  --card-page-bg-body: var(--white);
   --card-image-bg-color: var(--white);
   --card-body-bg-color: var(--white);
   --card-info-icon-color: var(--gray-300);
@@ -25352,7 +25355,8 @@ body.modal-open {
   overflow-y: hidden; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading); }
+  font-family: var(--font-heading);
+  color: var(--font-heading-color); }
 
 a:link {
   color: var(--color-link); }
@@ -27905,9 +27909,6 @@ button.another_return_place_group_close {
 .wizard-date_calendar .ui-widget-content {
   background: transparent !important; }
 
-.bg-cards-color {
-  background-color: var(--card-page-bg-body); }
-
 .cards-static-container {
   margin: 0 auto;
   display: -webkit-box;
@@ -28469,8 +28470,10 @@ a.magic-button.btn {
   .steps-wrapper {
     display: none; } }
 
+.product-detail-bg-color {
+  background: var(--product-detail-bg-color); }
+
 .product-detail-container {
-  background: var(--product-detail-bg-color);
   padding: 30px;
   margin: 0 auto;
   display: -webkit-box;
@@ -28478,9 +28481,9 @@ a.magic-button.btn {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -29277,13 +29280,22 @@ a.btn.btn-secondary.mybooking-read-more-link {
   padding-right: 0 !important;
   margin-right: 0 !important; }
 
+.process-container {
+  background-color: var(--process-container-bg); }
+
 .process-message {
-  padding: 3rem 0; }
+  padding: 3rem 0;
+  text-align: center;
+  background-color: var(--process-message-bg); }
+  .process-message h4 {
+    color: var(--process-message-color); }
 
 .process-section-box {
-  border: 1px solid var(--gray-200);
   padding: 1rem;
   border-radius: 4px;
-  margin: 1rem 0; }
+  margin: 1rem 0;
+  background-color: var(--white);
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06); }
 
 /*# sourceMappingURL=theme.css.map */

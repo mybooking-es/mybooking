@@ -38,8 +38,13 @@ these properties do not need to be edited */
   --font-family: "Inter", sans-serif;
   --font-body: var(--font-family);
   --font-heading: var(--font-family);
+  --font-heading-color: var(--brand-primary);
   --body-bg: var(--white);
   --body-color: var(--gray-900);
+  // Process pages
+  --process-container-bg: var(--gray-200);
+  --process-message-bg: var(--brand-primary);
+  --process-message-color: var(--white);
   // Links
   --color-link: var(--brand-primary);
   --color-link-hover: var(--brand-primary-light);
@@ -181,7 +186,6 @@ these properties do not need to be edited */
   --sticky-bar-link-color-hover: var(--brand-primary-light);
 
   // Card static
-  --card-page-bg-body: var(--white);
   --card-image-bg-color: var(--white);
   --card-body-bg-color: var(--white);
   --card-info-icon-color: var(--gray-300);

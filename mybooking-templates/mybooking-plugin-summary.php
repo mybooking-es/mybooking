@@ -11,16 +11,18 @@
 ?>
 <?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
 
-<div class="reservation-step reservation-step-summary custom-form">
+<div class="reservation-step process-container reservation-step-summary custom-form">
+  <div class="process-message">
+    <h4 id="reservation_title"></h4>
+  </div>
 
   <div class="container">
     <div class="row">
       <div class="col col-md-8 offset-md-2">
-        <h4 id="reservation_title" class="process-message"></h4>
         <div id="reservation_detail" class="summary-detail"></div>
       </div>
     </div>
   </div>
-  
+
 
 </div>

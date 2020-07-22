@@ -11,12 +11,11 @@
 ?>
 <?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
 
-<div class="reservation-step reservation-step-choose-product">
+<div class="reservation-step process-container reservation-step-choose-product">
   <!-- Reservation : Pickup/Return information -->
-  <div class="">
-    <div id="reservation_detail" class="sticky-top"></div>
-    <div id="product_listing"></div>
-  </div>
+
+  <div id="reservation_detail" class="sticky-top"></div>
+  <div id="product_listing"></div>
 
   <!-- Modify reservation -->
   <?php if ( $args['selector_in_process'] != 'wizard' ) { ?>

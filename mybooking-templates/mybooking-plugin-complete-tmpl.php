@@ -228,6 +228,7 @@
 </script>
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
+  <div class="product-detail-bg-color">
   <div class="product-detail-container d-none d-lg-flex">
     <div class="product-detail-content">
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
@@ -256,6 +257,7 @@
       <img class="img-fluid" src="<%=shopping_cart.items[idx].photo_full%>" alt="">
       <% } %>
     </div>
+  </div>
   </div>
 
   <div class="modal fade" id="viewReservationModal" tabindex="-1" role="dialog"

@@ -13,7 +13,8 @@
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="process-section-box">
-    <h4 class=" my-3"><?php _e('Resumen', 'mybooking') ?></h4>
+    <small class="detail-text"><?php _e('Localizador','mybooking') ?></small>
+    <h3> <%=booking.id%> </h3>
 
     <div class="product-detail-summary-dates">
       <ul>
@@ -26,7 +27,6 @@
         <li><%=booking.return_place_customer_translation%></li>
       </ul>
     </div>
-
     <!-- Products -->
     <ul class="list-group list-group-flush">
       <!-- Show all the products in the reservation -->
@@ -149,7 +149,6 @@
     </ul>
 
   </div>
-
         <div class="process-section-box">
           <h4 class="my-3"><?php _e('Datos del cliente', 'mybooking') ?></h4>
           <div class="table-responsive">
@@ -171,13 +170,10 @@
             </table>
           </div>
         
-
         <div id="reservation_form_container" class="col bg-white shadow-bottom py-3 px-3 mt-3"
           style="display:none">
         </div>
         <div id=" payment_detail" class="col bg-white shadow-bottom py-3 px-3" style="display:none">
         </div>
       </div>
-
-
 </script>

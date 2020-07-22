@@ -25,7 +25,7 @@
 <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
 <?php } ?>
 
-<div class="reservation-step reservation-step-complete custom-form">
+<div class="reservation-step process-container reservation-step-complete custom-form">
 
   <!-- Reservation Summary sticky -->
   <div id="reservation_detail_sticky" class="sticky-top"></div>

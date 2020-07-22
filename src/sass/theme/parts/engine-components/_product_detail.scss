@@ -1,12 +1,13 @@
 // Product detail for complete, mi reserva and summary
-
-.product-detail-container {
+.product-detail-bg-color {
   background: var(--product-detail-bg-color);
+}
+.product-detail-container {
   padding: 30px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   line-height: 1;
   h5 {

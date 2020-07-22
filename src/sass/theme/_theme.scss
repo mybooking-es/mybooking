@@ -118,13 +118,21 @@ a.btn.btn-secondary.mybooking-read-more-link {
 }
 
 // Process structure
-
+.process-container {
+  background-color: var(--process-container-bg);
+}
 .process-message {
   padding: 3rem 0;
+  text-align: center;
+  background-color: var(--process-message-bg);
+  h4 {
+    color: var(--process-message-color);
+  }
 }
 .process-section-box {
-  border: 1px solid var(--gray-200);
   padding: 1rem;
   border-radius: 4px;
   margin: 1rem 0;
+  background-color: var(--white);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
 }
