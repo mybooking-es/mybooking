@@ -22,12 +22,12 @@
       <h3> <%=booking.id%> </h3>
       <h5><?php _e('Entrega', 'mybooking') ?></h5>
       <ul>
-        <li><%=booking.date_from_full_format%> / <%=booking.time_from%></li>
+        <li><%=booking.date_from_full_format%> <%=booking.time_from%></li>
         <li><%=booking.pickup_place_customer_translation%></li>
       </ul>
       <h5 class="mt-3"><?php _e('Devolución', 'mybooking') ?></h5>
       <ul>
-        <li><%=booking.date_to_full_format%> / <%=booking.time_to%></li>
+        <li><%=booking.date_to_full_format%> <%=booking.time_to%></li>
         <li><%=booking.return_place_customer_translation%></li>
       </ul>
       <% if (booking.days > 0) { %>
