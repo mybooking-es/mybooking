@@ -64,8 +64,7 @@
           <div class="modify-button-wrapper">
             <button id="modify_reservation_button"
               class="modify-button"><i class="d-none d-lg-inline mr-2 fas fa-pen"></i>
-              <?php echo
-              ( 'Modify reservation', 'renting_choose_product', 'mybooking-wp-plugin' ) ?>
+              <?php echo _x( 'Modify reservation', 'renting_choose_product', 'mybooking-wp-plugin' ) ?>
             </button>
           </div>
         </div>
