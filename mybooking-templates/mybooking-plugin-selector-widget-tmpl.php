@@ -15,14 +15,14 @@
 
   <div class="flex-form-group-wrapper">
     <div class="flex-form-group">
-      <label for="date_from"><?php _e('Fecha Entrega ', 'mybooking') ?></label>
-      <div class="flex-form-item">
+          <label
+            for="date_from"><?php echo _x( 'Pick-up date', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
         <input type="text" class="form-control" name="date_from" id="widget_date_from" autocomplete="off">
         <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>"/>
       </div>
     </div>
     <div class="flex-form-group">
-      <label for="date_from"><?php _e('Fecha Devolución ', 'mybooking') ?></label>
+        <label for="date_from"><?php echo _x( 'Return date', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
       <div class="flex-form-item">
         <input type="text" class="form-control" name="date_to" id="widget_date_to" autocomplete="off">
         <input type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>"/>
@@ -38,7 +38,8 @@
     <% } %>
     <div class="flex-form-group flex-form-group-no-label">
       <div class="flex-form-item">
-        <input class="btn btn-primary mt-3" type="submit" value="<?php _e('Buscar', 'mybooking') ?>" />
+        <input class="btn btn-primary mt-3" type="submit"
+          value="<?php echo _x( 'Search', 'renting_form_selector', 'mybooking-wp-plugin') ?>" />
       </div>
     </div>
   </div>
@@ -51,7 +52,7 @@
       <!-- Pickup / Return place -->
       <div class="flex-form-group">
         <div class="flex-form-box">
-          <label><?php _e('Lugar Entrega ', 'mybooking') ?></label>
+          <label><?php echo _x( 'Pick-up place', 'renting_form_selector', 'mybooking-wp-plugin') ?></label>
           <div class="flex-form-item widget_pickup_place_group">
             <label class="form_selector-select_label_wrap">
               <select id="widget_pickup_place" name="pickup_place" class="form_selector-select_dropdown"></select>
@@ -69,7 +70,7 @@
           </div>
         </div>
         <div class="flex-form-box">
-          <label><?php _e('Lugar Devolución ', 'mybooking') ?></label>
+          <label><?php echo _x( 'Return place', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
           <div class="flex-form-item widget_return_place_group">
             <label class="form_selector-select_label_wrap">
               <select id="widget_return_place" name="return_place" class="form_selector-select_dropdown">
@@ -93,7 +94,7 @@
     <!-- Date/Time from / to -->
     <div class="flex-form-group">
       <div class="flex-form-box">
-        <label><?php _e('Fecha Entrega ', 'mybooking') ?></label>
+        <label><?php echo _x( 'Pick-up date', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
         <div class="flex-form-item">
           <label for="widget_date_from"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
           <input type="text" id="widget_date_from" name="date_from" readonly="true"/>
@@ -106,7 +107,7 @@
         </div>
       </div>
       <div class="flex-form-box">
-        <label><?php _e('Fecha Devolución ', 'mybooking') ?></label>
+        <label><?php echo _x( 'Return date', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
         <div class="flex-form-item">
           <label for="widget_date_to"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
           <input type="text" id="widget_date_to" name="date_to" readonly="true"/>
@@ -132,7 +133,8 @@
       </div>
       <% } %>
   <div class="flex-form-box">
-    <input type="submit" class="btn btn-primary mt-3" value="<?php _e('Buscar', 'mybooking') ?>" />
+    <input type="submit" class="btn btn-primary mt-3"
+      value="<?php echo _x( 'Search', 'renting_form_selector', 'mybooking-wp-plugin') ?>" />
   </div>
 
   <% } %>

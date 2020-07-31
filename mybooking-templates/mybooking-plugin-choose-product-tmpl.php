@@ -37,7 +37,9 @@
           <div class="modify-button-wrapper push-to-the-right">
             <button id="modify_reservation_button"
               class="modify-button"><i
-                class="d-none d-md-inline mr-2 fas fa-pen"></i><?php _e('Editar','mybooking') ?></button>
+                class="d-none d-md-inline mr-2 fas fa-pen"></i>
+                <?php echo _x( 'Modify reservation', 'renting_choose_product', 'mybooking-wp-plugin' ) ?>
+            </button>
           </div>
         </div>
 
@@ -61,7 +63,10 @@
           </div>
           <div class="modify-button-wrapper">
             <button id="modify_reservation_button"
-              class="modify-button"><i class="d-none d-lg-inline mr-2 fas fa-pen"></i><?php _e('Editar','mybooking') ?></button>
+              class="modify-button"><i class="d-none d-lg-inline mr-2 fas fa-pen"></i>
+              <?php echo
+              ( 'Modify reservation', 'renting_choose_product', 'mybooking-wp-plugin' ) ?>
+            </button>
           </div>
         </div>
     
@@ -91,7 +96,8 @@
             </div>
         
             <% if (product.few_available_units) { %>
-              <p class="text-danger card-static_low-availability"><?php _e('¡Quedan pocas unidades!') ?></p>
+              <p class="text-danger card-static_low-availability">
+                <?php echo _x('Few units left!','renting_choose_product','mybooking-wp-plugin') ?></p>
             <% } %>
             <% if (product.price != product.base_price) { %>
               <% if (product.offer_discount_type == 'percentage' || product.offer_discount_type == 'amount') { %>
@@ -117,10 +123,15 @@
             </div>
             <% if (product.availability) { %>
               <div class="card-static_btn">
-                <a class="button btn btn-choose-product" data-product="<%=product.code%>"><?php _e('Seleccionar', 'mybooking') ?></a>
+            
+                <a class="button btn btn-choose-product"
+                  data-product="<%=product.code%>"><?php echo _x('Book it!', 'renting_choose_product', 'mybooking-wp-plugin') ?></a>
+
               </div>
               <% } else { %>
-              <span class="card-static-not-available"><?php _e('Modelo no disponible en la oficina y fechas seleccionadas', 'mybooking') ?></span>
+              <span class="card-static-not-available">
+              <?php echo _x( 'Model not available in the office and selected dates', 'renting_choose_product', 'mybooking-wp-plugin') ?>
+              </span>
             <% } %>
           </div>
         </div>

@@ -15,37 +15,38 @@
 
           <div class="field field-body">
             <div class="field">
-              <label class="label"><?php _e('Nombre','mybooking'); ?>*</label>
+              <label class="label"><?php echo _x( 'Name', 'contact_form', 'mybooking-wp-plugin') ?>*</label>
               <div class="control is-expanded">
-                  <input name="customer_name" id="customer_name" type="text" class="input" placeholder="<?php _e('Nombre','mybooking'); ?>">
+                  <input name="customer_name" id="customer_name" type="text" class="input" placeholder="<?php echo _x( 'Name', 'contact_form', 'mybooking-wp-plugin') ?>">
               </div>
             </div>
             <div class="field">
-              <label class="label"><?php _e('Apellidos','mybooking'); ?>*</label>
+              <label class="label"><?php echo _x( 'Surname', 'contact_form', 'mybooking-wp-plugin') ?>*</label>
               <div class="control is-expanded">
-                  <input name="customer_surname" id="customer_surname" type="text" class="input"  placeholder="<?php _e('Apellidos','mybooking'); ?>">
+                  <input name="customer_surname" id="customer_surname" type="text" class="input"  placeholder="<?php echo _x( 'Surname', 'contact_form', 'mybooking-wp-plugin') ?>">
               </div>
             </div>
           </div>
 
           <div class="field">
-            <label class="label"><?php _e('Correo electrónico','mybooking'); ?>*</label>
+            <label class="label"><?php echo _x( 'E-mail', 'contact_form', 'mybooking-wp-plugin') ?>*</label>
             <div class="control is-expanded">
-                <input name="customer_email" id="customer_email" type="text" class="input"  placeholder="<?php _e('Correo electrónico','mybooking'); ?>">
+                <input name="customer_email" id="customer_email" type="text" class="input"
+                  placeholder="<?php echo _x( 'E-mail', 'contact_form', 'mybooking-wp-plugin') ?>">
             </div>
           </div>
 
           <div class="field">
-            <label class="label"><?php _e('Teléfono','mybooking'); ?>*</label>
+            <label class="label"><?php echo _x( 'Phone number', 'contact_form', 'mybooking-wp-plugin') ?>*</label>
             <div class="control is-expanded">
-                <input name="customer_phone" id="customer_phone" type="text" class="input"  placeholder="<?php _e('Teléfono','mybooking'); ?>">
+                <input name="customer_phone" id="customer_phone" type="text" class="input"  placeholder="<?php echo _x( 'Phone number', 'contact_form', 'mybooking-wp-plugin') ?>">
             </div>
           </div>
 
           <div class="field">
-            <label class="label"><?php _e('Mensaje','mybooking'); ?>*</label>
+            <label class="label"><?php echo _x( 'Message', 'contact_form', 'mybooking-wp-plugin') ?>*</label>
             <div class="control is-expanded">
-                <textarea name="comments" id="comments" class="textarea" placeholder="<?php _e('Mensaje','mybooking'); ?>"></textarea>
+                <textarea name="comments" id="comments" class="textarea" placeholder="<?php echo _x( 'Message', 'contact_form', 'mybooking-wp-plugin') ?>"></textarea>
             </div>
           </div>
 

@@ -94,38 +94,43 @@
   <ul class="list-group">
     <% if (booking.time_from_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="extra-name"><?php _e('Suplemento hora de entrega', 'mybooking') ?></span>
+      <span
+        class="extra-name"><?php echo _x( 'Pick-up time supplement', 'renting_summary', 'mybooking-wp-plugin' ) ?></span>
       <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.time_from_cost)%></span>
     </li>
     <% } %>
     <% if (booking.pickup_place_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="extra-name"><?php _e('Suplemento lugar de entrega', 'mybooking') ?></span>
+      <span
+        class="extra-name"><?php echo _x( 'Pick-up place supplement', 'renting_summary', 'mybooking-wp-plugin' ) ?></span>
       <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.pickup_place_cost)%></span>
     </li>
     <% } %>
     <% if (booking.time_to_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="extra-name"><?php _e('Suplemento hora de devolución', 'mybooking') ?></span>
+      <span
+        class="extra-name"><?php echo _x( 'Return time supplement', 'renting_summary', 'mybooking-wp-plugin' ) ?></span>
       <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.time_to_cost)%></span>
     </li>
     <% } %>
     <% if (booking.return_place_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="extra-name"><?php _e('Suplemento lugar de devolución', 'mybooking') ?></span>
+      <span
+        class="extra-name"><?php echo _x( 'Return place supplement', 'renting_summary', 'mybooking-wp-plugin' ) ?></span>
       <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.return_place_cost)%></span>
     </li>
     <% } %>
 
     <% if (booking.driver_age_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="extra-name"><?php _e('Suplemento edad del conductor', 'mybooking') ?></span>
+      <span
+        class="extra-name"><?php echo _x( "Driver's age supplement", 'renting_summary', 'mybooking-wp-plugin' ) ?></span>
       <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.driver_age_cost)%></span>
     </li>
     <% } %>
     <% if (booking.category_supplement_1_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="extra-name"><?php _e('Suplemento combustible', 'mybooking') ?></span>
+      <span class="extra-name"><?php echo _x( "Petrol supplement", 'renting_summary', 'mybooking-wp-plugin' ) ?></span>
       <span
         class="product-amount pull-right"><%=configuration.formatCurrency(booking.category_supplement_1_cost)%></span>
     </li>
@@ -135,7 +140,7 @@
   <hr>
   <ul class="list-group">
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="extra-name"><b><?php _e('Total', 'mybooking') ?></b></span>
+      <span class="extra-name"><b><?php echo _x( 'Total', 'renting_summary', 'mybooking-wp-plugin' ) ?></b></span>
       <span class="product-amount pull-right"><b><%=configuration.formatCurrency(booking.total_cost)%></b></span>
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -150,7 +155,7 @@
 
   </div>
         <div class="process-section-box">
-          <h4 class="my-3"><?php _e('Datos del cliente', 'mybooking') ?></h4>
+          <h4 class="my-3"><?php echo _x( "Customer's details", 'renting_summary', 'mybooking-wp-plugin') ?></h4>
           <div class="table-responsive">
             <table class="table table-borderless table-striped">
               <tbody>

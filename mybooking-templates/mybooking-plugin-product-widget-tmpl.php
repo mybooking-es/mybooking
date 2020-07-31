@@ -14,14 +14,16 @@
   <% if (configuration.pickupReturnPlace) { %> 
         <!-- Pickup Place -->
         <div class="form-group"  class="pickup_place_group">
-          <label for="pickup_place"><?php _e('Lugar Entrega ', 'mybooking') ?></label>
+          <label
+            for="pickup_place"><?php echo _x( 'Select pick-up place', 'renting_product_calendar', 'mybooking-wp-plugin') ?></label>
           <select id="pickup_place" name="pickup_place" placeholder="Seleccionar lugar de entrega" 
                   class="form-control w-100"></select>
         </div>
 
         <!-- Return place -->
         <div class="form-group" class="return_place">
-          <label for="pickup_place"><?php _e('Lugar Devolución ', 'mybooking') ?></label>
+          <label
+            for="pickup_place"><?php echo _x( 'Select return place', 'renting_product_calendar', 'mybooking-wp-plugin' ) ?></label>
           <select id="return_place" name="return_place" placeholder="Seleccionar lugar de devolución" 
                   class="form-control w-100"></select>
         </div>
@@ -61,12 +63,17 @@
   <br>
   <hr>
   <% if (product_available) { %>    
-    <h4 class="brand-primary my-3"><?php _e('Reserva', 'mybooking') ?></h4>
+    <h4 class="brand-primary my-3">
+      <?php echo _x( 'Reservation summary', 'renting_product_calendar', 'mybooking-wp-plugin') ?></h4>
 
     <% if (shopping_cart.days > 0) { %>
-    <p class="color-gray-600"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=shopping_cart.days%> <?php _e('día/s','mybooking') ?></span></p>
+    <p class="color-gray-600"><?php echo _x( 'Rental duration', 'renting_product_calendar', 'mybooking-wp-plugin' ) ?>:
+      <span><%=shopping_cart.days%>
+        <?php echo _x( 'day(s)', 'renting_product_calendar', 'mybooking-wp-plugin' ) ?></span></p>
     <% } else if (shopping_cart.hours > 0) { %>
-    <p class="color-gray-600"><?php _e('Duración del alquiler','mybooking') ?>: <span><%=shopping_cart.hours%> <?php _e('hora/s','mybooking') ?></span></p>
+    <p class="color-gray-600"><?php echo _x( 'Rental duration', 'renting_product_calendar', 'mybooking-wp-plugin' ) ?>:
+      <span><%=shopping_cart.hours%>
+        <?php echo _x( 'hours(s)', 'renting_product_calendar', 'mybooking-wp-plugin' ) ?></span></p>
     <% } %>
 
     <h5><?php _e('Total producto','mybooking') ?></h5>
@@ -92,7 +99,9 @@
     <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.return_place_cost)%></p>
     <% } %>
 
-    <h4 class="color-brand-primary my-3">Importe total</h4>
+    <h4 class="color-brand-primary my-3">
+    <?php echo _x( 'Total', 'renting_product_calendar', 'mybooking-wp-plugin' ) ?>
+    </h4>
     <p class="total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
     
     <hr>
@@ -105,11 +114,15 @@
   <% } else { %>
     <% if (product_type == 'resource') { %>
       <div class="alert alert-danger">
-        <p><?php _e('Lo sentimos, no hay disponibilidad en este horario.','mybooking') ?></p>
+        <p>
+          <?php echo _x( 'Sorry, there is no availability during these hours', 'renting_product_calendar', 'mybooking-wp-plugin') ?>
+        </p>
       </div>
     <% } else if (product_type == 'category_of_resources') { %>
       <div class="alert alert-warning">
-        <p><?php _e('Lo sentimos, no hay disponibilidad para todo el período. El calendario muestra aquellos días en los que hay disponibilidad, pero es posible que para determinadas fechas no seamos capaces de ofrecerle el mismo producto.','mybooking') ?></p>
+        <p>
+          <?php echo _x( 'Sorry, there is no availability for the entire period. The calendar shows those days when there is availability, but it may not be available for certain consecutive dates.', 'renting_product_calendar', 'mybooking-wp-plugin') ?>
+        </p>
         <p></p>
       </div>
     <% } %>

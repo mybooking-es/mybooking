@@ -28621,7 +28621,8 @@ a.magic-button.btn {
     .extras-left .extra-title img {
       width: 70px;
       -o-object-fit: contain;
-         object-fit: contain; }
+         object-fit: contain;
+      margin-right: 10px; }
 
 .extras-right {
   padding-left: 30px;

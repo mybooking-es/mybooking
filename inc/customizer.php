@@ -160,6 +160,8 @@ class MyBookingCustomizer {
     	$body_bg = get_theme_mod( 'mybooking_body_bg', '#FFFFFF' );
     	$body_color = get_theme_mod( 'mybooking_body_color', '#212121' );
 			$logo_height = get_theme_mod( 'mybooking_logo_height', '40' );
+  
+      $header_text_color = get_theme_mod('mybooking_headers_color', '#2193F2'); 
 
 			$navbar_bg = get_theme_mod( 'mybooking_navbar_bg', '#ffffff');
 			$navbar_link_color = get_theme_mod( 'mybooking_navbar_link_color', '#000000' );
@@ -231,6 +233,9 @@ class MyBookingCustomizer {
 		  // Body
 		  $custom_css.= "--body-bg: ".$body_bg.';';
 		  $custom_css.= "--body-color: ".$body_color.';';
+
+      // Header color
+      $custom_css.= "--font-heading-color".$header_text_color.';';
 
 			// Identity
   		$custom_css.= "--custom-logo-height: ".$logo_height.'px;';
@@ -501,8 +506,8 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_body_color' , array(
-			    'default'   => '#212121',
-			    'transport' => 'refresh'
+        'default'   => '#212121',
+        'transport' => 'refresh'
 			) );
 
 			// Control
@@ -510,7 +515,22 @@ class MyBookingCustomizer {
 				'label'      => _x( 'Body Text color', 'customizer_colors', 'mybooking' ),
 				'section'    => 'mybooking_theme_colors_options',
 				'settings'   => 'mybooking_body_color',
-			) ) );
+      ) ) );
+      
+      // == Headers color
+
+      // Setting
+      $wp_customize->add_setting( 'mybooking_headers_color' , array(
+      'default' => '#2193F2',
+      'transport' => 'refresh'
+      ) );
+
+      // Control
+      $wp_customize->add_control( new Customizer_Alpha_Color_Control( $wp_customize, 'mybooking_headers_color', array(
+      'label' => _x( 'Headers Text color', 'customizer_colors', 'mybooking' ),
+      'section' => 'mybooking_theme_colors_options',
+      'settings' => 'mybooking_headers_color',
+      ) ) );
 
 			// == Nav colors
 
