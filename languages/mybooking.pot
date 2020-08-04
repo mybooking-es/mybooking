@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-04 16:34+0000\n"
+"POT-Creation-Date: 2020-08-04 16:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -1442,14 +1442,24 @@ msgstr ""
 msgid "MyBooking Pages"
 msgstr ""
 
-#: mybooking-parts/mybooking-reservation-steps.php:50
+#: mybooking-parts/mybooking-reservation-steps.php:49
 msgctxt "reservation_step"
 msgid "Place and date"
 msgstr ""
 
-#: mybooking-parts/mybooking-reservation-steps.php:51
+#: mybooking-parts/mybooking-reservation-steps.php:50
 msgctxt "reservation_step"
 msgid "Select product"
+msgstr ""
+
+#: mybooking-parts/mybooking-reservation-steps.php:51
+msgctxt "reservation_step"
+msgid "Complete reservation"
+msgstr ""
+
+#: mybooking-parts/mybooking-reservation-steps.php:52
+msgctxt "reservation_step"
+msgid "Summary"
 msgstr ""
 
 #. Name of the template

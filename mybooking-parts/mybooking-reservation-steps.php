@@ -46,13 +46,10 @@
       } elseif ( in_array('summary',$classes) ) {
         $summary_active = 'active';
       } ?>
-
-      <div data-desc="<?php _x( 'Place and date', 'reservation_step', 'mybooking' ) ?>" class="step">1</div>
-      <div data-desc="<?php _x( 'Select product', 'reservation_step', 'mybooking' ) ?>" class="<?php echo $choose_active ?> step">2
-      </div>
-      <div data-desc="<?php _x( 'Complete reservation', 'mybooking' ) ?>" class="<?php echo $complete_active ?> step">3
-      </div>
-      <div data-desc="<?php _x( 'Summary', 'mybooking' ) ?>" class="<?php echo $summary_active ?> step">4</div>
+      <div data-desc="<?php echo _x( 'Place and date', 'reservation_step', 'mybooking' ) ?>" class="step">1</div>
+      <div data-desc="<?php echo _x( 'Select product', 'reservation_step', 'mybooking' ) ?>" class="<?php echo $choose_active ?> step">2</div>
+      <div data-desc="<?php echo _x( 'Complete reservation', 'reservation_step', 'mybooking' ) ?>" class="<?php echo $complete_active ?> step">3</div>
+      <div data-desc="<?php echo _x( 'Summary', 'reservation_step', 'mybooking' ) ?>" class="<?php echo $summary_active ?> step">4</div>
     </div>
   </div>
 </div>
