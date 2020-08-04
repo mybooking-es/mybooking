@@ -13,19 +13,19 @@ function create_vehicle() {
   register_post_type( 'vehicle',
     array(
       'labels' => array(
-        'name' => __( 'Vehículos','mybooking' ),
-        'singular_name' => __( 'Vehículo','mybooking' ),
-        'add_new' => __( 'Añadir vehículo','mybooking' ),
-        'add_new_item' => __( 'Nuevo vehículo','mybooking' ),
-        'edit' => __( 'Editar','mybooking' ),
-        'edit_item' => __( 'Editar vehículo','mybooking' ),
-        'new_item' => __( 'Nuevo vehículo','mybooking' ),
-        'view' => __( 'Ver','mybooking' ),
-        'view_item' => __( 'Ver vehículo','mybooking' ),
-        'search_items' => __( 'Buscar vehículo','mybooking' ),
-        'not_found' => __( 'Ningún vehículo encontrado','mybooking' ),
-        'not_found_in_trash' => __( 'Ningún vehículo encontrado en la Papelera','mybooking' ),
-        'parent' => __( 'Vehículo superior','mybooking' )
+        'name' => _x( 'Vehicles', 'vehicle_content', 'mybooking' ),
+        'singular_name' => _x( 'Vehicle', 'vehicle_content', 'mybooking' ),
+        'add_new' => _x( 'Add vehicle', 'vehicle_content', 'mybooking' ),
+        'add_new_item' => _x( 'New vehicle', 'vehicle_content', 'mybooking' ),
+        'edit' => _x( 'Edit', 'vehicle_content', 'mybooking' ),
+        'edit_item' => _x( 'Edit vehicle','vehicle_content', 'mybooking' ),
+        'new_item' => _x( 'New vehicle','vehicle_content', 'mybooking' ),
+        'view' => _x( 'See','vehicle_content', 'mybooking' ),
+        'view_item' => _x( 'See vehicle','vehicle_content', 'mybooking' ),
+        'search_items' => _x( 'Search vehicle','vehicle_content', 'mybooking' ),
+        'not_found' => _x( 'No vehicle found','vehicle_content', 'mybooking' ),
+        'not_found_in_trash' => _x( 'No vehicle found on bin','vehicle_content', 'mybooking' ),
+        'parent' => _x( 'Parent vehicle','vehicle_content', 'mybooking' )
       ),
       'show_ui' => true,
       'public' => true,
@@ -42,14 +42,14 @@ add_action( 'init', 'create_vehicle' );
 // METABOX
 function vehicle_info_meta_box() {
     add_meta_box( 'vehicle-info',
-        __( 'Información del vehículo','mybooking' ),
+        _x( 'Vehicle information', 'vehicle_metabox' ,'mybooking' ),
         'show_vehicle_info_meta_box',
         'vehicle',
         'normal',
         'default'
     );
 }
-add_action( 'admin_init', 'vehicle_info_meta_box' );
+add_action( 'admin_init', 'vehicle_content' );
 
 function show_vehicle_info_meta_box( $vehicle_info ) {
   $vehicle_price_auto = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_price_auto', true ) );
@@ -70,7 +70,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
 
   <table class="form-table">
     <tr valign="top">
-      <th scope="row"><?php _e('Marca','mybooking') ?></th>
+      <th scope="row"><?php _x('Brand', 'vehicle_content', 'mybooking') ?></th>
       <td>
         <input
         type="text"
@@ -80,7 +80,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _e('Modelo','mybooking') ?></th>
+      <th scope="row"><?php _x('Model', 'vehicle_content','mybooking') ?></th>
       <td>
         <input
         type="text"
@@ -90,7 +90,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _e('Año de matriculación','mybooking') ?></th>
+      <th scope="row"><?php _x('Year', 'vehicle_content','mybooking') ?></th>
       <td>
         <input
         type="text"
@@ -100,7 +100,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _e('Cilindrada','mybooking') ?></th>
+      <th scope="row"><?php _x('Cc', 'vehicle_content','mybooking') ?></th>
       <td>
         <input
         type="text"
@@ -110,7 +110,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _e('Potencia','mybooking') ?></th>
+      <th scope="row"><?php _x('Cv', 'vehicle_content','mybooking') ?></th>
       <td>
         <input
         type="text"
@@ -120,7 +120,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _e('Kilometraje','mybooking') ?></th>
+      <th scope="row"><?php _x('Km/miles', 'vehicle_content','mybooking') ?></th>
       <td>
         <input
         type="text"
@@ -130,7 +130,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _e('Combutible','mybooking') ?></th>
+      <th scope="row"><?php _x('Fuel', 'vehicle_content','mybooking') ?></th>
       <td>
         <input
         type="text"
@@ -140,7 +140,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _e('Cambio','mybooking') ?></th>
+      <th scope="row"><?php _x('Transmission', 'vehicle_content','mybooking') ?></th>
       <td>
         <input
         type="text"
@@ -149,7 +149,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
         value="<?php echo $vehicle_drive; ?>" /><br>
       </td>
       <tr valign="top">
-        <th scope="row"><?php _e('Color','mybooking') ?></th>
+        <th scope="row"><?php _x('Color', 'vehicle_content','mybooking') ?></th>
         <td>
           <input
           type="text"
@@ -159,7 +159,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
         </td>
       </tr>
       <tr valign="top">
-        <th scope="row"><?php _e('Plazas','mybooking') ?></th>
+        <th scope="row"><?php _e('Seats', 'vehicle_content','mybooking') ?></th>
         <td>
           <input
           type="text"
@@ -169,7 +169,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
         </td>
       </tr>
       <tr valign="top">
-        <th scope="row"><?php _e('Garantia','mybooking') ?></th>
+        <th scope="row"><?php _e('Warranty', 'vehicle_content','mybooking') ?></th>
         <td>
           <input
           type="text"
@@ -179,7 +179,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
         </td>
       </tr>
       <tr valign="top">
-        <th scope="row"><?php _e('Precio (Automático)','mybooking') ?></th>
+        <th scope="row"><?php _e('Price (Automatic)', 'vehicle_content','mybooking') ?></th>
         <td>
           <input
           type="text"
@@ -189,7 +189,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
         </td>
       </tr>
       <tr valign="top">
-        <th scope="row"><?php _e('Precio (Manual)','mybooking') ?></th>
+        <th scope="row"><?php _e('Price (Manual)', 'vehicle_content','mybooking') ?></th>
         <td>
           <input
           type="text"
@@ -199,7 +199,7 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
         </td>
       </tr>
       <tr valign="top">
-        <th scope="row"><?php _e('Precio (Diesel)','mybooking') ?></th>
+        <th scope="row"><?php _e('Price (Diesel)', 'vehicle_content','mybooking') ?></th>
         <td>
           <input
           type="text"

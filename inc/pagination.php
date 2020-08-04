@@ -25,9 +25,9 @@ if ( ! function_exists( 'mybooking_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'mybooking' ),
-				'next_text'          => __( '&raquo;', 'mybooking' ),
-				'screen_reader_text' => __( 'Posts navigation', 'mybooking' ),
+				'prev_text'          => _x( '&laquo;', 'pagination', 'mybooking' ),
+				'next_text'          => _x( '&raquo;', 'pagination', 'mybooking' ),
+				'screen_reader_text' => _x( 'Posts navigation', 'pagination', 'mybooking' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 			)

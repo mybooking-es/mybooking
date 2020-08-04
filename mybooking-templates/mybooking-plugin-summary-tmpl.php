@@ -13,7 +13,7 @@
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="process-section-box">
-    <small class="detail-text"><?php _e('Localizador','mybooking') ?></small>
+    <small class="detail-text"><?php echo _x( 'Reservation Id', 'renting_summary', 'mybooking-wp-plugin') ?></small>
     <h3> <%=booking.id%> </h3>
 
     <div class="product-detail-summary-dates">
@@ -143,15 +143,19 @@
       <span class="extra-name"><b><?php echo _x( 'Total', 'renting_summary', 'mybooking-wp-plugin' ) ?></b></span>
       <span class="product-amount pull-right"><b><%=configuration.formatCurrency(booking.total_cost)%></b></span>
     </li>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="extra-name"><b><?php _e('Importe pagado', 'mybooking') ?></b></span>
-      <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.total_paid)%></span>
-    </li>
-    <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="extra-name"><b><?php _e('Importe pendiente', 'mybooking') ?></b></span>
-      <span class="product-amount pull-right <% if (booking.total_pending > 0){ %>text-danger<%}%>"><b><%=configuration.formatCurrency(booking.total_pending)%></b></span>
+    <% if (booking.total_paid > 0) { %>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span class="extra-name"><b><?php echo _x( 'Total paid', 'renting_summary', 'mybooking-wp-plugin' ) ?></b></span>
+        <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.total_paid)%></span>
       </li>
-    </ul>
+    <% } %>
+    <% if (booking.total_pending < booking.total_cost) { %>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span class="extra-name"><b><?php echo _x( 'Total pending', 'renting_summary', 'mybooking-wp-plugin' ) ?></b></span>
+        <span class="product-amount pull-right <% if (booking.total_pending > 0){ %>text-danger<%}%>"><b><%=configuration.formatCurrency(booking.total_pending)%></b></span>
+        </li>
+      </ul>
+    <% } %>
 
   </div>
         <div class="process-section-box">
@@ -160,15 +164,15 @@
             <table class="table table-borderless table-striped">
               <tbody>
                 <tr>
-                  <th scope="row"><?php _e('Nombre', 'mybooking') ?>:</th>
+                  <th scope="row"><?php echo _x( "Full name", 'renting_summary', 'mybooking') ?>:</th>
                   <td><%=booking.customer_name%> <%=booking.customer_surname%></td>
                 </tr>
                 <tr>
-                  <th scope="row"><?php _e('Correo electrónico', 'mybooking') ?>:</th>
+                  <th scope="row"><?php echo _x( "E-mail", 'renting_summary', 'mybooking') ?>:</th>
                   <td><%=booking.customer_email%></td>
                 </tr>
                 <tr>
-                  <th scope="row"><?php _e('Teléfono', 'mybooking') ?>:</th>
+                  <th scope="row"><?php echo _x( "Phone number", 'renting_summary', 'mybooking') ?>:</th>
                   <td><%=booking.customer_phone%> <%=booking.customer_mobile_phone%></td>
                 </tr>
               </tbody>

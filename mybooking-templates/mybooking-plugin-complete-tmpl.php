@@ -177,10 +177,10 @@
           <div class="complete-buttons-wrapper">
             <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
               class="complete-button"><i class="fas fa-pen mr-2"></i>
-              <?php echo _x( 'Modify reservation', 'renting_complete', 'mybooking-wp-plugin' ) ?>
+              <?php echo _x( 'Edit', 'renting_complete', 'mybooking-wp-plugin' ) ?>
             </button>
             <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
-              <i class="fas fa-info-circle mr-2"></i><?php _e('Info','mybooking') ?>
+              <i class="fas fa-info-circle mr-2"></i><?php echo _x( 'Info', 'renting_complete', 'mybooking' ) ?>
             </button>
           </div>
         </div>
@@ -217,10 +217,10 @@
 
           <div class="complete-buttons-wrapper">
             <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
-              class="complete-button"><?php echo _x( 'Modify reservation', 'renting_complete', 'mybooking-wp-plugin' ) ?>
+              class="complete-button"><?php echo _x( 'Edit', 'renting_complete', 'mybooking-wp-plugin' ) ?>
             </button>
             <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
-              <i class="fas fa-info-circle mr-2"></i><?php _e('Info','mybooking') ?>
+              <i class="fas fa-info-circle mr-2"></i><?php echo _x('Info', 'renting_complete', 'mybooking') ?>
             </button>
           </div>
         </div>
@@ -236,12 +236,12 @@
     <div class="product-detail-content">
       <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
       <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
-      <h5 class="mt-3"><?php _e('Entrega', 'mybooking') ?></h5>
+      <h5 class="mt-3"><?php echo _x('Delivery', 'renting_complete', 'mybooking') ?></h5>
       <ul>
         <li><%=shopping_cart.date_from_full_format%> <%=shopping_cart.time_from%></li>
         <li><%=shopping_cart.pickup_place_customer_translation%></li>
       </ul>
-      <h5 class="mt-3"><?php _e('Devolución', 'mybooking') ?></h5>
+      <h5 class="mt-3"><?php echo _x('Collection', 'renting_complete', 'mybooking') ?></h5>
       <ul>
         <li><%=shopping_cart.date_to_full_format%> <%=shopping_cart.time_to%></li>
         <li><%=shopping_cart.return_place_customer_translation%></li>
@@ -252,7 +252,7 @@
           </span></p>
       <% } else if (shopping_cart.hours > 0) { %>
       <p class="detail-text"><?php echo _x( 'Rental duration', 'renting_complete', 'mybooking-wp-plugin' ) ?>: <span><%=shopping_cart.hours%>
-          <?php _e('hora/s','mybooking') ?></span></p>
+          <?php echo _x( 'hour(s)', 'renting_complete', 'mybooking-wp-plugin' ) ?></span></p>
       <% } %>
       <% } %>
     </div>
@@ -270,7 +270,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="viewModal"><?php _e('Detalle de la reserva', 'mybooking') ?></h5>
+          <h5 class="modal-title" id="viewModal"><?php echo _x( 'Reservation summary', 'renting_complete', 'mybooking-wp-plugin') ?></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -506,9 +506,9 @@
                 <label for="payments_paypal_standard">
                   <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;
                   <?php if ( empty($args['terms_and_conditions']) ) { ?>
-                    <?php echo _x( 'He leído y acepto los términos y condiciones y la política de privacidad','mybooking' ) ?>
+                    <?php echo _x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking-wp-plugin' ) ?>
                   <?php } else { ?>
-                    <?php printf( _x( 'He leído y acepto los <a href="%s" target="_blank">términos y condiciones y la política de privacidad</a>', 'mybooking' ), $args['terms_and_conditions'] ) ?>
+                    <?php printf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking-wp-plugin' ), $args['terms_and_conditions'] ) ?>
                   <?php } ?>
                 </label>
               </div>
@@ -538,16 +538,16 @@
                       <label for="payments_paypal_standard">
                         <input type="checkbox" id="conditions_read_payment_on_delivery" name="conditions_read_payment_on_delivery">&nbsp;
                         <?php if ( empty($args['terms_and_conditions']) ) { ?>
-                          <?php echo _x( 'He leído y acepto los términos y condiciones y la política de privacidad', 'renting_complete', 'mybooking' ) ?>
+                          <?php echo _x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking-wp-plugin' ) ?>
                         <?php } else { ?>
-                          <?php printf( _x( 'He leído y acepto los <a href="%s" target="_blank">términos y condiciones y la política de privacidad</a>', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ?>
+                          <?php printf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking-wp-plugin' ), $args['terms_and_conditions'] ) ?>
                         <?php } ?>
                       </label>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-12">
-                      <button type="submit" class="btn btn-outline-dark"><?php _e('Confirmar', 'mybooking') ?></button>
+                      <button type="submit" class="btn btn-outline-dark"><?php echo _x( 'Confirm', 'renting_complete', 'mybooking-wp-plugin' ) ?></button>
                     </div>
                   </div>
               </div>
@@ -603,9 +603,9 @@
                     <label for="payments_paypal_standard">
                       <input type="checkbox" id="conditions_read_pay_now" name="conditions_read_pay_now">&nbsp;
                       <?php if ( empty($args['terms_and_conditions']) ) { ?>
-                        <?php echo _x( 'He leído y acepto los términos y condiciones y la política de privacidad', 'renting_complete', 'mybooking' ) ?>
+                        <?php echo _x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking-wp-plugin' ) ?>
                       <?php } else { ?>
-                        <?php printf( _x( 'He leído y acepto los <a href="%s" target="_blank">términos y condiciones y la política de privacidad</a>', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ?>
+                        <?php printf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking-wp-plugin' ), $args['terms_and_conditions'] ) ?>
                       <?php } ?>
                     </label>
                   </div>

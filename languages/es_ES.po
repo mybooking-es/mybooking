@@ -1,14 +1,13 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-04 16:34+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"PO-Revision-Date: 2020-08-04 16:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: Español\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1116,17 +1115,17 @@ msgstr ""
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:223
 msgctxt "renting_complete"
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:239
 msgctxt "renting_complete"
 msgid "Delivery"
-msgstr ""
+msgstr "Entrega"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:244
 msgctxt "renting_complete"
 msgid "Collection"
-msgstr ""
+msgstr "Devolución"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:291
 msgid "horas/s"
@@ -1135,27 +1134,27 @@ msgstr ""
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:167
 msgctxt "renting_summary"
 msgid "Full name"
-msgstr ""
+msgstr "Nombre"
 
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:171
 msgctxt "renting_summary"
 msgid "E-mail"
-msgstr ""
+msgstr "Correo electrónico"
 
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:175
 msgctxt "renting_summary"
 msgid "Phone number"
-msgstr ""
+msgstr "Teléfono"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:23
 msgctxt "renting_my_reservation"
 msgid "Delivery"
-msgstr ""
+msgstr "Entrega"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:28
 msgctxt "renting_my_reservation"
 msgid "Collection"
-msgstr ""
+msgstr "Devolución"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:270
 msgid "Datos del conductor"
@@ -1164,12 +1163,12 @@ msgstr ""
 #: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:41
 msgctxt "renting_product_calendar"
 msgid "Delivery time"
-msgstr ""
+msgstr "Hora de entrega"
 
 #: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:47
 msgctxt "renting_product_calendar"
 msgid "Collection time"
-msgstr ""
+msgstr "Hora devolución"
 
 #: mybooking-options/mybooking-settings.php:121
 #: mybooking-options/mybooking-settings.php:122
@@ -1445,12 +1444,12 @@ msgstr ""
 #: mybooking-parts/mybooking-reservation-steps.php:50
 msgctxt "reservation_step"
 msgid "Place and date"
-msgstr ""
+msgstr "Lugar y hora"
 
 #: mybooking-parts/mybooking-reservation-steps.php:51
 msgctxt "reservation_step"
 msgid "Select product"
-msgstr ""
+msgstr "Seleccionar producto"
 
 #. Name of the template
 msgid "MyBooking Home"

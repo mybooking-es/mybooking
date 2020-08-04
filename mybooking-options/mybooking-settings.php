@@ -307,12 +307,6 @@
 		                     "settings",
 		                     "promo_section");
 
-		  // add_settings_field("promo_home_widgets_active",
-		  //                    _x('Activate promotion widget areas in Home', 'theme_settings', 'mybooking'),
-		  //                    array($this, 'field_mybooking_theme_promo_home_widgets_active_callback'),
-		  //                    "settings",
-		  //                    "promo_section");
-
 		  // == Global
 		  add_settings_field("global_vehicle_active",
 		                     _x('Activate vehicles module', 'theme_settings', 'mybooking'),
@@ -335,7 +329,7 @@
 public function mybooking_theme_settings_page() {
 
 if (!current_user_can('edit_pages'))
-wp_die(__("No tienes acceso a esta página.", 'mybooking'));
+wp_die(__("Access forbidden", "theme_settings", 'mybooking'));
 
 ?>
 <div class="wrap">
@@ -549,13 +543,6 @@ wp_die(__("No tienes acceso a esta página.", 'mybooking'));
 														 _x( 'Activate <b>Promotion Pop-ups</b> Custom Post Type in order to create promotions.', 'theme_settings', 'mybooking')	);
 
 		}
-
-		// public function field_mybooking_theme_promo_home_widgets_active_callback() {
-    //
-		// 	$this->checkbox_field( "mybooking_theme_settings_promo", "promo_home_widgets_active",
-		// 												 _x( 'It activates up to 6 widgets areas on <b>MyBooking Home</b> template to show banners and promotions.', 'theme_settings', 'mybooking')	);
-    //
-		// }
 
 		// ------------------ Global fields callbacks --------------------------
 

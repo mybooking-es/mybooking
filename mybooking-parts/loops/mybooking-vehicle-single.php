@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
           <table class="vehicle_info-table">
             <tr>
               <td colspan="2">
-                <h3><?php _e('Detalles del vehículo','mybooking') ?></h3>
+                <h3><?php echo _x('Vehicle details', 'vehicle_single', 'mybooking') ?></h3>
               </td>
             </tr>
 
@@ -42,7 +42,7 @@ defined( 'ABSPATH' ) || exit;
               if ( $vehicle_brand != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Marca','mybooking'); ?></strong></td>
+                  <td><strong><?php echo _x('Brand','vehicle_single', 'mybooking'); ?></strong></td>
                   <td><?php echo $vehicle_brand; ?></td>
                 </tr>
 
@@ -52,7 +52,7 @@ defined( 'ABSPATH' ) || exit;
               if ( $vehicle_model != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Modelo','mybooking'); ?></strong></td>
+                  <td><strong><?php echo _x('Model', 'vehicle_single', 'mybooking'); ?></strong></td>
                   <td><?php echo $vehicle_model; ?></td>
                 </tr>
 
@@ -62,7 +62,7 @@ defined( 'ABSPATH' ) || exit;
               if ( $vehicle_fuel != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Combustible','mybooking'); ?></strong></td>
+                  <td><strong><?php echo _x('Fuel', 'vehicle_single', 'mybooking'); ?></strong></td>
                   <td><?php echo $vehicle_fuel; ?></td>
                 </tr>
 
@@ -72,7 +72,7 @@ defined( 'ABSPATH' ) || exit;
               if ( $vehicle_drive != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Cambio','mybooking'); ?></strong></td>
+                  <td><strong><?php echo _x('Transmission', 'vehicle_single', 'mybooking'); ?></strong></td>
                   <td><?php echo $vehicle_drive; ?></td>
                 </tr>
 
@@ -82,7 +82,7 @@ defined( 'ABSPATH' ) || exit;
               if ( $vehicle_km != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Kilometraje','mybooking'); ?></strong></td>
+                  <td><strong><?php echo _x('Km/Miles', 'vehicle_single', 'mybooking'); ?></strong></td>
                   <td><?php echo $vehicle_km; ?></td>
                 </tr>
 
@@ -92,7 +92,7 @@ defined( 'ABSPATH' ) || exit;
               if ( $vehicle_year != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Año','mybooking'); ?></strong></td>
+                  <td><strong><?php echo _x('Year', 'vehicle_single', 'mybooking'); ?></strong></td>
                   <td><?php echo $vehicle_year; ?></td>
                 </tr>
 
@@ -102,7 +102,7 @@ defined( 'ABSPATH' ) || exit;
               if ( $vehicle_displacement != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Cilindrada','mybooking'); ?></strong></td>
+                  <td><strong><?php echo _x('CC', 'vehicle_single', 'mybooking'); ?></strong></td>
                   <td><?php echo $vehicle_displacement; ?> cc</td>
                 </tr>
 
@@ -112,7 +112,7 @@ defined( 'ABSPATH' ) || exit;
               if ( $vehicle_power != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Potencia','mybooking'); ?></strong></td>
+                  <td><strong><?php echo _x('CV', 'vehicle_single', 'mybooking'); ?></strong></td>
                   <td><?php echo $vehicle_power; ?> CV</td>
                 </tr>
 
@@ -122,7 +122,7 @@ defined( 'ABSPATH' ) || exit;
               if ( $vehicle_places != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Plazas','mybooking'); ?></strong></td>
+                  <td><strong><?php echo _x('Seats', 'vehicle_single', 'mybooking'); ?></strong></td>
                   <td><?php echo $vehicle_places; ?></td>
                 </tr>
 
@@ -132,7 +132,7 @@ defined( 'ABSPATH' ) || exit;
               if ( $vehicle_color != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Color','mybooking'); ?></strong></td>
+                  <td><strong><?php echo _x('Color', 'vehicle_single', 'mybooking'); ?></strong></td>
                   <td><?php echo $vehicle_color; ?></td>
                 </tr>
 
@@ -142,7 +142,7 @@ defined( 'ABSPATH' ) || exit;
               if ( $vehicle_warranty != '' ) { ?>
 
                 <tr>
-                  <td><strong><?php _e('Garantia','mybooking'); ?></strong></td>
+                  <td><strong><?php echo _x('Warranty', 'vehicle_single', 'mybooking'); ?></strong></td>
                   <td><?php echo $vehicle_warranty; ?></td>
                 </tr>
 
@@ -222,7 +222,7 @@ defined( 'ABSPATH' ) || exit;
     <div class="col_md_12">
 
       <?php	wp_link_pages( array(
-          'before' => '<div class="page-links">' . __( 'Páginas:', 'mybooking' ),
+          'before' => '<div class="page-links">' . echo _x( 'Pages:', 'vehicle_single', 'mybooking' ),
           'after'  => '</div>',
         )); ?>
 

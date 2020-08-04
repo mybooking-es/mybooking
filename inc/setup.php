@@ -60,7 +60,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		*
 		*/
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'mybooking' ),
+			'primary' => _x( 'Primary Menu', 'nav_menus', 'mybooking' ),
 		) );
 
 		/*
@@ -230,14 +230,4 @@ if ( ! function_exists( 'mybooking_custom_excerpt_more' ) ) {
 		return $more;
 	}
 }
-/*
-add_filter( 'wp_trim_excerpt', 'mybooking_all_excerpts_get_more_link' );
 
-if ( ! function_exists( 'mybooking_all_excerpts_get_more_link' ) ) {
-		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . '<p><a class="btn btn-secondary mybooking-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Leer', 'home-news-button','mybooking' ) . '</a></p>';
-		}
-		return $post_excerpt;
-	}
-}
-*/

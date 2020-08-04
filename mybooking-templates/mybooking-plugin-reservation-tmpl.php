@@ -16,33 +16,33 @@
   <div class="product-detail-container">
     <div class="product-detail-content">
       <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-      <% var booking_line = booking.booking_lines[idx]; %>
-      <h2 class="product-name mb-3"><%=booking_line.item_description_customer_translation%></h2>
-      <small class="detail-text"><?php _e('Localizador','mybooking') ?></small>
-      <h3> <%=booking.id%> </h3>
-      <h5><?php _e('Entrega', 'mybooking') ?></h5>
-      <ul>
-        <li><%=booking.date_from_full_format%> <%=booking.time_from%></li>
-        <li><%=booking.pickup_place_customer_translation%></li>
-      </ul>
-      <h5 class="mt-3"><?php _e('Devolución', 'mybooking') ?></h5>
-      <ul>
-        <li><%=booking.date_to_full_format%> <%=booking.time_to%></li>
-        <li><%=booking.return_place_customer_translation%></li>
-      </ul>
-      <% if (booking.days > 0) { %>
-      <p class="detail-text mt-3">
-      <?php echo _x( 'Rental duration', 'renting_my_reservation', 'mybooking-wp-plugin' ) ?>: <span><%=booking.days%>
-          <?php echo _x( 'day(s)', 'renting_my_reservation', 'mybooking-wp-plugin' ) ?></span></p>
-      <% } else if (booking.hours > 0) { %>
-      <p class="detail-text"><?php echo _x( 'Rental duration', 'renting_my_reservation', 'mybooking-wp-plugin' ) ?>: <span><%=booking.hours%>
-          <?php _e('hora/s','mybooking') ?></span></p>
-      <% } %>
+        <% var booking_line = booking.booking_lines[idx]; %>
+        <h2 class="product-name mb-3"><%=booking_line.item_description_customer_translation%></h2>
+        <small class="detail-text"><?php echo _x( 'Reservation Id', 'renting_my_reservation', 'mybooking-wp-plugin') ?></small>
+        <h3> <%=booking.id%> </h3>
+        <h5><?php echo _x('Delivery', 'renting_my_reservation', 'mybooking') ?></h5>
+        <ul>
+          <li><%=booking.date_from_full_format%> <%=booking.time_from%></li>
+          <li><%=booking.pickup_place_customer_translation%></li>
+        </ul>
+        <h5 class="mt-3"><?php echo _x('Collection', 'renting_my_reservation', 'mybooking') ?></h5>
+        <ul>
+          <li><%=booking.date_to_full_format%> <%=booking.time_to%></li>
+          <li><%=booking.return_place_customer_translation%></li>
+        </ul>
+        <% if (booking.days > 0) { %>
+          <p class="detail-text mt-3">
+          <?php echo _x( 'Rental duration', 'renting_my_reservation', 'mybooking-wp-plugin' ) ?>: <span><%=booking.days%>
+              <?php echo _x( 'day(s)', 'renting_my_reservation', 'mybooking-wp-plugin' ) ?></span></p>
+        <% } else if (booking.hours > 0) { %>
+          <p class="detail-text"><?php echo _x( 'Rental duration', 'renting_my_reservation', 'mybooking-wp-plugin' ) ?>: <span><%=booking.hours%>
+              <?php _e('hour(s)', 'renting_my_reservation', 'mybooking-wp-plugin') ?></span></p>
+        <% } %>
       <% } %>
     </div>
     <div class="product-detail-image">
       <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-      <img class="img-fluid" src="<%=booking_line.photo_full%>" alt="">
+        <img class="img-fluid" src="<%=booking_line.photo_full%>" alt="">
       <% } %>
     </div>
     </div>
@@ -59,7 +59,7 @@
 
       <div class="col-12 col-lg-4 order-1 order-lg-12">
         <div class="col process-section-box">
-          <h4 class="my-3"><?php _e('Mi reserva', 'mybooking') ?></h4>
+          <h4 class="my-3"><?php echo _x( 'My reservation', 'renting_my_reservation', 'mybooking-wp-plugin') ?></h4>
           <!-- Products -->
           <ul class="list-group list-group-flush">
             <% for (var idx=0;idx<booking.booking_lines.length;idx++) { %>
@@ -501,7 +501,7 @@
       </div>
     </div>
 
-    <h4 class="my-3"><?php _e('Vuelo de regreso', 'mybooking') ?> </h4>
+    <h4 class="my-3"><?php echo _x('Return flight', 'renting_my_reservation', 'mybooking-wp-plugin') ?></h4>
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="flight_company_departure"><?php echo _x('Company', 'renting_my_reservation', 'mybooking-wp-plugin') ?></label>
@@ -532,7 +532,7 @@
 
 <!-- Payment detail -->
 <script type="text/tmpl" id="script_payment_detail">
-  <h4 class="my-3"><?php _e('Pago', 'mybooking') ?></h4>
+  <h4 class="my-3"><%= i18next.t('myReservation.pay.total_payment', {amount:configuration.formatCurrency(amount) }) %></h4>
   <% if (booking.total_paid == 0 && booking.status == 'pending_confirmation') {%>
     <div id="payment_amount_container" class="alert alert-info">
       <%= i18next.t('myReservation.pay.booking_amount', {amount:configuration.formatCurrency(booking.booking_amount) }) %>
@@ -547,7 +547,7 @@
     <div class="form-row">
        <div class="form-group col-md-12">
          <label for="payments_paypal_standard">
-          <input type="radio" name="payment_method_id" value="paypal_standard">&nbsp;<?php _e('Paypal', 'mybooking') ?>
+          <input type="radio" name="payment_method_id" value="paypal_standard">&nbsp;<?php echo _x( 'Paypal', 'renting_my_reservation', 'mybooking-wp-plugin' ) ?>
           <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-paypal.jpg"/>
          </label>
        </div>
@@ -586,7 +586,7 @@
     <% } %>
     <div class="form-row">
       <div class="form-group col-md-12">
-        <button class="btn btn-outline-dark" id="btn_pay" type="submit"><?php _e('Pagar', 'mybooking') ?></button>
+        <button class="btn btn-outline-dark" id="btn_pay" type="submit"><%= i18next.t('myReservation.pay.payment_button', {amount:configuration.formatCurrency(amount) }) %></button>
       </div>
     </div>
   </div>

@@ -33,7 +33,7 @@ if ( ! function_exists( 'mybooking_posted_on' ) ) {
 		$posted_on   = apply_filters(
 			'mybooking_posted_on', sprintf(
 				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
-				esc_html_x( 'Publicado el', 'post-meta', 'mybooking' ),
+				esc_html_x( 'Published on', 'post-meta', 'mybooking' ),
 				esc_url( get_permalink() ),
 				apply_filters( 'mybooking_posted_on_time', $time_string )
 			)
@@ -41,7 +41,7 @@ if ( ! function_exists( 'mybooking_posted_on' ) ) {
 		$byline      = apply_filters(
 			'mybooking_posted_by', sprintf(
 				'<span class="byline"> %1$s<span class="author vcard"><a class="url fn n" href="%2$s"> %3$s</a></span></span>',
-				$posted_on ? esc_html_x( 'por', 'post-meta', 'mybooking' ) : esc_html_x( 'Publicado por', 'post-meta', 'mybooking' ),
+				$posted_on ? esc_html_x( 'by', 'post-meta', 'mybooking' ) : esc_html_x( 'Published by', 'post-meta', 'mybooking' ),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_html( get_the_author() )
 			)
@@ -58,27 +58,27 @@ if ( ! function_exists( 'mybooking_entry_footer' ) ) {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'mybooking' ) );
+			$categories_list = get_the_category_list( esc_html( ', ' ) );
 			if ( $categories_list && mybooking_categorized_blog() ) {
 				/* translators: %s: Categories of current post */
-				printf( '<span class="cat-links">' . esc_html__( 'Publicado en %s', 'mybooking' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html_x( 'Published at %s', 'entry_footer', 'mybooking' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'mybooking' ) );
+			$tags_list = get_the_tag_list( '', esc_html( ', ' ) );
 			if ( $tags_list ) {
 				/* translators: %s: Tags of current post */
-				printf( '<span class="tags-links">' . esc_html__( 'Etiquetado como %s', 'mybooking' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html_x( 'Labeled at %s', 'entry_footer', 'mybooking' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Deja un comentario', 'mybooking' ), esc_html__( '1 Comentario', 'mybooking' ), esc_html__( '% Comentarios', 'mybooking' ) );
+			comments_popup_link( esc_html_x( 'Leave a comment', 'entry_footer', 'mybooking' ), esc_html_x( '1 Comment', 'entry_footer', 'mybooking' ), esc_html_x( '% Comments', 'comments', 'mybooking' ) );
 			echo '</span>';
 		}
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Name of current post */
-				esc_html__( 'Editar %s', 'mybooking' ),
+				esc_html_x( 'Edit %s', 'entry_footer', 'mybooking' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			),
 			'<span class="edit-link">',

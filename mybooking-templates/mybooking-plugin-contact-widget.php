@@ -57,7 +57,7 @@
 
           <div class="field is-grouped">
             <div class="control">
-              <button id="send_message_button" type="submit" class="btn btn-primary is-primary"><?php _e('Enviar','mybooking') ?></a>
+              <button id="send_message_button" type="submit" class="btn btn-primary is-primary"><?php echo _x( 'Send', 'contact_form', 'mybooking-wp-plugin') ?></a>
             </div>
           </div>
 

@@ -31,7 +31,7 @@ get_header(); ?>
           <div class="col-md-3">
             <div class="vehicle_image">
               <a class="vehicle_image-link" href="<?php the_permalink(); ?>"
-                title="<?php esc_attr__('Ver','mybooking'); ?> <?php the_title(); ?>">
+                title="<?php esc_attr_x('More info', 'vehicle', 'mybooking'); ?> <?php the_title(); ?>">
 
                 <?php the_post_thumbnail(); ?>
 
@@ -42,7 +42,7 @@ get_header(); ?>
             <div class="vehicle_body">
               <h2 class="vehicle_title">
                 <a href="<?php the_permalink(); ?>"
-                  title="<?php esc_attr__( 'Ver','mybooking' ); ?> <?php the_title(); ?>">
+                  title="<?php esc_attr_x( 'More info', 'vehicle', 'mybooking' ); ?> <?php the_title(); ?>">
 
                   <?php the_title(); ?>
 

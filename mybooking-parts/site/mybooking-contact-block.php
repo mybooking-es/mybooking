@@ -23,12 +23,12 @@ defined( 'ABSPATH' ) || exit;
     <div class="row action-block">
       <div class="col">
         <h3 class="action-block_title">
-          <?php _e('¿Alguna duda?','mybooking') ?>
+          <?php echo _x('Any questions?', 'contact_block', 'mybooking') ?>
         </h3>
         <a class="action-block_text" href="<?php echo get_site_url(); ?>/contacto">
           <?php $company_name = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_name");
             if ($company_name !== '') { ?>
-              <?php _e('Contacta con ','mybooking') ?>
+              <?php _e('Contact with ', 'contact_block', 'mybooking') ?>
               <?php echo $company_name ?>
           <?php } ?>
         </a>

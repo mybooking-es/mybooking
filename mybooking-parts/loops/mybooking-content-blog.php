@@ -42,7 +42,7 @@ defined( 'ABSPATH' ) || exit;
 
 				<?php the_excerpt(); ?>
 				<?php wp_link_pages(	array(
-						'before' => '<div class="page-links">' . __( 'Pages:', 'mybooking' ),
+						'before' => '<div class="page-links">' . _x( 'Pages:', 'content_blog', 'mybooking' ),
 						'after'  => '</div>',
 					)); ?>
 

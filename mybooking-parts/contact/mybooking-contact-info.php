@@ -19,7 +19,7 @@
           <h1><?php echo $title_contact ?></h1>
         <?php }
         else { ?>
-          <h4><?php _e("Contacto",'mybooking'); ?></h4>
+          <h4><?php _e("Contact", 'contact','mybooking'); ?></h4>
       <?php } ?>
 
       <hr />
@@ -39,7 +39,7 @@
     <div class="info">
       <h4 class="color-brand-primary">
         <i class="fa fa-map-marker" aria-hidden="true"></i>
-        <?php _e("Localización",'mybooking'); ?>
+        <?php _e("Address", 'contact', 'mybooking'); ?>
       </h4>
 
       <?php $company_adress =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_adress");
@@ -49,7 +49,7 @@
 
       <h4 class="color-brand-primary">
         <i class="fa fa-phone" aria-hidden="true"></i>
-        <?php _e("Teléfono",'mybooking'); ?>
+        <?php _e("Phone number", 'contact', 'mybooking'); ?>
       </h4>
 
       <?php $company_phone =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_phone");
@@ -64,7 +64,7 @@
 
       <h4 class="color-brand-primary">
         <i class="fa fa-envelope" aria-hidden="true"></i>
-        <?php _e("Correo electrónico",'mybooking'); ?>
+        <?php _e("E-mail address", 'contact', 'mybooking'); ?>
       </h4>
 
       <?php $company_email =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_email");

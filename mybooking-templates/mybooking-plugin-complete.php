@@ -78,7 +78,7 @@
                   placeholder="<?php echo _x( 'Alternative phone number', 'renting_complete', 'mybooking-wp-plugin') ?>" maxlength="15">
               </div>
             </div>
-            <h4 class="brand-primary my-3"><?php _e('Información adicional', 'mybooking') ?></h4>
+            <h4 class="brand-primary my-3"><?php echo _x( "Additional information", 'renting_complete', 'mybooking-wp-plugin') ?></h4>
             <div class="form-row">
               <div class="form-group col-md-12">
                 <label for="comments"><?php echo _x( 'Comments', 'renting_complete', 'mybooking-wp-plugin') ?></label>

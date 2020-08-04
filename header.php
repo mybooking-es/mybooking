@@ -35,7 +35,7 @@ defined( 'ABSPATH' ) || exit;
     <div id="wrapper-navbar" class="navbar-container <?php echo $navbar_class; ?>" itemscope
       itemtype="http://schema.org/WebSite">
       <a class="skip-link sr-only sr-only-focusable"
-        href="#content"><?php esc_html_e( 'Skip to content', 'mybooking' ); ?></a>
+        href="#content"><?php esc_html_x( 'Skip to content', 'header', 'mybooking' ); ?></a>
 
       <!-- Topbar -->
       <?php $topbar_active = get_theme_mod( "mybooking_global_topbar" );
