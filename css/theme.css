@@ -25374,6 +25374,9 @@ a:active {
 .card {
   border-radius: 0; }
 
+details:focus {
+  outline: none; }
+
 .color-white {
   color: var(--white); }
 
@@ -27349,7 +27352,13 @@ body .eupopup-style-compact .eupopup-button {
   font-weight: bolder; }
 
 .vehicle_info-table {
-  width: 100%; }
+  width: 100%;
+  margin: 1rem 0;
+  border-bottom: 1px solid var(--gray-200); }
+
+.vehicle_info-table td {
+  border-top: 1px solid var(--gray-200);
+  padding: .5rem; }
 
 .vehicle_description {
   padding-top: 1rem; }

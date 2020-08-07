@@ -13,19 +13,19 @@ function create_vehicle() {
   register_post_type( 'vehicle',
     array(
       'labels' => array(
-        'name' => _x( 'Vehicles', 'vehicle_content', 'mybooking' ),
-        'singular_name' => _x( 'Vehicle', 'vehicle_content', 'mybooking' ),
-        'add_new' => _x( 'Add vehicle', 'vehicle_content', 'mybooking' ),
-        'add_new_item' => _x( 'New vehicle', 'vehicle_content', 'mybooking' ),
-        'edit' => _x( 'Edit', 'vehicle_content', 'mybooking' ),
-        'edit_item' => _x( 'Edit vehicle','vehicle_content', 'mybooking' ),
-        'new_item' => _x( 'New vehicle','vehicle_content', 'mybooking' ),
-        'view' => _x( 'See','vehicle_content', 'mybooking' ),
-        'view_item' => _x( 'See vehicle','vehicle_content', 'mybooking' ),
-        'search_items' => _x( 'Search vehicle','vehicle_content', 'mybooking' ),
-        'not_found' => _x( 'No vehicle found','vehicle_content', 'mybooking' ),
-        'not_found_in_trash' => _x( 'No vehicle found on bin','vehicle_content', 'mybooking' ),
-        'parent' => _x( 'Parent vehicle','vehicle_content', 'mybooking' )
+        'name' => _x( 'Vehicles', 'vehicle_post_type', 'mybooking' ),
+        'singular_name' => _x( 'Vehicle', 'vehicle_post_type', 'mybooking' ),
+        'add_new' => _x( 'Add vehicle', 'vehicle_post_type', 'mybooking' ),
+        'add_new_item' => _x( 'New vehicle', 'vehicle_post_type', 'mybooking' ),
+        'edit' => _x( 'Edit', 'vehicle_post_type', 'mybooking' ),
+        'edit_item' => _x( 'Edit vehicle','vehicle_post_type', 'mybooking' ),
+        'new_item' => _x( 'New vehicle','vehicle_post_type', 'mybooking' ),
+        'view' => _x( 'See','vehicle_post_type', 'mybooking' ),
+        'view_item' => _x( 'See vehicle','vehicle_post_type', 'mybooking' ),
+        'search_items' => _x( 'Search vehicle','vehicle_post_type', 'mybooking' ),
+        'not_found' => _x( 'No vehicle found','vehicle_post_type', 'mybooking' ),
+        'not_found_in_trash' => _x( 'No vehicle found on bin','vehicle_post_type', 'mybooking' ),
+        'parent' => _x( 'Parent vehicle','vehicle_post_type', 'mybooking' )
       ),
       'show_ui' => true,
       'public' => true,
@@ -41,173 +41,131 @@ add_action( 'init', 'create_vehicle' );
 
 // METABOX
 function vehicle_info_meta_box() {
-    add_meta_box( 'vehicle-info',
-        _x( 'Vehicle information', 'vehicle_metabox' ,'mybooking' ),
+    add_meta_box(
+        'vehicle-info',
+        _x( 'Vehicle information', 'vehicle_post_type' ,'mybooking' ),
         'show_vehicle_info_meta_box',
         'vehicle',
         'normal',
         'default'
     );
 }
-add_action( 'admin_init', 'vehicle_content' );
+add_action( 'admin_init', 'vehicle_info_meta_box' );
 
 function show_vehicle_info_meta_box( $vehicle_info ) {
-  $vehicle_price_auto = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_price_auto', true ) );
-  $vehicle_price_manual = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_price_manual', true ) );
-  $vehicle_price_diesel = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_price_diesel', true ) );
+  $vehicle_type = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_type', true ) );
+  $vehicle_price = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_price', true ) );
   $vehicle_brand = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_brand', true ) );
   $vehicle_model = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_model', true ) );
-  $vehicle_year = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_year', true ) );
-  $vehicle_displacement = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_displacement', true ) );
-  $vehicle_power = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_power', true ) );
-  $vehicle_km = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_km', true ) );
+  $vehicle_doors = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_doors', true ) );
+  $vehicle_places = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_places', true ) );
   $vehicle_fuel = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_fuel', true ) );
   $vehicle_drive = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_drive', true ) );
   $vehicle_color = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_color', true ) );
-  $vehicle_places = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_places', true ) );
-  $vehicle_warranty = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_warranty', true ) );
+  $vehicle_km = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_km', true ) );
+  $vehicle_year = esc_html( get_post_meta( $vehicle_info->ID, 'vehicle_info_year', true ) );
   ?>
 
   <table class="form-table">
     <tr valign="top">
-      <th scope="row"><?php _x('Brand', 'vehicle_content', 'mybooking') ?></th>
+      <th scope="row"><?php _ex('Type', 'vehicle_post_type','mybooking') ?></th>
       <td>
         <input
         type="text"
-        size="40"
+        size="100"
+        name="vehicle_info_type"
+        value="<?php echo $vehicle_type; ?>" /><br>
+      </td>
+    </tr>
+    <tr valign="top">
+      <th scope="row"><?php _ex('Price', 'vehicle_post_type','mybooking') ?></th>
+      <td>
+        <input
+        type="text"
+        size="100"
+        name="vehicle_info_price"
+        value="<?php echo $vehicle_price; ?>" /><br>
+      </td>
+    </tr>
+    <tr valign="top">
+      <th scope="row"><?php _ex('Brand', 'vehicle_post_type', 'mybooking') ?></th>
+      <td>
+        <input
+        type="text"
+        size="100"
         name="vehicle_info_brand"
         value="<?php echo $vehicle_brand; ?>" /><br>
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _x('Model', 'vehicle_content','mybooking') ?></th>
+      <th scope="row"><?php _ex('Model', 'vehicle_post_type','mybooking') ?></th>
       <td>
         <input
         type="text"
-        size="40"
+        size="100"
         name="vehicle_info_model"
         value="<?php echo $vehicle_model; ?>" /><br>
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _x('Year', 'vehicle_content','mybooking') ?></th>
+      <th scope="row"><?php _ex('Places', 'vehicle_post_type','mybooking') ?></th>
       <td>
         <input
         type="text"
-        size="40"
-        name="vehicle_info_year"
-        value="<?php echo $vehicle_year; ?>" /><br>
+        size="100"
+        name="vehicle_info_places"
+        value="<?php echo $vehicle_places; ?>" /><br>
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _x('Cc', 'vehicle_content','mybooking') ?></th>
+      <th scope="row"><?php _ex('Doors', 'vehicle_post_type','mybooking') ?></th>
       <td>
         <input
         type="text"
-        size="40"
-        name="vehicle_info_displacement"
-        value="<?php echo $vehicle_displacement; ?>" /><br>
+        size="100"
+        name="vehicle_info_doors"
+        value="<?php echo $vehicle_doors; ?>" /><br>
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _x('Cv', 'vehicle_content','mybooking') ?></th>
+      <th scope="row"><?php _ex('Fuel', 'vehicle_post_type','mybooking') ?></th>
       <td>
         <input
         type="text"
-        size="40"
-        name="vehicle_info_power"
-        value="<?php echo $vehicle_power; ?>" /><br>
-      </td>
-    </tr>
-    <tr valign="top">
-      <th scope="row"><?php _x('Km/miles', 'vehicle_content','mybooking') ?></th>
-      <td>
-        <input
-        type="text"
-        size="40"
-        name="vehicle_info_km"
-        value="<?php echo $vehicle_km; ?>" /><br>
-      </td>
-    </tr>
-    <tr valign="top">
-      <th scope="row"><?php _x('Fuel', 'vehicle_content','mybooking') ?></th>
-      <td>
-        <input
-        type="text"
-        size="40"
+        size="100"
         name="vehicle_info_fuel"
         value="<?php echo $vehicle_fuel; ?>" /><br>
       </td>
     </tr>
     <tr valign="top">
-      <th scope="row"><?php _x('Transmission', 'vehicle_content','mybooking') ?></th>
+      <th scope="row"><?php _ex('Color', 'vehicle_post_type','mybooking') ?></th>
       <td>
         <input
         type="text"
-        size="40"
-        name="vehicle_info_drive"
-        value="<?php echo $vehicle_drive; ?>" /><br>
+        size="100"
+        name="vehicle_info_color"
+        value="<?php echo $vehicle_color; ?>" /><br>
       </td>
-      <tr valign="top">
-        <th scope="row"><?php _x('Color', 'vehicle_content','mybooking') ?></th>
-        <td>
-          <input
-          type="text"
-          size="40"
-          name="vehicle_info_color"
-          value="<?php echo $vehicle_color; ?>" /><br>
-        </td>
-      </tr>
-      <tr valign="top">
-        <th scope="row"><?php _e('Seats', 'vehicle_content','mybooking') ?></th>
-        <td>
-          <input
-          type="text"
-          size="40"
-          name="vehicle_info_places"
-          value="<?php echo $vehicle_places; ?>" /><br>
-        </td>
-      </tr>
-      <tr valign="top">
-        <th scope="row"><?php _e('Warranty', 'vehicle_content','mybooking') ?></th>
-        <td>
-          <input
-          type="text"
-          size="40"
-          name="vehicle_info_warranty"
-          value="<?php echo $vehicle_warranty; ?>" /><br>
-        </td>
-      </tr>
-      <tr valign="top">
-        <th scope="row"><?php _e('Price (Automatic)', 'vehicle_content','mybooking') ?></th>
-        <td>
-          <input
-          type="text"
-          size="40"
-          name="vehicle_info_price_auto"
-          value="<?php echo $vehicle_price_auto; ?>" /><br>
-        </td>
-      </tr>
-      <tr valign="top">
-        <th scope="row"><?php _e('Price (Manual)', 'vehicle_content','mybooking') ?></th>
-        <td>
-          <input
-          type="text"
-          size="40"
-          name="vehicle_info_price_manual"
-          value="<?php echo $vehicle_price_manual; ?>" /><br>
-        </td>
-      </tr>
-      <tr valign="top">
-        <th scope="row"><?php _e('Price (Diesel)', 'vehicle_content','mybooking') ?></th>
-        <td>
-          <input
-          type="text"
-          size="40"
-          name="vehicle_info_price_diesel"
-          value="<?php echo $vehicle_price_diesel; ?>" /><br>
-        </td>
-      </tr>
+    </tr>
+    <tr valign="top">
+      <th scope="row"><?php _ex('Km/miles', 'vehicle_post_type','mybooking') ?></th>
+      <td>
+        <input
+        type="text"
+        size="100"
+        name="vehicle_info_km"
+        value="<?php echo $vehicle_km; ?>" /><br>
+      </td>
+    </tr>
+    <tr valign="top">
+      <th scope="row"><?php _ex('Year', 'vehicle_post_type','mybooking') ?></th>
+      <td>
+        <input
+        type="text"
+        size="100"
+        name="vehicle_info_year"
+        value="<?php echo $vehicle_year; ?>" /><br>
+      </td>
     </tr>
   </table>
   <?php
@@ -216,31 +174,21 @@ function show_vehicle_info_meta_box( $vehicle_info ) {
 function add_vehicle_info_values( $vehicle_id, $vehicle_info ) {
   if ( $vehicle_info->post_type == 'vehicle' ) {
 
-    if ( isset( $_POST['vehicle_info_price_auto'] ) && $_POST['vehicle_info_price_auto'] != '' ) {
+    if ( isset( $_POST['vehicle_info_type'] ) && $_POST['vehicle_info_type'] != '' ) {
       update_post_meta(
         $vehicle_id,
-        'vehicle_info_price_auto',
-        $_POST['vehicle_info_price_auto']
+        'vehicle_info_type',
+        $_POST['vehicle_info_type']
         );
     } else {
-      delete_post_meta( $vehicle_id, 'vehicle_info_price_auto' );
+      delete_post_meta( $vehicle_id, 'vehicle_info_type' );
     }
 
-    if ( isset( $_POST['vehicle_info_price_manual'] ) && $_POST['vehicle_info_price_manual'] != '' ) {
+    if ( isset( $_POST['vehicle_info_price'] ) && $_POST['vehicle_info_price'] != '' ) {
       update_post_meta(
         $vehicle_id,
-        'vehicle_info_price_manual',
-        $_POST['vehicle_info_price_manual']
-        );
-    } else {
-      delete_post_meta( $vehicle_id, 'vehicle_info_price_manual' );
-    }
-
-    if ( isset( $_POST['vehicle_info_price_diesel'] ) && $_POST['vehicle_info_price_diesel'] != '' ) {
-      update_post_meta(
-        $vehicle_id,
-        'vehicle_info_price_diesel',
-        $_POST['vehicle_info_price_diesel']
+        'vehicle_info_price',
+        $_POST['vehicle_info_price']
         );
     } else {
       delete_post_meta( $vehicle_id, 'vehicle_info_price_diesel' );
@@ -266,54 +214,24 @@ function add_vehicle_info_values( $vehicle_id, $vehicle_info ) {
       delete_post_meta( $vehicle_id, 'vehicle_info_brand' );
     }
 
-    if ( isset( $_POST['vehicle_info_brand'] ) && $_POST['vehicle_info_brand'] != '' ) {
+    if ( isset( $_POST['vehicle_info_places'] ) && $_POST['vehicle_info_places'] != '' ) {
       update_post_meta(
         $vehicle_id,
-        'vehicle_info_brand',
-        $_POST['vehicle_info_brand']
+        'vehicle_info_places',
+        $_POST['vehicle_info_places']
         );
     } else {
-      delete_post_meta( $vehicle_id, 'vehicle_info_brand' );
+      delete_post_meta( $vehicle_id, 'vehicle_info_places' );
     }
 
-    if ( isset( $_POST['vehicle_info_year'] ) && $_POST['vehicle_info_year'] != '' ) {
+    if ( isset( $_POST['vehicle_info_doors'] ) && $_POST['vehicle_info_doors'] != '' ) {
       update_post_meta(
         $vehicle_id,
-        'vehicle_info_year',
-        $_POST['vehicle_info_year']
+        'vehicle_info_doors',
+        $_POST['vehicle_info_doors']
         );
     } else {
-      delete_post_meta( $vehicle_id, 'vehicle_info_year' );
-    }
-
-    if ( isset( $_POST['vehicle_info_displacement'] ) && $_POST['vehicle_info_displacement'] != '' ) {
-      update_post_meta(
-        $vehicle_id,
-        'vehicle_info_displacement',
-        $_POST['vehicle_info_displacement']
-        );
-    } else {
-      delete_post_meta( $vehicle_id, 'vehicle_info_displacement' );
-    }
-
-    if ( isset( $_POST['vehicle_info_power'] ) && $_POST['vehicle_info_power'] != '' ) {
-      update_post_meta(
-        $vehicle_id,
-        'vehicle_info_power',
-        $_POST['vehicle_info_power']
-        );
-    } else {
-      delete_post_meta( $vehicle_id, 'vehicle_info_power' );
-    }
-
-    if ( isset( $_POST['vehicle_info_km'] ) && $_POST['vehicle_info_km'] != '' ) {
-      update_post_meta(
-        $vehicle_id,
-        'vehicle_info_km',
-        $_POST['vehicle_info_km']
-        );
-    } else {
-      delete_post_meta( $vehicle_id, 'vehicle_info_km' );
+      delete_post_meta( $vehicle_id, 'vehicle_info_doors' );
     }
 
     if ( isset( $_POST['vehicle_info_fuel'] ) && $_POST['vehicle_info_fuel'] != '' ) {
@@ -346,24 +264,24 @@ function add_vehicle_info_values( $vehicle_id, $vehicle_info ) {
       delete_post_meta( $vehicle_id, 'vehicle_info_color' );
     }
 
-    if ( isset( $_POST['vehicle_info_places'] ) && $_POST['vehicle_info_places'] != '' ) {
+    if ( isset( $_POST['vehicle_info_km'] ) && $_POST['vehicle_info_km'] != '' ) {
       update_post_meta(
         $vehicle_id,
-        'vehicle_info_places',
-        $_POST['vehicle_info_places']
+        'vehicle_info_km',
+        $_POST['vehicle_info_km']
         );
     } else {
-      delete_post_meta( $vehicle_id, 'vehicle_info_places' );
+      delete_post_meta( $vehicle_id, 'vehicle_info_km' );
     }
 
-    if ( isset( $_POST['vehicle_info_warranty'] ) && $_POST['vehicle_info_warranty'] != '' ) {
+    if ( isset( $_POST['vehicle_info_year'] ) && $_POST['vehicle_info_year'] != '' ) {
       update_post_meta(
         $vehicle_id,
-        'vehicle_info_warranty',
-        $_POST['vehicle_info_warranty']
+        'vehicle_info_year',
+        $_POST['vehicle_info_year']
         );
     } else {
-      delete_post_meta( $vehicle_id, 'vehicle_info_warranty' );
+      delete_post_meta( $vehicle_id, 'vehicle_info_year' );
     }
   }
 }
