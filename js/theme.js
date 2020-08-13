@@ -8321,7 +8321,7 @@ define(function () {
  *   MYBOOKING CUSTOM JS
  *   -------------------
  *
- *  Versión: 0.0.2
+ *  Versión: 0.0.4
  *   @package WordPress
  *   @subpackage Mybooking WordPress Theme
  *   @since Mybooking WordPress Theme 0.0.1
@@ -8330,9 +8330,13 @@ if (typeof $ === "undefined") {
   var $ = window.jQuery;
 }
 
-// SLICK CAROUSEL
+
+/*
+ *  SLICK CAROUSEL
+ *  Carousel settings
+ */
 $(document).ready(function () {
-  //Home page carousel
+  // Home page carousel
   $(".-carrusel-portada").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -8349,7 +8353,17 @@ $(document).ready(function () {
   });
 });
 
-// FORM SELECTOR STICKY
+
+/*
+ *  STICKY FORM SELECTOR
+ *  Manage behaivour of form selector depending viewport
+ *  and controls sticky trigger point.
+ *
+ *  .home-header_sticky-breakpoint could be added under
+ *  selector parent container via page builder and then it
+ *  could be used to allow sticky on pages different than homepage.
+ *
+ */
 $(document).ready(function () {
   if (typeof $(".home-header_sticky-breakpoint").offset() !== "undefined") {
     var height = $(".home-header_sticky-breakpoint").offset().top;
@@ -8377,7 +8391,11 @@ $(document).ready(function () {
   }
 });
 
-// GO TOP BUTTON
+
+/*
+ *  GO-TOP BUTTON
+ *  Go-top button settings and class addition
+ */
 jQuery(document).ready(function ($) {
   // browser window scroll (in pixels) after which the "back to top" link is shown
   var offset = 300,
@@ -8410,7 +8428,11 @@ jQuery(document).ready(function ($) {
   });
 });
 
-// RESERVATION STEPS
+
+/*
+ *  RESERVATION STEPS
+ *  Adds clases and elemnts to reservation process steps block
+ */
 $(document).ready(function () {
   $(".step").each(function (index, element) {
     //element == this
@@ -8422,30 +8444,33 @@ $(document).ready(function () {
   });
 });
 
-// COOKIES POLICY
-$(document).ready(function () {
-  if ($(".eupopup").length > 0) {
-    $(document).euCookieLawPopup().init({
-      info: "YOU_CAN_ADD_MORE_SETTINGS_HERE",
-      popupTitle: "This website is using cookies. ",
-      popupText:
-        "We use them to give you the best experience. If you continue using our website, we'll assume that you are happy to receive all cookies on this website.",
-    });
-  }
-});
 
-$(document).bind("user_cookie_consent_changed", function (event, object) {
-  console.log("User cookie consent changed: " + $(object).attr("consent"));
-});
+/*
+ *  COOKIES NOTICE
+ *  Very simple and no-compilant-para-salir-del-paso script
+ */
+function acceptCookie(){
+  document.cookie="cookieaccepted=1; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/",
+  document.getElementById( "cookie-notice" ).style.visibility="hidden"
+}
 
-// CONTROLS SUBMENU OPENING ON MOBILE
+document.cookie.indexOf( "cookieaccepted" )<0&&( document.getElementById( "cookie-notice" ).style.visibility="visible" );
+
+
+/*
+ *  SUBNAVIGATION MOBILE OPENING
+ *  Controls submenu item's behaivour on navigation
+ */
 $(document).on("click", ".dropdown-menu li", function (e) {
   $(".dropdown-menu li > .dropdown-menu").slide();
   e.stopPropagation();
 });
 
-// Add 40px extra if message is active
 
+/*
+ *  TOPBAR MARGIN
+ *  Adds 40px extra if message is active
+ */
 $(document).ready(function () {
   var bodyStyles = document.body.style;
   // Home
@@ -8457,7 +8482,11 @@ $(document).ready(function () {
   }
 });
 
-// Avoid padding right when modal is open
+
+/*
+ *  MODAL MARGIN
+ *  Avoid padding right when modal is open
+ */
 $(document).ready(function () {
   $("body").on("show.bs.modal", function () {
     $(".sticky-top").addClass("fixModal");
@@ -8467,9 +8496,12 @@ $(document).ready(function () {
   });
 });
 
-/* Sticky footer
-  Requirement: The footer must not have margin
+
+/* 
+    STICKY FOOTER
+    Requirement: The footer must not have margin
 */
+
 // $(document).ready(function () {
 //   function stickyFooter() {
 //     var $copyWrapper = $(".copy-wrapper");

@@ -26,12 +26,15 @@ defined( 'ABSPATH' ) || exit;
 
 <body <?php body_class(); ?>>
   <?php do_action( 'wp_body_open' ); ?>
-  <?php 
-    $navbar_integrated = get_theme_mod( "mybooking_home_navbar_integrated" ); 
-    $navbar_class = ($navbar_integrated == 1 ? 'nav-container-absolute' : '');  
+  <?php
+    $navbar_integrated = get_theme_mod( "mybooking_home_navbar_integrated" );
+    $navbar_class = ($navbar_integrated == 1 ? 'nav-container-absolute' : '');
 
   ?>
-  <div class="site eupopup eupopup-bottom" id="page">
+  <div class="site" id="page">
+
+    <?php get_template_part('mybooking-parts/site/mybooking-cookies-notice'); ?>
+
     <div id="wrapper-navbar" class="navbar-container <?php echo $navbar_class; ?>" itemscope
       itemtype="http://schema.org/WebSite">
       <a class="skip-link sr-only sr-only-focusable"

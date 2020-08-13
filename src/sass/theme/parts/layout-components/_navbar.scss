@@ -102,6 +102,7 @@ button.navbar-toggler:focus {
 // Dropdown elements centering
 .navbar-collapse.show .navbar-nav {
   height: 100%;
+  width: 100vw; // Firefox fix
   display: table-cell;
   vertical-align: middle;
 }
