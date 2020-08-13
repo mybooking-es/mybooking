@@ -12,6 +12,9 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
+// Getting privacy URL
+$privacy_page = get_privacy_policy_url();
 ?>
 
 <div id="cookie-notice" class="cookie-notice">
@@ -21,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
   <button class="cookie-notice_button btn btn-primary" onclick="acceptCookie();">
     <?php _ex('Accept','cookies-message','mybooking'); ?>
   </button>
-  <a href="#" class="cookie-notice_button btn btn-primary">
+  <a href="<?php echo $privacy_page ?>" class="cookie-notice_button btn btn-primary">
     <?php _ex('More','cookies-message','mybooking'); ?>
   </a>
 </div>
