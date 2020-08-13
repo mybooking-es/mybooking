@@ -218,3 +218,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Little fixins on Gutenberg styles
 - Footer and Navbar color are no more an advanced option
 - Solved issue #18 related to stacked slider images on load
+
+### 0.9.8
+- Refactorization of vehicle Custom Post Type, now more generic
+- Refactorization of cookies notice to avoid reported i18n issues
