@@ -25374,9 +25374,6 @@ a:active {
 .card {
   border-radius: 0; }
 
-details:focus {
-  outline: none; }
-
 .color-white {
   color: var(--white); }
 
@@ -27227,6 +27224,10 @@ body .eupopup-style-compact .eupopup-button {
 /*
 * MYBOOKING TESTIMONIALS
 *************************************/
+.mybooking-home_testimonials {
+  max-width: 100vw;
+  overflow-x: hidden; }
+
 .testimonial-item {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -27258,7 +27259,6 @@ body .eupopup-style-compact .eupopup-button {
 .testimonial-item_content {
   max-width: 100%;
   padding-top: 25px;
-  margin-left: 25px;
   text-align: center;
   font-size: 1.2em;
   font-weight: 300; }
@@ -27322,6 +27322,7 @@ body .eupopup-style-compact .eupopup-button {
         -ms-flex-direction: row;
             flex-direction: row; }
   .testimonial-item_content {
+    margin-left: 25px;
     width: 80%;
     padding: 0;
     text-align: left; }
@@ -27604,8 +27605,7 @@ This is the structure of the selector form
   .flex-form-group input.hasDatepicker {
     border-left: none;
     border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    width: 400%; }
+    border-bottom-left-radius: 0; }
   .flex-form-group label {
     font-size: 0.8rem; }
 
@@ -29189,6 +29189,18 @@ button.mybooking-popup_close {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+
+.activity-card p {
+  margin: 30px 0; }
+
+.activity-card a:visited {
+  color: var(--color-link-visited); }
+
+.activity-card a:link {
+  color: var(--white); }
+
+.activity-card-title {
+  height: 50px; }
 
 .full-height {
   height: 100%; }
