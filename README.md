@@ -222,3 +222,9 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 ### 0.9.8
 - Refactorization of vehicle Custom Post Type, now more generic
 - Refactorization of cookies notice to avoid reported i18n issues
+- Spanish translation update
+
+### 0.9.9 
+- Add activities templates
+- Fix testimonial overflow
+- Fix selector input date issue
