@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-04 16:58+0000\n"
+"POT-Creation-Date: 2020-08-14 11:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -19,723 +19,633 @@ msgstr ""
 msgid "MyBooking Contact"
 msgstr ""
 
-#: header.php:38
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/header.php:41
 msgctxt "header"
 msgid "Skip to content"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:19
-msgctxt "popup_content"
-msgid "Popup ads"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:121
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:122
+msgctxt "theme_settings"
+msgid "Mybooking"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:20
-msgctxt "popup_content"
-msgid "Popup ad"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:133
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:134
+msgctxt "theme_settings"
+msgid "Settings"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:21
-msgctxt "popup_content"
-msgid "Add popup ad"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:176
+msgctxt "theme_settings"
+msgid "Company"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:22
-#: mybooking-posts/mybooking-popup.php:25
-msgctxt "popup_content"
-msgid "New popup ad"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:182
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:353
+msgctxt "theme_settings"
+msgid "Contact Page"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:23
-msgctxt "popup_content"
-msgid "Edit"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:187
+msgctxt "theme_settings"
+msgid "Global Options"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:24
-msgctxt "popup_content"
-msgid "Edit popup ad"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:192
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:357
+msgctxt "theme_settings"
+msgid "Promotions"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:26
-msgctxt "popup_content"
-msgid "See"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:199
+msgctxt "theme_settings"
+msgid "Company Trade Name"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:27
-msgctxt "popup_content"
-msgid "See popup ad"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:205
+msgctxt "theme_settings"
+msgid "Company Legal Name"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:28
-msgctxt "popup_content"
-msgid "Search popup ad"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:211
+msgctxt "theme_settings"
+msgid "VAT Number"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:29
-msgctxt "popup_content"
-msgid "No popup ad found"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:217
+msgctxt "theme_settings"
+msgid "Address"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:30
-msgctxt "popup_content"
-msgid "No popup ad on bin"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:223
+msgctxt "theme_settings"
+msgid "Phone Number"
 msgstr ""
 
-#: mybooking-posts/mybooking-popup.php:31
-msgctxt "popup_content"
-msgid "Parent popup ad"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:229
+msgctxt "theme_settings"
+msgid "WhatsApp Number"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:16
-msgctxt "vehicle_content"
-msgid "Vehicles"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:235
+msgctxt "theme_settings"
+msgid "E-mail address"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:17
-msgctxt "vehicle_content"
-msgid "Vehicle"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:242
+msgctxt "theme_settings"
+msgid "Twitter URL"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:18
-msgctxt "vehicle_content"
-msgid "Add vehicle"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:248
+msgctxt "theme_settings"
+msgid "Facebook URL"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:19
-#: mybooking-posts/mybooking-vehicle.php:22
-msgctxt "vehicle_content"
-msgid "New vehicle"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:254
+msgctxt "theme_settings"
+msgid "Instagram URL"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:20
-msgctxt "vehicle_content"
-msgid "Edit"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:260
+msgctxt "theme_settings"
+msgid "LinkedIn URL"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:21
-msgctxt "vehicle_content"
-msgid "Edit vehicle"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:266
+msgctxt "theme_settings"
+msgid "YouTube URL"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:23
-msgctxt "vehicle_content"
-msgid "See"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:272
+msgctxt "theme_settings"
+msgid "Google Analytics ID"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:24
-msgctxt "vehicle_content"
-msgid "See vehicle"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:279
+msgctxt "theme_settings"
+msgid "Section Title"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:25
-msgctxt "vehicle_content"
-msgid "Search vehicle"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:285
+msgctxt "theme_settings"
+msgid "Section Subtitle"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:26
-msgctxt "vehicle_content"
-msgid "No vehicle found"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:291
+msgctxt "theme_settings"
+msgid "Section Text"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:27
-msgctxt "vehicle_content"
-msgid "No vehicle found on bin"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:298
+msgctxt "theme_settings"
+msgid "Google Maps code"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:28
-msgctxt "vehicle_content"
-msgid "Parent vehicle"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:305
+msgctxt "theme_settings"
+msgid "Activate promotion pop-up"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:45
-msgctxt "vehicle_metabox"
-msgid "Vehicle information"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:312
+msgctxt "theme_settings"
+msgid "Activate vehicles module"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:73
-msgctxt "vehicle_content"
-msgid "Brand"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:336
+msgctxt "theme_settings"
+msgid "MyBooking Theme Setup"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:83
-msgctxt "vehicle_content"
-msgid "Model"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:349
+msgctxt "theme_settings"
+msgid "My company"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:93
-msgctxt "vehicle_content"
-msgid "Year"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:361
+msgctxt "theme_settings"
+msgid "Global Settings"
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:103
-msgctxt "vehicle_content"
-msgid "Cc"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:372
+msgctxt "theme_settings"
+msgid ""
+"It is used on <b>TopBar</b>, <b>Footer</b> and <b>Contact Page</b> to render "
+"<u>company information</u>."
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:113
-msgctxt "vehicle_content"
-msgid "Cv"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:383
+msgctxt "theme_settings"
+msgid ""
+"It is used by <b>MyBooking Contact</b> template to render a full contact "
+"page."
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:123
-msgctxt "vehicle_content"
-msgid "Km/miles"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:396
+msgctxt "theme_settings"
+msgid "Promotions module."
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:133
-msgctxt "vehicle_content"
-msgid "Fuel"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:409
+msgctxt "theme_settings"
+msgid "Global settings."
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:143
-msgctxt "vehicle_content"
-msgid "Transmission"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:431
+msgctxt "theme_settings"
+msgid "Company Trade Name."
 msgstr ""
 
-#: mybooking-posts/mybooking-vehicle.php:152
-msgctxt "vehicle_content"
-msgid "Color"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:438
+msgctxt "theme_settings"
+msgid "Company Legal Name."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:16
-msgctxt "testimonial_content"
-msgid "Testimonials"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:444
+msgctxt "theme_settings"
+msgid "Company VAT Number."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:17
-msgctxt "testimonial_content"
-msgid "Testimonial"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:450
+msgctxt "theme_settings"
+msgid "Company Address."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:18
-msgctxt "testimonial_content"
-msgid "Add testimonial"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:456
+msgctxt "theme_settings"
+msgid "Company Phone Number."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:19
-#: mybooking-posts/mybooking-testimonial.php:22
-msgctxt "testimonial_content"
-msgid "New testimonial"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:462
+msgctxt "theme_settings"
+msgid "Company WhatsApp Number."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:20
-msgctxt "testimonial_content"
-msgid "Edit"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:468
+msgctxt "theme_settings"
+msgid "Company E-mail address."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:21
-msgctxt "testimonial_content"
-msgid "Edit testimonial"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:474
+msgctxt "theme_settings"
+msgid "Company Twitter URL."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:23
-msgctxt "testimonial_content"
-msgid "See"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:480
+msgctxt "theme_settings"
+msgid "Company Facebook URL."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:24
-msgctxt "testimonial_content"
-msgid "See testimonial"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:486
+msgctxt "theme_settings"
+msgid "Company Instagram URL."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:25
-msgctxt "testimonial_content"
-msgid "Search testimonial"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:492
+msgctxt "theme_settings"
+msgid "Company Linkedin URL."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:26
-msgctxt "testimonial_content"
-msgid "No testimonial found"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:498
+msgctxt "theme_settings"
+msgid "Company Youtube URL."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:27
-msgctxt "testimonial_content"
-msgid "No testimonial found on bin"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:504
+msgctxt "theme_settings"
+msgid "Google Analytics ID."
 msgstr ""
 
-#: mybooking-posts/mybooking-testimonial.php:28
-msgctxt "testimonial_content"
-msgid "Parent testimonial"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:513
+msgctxt "theme_settings"
+msgid "Page title"
 msgstr ""
 
-#: inc/widgets.php:25
-msgctxt "mybooking_widgets"
-msgid "Main Menu"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:520
+msgctxt "theme_settings"
+msgid "Page subtitle"
 msgstr ""
 
-#: inc/widgets.php:27
-msgctxt "mybooking_widgets"
-msgid "Widgets area at Main Menu right side"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:527
+msgctxt "theme_settings"
+msgid "Text message"
 msgstr ""
 
-#: inc/widgets.php:36
-msgctxt "mybooking_widgets"
-msgid "Home Header Left"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:534
+msgctxt "theme_settings"
+msgid "Copy Google Maps iframe"
 msgstr ""
 
-#: inc/widgets.php:38
-msgctxt "mybooking_widgets"
-msgid "Widgets area at left of Home header"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:543
+msgctxt "theme_settings"
+msgid ""
+"Activate <b>Promotion Pop-ups</b> Custom Post Type in order to create "
+"promotions."
 msgstr ""
 
-#: inc/widgets.php:45
-msgctxt "mybooking_widgets"
-msgid "Home Header Right"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-options/mybooking-settings.php:555
+msgctxt "theme_settings"
+msgid ""
+"Activate <b>Vehicles</b> Custom Post Type in order to create Fleet Page and "
+"Offers."
 msgstr ""
 
-#: inc/widgets.php:47
-msgctxt "mybooking_widgets"
-msgid "Widgets area at right of Home header"
-msgstr ""
-
-#: inc/widgets.php:59
-msgctxt "mybooking_widgets"
-msgid "Home Content One"
-msgstr ""
-
-#: inc/widgets.php:61
-msgctxt "mybooking_widgets"
-msgid "Home content first widgets area"
-msgstr ""
-
-#: inc/widgets.php:68
-msgctxt "mybooking_widgets"
-msgid "Home Content Dos"
-msgstr ""
-
-#: inc/widgets.php:70
-msgctxt "mybooking_widgets"
-msgid "Home content second widgets area"
-msgstr ""
-
-#: inc/widgets.php:77
-msgctxt "mybooking_widgets"
-msgid "Home Content Tres"
-msgstr ""
-
-#: inc/widgets.php:79
-msgctxt "mybooking_widgets"
-msgid "Home content third widgets area"
-msgstr ""
-
-#: inc/widgets.php:89
-msgctxt "mybooking_widgets"
-msgid "MyBooking template pages sidebar"
-msgstr ""
-
-#: inc/widgets.php:91
-msgctxt "mybooking_widgets"
-msgid "Mybooking template pages sidebar widgets area"
-msgstr ""
-
-#: inc/widgets.php:100
-msgctxt "mybooking_widgets"
-msgid "Footer One"
-msgstr ""
-
-#: inc/widgets.php:102
-msgctxt "mybooking_widgets"
-msgid "Footer first widgets area"
-msgstr ""
-
-#: inc/widgets.php:109
-msgctxt "mybooking_widgets"
-msgid "Footer Two"
-msgstr ""
-
-#: inc/widgets.php:111
-msgctxt "mybooking_widgets"
-msgid "Footer second widgets area"
-msgstr ""
-
-#: inc/widgets.php:118
-msgctxt "mybooking_widgets"
-msgid "Footer Three"
-msgstr ""
-
-#: inc/widgets.php:120
-msgctxt "mybooking_widgets"
-msgid "Footer third widgets area"
-msgstr ""
-
-#: inc/widgets.php:127
-msgctxt "mybooking_widgets"
-msgid "Footer Four"
-msgstr ""
-
-#: inc/widgets.php:129
-msgctxt "mybooking_widgets"
-msgid "Footer fourth widgets area"
-msgstr ""
-
-#: inc/post-functions.php:36
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:36
 msgctxt "post-meta"
 msgid "Published on"
 msgstr ""
 
-#: inc/post-functions.php:44
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:44
 msgctxt "post-meta"
 msgid "by"
 msgstr ""
 
-#: inc/post-functions.php:44
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:44
 msgctxt "post-meta"
 msgid "Published by"
 msgstr ""
 
 #. %s: Categories of current post
-#: inc/post-functions.php:64
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:64
 #, php-format
 msgctxt "entry_footer"
 msgid "Published at %s"
 msgstr ""
 
 #. %s: Tags of current post
-#: inc/post-functions.php:70
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:70
 #, php-format
 msgctxt "entry_footer"
 msgid "Labeled at %s"
 msgstr ""
 
-#: inc/post-functions.php:75
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:75
 msgctxt "entry_footer"
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/post-functions.php:75
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:75
 msgctxt "entry_footer"
 msgid "1 Comment"
 msgstr ""
 
-#: inc/post-functions.php:75
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:75
 msgctxt "comments"
 msgid "% Comments"
 msgstr ""
 
 #. %s: Name of current post
-#: inc/post-functions.php:81
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:81
 #, php-format
 msgctxt "entry_footer"
 msgid "Edit %s"
 msgstr ""
 
-#: inc/post-functions.php:151
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:151
 msgid "Post navigation"
 msgstr ""
 
-#: inc/post-functions.php:155
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:155
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr ""
 
-#: inc/post-functions.php:158
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:158
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: inc/pagination.php:28
-msgctxt "pagination"
-msgid "&laquo;"
-msgstr ""
-
-#: inc/pagination.php:29
-msgctxt "pagination"
-msgid "&raquo;"
-msgstr ""
-
-#: inc/pagination.php:30
-msgctxt "pagination"
-msgid "Posts navigation"
-msgstr ""
-
-#: inc/customizer.php:398
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:398
 msgctxt "customizer_colors"
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer.php:400
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:400
 msgctxt "customizer_colors"
 msgid "Theme colors"
 msgstr ""
 
-#: inc/customizer.php:416
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:416
 msgctxt "customizer_colors"
 msgid "Brand Primary color"
 msgstr ""
 
-#: inc/customizer.php:430
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:430
 msgctxt "customizer_colors"
 msgid "Brand Primary light color"
 msgstr ""
 
-#: inc/customizer.php:443
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:443
 msgctxt "customizer_colors"
 msgid "Brand Primary dark color"
 msgstr ""
 
-#: inc/customizer.php:458
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:458
 msgctxt "customizer_colors"
 msgid "Brand Secondary color"
 msgstr ""
 
-#: inc/customizer.php:471
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:471
 msgctxt "customizer_colors"
 msgid "Brand Secondary light color"
 msgstr ""
 
-#: inc/customizer.php:484
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:484
 msgctxt "customizer_colors"
 msgid "Brand Secondary dark color"
 msgstr ""
 
-#: inc/customizer.php:500
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:500
 msgctxt "customizer_colors"
 msgid "Body Background color"
 msgstr ""
 
-#: inc/customizer.php:515
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:515
 msgctxt "customizer_colors"
 msgid "Body Text color"
 msgstr ""
 
-#: inc/customizer.php:530
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:530
 msgctxt "customizer_colors"
 msgid "Headers Text color"
 msgstr ""
 
-#: inc/customizer.php:548
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:548
 msgctxt "customizer_navbar"
 msgid "NavBar background color"
 msgstr ""
 
-#: inc/customizer.php:565
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:565
 msgctxt "customizer_navbar"
 msgid "NavBar Link color"
 msgstr ""
 
-#: inc/customizer.php:581
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:581
 msgctxt "customizer_navbar"
 msgid "NavBar Link hover color"
 msgstr ""
 
-#: inc/customizer.php:597
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:597
 msgctxt "customizer_navbar"
 msgid "NavBar Link active color"
 msgstr ""
 
-#: inc/customizer.php:614
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:614
 msgctxt "customizer_navbar"
 msgid "NavBar DropDown Item color"
 msgstr ""
 
-#: inc/customizer.php:630
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:630
 msgctxt "customizer_navbar"
 msgid "NavBar DropDown Item Active color"
 msgstr ""
 
-#: inc/customizer.php:646
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:646
 msgctxt "customizer_navbar"
 msgid "NavBar Link collapse color"
 msgstr ""
 
-#: inc/customizer.php:662
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:662
 msgctxt "customizer_navbar"
 msgid "NavBar Toggler Icon color"
 msgstr ""
 
-#: inc/customizer.php:678
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:678
 msgctxt "customizer_footer"
 msgid "Footer background color"
 msgstr ""
 
-#: inc/customizer.php:694
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:694
 msgctxt "customizer_footer"
 msgid "Footer color"
 msgstr ""
 
-#: inc/customizer.php:710
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:710
 msgctxt "customizer_footer"
 msgid "Footer Link color"
 msgstr ""
 
-#: inc/customizer.php:726
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:726
 msgctxt "customizer_footer"
 msgid "Footer Link hover color"
 msgstr ""
 
-#: inc/customizer.php:742
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:742
 msgctxt "customizer_colors"
 msgid "Activate advanced color mode"
 msgstr ""
 
-#: inc/customizer.php:743
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:743
 msgctxt "customizer_colors"
 msgid ""
 "If <b>checked</b> activates advanced color controls on several Customizer "
 "sections. Uncheck for basic color control (default)."
 msgstr ""
 
-#: inc/customizer.php:765
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:765
 msgctxt "customizer_typography"
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer.php:767
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:767
 msgctxt "customizer_typography"
 msgid "Typography defaults"
 msgstr ""
 
-#: inc/customizer.php:788
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:788
 msgctxt "customizer_typography"
 msgid "Font Body family"
 msgstr ""
 
-#: inc/customizer.php:789
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:789
 msgctxt "customizer_typography"
 msgid "Select the body typography"
 msgstr ""
 
-#: inc/customizer.php:807
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:807
 msgctxt "customizer_typography"
 msgid "Font Heading family"
 msgstr ""
 
-#: inc/customizer.php:808
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:808
 msgctxt "customizer_typography"
 msgid "Select the heading typography"
 msgstr ""
 
-#: inc/customizer.php:832
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:832
 msgctxt "customizer_layout"
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:834
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:834
 msgctxt "customizer_layout"
 msgid "Layout defaults"
 msgstr ""
 
-#: inc/customizer.php:860
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:860
 msgctxt "customizer_layout"
 msgid "Navigation and Topbar container Width"
 msgstr ""
 
-#: inc/customizer.php:861
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:861
 msgctxt "customizer_layout"
 msgid "Choose between Bootstrap's container and container-fluid"
 msgstr ""
 
-#: inc/customizer.php:868
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:868
 msgctxt "customizer_layout"
 msgid "Boxed navbar and topbar"
 msgstr ""
 
-#: inc/customizer.php:869
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:869
 msgctxt "customizer_layout"
 msgid "Full width navbar and topbar"
 msgstr ""
 
-#: inc/customizer.php:929 inc/customizer.php:931
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:929
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:931
 msgctxt "customizer_topbar"
 msgid "Top Bar"
 msgstr ""
 
-#: inc/customizer.php:947
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:947
 msgctxt "customizer_topbar"
 msgid "Top Bar active"
 msgstr ""
 
-#: inc/customizer.php:948
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:948
 msgctxt "customizer_topbar"
 msgid ""
 "If checked the TopBar will be shown on top of pages with company information "
 "and warning message. Uncheck to hide the TopBar"
 msgstr ""
 
-#: inc/customizer.php:971
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:971
 msgctxt "customizer_topbar"
 msgid "Home Topbar Background"
 msgstr ""
 
-#: inc/customizer.php:972
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:972
 msgctxt "customizer_topbar"
 msgid ""
 "This setting affects ONLY the home page topbar. You can set transparency for "
 "better integration when navbar's Transparent Header option is checked."
 msgstr ""
 
-#: inc/customizer.php:988
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:988
 msgctxt "customizer_topbar"
 msgid "Topbar Background"
 msgstr ""
 
-#: inc/customizer.php:1003
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1003
 msgctxt "customizer_topbar"
 msgid "Topbar Text"
 msgstr ""
 
-#: inc/customizer.php:1018
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1018
 msgctxt "customizer_topbar"
 msgid "Topbar Link"
 msgstr ""
 
-#: inc/customizer.php:1033
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1033
 msgctxt "customizer_topbar"
 msgid "Topbar Link Hover"
 msgstr ""
 
-#: inc/customizer.php:1049
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1049
 msgctxt "customizer_topbar"
 msgid "Hightlight message"
 msgstr ""
 
-#: inc/customizer.php:1050
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1050
 msgctxt "customizer_topbar"
 msgid "Show a warning message to the users"
 msgstr ""
 
-#: inc/customizer.php:1058
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1058
 msgctxt "customizer_topbar"
 msgid "Highlight text or HTML on top of Topbar."
 msgstr ""
 
-#: inc/customizer.php:1077
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1077
 msgctxt "customizer_topbar"
 msgid "Notice Background"
 msgstr ""
 
-#: inc/customizer.php:1092
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1092
 msgctxt "customizer_topbar"
 msgid "Notice Text"
 msgstr ""
 
-#: inc/customizer.php:1107
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1107
 msgctxt "customizer_topbar"
 msgid "Notice Link"
 msgstr ""
 
-#: inc/customizer.php:1122
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1122
 msgctxt "customizer_topbar"
 msgid "Notice Link Hover"
 msgstr ""
 
-#: inc/customizer.php:1142
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1142
 msgctxt "customizer_navbar"
 msgid "Nav Bar"
 msgstr ""
 
-#: inc/customizer.php:1144
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1144
 msgctxt "customizer_navbar"
 msgid ""
 "Settings for toggler position, header integration and background and menu "
 "colors"
 msgstr ""
 
-#: inc/customizer.php:1160
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1160
 msgctxt "customizer_navbar"
 msgid "Transparent Header"
 msgstr ""
 
-#: inc/customizer.php:1161
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1161
 msgctxt "customizer_navbar"
 msgid ""
 "If <b>checked</b> the navbar will be shown overlapped with Header section "
@@ -743,723 +653,510 @@ msgid ""
 "Header section"
 msgstr ""
 
-#: inc/customizer.php:1181
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1181
 msgctxt "customizer_navbar"
 msgid "Mobile Toggler Position"
 msgstr ""
 
-#: inc/customizer.php:1182
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1182
 msgctxt "customizer_navbar"
 msgid "Toggler position on mobile devices"
 msgstr ""
 
-#: inc/customizer.php:1187
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1187
 msgctxt "customizer_navbar"
 msgid "Right"
 msgstr ""
 
-#: inc/customizer.php:1188
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1188
 msgctxt "customizer_navbar"
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:1207
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1207
 msgctxt "customizer_home"
 msgid "Header"
 msgstr ""
 
-#: inc/customizer.php:1209
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1209
 msgctxt "customizer_header"
 msgid "Defines header's background type and widget's columns layout"
 msgstr ""
 
-#: inc/customizer.php:1227
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1227
 msgctxt "customizer_header"
 msgid "Home Header visible"
 msgstr ""
 
-#: inc/customizer.php:1246
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1246
 msgctxt "customizer_header"
 msgid "Header section background"
 msgstr ""
 
-#: inc/customizer.php:1247
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1247
 msgctxt "customizer_header"
 msgid "Define the header section background"
 msgstr ""
 
-#: inc/customizer.php:1252 inc/customizer.php:1273
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1252
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1273
 msgctxt "customizer_header"
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer.php:1253
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1253
 msgctxt "customizer_header"
 msgid "Video"
 msgstr ""
 
-#: inc/customizer.php:1254
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1254
 msgctxt "customizer_header"
 msgid "Carrousel"
 msgstr ""
 
-#: inc/customizer.php:1294
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1294
 msgctxt "customizer_header"
 msgid "Background Video"
 msgstr ""
 
-#: inc/customizer.php:1316
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1316
 msgctxt "customizer_header"
 msgid "Background Carrousel"
 msgstr ""
 
-#: inc/customizer.php:1334
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1334
 msgctxt "customizer_header"
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:1335
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1335
 msgctxt "customizer_header"
 msgid "Define the widget areas on header layout"
 msgstr ""
 
-#: inc/customizer.php:1340
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1340
 #, php-format
 msgctxt "customizer_header"
 msgid "Two columns (50% - 50%)"
 msgstr ""
 
-#: inc/customizer.php:1341
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1341
 #, php-format
 msgctxt "customizer_header"
 msgid "Two columns (33% - 66%)"
 msgstr ""
 
-#: inc/customizer.php:1342
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1342
 #, php-format
 msgctxt "customizer_header"
 msgid "Two columns (66% - 33%)"
 msgstr ""
 
-#: inc/customizer.php:1343
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1343
 msgctxt "customizer_home"
 msgid "One column"
 msgstr ""
 
-#: inc/customizer.php:1362
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1362
 msgctxt "customizer_header"
 msgid "Header Widget Title color"
 msgstr ""
 
-#: inc/customizer.php:1378
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1378
 msgctxt "customizer_header"
 msgid "Header Widget Text color"
 msgstr ""
 
-#: inc/customizer.php:1394
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1394
 msgctxt "customizer_header"
 msgid "Header Widget Link color"
 msgstr ""
 
-#: inc/customizer.php:1418
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1418
 msgctxt "customizer_header"
 msgid "Widget Title Align"
 msgstr ""
 
-#: inc/customizer.php:1423 inc/customizer.php:1455
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1423
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1455
 msgctxt "customizer_header"
 msgid "Default to the left"
 msgstr ""
 
-#: inc/customizer.php:1424 inc/customizer.php:1456
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1424
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1456
 msgctxt "customizer_header"
 msgid "Align center"
 msgstr ""
 
-#: inc/customizer.php:1425 inc/customizer.php:1457
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1425
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1457
 msgctxt "customizer_header"
 msgid "Align right"
 msgstr ""
 
-#: inc/customizer.php:1450
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1450
 msgctxt "customizer_header"
 msgid "Widget Text Align"
 msgstr ""
 
-#: inc/customizer.php:1478
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1478
 msgctxt "customizer_footer"
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer.php:1480
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1480
 msgctxt "customizer_footer"
 msgid ""
 "Controls footer layout and, if advanced mode enabled on Colors section, also "
 "background and link colors."
 msgstr ""
 
-#: inc/customizer.php:1499
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1499
 msgctxt "customizer_footer"
 msgid "Footer layout"
 msgstr ""
 
-#: inc/customizer.php:1500
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1500
 msgctxt "customizer_footer"
 msgid "Footer layout (managed with widget areas)"
 msgstr ""
 
-#: inc/customizer.php:1505
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1505
 msgctxt "customizer_footer"
 msgid "Four columns"
 msgstr ""
 
-#: inc/customizer.php:1506
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1506
 msgctxt "customizer_footer"
 msgid "Minimal (show only copyright)"
 msgstr ""
 
-#: inc/customizer.php:1526
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1526
 msgctxt "customizer_selector"
 msgid "Booking Forms"
 msgstr ""
 
-#: inc/customizer.php:1527
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1527
 msgctxt "customizer_selector"
 msgid "Controls the booking forms apperance on Home and process pages."
 msgstr ""
 
-#: inc/customizer.php:1547
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1547
 msgctxt "customizer_selector"
 msgid "Home Booking Form background"
 msgstr ""
 
-#: inc/customizer.php:1548
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1548
 msgctxt "customizer_selector"
 msgid ""
 "Usefull when the form is placed inside the Header and needs some "
 "transparency."
 msgstr ""
 
-#: inc/customizer.php:1565
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1565
 msgctxt "customizer_selector"
 msgid "General Form labels"
 msgstr ""
 
-#: inc/customizer.php:1582
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1582
 msgctxt "customizer_selector"
 msgid "Sticky Booking Form background"
 msgstr ""
 
-#: inc/customizer.php:1599
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1599
 msgctxt "customizer_selector"
 msgid "Sticky Form labels"
 msgstr ""
 
-#: inc/customizer.php:1634
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1634
 msgctxt "customizer_home"
 msgid "Default content area"
 msgstr ""
 
-#: inc/customizer.php:1635
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1635
 msgctxt "customizer_home"
 msgid ""
 "Get control of default content section position and visibility. Shows "
 "WordPress editor's content"
 msgstr ""
 
-#: inc/customizer.php:1641 inc/customizer.php:1691 inc/customizer.php:1742
-#: inc/customizer.php:1792
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1641
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1691
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1742
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1792
 msgctxt "customizer_home"
 msgid "Position Top"
 msgstr ""
 
-#: inc/customizer.php:1642 inc/customizer.php:1692 inc/customizer.php:1743
-#: inc/customizer.php:1793
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1642
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1692
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1743
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1793
 msgctxt "customizer_home"
 msgid "Position Center Top"
 msgstr ""
 
-#: inc/customizer.php:1643 inc/customizer.php:1693 inc/customizer.php:1744
-#: inc/customizer.php:1794
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1643
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1693
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1744
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1794
 msgctxt "customizer_home"
 msgid "Position Center Bottom"
 msgstr ""
 
-#: inc/customizer.php:1644 inc/customizer.php:1694 inc/customizer.php:1745
-#: inc/customizer.php:1795
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1644
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1694
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1745
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1795
 msgctxt "customizer_home"
 msgid "Position Bottom"
 msgstr ""
 
-#: inc/customizer.php:1660
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1660
 msgctxt "customizer_home"
 msgid "Activate deafult content area"
 msgstr ""
 
-#: inc/customizer.php:1684
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1684
 msgctxt "customizer_home"
 msgid "Widgets area"
 msgstr ""
 
-#: inc/customizer.php:1685
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1685
 msgctxt "customizer_home"
 msgid ""
 "Get control of Widgets section position and visibility. Shows three widget "
 "areas called Home Content 1, 2 and 3"
 msgstr ""
 
-#: inc/customizer.php:1710
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1710
 msgctxt "customizer_home"
 msgid "Activate content widgets"
 msgstr ""
 
-#: inc/customizer.php:1735
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1735
 msgctxt "customizer_home"
 msgid "News area"
 msgstr ""
 
-#: inc/customizer.php:1736
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1736
 msgctxt "customizer_home"
 msgid ""
 "Get control of News section position and visibility. Shows last three posts "
 "of Home Page category"
 msgstr ""
 
-#: inc/customizer.php:1761
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1761
 msgctxt "customizer_home"
 msgid "Activate news"
 msgstr ""
 
-#: inc/customizer.php:1785
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1785
 msgctxt "customizer_home"
 msgid "Testimonials area"
 msgstr ""
 
-#: inc/customizer.php:1786
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1786
 msgctxt "customizer_home"
 msgid ""
 "Get control of Testimonials section position and visibility (also the "
 "enables Testimonials post type)"
 msgstr ""
 
-#: inc/customizer.php:1811
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1811
 msgctxt "customizer_home"
 msgid "Activate testimonials"
 msgstr ""
 
-#: inc/customizer.php:1844
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1844
 msgctxt "customizer_identity"
 msgid "Site's logo height"
 msgstr ""
 
-#: inc/customizer.php:1845
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer.php:1845
 msgctxt "customizer_identity"
 msgid "Value in pixels."
 msgstr ""
 
-#: inc/setup.php:63
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/pagination.php:28
+msgctxt "pagination"
+msgid "&laquo;"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/pagination.php:29
+msgctxt "pagination"
+msgid "&raquo;"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/pagination.php:30
+msgctxt "pagination"
+msgid "Posts navigation"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/setup.php:63
 msgctxt "nav_menus"
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/setup.php:135
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/setup.php:135
 msgctxt "gutenberg_palette"
 msgid "Primary"
 msgstr ""
 
-#: inc/setup.php:140
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/setup.php:140
 msgctxt "gutenberg_palette"
 msgid "Primary Light"
 msgstr ""
 
-#: inc/setup.php:145
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/setup.php:145
 msgctxt "gutenberg_palette"
 msgid "Primary Dark"
 msgstr ""
 
-#: inc/setup.php:151
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/setup.php:151
 msgctxt "gutenberg_palette"
 msgid "Secondary"
 msgstr ""
 
-#: inc/setup.php:156
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/setup.php:156
 msgctxt "gutenberg_palette"
 msgid "Secondary Light"
 msgstr ""
 
-#: inc/setup.php:161
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/setup.php:161
 msgctxt "gutenberg_palette"
 msgid "Secondary Dark"
 msgstr ""
 
-#: inc/setup.php:167
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/setup.php:167
 msgctxt "gutenberg_palette"
 msgid "Info"
 msgstr ""
 
-#: inc/setup.php:172
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/setup.php:172
 msgctxt "gutenberg_palette"
 msgid "Success"
 msgstr ""
 
-#: inc/setup.php:177
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/setup.php:177
 msgctxt "gutenberg_palette"
 msgid "Warning"
 msgstr ""
 
-#: inc/setup.php:182
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/setup.php:182
 msgctxt "gutenberg_palette"
 msgid "Error"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:183
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:223
-msgctxt "renting_complete"
-msgid "Info"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:25
+msgctxt "mybooking_widgets"
+msgid "Main Menu"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:239
-msgctxt "renting_complete"
-msgid "Delivery"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:27
+msgctxt "mybooking_widgets"
+msgid "Widgets area at Main Menu right side"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:244
-msgctxt "renting_complete"
-msgid "Collection"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:36
+msgctxt "mybooking_widgets"
+msgid "Home Header Left"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:291
-msgid "horas/s"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:38
+msgctxt "mybooking_widgets"
+msgid "Widgets area at left of Home header"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:167
-msgctxt "renting_summary"
-msgid "Full name"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:45
+msgctxt "mybooking_widgets"
+msgid "Home Header Right"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:171
-msgctxt "renting_summary"
-msgid "E-mail"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:47
+msgctxt "mybooking_widgets"
+msgid "Widgets area at right of Home header"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:175
-msgctxt "renting_summary"
-msgid "Phone number"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:59
+msgctxt "mybooking_widgets"
+msgid "Home Content One"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:23
-msgctxt "renting_my_reservation"
-msgid "Delivery"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:61
+msgctxt "mybooking_widgets"
+msgid "Home content first widgets area"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:28
-msgctxt "renting_my_reservation"
-msgid "Collection"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:68
+msgctxt "mybooking_widgets"
+msgid "Home Content Two"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:270
-msgid "Datos del conductor"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:70
+msgctxt "mybooking_widgets"
+msgid "Home content second widgets area"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:41
-msgctxt "renting_product_calendar"
-msgid "Delivery time"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:77
+msgctxt "mybooking_widgets"
+msgid "Home Content Three"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:47
-msgctxt "renting_product_calendar"
-msgid "Collection time"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:79
+msgctxt "mybooking_widgets"
+msgid "Home content third widgets area"
 msgstr ""
 
-#: mybooking-options/mybooking-settings.php:121
-#: mybooking-options/mybooking-settings.php:122
-msgctxt "theme_settings"
-msgid "Mybooking"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:89
+msgctxt "mybooking_widgets"
+msgid "MyBooking template pages sidebar"
 msgstr ""
 
-#: mybooking-options/mybooking-settings.php:133
-#: mybooking-options/mybooking-settings.php:134
-msgctxt "theme_settings"
-msgid "Settings"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:91
+msgctxt "mybooking_widgets"
+msgid "Mybooking template pages sidebar widgets area"
 msgstr ""
 
-#: mybooking-options/mybooking-settings.php:176
-msgctxt "theme_settings"
-msgid "Company"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:100
+msgctxt "mybooking_widgets"
+msgid "Footer One"
 msgstr ""
 
-#: mybooking-options/mybooking-settings.php:182
-#: mybooking-options/mybooking-settings.php:353
-msgctxt "theme_settings"
-msgid "Contact Page"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:102
+msgctxt "mybooking_widgets"
+msgid "Footer first widgets area"
 msgstr ""
 
-#: mybooking-options/mybooking-settings.php:187
-msgctxt "theme_settings"
-msgid "Global Options"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:109
+msgctxt "mybooking_widgets"
+msgid "Footer Two"
 msgstr ""
 
-#: mybooking-options/mybooking-settings.php:192
-#: mybooking-options/mybooking-settings.php:357
-msgctxt "theme_settings"
-msgid "Promotions"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:111
+msgctxt "mybooking_widgets"
+msgid "Footer second widgets area"
 msgstr ""
 
-#: mybooking-options/mybooking-settings.php:199
-msgctxt "theme_settings"
-msgid "Company Trade Name"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:118
+msgctxt "mybooking_widgets"
+msgid "Footer Three"
 msgstr ""
 
-#: mybooking-options/mybooking-settings.php:205
-msgctxt "theme_settings"
-msgid "Company Legal Name"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:120
+msgctxt "mybooking_widgets"
+msgid "Footer third widgets area"
 msgstr ""
 
-#: mybooking-options/mybooking-settings.php:211
-msgctxt "theme_settings"
-msgid "VAT Number"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:127
+msgctxt "mybooking_widgets"
+msgid "Footer Four"
 msgstr ""
 
-#: mybooking-options/mybooking-settings.php:217
-msgctxt "theme_settings"
-msgid "Address"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:223
-msgctxt "theme_settings"
-msgid "Phone Number"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:229
-msgctxt "theme_settings"
-msgid "WhatsApp Number"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:235
-msgctxt "theme_settings"
-msgid "E-mail address"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:242
-msgctxt "theme_settings"
-msgid "Twitter URL"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:248
-msgctxt "theme_settings"
-msgid "Facebook URL"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:254
-msgctxt "theme_settings"
-msgid "Instagram URL"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:260
-msgctxt "theme_settings"
-msgid "LinkedIn URL"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:266
-msgctxt "theme_settings"
-msgid "YouTube URL"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:272
-msgctxt "theme_settings"
-msgid "Google Analytics ID"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:279
-msgctxt "theme_settings"
-msgid "Section Title"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:285
-msgctxt "theme_settings"
-msgid "Section Subtitle"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:291
-msgctxt "theme_settings"
-msgid "Section Text"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:298
-msgctxt "theme_settings"
-msgid "Google Maps code"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:305
-msgctxt "theme_settings"
-msgid "Activate promotion pop-up"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:312
-msgctxt "theme_settings"
-msgid "Activate vehicles module"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:336
-msgctxt "theme_settings"
-msgid "MyBooking Theme Setup"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:349
-msgctxt "theme_settings"
-msgid "My company"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:361
-msgctxt "theme_settings"
-msgid "Global Settings"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:372
-msgctxt "theme_settings"
-msgid ""
-"It is used on <b>TopBar</b>, <b>Footer</b> and <b>Contact Page</b> to render "
-"<u>company information</u>."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:383
-msgctxt "theme_settings"
-msgid ""
-"It is used by <b>MyBooking Contact</b> template to render a full contact "
-"page."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:396
-msgctxt "theme_settings"
-msgid "Promotions module."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:409
-msgctxt "theme_settings"
-msgid "Global settings."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:431
-msgctxt "theme_settings"
-msgid "Company Trade Name."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:438
-msgctxt "theme_settings"
-msgid "Company Legal Name."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:444
-msgctxt "theme_settings"
-msgid "Company VAT Number."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:450
-msgctxt "theme_settings"
-msgid "Company Address."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:456
-msgctxt "theme_settings"
-msgid "Company Phone Number."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:462
-msgctxt "theme_settings"
-msgid "Company WhatsApp Number."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:468
-msgctxt "theme_settings"
-msgid "Company E-mail address."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:474
-msgctxt "theme_settings"
-msgid "Company Twitter URL."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:480
-msgctxt "theme_settings"
-msgid "Company Facebook URL."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:486
-msgctxt "theme_settings"
-msgid "Company Instagram URL."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:492
-msgctxt "theme_settings"
-msgid "Company Linkedin URL."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:498
-msgctxt "theme_settings"
-msgid "Company Youtube URL."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:504
-msgctxt "theme_settings"
-msgid "Google Analytics ID."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:513
-msgctxt "theme_settings"
-msgid "Page title"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:520
-msgctxt "theme_settings"
-msgid "Page subtitle"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:527
-msgctxt "theme_settings"
-msgid "Text message"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:534
-msgctxt "theme_settings"
-msgid "Copy Google Maps iframe"
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:543
-msgctxt "theme_settings"
-msgid ""
-"Activate <b>Promotion Pop-ups</b> Custom Post Type in order to create "
-"promotions."
-msgstr ""
-
-#: mybooking-options/mybooking-settings.php:555
-msgctxt "theme_settings"
-msgid ""
-"Activate <b>Vehicles</b> Custom Post Type in order to create Fleet Page and "
-"Offers."
-msgstr ""
-
-#. Name of the template
-msgid "MyBooking Pages"
-msgstr ""
-
-#: mybooking-parts/mybooking-reservation-steps.php:49
-msgctxt "reservation_step"
-msgid "Place and date"
-msgstr ""
-
-#: mybooking-parts/mybooking-reservation-steps.php:50
-msgctxt "reservation_step"
-msgid "Select product"
-msgstr ""
-
-#: mybooking-parts/mybooking-reservation-steps.php:51
-msgctxt "reservation_step"
-msgid "Complete reservation"
-msgstr ""
-
-#: mybooking-parts/mybooking-reservation-steps.php:52
-msgctxt "reservation_step"
-msgid "Summary"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/widgets.php:129
+msgctxt "mybooking_widgets"
+msgid "Footer fourth widgets area"
 msgstr ""
 
 #. Name of the template
@@ -1467,11 +1164,35 @@ msgid "MyBooking Home"
 msgstr ""
 
 #. Name of the template
+msgid "MyBooking Pages"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/mybooking-reservation-steps.php:49
+msgctxt "reservation_step"
+msgid "Place and date"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/mybooking-reservation-steps.php:50
+msgctxt "reservation_step"
+msgid "Select product"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/mybooking-reservation-steps.php:51
+msgctxt "reservation_step"
+msgid "Complete reservation"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/mybooking-reservation-steps.php:52
+msgctxt "reservation_step"
+msgid "Summary"
+msgstr ""
+
+#. Name of the template
 msgid "Mybooking Vehicles"
 msgstr ""
 
-#: mybooking-parts/mybooking-vehicles.php:34
-#: mybooking-parts/mybooking-vehicles.php:45
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/mybooking-vehicles.php:55
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/mybooking-vehicles.php:56
 msgctxt "vehicle"
 msgid "More info"
 msgstr ""
@@ -1480,99 +1201,391 @@ msgstr ""
 msgid "MyBooking Empty"
 msgstr ""
 
-#: mybooking-parts/home/mybooking-home-news.php:56
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:16
+msgctxt "vehicle_post_type"
+msgid "Vehicles"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:17
+msgctxt "vehicle_post_type"
+msgid "Vehicle"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:18
+msgctxt "vehicle_post_type"
+msgid "Add vehicle"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:19
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:22
+msgctxt "vehicle_post_type"
+msgid "New vehicle"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:20
+msgctxt "vehicle_post_type"
+msgid "Edit"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:21
+msgctxt "vehicle_post_type"
+msgid "Edit vehicle"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:23
+msgctxt "vehicle_post_type"
+msgid "See"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:24
+msgctxt "vehicle_post_type"
+msgid "See vehicle"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:25
+msgctxt "vehicle_post_type"
+msgid "Search vehicle"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:26
+msgctxt "vehicle_post_type"
+msgid "No vehicle found"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:27
+msgctxt "vehicle_post_type"
+msgid "No vehicle found on bin"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:28
+msgctxt "vehicle_post_type"
+msgid "Parent vehicle"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:46
+msgctxt "vehicle_post_type"
+msgid "Vehicle information"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:71
+msgctxt "vehicle_post_type"
+msgid "Type"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:81
+msgctxt "vehicle_post_type"
+msgid "Price"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:91
+msgctxt "vehicle_post_type"
+msgid "Brand"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:101
+msgctxt "vehicle_post_type"
+msgid "Model"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:111
+msgctxt "vehicle_post_type"
+msgid "Places"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:121
+msgctxt "vehicle_post_type"
+msgid "Doors"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:131
+msgctxt "vehicle_post_type"
+msgid "Fuel"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:141
+msgctxt "vehicle_post_type"
+msgid "Color"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:151
+msgctxt "vehicle_post_type"
+msgid "Km/miles"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-vehicle.php:161
+msgctxt "vehicle_post_type"
+msgid "Year"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:16
+msgctxt "testimonial_content"
+msgid "Testimonials"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:17
+msgctxt "testimonial_content"
+msgid "Testimonial"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:18
+msgctxt "testimonial_content"
+msgid "Add testimonial"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:19
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:22
+msgctxt "testimonial_content"
+msgid "New testimonial"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:20
+msgctxt "testimonial_content"
+msgid "Edit"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:21
+msgctxt "testimonial_content"
+msgid "Edit testimonial"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:23
+msgctxt "testimonial_content"
+msgid "See"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:24
+msgctxt "testimonial_content"
+msgid "See testimonial"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:25
+msgctxt "testimonial_content"
+msgid "Search testimonial"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:26
+msgctxt "testimonial_content"
+msgid "No testimonial found"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:27
+msgctxt "testimonial_content"
+msgid "No testimonial found on bin"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-testimonial.php:28
+msgctxt "testimonial_content"
+msgid "Parent testimonial"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:19
+msgctxt "popup_content"
+msgid "Popup ads"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:20
+msgctxt "popup_content"
+msgid "Popup ad"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:21
+msgctxt "popup_content"
+msgid "Add popup ad"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:22
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:25
+msgctxt "popup_content"
+msgid "New popup ad"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:23
+msgctxt "popup_content"
+msgid "Edit"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:24
+msgctxt "popup_content"
+msgid "Edit popup ad"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:26
+msgctxt "popup_content"
+msgid "See"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:27
+msgctxt "popup_content"
+msgid "See popup ad"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:28
+msgctxt "popup_content"
+msgid "Search popup ad"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:29
+msgctxt "popup_content"
+msgid "No popup ad found"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:30
+msgctxt "popup_content"
+msgid "No popup ad on bin"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-posts/mybooking-popup.php:31
+msgctxt "popup_content"
+msgid "Parent popup ad"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:183
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:223
+msgctxt "renting_complete"
+msgid "Info"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:239
+msgctxt "renting_complete"
+msgid "Delivery"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:244
+msgctxt "renting_complete"
+msgid "Collection"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:291
+msgid "horas/s"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:167
+msgctxt "renting_summary"
+msgid "Full name"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:171
+msgctxt "renting_summary"
+msgid "E-mail"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:175
+msgctxt "renting_summary"
+msgid "Phone number"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:23
+msgctxt "renting_my_reservation"
+msgid "Delivery"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:28
+msgctxt "renting_my_reservation"
+msgid "Collection"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:270
+msgid "Datos del conductor"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:41
+msgctxt "renting_product_calendar"
+msgid "Delivery time"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:47
+msgctxt "renting_product_calendar"
+msgid "Collection time"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/home/mybooking-home-news.php:56
 msgctxt "home-news-button"
 msgid "Read"
 msgstr ""
 
-#: mybooking-parts/footer/mybooking-footer-credits.php:24
-#: mybooking-parts/footer/mybooking-footer-credits.php:31
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/footer/mybooking-footer-credits.php:24
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/footer/mybooking-footer-credits.php:31
 msgid "Powered by"
 msgstr ""
 
-#: mybooking-parts/site/mybooking-contact-block.php:26
-msgctxt "contact_block"
-msgid "Any questions?"
-msgstr ""
-
-#: mybooking-parts/site/mybooking-navigation-toggler.php:18
-msgctxt "toggle_navigation"
-msgid "Toggle navigation"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:37
-msgctxt "vehicle_single"
-msgid "Vehicle details"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:45
-msgctxt "vehicle_single"
-msgid "Brand"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:55
-msgctxt "vehicle_single"
-msgid "Model"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:65
-msgctxt "vehicle_single"
-msgid "Fuel"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:75
-msgctxt "vehicle_single"
-msgid "Transmission"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:85
-msgctxt "vehicle_single"
-msgid "Km/Miles"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:95
-msgctxt "vehicle_single"
-msgid "Year"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:105
-msgctxt "vehicle_single"
-msgid "CC"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:115
-msgctxt "vehicle_single"
-msgid "CV"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:125
-msgctxt "vehicle_single"
-msgid "Seats"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:135
-msgctxt "vehicle_single"
-msgid "Color"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:145
-msgctxt "vehicle_single"
-msgid "Warranty"
-msgstr ""
-
-#: mybooking-parts/loops/mybooking-vehicle-single.php:225
-msgctxt "vehicle_single"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/loops/mybooking-content-single.php:36
+msgctxt "content_single"
 msgid "Pages:"
 msgstr ""
 
-#: mybooking-parts/loops/mybooking-content-blog.php:45
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/loops/mybooking-content-blog.php:45
 msgctxt "content_blog"
 msgid "Pages:"
 msgstr ""
 
-#: mybooking-parts/loops/mybooking-content-single.php:36
-msgctxt "content_single"
-msgid "Pages:"
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/loops/mybooking-vehicle-single.php:72
+msgctxt "vehicle_single"
+msgid "Brand"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/loops/mybooking-vehicle-single.php:79
+msgctxt "vehicle_single"
+msgid "Model"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/loops/mybooking-vehicle-single.php:86
+msgctxt "vehicle_single"
+msgid "Places"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/loops/mybooking-vehicle-single.php:93
+msgctxt "vehicle_single"
+msgid "Doors"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/loops/mybooking-vehicle-single.php:100
+msgctxt "vehicle_single"
+msgid "Fuel"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/loops/mybooking-vehicle-single.php:107
+msgctxt "vehicle_single"
+msgid "Transmission"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/loops/mybooking-vehicle-single.php:114
+msgctxt "vehicle_single"
+msgid "Color"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/loops/mybooking-vehicle-single.php:121
+msgctxt "vehicle_single"
+msgid "Km/Miles"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/loops/mybooking-vehicle-single.php:128
+msgctxt "vehicle_single"
+msgid "Year"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/site/mybooking-cookies-notice.php:22
+msgctxt "cookie-notice"
+msgid "This website uses cookies to ensure you get the best experience"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/site/mybooking-cookies-notice.php:25
+msgctxt "cookie-notice"
+msgid "Accept"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/site/mybooking-cookies-notice.php:28
+msgctxt "cookie-notice"
+msgid "More"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/site/mybooking-navigation-toggler.php:18
+msgctxt "toggle_navigation"
+msgid "Toggle navigation"
+msgstr ""
+
+#: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-parts/site/mybooking-contact-block.php:26
+msgctxt "contact_block"
+msgid "Any questions?"
 msgstr ""
 
 #. Name of the theme

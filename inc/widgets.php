@@ -65,7 +65,7 @@ function mybooking_widgets_init() {
 		);
 		register_sidebar(
 			array(
-				'name'          => _x( 'Home Content Dos','mybooking_widgets','mybooking' ),
+				'name'          => _x( 'Home Content Two','mybooking_widgets','mybooking' ),
 				'id'            => 'home_widgets_2',
 				'description'   => _x( 'Home content second widgets area','mybooking_widgets','mybooking' ),
 				'before_widget' => '<div class="home-widgets widget-2">',
@@ -74,7 +74,7 @@ function mybooking_widgets_init() {
 		);
 		register_sidebar(
 			array(
-				'name'          => _x( 'Home Content Tres','mybooking_widgets','mybooking' ),
+				'name'          => _x( 'Home Content Three','mybooking_widgets','mybooking' ),
 				'id'            => 'home_widgets_3',
 				'description'   => _x( 'Home content third widgets area','mybooking_widgets','mybooking' ),
 				'before_widget' => '<div class="home-widgets widget-3">',
