@@ -15,6 +15,18 @@
  * @version     3.3.0
  */
 
+ /**
+  * Mybooking Tweaks
+  *
+  * - Added .btn-choose-product to mimic process cards button styles
+	*
+	* 	@version: 0.0.1
+	*   @package WordPress
+	*   @subpackage Mybooking WordPress Theme
+	*   @since Mybooking WordPress Theme 0.9.9
+	*/
+
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -24,7 +36,7 @@ global $product;
 echo apply_filters(
 	'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
 	sprintf(
-		'<a href="%s" data-quantity="%s" class="%s" %s>%s</a>',
+		'<a href="%s" data-quantity="%s" class="%s btn-choose-product" %s>%s</a>',
 		esc_url( $product->add_to_cart_url() ),
 		esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
 		esc_attr( isset( $args['class'] ) ? $args['class'] : 'button' ),

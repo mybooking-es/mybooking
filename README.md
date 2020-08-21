@@ -224,7 +224,12 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Refactorization of cookies notice to avoid reported i18n issues
 - Spanish translation update
 
-### 0.9.9 
-- Add activities templates
-- Fix testimonial overflow
-- Fix selector input date issue
+### 0.9.9
+- Added activities templates
+- Fixed Testimonial white margin on mobile devices
+- Fixed selector date input overflow
+- Fixed selector rendering in Mybooking Pages template
+- Realigned default footer elements
+- Woo products now match card styles on choose step
+- Arranged some Woocommerce minor errors
+- Refactorized and fixed Mybooking Pages template, and now is Mybooking Landing

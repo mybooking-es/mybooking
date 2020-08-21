@@ -17,22 +17,25 @@
 
 // Offer badge
 .woocommerce span.onsale {
-  min-height: 4.236em;
-  min-width: 4.836em;
+  height: 10px!important;
+  min-width: auto!important;
   padding: .302em;
   font-weight: 700;
   position: absolute;
   text-align: center;
-  line-height: 4.236;
-  top: -.8em;
-  left: -.8em;
+  line-height: 2.6;
+  top: 8px!important;
+  left: 0px!important;
+  right: 8px!important;
   margin: 0;
-  border-radius: 100%;
-  background-color: var(--brand-secondary);
-  color: #FFF;
-  font-size: .957em;
+  border-radius: 5px 5px 0 0;
+  background-color: var(--brand-primary);
+  color: #fff;
+  font-size: 1.1em;
   z-index: 9;
 }
+
+
 
 // Buttons
 .woocommerce #respond input#submit.alt.disabled,
@@ -72,7 +75,7 @@
   font-weight: 700;
   background-color: var(--brand-primary);
   border: 1px solid var(--brand-primary);
-  border-radius: 0;
+  border-radius: 3px;
   letter-spacing: 1px;
 }
 
@@ -88,6 +91,7 @@
   border: 1px solid var(--brand-primary);
   padding: .5rem 1.2rem;
   font-size: .6em;
+  border-radius: 3px;
 }
 
 // Forms
@@ -97,12 +101,13 @@
   height: 48px;
   border: 1px solid #CCC;
   padding: 0 .8rem;
+  border-radius: 3px;
 }
 
 .woocommerce textarea {
   min-height: 350px;
   border: 1px solid #CCC;
-  border-radius: 0;
+  border-radius: 3px;
   padding: 0 .8rem;
 }
 
@@ -113,7 +118,7 @@
 
 .select2-container--default .select2-selection--single {
   border: 1px solid #CCC;
-  border-radius: 0;
+  border-radius: 3px;
   height: 48px;
 }
 
@@ -135,14 +140,17 @@
 
 // Loop page
 
-.woocommerce-ordering {
+.woocommerce .woocommerce-ordering {
   margin-bottom: 2rem;
 }
 
 .orderby {
   height: 48px;
   border: 1px solid #CCC;
-  border-radius: 0;
+  border-radius: 3px;
+  padding: .5rem;
+  background-color: white;
+  color: #333;
 }
 
 // Loop product
@@ -150,6 +158,41 @@
 .woocommerce ul.products {
   margin: 0 0 2em;
   padding: 0;
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  margin: 0 1.8% 2.992em 0;
+  border-radius: 5px;
+  box-shadow: -6px 12px 50px -10px rgb(204, 204, 204);
+}
+
+.woocommerce ul.products li.last,
+.woocommerce-page ul.products li.last {
+  margin-right: 0;
+}
+
+.woocommerce .woocommerce-loop-product__link span.onsale {
+  height: 10px!important;
+  min-width: auto!important;
+  padding: .302em;
+  font-weight: 700;
+  position: absolute;
+  text-align: center;
+  line-height: 2.6;
+  top: 8px!important;
+  left: 0px!important;
+  right: 8px!important;
+  margin: 0;
+  border-radius: 5px 5px 0 0;
+  background-color: var(--brand-primary);
+  color: #fff;
+  font-size: 1.1em;
+  z-index: 9;
+}
+
+.woocommerce ul.products li.product a img {
+  border-radius: 5px 5px 0 0;
 }
 
 .woocommerce-loop-product__link {
@@ -160,17 +203,50 @@
   font-size: 1.5em;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
+  color: var(--brand-secondary);
+}
+
+.woocommerce-loop-product__link .price {
+  text-align: center;
+  font-weight: bold!important;
+  letter-spacing: 1px;
+  color: var(--brand-primary)!important;
+}
+
+.woocommerce a.btn-choose-product {
+  display: block;
+  font-weight: 400;
+  font-size: 1em;
+  text-transform: none;
+  text-align: center;
+  letter-spacing: 0;
+  padding: .6rem;
+  -webkit-transition: ease-in-out .15s!important;
+  margin: 0 1rem 1rem 1rem;
+  transition: ease-in-out .15s!important;
+  border-radius: 50px!important;
+  background-color: transparent!important;
+  border-color: var(--brand-primary)!important;
+  color: var(--brand-primary)!important;
+}
+
+.woocommerce a.btn-choose-product:active,
+.woocommerce a.btn-choose-product:hover {
+  background-color: var(--brand-primary-dark)!important;
+  color: white!important;
+  opacity: 1!important;
 }
 
 .woocommerce #respond input#submit:hover,
 .woocommerce a.button:hover,
 .woocommerce button.button:hover,
 .woocommerce input.button:hover {
-    background-color: var(--brand-primary);
-    text-decoration: none;
-    background-image: none;
-    color: #FFF;
-    opacity: .5;
+  background-color: var(--brand-primary);
+  text-decoration: none;
+  background-image: none;
+  color: #FFF;
+  opacity: .5;
 }
 
 // Loop columns
@@ -210,7 +286,7 @@
   }
 
   .woocommerce-page ul.products[class*=columns-4] li.product {
-    width: 22%;
+    width: 23.65%;
   }
 
   .woocommerce-page ul.products[class*=columns-] li.product .woocommerce-loop-product__title {
@@ -231,6 +307,26 @@
   display: none;
 }
 
+// Offer badge
+.woocommerce span.onsale {
+  height: 10px!important;
+  min-width: auto!important;
+  padding: .302em;
+  font-weight: 700;
+  position: absolute;
+  text-align: center;
+  line-height: 2.6;
+  top: 8px!important;
+  left: 0!important;
+  right: 90%!important;
+  margin: 0;
+  border-radius: 50px;
+  background-color: var(--brand-primary);
+  color: #fff;
+  font-size: 1.1em;
+  z-index: 9;
+}
+
 // Product header
 .woocommerce div.product .product_title {
   font-weight: 300;
@@ -239,8 +335,9 @@
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
   color: var(--brand-primary);
-  font-size: 1.6em;
-  font-weight: 900;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .woocommerce div.product .rideon-woocommerce_product p.price,
@@ -249,7 +346,6 @@
 }
 
 // Product forms
-
 .woocommerce div.product form.cart .variations td.label {
   vertical-align: middle;
   text-align: center;
@@ -262,14 +358,14 @@
 .woocommerce div.product form.cart .variations select {
   height: 48px;
   border: 1px solid #CCC;
-  border-radius: 0;
+  border-radius: 3px;
 }
 
 .woocommerce .quantity .qty {
   height: 48px;
   box-shadow: none;
   border: 1px solid #CCC;
-  border-radius: 0;
+  border-radius: 3px;
 }
 
 .woocommerce div.product .stock {
@@ -295,6 +391,7 @@
   padding: 1rem;
   color: #FFF;
   background-color: var(--brand-primary-light);
+  border-radius: 3px;
 }
 
 // Product meta
@@ -369,6 +466,7 @@
   color: #FFF;
   background-color: #AAA;
   border: 1px solid #AAA;
+  border-radius: 3px;
 }
 
 .woocommerce button.button:disabled,
@@ -411,7 +509,7 @@
 .woocommerce-cart #payment,
 .woocommerce-checkout #payment {
     background: #EEE;
-    border-radius: 0;
+    border-radius: 3px;
 }
 
 /*
@@ -431,6 +529,6 @@
   border-bottom-width: 1px;
   border-right-width: 1px;
   width: 100%;
-  border-radius: 0;
+  border-radius: 3px;
   padding: 1rem;
 }

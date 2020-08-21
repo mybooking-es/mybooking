@@ -7,10 +7,6 @@
   width: 100%;
 }
 
-.page .entry-title {
-  text-transform: uppercase;
-}
-
 .page_content {
   padding: 3rem 0;
 }
@@ -27,62 +23,58 @@
   .blog .page_content,
   .single .page_content,
   .page .page_content {
-    padding: 8rem 1rem;
+    padding: 2rem 1rem;
   }
 }
 
-// Mybooking Pages
-.mybooking_page {
-  background-color: #fff;
-  z-index: 300;
-  margin-top: 65vh;
-}
+// Mybooking Landing template
 
 .page_header {
   position: fixed;
   top: 0;
   width: 100%;
-  max-height: 80vh;
+  height: 70vh; // is greater than .mybooking_page margin because is fixed!
   overflow: hidden;
   z-index: -1;
-  background-color: #333;
+  background-color: var(--brand-primary);
 }
 
 .page_header img {
   position: relative;
   bottom: 10vh;
   opacity: 0.7;
+  object-fit: cover;
 }
 
-.mybooking_page .entry-title {
-  margin-top: -50vh;
+.mybooking_page {
+  background-color: #fff;
+  z-index: 300;
+  margin-top: 50vh;
+}
+
+.mybooking_page .page_sidebar {
+  margin-top: -20vh; // Makes siderbar overlap header
+}
+
+.page_body {
+  padding: 0 2rem 0 0;
+}
+
+.page_sidebar .page_title {
   color: #fff;
+  font-weight: bolder;
+  position: absolute;
+  top: -10rem; // Makes title float over sidebar
 }
 
 .page_sidebar {
-  float: right;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #fff;
-
-  margin-top: -30vh;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 11px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 20px 0;
+  border-radius: 3px;
 }
 
-@media (max-width: 768px) {
-  .mybooking_page {
-    margin-top: 55vh;
-  }
-
-  .mybooking_page .site-main .col-md-6 {
-    max-width: 100%;
-  }
-
-  .col-md-5.page_sidebar {
-    display: block;
-    max-width: 100% !important;
-    float: none;
-  }
-
+@media (max-width: 992px) {
   .page_header {
     height: 100vh;
     overflow: visible;
@@ -95,7 +87,23 @@
     overflow: hidden;
   }
 
-  .page_sidebar {
+  .mybooking_page {
+    margin-top: 65vh;
+  }
+
+  .mybooking_page .col-md-6 {
+    max-width: 100%;
+  }
+
+  .mybooking_page .page_sidebar {
+    display: block;
+    max-width: 100% !important;
+    float: none;
+    margin-top: -30vh;
     margin-bottom: 3rem;
+  }
+
+  .page_body {
+    padding: 0;
   }
 }

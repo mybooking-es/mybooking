@@ -9,21 +9,31 @@
 }
 
 /*
-
-This is the structure of the selector form
+ *  Selector form structure
+    -----------------------
 
 [form .flex-form]
-    [div .flex-form-group-wrapper]   // Controls
-        [div .flex-form-group]        // flex-form-group acts as columns or rows
-        [/div]
-        [div .flex-form-group]
-        [/div]
+  [div .flex-form-group-wrapper]    // Controls
+    [div .flex-form-group]          // flex-form-group acts as columns or rows
     [/div]
-    [div .flex-form-box]  // Search button
+    [div .flex-form-group]
     [/div]
+  [/div]
+  [div .flex-form-box]              // Search button
+  [/div]
 [/form]
 
 */
+
+// == Sidebar adjustements
+
+.page_sidebar .widget_mybooking_rent_engine_selector {
+  margin-bottom: 2rem;
+}
+
+.page_sidebar .widget_mybooking_rent_engine_selector .flex-form {
+  background-color: transparent;
+}
 
 // == Horizontal Selector [form class]
 
@@ -63,23 +73,21 @@ This is the structure of the selector form
 // Horizontal Selector on Desktop
 
 @media (min-width: 992px) {
-  // 1 column : Max width 745px
-  .home-alone .flex-form {
+  .home-alone .flex-form { // 1 column : Max width 745px
     max-width: 745px;
     margin: 0 auto;
   }
 
-  // 2 columns : Width between 350 and 400px
-
   .home-left .flex-form,
-  .home-right .flex-form {
+  .home-right .flex-form { // 2 columns : Width between 350 and 400px
     max-width: 400px;
-    .flex-form-group-wrapper {
+    .flex-form-group-wrapper,
+    .page-template-mybooking-pages .flex-form-group-wrapper {
       flex-direction: column;
     }
-    .flex-form-group:nth-child(2n) {
-      // 1 column avoid margin between place and date
-      margin-left: 0px;
+    .flex-form-group:nth-child(2n),
+    .page-template-mybooking-pages .flex-form-group:nth-child(2n) {
+      margin-left: 0px; // 1 column avoid margin between place and date
     }
   }
 }
@@ -96,10 +104,19 @@ This is the structure of the selector form
 }
 
 @media (min-width: 575.98px) {
-  // Controls wrapper : 1 column : place - date - time
   .flex-form-group-wrapper {
-    flex-direction: row;
+    flex-direction: row; // Controls wrapper : 1 column : place - date - time
   }
+}
+
+// == Mybooking Landing template adjustements
+
+.page-template-mybooking-landing .flex-form-group-wrapper {
+  flex-direction: column;
+}
+
+.page-template-mybooking-landing .flex-form-group:nth-child(2n) {
+  margin-left: 0px; // 1 column avoid margin between place and date
 }
 
 // == Form group (acts as columns -high resolutions- or rows -low resolutions- )

@@ -25,7 +25,7 @@ function mybooking_widgets_init() {
 			'name'          => _x( 'Main Menu','mybooking_widgets','mybooking' ),
 			'id'            => 'mybooking_primary_menu',
 	    'description'    => _x( 'Widgets area at Main Menu right side','mybooking_widgets','mybooking' ),
-			'before_widget' => '<div>',
+			'before_widget' => '<div class="mybooking-widget_menu">',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -83,13 +83,13 @@ function mybooking_widgets_init() {
 		);
 	}
 
-	// Landings
+	// Pages
 	register_sidebar(
 		array(
 			'name'          => _x( 'MyBooking template pages sidebar','mybooking_widgets','mybooking' ),
 			'id'            => 'mybooking_page_sidebar',
 	    'description'    => _x( 'Mybooking template pages sidebar widgets area','mybooking_widgets','mybooking' ),
-			'before_widget' => '<div>',
+			'before_widget' => '<div class="mybooking-widget_page-sidebar">',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -100,7 +100,7 @@ function mybooking_widgets_init() {
 			'name'          => _x( 'Footer One','mybooking_widgets','mybooking' ),
 			'id'            => 'mybooking_global_footer_1',
 			'description'   => _x( 'Footer first widgets area','mybooking_widgets','mybooking' ),
-			'before_widget' => '<div>',
+			'before_widget' => '<div class="mybooking-widget_footer-1">',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -109,7 +109,7 @@ function mybooking_widgets_init() {
 			'name'          => _x( 'Footer Two','mybooking_widgets','mybooking' ),
 			'id'            => 'mybooking_global_footer_2',
 			'description'   => _x( 'Footer second widgets area','mybooking_widgets','mybooking' ),
-			'before_widget' => '<div>',
+			'before_widget' => '<div class="mybooking-widget_footer-2">',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -118,7 +118,7 @@ function mybooking_widgets_init() {
 			'name'          => _x( 'Footer Three','mybooking_widgets','mybooking' ),
 			'id'            => 'mybooking_global_footer_3',
 			'description'   => _x( 'Footer third widgets area','mybooking_widgets','mybooking' ),
-			'before_widget' => '<div>',
+			'before_widget' => '<div class="mybooking-widget_footer-3">',
 			'after_widget'  => '</div>',
 		)
 	);
@@ -127,7 +127,7 @@ function mybooking_widgets_init() {
 			'name'          => _x( 'Footer Four','mybooking_widgets','mybooking' ),
 			'id'            => 'mybooking_global_footer_4',
 			'description'   => _x( 'Footer fourth widgets area','mybooking_widgets','mybooking' ),
-			'before_widget' => '<div>',
+			'before_widget' => '<div class="mybooking-widget_footer-4">',
 			'after_widget'  => '</div>',
 		)
 	);

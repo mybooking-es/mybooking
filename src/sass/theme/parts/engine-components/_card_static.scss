@@ -83,17 +83,17 @@
 .card-static_btn {
   align-self: self-end;
   width: 100%;
-  a.button.btn {
+  .btn-choose-product {
     width: 100%;
     transition: ease-in-out 0.15s;
     border-radius: 50px;
     background-color: transparent;
     border-color: var(--brand-primary);
-    color: var(--brand-primary);
+    color: var(--brand-primary)!important;
     &:hover {
       background-color: var(--brand-primary-dark);
       border-color: var(--brand-primary-dark);
-      color: var(--white);
+      color: var(--white)!important;
       cursor: pointer;
     }
   }

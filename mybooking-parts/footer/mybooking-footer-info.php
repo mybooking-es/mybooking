@@ -90,7 +90,7 @@ defined( 'ABSPATH' ) || exit;
   <?php } else { ?>
 
     <div class="col">
-      <ul class="social-links">
+      <ul class="social-links d-flex justify-content-end">
 
         <?php $company_facebook = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_facebook_url");
           if ($company_facebook !== '') { ?>
@@ -128,7 +128,7 @@ defined( 'ABSPATH' ) || exit;
         <?php } ?>
 
       </ul>
-      <p class="info_bloc">
+      <p class="info_bloc" style="text-align: right">
 
         <?php $company_phone = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_phone");
           if ($company_phone !== '') { ?>
