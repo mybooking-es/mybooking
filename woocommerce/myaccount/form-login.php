@@ -15,6 +15,18 @@
  * @version 4.1.0
  */
 
+/**
+*  Mybooking Tweaks
+*
+* - Added .row clas on line 38 for Bootstrap compatibility
+* - Changed col classes to avoid Bootstrap conflicts on lines 40 and 80
+*
+* 	@version: 0.0.1
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.9.9
+*/
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -23,9 +35,9 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
-<div class="u-columns col2-set" id="customer_login">
+<div class="u-columns col2-set row" id="customer_login">
 
-	<div class="u-column1 col-1">
+	<div class="u-column1 col-6">
 
 <?php endif; ?>
 
@@ -65,7 +77,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 	</div>
 
-	<div class="u-column2 col-2">
+	<div class="u-column2 col-6">
 
 		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
 

@@ -26024,7 +26024,7 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
 
 @media (min-width: 575px) {
   .woocommerce form.login, .woocommerce form.register {
-    width: 50%;
+    width: 100%;
     margin: 2em auto; } }
 
 /*
