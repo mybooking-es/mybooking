@@ -83,13 +83,24 @@ function mybooking_widgets_init() {
 		);
 	}
 
-	// Pages
+	// Blog
 	register_sidebar(
 		array(
-			'name'          => _x( 'MyBooking template pages sidebar','mybooking_widgets','mybooking' ),
+			'name'          => _x( 'Blog sidebar','mybooking_widgets','mybooking' ),
+			'id'            => 'blog_sidebar',
+	    'description'    => _x( 'Blog sidebar widgets area','mybooking_widgets','mybooking' ),
+			'before_widget' => '<div class="mybooking-widget_blog-sidebar">',
+			'after_widget'  => '</div>',
+		)
+	);
+
+	// Landing
+	register_sidebar(
+		array(
+			'name'          => _x( 'Landing sidebar','mybooking_widgets','mybooking' ),
 			'id'            => 'mybooking_page_sidebar',
-	    'description'    => _x( 'Mybooking template pages sidebar widgets area','mybooking_widgets','mybooking' ),
-			'before_widget' => '<div class="mybooking-widget_page-sidebar">',
+	    'description'    => _x( 'Mybooking Landing template sidebar widgets area','mybooking_widgets','mybooking' ),
+			'before_widget' => '<div class="mybooking-widget_landing-sidebar">',
 			'after_widget'  => '</div>',
 		)
 	);

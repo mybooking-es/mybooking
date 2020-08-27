@@ -1,52 +1,57 @@
 <?php
 /**
-*		BLOG LOOP RENDERING
-*  	-------------------
-*		Blog document
+*		BLOGROLL LOOP RENDERING
+*  	-----------------------
 *
-* 	Versión: 0.0.2
+* 	@version 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.2
+*
+*   CHANGELOG
+*   Version 0.0.2
+*		- Changed markup to two columns grid layout
 */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-	<div class="row">
-		<div class="col-lg-4">
-			<a href="<?php echo get_permalink() ?>" rel="bookmark">
 
-				<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<div class="col-md-4">
+		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+			<div class="news_thumbnail">
 
-			</a>
-		</div>
-		<div class="col-lg-8">
-			<header class="entry-header">
+				<?php $permalink = get_permalink(); ?>
+				<?php if ( !has_post_thumbnail( $post->ID ) ) { ?>
 
-				<?php the_title( sprintf(
-					'<h2 class="entry-title">
-						<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),'</a>
-					</h2>' ); ?>
+					<a class="news_post-image"
+						 href="<?php echo $permalink ?>"
+						 rel="bookmark"
+						 style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/default-image.png')">
+					</a>
 
-				<?php if ( 'post' == get_post_type() ) : ?>
-					<div class="entry-meta">
-						<?php mybooking_posted_on(); ?>
-					</div>
-				<?php endif; ?>
+				<?php } else { ?>
+					<?php $featured_img_url = get_the_post_thumbnail_url( $post->ID, 'full' ); ?>
 
-			</header>
-			<div class="entry-content">
+					<a class="news_post-image"
+						 href="<?php echo $permalink ?>"
+						 rel="bookmark"
+						 style="background-image: url('<?php echo esc_url( $featured_img_url ) ?>')">
+					</a>
 
-				<?php the_excerpt(); ?>
-				<?php wp_link_pages(	array(
-						'before' => '<div class="page-links">' . _x( 'Pages:', 'content_blog', 'mybooking' ),
-						'after'  => '</div>',
-					)); ?>
-
+				<?php } ?>
 			</div>
-		</div>
+
+			<?php the_title( sprintf(
+				'<h3 class="post_title">
+					<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),'</a>
+				</h3>' ); ?>
+
+			<p>
+				<a class="btn btn-secondary mybooking-read-more-link" href="<?php echo esc_url( get_permalink( $news_item ) ) ?>">
+					<?php echo _x( 'Read', 'home-news-button','mybooking' ) ?>
+				</a>
+			</p>
+		</article>
 	</div>
-</article>

@@ -1,17 +1,22 @@
 <?php
 /**
-*		INDEX
-*  	-----
-*		Parent document
+*		MAIN INDEX PAGE
+*  	---------------
 *
-* 	Versión: 0.0.5
+* 	@version 0.0.6
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.2
 *
 *   CHANGELOG
 *   Version 0.0.5
-*   - Deleted deprecated hero section from Understrap
+*   - Deleted deprecated Understrap's hero section
+*		Version 0.0.6
+*		- Deleted .wrapper #wrapper-index and #content
+*		- Deleted old hook calling Understrap's no-content partial
+*		- Added right sidebar
+*		- Added pagination hook
+*		- Added no-content message
 */
 
 // Exit if accessed directly.
@@ -19,23 +24,34 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<div class="wrapper page_content" id="index-wrapper">
-	<div class="container" id="content" tabindex="-1">
+<div class="page_content">
+	<div class="container" tabindex="-1">
 		<div class="row">
-			<main class="site-main" id="main">
+			<div class="col">
+				<div class="row">
 
-				<?php if ( have_posts() ) : ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'mybooking-parts/loops/mybooking-content-blog' ); ?>
-					<?php endwhile; ?>
-				<?php else : ?>
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
-				<?php endif; ?>
+					<?php if ( have_posts() ) : ?>
+						<?php while ( have_posts() ) : the_post(); ?>
+							<?php get_template_part( 'mybooking-parts/loops/mybooking-content-blog' ); ?>
+						<?php endwhile; ?>
+					<?php else : ?>
 
-			</main>
+						<h3><?php _ex( 'No content found. Please publish at least one post to show something at here','blog_message','mybooking' ); ?></h3>
 
-			<?php mybooking_pagination(); ?>
+					<?php endif; ?>
 
+				</div>
+			</div>
+
+			<?php if ( is_active_sidebar( 'blog_sidebar' ) ) : ?>
+        <div class="col-md-3">
+          <?php dynamic_sidebar( 'blog_sidebar' ); ?>
+        </div>
+      <?php endif; ?>
+
+			<div class="col-12">
+				<?php mybooking_pagination(); ?>
+			</div>
 		</div>
 	</div>
 </div>

@@ -234,3 +234,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Minor style adjustements on woo product details
 - Arranged some Woocommerce minor errors
 - Refactorized and fixed Mybooking Pages template, and now is Mybooking Landing
+- Now blog page has two columns and right sidebar
+- Added header based on featured image to single posts
+- Fixed missing posts default-image
+- Unified all post related styles in the same document
