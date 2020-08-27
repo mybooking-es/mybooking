@@ -231,5 +231,6 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Fixed selector rendering in Mybooking Pages template
 - Realigned default footer elements
 - Woo products now match card styles on choose step
+- Minor style adjustements on woo product details
 - Arranged some Woocommerce minor errors
 - Refactorized and fixed Mybooking Pages template, and now is Mybooking Landing

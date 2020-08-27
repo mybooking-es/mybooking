@@ -2,7 +2,7 @@
 *   WOOCOMMERCE OVERRIDING
 *   ----------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.9.5
@@ -95,6 +95,12 @@
 }
 
 // Forms
+.woocommerce form .form-row label {
+  width: 100%;
+}
+
+.woocommerce form .password-input input[type=password],
+.woocommerce-page form .password-input input[type=password],
 .woocommerce input[type=text],
 .woocommerce input[type=tel],
 .woocommerce input[type=email] {
@@ -102,6 +108,11 @@
   border: 1px solid #CCC;
   padding: 0 .8rem;
   border-radius: 3px;
+}
+
+.woocommerce form .password-input input[type=password],
+.woocommerce-page form .password-input input[type=password] {
+  display: block;
 }
 
 .woocommerce textarea {
@@ -123,16 +134,24 @@
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: #444;
-    line-height: 48px;
+  color: #444;
+  line-height: 48px;
 }
 
 .woocommerce .woocommerce-billing-fields::after,
 .woocommerce .woocommerce-shipping-fields::after,
 .woocommerce-page .woocommerce-billing-fields::after,
 .woocommerce-page .woocommerce-shipping-fields::after {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
+
+@media ( min-width: 575px ) {
+  .woocommerce form.login, .woocommerce form.register {
+    width: 50%;
+    margin: 2em auto;
+  }
+}
+
 
 /*
 *  PRODUCT LOOP
@@ -247,6 +266,14 @@
   background-image: none;
   color: #FFF;
   opacity: .5;
+}
+
+.woocommerce a.added_to_cart {
+  padding: 0!important;
+  display: block!important;
+  line-height: 3;
+  text-align: center;
+  font-size: .8em;
 }
 
 // Loop columns
@@ -531,4 +558,33 @@
   width: 100%;
   border-radius: 3px;
   padding: 1rem;
+}
+
+/*
+*  ACCOUNT
+*/
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  border-top: 1px solid #CCC;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li {
+  padding: .5rem;
+  border-bottom: 1px solid #CCC;
+}
+
+// Adresses
+.woocommerce-Address-title.title {
+  text-align: left;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+// Orders
+.woocommerce table.shop_table th.woocommerce-table__product-name.product-name,
+.woocommerce table.shop_table td.woocommerce-table__product-name.product-name {
+  font-size: 1.6em;
 }

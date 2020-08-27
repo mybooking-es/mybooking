@@ -15,6 +15,17 @@
  * @version 2.6.0
  */
 
+ /**
+  * Mybooking Tweaks
+  *
+  * - Changed col echo values on line 71 to avoid Bootstrap conflicts
+	*
+	* 	@version: 0.0.1
+	*   @package WordPress
+	*   @subpackage Mybooking WordPress Theme
+	*   @since Mybooking WordPress Theme 0.9.9
+	*/
+
 defined( 'ABSPATH' ) || exit;
 
 $customer_id = get_current_user_id();
@@ -57,7 +68,7 @@ $col    = 1;
 		$oldcol  = $oldcol * -1;
 	?>
 
-	<div class="u-column<?php echo $col < 0 ? 1 : 2; ?> col-<?php echo $oldcol < 0 ? 1 : 2; ?> woocommerce-Address">
+	<div class="u-column<?php echo $col < 0 ? 1 : 2; ?> col-<?php echo $oldcol < 0 ? 12 : 12; ?> woocommerce-Address">
 		<header class="woocommerce-Address-title title">
 			<h3><?php echo esc_html( $address_title ); ?></h3>
 			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php echo $address ? esc_html__( 'Edit', 'woocommerce' ) : esc_html__( 'Add', 'woocommerce' ); ?></a>

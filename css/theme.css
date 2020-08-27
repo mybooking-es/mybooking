@@ -25899,7 +25899,7 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
 *   WOOCOMMERCE OVERRIDING
 *   ----------------------
 *
-* 	Versión: 0.0.1
+* 	Versión: 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.9.5
@@ -25980,6 +25980,11 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   font-size: .6em;
   border-radius: 3px; }
 
+.woocommerce form .form-row label {
+  width: 100%; }
+
+.woocommerce form .password-input input[type=password],
+.woocommerce-page form .password-input input[type=password],
 .woocommerce input[type=text],
 .woocommerce input[type=tel],
 .woocommerce input[type=email] {
@@ -25987,6 +25992,10 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   border: 1px solid #CCC;
   padding: 0 .8rem;
   border-radius: 3px; }
+
+.woocommerce form .password-input input[type=password],
+.woocommerce-page form .password-input input[type=password] {
+  display: block; }
 
 .woocommerce textarea {
   min-height: 350px;
@@ -26012,6 +26021,11 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
 .woocommerce-page .woocommerce-billing-fields::after,
 .woocommerce-page .woocommerce-shipping-fields::after {
   margin-bottom: 1rem; }
+
+@media (min-width: 575px) {
+  .woocommerce form.login, .woocommerce form.register {
+    width: 50%;
+    margin: 2em auto; } }
 
 /*
 *  PRODUCT LOOP
@@ -26111,6 +26125,13 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   background-image: none;
   color: #FFF;
   opacity: .5; }
+
+.woocommerce a.added_to_cart {
+  padding: 0 !important;
+  display: block !important;
+  line-height: 3;
+  text-align: center;
+  font-size: .8em; }
 
 .woocommerce ul.products[class*=columns-] li.product,
 .woocommerce-page ul.products[class*=columns-] li.product {
@@ -26326,6 +26347,31 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   width: 100%;
   border-radius: 3px;
   padding: 1rem; }
+
+/*
+*  ACCOUNT
+*/
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  border-top: 1px solid #CCC; }
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li {
+  padding: .5rem;
+  border-bottom: 1px solid #CCC; }
+
+.woocommerce-Address-title.title {
+  text-align: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+
+.woocommerce table.shop_table th.woocommerce-table__product-name.product-name,
+.woocommerce table.shop_table td.woocommerce-table__product-name.product-name {
+  font-size: 1.6em; }
 
 /** Overrides WPML **/
 .wpml-ls-legacy-dropdown {
@@ -26784,6 +26830,7 @@ img.wp-post-image {
 
 @media (max-width: 992px) {
   .page_header {
+    height: 100vh;
     overflow: visible; }
   .page_header img {
     width: 100%;
