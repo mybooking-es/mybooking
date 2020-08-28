@@ -3,7 +3,7 @@
 *   POPUP POST TYPE
 *   ---------------
 *
-* 	Versión: 0.0.1
+* 	@version 0.0.1
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.9.2

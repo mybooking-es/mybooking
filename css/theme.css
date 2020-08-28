@@ -25604,7 +25604,7 @@ select:disabled {
 *   GUTENBERG SUPPORT
 *   -----------------
 *
-* 	Versión: 0.0.1
+* 	@version 0.0.1
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.9.6
@@ -25899,7 +25899,7 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
 *   WOOCOMMERCE OVERRIDING
 *   ----------------------
 *
-* 	Versión: 0.0.2
+* 	@version 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.9.5
@@ -26939,6 +26939,9 @@ ul.social-links,
   .navbar .col {
     padding: 0; }
 
+.navbar-nav {
+  display: -webkit-box !important; }
+
 .custom-logo-link img {
   height: var(--custom-logo-height);
   overflow: hidden;
@@ -27030,7 +27033,6 @@ a.dropdown-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
@@ -27043,7 +27045,7 @@ a.dropdown-item {
   color: var(--navbar-link-color-hover);
   opacity: var(--navbar-link-hover-opacity); }
 
-@media (min-width: 992px) {
+@media (min-width: 991.98px) {
   .home .nav-container-absolute .navbar-dark .navbar-nav .nav-link {
     color: var(--white); }
   .home .nav-container-absolute {
@@ -27058,7 +27060,9 @@ a.dropdown-item {
   .navbar-container {
     width: 100%;
     top: 0;
-    z-index: 30; } }
+    z-index: 30; }
+  .navbar-main.nav-right {
+    width: 100%; } }
 
 .title-wrapper {
   display: -webkit-box;

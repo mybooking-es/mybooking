@@ -8321,7 +8321,7 @@ define(function () {
  *   MYBOOKING CUSTOM JS
  *   -------------------
  *
- *  Versión: 0.0.4
+ *  @version 0.0.4
  *   @package WordPress
  *   @subpackage Mybooking WordPress Theme
  *   @since Mybooking WordPress Theme 0.0.1

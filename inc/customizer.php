@@ -6,7 +6,7 @@
 *   Section: Mybooking layout settings
 *
 *
-* 	Versión: 0.0.7
+* 	@version 0.0.7
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.1
