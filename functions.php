@@ -3,7 +3,7 @@
 *		THEME FUNCTIONS
 *  	---------------
 *
-* 	Versión: 0.0.7
+* 	@version 0.0.7
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1

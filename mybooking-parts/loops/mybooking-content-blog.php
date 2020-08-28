@@ -49,7 +49,7 @@ defined( 'ABSPATH' ) || exit;
 				</h3>' ); ?>
 
 			<p>
-				<a class="btn btn-secondary mybooking-read-more-link" href="<?php echo esc_url( get_permalink( $news_item ) ) ?>">
+				<a class="btn btn-secondary mybooking-read-more-link" href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">
 					<?php echo _x( 'Read', 'home-news-button','mybooking' ) ?>
 				</a>
 			</p>

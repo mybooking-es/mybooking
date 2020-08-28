@@ -238,3 +238,4 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Added header based on featured image to single posts
 - Fixed missing posts default-image
 - Unified all post related styles in the same document
+- Fixed issue with multiple word navigation items

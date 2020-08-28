@@ -3,7 +3,7 @@
 *   Renting Modify Reservation Form Template
 *   -----------------------------------------
 *
-*   Versión: 0.0.1
+*   @version 0.0.1
 *   @package WordPress
 *   @subpackage Mybooking WordPress Plugin
 *   @since Mybooking WordPress Plugin 0.0.1

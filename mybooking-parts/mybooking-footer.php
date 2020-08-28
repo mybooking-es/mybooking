@@ -3,7 +3,7 @@
 *		MYBOOKING FOOTER
 *  	----------------
 *
-* 	Versión: 0.0.3
+* 	@version 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.2

@@ -3,7 +3,7 @@
 *		SITE TOP BAR PARTIAL
 *  	--------------------
 *
-* 	Versión: 0.0.5
+* 	@version 0.0.5
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1

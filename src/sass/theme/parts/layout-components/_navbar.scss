@@ -18,6 +18,14 @@
   }
 }
 
+.navbar-nav {
+  display: -webkit-box!important;
+  // This is a hack!
+  // Inherited Bootstrap 'display:flex' rule makes
+  // menu items with more than one word display in
+  // multiples lines.
+}
+
 // Logo
 .custom-logo-link img {
   height: var(--custom-logo-height);
@@ -141,7 +149,6 @@ a.dropdown-item {
 
 .navbar-main.nav-right {
   display: flex;
-  width: 100%;
   justify-content: space-between;
 }
 
@@ -160,7 +167,7 @@ a.dropdown-item {
 }
 // Controls behaviour when is set to overlap on home
 
-@media (min-width: 992px) {
+@media (min-width: 991.98px) {
   .home {
     .nav-container-absolute {
       .navbar-dark .navbar-nav .nav-link {
@@ -183,5 +190,9 @@ a.dropdown-item {
     width: 100%;
     top: 0;
     z-index: 30;
+  }
+
+  .navbar-main.nav-right {
+    width: 100%;
   }
 }
