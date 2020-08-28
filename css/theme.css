@@ -26720,7 +26720,14 @@ ul.social-links,
       color: var(--credits-color-link-hover);
       text-decoration: none; }
 
-@media (max-width: 768px) {
+.info_bloc {
+  text-align: center; }
+
+@media (min-width: 768px) {
+  .info_bloc {
+    text-align: right; } }
+
+@media (max-width: 767.98px) {
   .footer {
     text-align: center; }
     .footer .col {
@@ -27668,8 +27675,12 @@ select#cat {
               flex-direction: column; }
     .home-left .flex-form .flex-form-group:nth-child(2n),
     .home-left .flex-form .page-template-mybooking-pages .flex-form-group:nth-child(2n),
+    .home-left .flex-form .flex-form-group:nth-child(3n),
+    .home-left .flex-form .page-template-mybooking-pages .flex-form-group:nth-child(3n),
     .home-right .flex-form .flex-form-group:nth-child(2n),
-    .home-right .flex-form .page-template-mybooking-pages .flex-form-group:nth-child(2n) {
+    .home-right .flex-form .page-template-mybooking-pages .flex-form-group:nth-child(2n),
+    .home-right .flex-form .flex-form-group:nth-child(3n),
+    .home-right .flex-form .page-template-mybooking-pages .flex-form-group:nth-child(3n) {
       margin-left: 0px; } }
 
 .flex-form-group-wrapper {
@@ -27892,7 +27903,7 @@ button.another_return_place_group_close {
   top: 0; }
 
 .another_pickup_place_group input {
-  border-right: 1px solid red !important; }
+  border-right: 1px solid var(--error) !important; }
 
 .modal .flex-form {
   background-color: var(--modal-selector-bg);
@@ -27900,6 +27911,23 @@ button.another_return_place_group_close {
   border-bottom-right-radius: 0.3rem; }
   .modal .flex-form label {
     color: var(--modal-selector-label-color); }
+
+.btn-only-dates {
+  margin-top: 27px; }
+
+.flex-form-sticky input.hasDatepicker.only-dates,
+.flex-form-group input.hasDatepicker.only-dates {
+  max-width: 100%;
+  width: 100%; }
+
+@media (max-width: 575.98px) {
+  .flex-form-group input.hasDatepicker.only-dates {
+    max-width: 100%;
+    width: 100%; } }
+
+@media (min-width: 576px) {
+  .flex-form-group:nth-child(3n) {
+    margin-left: 10px; } }
 
 .wizard-selector {
   margin-top: 1rem; }
@@ -29306,7 +29334,7 @@ button.mybooking-popup_close {
   margin: 30px 0; }
 
 .activity-card a:visited {
-  color: var(--color-link-visited); }
+  color: var(--white); }
 
 .activity-card a:link {
   color: var(--white); }

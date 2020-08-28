@@ -73,20 +73,24 @@
 // Horizontal Selector on Desktop
 
 @media (min-width: 992px) {
-  .home-alone .flex-form { // 1 column : Max width 745px
+  .home-alone .flex-form {
+    // 1 column : Max width 745px
     max-width: 745px;
     margin: 0 auto;
   }
 
   .home-left .flex-form,
-  .home-right .flex-form { // 2 columns : Width between 350 and 400px
+  .home-right .flex-form {
+    // 2 columns : Width between 350 and 400px
     max-width: 400px;
     .flex-form-group-wrapper,
     .page-template-mybooking-pages .flex-form-group-wrapper {
       flex-direction: column;
     }
     .flex-form-group:nth-child(2n),
-    .page-template-mybooking-pages .flex-form-group:nth-child(2n) {
+    .page-template-mybooking-pages .flex-form-group:nth-child(2n),
+    .flex-form-group:nth-child(3n),
+    .page-template-mybooking-pages .flex-form-group:nth-child(3n) {
       margin-left: 0px; // 1 column avoid margin between place and date
     }
   }
@@ -129,8 +133,6 @@
     border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    //flex-grow: 1;
-    //width: 400%; // This is a hack!
   }
   label {
     font-size: 0.8rem;
@@ -310,7 +312,7 @@ button.another_return_place_group_close {
 }
 
 .another_pickup_place_group input {
-  border-right: 1px solid red !important  ;
+  border-right: 1px solid var(--error) !important  ;
 }
 
 .modal .flex-form {
@@ -319,5 +321,29 @@ button.another_return_place_group_close {
   border-bottom-right-radius: 0.3rem;
   label {
     color: var(--modal-selector-label-color);
+  }
+}
+
+//==============================================
+// Only dates selector rules
+//==============================================
+
+.btn-only-dates {
+  margin-top: 27px;
+}
+.flex-form-sticky input.hasDatepicker.only-dates,
+.flex-form-group input.hasDatepicker.only-dates {
+  max-width: 100%;
+  width: 100%;
+}
+@media (max-width: 575.98px) {
+  .flex-form-group input.hasDatepicker.only-dates {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .flex-form-group:nth-child(3n) {
+    margin-left: 10px;
   }
 }

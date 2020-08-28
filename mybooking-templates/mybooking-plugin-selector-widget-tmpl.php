@@ -14,34 +14,57 @@
   <% if (!configuration.pickupReturnPlace && !configuration.timeToFrom) { %>
 
   <div class="flex-form-group-wrapper">
-    <div class="flex-form-group">
-          <label
-            for="date_from"><?php echo _x( 'Pick-up date', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
-        <input type="text" class="form-control" name="date_from" id="widget_date_from" autocomplete="off">
-        <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>"/>
-      </div>
-    </div>
-    <div class="flex-form-group">
-        <label for="date_from"><?php echo _x( 'Return date', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
-      <div class="flex-form-item">
-        <input type="text" class="form-control" name="date_to" id="widget_date_to" autocomplete="off">
-        <input type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>"/>
-      </div>
-    </div>
-    <% if (configuration.promotionCode) { %>
+
       <div class="flex-form-group">
-          <label for="promotion_code"><?php echo _x( 'Promotion code', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
-          <div class="flex-form-horizontal-item">
-            <input type="text" class="form-control" name="promotion_code" id="widget_promotion_code" autocomplete="off">
+        <div class="flex-form-box mb-0">
+          <label><?php echo _x( 'Pick-up date', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
+          <div class="flex-form-item">
+            <label for="widget_date_from"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
+            <input class="only-dates" type="text" id="widget_date_from" name="date_from" readonly="true" />
+            <% if (configuration.timeToFrom) { %>
+            <select class="ml-1" id="widget_time_from" name="time_from">
+            </select>
+            <% } else { %>
+            <input type="hidden" name="time_from" value="10:00" />
+            <% } %>
           </div>
+        </div>
+        </div>
+        <div class="flex-form-group">
+        <div class="flex-form-box mb-0">
+          <label><?php echo _x( 'Return date', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
+          <div class="flex-form-item">
+            <label for="widget_date_to"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
+            <input class="only-dates" type="text" id="widget_date_to" name="date_to" readonly="true" />
+            <% if (configuration.timeToFrom) { %>
+            <select class="ml-1" id="widget_time_to" name="time_to">
+            </select>
+            <% } else { %>
+            <input type="hidden" name="time_to" value="20:00" />
+            <% } %>
+          </div>
+        </div>
       </div>
-    <% } %>
-    <div class="flex-form-group flex-form-group-no-label">
-      <div class="flex-form-item">
-        <input class="btn btn-primary mt-3" type="submit"
-          value="<?php echo _x( 'Search', 'renting_form_selector', 'mybooking-wp-plugin') ?>" />
+    
+      <% if (configuration.promotionCode) { %>
+      <div class="flex-form-group">
+        <div class="flex-form-box mb-0">
+          <label
+            for="promotion_code"><?php echo _x( 'Promotion code', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
+          <div class="flex-form-horizontal-item">
+            <input type="text" class="form-control" name="promotion_code" id="widget_promotion_code"
+              autocomplete="off">
+          </div>
+        </div>
       </div>
-    </div>
+      <% } %>
+      <div class="flex-form-group">
+        <div class="flex-form-box mb-0">
+          <input type="submit" class="btn btn-primary btn-only-dates"
+            value="<?php echo _x( 'Search', 'renting_form_selector', 'mybooking-wp-plugin') ?>" />
+        </div>
+      </div>
+
   </div>
 
   <% } else { %>	
