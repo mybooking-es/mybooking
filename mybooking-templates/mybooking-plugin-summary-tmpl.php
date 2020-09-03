@@ -13,22 +13,23 @@
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="process-section-box">
-    <small class="detail-text"><?php echo _x( 'Reservation Id', 'renting_summary', 'mybooking-wp-plugin') ?></small>
-    <h3> <%=booking.id%> </h3>
-
-    <div class="product-detail-summary-dates">
+    <small class="detail-text"> 
+      <?php echo _x( 'Reservation Id', 'renting_summary', 'mybooking-wp-plugin') ?>
+    </small>
+    <h3><%=booking.id%></h3>
+    <div class="product-detail-summary-dates mb-3">
       <ul>
         <li><%=booking.date_from_full_format%> <%=booking.time_from%></li>
         <li><%=booking.pickup_place_customer_translation%></li>
       </ul>
-      <div class="product-detail-separator"> <i class="fa fa-long-arrow-right"></i> </div>
+      <div class="product-detail-separator d-none d-xl-block"><i class="fa fa-long-arrow-right"></i> </div>
       <ul>
         <li><%=booking.date_to_full_format%> <%=booking.time_to%></li>
         <li><%=booking.return_place_customer_translation%></li>
       </ul>
     </div>
     <!-- Products -->
-    <ul class="list-group list-group-flush">
+    <ul class="list-group resume-product-list mb-3">
       <!-- Show all the products in the reservation -->
       <% for (var idx=0;idx<booking.booking_lines.length;idx++) { %>
         <li class="list-group-item product-detail-list">
@@ -37,7 +38,8 @@
           </div>
           <!-- Description -->
           <span
-            class="extra-name"><b><%=booking.booking_lines[idx].item_description_customer_translation%></b></span>
+            class="extra-name"><b><%=booking.booking_lines[idx].item_description_customer_translation%></b>
+          </span>
           <!-- Quantity -->
           <% if (configuration.multipleProductsSelection) { %>
           <span class="badge badge-info"><%=booking.booking_lines[idx].quantity%></span>
@@ -76,7 +78,7 @@
   
   <!-- Extras -->
   <% if (booking.booking_extras.length > 0) { %>
-  <ul class="list-group">
+  <ul class="list-group mb-3">
     <% for (var idx=0; idx<booking.booking_extras.length; idx++) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <span class="extra-name"><%=booking.booking_extras[idx].extra_description_customer_translation%></span>
@@ -91,7 +93,7 @@
             booking.time_to_cost > 0 || booking.return_place_cost > 0 ||
             booking.driver_age_cost > 0 || booking.category_supplement_1_cost > 0
           ) { %>
-  <ul class="list-group">
+  <ul class="list-group mb-3">
     <% if (booking.time_from_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <span
@@ -137,8 +139,8 @@
     <% } %>
   </ul>
   <% } %>
-  <hr>
-  <ul class="list-group">
+ 
+  <ul class="list-group mb-3">
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <span class="extra-name"><b><?php echo _x( 'Total', 'renting_summary', 'mybooking-wp-plugin' ) ?></b></span>
       <span class="product-amount pull-right"><b><%=configuration.formatCurrency(booking.total_cost)%></b></span>
@@ -158,31 +160,30 @@
     <% } %>
 
   </div>
-        <div class="process-section-box">
-          <h4 class="my-3"><?php echo _x( "Customer's details", 'renting_summary', 'mybooking-wp-plugin') ?></h4>
-          <div class="table-responsive">
-            <table class="table table-borderless table-striped">
-              <tbody>
-                <tr>
-                  <th scope="row"><?php echo _x( "Full name", 'renting_summary', 'mybooking') ?>:</th>
-                  <td><%=booking.customer_name%> <%=booking.customer_surname%></td>
-                </tr>
-                <tr>
-                  <th scope="row"><?php echo _x( "E-mail", 'renting_summary', 'mybooking') ?>:</th>
-                  <td><%=booking.customer_email%></td>
-                </tr>
-                <tr>
-                  <th scope="row"><?php echo _x( "Phone number", 'renting_summary', 'mybooking') ?>:</th>
-                  <td><%=booking.customer_phone%> <%=booking.customer_mobile_phone%></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        
-        <div id="reservation_form_container" class="col bg-white shadow-bottom py-3 px-3 mt-3"
-          style="display:none">
-        </div>
-        <div id=" payment_detail" class="col bg-white shadow-bottom py-3 px-3" style="display:none">
-        </div>
-      </div>
+  <div class="process-section-box">
+    <h4 class="my-3"><?php echo _x( "Customer's details", 'renting_summary', 'mybooking-wp-plugin') ?></h4>
+    <div class="table-responsive">
+      <table class="table table-borderless table-striped">
+        <tbody>
+          <tr>
+            <th scope="row"><?php echo _x( "Full name", 'renting_summary', 'mybooking') ?>:</th>
+            <td><%=booking.customer_name%> <%=booking.customer_surname%></td>
+          </tr>
+          <tr>
+            <th scope="row"><?php echo _x( "E-mail", 'renting_summary', 'mybooking') ?>:</th>
+            <td><%=booking.customer_email%></td>
+          </tr>
+          <tr>
+            <th scope="row"><?php echo _x( "Phone number", 'renting_summary', 'mybooking') ?>:</th>
+            <td><%=booking.customer_phone%> <%=booking.customer_mobile_phone%></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="reservation_form_container" class="col bg-white shadow-bottom py-3 px-3 mt-3"
+      style="display:none">
+    </div>
+    <div id=" payment_detail" class="col bg-white shadow-bottom py-3 px-3" style="display:none">
+    </div>
+  </div>
 </script>
