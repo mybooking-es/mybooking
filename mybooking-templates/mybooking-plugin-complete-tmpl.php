@@ -146,9 +146,14 @@
     <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
     <div class="reservation-summary-sticky complete-sticky">
       <div class="sandwitch-wrapper">
-        <div class="reservation-summary_pickup_place">
-          <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
-        </div>
+          <% if (configuration.pickupReturnPlace) { %>
+          <div class="reservation-summary_pickup_place">
+            <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
+          </div>
+          <% } else { %>
+          <div class="ml-1"></div>
+          }
+          <% } %>
         <div class="reservation-summary_pickup_date">
           <span><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></span>
         </div>
@@ -191,9 +196,14 @@
     <% } else { %>
 
     <div class="reservation-summary-sticky">
-      <div class="reservation-summary_pickup_place">
-        <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
-      </div>
+      <% if (configuration.pickupReturnPlace) { %>
+        <div class="reservation-summary_pickup_place">
+          <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
+        </div>
+        <% } else { %>
+          <div class="ml-1"></div>
+        }
+      <% } %>
       <div class="reservation-summary_pickup_date">
         <span><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></span>
       </div>

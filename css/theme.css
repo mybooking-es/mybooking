@@ -26946,6 +26946,10 @@ ul.social-links,
   .navbar .col {
     padding: 0; }
 
+@media (min-width: 992px) {
+  .navbar-nav {
+    display: -webkit-box !important; } }
+
 .custom-logo-link img {
   height: var(--custom-logo-height);
   overflow: hidden;
