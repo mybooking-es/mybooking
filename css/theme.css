@@ -28769,9 +28769,9 @@ a.magic-button.btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 2rem 0; }
 
 .product-detail-list-img {
@@ -29031,7 +29031,7 @@ a.magic-button.btn {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   font-weight: 300;
-  padding: 0 0 10px 10px;
+  padding: 10px;
   font-size: 0.8rem; }
 
 .reservation-summary_return_date {
@@ -29045,7 +29045,7 @@ a.magic-button.btn {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 0 10px 10px 0;
+  padding: 10px;
   font-size: 0.8rem; }
 
 .overflow-ellipsis {
@@ -29312,51 +29312,38 @@ a.magic-button.btn {
   display: -ms-flexbox;
   display: flex;
   background-color: var(--gray-50);
+  border-bottom: 1px solid #dee2e6;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.rent-duration {
   border-bottom: 1px solid #dee2e6; }
 
-.product-view_image {
-  width: 50%; }
-  .product-view_image img {
-    max-width: 100px; }
+.product-view_image img {
+  max-width: 100px; }
 
 .product-view_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 50%; }
+  width: 150px; }
+  .product-view_text p {
+    margin-bottom: 0; }
 
 .product-summary-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 1rem;
   border-bottom: 1px solid #dee2e6; }
 
 .product-summary {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
-  .product-summary i {
-    -ms-flex-item-align: center;
-        align-self: center;
-    color: var(--brand-primary); }
-  .product-summary li {
-    font-size: 13px;
-    color: #495057; }
+  font-size: 13px;
+  color: #495057;
+  margin-bottom: 10px; }
 
 .product-summary_separator {
   display: -webkit-box;

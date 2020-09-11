@@ -41,9 +41,11 @@
               <tr class="bg-gray-100">
                 <th></th>
                 <th scope="col"><?php echo _x( 'Product', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
-                <th scope="col"><?php echo _x( 'Price', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
-                <th scope="col"><?php echo _x( 'Quantity', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
-                <th scope="col"><?php echo _x( 'Total', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
+                <th scope="col" class="text-right"><?php echo _x( 'Price', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
+                <th scope="col" class="text-right">
+                  <?php echo _x( 'Quantity', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
+                <th scope="col" class="text-right">
+                  <?php echo _x( 'Total', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
               </tr>
             </thead>
             <tbody>
@@ -56,11 +58,11 @@
                 <td data-label="<?php echo _x( 'Product', 'renting_complete', 'mybooking-wp-plugin' ) ?>"
                   class="align-middle"><%=booking.booking_lines[idx].item_description_customer_translation%></td>
                 <td data-label="<?php echo _x( 'Price', 'renting_complete', 'mybooking-wp-plugin' ) ?>"
-                  class="align-middle"><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost)%></td>
+                  class="align-middle text-right"><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost)%></td>
                 <td data-label="<?php echo _x( 'Quantity', 'renting_complete', 'mybooking-wp-plugin' ) ?>"
-                  class="align-middle"><%=booking.booking_lines[idx].quantity%></td>
+                  class="align-middle text-right"><%=booking.booking_lines[idx].quantity%></td>
                 <td data-label="<?php echo _x( 'Total', 'renting_complete', 'mybooking-wp-plugin' ) ?>"
-                  class="align-middle">
+                  class="align-middle text-right">
                   <%=configuration.formatCurrency(booking.booking_lines[idx].item_cost)%></td>
               </tr>
               <% } %>

@@ -15,36 +15,34 @@
   display: flex;
   background-color: var(--gray-50);
   border-bottom: 1px solid #dee2e6;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rent-duration {
+  border-bottom: 1px solid #dee2e6;
 }
 .product-view_image {
-  width: 50%;
   img {
     max-width: 100px;
   }
 }
 .product-view_text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
+  width: 150px;
+  p {
+    margin-bottom: 0;
+  }
 }
 .product-summary-wrapper {
-  display: flex;
   padding: 1rem;
   border-bottom: 1px solid #dee2e6;
 }
 .product-summary {
-  flex-direction: column;
   display: flex;
-  flex-grow: 1;
-  i {
-    align-self: center;
-    color: var(--brand-primary);
-  }
-  li {
-    font-size: 13px;
-    color: $gray-700;
-  }
+  font-size: 13px;
+  color: $gray-700;
+  margin-bottom: 10px;
 }
 .product-summary_separator {
   display: flex;

@@ -200,9 +200,6 @@
         <div class="reservation-summary_pickup_place">
           <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
         </div>
-        <% } else { %>
-          <div class="ml-1"></div>
-        }
       <% } %>
       <div class="reservation-summary_pickup_date">
         <span><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></span>
@@ -244,7 +241,6 @@
   <div class="product-detail-bg-color">
       <% if (configuration.multipleProductsSelection) { %>
         <div class="product-detail-container-several-products">
-        <div class=""></div>
             <div>
               <h5 class=""><?php echo _x('Delivery', 'renting_complete', 'mybooking') ?></h5>
               <ul>
@@ -264,10 +260,14 @@
               <thead>
                 <tr class="bg-gray-100">
                   <th></th>
-                  <th scope="col"><?php echo _x( 'Product', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
-                  <th scope="col"><?php echo _x( 'Price', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
-                  <th scope="col"><?php echo _x( 'Quantity', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
-                  <th scope="col"><?php echo _x( 'Total', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
+                  <th scope="col">
+                    <?php echo _x( 'Product', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
+                  <th scope="col" class="text-right">
+                    <?php echo _x( 'Price', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
+                  <th scope="col" class="text-right">
+                    <?php echo _x( 'Quantity', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
+                  <th scope="col" class="text-right">
+                    <?php echo _x( 'Total', 'renting_complete', 'mybooking-wp-plugin' ) ?></th>
                 </tr>
               </thead>
               <tbody>
@@ -276,17 +276,21 @@
                     <td class="text-center text-md-left"><img class="img-fluid" style="max-width: 120px"
                         src="<%=shopping_cart.items[idx].photo_medium%>" alt="">
                     </td>
-                    <td data-label="<?php echo _x( 'Product', 'renting_complete', 'mybooking-wp-plugin' ) ?>"
+                    <td data-label="<?php echo _x( 'Product', 'renting_complete', 'mybooking-wp-plugin' ) ?>" 
                       class="align-middle">
-                      <%=shopping_cart.items[idx].item_description_customer_translation%></td>
+                      <%=shopping_cart.items[idx].item_description_customer_translation%>
+                    </td>
                     <td data-label="<?php echo _x( 'Price', 'renting_complete', 'mybooking-wp-plugin' ) ?>"
-                      class="align-middle">
-                         <%=configuration.formatCurrency(shopping_cart.items[idx].item_unit_cost)%></td>
+                      class="align-middle text-right">
+                      <%=configuration.formatCurrency(shopping_cart.items[idx].item_unit_cost)%>
+                    </td>
                     <td data-label="<?php echo _x( 'Quantity', 'renting_complete', 'mybooking-wp-plugin' ) ?>"
-                      class="align-middle"><%=shopping_cart.items[idx].quantity%></td>
+                      class="align-middle text-right"><%=shopping_cart.items[idx].quantity%>
+                    </td>
                     <td data-label="<?php echo _x( 'Total', 'renting_complete', 'mybooking-wp-plugin' ) ?>"
-                      class="align-middle">
-                      <%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%></td>
+                      class="align-middle text-right">
+                      <%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%>
+                    </td>
                   </tr>
                 <% } %>  
               </tbody>
@@ -341,53 +345,54 @@
         <div class="modal-body summary-modal">
         <div class="product-summary-wrapper">
           <div class="product-summary">
-            <ul>
-              <li><%=shopping_cart.date_from_full_format%><li>
-              <li><%=shopping_cart.time_from%></li>
-              <li><%=shopping_cart.pickup_place_customer_translation%></li>
-            </ul>
-          </div>
-          <div class="product-summary_separator">
-            <i class="fa fa-long-arrow-right mr-3"></i>
+            <div class="product-summary_separator">
+              <i class="fa fa-long-arrow-right mr-3"></i>
+            </div>
+            <%=shopping_cart.date_from_full_format%>
+            <%=shopping_cart.time_from%>
+            <!-- <%=shopping_cart.pickup_place_customer_translation%> -->
           </div>
           <div class="product-summary">
-            <ul>
-              <li><%=shopping_cart.date_to_full_format%></li>
-              <li><%=shopping_cart.time_to%></li>
-              <li><%=shopping_cart.return_place_customer_translation%></li>
-            </ul>
+            <div class="product-summary_separator">
+              <i class="fa fa-long-arrow-left mr-3"></i>
+            </div>
+            <%=shopping_cart.date_to_full_format%>
+            <%=shopping_cart.time_to%>
+            <!-- <%=shopping_cart.return_place_customer_translation%> -->
           </div>
         </div>
+        <!-- Duración del alquiler -->
+        <div class="rent-duration p-3">
+          <p class="mb-0">
+            <% if (shopping_cart.days > 0) { %>
+            <?php echo _x( 'Rental duration', 'renting_complete', 'mybooking-wp-plugin' ) ?>:
+            <%=shopping_cart.days%>
+            <?php echo _x( 'day(s)', 'renting_complete', 'mybooking-wp-plugin' ) ?></p>
+          <% } else if (shopping_cart.hours > 0) { %>
+          <?php echo _x( 'Rental duration', 'renting_complete', 'mybooking-wp-plugin' ) ?>:
+          <%=shopping_cart.hours%>
+          <?php _e('horas/s', 'mybooking') ?></p>
+          <% } %>
+        </div>      
           <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
           <div class="product-view">
-            <div class="product-view_image">
+            <div class="product-view_image d-none d-sm-block">
               <img class="img-fluid" src="<%= shopping_cart.items[idx].photo_medium%>">
             </div>
             <div class="product-view_text">
               <p class="fw-700"><%=shopping_cart.items[idx].item_description_customer_translation%></p>
-              <% if (shopping_cart.days > 0) { %>
-              <?php echo _x( 'Rental duration', 'renting_complete', 'mybooking-wp-plugin' ) ?>: <%=shopping_cart.days%>
-                <?php echo _x( 'day(s)', 'renting_complete', 'mybooking-wp-plugin' ) ?></p>
-              <% } else if (shopping_cart.hours > 0) { %>
-              <?php echo _x( 'Rental duration', 'renting_complete', 'mybooking-wp-plugin' ) ?>: <%=shopping_cart.hours%>
-                <?php _e('horas/s', 'mybooking') ?></p>
-              <% } %>
             </div>
+            <!-- Quantity -->
+            <% if (configuration.multipleProductsSelection) { %>
+            <span class="badge badge-info"><%=shopping_cart.items[idx].quantity%></span>
+            <% } %>
+            <!-- Price -->
+            <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%></span>
           </div>
           <% } %>
           <ul class="list-group  summary-modal_list">
             <!-- Products -->
             <% for (var idx=0;idx<shopping_cart.items.length;idx++) { %>
-              <li class="list-group-item">
-                 <!-- Description -->
-                 <span class="extra-name"><b><%=shopping_cart.items[idx].item_description_customer_translation%></b></span>
-                 <!-- Quantity -->
-                 <% if (configuration.multipleProductsSelection) { %>
-                   <span class="badge badge-info"><%=shopping_cart.items[idx].quantity%></span>
-                 <% } %>
-                 <!-- Price -->
-                 <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%></span>
-              </li>
               <!-- Offer/Promotion Code Appliance -->
               <% if (shopping_cart.items[idx].item_unit_cost_base != shopping_cart.items[idx].item_unit_cost) { %>
                 <li class="list-group-item">
@@ -470,6 +475,7 @@
                 class="extra-price"><%=configuration.formatCurrency(shopping_cart.category_supplement_1_cost)%></span>
             </li>
             <% } %>
+          </ul>
         </div>
         <div class="modal-footer summary-modal_footer">
           <! -- TOTAL -->
