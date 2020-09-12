@@ -29,7 +29,8 @@
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 700;
-  padding: 10px 10px 0 10px;
+  padding-left: 10px;
+  padding-top: 10px;
   font-size: 0.8rem;
 }
 .reservation-summary_return_place {
@@ -40,7 +41,9 @@
   display: flex;
   flex-wrap: nowrap;
   font-weight: 300;
-  padding: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+
   font-size: 0.8rem;
 }
 .reservation-summary_return_date {
@@ -49,7 +52,9 @@
   flex-wrap: nowrap;
   font-weight: 300;
   justify-content: flex-end;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 0.8rem;
 }
 .overflow-ellipsis {
@@ -64,6 +69,7 @@
   justify-content: center;
   width: 100%;
   padding: 10px;
+  margin-top: 10px;
 }
 .modify-button {
   height: 100%;
@@ -85,7 +91,6 @@
   width: 100%;
   .reservation-summary_pickup_place {
     width: 65%;
-    padding: 10px 0 0 10px;
   }
   .reservation-summary_return_place {
     color: var(--sticky-bar-color);
@@ -94,17 +99,17 @@
     font-size: 1rem;
     font-weight: 700;
     width: 65%;
-    padding: 0 0 10px 10px;
     font-size: 0.8rem;
+    padding-left: 10px;
+    padding-top: 10px;
   }
   .reservation-summary_pickup_date {
     width: 40%;
-    padding: 10px 10px 0 0;
     justify-content: flex-end;
+    padding-right: 10px;
   }
   .reservation-summary_return_date {
     width: 40%;
-    padding: 0 10px 10px 0;
   }
 }
 
@@ -112,10 +117,11 @@
 @media (min-width: 768px) {
   .modify-button {
     font-size: 1rem;
+    margin-top: 5px;
   }
   .reservation-summary-sticky {
     justify-content: initial;
-    padding: 10px 0;
+    padding-bottom: 10px;
   }
   .modify-button-wrapper {
     margin: 0 10px 0 2rem;
@@ -140,11 +146,10 @@
     display: flex;
     width: fit-content;
     max-width: 23%;
-    align-items: center;
+    align-items: flex-end;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
-    padding: 0 10px;
   }
   .reservation-summary_return_place {
     justify-content: flex-end;
@@ -153,17 +158,17 @@
   .reservation-summary_pickup_date {
     min-width: fit-content;
     width: auto;
-    padding: 0;
-    align-items: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    align-items: flex-end;
     justify-content: flex-start;
     font-size: 1rem;
   }
   .reservation-summary_return_date {
     min-width: fit-content;
     width: auto;
-    padding: 0;
-    margin-right: 10px;
-    align-items: center;
+    padding-left: 10px;
+    align-items: flex-end;
     justify-content: flex-end;
     font-size: 1rem;
   }
@@ -173,24 +178,23 @@
   .sandwitch-wrapper {
     width: 40%;
     .reservation-summary_pickup_place {
-      padding: 0 10px;
       width: 60%;
       max-width: fit-content;
     }
     .reservation-summary_return_place {
-      padding: 0 10px;
+      padding-left: 10px;
       width: 60%;
       max-width: fit-content;
       font-size: 1rem;
     }
     .reservation-summary_pickup_date {
       width: auto; // reset width
-      padding: 0;
+
       flex-wrap: nowrap;
     }
     .reservation-summary_return_date {
       width: auto; // reset width
-      padding: 0;
+
       text-align: left;
       flex-wrap: nowrap;
     }
@@ -216,6 +220,7 @@
   width: 100%;
   padding-left: 10px;
   align-items: center;
+  margin-top: 10px;
 }
 
 .complete-summary-price-wrapper {
@@ -273,6 +278,7 @@
   .complete-summary-row {
     border-top: none;
     padding: 10px 0 0 10px;
+    margin-top: 0;
   }
   .complete-button {
     border-left: none;

@@ -155,7 +155,8 @@
           }
           <% } %>
         <div class="reservation-summary_pickup_date">
-          <span><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></span>
+          <span><%=shopping_cart.date_from_short_format%>
+            <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></span>
         </div>
       </div>
       <div class="separator"></div>
@@ -166,19 +167,18 @@
           </span>
         </div>
         <div class="reservation-summary_return_date">
-          <span><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></span>
+          <span><%=shopping_cart.date_to_short_format%>
+            <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
         </div>
       </div>
         <!-- Row for price & buttons  -->
         <div class="complete-summary-row">
-
           <div class="complete-summary-price-wrapper">
             <div class="complete-summary-total-title">
               <?php echo _x( "Total", 'renting_complete', 'mybooking-wp-plugin' ) ?></div>
             <div class="complete-summary-total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
             </div>
           </div>
-
           <div class="complete-buttons-wrapper">
             <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
               class="complete-button"><i class="fas fa-pen mr-2"></i>
@@ -190,7 +190,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <% } else { %>
@@ -202,7 +201,8 @@
         </div>
       <% } %>
       <div class="reservation-summary_pickup_date">
-        <span><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></span>
+        <span><%=shopping_cart.date_from_short_format%>
+          <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></span>
       </div>
       <div class="separator"></div>
       <div class="reservation-summary_return_place d-none d-md-flex">
@@ -211,7 +211,8 @@
         </span>
       </div>
       <div class="reservation-summary_return_date">
-        <span><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></span>
+        <span><%=shopping_cart.date_to_short_format%>
+          <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
       </div>
         <!-- Row for price & buttons -->
         <div class="complete-summary-row">
@@ -244,14 +245,16 @@
             <div>
               <h5 class=""><?php echo _x('Delivery', 'renting_complete', 'mybooking') ?></h5>
               <ul>
-                <li><%=shopping_cart.date_from_full_format%> <%=shopping_cart.time_from%></li>
+                <li><%=shopping_cart.date_from_full_format%>
+                  <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></li>
                 <li><%=shopping_cart.pickup_place_customer_translation%></li>
               </ul>
             </div>  
             <div>
               <h5 class=""><?php echo _x('Collection', 'renting_complete', 'mybooking') ?></h5>
               <ul>
-                <li><%=shopping_cart.date_to_full_format%> <%=shopping_cart.time_to%></li>
+                <li><%=shopping_cart.date_to_full_format%>
+                  <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></li>
                 <li><%=shopping_cart.return_place_customer_translation%></li>
               </ul>
             </div>  
@@ -304,12 +307,14 @@
                 <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
                 <h5 class="mt-3"><?php echo _x('Delivery', 'renting_complete', 'mybooking') ?></h5>
                 <ul>
-                  <li><%=shopping_cart.date_from_full_format%> <%=shopping_cart.time_from%></li>
+                  <li><%=shopping_cart.date_from_full_format%>
+                    <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></li>
                   <li><%=shopping_cart.pickup_place_customer_translation%></li>
                 </ul>
                 <h5 class="mt-3"><?php echo _x('Collection', 'renting_complete', 'mybooking') ?></h5>
                 <ul>
-                  <li><%=shopping_cart.date_to_full_format%> <%=shopping_cart.time_to%></li>
+                  <li><%=shopping_cart.date_to_full_format%>
+                    <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></li>
                   <li><%=shopping_cart.return_place_customer_translation%></li>
                 </ul>
                 <% if (shopping_cart.days > 0) { %>
@@ -349,7 +354,9 @@
               <i class="fa fa-long-arrow-right mr-3"></i>
             </div>
             <%=shopping_cart.date_from_full_format%>
+            <% if (configuration.timeToFrom) { %>
             <%=shopping_cart.time_from%>
+            <% } %>
             <!-- <%=shopping_cart.pickup_place_customer_translation%> -->
           </div>
           <div class="product-summary">
@@ -357,7 +364,9 @@
               <i class="fa fa-long-arrow-left mr-3"></i>
             </div>
             <%=shopping_cart.date_to_full_format%>
+            <% if (configuration.timeToFrom) { %>
             <%=shopping_cart.time_to%>
+            <% } %>
             <!-- <%=shopping_cart.return_place_customer_translation%> -->
           </div>
         </div>

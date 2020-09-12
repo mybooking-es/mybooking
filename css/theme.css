@@ -28738,25 +28738,16 @@ a.magic-button.btn {
   font-weight: 900;
   color: var(--product-detail-group-name); }
 
-.product-detail-separator {
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .product-detail-separator i {
-    color: var(--brand-primary); }
+.product-detail_separator i {
+  color: var(--brand-primary);
+  float: left;
+  margin-top: 5px; }
 
 .product-detail-summary-dates {
   background-color: var(--gray-50);
   margin-top: 30px;
   border-top: 1px solid var(--gray-300);
   border-bottom: 1px solid var(--gray-300);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 1rem; }
   .product-detail-summary-dates ul {
     list-style: none;
@@ -29017,7 +29008,8 @@ a.magic-button.btn {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 700;
-  padding: 10px 10px 0 10px;
+  padding-left: 10px;
+  padding-top: 10px;
   font-size: 0.8rem; }
 
 .reservation-summary_return_place {
@@ -29031,7 +29023,8 @@ a.magic-button.btn {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   font-weight: 300;
-  padding: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
   font-size: 0.8rem; }
 
 .reservation-summary_return_date {
@@ -29045,7 +29038,9 @@ a.magic-button.btn {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 0.8rem; }
 
 .overflow-ellipsis {
@@ -29063,7 +29058,8 @@ a.magic-button.btn {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  padding: 10px; }
+  padding: 10px;
+  margin-top: 10px; }
 
 .modify-button {
   height: 100%;
@@ -29082,8 +29078,7 @@ a.magic-button.btn {
   display: flex;
   width: 100%; }
   .sandwitch-wrapper .reservation-summary_pickup_place {
-    width: 65%;
-    padding: 10px 0 0 10px; }
+    width: 65%; }
   .sandwitch-wrapper .reservation-summary_return_place {
     color: var(--sticky-bar-color);
     display: -webkit-box;
@@ -29093,26 +29088,27 @@ a.magic-button.btn {
     font-size: 1rem;
     font-weight: 700;
     width: 65%;
-    padding: 0 0 10px 10px;
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    padding-left: 10px;
+    padding-top: 10px; }
   .sandwitch-wrapper .reservation-summary_pickup_date {
     width: 40%;
-    padding: 10px 10px 0 0;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end; }
+            justify-content: flex-end;
+    padding-right: 10px; }
   .sandwitch-wrapper .reservation-summary_return_date {
-    width: 40%;
-    padding: 0 10px 10px 0; }
+    width: 40%; }
 
 @media (min-width: 768px) {
   .modify-button {
-    font-size: 1rem; }
+    font-size: 1rem;
+    margin-top: 5px; }
   .reservation-summary-sticky {
     -webkit-box-pack: initial;
         -ms-flex-pack: initial;
             justify-content: initial;
-    padding: 10px 0; }
+    padding-bottom: 10px; }
   .modify-button-wrapper {
     margin: 0 10px 0 2rem;
     padding: 0;
@@ -29142,13 +29138,12 @@ a.magic-button.btn {
     width: -moz-fit-content;
     width: fit-content;
     max-width: 23%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     text-transform: uppercase;
     font-size: 1rem;
-    font-weight: 700;
-    padding: 0 10px; }
+    font-weight: 700; }
   .reservation-summary_return_place {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -29159,10 +29154,11 @@ a.magic-button.btn {
     min-width: -moz-fit-content;
     min-width: fit-content;
     width: auto;
-    padding: 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -29172,11 +29168,10 @@ a.magic-button.btn {
     min-width: -moz-fit-content;
     min-width: fit-content;
     width: auto;
-    padding: 0;
-    margin-right: 10px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    padding-left: 10px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -29184,13 +29179,12 @@ a.magic-button.btn {
   .sandwitch-wrapper {
     width: 40%; }
     .sandwitch-wrapper .reservation-summary_pickup_place {
-      padding: 0 10px;
       width: 60%;
       max-width: -webkit-fit-content;
       max-width: -moz-fit-content;
       max-width: fit-content; }
     .sandwitch-wrapper .reservation-summary_return_place {
-      padding: 0 10px;
+      padding-left: 10px;
       width: 60%;
       max-width: -webkit-fit-content;
       max-width: -moz-fit-content;
@@ -29198,12 +29192,10 @@ a.magic-button.btn {
       font-size: 1rem; }
     .sandwitch-wrapper .reservation-summary_pickup_date {
       width: auto;
-      padding: 0;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
     .sandwitch-wrapper .reservation-summary_return_date {
       width: auto;
-      padding: 0;
       text-align: left;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; } }
@@ -29228,7 +29220,8 @@ a.magic-button.btn {
   padding-left: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-top: 10px; }
 
 .complete-summary-price-wrapper {
   display: -webkit-box;
@@ -29289,7 +29282,8 @@ a.magic-button.btn {
     font-size: 1.3rem; }
   .complete-summary-row {
     border-top: none;
-    padding: 10px 0 0 10px; }
+    padding: 10px 0 0 10px;
+    margin-top: 0; }
   .complete-button {
     border-left: none;
     height: auto;
@@ -29323,7 +29317,8 @@ a.magic-button.btn {
       flex-wrap: wrap; }
 
 .rent-duration {
-  border-bottom: 1px solid #dee2e6; }
+  border-bottom: 1px solid #dee2e6;
+  color: var(--gray-500); }
 
 .product-view_image img {
   max-width: 100px; }
@@ -29337,6 +29332,9 @@ a.magic-button.btn {
   padding: 1rem;
   border-bottom: 1px solid #dee2e6; }
 
+.product-summary-wrapper :nth-child(2) {
+  margin-bottom: 0 !important; }
+
 .product-summary {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29348,10 +29346,7 @@ a.magic-button.btn {
 .product-summary_separator {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
+  display: flex; }
   .product-summary_separator i {
     -ms-flex-item-align: center;
         align-self: center;

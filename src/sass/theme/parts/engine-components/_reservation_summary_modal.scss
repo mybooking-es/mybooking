@@ -1,5 +1,4 @@
 // Reservation Summary
-
 .modal-body.summary-modal {
   padding: 0;
   line-height: 1;
@@ -19,9 +18,9 @@
   align-items: center;
   flex-wrap: wrap;
 }
-
 .rent-duration {
   border-bottom: 1px solid #dee2e6;
+  color: var(--gray-500);
 }
 .product-view_image {
   img {
@@ -38,6 +37,9 @@
   padding: 1rem;
   border-bottom: 1px solid #dee2e6;
 }
+.product-summary-wrapper :nth-child(2) {
+  margin-bottom: 0 !important;
+}
 .product-summary {
   display: flex;
   font-size: 13px;
@@ -46,7 +48,6 @@
 }
 .product-summary_separator {
   display: flex;
-  flex-grow: 1;
   i {
     align-self: center;
     color: var(--brand-primary);

@@ -18,14 +18,28 @@
     </small>
     <h3><%=booking.id%></h3>
     <div class="product-detail-summary-dates mb-3">
-      <ul>
-        <li><%=booking.date_from_full_format%> <%=booking.time_from%></li>
+      <ul> 
+        <li>
+          <div class="product-detail_separator">
+            <i class="fa fa-long-arrow-right mr-3"></i>
+          </div>
+          <%=booking.date_from_full_format%>
+          <% if (configuration.timeToFrom) { %><%=booking.time_from%><% } %>
+        </li>
+        <% if (configuration.pickupReturnPlace) { %>
         <li><%=booking.pickup_place_customer_translation%></li>
+        <% } %>
       </ul>
-      <div class="product-detail-separator d-none d-xl-block"><i class="fa fa-long-arrow-right"></i> </div>
       <ul>
-        <li><%=booking.date_to_full_format%> <%=booking.time_to%></li>
+        <div class="product-detail_separator">
+          <i class="fa fa-long-arrow-left mr-3"></i>
+        </div>
+        <li><%=booking.date_to_full_format%>
+        <% if (configuration.timeToFrom) { %><%=booking.time_to%><% } %>
+        </li>
+        <% if (configuration.pickupReturnPlace) { %>
         <li><%=booking.return_place_customer_translation%></li>
+        <% } %>
       </ul>
     </div>
     <!-- Products -->
