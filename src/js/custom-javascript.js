@@ -2,7 +2,7 @@
  *   MYBOOKING CUSTOM JS
  *   -------------------
  *
- *  @version 0.0.4
+ *   @version 0.0.4
  *   @package WordPress
  *   @subpackage Mybooking WordPress Theme
  *   @since Mybooking WordPress Theme 0.0.1
@@ -127,6 +127,17 @@ $(document).ready(function () {
 
 
 /*
+ *  PROMO POPUP
+ *  Very simple popup with cookie
+ */
+function promoClosed(){
+  document.cookie="promoclosed=1; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/",
+  document.getElementById( "PromotionsPopup" ).style.visibility="hidden"
+}
+document.cookie.indexOf( "promoclosed" ) < 0 && ( document.getElementById( "PromotionsPopup" ).style.visibility="visible" );
+
+
+/*
  *  COOKIES NOTICE
  *  Very simple and no-compilant-para-salir-del-paso script
  */
@@ -134,8 +145,7 @@ function acceptCookie(){
   document.cookie="cookieaccepted=1; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/",
   document.getElementById( "cookie-notice" ).style.visibility="hidden"
 }
-
-document.cookie.indexOf( "cookieaccepted" )<0&&( document.getElementById( "cookie-notice" ).style.visibility="visible" );
+document.cookie.indexOf( "cookieaccepted" ) < 0 && ( document.getElementById( "cookie-notice" ).style.visibility="visible" );
 
 
 /*
@@ -178,7 +188,7 @@ $(document).ready(function () {
 });
 
 
-/* 
+/*
     STICKY FOOTER
     Requirement: The footer must not have margin
 */
