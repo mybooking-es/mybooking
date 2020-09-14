@@ -14,7 +14,6 @@
   <% if (!configuration.pickupReturnPlace && !configuration.timeToFrom) { %>
 
   <div class="flex-form-group-wrapper">
-
       <div class="flex-form-group">
         <div class="flex-form-box mb-0">
           <label><?php echo _x( 'Pick-up date', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
