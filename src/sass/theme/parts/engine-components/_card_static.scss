@@ -15,6 +15,9 @@
     height: fit-content !important;
     min-height: 0;
   }
+  .card-static_image {
+    height: auto;
+  }
 }
 .cards-static-container:first-child {
   padding-top: 2rem;
@@ -89,11 +92,11 @@
     border-radius: 50px;
     background-color: transparent;
     border-color: var(--brand-primary);
-    color: var(--brand-primary)!important;
+    color: var(--brand-primary) !important;
     &:hover {
       background-color: var(--brand-primary-dark);
       border-color: var(--brand-primary-dark);
-      color: var(--white)!important;
+      color: var(--white) !important;
       cursor: pointer;
     }
   }
@@ -133,7 +136,11 @@
 .card-static_header-catalog {
   @extend .card-static_header;
   width: 100%;
+  h2.card-static_product-name {
+    max-width: 300px;
+  }
 }
+
 .card-static_price {
   width: 100px;
   text-align: right;

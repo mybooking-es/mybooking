@@ -1,5 +1,5 @@
 <script type="text/tmpl" id="form_activities_selector_tmpl">
-	<% if (configuration.selectActivityDestination) { %>
+  <% if (configuration.selectActivityDestination) { %>
 		<div class="form-group col-md-3">
 			<select name="destination_id" id="activity_selector_destination_id" class="form-control"
 							<?php if ( array_key_exists('destination_id', $args) && $args['destination_id'] != '') { ?>data-value="<?php echo $args['destination_id']?>"<?php } ?>>
