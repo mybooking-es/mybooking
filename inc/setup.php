@@ -105,7 +105,6 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		* Set up the WordPress Theme logo feature.
 		*
 		*/
-		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
 
 		/*
@@ -113,6 +112,15 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		*
 		*/
 		add_theme_support( 'responsive-embeds' );
+
+		/*
+		* Add support for Woocommerce
+		*
+		*/
+		add_action( 'after_setup_theme', 'woocommerce_support' );
+		function woocommerce_support() {
+		   add_theme_support( 'woocommerce' );
+		}
 
 		/*
 		* Gutenberg support
@@ -230,4 +238,3 @@ if ( ! function_exists( 'mybooking_custom_excerpt_more' ) ) {
 		return $more;
 	}
 }
-
