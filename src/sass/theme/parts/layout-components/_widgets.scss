@@ -2,7 +2,7 @@
 // Widgets
 //==============================================
 
-.home-widgets {
+.mybooking-widget {
 	margin-bottom: 2rem;
 }
 
@@ -71,27 +71,33 @@ figure.gallery-item {
 
 /* Search Widget */
 .search-form label {
-	width: 79%!important;
+	width: 100%!important;
 }
+
 .search-form input.search-field {
 	width: 100%!important;
-	border: 1px solid #ccc;
 	padding: 1rem;
+	border: 1px solid var(--form-control-border-color);
+  border-radius: var(--bootstrap-form-control-border-radius);
 }
+
 .search-form  input[type="submit" i] {
-	width: 20%!important;
+	width: 100%!important;
   border-style: none;
 }
+
 .search-form [type=submit]:not(:disabled) {
-	padding: 1rem;
+	padding: .5rem 1rem;
 	background-color: var(--btn-bg-color);
 	color: #FFF;
   border-color: var(--btn-border-color);
   letter-spacing: 1px;
   font-weight: var(--btn-font-w);
   text-transform: var(--btn-text-transform);
+  border-radius: var(--bootstrap-form-control-border-radius);
 }
-.search-form [type=submit]:hover {
+
+.search-form [type=submit]:not(:disabled):hover {
 	opacity: .5;
 }
 
@@ -109,6 +115,7 @@ select#cat {
 	background-color: #FFF;
 	color: #888;
 }
+
 .home-widgets ul {
 	list-style: none;
 	padding: 0;

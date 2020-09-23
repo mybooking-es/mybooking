@@ -4,7 +4,7 @@
 
     <script type="text/tmpl" id="script_one_time_selector">
 
-        <form name="select_date_form" id="select_date_form">
+      <form name="select_date_form" id="select_date_form">
           <input type="hidden" name="activity_id" id="activity_id" value="<%=activity.id%>"/>
 
             <% if (typeof activity.available !== 'undefined') { %>
@@ -32,7 +32,7 @@
 
     <script type="text/tmpl" id="script_multiple_dates_selector">
 
-        <h2 class="h5 mt-3 mb-3"><b><?php echo _x( 'Select date', 'activity_tickets_form_selector', 'mybooking-wp-plugin' ) ?></b></h2>
+      <h2 class="h5 mt-3 mb-3"><b><?php echo _x( 'Select date', 'activity_tickets_form_selector', 'mybooking-wp-plugin' ) ?></b></h2>
         <form name="select_date_form" id="select_date_form">
           <input type="hidden" name="activity_id" id="activity_id" value="<%=activity.id%>"/>
           <div class="form-group">
@@ -48,7 +48,7 @@
 
     <script type="text/tmpl" id="script_cyclic_calendar">
 
-        <h2 class="h5 mt-3 mb-3 text-muted"><b><?php echo _x( 'Select date', 'activity_tickets_form_selector', 'mybooking-wp-plugin' ) ?></b></h2>
+      <h2 class="h5 mt-3 mb-3 text-muted"><b><?php echo _x( 'Select date', 'activity_tickets_form_selector', 'mybooking-wp-plugin' ) ?></b></h2>
         <form name="select_date_form" id="select_date_form">
           <input type="hidden" name="activity_id" id="activity_id" value="<%=activity_id%>"/>
           <div id="datepicker"></div>
@@ -86,7 +86,7 @@
 
     <script type="text/tmpl" id="script_tickets">
 
-        <h2 class="h5 mt-5 mb-3 text-muted"><b><?php echo _x( 'People', 'activity_tickets_form_selector', 'mybooking-wp-plugin' ) ?></b></h2>
+      <h2 class="h5 mt-5 mb-3 text-muted"><b><?php echo _x( 'People', 'activity_tickets_form_selector', 'mybooking-wp-plugin' ) ?></b></h2>
 
         <% for (item in tickets) { %>
            <div class="form-group">
@@ -108,7 +108,7 @@
 
     <script type="text/tmpl" id="script_fixed_ticket">
 
-        <% if (Object.keys(tickets).length == 1) { %>
+      <% if (Object.keys(tickets).length == 1) { %>
           <!-- There is only one option, so hide it -->
           <% for (item in tickets) { %>
             <input type="hidden" name="quantity_rate_<%=item%>" class="quantity_rate" value="1"/>
@@ -130,4 +130,3 @@
         </div>  
 
     </script>
-

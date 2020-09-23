@@ -1,63 +1,69 @@
-<section>
-  <?php if ( $args['total'] == 0 ) { ?>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="alert alert-info">
-        <?php echo _x( 'No results found', 'activities_list', 'mybooking-wp-plugin' ) ?>
-      </div>
+<?php if ( $args['total'] == 0 ) { ?>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="alert alert-info">
+      <?php echo _x( 'No results found', 'activities_list', 'mybooking-wp-plugin' ) ?>
     </div>
   </div>
-  <?php } else { ?>
-  <!-- Products -->
-  <div class="row">
-    <?php foreach( $args['data']->data as $activity ) { ?>
-    <div class="col-lg-4">
-      <div class="activity-card card mb-2">
-        <?php if ( !empty( $activity->photo_url_full ) ) { ?>
-        <img class="activity-card-img card-img-top" src="<?php echo $activity->photo_url_full?>"
-          alt="<?php echo $activity->name?>">
-        <?php } else { ?>
-        <div class="text-center no-product-photo pt-3"><i class="fa fa-camera" aria-hidden="true"></i></div>
-        <?php } ?>
-        <div class="card-body d-flex flex-column justify-content-center">
-          <h3 class="h6 card-title activity-card-title"><?php echo $activity->name ?></h3>
-          <hr>
+</div>
+<?php } else { ?>
+<!-- Products -->
+<section class="cards-static-container fleet">
+  <?php foreach( $args['data']->data as $activity ) { ?>
+  <div class="card-static-wrapper">
+    <div class="card-static">
+      <?php if ( !empty( $activity->photo_url_full ) ) { ?>
+      <div class="card-static_image">
+        <img src="<?php echo $activity->photo_url_full?>" alt="<?php echo $activity->name?>">
+      </div>
+      <?php } else { ?>
+      <div class="text-center no-product-photo pt-3"><i class="fa fa-camera" aria-hidden="true"></i></div>
+      <?php } ?>
+      <div class="card-static_body">
+        <div class="card-static_header-catalog">
+          <h2 class="card-static_product-name "><?php echo $activity->name ?></h2>
           <?php if ($activity->address) { ?>
           <div class="text-center"><i class="fa fa-map-marker"
               aria-hidden="true"></i>&nbsp;<?php echo $activity->address->street ?>,
             <?php echo $activity->address->city ?> <?php echo $activity->address->zip ?></div>
           <?php } ?>
           <?php if ( $activity->use_rates ) { ?>
-          <p class="text-center">
-            <span class="text-muted"><?php echo _x( 'From', 'activities_list', 'mybooking-wp-plugin' ) ?></span>
-            <span class="h5 text-primary mt-10"> <strong><?php echo $activity->from_price_formatted ?></strong></span>
+          <p>
+            <span
+              class="text-muted"><small><?php echo _x( 'From', 'activities_list', 'mybooking-wp-plugin' ) ?></small></span>
+            <span class="h5 mt-10 color-brand-primary">
+              <strong><?php echo $activity->from_price_formatted ?></strong></span>
           </p>
           <?php } ?>
         </div>
-        <div class="card-body activity-more-information d-flex flex-column justify-content-center">
-          <?php if ( !empty( $activity->slug) ) {
-					  					$activityIdAnchor = $activity->slug;
-					  				} else {
-					  					$activityIdAnchor = $activity->id;
-					  				}
-					  		?>
+
+        <?php if ( !empty( $activity->slug) ) {
+                    $activityIdAnchor = $activity->slug;
+                  } else {
+                    $activityIdAnchor = $activity->id;
+                  }
+              ?>
+        <div class="card-static_btn mt-5">
           <a href="/<?php echo $args['url_detail']?>/<?php echo $activityIdAnchor?>"
-            class="btn btn-primary"><?php echo _x( 'More information', 'activities_list', 'mybooking-wp-plugin' ) ?></a>
+            class="button btn btn-choose-product"><?php echo _x( 'More information', 'activities_list', 'mybooking-wp-plugin' ) ?></a>
         </div>
       </div>
     </div>
-    <?php  } ?>
   </div>
+  <?php  } ?>
+</section>
+<div class="container">
   <div class="row">
-    <div class="col-lg-12">
-      <p class="text-right">
+    <div class="col">
+      <div class="alert alert-primary" role="alert" style="width: fit-content;">
         <?php printf( _nx( '<b>%d</b> result found', '<b>%d</b> results found', $args['total'], 'activity_shopping_cart', 'mybooking-wp-plugin' ), $args['total'] ) ?>
-      </p>
+      </div>
     </div>
   </div>
-
-  <!-- Pagination -->
-  <?php if ($args['total_pages'] > 1) { ?>
+</div>
+<!-- Pagination -->
+<?php if ($args['total_pages'] > 1) { ?>
+<div class="container">
   <div class="row">
     <div class="col-md-12">
       <nav aria-label="Page navigation example" class="pull-right">
@@ -88,7 +94,6 @@
       </nav>
     </div>
   </div>
-  <?php } ?>
-  <?php } ?>
-
-</section>
+</div>
+<?php } ?>
+<?php } ?>

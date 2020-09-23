@@ -204,7 +204,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 }
 
 /**
- * Mybooking sttings & functions
+ * Mybooking settings & functions
  *
  */
 

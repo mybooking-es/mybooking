@@ -58,7 +58,7 @@ textarea,
   line-height: 18px;
   color: var(--form-control-color);
   border: 1px solid var(--form-control-border-color);
-  border-radius: 0;
+  border-radius: var(--flex-form-control-border-radius);
   height: var(--form-control-height);
   box-shadow: none;
 }

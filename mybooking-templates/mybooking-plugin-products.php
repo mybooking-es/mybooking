@@ -16,7 +16,6 @@
             información</a>
         </div>
       </div>
-
     </div>
   </div>
   <?php  } ?>
