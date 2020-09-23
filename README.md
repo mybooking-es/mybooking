@@ -239,3 +239,5 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Fixed missing posts default-image
 - Unified all post related styles in the same document
 - Fixed issue with multiple word navigation items
+- Refactorized Contact template with Bootstrap markup and minimal classes
+- Added a common class to all widget containers

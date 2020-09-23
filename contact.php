@@ -4,7 +4,7 @@
 *   Template Name: MyBooking Contact
 *  	-----------------------------
 *
-* 	@version 0.0.1
+* 	@version 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -15,23 +15,32 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<section class="bg-contact">
+<div class="page_content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
 
-  <div class="contact-content">
-    <div class="contact-left">
+        <!-- Contact info -->
+        <?php get_template_part('mybooking-parts/contact/mybooking-contact-info') ?>
 
-      <!-- Contact info -->
-      <?php get_template_part('mybooking-parts/contact/mybooking-contact-info') ?>
+      </div>
+      <div class="col-md-6">
 
-      <!-- Map -->
-      <?php get_template_part('mybooking-parts/contact/mybooking-contact-map') ?>
+        <!-- Contact form -->
+        <?php get_template_part('mybooking-parts/contact/mybooking-contact-form') ?>
 
+      </div>
     </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12 embed-responsive embed-responsive-16by9">
 
-    <!-- Contact form -->
-    <?php get_template_part('mybooking-parts/contact/mybooking-contact-form') ?>
+        <!-- Contact map -->
+        <?php get_template_part('mybooking-parts/contact/mybooking-contact-map') ?>
 
+      </div>
+    </div>
   </div>
-</section>
+</div>
 
 <?php get_footer();

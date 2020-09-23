@@ -3,81 +3,73 @@
 *   CONTACT INFO PARTIAL
 *   --------------------
 *
-* 	@version 0.0.1
+* 	@version 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
 */
 ?>
 
-<div class="contact-left-info">
-  <div class="contact_details">
-    <div class="about">
+<div class="contact-info">
 
-      <?php $title_contact = MyBookingThemeSettings::getInstance()->get_theme_option("contact_section_title");
-        if ($title_contact !== '') { ?>
-          <h1><?php echo $title_contact ?></h1>
-        <?php }
-        else { ?>
-          <h4><?php _e("Contact", 'contact','mybooking'); ?></h4>
-      <?php } ?>
+  <?php $title_contact = MyBookingThemeSettings::getInstance()->get_theme_option("contact_section_title");
+    if ($title_contact !== '') { ?>
+      <h1><?php echo $title_contact ?></h1>
+    <?php }
+    else { ?>
+      <h2 class="entry-title"><?php _ex("Contact", 'contact','mybooking'); ?></h2>
+  <?php } ?>
 
-      <hr />
+  <hr />
 
-      <?php $subtitle_contact = MyBookingThemeSettings::getInstance()->get_theme_option("contact_section_subtitle");
-        if ($subtitle_contact !== '') { ?>
-          <h3><?php echo $subtitle_contact ?></h3>
-      <?php } ?>
+  <?php $subtitle_contact = MyBookingThemeSettings::getInstance()->get_theme_option("contact_section_subtitle");
+    if ($subtitle_contact !== '') { ?>
+      <h4><?php echo $subtitle_contact ?></h4>
+  <?php } ?>
 
-      <?php $company_text = MyBookingThemeSettings::getInstance()->get_theme_option("contact_section_text");
-        if ($company_text !== '') { ?>
-          <p><?php echo $company_text ?></p>
-      <?php } ?>
+  <?php $company_text = MyBookingThemeSettings::getInstance()->get_theme_option("contact_section_text");
+    if ($company_text !== '') { ?>
+      <p><?php echo $company_text ?></p>
+  <?php } ?>
 
-    </div>
+  <h5>
+    <i class="fa fa-map-marker" aria-hidden="true"></i>
+    <?php _ex("Address", 'contact', 'mybooking'); ?>
+  </h5>
 
-    <div class="info">
-      <h4 class="color-brand-primary">
-        <i class="fa fa-map-marker" aria-hidden="true"></i>
-        <?php _e("Address", 'contact', 'mybooking'); ?>
-      </h4>
+  <?php $company_adress =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_adress");
+    if ($company_adress !== '') { ?>
+      <p><?php echo $company_adress ?></p>
+  <?php } ?>
 
-      <?php $company_adress =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_adress");
-        if ($company_adress !== '') { ?>
-          <p><?php echo $company_adress ?></p>
-      <?php } ?>
+  <h5>
+    <i class="fa fa-phone" aria-hidden="true"></i>
+    <?php _e("Phone number", 'contact', 'mybooking'); ?>
+  </h5>
 
-      <h4 class="color-brand-primary">
-        <i class="fa fa-phone" aria-hidden="true"></i>
-        <?php _e("Phone number", 'contact', 'mybooking'); ?>
-      </h4>
-
-      <?php $company_phone =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_phone");
-            $company_chat =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_chat");
-        if ($company_phone !== '') { ?>
-          <p><?php echo $company_phone ?><br>
-        <?php }
-        if ($company_chat !== '') { ?>
-          <?php echo $company_chat ?></p>
-      <?php } ?>
+  <?php $company_phone =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_phone");
+        $company_chat =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_chat");
+    if ($company_phone !== '') { ?>
+      <p><?php echo $company_phone ?><br>
+    <?php }
+    if ($company_chat !== '') { ?>
+      <?php echo $company_chat ?></p>
+  <?php } ?>
 
 
-      <h4 class="color-brand-primary">
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <?php _e("E-mail address", 'contact', 'mybooking'); ?>
-      </h4>
+  <h5>
+    <i class="fa fa-envelope" aria-hidden="true"></i>
+    <?php _e("E-mail address", 'contact', 'mybooking'); ?>
+  </h5>
 
-      <?php $company_email =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_email");
-        if ($company_email !== '') { ?>
-          <p><?php echo $company_email ?></p>
-      <?php } ?>
-
-    </div>
-  </div>
+  <?php $company_email =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_email");
+    if ($company_email !== '') { ?>
+      <p><?php echo $company_email ?></p>
+  <?php } ?>
 
   <!-- Social links -->
 
-  <ul class="social-links mt50">
+  <ul class="contact-social social-links">
     <li class="social__item">
 
       <?php $company_twitter =  MyBookingThemeSettings::getInstance()->get_theme_option("company_info_twitter_url");

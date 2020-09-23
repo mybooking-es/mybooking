@@ -26553,80 +26553,20 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
     -webkit-transform: none !important;
             transform: none !important; } }
 
-.bg-contact {
-  background-image: url(../images/bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-color: var(--gray-50);
-  background-blend-mode: multiply;
-  padding: 30px; }
+.contact-info {
+  margin-bottom: 2rem; }
 
-.contact-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 auto;
-  width: calc(100% -60px);
-  color: #fff; }
-
-.contact-content hr {
-  width: 50px;
-  margin: auto 0 30px 0;
-  border-top: 1px dashed rgba(255, 255, 255, 0.2); }
-
-.contact-left {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  .contact-left iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 400px; }
-
-.contact-left-info {
-  width: 100%;
-  background-color: var(--gray-800);
-  padding: 20px 10% 20px 20px; }
-
-.contact-left-map,
-.contact-right {
-  width: 100%; }
-
-.contact-right {
-  margin-top: 30px; }
-
-.contact-form {
-  padding: 20px;
-  background-color: var(--gray-800); }
-
-.contact-form input,
-.contact-form form textarea {
-  width: 100%;
-  border: none;
-  margin-bottom: 2em; }
-
+/* We must to check if it's specific for Contact social icons
+or afects globaly and refactorize */
 ul.social-links,
 .social-links li {
   padding: 0; }
 
 .social-links li {
-  float: left;
-  margin-left: 20px;
+  display: inline-block;
   list-style: none;
-  font-size: 1.8em; }
-
-.social-links > li:first-child {
-  margin-left: 0; }
+  font-size: 1.8em;
+  margin-right: 1rem; }
 
 .social-links a {
   color: var(--brand-secondary);
@@ -26635,44 +26575,12 @@ ul.social-links,
   .social-links a:hover {
     color: var(--brand-secondary-light); }
 
-@media (max-width: 575.98px) {
-  .contact-left-map {
-    display: none; } }
-
-@media (min-width: 768px) {
-  .contact-left {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-  .contact-left-info {
-    width: 50%; }
-  .contact-left-map {
-    width: 50%; } }
-
-@media (min-width: 992px) {
-  .contact-content {
-    margin: 0 10%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content; } }
-
-@media (min-width: 1200px) {
-  .contact-content {
-    padding: 50px 0;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin: 0 10%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content; }
-  .contact-left {
-    width: 70%; }
-  .contact-right {
-    width: 30%;
-    margin-top: 0; } }
+.contact-form input,
+.contact-form form textarea {
+  width: 100%;
+  border: 1px solid var(--form-control-border-color);
+  border-radius: var(--bootstrap-form-control-border-radius);
+  margin-bottom: 2em; }
 
 .footer {
   overflow-x: hidden;
@@ -27506,7 +27414,7 @@ a.dropdown-item {
 .gallery br + br {
   display: none; }
 
-.home-widgets {
+.mybooking-widget {
   margin-bottom: 2rem; }
 
 /**
@@ -27566,27 +27474,29 @@ figure.gallery-item {
 
 /* Search Widget */
 .search-form label {
-  width: 79% !important; }
+  width: 100% !important; }
 
 .search-form input.search-field {
   width: 100% !important;
-  border: 1px solid #ccc;
-  padding: 1rem; }
+  padding: 1rem;
+  border: 1px solid var(--form-control-border-color);
+  border-radius: var(--bootstrap-form-control-border-radius); }
 
 .search-form input[type="submit" i] {
-  width: 20% !important;
+  width: 100% !important;
   border-style: none; }
 
 .search-form [type=submit]:not(:disabled) {
-  padding: 1rem;
+  padding: .5rem 1rem;
   background-color: var(--btn-bg-color);
   color: #FFF;
   border-color: var(--btn-border-color);
   letter-spacing: 1px;
   font-weight: var(--btn-font-w);
-  text-transform: var(--btn-text-transform); }
+  text-transform: var(--btn-text-transform);
+  border-radius: var(--bootstrap-form-control-border-radius); }
 
-.search-form [type=submit]:hover {
+.search-form [type=submit]:not(:disabled):hover {
   opacity: .5; }
 
 /* Calendar Widget */
