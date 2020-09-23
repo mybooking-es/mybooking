@@ -241,3 +241,4 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Fixed issue with multiple word navigation items
 - Refactorized Contact template with Bootstrap markup and minimal classes
 - Added a common class to all widget containers
+- Added Activities templates
