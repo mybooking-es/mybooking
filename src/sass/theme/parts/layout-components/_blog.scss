@@ -45,16 +45,24 @@
 *  SINGLE
 */
 
+// .post_header {
+//   height: 50vh;
+//   overflow: hidden;
+// }
+//
+// .post_header img {
+//   position: relative;
+//   bottom: 25vh; // Centers featured image on desktop
+//   object-fit: cover;
+//   z-index: -1;
+// }
+
 .post_header {
   height: 50vh;
   overflow: hidden;
-}
-
-.post_header img {
-  position: relative;
-  bottom: 25vh; // Centers featured image on desktop
-  object-fit: cover;
-  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .post_content {

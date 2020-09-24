@@ -3,7 +3,7 @@
 *		MYBOOKING PROMOTIONS POPUP
 *  	--------------------------
 *
-* 	@version 0.0.1
+* 	@version 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.9.2
@@ -32,14 +32,16 @@ foreach($popup_items as $popup_item) :
   ?>
 
 <div class="mybooking-popup_backdrop" id="PromotionsPopup">
-  <div class="mybooking-popup" tabindex="-1" role="dialog">
-    <?php $featured_img_url = get_the_post_thumbnail_url( $popup_item,'full' ); ?>
-    <div class="mybooking-popup_content" style="background-image: url(<?php echo esc_url( $featured_img_url ) ?>)">
-      <button type="button" class="close mybooking-popup_close" aria-label="Close" onclick="promoClosed();">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <div class="mybooking-popup_post">
-        <?php echo $popup_item->post_content; ?>
+  <div class="mybooking-popup_box">
+    <div class="mybooking-popup" tabindex="-1" role="dialog">
+      <?php $featured_img_url = get_the_post_thumbnail_url( $popup_item,'full' ); ?>
+      <div class="mybooking-popup_content" style="background-image: url(<?php echo esc_url( $featured_img_url ) ?>)">
+        <button type="button" class="close mybooking-popup_close" aria-label="Close" onclick="promoClosed();">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="mybooking-popup_post">
+          <?php echo $popup_item->post_content; ?>
+        </div>
       </div>
     </div>
   </div>

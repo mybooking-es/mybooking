@@ -3,7 +3,7 @@
 *		SINGLE POST PARTIAL
 *  	-------------------
 *
-* 	@version 0.0.2
+* 	@version 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.2
@@ -22,15 +22,12 @@ defined( 'ABSPATH' ) || exit;
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<?php if ( has_post_thumbnail( $post->ID ) ) { ?>
 
-		<div class="post_header">
-			<?php the_post_thumbnail(); ?>
-		</div>
+		<?php $featured_img_url = get_the_post_thumbnail_url( $post->ID,'full' ); ?>
+		<div class="post_header" style="background-image:url('<?php echo esc_url( $featured_img_url ) ?>')"></div>
 
 	<?php } else { ?>
 
-		<div class="post_header">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/default-image.png">
-		</div>
+		<div class="post_header" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/images/default-image.png')"></div>
 
 	<?php } ?>
 

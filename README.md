@@ -225,20 +225,27 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Spanish translation update
 
 ### 0.9.9
+##### Added
 - Added activities templates
-- Fixed Testimonial white margin on mobile devices
-- Fixed selector date input overflow
-- Fixed selector rendering in Mybooking Pages template
+- Promotions Popup
+- Added a common class to all widget containers
+- Added Activities templates
+
+##### Updated
 - Realigned default footer elements
 - Woo products now match card styles on choose step
 - Minor style adjustements on woo product details
-- Arranged some Woocommerce minor errors
-- Refactorized and fixed Mybooking Pages template, and now is Mybooking Landing
 - Now blog page has two columns and right sidebar
 - Added header based on featured image to single posts
-- Fixed missing posts default-image
 - Unified all post related styles in the same document
-- Fixed issue with multiple word navigation items
 - Refactorized Contact template with Bootstrap markup and minimal classes
-- Added a common class to all widget containers
-- Added Activities templates
+- Fixed blog post header image centering
+
+##### Fixed
+- Fixed Testimonial white margin on mobile devices
+- Fixed selector date input overflow
+- Fixed selector rendering in Mybooking Pages template
+- Arranged some Woocommerce minor errors
+- Refactorized and fixed Mybooking Pages template, and now is Mybooking Landing
+- Fixed missing posts default-image
+- Fixed issue with multiple word navigation items

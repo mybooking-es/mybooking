@@ -25604,7 +25604,7 @@ select:disabled {
 *   GUTENBERG SUPPORT
 *   -----------------
 *
-* 	@version 0.0.1
+* 	@version 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.9.6
@@ -25688,7 +25688,7 @@ select:disabled {
 *
 */
 .wp-block-buttons {
-  margin-bottom: 3rem; }
+  margin: 0; }
 
 .wp-block-button__link {
   border-radius: 0;
@@ -25703,7 +25703,7 @@ select:disabled {
   text-decoration: none; }
 
 .wp-block-button__link:not(.has-text-color) {
-  color: white; }
+  color: white !important; }
 
 .wp-block-button__link:not(.has-background) {
   background-color: var(--btn-bg-color); }
@@ -26685,14 +26685,10 @@ ul.social-links,
 */
 .post_header {
   height: 50vh;
-  overflow: hidden; }
-
-.post_header img {
-  position: relative;
-  bottom: 25vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -1; }
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
 
 .post_content {
   background-color: #fff;
@@ -29466,20 +29462,58 @@ ul.summary-modal_prices {
   background-color: #4499ee !important;
   color: white !important; }
 
+/**
+*   PROMOTION POPUP
+*   ---------------
+*
+* 	@version 0.0.1
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.9.9
+*/
+.mybooking-popup_backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: table;
+  z-index: 100; }
+
+.mybooking-popup_box {
+  width: 100vw;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle; }
+
+.mybooking-popup {
+  width: 90vw;
+  height: 90vh;
+  overflow: auto;
+  border-radius: 3px;
+  margin: 0 auto; }
+
+@media (min-width: 992px) {
+  .mybooking-popup {
+    width: 50vw;
+    height: 50vh; } }
+
+.mybooking-popup_content {
+  position: relative;
+  padding: 2rem;
+  border: none;
+  border-radius: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #FFF; }
+
 button.mybooking-popup_close {
   display: inline-block;
   position: absolute;
   top: 15px;
   right: 15px;
   z-index: 45; }
-
-.mybooking-popup_content {
-  padding: 1rem;
-  border: none;
-  border-radius: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; }
 
 .full-height {
   height: 100%; }
