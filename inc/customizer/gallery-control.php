@@ -56,13 +56,13 @@ class CustomizeGalleryControl extends WP_Customize_Control {
 		parent::__construct( $manager, $id, $args );
 
 		$this->button_labels = wp_parse_args( $this->button_labels, array(
-			'select'       => __( 'Select Images', 'customize-image-gallery-control' ),
-			'change'       => __( 'Modify Gallery', 'customize-image-gallery-control' ),
-			'default'      => __( 'Default', 'customize-image-gallery-control' ),
-			'remove'       => __( 'Remove', 'customize-image-gallery-control' ),
-			'placeholder'  => __( 'No images selected', 'customize-image-gallery-control' ),
-			'frame_title'  => __( 'Select Gallery Images', 'customize-image-gallery-control' ),
-			'frame_button' => __( 'Choose Images', 'customize-image-gallery-control' ),
+			'select'       => _x( 'Select Images', 'customize-image-gallery-control', 'mybooking' ),
+			'change'       => _x( 'Modify Gallery', 'customize-image-gallery-control', 'mybooking' ),
+			'default'      => _x( 'Default', 'customize-image-gallery-control', 'mybooking' ),
+			'remove'       => _x( 'Remove', 'customize-image-gallery-control', 'mybooking' ),
+			'placeholder'  => _x( 'No images selected', 'customize-image-gallery-control', 'mybooking' ),
+			'frame_title'  => _x( 'Select Gallery Images', 'customize-image-gallery-control', 'mybooking' ),
+			'frame_button' => _x( 'Choose Images', 'customize-image-gallery-control', 'mybooking' ),
 		) );
 	}
 

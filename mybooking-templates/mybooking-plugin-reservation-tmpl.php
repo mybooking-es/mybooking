@@ -94,7 +94,7 @@
                   <?php echo _x( 'day(s)', 'renting_my_reservation', 'mybooking-wp-plugin' ) ?></span></p>
             <% } else if (booking.hours > 0) { %>
               <p class="detail-text"><?php echo _x( 'Rental duration', 'renting_my_reservation', 'mybooking-wp-plugin' ) ?>: <span><%=booking.hours%>
-                  <?php _e('hour(s)', 'renting_my_reservation', 'mybooking-wp-plugin') ?></span></p>
+                  <?php echo _x('hour(s)', 'renting_my_reservation', 'mybooking-wp-plugin') ?></span></p>
             <% } %>
           <% } %>
         </div>

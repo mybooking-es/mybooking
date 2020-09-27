@@ -376,8 +376,8 @@ class MyBookingCustomizer {
 
 			$wp_customize->add_panel( 'mybooking_settings_panel',
 			   array(
-			      'title' => __( 'Mybooking Theme' ),
-			      'description' => esc_html__( 'Customise your installation of Mybooking', 'customizer_panel', 'mybooking' ),
+			      'title' => _x( 'Mybooking Theme', 'customizer_panel', 'mybooking' ),
+			      'description' => _x( 'Customise your installation of Mybooking', 'customizer_panel', 'mybooking' ),
 			      'priority' => 10,
 			   )
 			);
@@ -408,7 +408,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_primary' , array(
 			    'default'   => '#2193F2',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -422,7 +423,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_primary_light' , array(
 			    'default'   => '#6EC3FF',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -435,7 +437,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_primary_dark' , array(
 			    'default'   => '#0066BF',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -450,7 +453,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_secondary' , array(
 			    'default'   => '#424242',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -463,7 +467,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_secondary_light' , array(
 			    'default'   => '#6D6D6D',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -476,7 +481,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_brand_secondary_dark' , array(
 			    'default'   => '#1B1B1B',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -492,7 +498,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_body_bg' , array(
 			    'default'   => '#ffffff',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -507,7 +514,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_body_color' , array(
         'default'   => '#212121',
-        'transport' => 'refresh'
+        'transport' => 'refresh',
+        'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -521,8 +529,9 @@ class MyBookingCustomizer {
 
       // Setting
       $wp_customize->add_setting( 'mybooking_headers_color' , array(
-      'default' => '#2193F2',
-      'transport' => 'refresh'
+	      'default' => '#2193F2',
+	      'transport' => 'refresh',
+	      'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
       ) );
 
       // Control
@@ -539,7 +548,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_bg' , array(
 			    'default'   => '#ffffff',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -556,7 +566,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_link_color' , array(
 			    'default'   => '#000000',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -572,7 +583,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_link_hover_color' , array(
 			    'default'   => '#1e73be',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -588,7 +600,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_link_active' , array(
 			    'default'   => '#1e73be',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -605,7 +618,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_dropdown_item_color' , array(
 			    'default'   => '#212121',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -621,7 +635,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_dropdown_item_active_color' , array(
 			    'default'   => '#424242',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -637,7 +652,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_link_collapse' , array(
 			    'default'   => '#212121',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -653,7 +669,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_navbar_toggler_icon' , array(
 			    'default'   => '#212121',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -669,7 +686,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_footer_bg' , array(
 			    'default'   => '#FAFAFA',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -685,7 +703,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_footer_color' , array(
 			    'default'   => '#212121',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -701,7 +720,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_footer_link_color' , array(
 			    'default'   => '#424242',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -717,7 +737,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_footer_link_hover_color' , array(
 			    'default'   => '#2193F2',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -778,7 +799,8 @@ class MyBookingCustomizer {
 				$wp_customize->add_setting( 'mybooking_font_body',
 	          array(
 	          	'transport' => 'refresh',
-	            'type' => 'theme_mod'
+	            'type' => 'theme_mod',
+	            'sanitize_callback' => 'sanitize_text_field'
 	          )
 	      );
 
@@ -797,7 +819,8 @@ class MyBookingCustomizer {
 				$wp_customize->add_setting( 'mybooking_font_heading',
 	          array(
 	          	'transport' => 'refresh',
-	            'type' => 'theme_mod'
+	            'type' => 'theme_mod',
+	            'sanitize_callback' => 'sanitize_text_field'
 	          )
 	      );
 
@@ -873,45 +896,6 @@ class MyBookingCustomizer {
 				)
 			);
 
-			// NOT STILL IMPLEMENTED
-
-			// Sidebar position
-			// $wp_customize->add_setting(
-			// 	'mybooking_sidebar_position',
-			// 	array(
-			// 		'default'           => 'right',
-			// 		'type'              => 'theme_mod',
-			// 		'sanitize_callback' => 'sanitize_text_field',
-			// 		'capability'        => 'edit_theme_options',
-			// 	)
-			// );
-			//
-			// $wp_customize->add_control(
-			// 	new WP_Customize_Control(
-			// 		$wp_customize,
-			// 		'mybooking_sidebar_position',
-			// 		array(
-			// 			'label'             => _x( 'Sidebar Positioning', 'customizer', 'mybooking' ),
-			// 			'description'       => _x(
-			// 				'Set sidebar\'s default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.',
-			// 				'customizer',
-			// 				'mybooking'
-			// 			),
-			// 			'section'           => 'mybooking_theme_layout_options',
-			// 			'settings'          => 'mybooking_sidebar_position',
-			// 			'type'              => 'select',
-			// 			'sanitize_callback' => array( $this, 'slug_sanitize_select'),
-			// 			'choices'           => array(
-			// 				'right' => _x( 'Right sidebar', 'customizer_layout', 'mybooking' ),
-			// 				'left'  => _x( 'Left sidebar', 'customizer_layout', 'mybooking' ),
-			// 				'both'  => _x( 'Left & Right sidebars', 'customizer_layout', 'mybooking' ),
-			// 				'none'  => _x( 'No sidebar', 'customizer_layout', 'mybooking' ),
-			// 			),
-			// 			'priority' => '20',
-			// 		)
-			// 	)
-			// );
-
     }
 
 
@@ -939,7 +923,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_global_topbar' , array(
 			    'default'   => '1',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 			) );
 
 			$wp_customize->add_control( 'mybooking_global_topbar',
@@ -962,7 +947,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_home_topbar_bg' , array(
 			    'default'   => '#2193F2',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -979,7 +965,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_topbar_bg' , array(
 			    'default'   => '#2193F2',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -995,7 +982,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_topbar_color' , array(
 			    'default'   => '#FFFFFF',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -1010,7 +998,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_topbar_link_color' , array(
 			    'default'   => '#FAFAFA',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -1025,7 +1014,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_topbar_link_hover_color' , array(
 			    'default'   => '#fafafa',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -1040,7 +1030,8 @@ class MyBookingCustomizer {
 			$wp_customize->add_setting( 'mybooking_global_topbar_message',
 				 array(
 						'default' => '',
-						'transport' => 'postMessage'
+						'transport' => 'postMessage',
+						'sanitize_callback' => 'wp_kses_post'
 				 )
 			);
 
@@ -1068,7 +1059,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_topbar_message_bg' , array(
 					'default'   => '#FFB74D',
-					'transport' => 'refresh'
+					'transport' => 'refresh',
+          'sanitize_callback' => array( $this, 'slug_sanitize_rgba')					
 			) );
 
 			// Control
@@ -1084,7 +1076,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_topbar_message_text' , array(
 					'default'   => '#212121',
-					'transport' => 'refresh'
+					'transport' => 'refresh',
+          'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -1099,7 +1092,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_topbar_message_link' , array(
 					'default'   => '#FAFAFA',
-					'transport' => 'refresh'
+					'transport' => 'refresh',
+          'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -1114,7 +1108,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_topbar_message_link_hover' , array(
 					'default'   => '#FAFAFA',
-					'transport' => 'refresh'
+					'transport' => 'refresh',
+          'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -1152,7 +1147,8 @@ class MyBookingCustomizer {
 			// Integration
 			$wp_customize->add_setting( 'mybooking_home_navbar_integrated' , array(
 			    'default'   => '1',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+          'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')			    
 			) );
 
 			$wp_customize->add_control( 'mybooking_home_navbar_integrated',
@@ -1173,6 +1169,7 @@ class MyBookingCustomizer {
 			   array(
 			      'default' => '0',
 			      'transport' => 'refresh',
+            'sanitize_callback' => array( $this, 'slug_sanitize_radio')	
 			   )
 			);
 
@@ -1218,7 +1215,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_home_header_visibility' , array(
 			    'default'   => '1',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 			) );
 
 			// Control
@@ -1238,6 +1236,7 @@ class MyBookingCustomizer {
 			   array(
 			      'default' => '0',
 			      'transport' => 'refresh',
+			      'sanitize_callback' => array( $this, 'slug_sanitize_radio')
 			   )
 			);
 
@@ -1261,7 +1260,8 @@ class MyBookingCustomizer {
 	    $wp_customize->add_setting(
 	        'mybooking_home_header_image_bg',
 	        array(
-	            'transport' => 'refresh'
+	            'transport' => 'refresh',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 
@@ -1282,7 +1282,8 @@ class MyBookingCustomizer {
 	    $wp_customize->add_setting(
 	        'mybooking_home_header_video_bg',
 	        array(
-	            'transport' => 'refresh'
+	            'transport' => 'refresh',
+	            'sanitize_callback' => 'esc_url_raw'
 	        )
 	    );
 
@@ -1326,6 +1327,7 @@ class MyBookingCustomizer {
 			   array(
 			      'default' => '0',
 			      'transport' => 'refresh',
+			      'sanitize_callback' => array( $this, 'slug_sanitize_radio')
 			   )
 			);
 
@@ -1353,7 +1355,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_header_widget_title_color' , array(
 			    'default'   => '#ffffff',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -1369,7 +1372,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_header_widget_text_color' , array(
 			    'default'   => '#ffffff',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -1385,7 +1389,8 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_header_widget_link_color' , array(
 			    'default'   => '#ffffff',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -1490,6 +1495,7 @@ class MyBookingCustomizer {
 			   array(
 			      'default' => '0',
 			      'transport' => 'refresh',
+			      'sanitize_callback' => array( $this, 'slug_sanitize_radio')
 			   )
 			);
 
@@ -1538,7 +1544,8 @@ class MyBookingCustomizer {
 	 				// Setting
 	 				$wp_customize->add_setting( 'mybooking_home_selector_background' , array(
 	 						'default'   => '#FFFFFF60',
-	 						'transport' => 'refresh'
+	 						'transport' => 'refresh',
+	 						'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 	 				) );
 
 	 				// Control
@@ -1556,7 +1563,8 @@ class MyBookingCustomizer {
 	 				// Setting
 	 				$wp_customize->add_setting( 'mybooking_home_selector_labels' , array(
 	 						'default'   => '#212121',
-	 						'transport' => 'refresh'
+	 						'transport' => 'refresh',
+	 						'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 	 				) );
 
 	 				// Control
@@ -1573,7 +1581,8 @@ class MyBookingCustomizer {
 	 				// Setting
 	 				$wp_customize->add_setting( 'mybooking_sticky_selector_background' , array(
 	 						'default'   => '#2193F2',
-	 						'transport' => 'refresh'
+	 						'transport' => 'refresh',
+	 						'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 	 				) );
 
 	 				// Control
@@ -1590,7 +1599,8 @@ class MyBookingCustomizer {
 	 				// Setting
 	 				$wp_customize->add_setting( 'mybooking_sticky_selector_labels' , array(
 	 						'default'   => '#FFFFFF',
-	 						'transport' => 'refresh'
+	 						'transport' => 'refresh',
+	 						'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 	 				) );
 
 	 				// Control
@@ -1625,6 +1635,7 @@ class MyBookingCustomizer {
 					'default'           => '1',
 					'type'              => 'theme_mod',
 					'capability'        => 'edit_theme_options',
+					'sanitize_callback' => array( $this, 'slug_sanitize_select')
 				)
 			);
 
@@ -1651,14 +1662,14 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_home_content_visibility' , array(
 			    'default'   => '1',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+					'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 			) );
 
 			// Control
 			$wp_customize->add_control( 'mybooking_home_content_visibility',
 			   array(
 			      'label' => _x( 'Activate deafult content area', 'customizer_home', 'mybooking' ),
-
 			      'section'  => 'static_front_page',
 			      'type'=> 'checkbox',
 			      'capability' => 'edit_theme_options',
@@ -1675,6 +1686,7 @@ class MyBookingCustomizer {
 					'default'           => '2',
 					'type'              => 'theme_mod',
 					'capability'        => 'edit_theme_options',
+					'sanitize_callback' => array( $this, 'slug_sanitize_select')
 				)
 			);
 
@@ -1683,7 +1695,6 @@ class MyBookingCustomizer {
 				array(
 					'label'       => _x( 'Widgets area', 'customizer_home', 'mybooking' ),
 					'description' => _x( 'Get control of Widgets section position and visibility. Shows three widget areas called Home Content 1, 2 and 3', 'customizer_home', 'mybooking' ),
-
 					'section'     => 'static_front_page',
 					'settings'    => 'mybooking_home_content_widgets_position',
 					'type'        => 'select',
@@ -1701,14 +1712,14 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_home_content_widgets_visibility' , array(
 			    'default'   => '1',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 			) );
 
 			// Control
 			$wp_customize->add_control( 'mybooking_home_content_widgets_visibility',
 			   array(
 			      'label' => _x( 'Activate content widgets', 'customizer_home', 'mybooking' ),
-
 			      'section'  => 'static_front_page',
 			      'priority' => 10,
 			      'type'=> 'checkbox',
@@ -1726,6 +1737,7 @@ class MyBookingCustomizer {
 					'default'           => '3',
 					'type'              => 'theme_mod',
 					'capability'        => 'edit_theme_options',
+					'sanitize_callback' => array( $this, 'slug_sanitize_select')
 				)
 			);
 
@@ -1734,7 +1746,6 @@ class MyBookingCustomizer {
 				array(
 					'label'       => _x( 'News area', 'customizer_home', 'mybooking' ),
 					'description' => _x( 'Get control of News section position and visibility. Shows last three posts of Home Page category', 'customizer_home', 'mybooking' ),
-
 					'section'     => 'static_front_page',
 					'settings'    => 'mybooking_home_news_position',
 					'type'        => 'select',
@@ -1752,14 +1763,14 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_home_news_visibility' , array(
 			    'default'   => '1',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 			) );
 
 			// Content
 			$wp_customize->add_control( 'mybooking_home_news_visibility',
 			   array(
 			      'label' => _x( 'Activate news', 'customizer_home', 'mybooking' ),
-
 			      'section'  => 'static_front_page',
 			      'type'=> 'checkbox',
 			      'capability' => 'edit_theme_options',
@@ -1776,6 +1787,7 @@ class MyBookingCustomizer {
 					'default'           => '4',
 					'type'              => 'theme_mod',
 					'capability'        => 'edit_theme_options',
+					'sanitize_callback' => array( $this, 'slug_sanitize_select')
 				)
 			);
 
@@ -1784,7 +1796,6 @@ class MyBookingCustomizer {
 				array(
 					'label'       => _x( 'Testimonials area', 'customizer_home', 'mybooking' ),
 					'description' => _x( 'Get control of Testimonials section position and visibility (also the enables Testimonials post type)', 'customizer_home', 'mybooking' ),
-
 					'section'     => 'static_front_page',
 					'settings'    => 'mybooking_home_testimonial_carousel_position',
 					'type'        => 'select',
@@ -1802,14 +1813,14 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_home_testimonial_carousel_visibility' , array(
 			    'default'   => '1',
-			    'transport' => 'refresh'
+			    'transport' => 'refresh',
+			    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 			) );
 
 			// Control
 			$wp_customize->add_control( 'mybooking_home_testimonial_carousel_visibility',
 			   array(
 			      'label' => _x( 'Activate testimonials', 'customizer_home', 'mybooking' ),
-
 			      'section'  => 'static_front_page',
 			      'type'=> 'checkbox',
 			      'capability' => 'edit_theme_options',
@@ -1835,7 +1846,8 @@ class MyBookingCustomizer {
 
 	 			$wp_customize->add_setting( 'mybooking_logo_height' , array(
 	 			    'default'   => '40',
-	 			    'transport' => 'refresh'
+	 			    'transport' => 'refresh',
+	 			    'sanitize_callback' => 'absint'
 	 			) );
 
 	 			// Control
@@ -1858,7 +1870,25 @@ class MyBookingCustomizer {
 		 }
 
 
-    // -----------
+    // ----------- Sanitize
+
+		/**
+		 * Radio Button sanitization function
+		 *
+		 * @param $checked Slug to sanitize
+		 */
+    function slug_sanitize_radio( $input, $setting ){
+      
+        //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+        $input = sanitize_key($input);
+
+        //get the list of possible radio box options 
+        $choices = $setting->manager->get_control( $setting->id )->choices;
+                          
+        //return input if valid or return default option
+        return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+          
+    }
 
 		/**
 		 * Checkbox sanitization function
@@ -1890,6 +1920,27 @@ class MyBookingCustomizer {
 			return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 
 		}
+
+    /**
+     * RGBA color sanitization function
+     */
+		function slug_sanitize_rgba( $color ) {
+		    if ( empty( $color ) || is_array( $color ) )
+		        return 'rgba(0,0,0,0)';
+
+		    // If string does not start with 'rgba', then treat as hex
+		    // sanitize the hex color and finally convert hex to rgba
+		    if ( false === strpos( $color, 'rgba' ) ) {
+		        return sanitize_hex_color( $color );
+		    }
+
+		    // By now we know the string is formatted as an rgba color so we need to further sanitize it.
+		    $color = str_replace( ' ', '', $color );
+		    sscanf( $color, 'rgba(%d,%d,%d,%f)', $red, $green, $blue, $alpha );
+		    return 'rgba('.$red.','.$green.','.$blue.','.$alpha.')';
+		}
+
+		// ------------ Other callbacks
 
 		function booking_forms_active_callback() {
 

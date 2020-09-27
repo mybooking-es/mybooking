@@ -53,17 +53,13 @@ class Font_Selector extends WP_Customize_Control {
 
 			<select class="typography-select" <?php $this->link(); ?>>
 				<option value="" 
-				<?php
-				if ( ! $this_val ) {
-					echo 'selected="selected"';}
-?>
-><?php esc_html_e( 'Default', 'your-textdomain' ); ?></option>
+				<?php	if ( ! $this_val ) { echo 'selected="selected"'; } ?>><?php echo _x( 'Default', 'customize_font_selector', 'mybooking' ); ?></option>
 				<?php
 				// Get Standard font options
 				$std_fonts = font_selector_get_standard_fonts();
 				if ( ! empty( $std_fonts ) ) {
 				?>
-					<optgroup label="<?php esc_html_e( 'Standard Fonts', 'your-textdomain' ); ?>">
+					<optgroup label="<?php echo _x( 'Standard Fonts', 'customize_font_selector', 'mybooking' ); ?>">
 						<?php
 						// Loop through font options and add to select
 						foreach ( $std_fonts as $font ) {
@@ -78,7 +74,7 @@ class Font_Selector extends WP_Customize_Control {
 				$google_fonts = font_selector_get_google_fonts_array();
 				if ( ! empty( $google_fonts ) ) {
 				?>
-					<optgroup label="<?php esc_html_e( 'Google Fonts', 'your-textdomain' ); ?>">
+					<optgroup label="<?php echo _x( 'Google Fonts', 'customize_font_selector', 'mybooking' ); ?>">
 						<?php
 						// Loop through font options and add to select
 						foreach ( $google_fonts as $font ) {
