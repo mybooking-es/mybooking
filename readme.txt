@@ -1,7 +1,7 @@
 === MyBooking Theme ===
 Contributors: juanmiqueo, hectorasencio, marcelreig
 Donate link: https://mybooking.es/
-Tags: reservation, mybooking, bootstrap, woocommerce, gutenberg
+Tags: e-commerce
 Requires at least: 5.2
 Tested up to: 5.5.1
 Stable tag: trunk

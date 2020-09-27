@@ -58,7 +58,8 @@ gulp.task("sass", function () {
     )
     .pipe(sass({ errLogToConsole: true }))
     .pipe(autoprefixer("last 2 versions"))
-    .pipe(sourcemaps.write("./"))
+    // NOTE: Wordpress Theme can not contain .map
+    //.pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(paths.css));
   return stream;
 });
@@ -80,7 +81,8 @@ gulp.task("minifycss", function () {
       })
     )
     .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemaps.write("./"))
+    // NOTE: Wordpress Theme can not contain .map
+    //.pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(paths.css));
 });
 
