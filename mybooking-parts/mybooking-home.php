@@ -3,7 +3,7 @@
 *   Template Name: MyBooking Home
 *  	-----------------------------
 *
-* 	@version 0.0.5
+* 	@version 0.0.6
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -31,6 +31,9 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- Mybooking Testimonials Module -->
 <?php get_template_part( 'mybooking-parts/home/mybooking-home-testimonials' ); ?>
+
+<!-- MyBooking Popup -->
+<?php get_template_part( 'mybooking-templates/mybooking-plugin-promotions-popup' ); ?>
 
 <!-- END MYBOOKING PARTIALS -->
 

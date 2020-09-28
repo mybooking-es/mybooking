@@ -4,7 +4,7 @@
 *  	------
 * 	Contains the closing of the #content div and all content after
 *
-*		@version 0.0.7
+*		@version 0.0.8
 *  	@package WordPress
 *  	@subpackage Mybooking WordPress Theme
 *  	@since Mybooking WordPress Theme 0.0.1
@@ -29,23 +29,6 @@ if ( $footer_layout == 0 ) { ?>
 
 <?php get_template_part( 'mybooking-parts/site/mybooking-google-analytics' ) ?>
 <?php wp_footer(); ?>
-
-<?php
-	/**
-	*		Promotions modal loader
-	*  	-----------------------
-	* 	locate_template() returns path to file.
-	* 	if either the child theme or the parent theme have overridden the template.
-	* 	If neither the child nor parent theme have overridden the template,
-	* 	we load the template from the 'templates' sub-directory of the directory this file is in.
-	*/
-
-	if ( $overridden_template = locate_template( 'mybooking-plugin-promotions-popup.php' ) ) {
-		load_template( $overridden_template );
-	} else {
-		load_template( dirname( __FILE__ ) . '/mybooking-templates/mybooking-plugin-promotions-popup.php' );
-	}
- ?>
 
 <!-- Back top link -->
 <a href="#0" class="cd-top">Top</a>

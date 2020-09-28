@@ -27226,9 +27226,6 @@ a.dropdown-item {
     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); } }
 
-/*
-* MYBOOKING TESTIMONIALS
-*************************************/
 .mybooking-home_testimonials {
   max-width: 100vw;
   overflow-x: hidden; }
@@ -27327,7 +27324,7 @@ a.dropdown-item {
         -ms-flex-direction: row;
             flex-direction: row; }
   .testimonial-item_content {
-    margin-left: 25px;
+    margin-left: 2.5rem;
     width: 80%;
     padding: 0;
     text-align: left; }
@@ -29496,7 +29493,7 @@ ul.summary-modal_prices {
 @media (min-width: 992px) {
   .mybooking-popup {
     width: 50vw;
-    height: 50vh; } }
+    height: auto; } }
 
 .mybooking-popup_content {
   position: relative;

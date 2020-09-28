@@ -225,6 +225,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Spanish translation update
 
 ### 0.9.9
+
 ##### Added
 - Added activities templates
 - Promotions Popup
@@ -249,3 +250,9 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Refactorized and fixed Mybooking Pages template, and now is Mybooking Landing
 - Fixed missing posts default-image
 - Fixed issue with multiple word navigation items
+
+### 1.0.0
+
+#### Fixed
+- Testimonials quotes alignment
+- Moved theme settings under Appearance menu

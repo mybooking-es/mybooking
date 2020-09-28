@@ -1,4 +1,17 @@
 <?php
+/**
+*		SETTINGS PAGE
+*  	-------------
+*
+* 	@version 0.0.6
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.0.1
+*
+*   0.0.6
+*   - Deleted the function that creates top-level menu, in order to move settings under Appearance
+*/
+
   class MyBookingThemeSettings {
 
 		// Hold the class instance.
@@ -11,7 +24,7 @@
 	  // to prevent initiation with outer code.
 	  private function __construct()
 	  {
-	    	$this->wp_init();
+	    $this->wp_init();
 	  }
 
 	  // The object is created from within the class itself
@@ -22,28 +35,26 @@
 	    {
 	      self::$instance = new MyBookingThemeSettings();
 	    }
-
 	    return self::$instance;
 	  }
 
 	  /**
 	   * Initialize
 	   */
-    private function wp_init() {
-
+    private function wp_init()
+    {
 			// Create menu in settings
 			add_action( 'admin_menu', array($this,'wp_settings_page'));
-
 			// Initialize settings
 			add_action( 'admin_init', array($this,'wp_settings_init'));
-
     }
 
     // == Theme settings
 
-    public function get_theme_options() {
-
-	  	if ( $this->theme_options == null ) {
+    public function get_theme_options()
+    {
+	  	if ( $this->theme_options == null )
+      {
 		  	$this->theme_options = array();
 
 		  	// Company
@@ -72,35 +83,30 @@
 			  // Promotion
 		  	$settings = (array) get_option( 'mybooking_theme_settings_promo' );
 		  	$this->theme_options['promo_popup_active'] = $this->get_option_value( $settings, 'promo_popup_active');
-		  	// $this->theme_options['promo_home_widgets_active'] = $this->get_option_value( $settings, 'promo_home_widgets_active');
 
 		  	// Global
 		  	$settings = (array) get_option( 'mybooking_theme_settings_options_global' );
 		  	$this->theme_options['global_vehicle_active'] = $this->get_option_value( $settings, 'global_vehicle_active');
 
 		  }
-
 		  return $this->theme_options;
-
     }
 
-    public function get_theme_option( $option ) {
-
+    public function get_theme_option( $option )
+    {
     	return $this->get_theme_options()[$option];
-
     }
 
-    private function get_option_value( $settings, $field ) {
-
-    		if (array_key_exists( $field, $settings)) {
-			    $value = esc_attr( $settings[$field] );
-			  }
-			  else {
-			  	$value = '';
-			  }
-
-			  return $value;
-
+    private function get_option_value( $settings, $field )
+    {
+  		if (array_key_exists( $field, $settings)) {
+		    $value = esc_attr( $settings[$field] );
+		  }
+		  else
+      {
+		  	$value = '';
+		  }
+		  return $value;
     }
 
 
@@ -109,37 +115,21 @@
 		/**
 		 * Settings page : Create new settings page
 		 */
-		public function wp_settings_page() {
-
+		public function wp_settings_page()
+    {
 		  if (!current_user_can('manage_options') || current_user_can('administrator')) {
-
-		  	// https://wordpress.stackexchange.com/questions/66498/add-menu-page-with-different-name-for-first-submenu-item
-		  	// https://codex.wordpress.org/Adding_Administration_Menus
-
-		    // Create mybooking Menu
-		    add_menu_page(
-		      _x("Mybooking", 'theme_settings', 'mybooking'),
-		      _x("Mybooking", 'theme_settings', 'mybooking'),
-		      "edit_pages",
-		      "settings", // Slug
-		      '',
-		      get_template_directory_uri()."/images/mybooking-logo-bn.png",
-		      4.1
-		    );
 
 		    // Add settings submenu page
 		    add_submenu_page(
-		      "settings",
-		    	_x("Settings", 'theme_settings', 'mybooking'),
-		    	_x("Settings", 'theme_settings', 'mybooking'),
+		      "themes.php", // https://codex.wordpress.org/Adding_Administration_Menus
+		    	_x("Theme options", 'theme_settings', 'mybooking'),
+		    	_x("Theme options", 'theme_settings', 'mybooking'),
 		    	"manage_options",
 		    	"settings", // The same slug as the main menu so it will be the default option
 		    	array($this, 'mybooking_theme_settings_page'),
-  		    -1
-		    	);
-
+  		    4
+		    );
 		  }
-
 		}
 
     // == Settings Init
@@ -156,9 +146,8 @@
      *   - activities
 		 *
 		 */
-		public function wp_settings_init() {
-
-
+		public function wp_settings_init()
+    {
 		  register_setting("mybooking_theme_settings_group_company_info",
 		  								 "mybooking_theme_settings_company_info");
 
