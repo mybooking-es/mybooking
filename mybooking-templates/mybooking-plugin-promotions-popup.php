@@ -31,7 +31,7 @@ foreach($popup_items as $popup_item) :
   */
   ?>
 
-<div class="mybooking-popup_backdrop" id="PromotionsPopup">
+<div class="mybooking-popup_backdrop" id="MybookingPromotionsPopup">
   <div class="mybooking-popup_box">
     <div class="mybooking-popup" tabindex="-1" role="dialog">
       <?php $featured_img_url = get_the_post_thumbnail_url( $popup_item,'full' ); ?>
