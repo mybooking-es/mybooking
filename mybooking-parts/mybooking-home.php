@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
 <?php get_template_part( 'mybooking-parts/home/mybooking-home-testimonials' ); ?>
 
 <!-- MyBooking Popup -->
-<?php get_template_part( 'mybooking-templates/mybooking-plugin-promotions-popup' ); ?>
+<!--?php get_template_part( 'mybooking-templates/mybooking-plugin-promotions-popup' ); ?-->
 
 <!-- END MYBOOKING PARTIALS -->
 

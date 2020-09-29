@@ -29,7 +29,7 @@ function create_testimonial() {
       ),
       'show_ui' => true,
       'public' => true,
-      'show_in_menu' => 'settings',
+      'show_in_menu' => true,
       // 'show_in_rest' => true, // Gutenberg activation!
       'supports' => array( 'title', 'editor', 'thumbnail' ),
       'menu_icon' => 'dashicons-format-quote',

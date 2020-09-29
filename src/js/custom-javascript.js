@@ -26,12 +26,14 @@ $(document).ready(function () {
   });
 
   // Testimonials
+  /*
   $(".-carrusel-testimonials").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 4000,
   });
+  */
 });
 
 
@@ -130,12 +132,13 @@ $(document).ready(function () {
  *  PROMO POPUP
  *  Very simple popup with cookie
  */
+ /*
 function promoClosed(){
   document.cookie="promoclosed=1; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/",
   document.getElementById( "PromotionsPopup" ).style.visibility="hidden"
 }
 document.cookie.indexOf( "promoclosed" ) < 0 && ( document.getElementById( "PromotionsPopup" ).style.visibility="visible" );
-
+*/
 
 /*
  *  COOKIES NOTICE
