@@ -89,6 +89,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		 */
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+
 		/*
 		* Set up the WordPress Theme logo feature.
 		*

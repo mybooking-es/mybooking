@@ -30,8 +30,17 @@ get_header(); ?>
       <main class="site-main" id="main">
 
         <?php while ( have_posts() ) : the_post(); ?>
-        <h2 class="entry-title"><?php the_title(); ?></h2>
-        <?php the_content(); ?>
+          <h2 class="entry-title"><?php the_title(); ?></h2>
+          
+          <?php the_content(); ?>
+
+          <?php
+          // If comments are open or we have at least one comment, load up the comment template.
+          if ( comments_open() || get_comments_number() ) :
+            comments_template();
+          endif;
+          ?>       
+             
         <?php endwhile; ?>
 
       </main>
