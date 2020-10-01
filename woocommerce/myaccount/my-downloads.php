@@ -35,8 +35,9 @@ if ( $downloads ) : ?>
 				do_action( 'woocommerce_available_download_start', $download );
 
 				if ( is_numeric( $download['downloads_remaining'] ) ) {
+					$download_remaining_txt = sprintf( _n( '%s download remaining', '%s downloads remaining', intval( $download['downloads_remaining'] ), 'woocommerce' ), number_format_i18n( $download['downloads_remaining'] ) );
 					/* translators: %s product name */
-					echo apply_filters( 'woocommerce_available_download_count', '<span class="woocommerce-Count count">' . '</span> ', $download ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo apply_filters( 'woocommerce_available_download_count', '<span class="woocommerce-Count count">' . $download_remaining_txt . '</span> ', $download ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 
 				echo apply_filters( 'woocommerce_available_download_link', '<a href="' . esc_url( $download['download_url'] ) . '">' . $download['download_name'] . '</a>', $download ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
