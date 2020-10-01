@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="alert alert-info">
-      <?php echo _x( 'No results found', 'activities_list', 'mybooking-wp-plugin' ) ?>
+      <?php echo _x( 'No results found', 'activities_list', 'mybooking' ) ?>
     </div>
   </div>
 </div>
@@ -30,7 +30,7 @@
           <?php if ( $activity->use_rates ) { ?>
           <p>
             <span
-              class="text-muted"><small><?php echo _x( 'From', 'activities_list', 'mybooking-wp-plugin' ) ?></small></span>
+              class="text-muted"><small><?php echo _x( 'From', 'activities_list', 'mybooking' ) ?></small></span>
             <span class="h5 mt-10 color-brand-primary">
               <strong><?php echo $activity->from_price_formatted ?></strong></span>
           </p>
@@ -45,7 +45,7 @@
               ?>
         <div class="card-static_btn mt-5">
           <a href="/<?php echo $args['url_detail']?>/<?php echo $activityIdAnchor?>"
-            class="button btn btn-choose-product"><?php echo _x( 'More information', 'activities_list', 'mybooking-wp-plugin' ) ?></a>
+            class="button btn btn-choose-product"><?php echo _x( 'More information', 'activities_list', 'mybooking' ) ?></a>
         </div>
       </div>
     </div>
@@ -56,7 +56,7 @@
   <div class="row">
     <div class="col">
       <div class="alert alert-primary" role="alert" style="width: fit-content;">
-        <?php printf( _nx( '<b>%s</b> result found', '<b>%s</b> results found', intval( $args['total'] ), 'activity_shopping_cart', 'mybooking-wp-plugin' ), number_format_i18n( $args['total'] ) ) ?>
+        <?php printf( _nx( '<b>%s</b> result found', '<b>%s</b> results found', intval( $args['total'] ), 'activity_shopping_cart', 'mybooking' ), number_format_i18n( $args['total'] ) ) ?>
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@
         <ul class="pagination">
           <li class="page-item <?php if ($args['current_page'] == 1) { ?>disabled<?php } ?>">
             <a class="page-link"
-              href="/<?php echo $args['url']?>?offsetpage=<?php echo $args['current_page']-1 ?><?php echo $args['querystring']?>"><?php echo _x( 'Previous', 'activities_list', 'mybooking-wp-plugin' ) ?></a>
+              href="/<?php echo $args['url']?>?offsetpage=<?php echo $args['current_page']-1 ?><?php echo $args['querystring']?>"><?php echo _x( 'Previous', 'activities_list', 'mybooking' ) ?></a>
           </li>
           <?php foreach ($args['pages'] as $page) { ?>
           <?php if ($page == $args['current_page']) { ?>
@@ -88,7 +88,7 @@
           <?php } ?>
           <li class="page-item <?php if ($args['current_page'] == $args['total_pages']) { ?>disabled<?php } ?>">
             <a class="page-link"
-              href="/<?php echo $args['url']?>?offsetpage=<?php echo $args['current_page']+1 ?><?php echo $args['querystring']?>"><?php echo _x( 'Next', 'activities_list', 'mybooking-wp-plugin' ) ?></a>
+              href="/<?php echo $args['url']?>?offsetpage=<?php echo $args['current_page']+1 ?><?php echo $args['querystring']?>"><?php echo _x( 'Next', 'activities_list', 'mybooking' ) ?></a>
           </li>
         </ul>
       </nav>

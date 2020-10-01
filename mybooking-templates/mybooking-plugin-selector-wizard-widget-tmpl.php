@@ -65,7 +65,7 @@
     <div class="wizard-multi-place_selectors row">
       <div class="col-md-12">
         <button class="wizard-multi-place_btn btn btn-primary destination-selector" type="button"
-          data-destination-id="all"><?php echo _x( 'All', 'renting_form_selector_wizard', 'mybooking-wp-plugin' ) ?></button>
+          data-destination-id="all"><?php echo _x( 'All', 'renting_form_selector_wizard', 'mybooking' ) ?></button>
         <% for (var idx=0; idx<places.destinations.length; idx++) { %>
           <button class="wizard-multi-place_btn btn btn-primary destination-selector"  type="button"
              data-destination-id="<%=places.destinations[idx].id%>"><%=places.destinations[idx].name%></button>
