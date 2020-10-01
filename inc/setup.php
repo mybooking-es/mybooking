@@ -103,6 +103,14 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		add_theme_support( 'responsive-embeds' );
 
 		/*
+		 * Set up the WordPress core custom background feature.
+		 */
+		add_theme_support( 'custom-background', apply_filters( 'mybooking_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
+
+		/*
 		* Add support for Woocommerce
 		*
 		*/

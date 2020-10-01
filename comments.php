@@ -1,12 +1,14 @@
 <?php
 /**
- * The template for displaying comments
- *
- * The area of the page that contains both current comments
- * and the comment form.
- *
- * @package UnderStrap
- */
+*   Template Name: Comments
+*  	-----------------------------
+*
+* 	@version 0.0.1
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 0.9.10
+*/
+
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -34,7 +36,7 @@ if ( post_password_required() ) {
 			if ( 1 === (int) $comments_number ) {
 				printf(
 					/* translators: %s: post title */
-					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'understrap' ),
+					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'mybooking' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
@@ -46,7 +48,7 @@ if ( post_password_required() ) {
 							'%1$s thoughts on &ldquo;%2$s&rdquo;',
 							$comments_number,
 							'comments title',
-							'understrap'
+							'mybooking'
 						)
 					),
 					number_format_i18n( $comments_number ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -61,17 +63,17 @@ if ( post_password_required() ) {
 
 			<nav class="comment-navigation" id="comment-nav-above">
 
-				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
+				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'mybooking' ); ?></h1>
 
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous">
-						<?php previous_comments_link( __( '&larr; Older Comments', 'understrap' ) ); ?>
+						<?php previous_comments_link( __( '&larr; Older Comments', 'mybooking' ) ); ?>
 					</div>
 				<?php } ?>
 
 				<?php	if ( get_next_comments_link() ) { ?>
 					<div class="nav-next">
-						<?php next_comments_link( __( 'Newer Comments &rarr;', 'understrap' ) ); ?>
+						<?php next_comments_link( __( 'Newer Comments &rarr;', 'mybooking' ) ); ?>
 					</div>
 				<?php } ?>
 
@@ -96,17 +98,17 @@ if ( post_password_required() ) {
 
 			<nav class="comment-navigation" id="comment-nav-below">
 
-				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
+				<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'mybooking' ); ?></h1>
 
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous">
-						<?php previous_comments_link( __( '&larr; Older Comments', 'understrap' ) ); ?>
+						<?php previous_comments_link( __( '&larr; Older Comments', 'mybooking' ) ); ?>
 					</div>
 				<?php } ?>
 
 				<?php	if ( get_next_comments_link() ) { ?>
 					<div class="nav-next">
-						<?php next_comments_link( __( 'Newer Comments &rarr;', 'understrap' ) ); ?>
+						<?php next_comments_link( __( 'Newer Comments &rarr;', 'mybooking' ) ); ?>
 					</div>
 				<?php } ?>
 
