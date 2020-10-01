@@ -288,7 +288,7 @@
 		public function mybooking_theme_settings_page() {
 
 			if (!current_user_can('edit_pages')) {
-			  wp_die(__("Access forbidden", "theme_settings", 'mybooking'));
+			  wp_die(_x("Access forbidden", "theme_settings", 'mybooking'));
       }
 
 		?>

@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
         <a class="action-block_text" href="<?php esc_url( home_url( '/' ) ); ?>">
           <?php $company_name = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_name");
             if ($company_name !== '') { ?>
-              <?php _e('Contact with ', 'contact_block', 'mybooking') ?>
+              <?php echo _x('Contact with ', 'contact_block', 'mybooking') ?>
               <?php echo $company_name ?>
           <?php } ?>
         </a>
