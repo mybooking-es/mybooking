@@ -2,7 +2,7 @@
 
 <script type="text/tpml" id="script_shopping_cart_empty">
   <div class="alert alert-warning">
-    <p><?php echo _x( 'Shopping cart is empty', 'activity_shopping_cart', 'mybooking' ) ?></p>
+    <p><?php echo _x( 'Shopping cart is empty', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?></p>
   </div>
 </script>
 
@@ -38,7 +38,7 @@
             </tr>
           <% } %>  
           <tr>
-            <td><?php echo _x( 'Total', 'activity_shopping_cart', 'mybooking' ) ?></td>
+            <td><?php echo _x( 'Total', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?></td>
             <td class="text-right fw-800"><%=configuration.formatCurrency(shopping_cart.items[idx]['total'])%></td>
           </tr>
         </tbody>
@@ -55,17 +55,17 @@
       <div class="col-12 col-lg-6">
         <div class="form-group">
           <label
-            for="customer_name"><?php echo _x( 'Name', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
+            for="customer_name"><?php echo _x( 'Name', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>*</label>
           <input name="customer_name" id="customer_name" type="text" class="w-100"
-            placeholder="<?php echo _x( 'Name', 'activity_shopping_cart', 'mybooking' ) ?>*">
+            placeholder="<?php echo _x( 'Name', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>*">
         </div>
       </div>
       <div class="col-12 col-lg-6">
         <div class="form-group">
           <label
-            for="customer_surname"><?php echo _x( 'Surname', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
+            for="customer_surname"><?php echo _x( 'Surname', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>*</label>
           <input name="customer_surname" id="customer_surname" type="text" class="w-100"
-            placeholder="<?php echo _x( 'Surname', 'activity_shopping_cart', 'mybooking' ) ?>*">
+            placeholder="<?php echo _x( 'Surname', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>*">
         </div>
       </div>
     </div>
@@ -73,17 +73,17 @@
         <div class="col-12 col-lg-6">
           <div class="form-group">
             <label
-              for="customer_email"><?php echo _x( 'E-mail', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
+              for="customer_email"><?php echo _x( 'E-mail', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>*</label>
             <input name="customer_email" id="customer_email" type="text" class="w-100"
-              placeholder="<?php echo _x( 'E-mail', 'activity_shopping_cart', 'mybooking' ) ?>*">
+              placeholder="<?php echo _x( 'E-mail', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>*">
           </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="form-group">
             <label
-              for="confirm_customer_email"><?php echo _x( 'Confirm E-mail', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
+              for="confirm_customer_email"><?php echo _x( 'Confirm E-mail', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>*</label>
             <input name="confirm_customer_email" id="confirm_customer_email" class="w-100" type="text"
-              placeholder="<?php echo _x( 'Confirm E-mail', 'activity_shopping_cart', 'mybooking' ) ?>*"
+              placeholder="<?php echo _x( 'Confirm E-mail', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>*"
               maxlength="50">
           </div>
         </div>
@@ -92,18 +92,18 @@
         <div class="col-12 col-lg-6">
           <div class="form-group">
             <label
-              for="customer_phone"><?php echo _x( 'Phone number', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
+              for="customer_phone"><?php echo _x( 'Phone number', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>*</label>
             <input name="customer_phone" id="customer_phone" type="text" class="w-100"
-              placeholder="<?php echo _x( 'Phone number', 'activity_shopping_cart', 'mybooking' ) ?>*"
+              placeholder="<?php echo _x( 'Phone number', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>*"
               maxlength="15">
           </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="form-group">
             <label
-              for="customer_mobile_phone"><?php echo _x( 'Alternative phone number', 'activity_shopping_cart', 'mybooking') ?></label>
+              for="customer_mobile_phone"><?php echo _x( 'Alternative phone number', 'activity_shopping_cart', 'mybooking-wp-plugin') ?></label>
             <input class="form-control" id="customer_mobile_phone" name="customer_mobile_phone" type="text"
-              placeholder="<?php echo _x( 'Alternative phone number', 'activity_shopping_cart', 'mybooking') ?>"
+              placeholder="<?php echo _x( 'Alternative phone number', 'activity_shopping_cart', 'mybooking-wp-plugin') ?>"
               maxlength="15">
           </div>
         </div>
@@ -111,8 +111,8 @@
       <div class="row">
         <div class="col">
           <div class="form-group">
-            <label for="comments"><?php echo _x( 'Comments', 'activity_shopping_cart', 'mybooking' ) ?></label>
-            <textarea class="w-100 p-3" name="comments" id="comments" placeholder="<?php echo _x( 'Comments', 'activity_shopping_cart', 'mybooking' ) ?>" style="height: 100px"></textarea>
+            <label for="comments"><?php echo _x( 'Comments', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?></label>
+            <textarea class="w-100 p-3" name="comments" id="comments" placeholder="<?php echo _x( 'Comments', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>" style="height: 100px"></textarea>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@
 
   <% if (shopping_cart.use_rates) { %>
         <div class="jumbotron mb-3">
-          <h2 class="h5"><?php echo _x( 'Total', 'activity_shopping_cart', 'mybooking' ) ?> <span class="pull-right"><%=configuration.formatCurrency(shopping_cart.total_cost)%></span></h2>
+          <h2 class="h5"><?php echo _x( 'Total', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?> <span class="pull-right"><%=configuration.formatCurrency(shopping_cart.total_cost)%></span></h2>
           <hr>
         </div>
       <% } %>
@@ -150,14 +150,14 @@
           <% if (shopping_cart.can_make_request) { %>
             <div class="form-group col-md-12">
               <label>
-              <input type="radio" name="complete_action" value="request_reservation" class="complete_action">&nbsp;<?php echo _x( 'Request reservation', 'activity_shopping_cart', 'mybooking' ) ?>
+              <input type="radio" name="complete_action" value="request_reservation" class="complete_action">&nbsp;<?php echo _x( 'Request reservation', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>
               </label>
             </div>
           <% } %>
           <% if (canPay) { %>
           <div class="form-group col-md-12">
             <label>
-            <input type="radio" name="complete_action" value="pay_now" class="complete_action">&nbsp;<?php echo _x( 'Pay now', 'activity_shopping_cart', 'mybooking' ) ?>
+            <input type="radio" name="complete_action" value="pay_now" class="complete_action">&nbsp;<?php echo _x( 'Pay now', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>
             </label>
           </div>
           <% } %>
@@ -174,9 +174,9 @@
               <label>
                 <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;
                   <?php if ( empty($args['terms_and_conditions']) ) { ?>
-                    <?php echo _x( 'I have read and hereby accept the terms and conditions', 'activity_shopping_cart', 'mybooking' ) ?>
+                    <?php echo _x( 'I have read and hereby accept the terms and conditions', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>
                   <?php } else { ?>
-                    <?php printf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">terms and conditions</a>', 'activity_shopping_cart', 'mybooking' ), $args['terms_and_conditions'] ) ?> 
+                    <?php printf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">terms and conditions</a>', 'activity_shopping_cart', 'mybooking-wp-plugin' ), $args['terms_and_conditions'] ) ?> 
                   <?php } ?>  
               </label>
             </div>
@@ -184,7 +184,7 @@
 
           <div class="form-row">
             <div class="form-group col-md-12">
-              <button type="submit" class="btn btn-success w-100"><?php echo _x( 'Request reservation', 'activity_shopping_cart', 'mybooking' ) ?></button>
+              <button type="submit" class="btn btn-success w-100"><?php echo _x( 'Request reservation', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?></button>
             </div>
           </div>
         </div>
@@ -210,13 +210,13 @@
                     <div class="form-row">
                       <div class="form-group col-md-12">
                         <label for="payments_paypal_standard">
-                          <input type="radio" id="payments_paypal_standard" name="payment_method_select" class="payment_method_select" value="paypal_standard">&nbsp;<?php echo _x( 'Paypal', 'activity_shopping_cart', 'mybooking' ) ?>
+                          <input type="radio" id="payments_paypal_standard" name="payment_method_select" class="payment_method_select" value="paypal_standard">&nbsp;<?php echo _x( 'Paypal', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>
                           <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-paypal.jpg" />
                         </label>
                       </div>
                       <div class="form-group col-md-12">
                       <label for="payments_credit_card">
-                        <input type="radio" id="payments_credit_card" name="payment_method_select" class="payment_method_select" value="<%=shopping_cart.payment_methods.tpv_virtual%>">&nbsp;<?php echo _x( 'Credit or debit card', 'activity_shopping_cart', 'mybooking' ) ?>
+                        <input type="radio" id="payments_credit_card" name="payment_method_select" class="payment_method_select" value="<%=shopping_cart.payment_methods.tpv_virtual%>">&nbsp;<?php echo _x( 'Credit or debit card', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-visa.jpg"/>
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-mastercard.jpg"/>
                         </label>
@@ -239,9 +239,9 @@
                     <label for="payments_paypal_standard">
                       <input type="checkbox" id="conditions_read_pay_now" name="conditions_read_pay_now">&nbsp;
                       <?php if ( empty($args['terms_and_conditions']) ) { ?>
-                        <?php echo _x( 'I have read and hereby accept the terms and conditions', 'activity_shopping_cart', 'mybooking' ) ?>
+                        <?php echo _x( 'I have read and hereby accept the terms and conditions', 'activity_shopping_cart', 'mybooking-wp-plugin' ) ?>
                       <?php } else { ?>
-                        <?php printf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">terms and conditions</a>', 'activity_shopping_cart', 'mybooking' ), $args['terms_and_conditions'] ) ?> 
+                        <?php printf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">terms and conditions</a>', 'activity_shopping_cart', 'mybooking-wp-plugin' ), $args['terms_and_conditions'] ) ?> 
                       <?php } ?>  
                     </label>
                   </div>

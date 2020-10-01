@@ -24,13 +24,13 @@
       <div class="row">
         <div class="wizard-selector_field col-md-3">
             <label
-              for="place_holder"><?php echo _x( 'Where?', 'renting_form_selector_wizard', 'mybooking') ?></label>
+              for="place_holder"><?php echo _x( 'Where?', 'renting_form_selector_wizard', 'mybooking-wp-plugin') ?></label>
             <input type="text" class="form-control form-control-lg bg-white" id="place_holder"
                    aria-describedby="pickupPlaceHolder" placeholder="Elige un lugar" readonly="true">
         </div>
         <div class="wizard-selector_field col-md-3">
             <label
-              for="from_holder"><?php echo _x( 'When?', 'renting_form_selector_wizard', 'mybooking') ?></label>
+              for="from_holder"><?php echo _x( 'When?', 'renting_form_selector_wizard', 'mybooking-wp-plugin') ?></label>
             <input type="text" class="form-control form-control-lg bg-white" id="from_holder"
                    aria-describedby="FromHolder" placeholder="Fecha de salida" readonly="true">
         </div>
@@ -41,7 +41,7 @@
         <br>
         <div class="col-md-3 d-flex align-items-end">
             <button class="wizard-selector_btn btn" id="btn_reservation"
-              type="button"><?php echo _x( 'Book', 'renting_form_selector_wizard', 'mybooking') ?></button>
+              type="button"><?php echo _x( 'Book', 'renting_form_selector_wizard', 'mybooking-wp-plugin') ?></button>
         </div>
       </div>
     </form>
