@@ -17,13 +17,15 @@ if (typeof $ === "undefined") {
  *  Carousel settings
  */
 $(document).ready(function () {
-  // Home page carousel
-  $(".-carrusel-portada").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-  });
+  if ( $(".-carrusel-portada").length > 0 ) {
+    // Home page carousel
+    $(".-carrusel-portada").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+    });
+  }
 });
 
 

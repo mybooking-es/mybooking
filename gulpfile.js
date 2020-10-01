@@ -41,6 +41,20 @@ gulp.task("cssimages", function () {
     .pipe(gulp.dest(paths.css + "/images"));
 });
 
+// Copy Slick images into dist css folder
+gulp.task("css-slick-images", function () {
+  return gulp
+    .src(paths.dev + "/sass/vendor/slick/ajax-loader.gif")
+    .pipe(gulp.dest(paths.css));
+});
+
+// Copy slick fonts into dist css/fonts folder
+gulp.task("css-slick-fonts", function () {
+  return gulp
+    .src(paths.dev + "/sass/vendor/slick/fonts/*.{eot,svg,ttf,woff}")
+    .pipe(gulp.dest(paths.css+"/fonts"));
+});
+
 // Run:
 // gulp sass
 // Compiles SCSS files in CSS
@@ -89,7 +103,7 @@ gulp.task("minifycss", function () {
 // Run:
 // gulp styles
 // Compile Sass and minify css
-gulp.task("styles", gulp.series("sass", "minifycss", "cssimages"));
+gulp.task("styles", gulp.series("sass", "minifycss", "cssimages", "css-slick-images", "css-slick-fonts"));
 
 // ---------- Local Server  -------------------------------------------------
 
@@ -120,7 +134,7 @@ gulp.task("scripts", function () {
 
     `${paths.dev}/js/skip-link-focus-fix.js`,
     `${paths.dev}/js/vendor/mobile-detect/mobile-detect.js`,
-    `${paths.dev}/js/vendor/slick/slick.min.js`,
+    `${paths.dev}/js/vendor/slick/slick.js`,
     `${paths.dev}/js/vendor/jquery-eu-cookie/jquery-eu-cookie-law-popup.js`,
 
     // Adding currently empty javascript file to add on for your own themes´ customizations
