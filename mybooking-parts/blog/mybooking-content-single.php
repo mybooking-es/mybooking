@@ -38,6 +38,16 @@ defined( 'ABSPATH' ) || exit;
 					<h1 class="post_title"><?php the_title(); ?></h1>
 					<p class="post_meta"><?php echo mybooking_posted_on(); ?></p>
 					<?php the_content(); ?>
+
+            		<?php
+            		wp_link_pages(
+            			array(
+            				'before' => '<div class="page-links">' . _x( 'Pages', 'pages_navigation', 'mybooking' ),
+            				'after'  => '</div>',
+            			)
+            		);
+            		?>
+					
 					<footer class="entry-footer">
 						<?php mybooking_entry_footer(); ?>
 					</footer>
