@@ -41,6 +41,11 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		 */
 		load_theme_textdomain( 'mybooking', get_template_directory() . '/languages' );
 
+		// Override plugins text-domain
+		// https://gist.github.com/justintadlock/7a605c29ae26c80878d0
+		load_textdomain( 'mybooking-wp-plugin', '' );
+		load_textdomain( 'woocommerce', '' );
+
 		/*
 		* Add default posts and comments RSS feed links to head.
 		*
@@ -205,6 +210,34 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 
 	}
 }
+
+/**
+ * Override textdomain
+ */
+//add_filter( 'override_load_textdomain', 'mybooking_override_load_textdomain', 10, 2 );
+/*
+if ( ! function_exists( 'mybooking_override_load_textdomain' ) ) {
+
+	function mybooking_override_load_textdomain( $override, $domain ) {
+
+		// Check if the domain is our framework domain.
+		if ( 'mybooking-wp-plugin' === $domain || 'woocommerce' === $domain ) {
+			global $l10n;
+
+			// If the theme's textdomain is loaded, assign the theme's translations
+			// to the framework's textdomain.
+			if ( isset( $l10n[ 'mybooking' ] ) )
+				$l10n[ $domain ] = $l10n[ 'mybooking' ];
+
+			// Always override.  We only want the theme to handle translations.
+			$override = true;
+		}
+
+		return $override;
+	}
+
+}
+*/
 
 /**
  * Post excerpts
