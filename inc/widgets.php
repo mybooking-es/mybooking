@@ -52,11 +52,11 @@ function mybooking_widgets_init() {
 
 	// Home Widgets
 	$widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_content_widgets_visibility" );
-	if ($widgets_visible) {
-
+	if ( $widgets_visible )
+	{
 		register_sidebar(
 			array(
-				'name'          => _x( 'Home Content One','mybooking_widgets','mybooking' ),
+				'name'          => _x( 'Home Middle One','mybooking_widgets','mybooking' ),
 				'id'            => 'home_widgets_1',
 				'description'   => _x( 'Home content first widgets area','mybooking_widgets','mybooking' ),
 				'before_widget' => '<div class="mybooking-widget widget-1">',
@@ -65,7 +65,7 @@ function mybooking_widgets_init() {
 		);
 		register_sidebar(
 			array(
-				'name'          => _x( 'Home Content Two','mybooking_widgets','mybooking' ),
+				'name'          => _x( 'Home Middle Two','mybooking_widgets','mybooking' ),
 				'id'            => 'home_widgets_2',
 				'description'   => _x( 'Home content second widgets area','mybooking_widgets','mybooking' ),
 				'before_widget' => '<div class="mybooking-widget widget-2">',
@@ -74,10 +74,24 @@ function mybooking_widgets_init() {
 		);
 		register_sidebar(
 			array(
-				'name'          => _x( 'Home Content Three','mybooking_widgets','mybooking' ),
+				'name'          => _x( 'Home Middle Three','mybooking_widgets','mybooking' ),
 				'id'            => 'home_widgets_3',
 				'description'   => _x( 'Home content third widgets area','mybooking_widgets','mybooking' ),
 				'before_widget' => '<div class="mybooking-widget widget-3">',
+				'after_widget'  => '</div>',
+			)
+		);
+	}
+
+	$widgets_bottom_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_bottom_widgets_visibility" );
+	if ( $widgets_bottom_visible )
+	{
+		register_sidebar(
+			array(
+				'name'          => _x( 'Home Bottom','mybooking_widgets','mybooking' ),
+				'id'            => 'home_widgets_bottom',
+				'description'   => _x( 'Home\'s bottom widgets area','mybooking_widgets','mybooking' ),
+				'before_widget' => '<div class="mybooking-widget widget-home-bottom">',
 				'after_widget'  => '</div>',
 			)
 		);

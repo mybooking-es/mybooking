@@ -6,10 +6,12 @@
 *   Section: Mybooking layout settings
 *
 *
-* 	@version 0.0.7
+* 	@version 0.0.8
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.1
+*
+*		NOTE: Home modules position controls are commented until we finish implementation
 */
 
 // Exit if accessed directly.
@@ -22,6 +24,8 @@ defined( 'ABSPATH' ) || exit;
  * mybooking_home_content_widgets_visibility
  * mybooking_home_news_visibility
  * mybooking_home_testimonial_carousel_visibility
+ * mybooking_home_content_widgets_visibility
+ * mybooking_home_bottom_widgets_visibility
  *
  */
 class MyBookingCustomizer {
@@ -160,8 +164,8 @@ class MyBookingCustomizer {
     	$body_bg = get_theme_mod( 'mybooking_body_bg', '#FFFFFF' );
     	$body_color = get_theme_mod( 'mybooking_body_color', '#212121' );
 			$logo_height = get_theme_mod( 'mybooking_logo_height', '40' );
-  
-      $header_text_color = get_theme_mod('mybooking_headers_color', '#2193F2'); 
+
+      $header_text_color = get_theme_mod('mybooking_headers_color', '#2193F2');
 
 			$navbar_bg = get_theme_mod( 'mybooking_navbar_bg', '#ffffff');
 			$navbar_link_color = get_theme_mod( 'mybooking_navbar_link_color', '#000000' );
@@ -296,10 +300,10 @@ class MyBookingCustomizer {
     /**
      * Get theme options
      */
-	  public function get_theme_options() {
-
-	  	if ( $this->theme_options == null ||  is_customize_preview() ) {
-
+	  public function get_theme_options()
+		{
+	  	if ( $this->theme_options == null ||  is_customize_preview() )
+			{
 		  	$this->theme_options = array();
 
 		  	// Home header visibility
@@ -314,8 +318,8 @@ class MyBookingCustomizer {
 		  	// Home News visibility
 		  	$this->theme_options['mybooking_home_news_visibility'] = get_theme_mod( 'mybooking_home_news_visibility', true );
 
-		  	// Home Testimonials visibility
-		  	$this->theme_options['mybooking_home_testimonial_carousel_visibility'] = get_theme_mod( 'mybooking_home_testimonial_carousel_visibility', true );
+				// Home Bottom Widgets visibility
+				$this->theme_options['mybooking_home_bottom_widgets_visibility'] = get_theme_mod( 'mybooking_home_bottom_widgets_visibility', true );
 
 		  	// Topbar Global Message
 		  	$this->theme_options['mybooking_global_topbar_message'] = get_theme_mod( "mybooking_global_topbar_message", true );
@@ -324,10 +328,12 @@ class MyBookingCustomizer {
 		  	$header_bg = get_theme_mod( 'mybooking_home_header_bg' );
 		  	$this->theme_options['mybooking_home_header_bg'] = $header_bg;
 
-		  	switch ( $header_bg ) {
+		  	switch ( $header_bg )
+				{
 		  		case '0':
 				  	$header_image_bg = get_theme_mod( 'mybooking_home_header_image_bg', "" );
-						if ( empty( $header_image_bg ) ) {
+						if ( empty( $header_image_bg ) )
+						{
 							$header_image_bg = get_template_directory_uri().'/images/bg-image.jpg';
 						}
 						$this->theme_options['mybooking_home_header_image_bg'] = $header_image_bg;
@@ -335,9 +341,12 @@ class MyBookingCustomizer {
 
 		  		case '1':
 						$header_video_bg = get_theme_mod( 'mybooking_home_header_video_bg', "" );
-						if ( empty( $header_video_bg ) ) {
+						if ( empty( $header_video_bg ) )
+						{
 							$header_video_bg = get_template_directory_uri().'/images/video-portada.m4v';
-						} else {
+						}
+						else
+						{
 							$header_video_bg = wp_get_attachment_url( $header_video_bg );
 						}
 						$this->theme_options['mybooking_home_header_video_bg'] = $header_video_bg;
@@ -346,17 +355,19 @@ class MyBookingCustomizer {
 		  		case '2':
 		  		  $header_carrousel_images = [];
 		  		  $header_carrousel_bg = get_theme_mod( 'mybooking_home_header_carrousel_bg', "" );
-		  		  if ( is_array( $header_carrousel_bg ) && !empty( $header_carrousel_bg ) ) {
-	  		  		foreach ( $header_carrousel_bg as $carrousel_img ) {
+		  		  if ( is_array( $header_carrousel_bg ) && !empty( $header_carrousel_bg ) )
+						{
+	  		  		foreach ( $header_carrousel_bg as $carrousel_img )
+							{
 	  		  			$img_src = wp_get_attachment_image_src( $carrousel_img, 'full' );
-	  		  			if ( is_array($img_src) ) {
+	  		  			if ( is_array($img_src) )
+								{
 	  		  				$header_carrousel_images[] = $img_src[0];
 	  		  			}
 	  		  		}
 		  		  }
 		  		  $this->theme_options['mybooking_home_header_carrousel_bg'] = $header_carrousel_images;
 		  		  break;
-
 		  	}
 	  	}
 
@@ -364,16 +375,15 @@ class MyBookingCustomizer {
 
 	  }
 
-	  public function get_theme_option( $option ) {
-
+	  public function get_theme_option( $option )
+		{
 	  	return $this->get_theme_options()[ $option ];
-
 	  }
 
     // ----------------------- Customize Sections -----------------------------
 
-		private function mybooking_settings_panel( $wp_customize ) {
-
+		private function mybooking_settings_panel( $wp_customize )
+		{
 			$wp_customize->add_panel( 'mybooking_settings_panel',
 			   array(
 			      'title' => _x( 'Mybooking Theme', 'customizer_panel', 'mybooking' ),
@@ -389,8 +399,8 @@ class MyBookingCustomizer {
 		 *
      */
 
-    private function customize_colors_section( $wp_customize ) {
-
+    private function customize_colors_section( $wp_customize )
+		{
 			// Section
 			$wp_customize->add_section(
 				'mybooking_theme_colors_options',
@@ -524,7 +534,7 @@ class MyBookingCustomizer {
 				'section'    => 'mybooking_theme_colors_options',
 				'settings'   => 'mybooking_body_color',
       ) ) );
-      
+
       // == Headers color
 
       // Setting
@@ -611,7 +621,6 @@ class MyBookingCustomizer {
 						'section'    => 'mybooking_theme_colors_options',
 						'settings'   => 'mybooking_navbar_link_active'
 			) ) );
-
 
 			// -- Drop Down Item Color
 
@@ -777,8 +786,8 @@ class MyBookingCustomizer {
 		 *
      */
 
-    private function customize_typography_section( $wp_customize ) {
-
+    private function customize_typography_section( $wp_customize )
+		{
 			// Theme layout settings.
 			$wp_customize->add_section(
 				'mybooking_theme_typography_options',
@@ -794,8 +803,8 @@ class MyBookingCustomizer {
 
 			// == Font body
 
- 			if ( class_exists( 'Font_Selector' ) ) {
-
+ 			if ( class_exists( 'Font_Selector' ) )
+			{
 				$wp_customize->add_setting( 'mybooking_font_body',
 	          array(
 	          	'transport' => 'refresh',
@@ -835,9 +844,7 @@ class MyBookingCustomizer {
 	              )
 	          )
 	   	  );
-
     	}
-
 		}
 
 
@@ -846,8 +853,8 @@ class MyBookingCustomizer {
 		 *
      */
 
-    private function customize_layout_section( $wp_customize ) {
-
+    private function customize_layout_section( $wp_customize )
+		{
 			// Theme layout section
 			$wp_customize->add_section(
 				'mybooking_theme_layout_options',
@@ -895,7 +902,6 @@ class MyBookingCustomizer {
 					)
 				)
 			);
-
     }
 
 
@@ -904,8 +910,8 @@ class MyBookingCustomizer {
 		 *
      */
 
-    private function customize_topbar_section( $wp_customize ) {
-
+    private function customize_topbar_section( $wp_customize )
+		{
 			// Section
 			$wp_customize->add_section(
 				'mybooking_theme_topbar_options',
@@ -1051,7 +1057,6 @@ class MyBookingCustomizer {
 				 )
 			);
 
-
 			// Notification Message Advanced Settings
 
 			// -- Background color
@@ -1060,7 +1065,7 @@ class MyBookingCustomizer {
 			$wp_customize->add_setting( 'mybooking_topbar_message_bg' , array(
 					'default'   => '#FFB74D',
 					'transport' => 'refresh',
-          'sanitize_callback' => array( $this, 'slug_sanitize_rgba')					
+          'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 			) );
 
 			// Control
@@ -1119,7 +1124,6 @@ class MyBookingCustomizer {
 				'settings'   => 'mybooking_topbar_message_link_hover',
 			) ) );
 
-
     }
 
 
@@ -1128,8 +1132,8 @@ class MyBookingCustomizer {
 		 *
      */
 
-    private function customize_navbar_section( $wp_customize ) {
-
+    private function customize_navbar_section( $wp_customize )
+		{
 			// Section
 			$wp_customize->add_section(
 				'mybooking_theme_navbar_options',
@@ -1148,7 +1152,7 @@ class MyBookingCustomizer {
 			$wp_customize->add_setting( 'mybooking_home_navbar_integrated' , array(
 			    'default'   => '1',
 			    'transport' => 'refresh',
-          'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')			    
+          'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 			) );
 
 			$wp_customize->add_control( 'mybooking_home_navbar_integrated',
@@ -1169,7 +1173,7 @@ class MyBookingCustomizer {
 			   array(
 			      'default' => '0',
 			      'transport' => 'refresh',
-            'sanitize_callback' => array( $this, 'slug_sanitize_radio')	
+            'sanitize_callback' => array( $this, 'slug_sanitize_radio')
 			   )
 			);
 
@@ -1186,7 +1190,6 @@ class MyBookingCustomizer {
 			      )
 			   )
 			);
-
 		}
 
 
@@ -1195,8 +1198,8 @@ class MyBookingCustomizer {
 		 *
      */
 
-    private function customize_header_section( $wp_customize ) {
-
+    private function customize_header_section( $wp_customize )
+		{
 			// Section
 			$wp_customize->add_section(
 				'mybooking_theme_header_options',
@@ -1474,8 +1477,8 @@ class MyBookingCustomizer {
 		 *
      */
 
-    private function customize_footer_section( $wp_customize ) {
-
+    private function customize_footer_section( $wp_customize )
+		{
 			// == Section
 			$wp_customize->add_section(
 				'mybooking_theme_footer_options',
@@ -1513,7 +1516,6 @@ class MyBookingCustomizer {
 			      )
 			   )
 			);
-
 		}
 
 
@@ -1523,8 +1525,8 @@ class MyBookingCustomizer {
 		 *
 		 *	Triggered only in Advanced Mode
      */
-		 private function customize_selector_section( $wp_customize ) {
-
+		 private function customize_selector_section( $wp_customize )
+		 {
 					 // == Section
 	 	 			$wp_customize->add_section(
 	 	 				'mybooking_theme_selector_options',
@@ -1623,39 +1625,39 @@ class MyBookingCustomizer {
 		 *	Homepage Settings section
      */
 
-    private function customize_home_section( $wp_customize ) {
-
+    private function customize_home_section( $wp_customize )
+		{
 			// == Content section positioning and visibility
 
 			// --Positioning
 
 			// Setting
-			$wp_customize->add_setting( 'mybooking_home_content_position',
-				array(
-					'default'           => '1',
-					'type'              => 'theme_mod',
-					'capability'        => 'edit_theme_options',
-					'sanitize_callback' => array( $this, 'slug_sanitize_select')
-				)
-			);
+			// $wp_customize->add_setting( 'mybooking_home_content_position',
+			// 	array(
+			// 		'default'           => '1',
+			// 		'type'              => 'theme_mod',
+			// 		'capability'        => 'edit_theme_options',
+			// 		'sanitize_callback' => array( $this, 'slug_sanitize_select')
+			// 	)
+			// );
 
 			// Control
-			$wp_customize->add_control( 'mybooking_home_content_position',
-				array(
-					'label'       => _x( 'Default content area', 'customizer_home', 'mybooking' ),
-					'description' => _x( 'Get control of default content section position and visibility. Shows WordPress editor\'s content', 'customizer_home', 'mybooking' ),
-
-					'section'     => 'static_front_page',
-					'settings'    => 'mybooking_home_content_position',
-					'type'        => 'select',
-					'choices'     => array(
-						'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
-						'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
-						'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
-						'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
-					),
-				)
-			);
+			// $wp_customize->add_control( 'mybooking_home_content_position',
+			// 	array(
+			// 		'label'       => _x( 'Default content area', 'customizer_home', 'mybooking' ),
+			// 		'description' => _x( 'Get control of default content section position and visibility. Shows WordPress editor\'s content', 'customizer_home', 'mybooking' ),
+			//
+			// 		'section'     => 'static_front_page',
+			// 		'settings'    => 'mybooking_home_content_position',
+			// 		'type'        => 'select',
+			// 		'choices'     => array(
+			// 			'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
+			// 			'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
+			// 			'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
+			// 			'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
+			// 		),
+			// 	)
+			// );
 
 			// --Visibility
 
@@ -1681,31 +1683,31 @@ class MyBookingCustomizer {
 			// --Positioning
 
 			// Setting
-			$wp_customize->add_setting( 'mybooking_home_content_widgets_position',
-				array(
-					'default'           => '2',
-					'type'              => 'theme_mod',
-					'capability'        => 'edit_theme_options',
-					'sanitize_callback' => array( $this, 'slug_sanitize_select')
-				)
-			);
+			// $wp_customize->add_setting( 'mybooking_home_content_widgets_position',
+			// 	array(
+			// 		'default'           => '2',
+			// 		'type'              => 'theme_mod',
+			// 		'capability'        => 'edit_theme_options',
+			// 		'sanitize_callback' => array( $this, 'slug_sanitize_select')
+			// 	)
+			// );
 
 			// Control
-			$wp_customize->add_control( 'mybooking_home_content_widgets_position',
-				array(
-					'label'       => _x( 'Widgets area', 'customizer_home', 'mybooking' ),
-					'description' => _x( 'Get control of Widgets section position and visibility. Shows three widget areas called Home Content 1, 2 and 3', 'customizer_home', 'mybooking' ),
-					'section'     => 'static_front_page',
-					'settings'    => 'mybooking_home_content_widgets_position',
-					'type'        => 'select',
-					'choices'     => array(
-						'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
-						'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
-						'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
-						'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
-					),
-				)
-			);
+			// $wp_customize->add_control( 'mybooking_home_content_widgets_position',
+			// 	array(
+			// 		'label'       => _x( 'Widgets area', 'customizer_home', 'mybooking' ),
+			// 		'description' => _x( 'Get control of Widgets section position and visibility. Shows three widget areas called Home Content 1, 2 and 3', 'customizer_home', 'mybooking' ),
+			// 		'section'     => 'static_front_page',
+			// 		'settings'    => 'mybooking_home_content_widgets_position',
+			// 		'type'        => 'select',
+			// 		'choices'     => array(
+			// 			'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
+			// 			'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
+			// 			'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
+			// 			'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
+			// 		),
+			// 	)
+			// );
 
 			// --Visibility
 
@@ -1732,31 +1734,31 @@ class MyBookingCustomizer {
 			// --Positioning
 
 			// Setting
-			$wp_customize->add_setting( 'mybooking_home_news_position',
-				array(
-					'default'           => '3',
-					'type'              => 'theme_mod',
-					'capability'        => 'edit_theme_options',
-					'sanitize_callback' => array( $this, 'slug_sanitize_select')
-				)
-			);
+			// $wp_customize->add_setting( 'mybooking_home_news_position',
+			// 	array(
+			// 		'default'           => '3',
+			// 		'type'              => 'theme_mod',
+			// 		'capability'        => 'edit_theme_options',
+			// 		'sanitize_callback' => array( $this, 'slug_sanitize_select')
+			// 	)
+			// );
 
 			// Control
-			$wp_customize->add_control( 'mybooking_home_news_position',
-				array(
-					'label'       => _x( 'News area', 'customizer_home', 'mybooking' ),
-					'description' => _x( 'Get control of News section position and visibility. Shows last three posts of Home Page category', 'customizer_home', 'mybooking' ),
-					'section'     => 'static_front_page',
-					'settings'    => 'mybooking_home_news_position',
-					'type'        => 'select',
-					'choices'     => array(
-						'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
-						'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
-						'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
-						'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
-					),
-				)
-			);
+			// $wp_customize->add_control( 'mybooking_home_news_position',
+			// 	array(
+			// 		'label'       => _x( 'News area', 'customizer_home', 'mybooking' ),
+			// 		'description' => _x( 'Get control of News section position and visibility. Shows last three posts of Home Page category', 'customizer_home', 'mybooking' ),
+			// 		'section'     => 'static_front_page',
+			// 		'settings'    => 'mybooking_home_news_position',
+			// 		'type'        => 'select',
+			// 		'choices'     => array(
+			// 			'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
+			// 			'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
+			// 			'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
+			// 			'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
+			// 		),
+			// 	)
+			// );
 
 			// --Visibility
 
@@ -1777,51 +1779,52 @@ class MyBookingCustomizer {
 			   )
 			);
 
-			// == Testimonials section positioning and visibility
+			// == Widgets section positioning and visibility
 
 			// --Positioning
 
 			// Setting
-			$wp_customize->add_setting( 'mybooking_home_testimonial_carousel_position',
-				array(
-					'default'           => '4',
-					'type'              => 'theme_mod',
-					'capability'        => 'edit_theme_options',
-					'sanitize_callback' => array( $this, 'slug_sanitize_select')
-				)
-			);
+			// $wp_customize->add_setting( 'mybooking_home_bottom_widgets_position',
+			// 	array(
+			// 		'default'           => '2',
+			// 		'type'              => 'theme_mod',
+			// 		'capability'        => 'edit_theme_options',
+			// 		'sanitize_callback' => array( $this, 'slug_sanitize_select')
+			// 	)
+			// );
 
 			// Control
-			$wp_customize->add_control( 'mybooking_home_testimonial_carousel_position',
-				array(
-					'label'       => _x( 'Testimonials area', 'customizer_home', 'mybooking' ),
-					'description' => _x( 'Get control of Testimonials section position and visibility (also the enables Testimonials post type)', 'customizer_home', 'mybooking' ),
-					'section'     => 'static_front_page',
-					'settings'    => 'mybooking_home_testimonial_carousel_position',
-					'type'        => 'select',
-					'choices'     => array(
-						'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
-						'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
-						'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
-						'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
-					),
-				)
-			);
+			// $wp_customize->add_control( 'mybooking_home_bottom_widgets_position',
+			// 	array(
+			// 		'label'       => _x( 'Widgets area', 'customizer_home', 'mybooking' ),
+			// 		'description' => _x( 'Get control of Widgets section position and visibility. Shows three widget areas called Home Content 1, 2 and 3', 'customizer_home', 'mybooking' ),
+			// 		'section'     => 'static_front_page',
+			// 		'settings'    => 'mybooking_home_bottom_widgets_position',
+			// 		'type'        => 'select',
+			// 		'choices'     => array(
+			// 			'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
+			// 			'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
+			// 			'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
+			// 			'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
+			// 		),
+			// 	)
+			// );
 
 			// --Visibility
 
 			// Setting
-			$wp_customize->add_setting( 'mybooking_home_testimonial_carousel_visibility' , array(
+			$wp_customize->add_setting( 'mybooking_home_bottom_widgets_visibility' , array(
 			    'default'   => '1',
 			    'transport' => 'refresh',
 			    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 			) );
 
 			// Control
-			$wp_customize->add_control( 'mybooking_home_testimonial_carousel_visibility',
+			$wp_customize->add_control( 'mybooking_home_bottom_widgets_visibility',
 			   array(
-			      'label' => _x( 'Activate testimonials', 'customizer_home', 'mybooking' ),
+			      'label' => _x( 'Activate home bottom widgets', 'customizer_home', 'mybooking' ),
 			      'section'  => 'static_front_page',
+			      'priority' => 10,
 			      'type'=> 'checkbox',
 			      'capability' => 'edit_theme_options',
 			   )
@@ -1838,8 +1841,8 @@ class MyBookingCustomizer {
 		 *	Site Identity WordPress default section
      */
 
-		 private function customize_identity_section( $wp_customize ) {
-
+		 private function customize_identity_section( $wp_customize )
+		 {
 			 	// -- Logo Height
 
 	 			// Setting
@@ -1863,10 +1866,8 @@ class MyBookingCustomizer {
 							    'max' => 150,
 							    'step' => 2,
 							  ),
-
 	 			   )
 	 			);
-
 		 }
 
 
@@ -1877,17 +1878,16 @@ class MyBookingCustomizer {
 		 *
 		 * @param $checked Slug to sanitize
 		 */
-    function slug_sanitize_radio( $input, $setting ){
-      
+    function slug_sanitize_radio( $input, $setting )
+		{
         //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
         $input = sanitize_key($input);
 
-        //get the list of possible radio box options 
+        //get the list of possible radio box options
         $choices = $setting->manager->get_control( $setting->id )->choices;
-                          
+
         //return input if valid or return default option
-        return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
-          
+        return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
     }
 
 		/**
@@ -1895,7 +1895,8 @@ class MyBookingCustomizer {
 		 *
 		 * @param $checked Slug to sanitize
 		 */
-		function slug_sanitize_checkbox( $checked ) {
+		function slug_sanitize_checkbox( $checked )
+		{
 		  // Boolean check.
 		  return ( ( isset( $checked ) && true == $checked ) ? true : false );
 		}
@@ -1908,8 +1909,8 @@ class MyBookingCustomizer {
 		 * @param WP_Customize_Setting $setting Setting instance.
 		 * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
 		 */
-		function slug_sanitize_select( $input, $setting ) {
-
+		function slug_sanitize_select( $input, $setting )
+		{
 			// Ensure input is a slug (lowercase alphanumeric characters, dashes and underscores are allowed only).
 			$input = sanitize_key( $input );
 
@@ -1918,19 +1919,20 @@ class MyBookingCustomizer {
 
 			// If the input is a valid key, return it; otherwise, return the default.
 			return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-
 		}
 
     /**
      * RGBA color sanitization function
      */
-		function slug_sanitize_rgba( $color ) {
+		function slug_sanitize_rgba( $color )
+		{
 		    if ( empty( $color ) || is_array( $color ) )
-		        return 'rgba(0,0,0,0)';
+		    return 'rgba(0,0,0,0)';
 
 		    // If string does not start with 'rgba', then treat as hex
 		    // sanitize the hex color and finally convert hex to rgba
-		    if ( false === strpos( $color, 'rgba' ) ) {
+		    if ( false === strpos( $color, 'rgba' ) )
+				{
 		        return sanitize_hex_color( $color );
 		    }
 
@@ -1942,10 +1944,9 @@ class MyBookingCustomizer {
 
 		// ------------ Other callbacks
 
-		function booking_forms_active_callback() {
-
+		function booking_forms_active_callback()
+		{
 			$options_advanced_mode = get_theme_mod( 'mybooking_colors_advanced', '0' );
-
 			return ($options_advanced_mode == '1');
 		}
 

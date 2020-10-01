@@ -3,7 +3,7 @@
 *		MAIN INDEX PAGE
 *  	---------------
 *
-* 	@version 0.0.6
+* 	@version 0.0.7
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.2
@@ -17,6 +17,8 @@
 *		- Added right sidebar
 *		- Added pagination hook
 *		- Added no-content message
+*		Version 0.0.7
+*		- Template part route updated
 */
 
 // Exit if accessed directly.
@@ -32,7 +34,7 @@ get_header(); ?>
 
 					<?php if ( have_posts() ) : ?>
 						<?php while ( have_posts() ) : the_post(); ?>
-							<?php get_template_part( 'mybooking-parts/loops/mybooking-content-blog' ); ?>
+							<?php get_template_part( 'mybooking-parts/blog/mybooking-content-blog' ); ?>
 						<?php endwhile; ?>
 					<?php else : ?>
 

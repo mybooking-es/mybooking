@@ -253,6 +253,10 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 
 ### 1.0.0
 
-#### Fixed
-- Testimonials quotes alignment
-- Moved theme settings under Appearance menu
+#### Updated
+- Custom Post Types are no more on the theme, they moved to the plugin
+- Vehicles CPT and loop will be a separated plugin in the future
+- Moved theme settings under Appearance menu and CPT configuration to the plugin settings
+
+#### Added
+- New widgets area at home's bottom to make room for Testimonials shortcode and anything else

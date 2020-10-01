@@ -3,7 +3,7 @@
 *		MYBOOKING THEME SETUP
 *  	---------------------
 *
-* 	@version 0.0.5
+* 	@version 0.0.6
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.0
@@ -13,6 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Set the content width based on the theme's design and stylesheet.
+// TODO: check this condition because we don't know what exactly does... 
 if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
@@ -117,10 +118,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		* Add support for Woocommerce
 		*
 		*/
-		add_action( 'after_setup_theme', 'woocommerce_support' );
-		function woocommerce_support() {
-		   add_theme_support( 'woocommerce' );
-		}
+		add_theme_support( 'woocommerce' );
 
 		/*
 		* Gutenberg support
