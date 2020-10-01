@@ -115,7 +115,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 					'width'         => 2000,
 					'height'        => 1200,
 					'flex-height'   => true
-				)
+				);
 
 		add_theme_support( 'custom-header', $custom_header_args );
 

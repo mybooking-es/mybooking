@@ -154,12 +154,6 @@
 		  register_setting("mybooking_theme_settings_group_contact",
 		  								 "mybooking_theme_settings_contact");
 
-		  register_setting("mybooking_theme_settings_group_options_global",
-		  								 "mybooking_theme_settings_options_global");
-
-		  register_setting("mybooking_theme_settings_group_promo",
-		  								 "mybooking_theme_settings_promo");
-
 		  // Sections
 		  add_settings_section("company_info_section",
 		  										 _x("Company", 'theme_settings', 'mybooking'),
@@ -169,16 +163,6 @@
 
 		  add_settings_section("contact_section",
 		                       _x("Contact Page", 'theme_settings', 'mybooking'),
-		                       '',
-		                       "settings");
-
-		  add_settings_section("options_global_section",
-		                       _x("Global Options", 'theme_settings', 'mybooking'),
-		                       '',
-		                       "settings");
-
-		  add_settings_section("promo_section",
-		                       _x("Promotions", 'theme_settings', 'mybooking'),
 		                       '',
 		                       "settings");
 
@@ -289,20 +273,6 @@
 		                     "settings",
 		                     "contact_section");
 
-		  // == Promos
-		  add_settings_field("promo_popup_active",
-		                     _x('Activate promotion pop-up', 'theme_settings', 'mybooking'),
-		                     array($this, 'field_mybooking_theme_promo_popup_active_callback'),
-		                     "settings",
-		                     "promo_section");
-
-		  // == Global
-		  add_settings_field("global_vehicle_active",
-		                     _x('Activate vehicles module', 'theme_settings', 'mybooking'),
-		                     array($this, 'field_mybooking_theme_global_vehicle_active_callback'),
-		                     "settings",
-		                     "options_global_section");
-
 		}
 
 		// -------------------------- Settings page -------------------------------
@@ -314,103 +284,72 @@
 		 * setting_sections :Plugin menu slug
 		 *
 		 * <?php settings_fields('mybooking_plugin_settings_group'); ?>
-*/
-public function mybooking_theme_settings_page() {
+		 */
+		public function mybooking_theme_settings_page() {
 
-if (!current_user_can('edit_pages'))
-wp_die(__("Access forbidden", "theme_settings", 'mybooking'));
+			if (!current_user_can('edit_pages')) {
+			  wp_die(__("Access forbidden", "theme_settings", 'mybooking'));
+      }
 
-?>
-<div class="wrap">
-  <h1><?php echo _x("MyBooking Theme Setup", 'theme_settings', 'mybooking') ?></h1>
+		?>
+			<div class="wrap">
+			  <h1><?php echo _x("MyBooking Theme Setup", 'theme_settings', 'mybooking') ?></h1>
 
-  <?php
-	            $active_tab = isset( $_GET[ 'tab' ] ) ? sanitize_title( $_GET[ 'tab' ] ) : 'company_options';
-	            $tabs = array('company_options', 'contact', 'promotions', 'global_settings');
-	            if ( !in_array( $active_tab, $tabs) ) {
-	            	$active_tab = 'company_options';
-	            }
-	        ?>
+			  <?php
+				            $active_tab = isset( $_GET[ 'tab' ] ) ? sanitize_title( $_GET[ 'tab' ] ) : 'company_options';
+				            $tabs = array('company_options', 'contact');
+				            if ( !in_array( $active_tab, $tabs) ) {
+				            	$active_tab = 'company_options';
+				            }
+				        ?>
 
-  <h2 class="nav-tab-wrapper">
-    <a href="?page=settings&tab=company_options"
-      class="nav-tab <?php echo $active_tab == 'company_options' ? 'nav-tab-active' : ''; ?>">
-      <?php echo _x("My company", 'theme_settings', 'mybooking') ?>
-    </a>
-    <a href="?page=settings&tab=contact"
-      class="nav-tab <?php echo $active_tab == 'contact' ? 'nav-tab-active' : ''; ?>">
-      <?php echo _x("Contact Page", 'theme_settings', 'mybooking') ?>
-    </a>
-    <a href="?page=settings&tab=promotions"
-      class="nav-tab <?php echo $active_tab == 'promotions' ? 'nav-tab-active' : ''; ?>">
-      <?php echo _x("Promotions", 'theme_settings', 'mybooking') ?>
-    </a>
-    <a href="?page=settings&tab=global_settings"
-      class="nav-tab <?php echo $active_tab == 'global_settings' ? 'nav-tab-active' : ''; ?>">
-      <?php echo _x("Global Settings", 'theme_settings', 'mybooking') ?>
-    </a>
-  </h2>
+			  <h2 class="nav-tab-wrapper">
+			    <a href="?page=settings&tab=company_options"
+			      class="nav-tab <?php echo $active_tab == 'company_options' ? 'nav-tab-active' : ''; ?>">
+			      <?php echo _x("My company", 'theme_settings', 'mybooking') ?>
+			    </a>
+			    <a href="?page=settings&tab=contact"
+			      class="nav-tab <?php echo $active_tab == 'contact' ? 'nav-tab-active' : ''; ?>">
+			      <?php echo _x("Contact Page", 'theme_settings', 'mybooking') ?>
+			    </a>
+			  </h2>
 
-  <?php settings_errors(); ?>
+			  <?php settings_errors(); ?>
 
-  <form action="options.php" method="POST">
-    <?php
+			  <form action="options.php" method="POST">
+			    <?php
 
-	             if ($active_tab == 'company_options') {
-	            ?>
-    <p><?php echo _x('It is used on <b>TopBar</b>, <b>Footer</b> and <b>Contact Page</b> to render <u>company information</u>.',
-	               								  'theme_settings', 'mybooking')?></p>
-    <?php
-	             	 settings_fields('mybooking_theme_settings_group_company_info');
-	             	 echo '<table class="form-table">';
-	             	 do_settings_fields('settings', 'company_info_section');
-	             	 echo '</table>';
-	             }
+				             if ($active_tab == 'company_options') {
+				            ?>
+			    <p><?php echo _x('It is used on <b>TopBar</b>, <b>Footer</b> and <b>Contact Page</b> to render <u>company information</u>.',
+				               								  'theme_settings', 'mybooking')?></p>
+			    <?php
+				             	 settings_fields('mybooking_theme_settings_group_company_info');
+				             	 echo '<table class="form-table">';
+				             	 do_settings_fields('settings', 'company_info_section');
+				             	 echo '</table>';
+				             }
 
-	             if ($active_tab == 'contact') {
-	            ?>
-    <p><?php echo _x('It is used by <b>MyBooking Contact</b> template to render a full contact page.',
-	               								  'theme_settings', 'mybooking')?></p>
-    <?php
+				             if ($active_tab == 'contact') {
+				            ?>
+			    <p><?php echo _x('It is used by <b>MyBooking Contact</b> template to render a full contact page.',
+				               								  'theme_settings', 'mybooking')?></p>
+			    <?php
 
-	             	 settings_fields('mybooking_theme_settings_group_contact');
-	             	 echo '<table class="form-table">';
-	             	 do_settings_fields('settings', 'contact_section');
-	             	 echo '</table>';
+				             	 settings_fields('mybooking_theme_settings_group_contact');
+				             	 echo '<table class="form-table">';
+				             	 do_settings_fields('settings', 'contact_section');
+				             	 echo '</table>';
 
-	             }
+				             }
 
-	             if ($active_tab == 'promotions') {
-	            ?>
-    <p><?php echo _x('Promotions module.',
-	               								  'theme_settings', 'mybooking')?></p>
-    <?php
+										echo '<input type="hidden" name="tab" value="' . esc_attr( $active_tab ) . '" />';
+                    submit_button()
 
-	             	 settings_fields('mybooking_theme_settings_group_promo');
-	             	 echo '<table class="form-table">';
-	             	 do_settings_fields('settings', 'promo_section');
-	             	 echo '</table>';
+				            ?>
 
-	             }
-
-	             if ($active_tab == 'global_settings') {
-	            ?>
-    <p><?php echo _x('Global settings.',
-	               								  'theme_settings', 'mybooking')?></p>
-    <?php
-	             	 settings_fields('mybooking_theme_settings_group_options_global');
-	             	 echo '<table class="form-table">';
-	             	 do_settings_fields('settings', 'options_global_section');
-	             	 echo '</table>';
-	             }
-
-	             echo '<input type="hidden" name="tab" value="' . esc_attr( $active_tab ) . '" />';
-	             submit_button();
-
-	          ?>
-
-  </form>
-</div>
+			  </form>
+			</div>
 <?php
 		}
 
@@ -524,27 +463,6 @@ wp_die(__("Access forbidden", "theme_settings", 'mybooking'));
 
 		}
 
-		// ------------------ Promotion fields callbacks --------------------------
-
-		public function field_mybooking_theme_promo_popup_active_callback() {
-
-			$this->checkbox_field( "mybooking_theme_settings_promo", "promo_popup_active",
-														 _x( 'Activate <b>Promotion Pop-ups</b> Custom Post Type in order to create promotions.', 'theme_settings', 'mybooking')	);
-
-		}
-
-		// ------------------ Global fields callbacks --------------------------
-
-		/**
-		 * Fields callback
-		 */
-		public function field_mybooking_theme_global_vehicle_active_callback() {
-
-			$this->checkbox_field( "mybooking_theme_settings_options_global", "global_vehicle_active",
-														 _x( 'Activate <b>Vehicles</b> Custom Post Type in order to create Fleet Page and Offers.', 'theme_settings', 'mybooking')	);
-
-		}
-
 		// ---------------------
 
 		private function textarea_field( $option_group, $field, $description ) {
@@ -573,24 +491,6 @@ wp_die(__("Access forbidden", "theme_settings", 'mybooking'));
 		  }
 
 		  echo "<input type='text' name='".$option_group."[$field]' value='$value' class='regular-text' />";
-		  echo "<p class=\"description\">$description</p>";
-
-		}
-
-		private function checkbox_field( $option_group, $field, $description) {
-
-			$settings = (array) get_option( $option_group );
-		  if (array_key_exists($field, $settings)) {
-		    $value = esc_attr( $settings[$field] );
-		  }
-		  else {
-        $value = '';
-		  }
-
-		  $checked = ($value == '1') ? 'checked' : '';
-
-      echo "<input type='hidden' name='".$option_group."[$field]' value=''/>";
-		  echo "<input type='checkbox' name='".$option_group."[$field]' value='1' $checked class='regular-text' />";
 		  echo "<p class=\"description\">$description</p>";
 
 		}

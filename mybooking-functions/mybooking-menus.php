@@ -14,11 +14,11 @@
 defined( 'ABSPATH' ) || exit;
 
 function mybooking_extra_menus() {
-register_nav_menus(
-array(
-   'top-menu' => __( 'Menú Topbar' )
-   )
- );
+	register_nav_menus(
+	array(
+	   'top-menu' => _x( 'Topbar Menu', 'nav_menus', 'mybooking' )
+	   )
+	 );
 }
 add_action( 'init', 'mybooking_extra_menus' );
 ?>
