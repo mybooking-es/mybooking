@@ -43,8 +43,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 
 		// Override plugins text-domain
 		// https://gist.github.com/justintadlock/7a605c29ae26c80878d0
-		load_textdomain( 'mybooking-wp-plugin', '' );
-		load_textdomain( 'woocommerce', '' );
+		load_plugin_textdomain( 'mybooking-wp-plugin', get_template_directory() . '/languages' );
 
 		/*
 		* Add default posts and comments RSS feed links to head.
