@@ -15,7 +15,6 @@ defined( 'ABSPATH' ) || exit;
 $mybooking_includes = array(
   '/inc/theme-settings.php',                  // Initialize theme default settings.
 	'/inc/setup.php',                           // Theme setup and custom theme supports.
-  '/inc/custom-header.php',                   // Custom header  
   '/mybooking-options/mybooking-settings.php', // Theme settings
   '/mybooking-functions/mybooking-menus.php',  // Theme menus
   '/mybooking-functions/mybooking-categories.php', // Theme categories
