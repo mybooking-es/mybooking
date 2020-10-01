@@ -18,20 +18,19 @@ defined( 'ABSPATH' ) || exit;
     <div class="col text-center">
       <?php $company_trade_name = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_trade_name");
       if ($company_trade_name !== '') { ?>
-      <p class="footer_copyright">
-        <small>
-          &copy; <?php echo date('Y'); ?> <?php echo $company_trade_name ?>
-          <span> | <?php _e('Powered by', 'mybooking') ?> <a href="https://mybooking.es/"
-              target="_blank">mybooking</a></span>
-        </small>
-      </p>
+        <p class="footer_copyright">
+          <small>
+            <?php printf( _x( '&copy; %s %s | <span>Powered by <a href="%s" target="_blank">mybooking</a></span>', 'footer_credits', 'mybooking' ), 
+                          date('Y'), $company_trade_name, 'https://mybooking.es' ) ?>
+          </small>
+        </p>
       <?php } else { ?>
-      <p class="footer_copyright">
-        <small>
-          <span><?php _e('Powered by', 'mybooking') ?> <a href="https://mybooking.es/"
-              target="_blank">mybooking</a></span>
-        </small>
-      </p>
+        <p class="footer_copyright">
+          <small>
+            <?php printf( _x( '&copy; %s | <span>Powered by <a href="%s" target="_blank">mybooking</a></span>', 'footer_credits', 'mybooking' ), 
+                          date('Y'), 'https://mybooking.es' ) ?>
+          </small>
+        </p>
       <?php } ?>
 
     </div>

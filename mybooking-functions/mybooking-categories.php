@@ -18,12 +18,9 @@ defined( 'ABSPATH' ) || exit;
 *
 */
 function mybooking_create_categories() {
-    if( file_exists( ABSPATH . '/wp-admin/includes/taxonomy.php' ) ) :
-      require_once( ABSPATH . '/wp-admin/includes/taxonomy.php' );
-        if ( !category_exists( __('Mybooking Home') ) ) {
-        	wp_create_category( __('Mybooking Home') );
-        }
-    endif;
+  if ( !term_exists( 'Mybooking Home' ) ) {
+  	wp_create_category( 'Mybooking Home' );
+  }
 }
 add_action( 'after_setup_theme', 'mybooking_create_categories' );
 

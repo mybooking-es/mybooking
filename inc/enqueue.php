@@ -26,6 +26,10 @@ function mybooking_theme_enqueue_styles() {
   // == Load JS
   wp_enqueue_script( 'mybooking-scripts', get_stylesheet_directory_uri() . '/js/theme.min.js', array( 'jquery' ), $the_theme->get( 'Version' ), true );
 
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
 }
 add_action( 'wp_enqueue_scripts', 'mybooking_theme_enqueue_styles' );
 

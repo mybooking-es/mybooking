@@ -1951,8 +1951,3 @@ class MyBookingCustomizer {
 		}
 
 }
-
-require_once('customizer/alpha-color-picker.php');
-require_once('customizer/class-font-selector.php');
-require_once('customizer/gallery-control.php');
-MyBookingCustomizer::getInstance();

@@ -190,20 +190,6 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 }
 
 /**
- * Mybooking settings & functions
- *
- */
-
-// Prepare the theme settings page
-require_once( get_template_directory() . '/mybooking-options/mybooking-settings.php' );
-MyBookingThemeSettings::getInstance();
-
-// Functions
-require_once( get_template_directory() . '/mybooking-functions/mybooking-menus.php' );
-require_once( get_template_directory() . '/mybooking-functions/mybooking-categories.php' );
-
-
-/**
  * Post excerpts
  *
  */
