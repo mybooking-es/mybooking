@@ -27,8 +27,8 @@ defined( 'ABSPATH' ) || exit;
 <body <?php body_class(); ?>>
   <?php do_action( 'wp_body_open' ); ?>
   <?php
-    $navbar_integrated = get_theme_mod( "mybooking_home_navbar_integrated" );
-    $navbar_class = ($navbar_integrated == 1 ? 'nav-container-absolute' : '');
+    $navbar_integrated = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_navbar_integrated" );
+    $navbar_class = ($navbar_integrated == '1' ? 'nav-container-absolute' : '');
 
   ?>
   <div class="site" id="page">
@@ -41,14 +41,14 @@ defined( 'ABSPATH' ) || exit;
         href="#content"><?php esc_html_x( 'Skip to content', 'header', 'mybooking' ); ?></a>
 
       <!-- Topbar -->
-      <?php $topbar_active = get_theme_mod( "mybooking_global_topbar" );
-        if ( $topbar_active == 1 ) {
+      <?php $topbar_active = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_global_topbar" );
+        if ( $topbar_active == '1' ) {
             get_template_part( 'mybooking-parts/site/mybooking-top-bar' );
           } ?>
 
       <!-- Navigation -->
-      <?php $options_navigation = get_theme_mod( 'mybooking_global_navigation_layout' );
-        if ( $options_navigation == 0 ) {
+      <?php $options_navigation = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_global_navigation_layout" );
+        if ( $options_navigation == '0' ) {
             get_template_part( 'mybooking-parts/site/mybooking-navigation-right' );
           } else {
             get_template_part( 'mybooking-parts/site/mybooking-navigation-left' );

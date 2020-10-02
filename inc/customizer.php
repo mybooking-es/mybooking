@@ -306,25 +306,34 @@ class MyBookingCustomizer {
 			{
 		  	$this->theme_options = array();
 
-		  	// Home header visibility
-		  	$this->theme_options['mybooking_home_header_visibility'] = get_theme_mod( "mybooking_home_header_visibility", true );
-
-		  	// Home content visibility
-		  	$this->theme_options['mybooking_home_content_visibility'] = get_theme_mod( "mybooking_home_content_visibility", true );
-
-				// Home Content Widgets visibility
-				$this->theme_options['mybooking_home_content_widgets_visibility'] = get_theme_mod( 'mybooking_home_content_widgets_visibility', true );
-
-		  	// Home News visibility
-		  	$this->theme_options['mybooking_home_news_visibility'] = get_theme_mod( 'mybooking_home_news_visibility', true );
-
-				// Home Bottom Widgets visibility
-				$this->theme_options['mybooking_home_bottom_widgets_visibility'] = get_theme_mod( 'mybooking_home_bottom_widgets_visibility', true );
-
 		  	// Topbar Global Message
-		  	$this->theme_options['mybooking_global_topbar_message'] = get_theme_mod( "mybooking_global_topbar_message", true );
+		  	$this->theme_options['mybooking_global_topbar_message'] = get_theme_mod( "mybooking_global_topbar_message", '' );
 
-		  	// Header
+		  	// TopBar Global [contact and TopBar Menu]
+		  	$this->theme_options['mybooking_global_topbar'] = get_theme_mod( "mybooking_global_topbar", '1');
+
+		  	// Mobile Menu : "0" on right "1" on left
+		  	$this->theme_options['mybooking_global_navigation_layout'] = get_theme_mod( "mybooking_global_navigation_layout", "0" );
+
+		  	// Navigation at Home Template: "1" overlapped with header and transparent - "0" background color
+		  	$this->theme_options['mybooking_home_navbar_integrated'] = get_theme_mod( "mybooking_home_navbar_integrated", "1" );
+
+		  	// Home header visibility at Home Template: "1" visible "0" not visible
+		  	$this->theme_options['mybooking_home_header_visibility'] = get_theme_mod( "mybooking_home_header_visibility", "1" );
+
+		  	// Home content visibility at Home Template: "1" visible "0" not visible
+		  	$this->theme_options['mybooking_home_content_visibility'] = get_theme_mod( "mybooking_home_content_visibility", "1" );
+
+				// Home Content Widgets visibility at Home Template: "1" visible "0" not visible
+				$this->theme_options['mybooking_home_content_widgets_visibility'] = get_theme_mod( 'mybooking_home_content_widgets_visibility', "1" );
+
+		  	// Home News visibility at Home Template: "1" visible "0" not visible 
+		  	$this->theme_options['mybooking_home_news_visibility'] = get_theme_mod( 'mybooking_home_news_visibility', "1" );
+
+				// Home Bottom Widgets visibility at Home Template: "1" visible "0" not visible 
+				$this->theme_options['mybooking_home_bottom_widgets_visibility'] = get_theme_mod( 'mybooking_home_bottom_widgets_visibility', "1" );
+
+		  	// Header Background
 		  	$header_bg = get_theme_mod( 'mybooking_home_header_bg' );
 		  	$this->theme_options['mybooking_home_header_bg'] = $header_bg;
 

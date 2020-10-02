@@ -13,7 +13,7 @@
 defined( 'ABSPATH' ) || exit; ?>
 
 <?php $widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_bottom_widgets_visibility" );
-if ($widgets_visible) { ?>
+if ( $widgets_visible == "1" ) { ?>
 
   <div class="home-bottom-widgets">
     <div class="container">

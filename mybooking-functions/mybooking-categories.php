@@ -22,7 +22,7 @@ function mybooking_create_categories() {
   	wp_create_category( 'Mybooking Home' );
   }
 }
-add_action( 'after_setup_theme', 'mybooking_create_categories' );
+add_action( 'admin_init', 'mybooking_create_categories' );
 
 /**
 * Custom category list

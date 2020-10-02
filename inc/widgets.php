@@ -52,7 +52,7 @@ function mybooking_widgets_init() {
 
 	// Home Widgets
 	$widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_content_widgets_visibility" );
-	if ( $widgets_visible )
+	if ( $widgets_visible == "1")
 	{
 		register_sidebar(
 			array(
@@ -84,7 +84,7 @@ function mybooking_widgets_init() {
 	}
 
 	$widgets_bottom_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_bottom_widgets_visibility" );
-	if ( $widgets_bottom_visible )
+	if ( $widgets_bottom_visible == "1" )
 	{
 		register_sidebar(
 			array(

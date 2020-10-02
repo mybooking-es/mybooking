@@ -115,7 +115,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		) ) );
 
 		$custom_header_args = array(
-					'default-image' => get_parent_theme_file_uri( '/img/header.jpg' ),
+					'default-image' => get_parent_theme_file_uri( '/images/header.jpg' ),
 					'width'         => 2000,
 					'height'        => 1200,
 					'flex-height'   => true

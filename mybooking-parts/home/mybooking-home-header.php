@@ -35,7 +35,7 @@ defined( 'ABSPATH' ) || exit;
 </div>
 
 <?php $home_header_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_header_visibility" );
-if ($home_header_visible) { ?>
+if ($home_header_visible == '1') { ?>
 
 <div class="home-header">
 
