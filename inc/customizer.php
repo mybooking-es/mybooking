@@ -316,7 +316,7 @@ class MyBookingCustomizer {
 		  	$this->theme_options['mybooking_global_navigation_layout'] = get_theme_mod( "mybooking_global_navigation_layout", "0" );
 
 		  	// Navigation at Home Template: "1" overlapped with header and transparent - "0" background color
-		  	$this->theme_options['mybooking_home_navbar_integrated'] = get_theme_mod( "mybooking_home_navbar_integrated", "1" );
+		  	$this->theme_options['mybooking_home_navbar_integrated'] = get_theme_mod( "mybooking_home_navbar_integrated", "0" );
 
 		  	// Home header visibility at Home Template: "1" visible "0" not visible
 		  	$this->theme_options['mybooking_home_header_visibility'] = get_theme_mod( "mybooking_home_header_visibility", "1" );
@@ -1159,7 +1159,7 @@ class MyBookingCustomizer {
 
 			// Integration
 			$wp_customize->add_setting( 'mybooking_home_navbar_integrated' , array(
-			    'default'   => '1',
+			    'default'   => '0',
 			    'transport' => 'refresh',
           'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 			) );
