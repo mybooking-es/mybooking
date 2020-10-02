@@ -18,7 +18,7 @@
 
       <div class="modal-header">
         <h5 class="modal-title">
-          <?php echo _x( 'Modify reservation', 'renting_form_modify_reservation', 'mybooking-wp-plugin') ?></h5>
+          <?php echo _x( 'Modify reservation', 'renting_form_modify_reservation', 'mybooking') ?></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

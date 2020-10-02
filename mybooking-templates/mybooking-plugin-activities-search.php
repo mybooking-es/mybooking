@@ -10,7 +10,7 @@
               <input type="text" size="50" class="form-control"
                 <?php if ( array_key_exists('q', $args) && $args['q'] != '') { ?>value="<?php echo $args['q']?>"
                 <?php } ?> name="q" id="search_q"
-                placeholder="<?php echo _x( 'Search', 'activities_search', 'mybooking-wp-plugin' ) ?>">
+                placeholder="<?php echo _x( 'Search', 'activities_search', 'mybooking' ) ?>">
             </div>
             <div class="form-group col-md-1">
               <button type="submit" class="btn btn-primary mb-2 w-100"><i class="fa fa-search"></i>&nbsp;</button>

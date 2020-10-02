@@ -36,12 +36,12 @@ get_header();?>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">
-              <?php echo _x('Previous', 'activity_detail', 'mybooking-wp-plugin' ) ?></span>
+              <?php echo _x('Previous', 'activity_detail', 'mybooking' ) ?></span>
           </a>
           <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">
-              <?php echo _x('Next', 'activity_detail', 'mybooking-wp-plugin' ) ?></span>
+              <?php echo _x('Next', 'activity_detail', 'mybooking' ) ?></span>
           </a>
         </div>
         <div class="activity-description">
@@ -170,7 +170,7 @@ get_header();?>
     <div class="col-md-4">
       <h2 class="h5"><?php echo $args->name ?></h2>
       <p class="mt-1 text-muted">
-        <?php echo _x('Please choose your dates in the availability calendar', 'activity_detail', 'mybooking-wp-plugin' ) ?>
+        <?php echo _x('Please choose your dates in the availability calendar', 'activity_detail', 'mybooking' ) ?>
         <hr>
         <?php mybooking_engine_get_template('mybooking-plugin-activities-activity-widget.php', array('activity_id' => $args->id)) ?>
     </div>
