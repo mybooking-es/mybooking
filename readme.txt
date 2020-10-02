@@ -37,10 +37,19 @@ An answer to that question.
 
 == Changelog ==
 
+= 0.9.11 =
+* Fixed: 
+  * Sticky post
+  * Site description
+  * Comments
+
 = 0.9.10 =
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.11 =
+* Blog improvements
 
 = 0.9.10 =
 * First release
