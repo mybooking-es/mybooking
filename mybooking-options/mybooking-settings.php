@@ -3,13 +3,14 @@
 *		SETTINGS PAGE
 *  	-------------
 *
-* 	@version 0.0.6
+* 	@version 0.0.7
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
 *
 *   0.0.6
 *   - Deleted the function that creates top-level menu, in order to move settings under Appearance
+*   - Deleted Promo & Vehicles settings
 */
 
   class MyBookingThemeSettings {
@@ -79,14 +80,6 @@
 		  	$this->theme_options['contact_section_subtitle'] = $this->get_option_value( $settings, 'contact_section_subtitle');
 		  	$this->theme_options['contact_section_text'] = $this->get_option_value( $settings, 'contact_section_text');
 		  	$this->theme_options['contact_map_code'] = $this->get_option_value( $settings, 'contact_map_code');
-
-			  // Promotion
-		  	$settings = (array) get_option( 'mybooking_theme_settings_promo' );
-		  	$this->theme_options['promo_popup_active'] = $this->get_option_value( $settings, 'promo_popup_active');
-
-		  	// Global
-		  	$settings = (array) get_option( 'mybooking_theme_settings_options_global' );
-		  	$this->theme_options['global_vehicle_active'] = $this->get_option_value( $settings, 'global_vehicle_active');
 
 		  }
 		  return $this->theme_options;

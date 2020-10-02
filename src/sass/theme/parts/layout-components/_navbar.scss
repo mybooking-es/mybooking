@@ -29,12 +29,20 @@
   }
 }
 
-// Logo
+// Branding
 .custom-logo-link img {
   height: var(--custom-logo-height);
   overflow: hidden;
   object-fit: contain;
   width: auto;
+}
+
+.navbar-dark .navbar-brand {
+  color: var(--navbar-branding)!important;
+}
+
+.navbar-dark .navbar-brand:hover {
+  opacity: .5;
 }
 
 // Toggler

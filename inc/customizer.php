@@ -165,7 +165,7 @@ class MyBookingCustomizer {
     	$body_color = get_theme_mod( 'mybooking_body_color', '#212121' );
 			$logo_height = get_theme_mod( 'mybooking_logo_height', '40' );
 
-      $header_text_color = get_theme_mod('mybooking_headers_color', '#2193F2');
+      $header_text_color = get_theme_mod('mybooking_headers_color', '#424242');
 
 			$navbar_bg = get_theme_mod( 'mybooking_navbar_bg', '#ffffff');
 			$navbar_link_color = get_theme_mod( 'mybooking_navbar_link_color', '#000000' );
@@ -239,7 +239,7 @@ class MyBookingCustomizer {
 		  $custom_css.= "--body-color: ".$body_color.';';
 
       // Header color
-      $custom_css.= "--font-heading-color".$header_text_color.';';
+      $custom_css.= "--font-heading-color: ".$header_text_color.';';
 
 			// Identity
   		$custom_css.= "--custom-logo-height: ".$logo_height.'px;';
@@ -327,10 +327,10 @@ class MyBookingCustomizer {
 				// Home Content Widgets visibility at Home Template: "1" visible "0" not visible
 				$this->theme_options['mybooking_home_content_widgets_visibility'] = get_theme_mod( 'mybooking_home_content_widgets_visibility', "1" );
 
-		  	// Home News visibility at Home Template: "1" visible "0" not visible 
+		  	// Home News visibility at Home Template: "1" visible "0" not visible
 		  	$this->theme_options['mybooking_home_news_visibility'] = get_theme_mod( 'mybooking_home_news_visibility', "1" );
 
-				// Home Bottom Widgets visibility at Home Template: "1" visible "0" not visible 
+				// Home Bottom Widgets visibility at Home Template: "1" visible "0" not visible
 				$this->theme_options['mybooking_home_bottom_widgets_visibility'] = get_theme_mod( 'mybooking_home_bottom_widgets_visibility', "1" );
 
 		  	// Header Background
@@ -548,7 +548,7 @@ class MyBookingCustomizer {
 
       // Setting
       $wp_customize->add_setting( 'mybooking_headers_color' , array(
-	      'default' => '#2193F2',
+	      'default' => '#424242',
 	      'transport' => 'refresh',
 	      'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
       ) );

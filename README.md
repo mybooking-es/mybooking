@@ -251,7 +251,7 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 - Fixed missing posts default-image
 - Fixed issue with multiple word navigation items
 
-### 1.0.0
+### 0.9.10
 
 #### Updated
 - Custom Post Types are no more on the theme, they moved to the plugin
@@ -260,3 +260,6 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 
 #### Added
 - New widgets area at home's bottom to make room for Testimonials shortcode and anything else
+
+#### Fixed
+- Theme validation adjustements previous to publishing
