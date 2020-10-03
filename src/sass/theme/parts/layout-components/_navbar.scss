@@ -65,7 +65,7 @@ button.navbar-toggler:focus {
 // All menu items
 .navbar-dark .navbar-nav .nav-link {
   color: var(--navbar-link-color);
-  text-transform: uppercase;
+  text-transform: inherit;
   letter-spacing: 1px;
   font-weight: 500;
 }

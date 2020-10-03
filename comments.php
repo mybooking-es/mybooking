@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 				if ( 1 === (int) $comments_number ) {
 					printf(
 						/* translators: %s: post title */
-						esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'mybooking' ),
+						esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments', 'mybooking' ),
 						'<span>' . get_the_title() . '</span>'
 					);
 				} else {
@@ -64,17 +64,17 @@ if ( post_password_required() ) {
 
 				<nav class="comment-navigation" id="comment-nav-above">
 
-					<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'mybooking' ); ?></h1>
+					<h1 class="sr-only"><?php esc_html_x( 'Comment navigation', 'comments', 'mybooking' ); ?></h1>
 
 					<?php if ( get_previous_comments_link() ) { ?>
 						<div class="nav-previous">
-							<?php previous_comments_link( __( '&larr; Older Comments', 'mybooking' ) ); ?>
+							<?php previous_comments_link( _x( '&larr; Older Comments', 'comments', 'mybooking' ) ); ?>
 						</div>
 					<?php } ?>
 
 					<?php	if ( get_next_comments_link() ) { ?>
 						<div class="nav-next">
-							<?php next_comments_link( __( 'Newer Comments &rarr;', 'mybooking' ) ); ?>
+							<?php next_comments_link( _x( 'Newer Comments &rarr;', 'comments', 'mybooking' ) ); ?>
 						</div>
 					<?php } ?>
 
@@ -99,17 +99,17 @@ if ( post_password_required() ) {
 
 				<nav class="comment-navigation" id="comment-nav-below">
 
-					<h1 class="sr-only"><?php esc_html_e( 'Comment navigation', 'mybooking' ); ?></h1>
+					<h1 class="sr-only"><?php esc_html_x( 'Comment navigation', 'comments', 'mybooking' ); ?></h1>
 
 					<?php if ( get_previous_comments_link() ) { ?>
 						<div class="nav-previous">
-							<?php previous_comments_link( __( '&larr; Older Comments', 'mybooking' ) ); ?>
+							<?php previous_comments_link( _x( '&larr; Older Comments', 'comments', 'mybooking' ) ); ?>
 						</div>
 					<?php } ?>
 
 					<?php	if ( get_next_comments_link() ) { ?>
 						<div class="nav-next">
-							<?php next_comments_link( __( 'Newer Comments &rarr;', 'mybooking' ) ); ?>
+							<?php next_comments_link( _x( 'Newer Comments &rarr;', 'comments', 'mybooking' ) ); ?>
 						</div>
 					<?php } ?>
 

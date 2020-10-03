@@ -26707,6 +26707,9 @@ ul.social-links,
   background-color: var(--white);
   border: 1px solid var(--white); }
 
+h3.post_title {
+  font-size: 1.5rem !important; }
+
 /*
 *  HOME NEWS
 */
@@ -26735,6 +26738,9 @@ ul.social-links,
 /*
 *  SINGLE
 */
+.entry-title {
+  margin-bottom: 1rem; }
+
 .post_header {
   height: 50vh;
   overflow: hidden;
@@ -26743,17 +26749,29 @@ ul.social-links,
   background-position: center center; }
 
 .post_content {
-  background-color: #fff;
-  padding: 2rem 0 4rem 0; }
+  background-color: var(--white);
+  padding: 2rem 0 1rem 0; }
 
 .post_title {
   font-weight: 700; }
 
-h3.post_title {
-  font-size: 1.5rem !important; }
-
 .post_meta {
   margin: 1rem 0; }
+
+.edit-link > a.btn.btn-primary.post-edit-link {
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
+  min-width: 10rem;
+  text-transform: inherit;
+  font-weight: 400; }
+  .edit-link > a.btn.btn-primary.post-edit-link:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark); }
+
+.mybooking-post-edit-link.edit-link {
+  margin-top: 1.5rem; }
 
 @media (max-width: 1024px) {
   .post_header {
@@ -26764,8 +26782,26 @@ h3.post_title {
 /*
 *  COMMENTS
 */
+.comment-list {
+  margin-top: 1.5rem; }
+
+ol.comment-list {
+  list-style: none; }
+
+.comment {
+  margin-top: 1.5rem; }
+
+.comment-metadata {
+  margin-top: 0.5rem; }
+
+.comment-content {
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
 .comments-area {
-  padding: 4rem 0;
+  margin-top: 1rem;
+  padding: 2rem 0;
   border-top: 1px solid #EFEFEF; }
 
 h2.comments-title {
@@ -26811,18 +26847,35 @@ h2.comments-title {
   color: var(--brand-primary);
   background-color: var(--white);
   border: 1px solid var(--brand-primary);
-  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
-          box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
-  border-radius: 5px 5px 4px 4px;
-  padding: .375rem .75rem; }
+  border-radius: 3px;
+  padding: .375rem .75rem;
+  min-width: 10rem; }
+  .comments-area [type="button"]:hover,
+  .comments-area [type="reset"]:hover,
+  .comments-area [type="submit"]:hover,
+  .comments-area button:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark); }
 
-.comments-area [type="button"]:hover,
-.comments-area [type="reset"]:hover,
-.comments-area [type="submit"]:hover,
-.comments-area button {
-  color: var(--white);
-  background-color: var(--brand-primary);
-  border: 1px solid var(--brand-primary); }
+.edit-link > a.btn.btn-primary.comment-edit-link,
+.reply > a.btn.btn-primary.comment-reply-link {
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
+  text-transform: inherit;
+  font-weight: 400; }
+  .edit-link > a.btn.btn-primary.comment-edit-link:hover,
+  .reply > a.btn.btn-primary.comment-reply-link:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark); }
+
+.reply > a.btn.btn-primary.comment-reply-link {
+  min-width: 10rem; }
+
+.comment-respond {
+  margin-top: 1.5rem; }
 
 .site-main {
   width: 100%; }
@@ -27001,7 +27054,7 @@ button.navbar-toggler:focus {
 
 .navbar-dark .navbar-nav .nav-link {
   color: var(--navbar-link-color);
-  text-transform: uppercase;
+  text-transform: inherit;
   letter-spacing: 1px;
   font-weight: 500; }
 

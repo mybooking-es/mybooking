@@ -75,14 +75,17 @@ if ( ! function_exists( 'mybooking_entry_footer' ) ) {
 			comments_popup_link( esc_html_x( 'Leave a comment', 'entry_footer', 'mybooking' ), esc_html_x( '1 Comment', 'entry_footer', 'mybooking' ), esc_html_x( '% Comments', 'comments', 'mybooking' ) );
 			echo '</span>';
 		}
+		// Edit post link: Added classes to show as a button
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Name of current post */
 				esc_html_x( 'Edit %s', 'entry_footer', 'mybooking' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			),
-			'<span class="edit-link">',
-			'</span>'
+			'<div class="edit-link mybooking-post-edit-link">',
+			'</div>',
+			0,
+			'btn btn-primary post-edit-link'
 		);
 	}
 }
