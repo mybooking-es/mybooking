@@ -37,6 +37,10 @@ An answer to that question.
 
 == Changelog ==
 
+= 0.9.13 =
+* Added:
+  * Comments styling
+
 = 0.9.12 =
 * Fixed:
   * Multi-level nav menu (setup up to 5 levels)
@@ -52,6 +56,9 @@ An answer to that question.
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.13 =
+* Comments styling
 
 = 0.9.12 =
 * Fixed multi-level nav menu and brand title on front page
