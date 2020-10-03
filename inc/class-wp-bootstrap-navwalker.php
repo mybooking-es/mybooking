@@ -3,6 +3,7 @@
  * WP Bootstrap Navwalker
  *
  * @package WP-Bootstrap-Navwalker
+ * @see https://bootstrapious.com/p/bootstrap-multilevel-dropdown
  */
 
 // Exit if accessed directly.
