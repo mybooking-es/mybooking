@@ -37,6 +37,11 @@ An answer to that question.
 
 == Changelog ==
 
+= 0.9.12 =
+* Fixed:
+  * Multi-level nav menu (setup up to 5 levels)
+  * Brand title
+
 = 0.9.11 =
 * Fixed: 
   * Sticky post
@@ -47,6 +52,9 @@ An answer to that question.
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.12 =
+* Fixed multi-level nav menu and brand title on front page
 
 = 0.9.11 =
 * Blog improvements
