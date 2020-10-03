@@ -310,7 +310,7 @@ class MyBookingCustomizer {
 		  	$this->theme_options['mybooking_global_topbar_message'] = get_theme_mod( "mybooking_global_topbar_message", '' );
 
 		  	// TopBar Global [contact and TopBar Menu]
-		  	$this->theme_options['mybooking_global_topbar'] = get_theme_mod( "mybooking_global_topbar", '1');
+		  	$this->theme_options['mybooking_global_topbar'] = get_theme_mod( "mybooking_global_topbar", '0');
 
 		  	// Mobile Menu : "0" on right "1" on left
 		  	$this->theme_options['mybooking_global_navigation_layout'] = get_theme_mod( "mybooking_global_navigation_layout", "0" );
@@ -937,7 +937,7 @@ class MyBookingCustomizer {
 
 			// Setting
 			$wp_customize->add_setting( 'mybooking_global_topbar' , array(
-			    'default'   => '1',
+			    'default'   => '0',
 			    'transport' => 'refresh',
 			    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 			) );

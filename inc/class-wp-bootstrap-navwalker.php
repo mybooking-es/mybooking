@@ -51,8 +51,9 @@ if ( ! class_exists( 'Mybooking_WP_Bootstrap_Navwalker' ) ) {
 				$n = "\n";
 			}
 			$indent = str_repeat( $t, $depth );
-			// Default class to add to the file.
-			$classes = array( 'dropdown-menu' );
+
+			// Default class to add to the file. 
+            $classes = array( 'dropdown-menu' );
 			/**
 			 * Filters the CSS class(es) applied to a menu list element.
 			 *
@@ -137,7 +138,14 @@ if ( ! class_exists( 'Mybooking_WP_Bootstrap_Navwalker' ) ) {
 
 			// Add .dropdown or .active classes where they are needed.
 			if ( isset( $args->has_children ) && $args->has_children ) {
-				$classes[] = 'dropdown';
+				//$classes[] = 'dropdown'; 
+                // Multi-level menu updated (2020.10.03)
+				if ($depth == 0) {
+				  $classes[] = 'dropdown';
+				}
+				else {
+				  $classes[] = 'dropdown-submenu'; // dropdown-submenu dropdown
+			    }
 			}
 			if ( in_array( 'current-menu-item', $classes, true ) || in_array( 'current-menu-parent', $classes, true ) ) {
 				$classes[] = 'active';

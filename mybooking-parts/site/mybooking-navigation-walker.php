@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
     'menu_class'      => 'navbar-nav ml-auto',
     'fallback_cb'     => '',
     'menu_id'         => 'main-menu',
-    'depth'           => 3,
+    'depth'           => 5,
     'walker'          => new Mybooking_WP_Bootstrap_Navwalker(),
   )
 );

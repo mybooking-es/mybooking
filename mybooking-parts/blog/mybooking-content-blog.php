@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 
-	<div class="col-md-4">
+	<div class="col-md-6 col-lg-4">
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<div class="news_thumbnail">
 

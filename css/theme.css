@@ -25108,6 +25108,35 @@ form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-select
 .select2-container--bootstrap4 .select2-selection__clear:hover {
   background-color: #afafaf; }
 
+@media (min-width: 992px) {
+  .dropdown-submenu {
+    position: relative; }
+  /* Show horizontal arrow */
+  .dropdown-submenu > a:after {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+    float: right; }
+  .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0px;
+    margin-left: 0px; }
+  /*
+	  border-top: .3em solid;
+	  border-right: .3em solid transparent;
+	  border-bottom: 0;
+	  border-left: .3em solid transparent;
+	*/ }
+
+@media (max-width: 992px) {
+  .dropdown-submenu > .dropdown-menu.show {
+    margin: 0 10px;
+    border-radius: 0; } }
+
 /*
 these properties do not need to be edited */
 :root {
@@ -26720,6 +26749,9 @@ ul.social-links,
 .post_title {
   font-weight: 700; }
 
+h3.post_title {
+  font-size: 1.5rem !important; }
+
 .post_meta {
   margin: 1rem 0; }
 
@@ -26947,7 +26979,7 @@ h2.comments-title {
      object-fit: contain;
   width: auto; }
 
-.navbar-dark .navbar-brand {
+.navbar-dark .navbar-brand, .navbar-dark .navbar-brand a {
   color: var(--navbar-branding) !important; }
 
 .navbar-dark .navbar-brand:hover {

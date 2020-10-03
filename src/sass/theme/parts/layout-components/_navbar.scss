@@ -37,7 +37,7 @@
   width: auto;
 }
 
-.navbar-dark .navbar-brand {
+.navbar-dark .navbar-brand, .navbar-dark .navbar-brand a {
   color: var(--navbar-branding)!important;
 }
 
