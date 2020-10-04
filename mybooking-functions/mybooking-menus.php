@@ -13,12 +13,17 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-function mybooking_extra_menus() {
-	register_nav_menus(
-	array(
-	   'top-menu' => _x( 'Topbar Menu', 'nav_menus', 'mybooking' )
-	   )
-	 );
+if ( ! function_exists( 'mybooking_extra_menus' ) ) {
+	/**
+	 * Create extra menus
+	 */
+	function mybooking_extra_menus() {
+		register_nav_menus(
+		array(
+		   'top-menu' => _x( 'Topbar Menu', 'nav_menus', 'mybooking' )
+		   )
+		 );
+	}
+	add_action( 'init', 'mybooking_extra_menus' );
 }
-add_action( 'init', 'mybooking_extra_menus' );
 ?>

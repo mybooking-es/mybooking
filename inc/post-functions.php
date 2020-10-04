@@ -58,7 +58,7 @@ if ( ! function_exists( 'mybooking_entry_footer' ) ) {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_my_category_list( esc_html( ', ' ) );
+			$categories_list = mybooking_get_category_list( esc_html( ', ' ) );
 			if ( $categories_list && mybooking_categorized_blog() ) {
 				/* translators: %s: Categories of current post */
 				printf( '<span class="cat-links">' . esc_html_x( 'Published at %s', 'entry_footer', 'mybooking' ) . '</span>', $categories_list ); // WPCS: XSS OK.
@@ -120,11 +120,6 @@ if ( ! function_exists( 'mybooking_categorized_blog' ) ) {
 }
 
 
-/**
- * Flush out the transients used in mybooking_categorized_blog.
- */
-add_action( 'edit_category', 'mybooking_category_transient_flusher' );
-add_action( 'save_post',     'mybooking_category_transient_flusher' );
 
 if ( ! function_exists( 'mybooking_category_transient_flusher' ) ) {
 	function mybooking_category_transient_flusher() {
@@ -134,6 +129,11 @@ if ( ! function_exists( 'mybooking_category_transient_flusher' ) ) {
 		// Like, beat it. Dig?
 		delete_transient( 'mybooking_categories' );
 	}
+	/**
+	 * Flush out the transients used in mybooking_categorized_blog.
+	 */
+	add_action( 'edit_category', 'mybooking_category_transient_flusher' );
+	add_action( 'save_post',     'mybooking_category_transient_flusher' );
 }
 
 /**
@@ -176,8 +176,9 @@ if ( ! function_exists( 'mybooking_pingback' ) ) {
 			echo '<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">' . "\n";
 		}
 	}
+	add_action( 'wp_head', 'mybooking_pingback' );
 }
-add_action( 'wp_head', 'mybooking_pingback' );
+
 
 if ( ! function_exists( 'mybooking_mobile_web_app_meta' ) ) {
 	/**
@@ -188,5 +189,6 @@ if ( ! function_exists( 'mybooking_mobile_web_app_meta' ) ) {
 		echo '<meta name="apple-mobile-web-app-capable" content="yes">' . "\n";
 		echo '<meta name="apple-mobile-web-app-title" content="' . esc_attr( get_bloginfo( 'name' ) ) . ' - ' . esc_attr( get_bloginfo( 'description' ) ) . '">' . "\n";
 	}
+	add_action( 'wp_head', 'mybooking_mobile_web_app_meta' );
 }
-add_action( 'wp_head', 'mybooking_mobile_web_app_meta' );
+
