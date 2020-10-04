@@ -66,7 +66,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <nav aria-label="Page navigation example" class="pull-right">
+      <nav aria-label="<?php echo esc_attr_x( 'Page navigation', 'activities_list', 'mybooking' ); ?>" class="pull-right">
         <ul class="pagination">
           <li class="page-item <?php if ($args['current_page'] == 1) { ?>disabled<?php } ?>">
             <a class="page-link"
