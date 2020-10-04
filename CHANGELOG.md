@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.9.14] 2020-10-04
+
+### Updated
+
+- Footer message free text
+
 ## [0.9.13] 2020-10-03
 
 ### Added

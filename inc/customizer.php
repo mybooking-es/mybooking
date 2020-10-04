@@ -378,6 +378,15 @@ class MyBookingCustomizer {
 		  		  $this->theme_options['mybooking_home_header_carrousel_bg'] = $header_carrousel_images;
 		  		  break;
 		  	}
+
+		  	// Footer
+		  	// Footer layout: "0" four sections "1" only copyright
+		  	$this->theme_options['mybooking_global_footer_layout'] = get_theme_mod( "mybooking_global_footer_layout", "1" );
+		  	// Footer credits
+		  	$default_credits = $this->footer_default_credits();
+		  	$this->theme_options['mybooking_global_footer_credits'] = get_theme_mod( "mybooking_global_footer_credits", $default_credits );
+		  	
+
 	  	}
 
 	  	return $this->theme_options;
@@ -938,7 +947,7 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_global_topbar' , array(
 			    'default'   => '0',
-			    'transport' => 'refresh',
+			    'transport' => 'refresh', // postMessage
 			    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 			) );
 
@@ -1045,7 +1054,7 @@ class MyBookingCustomizer {
 			$wp_customize->add_setting( 'mybooking_global_topbar_message',
 				 array(
 						'default' => '',
-						'transport' => 'postMessage',
+						'transport' => 'refresh',
 						'sanitize_callback' => 'wp_kses_post'
 				 )
 			);
@@ -1505,7 +1514,7 @@ class MyBookingCustomizer {
 			// Setting
 			$wp_customize->add_setting( 'mybooking_global_footer_layout',
 			   array(
-			      'default' => '0',
+			      'default' => '1',
 			      'transport' => 'refresh',
 			      'sanitize_callback' => array( $this, 'slug_sanitize_radio')
 			   )
@@ -1525,8 +1534,49 @@ class MyBookingCustomizer {
 			      )
 			   )
 			);
+
+
+			// == Footer message
+
+			$default_footer_credits =  $this->footer_default_credits();
+			$wp_customize->add_setting( 'mybooking_global_footer_credits',
+				 array(
+						'default' => $default_footer_credits,
+						'transport' => 'postMessage',
+						'sanitize_callback' => 'wp_kses_post'
+				 )
+			);
+
+			$wp_customize->add_control( 'mybooking_global_footer_credits',
+				 array(
+						'label' => _x( 'Footer message', 'customizer_topbar', 'mybooking' ),
+						'description' => esc_html_x( 'Footer detailed message', 'customizer_topbar', 'mybooking' ),
+						'section' => 'mybooking_theme_footer_options',
+						'priority' => 10,
+						'type' => 'textarea',
+						'capability' => 'edit_theme_options',
+						'input_attrs' => array(
+							 'class' => 'mybooking-customizer-textarea',
+							 'style' => 'border: 1px solid #999',
+							 'placeholder' => _x( 'Detail message on Footer.', 'customizer_footer', 'mybooking' ),
+						),
+				 )
+			);
+
+
 		}
 
+    /**
+     * Footer default credits
+     */
+		private function footer_default_credits() {
+
+			$value = sprintf( _x( '| <span>Powered by <a href="%s" target="_blank">mybooking</a></span>', 'footer_credits', 'mybooking' ), 
+				                'https://mybooking.es' );
+
+			return $value;
+
+		}
 
 		/**
      * 	Customize Selector

@@ -37,6 +37,10 @@ An answer to that question.
 
 == Changelog ==
 
+= 0.9.14 =
+* Updated:
+  * Footer free message
+
 = 0.9.13 =
 * Added:
   * Comments styling
@@ -56,6 +60,9 @@ An answer to that question.
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.14 =
+* Footer free message
 
 = 0.9.13 =
 * Comments styling

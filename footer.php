@@ -13,8 +13,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit; ?>
 
-<?php $footer_layout = get_theme_mod( 'mybooking_global_footer_layout' );
-if ( $footer_layout == 0 ) { ?>
+<?php $footer_layout = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_global_footer_layout" ); 
+if ( $footer_layout == '0' ) { ?>
 
   <footer class="footer" id="wrapper-footer">
     <div class="container">
