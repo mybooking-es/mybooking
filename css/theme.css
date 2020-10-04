@@ -26805,7 +26805,8 @@ ol.comment-list {
 .comments-area {
   margin-top: 1rem;
   padding: 2rem 0;
-  border-top: 1px solid #EFEFEF; }
+  border-top: 1px solid #EFEFEF;
+  clear: both; }
 
 h2.comments-title {
   font-size: 1.2em; }
