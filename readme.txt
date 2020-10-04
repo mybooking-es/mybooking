@@ -100,4 +100,4 @@ You can also setup the company and contact information on Theme options
 - Mobile Detect: @license Copyright 2013, Heinrich Goebl, License: MIT, see https://github.com/hgoebl/mobile-detect.js | https://github.com/hgoebl/mobile-detect.js/blob/master/LICENSE
 - WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
 - video-portada.mv4 @taryn-elliot Pexels https://www.pexels.com/es-es/video/3121459/
-- bg-image.jpg @DiegoJimenez Unsplash https://unsplash.com/photos/A-NVHPka9Rk
+- bg-image.jpg Tamekia Andress CCO Public domain https://pixy.org/392915/
