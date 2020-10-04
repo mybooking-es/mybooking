@@ -7,8 +7,8 @@ Requires at least:  5.2
 Tested up to:       5.5.1
 Stable tag:         trunk
 Requires PHP:       7.2
-License:            GPLv2 or later
-License URI:        https://www.gnu.org/licenses/gpl-2.0.html
+License:            GPLv3 or later
+License URI:        http://www.gnu.org/licenses/gpl-3.0.html
 
 Bootsrap based theme that improves MyBooking Reservation Engine plugin user experience.
 
@@ -31,11 +31,15 @@ Characteristics:
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= How do I change theme settings? =
 
-An answer to that question.
+All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
+You can also setup the company and contact information on Theme options
 
 == Changelog ==
+
+= 0.9.16 =
+* Updated: Credits/Resources
 
 = 0.9.15 =
 * Updated:
@@ -66,6 +70,9 @@ An answer to that question.
 
 == Upgrade Notice ==
 
+= 0.9.16 =
+* Credits
+
 = 0.9.15 =
 * Customize pending resources
 
@@ -83,3 +90,14 @@ An answer to that question.
 
 = 0.9.10 =
 * First release
+
+=== Resources ===
+
+- Inter font by Rasmus Andersson, https://fonts.google.com/specimen/Inter Sil Open Font License https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+- Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+- Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
+- SlickJS: https://kenwheeler.github.io/slick/ | https://github.com/kenwheeler/slick/blob/master/LICENSE (Code licensed under MIT)
+- Mobile Detect: @license Copyright 2013, Heinrich Goebl, License: MIT, see https://github.com/hgoebl/mobile-detect.js | https://github.com/hgoebl/mobile-detect.js/blob/master/LICENSE
+- WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+- video-portada.mv4 @taryn-elliot Pexels https://www.pexels.com/es-es/video/3121459/
+- bg-image.jpg @DiegoJimenez Unsplash https://unsplash.com/photos/A-NVHPka9Rk

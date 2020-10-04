@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.16] 2020-10-04
+
+### Updated
+- Credits/license
+
 ## [0.9.15] 2020-10-04
 
 ### Updated
