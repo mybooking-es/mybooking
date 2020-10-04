@@ -1740,35 +1740,6 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 
 				// == Widgets section positioning and visibility
 
-				// --Positioning
-
-				// Setting
-				// $wp_customize->add_setting( 'mybooking_home_content_widgets_position',
-				// 	array(
-				// 		'default'           => '2',
-				// 		'type'              => 'theme_mod',
-				// 		'capability'        => 'edit_theme_options',
-				// 		'sanitize_callback' => array( $this, 'slug_sanitize_select')
-				// 	)
-				// );
-
-				// Control
-				// $wp_customize->add_control( 'mybooking_home_content_widgets_position',
-				// 	array(
-				// 		'label'       => _x( 'Widgets area', 'customizer_home', 'mybooking' ),
-				// 		'description' => _x( 'Get control of Widgets section position and visibility. Shows three widget areas called Home Content 1, 2 and 3', 'customizer_home', 'mybooking' ),
-				// 		'section'     => 'static_front_page',
-				// 		'settings'    => 'mybooking_home_content_widgets_position',
-				// 		'type'        => 'select',
-				// 		'choices'     => array(
-				// 			'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
-				// 			'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
-				// 			'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
-				// 			'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
-				// 		),
-				// 	)
-				// );
-
 				// --Visibility
 
 				// Setting
@@ -1791,35 +1762,6 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 
 				// == News section positioning and visibility
 
-				// --Positioning
-
-				// Setting
-				// $wp_customize->add_setting( 'mybooking_home_news_position',
-				// 	array(
-				// 		'default'           => '3',
-				// 		'type'              => 'theme_mod',
-				// 		'capability'        => 'edit_theme_options',
-				// 		'sanitize_callback' => array( $this, 'slug_sanitize_select')
-				// 	)
-				// );
-
-				// Control
-				// $wp_customize->add_control( 'mybooking_home_news_position',
-				// 	array(
-				// 		'label'       => _x( 'News area', 'customizer_home', 'mybooking' ),
-				// 		'description' => _x( 'Get control of News section position and visibility. Shows last three posts of Home Page category', 'customizer_home', 'mybooking' ),
-				// 		'section'     => 'static_front_page',
-				// 		'settings'    => 'mybooking_home_news_position',
-				// 		'type'        => 'select',
-				// 		'choices'     => array(
-				// 			'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
-				// 			'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
-				// 			'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
-				// 			'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
-				// 		),
-				// 	)
-				// );
-
 				// --Visibility
 
 				// Setting
@@ -1840,35 +1782,6 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 				);
 
 				// == Widgets section positioning and visibility
-
-				// --Positioning
-
-				// Setting
-				// $wp_customize->add_setting( 'mybooking_home_bottom_widgets_position',
-				// 	array(
-				// 		'default'           => '2',
-				// 		'type'              => 'theme_mod',
-				// 		'capability'        => 'edit_theme_options',
-				// 		'sanitize_callback' => array( $this, 'slug_sanitize_select')
-				// 	)
-				// );
-
-				// Control
-				// $wp_customize->add_control( 'mybooking_home_bottom_widgets_position',
-				// 	array(
-				// 		'label'       => _x( 'Widgets area', 'customizer_home', 'mybooking' ),
-				// 		'description' => _x( 'Get control of Widgets section position and visibility. Shows three widget areas called Home Content 1, 2 and 3', 'customizer_home', 'mybooking' ),
-				// 		'section'     => 'static_front_page',
-				// 		'settings'    => 'mybooking_home_bottom_widgets_position',
-				// 		'type'        => 'select',
-				// 		'choices'     => array(
-				// 			'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
-				// 			'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
-				// 			'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
-				// 			'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
-				// 		),
-				// 	)
-				// );
 
 				// --Visibility
 
