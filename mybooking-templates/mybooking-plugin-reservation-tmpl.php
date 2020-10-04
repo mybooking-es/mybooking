@@ -334,7 +334,7 @@
       </div>
       <!-- Driver information -->
       <% if (configuration.rentingFormFillDataDriverDetail) { %>
-        <h4 class="my-3"><?php _e('Main driver', 'renting_my_reservation', 'mybooking') ?></h4>
+        <h4 class="my-3"><?php echo _x('Main driver', 'renting_my_reservation', 'mybooking') ?></h4>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="driver_name"><?php echo  _x("Name", 'renting_my_reservation', 'mybooking') ?></label>

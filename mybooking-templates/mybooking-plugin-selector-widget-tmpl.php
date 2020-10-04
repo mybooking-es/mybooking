@@ -18,7 +18,7 @@
       <% if (not_hidden_family_id && configuration.selectFamily) { %>
         <div class="flex-form-group widget_family" style="display: none">
           <div class="flex-form-box mb-0">
-            <label for="family_id"><?php echo _x( 'Family', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
+            <label for="family_id"><?php echo _x( 'Family', 'renting_form_selector', 'mybooking' ) ?></label>
             <div class="flex-form-item">
               <select name="family_id" id="widget_family_id" class="ml-1"></select>
             </div>
