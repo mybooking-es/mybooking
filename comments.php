@@ -1,8 +1,6 @@
 <?php
 /**
-*   Template Name: Comments
-*  	-----------------------------
-*
+*   Comments
 * 	@version 0.0.1
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme

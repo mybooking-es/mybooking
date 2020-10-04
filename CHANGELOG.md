@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.9.15] 2020-10-04
+
+### Updated
+- Customize pending resources
+- Mybooking templates review
+
 ## [0.9.14] 2020-10-04
 
 ### Updated

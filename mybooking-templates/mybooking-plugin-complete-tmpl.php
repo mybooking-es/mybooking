@@ -380,7 +380,7 @@
           <% } else if (shopping_cart.hours > 0) { %>
           <?php echo _x( 'Rental duration', 'renting_complete', 'mybooking' ) ?>:
           <%=shopping_cart.hours%>
-          <?php _e('horas/s', 'mybooking') ?></p>
+          <?php echo _x('hour(s)', 'renting_complete', 'mybooking') ?></p>
           <% } %>
         </div>      
           <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>

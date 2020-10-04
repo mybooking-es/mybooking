@@ -37,6 +37,11 @@ An answer to that question.
 
 == Changelog ==
 
+= 0.9.15 =
+* Updated:
+  - customize pending resources
+  - mybooking templates review
+
 = 0.9.14 =
 * Updated:
   * Footer free message
@@ -60,6 +65,9 @@ An answer to that question.
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.15 =
+* Customize pending resources
 
 = 0.9.14 =
 * Footer free message
