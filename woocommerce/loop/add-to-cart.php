@@ -20,7 +20,7 @@
   *
   * - Added .btn-choose-product to mimic process cards button styles
 	*
-	* 	@version: 0.0.1
+	* 	@version: 0.0.2
 	*   @package WordPress
 	*   @subpackage Mybooking WordPress Theme
 	*   @since Mybooking WordPress Theme 0.9.9

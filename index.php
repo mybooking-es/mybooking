@@ -3,7 +3,7 @@
 *		MAIN INDEX PAGE
 *  	---------------
 *
-* 	@version 0.0.7
+* 	@version 0.0.8
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.2
@@ -19,6 +19,8 @@
 *		- Added no-content message
 *		Version 0.0.7
 *		- Template part route updated
+*		V3rsion 0.0.8
+*		- Moved sidebar to sidebar.php
 */
 
 // Exit if accessed directly.
@@ -45,11 +47,7 @@ get_header(); ?>
 				</div>
 			</div>
 
-			<?php if ( is_active_sidebar( 'blog_sidebar' ) ) : ?>
-        <div class="col-md-3">
-          <?php dynamic_sidebar( 'blog_sidebar' ); ?>
-        </div>
-      <?php endif; ?>
+			<?php get_sidebar(); ?>
 
 			<div class="col-12">
 				<?php mybooking_pagination(); ?>

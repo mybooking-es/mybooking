@@ -19,8 +19,9 @@
   * Mybooking Tweaks
   *
   * - Changed col echo values on line 71 to avoid Bootstrap conflicts
+	*	- Changed textdomain to match theme and add context
 	*
-	* 	@version: 0.0.1
+	* 	@version: 0.0.2
 	*   @package WordPress
 	*   @subpackage Mybooking WordPress Theme
 	*   @since Mybooking WordPress Theme 0.9.9
@@ -34,8 +35,8 @@ if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 	$get_addresses = apply_filters(
 		'woocommerce_my_account_get_addresses',
 		array(
-			'billing'  => __( 'Billing address', 'woocommerce' ),
-			'shipping' => __( 'Shipping address', 'woocommerce' ),
+			'billing'  => _x( 'Billing address', 'woocommerce_mybooking', 'mybooking' ),
+			'shipping' => _x( 'Shipping address', 'woocommerce_mybooking', 'mybooking' ),
 		),
 		$customer_id
 	);
@@ -43,7 +44,7 @@ if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 	$get_addresses = apply_filters(
 		'woocommerce_my_account_get_addresses',
 		array(
-			'billing' => __( 'Billing address', 'woocommerce' ),
+			'billing' => _x( 'Billing address', 'woocommerce_mybooking', 'mybooking' ),
 		),
 		$customer_id
 	);
@@ -54,7 +55,7 @@ $col    = 1;
 ?>
 
 <p>
-	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', esc_html__( 'The following addresses will be used on the checkout page by default.', 'woocommerce' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', esc_html_x( 'The following addresses will be used on the checkout page by default.', 'woocommerce_mybooking', 'mybooking' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 </p>
 
 <?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) : ?>
@@ -71,11 +72,11 @@ $col    = 1;
 	<div class="u-column<?php echo $col < 0 ? 1 : 2; ?> col-<?php echo $oldcol < 0 ? 12 : 12; ?> woocommerce-Address">
 		<header class="woocommerce-Address-title title">
 			<h3><?php echo esc_html( $address_title ); ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php echo $address ? esc_html__( 'Edit', 'woocommerce' ) : esc_html__( 'Add', 'woocommerce' ); ?></a>
+			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php echo $address ? esc_html_x( 'Edit', 'woocommerce_mybooking', 'mybooking' ) : esc_html_x( 'Add', 'woocommerce_mybooking', 'mybooking' ); ?></a>
 		</header>
 		<address>
 			<?php
-				echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
+				echo $address ? wp_kses_post( $address ) : esc_html_x( 'You have not set up this type of address yet.', 'woocommerce_mybooking', 'mybooking' );
 			?>
 		</address>
 	</div>

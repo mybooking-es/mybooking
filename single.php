@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-	
+
 	<?php get_template_part( 'mybooking-parts/blog/mybooking-content-single' ); ?>
 
 	<?php
