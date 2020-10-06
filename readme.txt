@@ -38,6 +38,10 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.17 =
+* Added:
+  - Spanish and Italian translations
+
 = 0.9.16 =
 * Updated: Credits/Resources
 

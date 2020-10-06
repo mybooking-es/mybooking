@@ -16,7 +16,7 @@
 defined( 'ABSPATH' ) || exit;
 
 
-if ( ! function_exists( 'mybooking_comment_reply_link' ) ) {
+if ( !function_exists( 'mybooking_comment_reply_link' ) ) {
 	/**
 	 * Edit comment link => Add classes
 	 */
@@ -27,7 +27,7 @@ if ( ! function_exists( 'mybooking_comment_reply_link' ) ) {
     add_filter( 'edit_comment_link', 'mybooking_edit_comment_link' );
 }
 
-if ( ! function_exists( 'mybooking_comment_reply_link' ) ) {
+if ( !function_exists( 'mybooking_comment_reply_link' ) ) {
 	/**
 	 * Edit reply link => Add classes
 	 */ 

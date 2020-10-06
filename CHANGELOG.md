@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.17] 2020-10-07
+
+### Added
+- Spanish and Italian translations
+
 ## [0.9.16] 2020-10-04
 
 ### Updated

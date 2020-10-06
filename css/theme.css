@@ -26878,8 +26878,24 @@ h2.comments-title {
 .reply > a.btn.btn-primary.comment-reply-link {
   min-width: 10rem; }
 
+#cancel-comment-reply-link {
+  margin-left: 1rem;
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
+  border-radius: 3px;
+  padding: .375rem .75rem;
+  text-decoration: none; }
+  #cancel-comment-reply-link:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark); }
+
 .comment-respond {
   margin-top: 1.5rem; }
+
+.comment-reply-title {
+  font-size: 1.2rem; }
 
 .site-main {
   width: 100%; }
