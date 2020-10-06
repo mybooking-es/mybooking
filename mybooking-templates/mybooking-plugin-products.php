@@ -12,8 +12,7 @@
           <h3 class="card-static_product-short-description"><?php echo $product->short_description ?></h3>
         </div>
         <div class="card-static_btn">
-          <a href="/<?php echo $args['url_detail']?>/<?php echo $product->code?>" class="button btn">Más
-            información</a>
+          <a href="/<?php echo $args['url_detail']?>/<?php echo $product->code?>" class="button btn"><?php _ex('More information','renting_products','mybooking'); ?></a>
         </div>
       </div>
     </div>
@@ -28,7 +27,7 @@
         <ul class="pagination">
           <li class="page-item <?php if ($args['current_page'] == 1) { ?>disabled<?php } ?>">
             <a class="page-link"
-              href="/<?php echo $args['url']?>?offsetpage=<?php echo $args['current_page']-1 ?>">Previous</a>
+              href="/<?php echo $args['url']?>?offsetpage=<?php echo $args['current_page']-1 ?>"><?php _ex('Previous','renting_products','mybooking'); ?></a>
           </li>
           <?php foreach ($args['pages'] as $page) { ?>
           <?php if ($page == $args['current_page']) { ?>
@@ -46,7 +45,7 @@
           <?php } ?>
           <li class="page-item <?php if ($args['current_page'] == $args['total_pages']) { ?>disabled<?php } ?>">
             <a class="page-link"
-              href="/<?php echo $args['url']?>?offsetpage=<?php echo $args['current_page']+1 ?>">Next</a>
+              href="/<?php echo $args['url']?>?offsetpage=<?php echo $args['current_page']+1 ?>"><?php _ex('Next','renting_products','mybooking'); ?></a>
           </li>
         </ul>
       </nav>

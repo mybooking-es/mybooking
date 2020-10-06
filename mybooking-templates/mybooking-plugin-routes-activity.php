@@ -70,8 +70,8 @@ get_header();?>
       <!-- media objects -->
       <div class="media">
         <div class="media-body">
-          <h5 class="mt-0">Calendario, horario y duración</h5>
-          <p class="mb-0">De lunes a domingo, tours a las 8:00 y a las 14:00</p>
+          <h5 class="mt-0"><?php _ex('Calendar, timetable and duration','activity_routes','mybooking'); ?></h5>
+          <p class="mb-0"><?php _ex('From monday to Sunday, tours at 08:00 and 14:00','activity_routes','mybooking'); ?></p>
         </div>
         <i class="far fa-calendar-alt align-self-center ml-3"></i>
       </div>
@@ -88,7 +88,7 @@ get_header();?>
       <?php if (!empty($args->detailed_info_what_includes)) { ?>
       <div class="media">
         <div class="media-body">
-          <h5 class="mt-0 mb-1">¿Qué incluye?</h5>
+          <h5 class="mt-0 mb-1"><?php _ex('What\'s included?','activity_routes','mybooking'); ?></h5>
           <?php echo $args->detailed_info_what_includes ?>
         </div>
         <i class="fas fa-boxes align-self-center ml-3"></i>
@@ -98,7 +98,7 @@ get_header();?>
       <?php if (!empty($args->detailed_info_recommendations)) { ?>
       <div class="media">
         <div class="media-body">
-          <h5 class="mt-0 mb-1">Recomendaciones</h5>
+          <h5 class="mt-0 mb-1"><?php _ex('Recomendations','activity_routes','mybooking'); ?></h5>
           <?php echo $args->detailed_info_recommendations ?>
         </div>
         <i class="fas fa-comment-alt align-self-center ml-3"></i>
@@ -108,7 +108,7 @@ get_header();?>
       <?php if (!empty($args->detailed_info_what_to_bring)) { ?>
       <div class="media">
         <div class="media-body">
-          <h5 class="mt-0 mb-1">¿Qué traer?</h5>
+          <h5 class="mt-0 mb-1"><?php _ex('What to bring?','activity_routes','mybooking'); ?></h5>
           <?php echo $args->detailed_info_what_to_bring ?>
         </div>
         <i class="fas fa-highlighter align-self-center ml-3"></i>
@@ -118,7 +118,7 @@ get_header();?>
       <?php if (!empty($args->detailed_info_timetable_duration)) { ?>
       <div class="media">
         <div class="media-body">
-          <h5 class="mt-0 mb-1">Fechas y horarios</h5>
+          <h5 class="mt-0 mb-1"><?php _ex('Dates and timetables','activity_routes','mybooking'); ?></h5>
           <?php echo $args->detailed_info_timetable_duration ?>
         </div>
           <i class="far fa-clock align-self-center ml-3"></i>
@@ -128,7 +128,7 @@ get_header();?>
       <?php if (!empty($args->detailed_info_ages)) { ?>
       <div class="media">
         <div class="media-body">
-          <h5 class="mt-0 mb-1">Edades</h5>
+          <h5 class="mt-0 mb-1"><?php _ex('Ages','activity_routes','mybooking'); ?></h5>
           <?php echo $args->detailed_info_ages ?>
         </div>
         <i class="fas fa-user-friends align-self-center ml-3"></i>
@@ -138,7 +138,7 @@ get_header();?>
       <?php if (!empty($args->detailed_info_difficulty_level)) { ?>
       <div class="media">
         <div class="media-body">
-          <h5 class="mt-0 mb-1">Dificultad</h5>
+          <h5 class="mt-0 mb-1"><?php _ex('Difficulty','activity_routes','mybooking'); ?></h5>
           <?php echo $args->detailed_info_difficulty_level ?>
         </div>
         <i class="fas fa-sort-numeric-up align-self-center ml-3"></i>
@@ -148,7 +148,7 @@ get_header();?>
       <?php if (!empty($args->detailed_info_price)) { ?>
       <div class="media">
         <div class="media-body">
-          <h5 class="mt-0 mb-1">Precios</h5>
+          <h5 class="mt-0 mb-1"><?php _ex('Prices','activity_routes','mybooking'); ?></h5>
           <?php echo $args->detailed_info_price ?>
         </div>
                 <i class="fas fa-money-bill-wave align-self-center ml-3"></i>
@@ -158,7 +158,7 @@ get_header();?>
       <?php if (!empty($args->detailed_info_meeting_point)) { ?>
       <div class="media">
         <div class="media-body">
-          <h5 class="mt-0 mb-1">Lugar de encuentro</h2>
+          <h5 class="mt-0 mb-1"><?php _ex('Meeting point','activity_routes','mybooking'); ?></h2>
             <?php echo $args->detailed_info_meeting_point ?>
         </div>
             <i class="fas fa-map-marked-alt align-self-center ml-3"></i>
