@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-06 12:30+0000\n"
-"PO-Revision-Date: 2020-10-06 12:38+0000\n"
+"PO-Revision-Date: 2020-10-06 22:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
@@ -1472,7 +1472,7 @@ msgstr "Paypal"
 #: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:516
 msgctxt "activity_my_reservation"
 msgid "Credit or debit card"
-msgstr "Credit or debit card"
+msgstr "Tarjeta de crédito o débito"
 
 #: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:21
 #: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:163
@@ -1745,7 +1745,7 @@ msgstr "Confirmar"
 #: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:663
 msgctxt "renting_complete"
 msgid "Credit or debit card"
-msgstr "Credit or debit card"
+msgstr "Tarjeta de crédito o débito"
 
 #: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:17
 #: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:20
@@ -2189,7 +2189,7 @@ msgstr "Paypal"
 #: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:774
 msgctxt "renting_my_reservation"
 msgid "Credit or debit card"
-msgstr "Credit or debit card"
+msgstr "Tarjeta de crédito o débito"
 
 #: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-wizard-widget-tmpl.php:68
 msgctxt "renting_form_selector_wizard"
@@ -2636,7 +2636,7 @@ msgstr "Paypal"
 #: ../../../../../../../MYBOOKING/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:219
 msgctxt "activity_shopping_cart"
 msgid "Credit or debit card"
-msgstr "Credit or debit card"
+msgstr "Tarjeta de crédito o débito"
 
 #: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/customizer/gallery-control.php:59
 msgctxt "customize-image-gallery-control"
