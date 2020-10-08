@@ -9,11 +9,13 @@ html {
   margin: 0;
   padding: 0;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 body {
   height: 100%;
   width: 100%;
@@ -31,12 +33,7 @@ body.modal-open {
   height: 100vh;
   overflow-y: hidden;
 }
-// Remove
-// @media (max-width: 991.98px) {
-//   body.modal-open .navbar-container {
-//     padding-right: 15px;
-//   }
-// }
+
 // Typo
 h1,
 h2,

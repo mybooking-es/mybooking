@@ -1,7 +1,7 @@
 <?php
 /**
-*		SIDEBARS
-*  	--------
+*		PAGINATION
+*  	----------
 *
 * 	@version 0.0.1
 *   @package WordPress

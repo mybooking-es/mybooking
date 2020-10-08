@@ -26782,9 +26782,19 @@ h3.post_title {
   .post_header img {
     bottom: 0; } }
 
+.mybooking-entry-links {
+  margin: 2rem 0; }
+
 /*
 *  COMMENTS
 */
+.comments-link {
+  color: var(--brand-primary);
+  margin: 1rem 0 2rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
 .comment-list {
   margin-top: 1.5rem; }
 
@@ -26874,6 +26884,9 @@ h2.comments-title {
     color: var(--white);
     background-color: var(--brand-primary-dark);
     border: 1px solid var(--brand-primary-dark); }
+
+.edit-link > a.btn.btn-primary.comment-edit-link {
+  font-size: 1.2rem; }
 
 .reply > a.btn.btn-primary.comment-reply-link {
   min-width: 10rem; }

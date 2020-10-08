@@ -119,7 +119,7 @@ h3.post_title {
 }
 
 .mybooking-post-edit-link.edit-link {
-  
+
   margin-top: 1.5rem;
 
 }
@@ -134,9 +134,21 @@ h3.post_title {
   }
 }
 
+.mybooking-entry-links {
+  margin: 2rem 0;
+}
+
 /*
 *  COMMENTS
 */
+
+.comments-link {
+  color: var(--brand-primary);
+  margin: 1rem 0 2rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
 .comment-list {
   margin-top: 1.5rem;
@@ -147,11 +159,11 @@ ol.comment-list {
 }
 
 .comment {
-  margin-top: 1.5rem; 
+  margin-top: 1.5rem;
 }
 
 .comment-metadata {
-  margin-top: 0.5rem;  
+  margin-top: 0.5rem;
 }
 
 .comment-content {
@@ -219,7 +231,7 @@ h2.comments-title {
     color: var(--white);
     background-color: var(--brand-primary-dark);
     border: 1px solid var(--brand-primary-dark);
-  }  
+  }
 }
 
 
@@ -247,7 +259,7 @@ h2.comments-title {
 }
 
 #cancel-comment-reply-link {
-  margin-left: 1rem; 
+  margin-left: 1rem;
   color: var(--brand-primary);
   background-color: var(--white);
   border: 1px solid var(--brand-primary);
@@ -258,7 +270,7 @@ h2.comments-title {
     color: var(--white);
     background-color: var(--brand-primary-dark);
     border: 1px solid var(--brand-primary-dark);
-  }   
+  }
 }
 
 .comment-respond {

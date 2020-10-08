@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-06 12:30+0000\n"
-"PO-Revision-Date: 2020-10-06 22:13+0000\n"
+"PO-Revision-Date: 2020-10-08 10:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
@@ -328,7 +328,7 @@ msgstr "Publicado por"
 #, php-format
 msgctxt "entry_footer"
 msgid "Published at %s"
-msgstr "Publicado a las %s"
+msgstr "Publicado en %s"
 
 #. %s: Tags of current post
 #: ../../../../../../../MYBOOKING/mybooking-wp-theme/inc/post-functions.php:67

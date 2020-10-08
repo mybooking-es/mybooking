@@ -3,7 +3,7 @@
 *		SINGLE POST PARTIAL
 *  	-------------------
 *
-* 	@version 0.0.3
+* 	@version 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.2
@@ -39,15 +39,15 @@ defined( 'ABSPATH' ) || exit;
 					<p class="post_meta"><?php echo mybooking_posted_on(); ?></p>
 					<?php the_content(); ?>
 
-            		<?php
-            		wp_link_pages(
-            			array(
-            				'before' => '<div class="page-links">' . _x( 'Pages', 'pages_navigation', 'mybooking' ),
-            				'after'  => '</div>',
-            			)
-            		);
-            		?>
-					
+      		<?php
+      		wp_link_pages(
+      			array(
+      				'before' => '<div class="mybooking-entry-links">' . _x( 'Pages', 'pages_navigation', 'mybooking' ),
+      				'after'  => '</div>',
+      			)
+      		);
+      		?>
+
 					<footer class="entry-footer">
 						<?php mybooking_entry_footer(); ?>
 					</footer>

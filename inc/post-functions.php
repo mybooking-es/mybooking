@@ -6,7 +6,7 @@
 * 	Eventually, some of the functionality here could be replaced by core features.
 *
 *
-* 	@version 0.0.1
+* 	@version 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.3
@@ -61,16 +61,16 @@ if ( ! function_exists( 'mybooking_entry_footer' ) ) {
 				printf( '<span class="cat-links">' . esc_html_x( 'Published at %s', 'entry_footer', 'mybooking' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html( ', ' ) );
+			$tags_list = get_the_tag_list( '', esc_html( ' | ' ) );
 			if ( $tags_list ) {
 				/* translators: %s: Tags of current post */
 				printf( '<span class="tags-links">' . esc_html_x( 'Labeled at %s', 'entry_footer', 'mybooking' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
+		if ( ! is_page() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+			echo '<p class="comments-link"><i class="fas fa-comment-alt"></i>&nbsp;';
 			comments_popup_link( esc_html_x( 'Leave a comment', 'entry_footer', 'mybooking' ), esc_html_x( '1 Comment', 'entry_footer', 'mybooking' ), esc_html_x( '% Comments', 'comments', 'mybooking' ) );
-			echo '</span>';
+			echo '</p>';
 		}
 		// Edit post link: Added classes to show as a button
 		edit_post_link(
@@ -188,4 +188,3 @@ if ( ! function_exists( 'mybooking_mobile_web_app_meta' ) ) {
 	}
 	add_action( 'wp_head', 'mybooking_mobile_web_app_meta' );
 }
-
