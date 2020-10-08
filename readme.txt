@@ -38,6 +38,12 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.19 =
+* Added:
+  - MyBooking Home Template widgets top area
+* Updated:
+  - MyBooking Contact Template form widget area
+
 = 0.9.18 =
 * Added:
   - French translations
@@ -78,6 +84,9 @@ You can also setup the company and contact information on Theme options
 
 == Upgrade Notice ==
 
+= 0.9.19 =
+* Added: Widgets areas on Home and Contact Template
+
 = 0.9.18 =
 * Added:
   - French translations
@@ -116,4 +125,4 @@ You can also setup the company and contact information on Theme options
 - Mobile Detect: @license Copyright 2013, Heinrich Goebl, License: MIT, see https://github.com/hgoebl/mobile-detect.js | https://github.com/hgoebl/mobile-detect.js/blob/master/LICENSE
 - WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
 - video-portada.mv4 @taryn-elliot Pexels https://www.pexels.com/es-es/video/3121459/
-- bg-image.jpg Tamekia Andress CCO Public domain https://pixy.org/392915/
+- bg-image.jpg and screenshot.jpg Tamekia Andress CCO Public domain https://pixy.org/392915/

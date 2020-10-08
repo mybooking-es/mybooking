@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.19] 2020-10-08
+
+### Added
+- Widgets areas on MyBooking Home and MyBooking Contact templates
+
 ## [0.9.18] 2020-10-07
 
 ### Added

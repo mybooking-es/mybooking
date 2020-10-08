@@ -18,7 +18,6 @@ $mybooking_includes = array(
   '/mybooking-options/mybooking-settings.php',      // Theme settings
   '/mybooking-functions/mybooking-menus.php',       // Theme menus
   '/mybooking-functions/mybooking-categories.php',  // Theme categories
-  '/mybooking-functions/mybooking-duplicator.php',  // Duplication for posts and pages
   '/inc/enqueue.php',                               // Enqueue scripts and styles.
 	'/inc/widgets.php',                               // Register widget area.
 	'/inc/pagination.php',                            // Custom pagination for this theme.
