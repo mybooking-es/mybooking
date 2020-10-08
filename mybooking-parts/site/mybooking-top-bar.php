@@ -17,8 +17,10 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
+<!-- Message area -->
 <?php $topbar_message = MyBookingCustomizer::getInstance()->get_theme_option("mybooking_global_topbar_message");
-  if ( !empty( $topbar_message ) ) { ?>
+  if ( !empty( $topbar_message ) )
+  { ?>
     <div class="topbar-message">
       <?php echo $topbar_message ?>
     </div>
@@ -26,26 +28,30 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="topbar">
 
+  <!-- Top Bar content -->
   <?php $container = get_theme_mod( 'mybooking_container_type' ); ?>
   <div class="<?php echo esc_attr( $container ); ?>">
 
     <span>
       <?php $company_phone = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_phone");
-          if ($company_phone !== '') { ?>
+          if ($company_phone !== '')
+          { ?>
             <a class="info_link" href="tel:<?php echo $company_phone ?>"><i class="fa fa-phone" aria-hidden="true"></i> <span class="info_text"><?php echo $company_phone ?></span></a>
       <?php } ?>
     </span>
 
     <span>
       <?php $company_chat = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_chat");
-          if ($company_chat !== '') { ?>
+          if ($company_chat !== '')
+          { ?>
   	  <a class="info_link" href="tel:<?php echo $company_chat ?>"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="info_text"><?php echo $company_chat ?></span></a>
       <?php } ?>
     </span>
 
     <span>
       <?php $company_email = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_email");
-          if ($company_email !== '') { ?>
+          if ($company_email !== '')
+          { ?>
   	  <a class="info_link" href="mailto:<?php echo $company_email ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="info_text"><?php echo $company_email ?></span></a>
       <?php } ?>
     </span>
@@ -54,6 +60,5 @@ defined( 'ABSPATH' ) || exit;
     <div class="topbar_menu">
       <?php wp_nav_menu( array( 'theme_location' => 'top-menu' ) ); ?>
     </div>
-
   </div>
 </div>
