@@ -95,7 +95,7 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 					'after_widget'  => '</div>',
 				)
 			);
-		}
+		} // Widgets Bottom
 
 		// Blog
 		register_sidebar(
@@ -115,6 +115,17 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 				'id'            => 'mybooking_page_sidebar',
 		    'description'    => _x( 'Mybooking Landing template sidebar widgets area','mybooking_widgets','mybooking' ),
 				'before_widget' => '<div class="mybooking-widget mybooking-widget_landing-sidebar">',
+				'after_widget'  => '</div>',
+			)
+		);
+
+		// Contact
+		register_sidebar(
+			array(
+				'name'          => _x( 'Contact page','mybooking_widgets','mybooking' ),
+				'id'            => 'mybooking_contact',
+		    'description'    => _x( 'Place your contact form at here','mybooking_widgets','mybooking' ),
+				'before_widget' => '<div class="mybooking-widget mybooking-widget_contact">',
 				'after_widget'  => '</div>',
 			)
 		);

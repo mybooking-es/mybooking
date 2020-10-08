@@ -24,22 +24,24 @@ get_header(); ?>
         <?php get_template_part('mybooking-parts/contact/mybooking-contact-info') ?>
 
       </div>
-      <div class="col-md-6">
-
-        <!-- Contact form -->
-        <?php get_template_part('mybooking-parts/contact/mybooking-contact-form') ?>
-
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12 embed-responsive embed-responsive-16by9">
+      <div class="col-md-6 embed-responsive embed-responsive-4by3">
 
         <!-- Contact map -->
         <?php get_template_part('mybooking-parts/contact/mybooking-contact-map') ?>
 
       </div>
     </div>
+
+    <!-- Contact widgets -->
+    <?php if ( is_active_sidebar( 'mybooking_contact' )) { ?>
+      <hr>
+      <div class="row">
+        <div class="col">
+          <?php dynamic_sidebar( 'mybooking_contact' ); ?>
+        </div>
+      </div>
+    <?php } ?>
+
   </div>
 </div>
 
