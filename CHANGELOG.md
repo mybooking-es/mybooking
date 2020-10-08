@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.18] 2020-10-07
+
+### Added
+- French translations
+
 ## [0.9.17] 2020-10-07
 
 ### Added
