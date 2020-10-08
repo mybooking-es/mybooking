@@ -71,27 +71,27 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 		{
 			register_sidebar(
 				array(
-					'name'          => _x( 'Mybooking Home Template Center One','mybooking_widgets','mybooking' ),
+					'name'          => _x( 'Mybooking Home Template Center One', 'mybooking_widgets', 'mybooking' ),
 					'id'            => 'home_widgets_center_1',
-					'description'   => _x( 'Mybooking Home Template Center One','mybooking_widgets','mybooking' ),
+					'description'   => _x( 'Mybooking Home Template Center One', 'mybooking_widgets', 'mybooking' ),
 					'before_widget' => '<div class="mybooking-widget widget-1">',
 					'after_widget'  => '</div>',
 				)
 			);
 			register_sidebar(
 				array(
-					'name'          => _x( 'Mybooking Home Template Center Two','mybooking_widgets','mybooking' ),
+					'name'          => _x( 'Mybooking Home Template Center Two', 'mybooking_widgets', 'mybooking' ),
 					'id'            => 'home_widgets_center_2',
-					'description'   => _x( 'Mybooking Home Template Center Two','mybooking' ),
+					'description'   => _x( 'Mybooking Home Template Center Two', 'mybooking_widgets', 'mybooking' ),
 					'before_widget' => '<div class="mybooking-widget widget-2">',
 					'after_widget'  => '</div>',
 				)
 			);
 			register_sidebar(
 				array(
-					'name'          => _x( 'Mybooking Home Template Center Three','mybooking_widgets','mybooking' ),
+					'name'          => _x( 'Mybooking Home Template Center Three', 'mybooking_widgets', 'mybooking' ),
 					'id'            => 'home_widgets_center_3',
-					'description'   => _x( 'Mybooking Home Template Center Three','mybooking' ),
+					'description'   => _x( 'Mybooking Home Template Center Three', 'mybooking_widgets', 'mybooking' ),
 					'before_widget' => '<div class="mybooking-widget widget-3">',
 					'after_widget'  => '</div>',
 				)
