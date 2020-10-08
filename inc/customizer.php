@@ -22,10 +22,10 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 	 *
 	 * mybooking_home_header_visibility
 	 * mybooking_home_content_visibility
-	 * mybooking_home_content_widgets_visibility
 	 * mybooking_home_news_visibility
 	 * mybooking_home_testimonial_carousel_visibility
-	 * mybooking_home_content_widgets_visibility
+	 * mybooking_home_top_widgets_visibility
+	 * mybooking_home_center_widgets_visibility
 	 * mybooking_home_bottom_widgets_visibility
 	 *
 	 */
@@ -319,14 +319,17 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 			  	// Navigation at Home Template: "1" overlapped with header and transparent - "0" background color
 			  	$this->theme_options['mybooking_home_navbar_integrated'] = get_theme_mod( "mybooking_home_navbar_integrated", "0" );
 
-			  	// Home header visibility at Home Template: "1" visible "0" not visible
+			  	// Home Header visibility at Home Template: "1" visible "0" not visible
 			  	$this->theme_options['mybooking_home_header_visibility'] = get_theme_mod( "mybooking_home_header_visibility", "1" );
 
-			  	// Home content visibility at Home Template: "1" visible "0" not visible
+					// Home Top Widgets visibility at Home Template: "1" visible "0" not visible
+					$this->theme_options['mybooking_home_top_widgets_visibility'] = get_theme_mod( 'mybooking_home_top_widgets_visibility', "1" );
+
+			  	// Home Content visibility at Home Template: "1" visible "0" not visible
 			  	$this->theme_options['mybooking_home_content_visibility'] = get_theme_mod( "mybooking_home_content_visibility", "1" );
 
-					// Home Content Widgets visibility at Home Template: "1" visible "0" not visible
-					$this->theme_options['mybooking_home_content_widgets_visibility'] = get_theme_mod( 'mybooking_home_content_widgets_visibility', "1" );
+					// Home Center Widgets visibility at Home Template: "1" visible "0" not visible
+					$this->theme_options['mybooking_home_center_widgets_visibility'] = get_theme_mod( 'mybooking_home_center_widgets_visibility', "1" );
 
 			  	// Home News visibility at Home Template: "1" visible "0" not visible
 			  	$this->theme_options['mybooking_home_news_visibility'] = get_theme_mod( 'mybooking_home_news_visibility', "1" );
@@ -386,7 +389,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 			  	// Footer credits
 			  	$default_credits = $this->footer_default_credits();
 			  	$this->theme_options['mybooking_global_footer_credits'] = get_theme_mod( "mybooking_global_footer_credits", $default_credits );
-			  	
+
 
 		  	}
 
@@ -1572,7 +1575,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 	     */
 			private function footer_default_credits() {
 
-				$value = sprintf( _x( '| <span>Powered by <a href="%s" target="_blank">mybooking</a></span>', 'footer_credits', 'mybooking' ), 
+				$value = sprintf( _x( '| <span>Powered by <a href="%s" target="_blank">mybooking</a></span>', 'footer_credits', 'mybooking' ),
 					                'https://mybooking.es' );
 
 				return $value;
@@ -1687,37 +1690,28 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 
 	    private function customize_home_section( $wp_customize )
 			{
-				// == Content section positioning and visibility
 
-				// --Positioning
+				// == Widgets Top section positioning and visibility
+
+				// --Visibility
 
 				// Setting
-				// $wp_customize->add_setting( 'mybooking_home_content_position',
-				// 	array(
-				// 		'default'           => '1',
-				// 		'type'              => 'theme_mod',
-				// 		'capability'        => 'edit_theme_options',
-				// 		'sanitize_callback' => array( $this, 'slug_sanitize_select')
-				// 	)
-				// );
+				$wp_customize->add_setting( 'mybooking_home_top_widgets_visibility' , array(
+				    'default'   => '1',
+				    'transport' => 'refresh',
+				    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
+				) );
 
 				// Control
-				// $wp_customize->add_control( 'mybooking_home_content_position',
-				// 	array(
-				// 		'label'       => _x( 'Default content area', 'customizer_home', 'mybooking' ),
-				// 		'description' => _x( 'Get control of default content section position and visibility. Shows WordPress editor\'s content', 'customizer_home', 'mybooking' ),
-				//
-				// 		'section'     => 'static_front_page',
-				// 		'settings'    => 'mybooking_home_content_position',
-				// 		'type'        => 'select',
-				// 		'choices'     => array(
-				// 			'1'      			=> _x( 'Position Top', 'customizer_home', 'mybooking' ),
-				// 			'2'    				=> _x( 'Position Center Top', 'customizer_home', 'mybooking' ),
-				// 			'3'						=> _x( 'Position Center Bottom', 'customizer_home', 'mybooking' ),
-				// 			'4'						=> _x( 'Position Bottom', 'customizer_home', 'mybooking' ),
-				// 		),
-				// 	)
-				// );
+				$wp_customize->add_control( 'mybooking_home_top_widgets_visibility',
+				   array(
+				      'label' => _x( 'Activate home top widgets', 'customizer_home', 'mybooking' ),
+				      'section'  => 'static_front_page',
+				      'priority' => 10,
+				      'type'=> 'checkbox',
+				      'capability' => 'edit_theme_options',
+				   )
+				);
 
 				// --Visibility
 
@@ -1738,19 +1732,19 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 				   )
 				);
 
-				// == Widgets section positioning and visibility
+				// == Widgets Center section positioning and visibility
 
 				// --Visibility
 
 				// Setting
-				$wp_customize->add_setting( 'mybooking_home_content_widgets_visibility' , array(
+				$wp_customize->add_setting( 'mybooking_home_center_widgets_visibility' , array(
 				    'default'   => '1',
 				    'transport' => 'refresh',
 				    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
 				) );
 
 				// Control
-				$wp_customize->add_control( 'mybooking_home_content_widgets_visibility',
+				$wp_customize->add_control( 'mybooking_home_center_widgets_visibility',
 				   array(
 				      'label' => _x( 'Activate content widgets', 'customizer_home', 'mybooking' ),
 				      'section'  => 'static_front_page',
@@ -1781,7 +1775,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 				   )
 				);
 
-				// == Widgets section positioning and visibility
+				// == Widgets Bottom section positioning and visibility
 
 				// --Visibility
 

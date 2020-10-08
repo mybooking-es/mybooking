@@ -6,7 +6,7 @@
 * 	@version 0.0.1
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 1.0.0
+*   @since Mybooking WordPress Theme 0.9.16
 */
 
 // Exit if accessed directly.

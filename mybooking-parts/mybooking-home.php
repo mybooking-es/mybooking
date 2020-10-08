@@ -20,16 +20,19 @@ defined( 'ABSPATH' ) || exit;
 <!-- Header -->
 <?php get_template_part( 'mybooking-parts/home/mybooking-home-header' ); ?>
 
+<!-- Mybooking Home Top Widgets -->
+<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-top' ); ?>
+
 <!-- WordPress Content -->
 <?php get_template_part( 'mybooking-parts/home/mybooking-home-content' ); ?>
 
-<!-- Mybooking Home Widgets Module -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets' ); ?>
+<!-- Mybooking Home Center Widgets -->
+<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-center' ); ?>
 
-<!-- Mybooking News Module -->
+<!-- Mybooking News -->
 <?php get_template_part( 'mybooking-parts/home/mybooking-home-news' ); ?>
 
-<!-- Mybooking Home Bottom Widgets Module -->
+<!-- Mybooking Home Bottom Widgets -->
 <?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-bottom' ); ?>
 
 <!-- END MYBOOKING PARTIALS -->

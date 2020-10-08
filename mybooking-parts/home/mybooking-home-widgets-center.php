@@ -12,27 +12,27 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit; ?>
 
-<?php $widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_content_widgets_visibility" );
+<?php $widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_center_widgets_visibility" );
 if ($widgets_visible == "1") { ?>
 
   <div class="home-widgets">
     <div class="container" id="content" tabindex="-1">
       <div class="row">
-        <?php if ( is_active_sidebar( 'home_widgets_1' ) ) : ?>
+        <?php if ( is_active_sidebar( 'home_widgets_center_1' ) ) : ?>
           <div class="col">
-            <?php dynamic_sidebar( 'home_widgets_1' ); ?>
+            <?php dynamic_sidebar( 'home_widgets_center_1' ); ?>
           </div>
         <?php endif; ?>
 
-        <?php if ( is_active_sidebar( 'home_widgets_2' ) ) : ?>
+        <?php if ( is_active_sidebar( 'home_widgets_center_2' ) ) : ?>
           <div class="col">
-            <?php dynamic_sidebar( 'home_widgets_2' ); ?>
+            <?php dynamic_sidebar( 'home_widgets_center_2' ); ?>
           </div>
         <?php endif; ?>
 
-        <?php if ( is_active_sidebar( 'home_widgets_3' ) ) : ?>
+        <?php if ( is_active_sidebar( 'home_widgets_center_3' ) ) : ?>
           <div class="col">
-            <?php dynamic_sidebar( 'home_widgets_3' ); ?>
+            <?php dynamic_sidebar( 'home_widgets_center_3' ); ?>
           </div>
         <?php endif; ?>
       </div>

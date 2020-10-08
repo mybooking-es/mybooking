@@ -26919,6 +26919,9 @@ h2.comments-title {
 .page_content {
   padding: 3rem 0; }
 
+.home .page_content {
+  padding: 0; }
+
 .post-navigation {
   margin: 2rem 0; }
 
@@ -27627,6 +27630,12 @@ a.dropdown-item {
 *  Mybooking Widgets integration
 *
 **/
+/* Home widgets areas needs a top-margin */
+.home-top-widgets,
+.home-bottom-widgets,
+.home-bottom-widgets {
+  margin-top: 2rem; }
+
 /* Selector Widget on Home's Widget zone */
 .home-widgets .flex-form-group-wrapper input[type=text],
 .home-widgets .flex-form-group label i {

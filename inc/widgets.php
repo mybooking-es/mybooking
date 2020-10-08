@@ -50,38 +50,53 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 			)
 		);
 
-		// Home Widgets
-		$widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_content_widgets_visibility" );
+		// Home Widgets Top
+		$widgets_top_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_top_widgets_visibility" );
+		if ( $widgets_top_visible == "1" )
+		{
+			register_sidebar(
+				array(
+					'name'          => _x( 'Home Top','mybooking_widgets','mybooking' ),
+					'id'            => 'home_widgets_top',
+					'description'   => _x( 'Home\'s top widgets area','mybooking_widgets','mybooking' ),
+					'before_widget' => '<div class="mybooking-widget widget-home-bottom">',
+					'after_widget'  => '</div>',
+				)
+			);
+		} // Widgets Bottom
+
+		// Home Widgets Center
+		$widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_center_widgets_visibility" );
 		if ( $widgets_visible == "1")
 		{
 			register_sidebar(
 				array(
-					'name'          => _x( 'Home Middle One','mybooking_widgets','mybooking' ),
-					'id'            => 'home_widgets_1',
-					'description'   => _x( 'Home content first widgets area','mybooking_widgets','mybooking' ),
+					'name'          => _x( 'Home center One','mybooking_widgets','mybooking' ),
+					'id'            => 'home_widgets_center_1',
+					'description'   => _x( 'Home center first widgets area','mybooking_widgets','mybooking' ),
 					'before_widget' => '<div class="mybooking-widget widget-1">',
 					'after_widget'  => '</div>',
 				)
 			);
 			register_sidebar(
 				array(
-					'name'          => _x( 'Home Middle Two','mybooking_widgets','mybooking' ),
-					'id'            => 'home_widgets_2',
-					'description'   => _x( 'Home content second widgets area','mybooking_widgets','mybooking' ),
+					'name'          => _x( 'Home center Two','mybooking_widgets','mybooking' ),
+					'id'            => 'home_widgets_center_2',
+					'description'   => _x( 'Home center second widgets area','mybooking_widgets','mybooking' ),
 					'before_widget' => '<div class="mybooking-widget widget-2">',
 					'after_widget'  => '</div>',
 				)
 			);
 			register_sidebar(
 				array(
-					'name'          => _x( 'Home Middle Three','mybooking_widgets','mybooking' ),
-					'id'            => 'home_widgets_3',
-					'description'   => _x( 'Home content third widgets area','mybooking_widgets','mybooking' ),
+					'name'          => _x( 'Home center Three','mybooking_widgets','mybooking' ),
+					'id'            => 'home_widgets_center_3',
+					'description'   => _x( 'Home center third widgets area','mybooking_widgets','mybooking' ),
 					'before_widget' => '<div class="mybooking-widget widget-3">',
 					'after_widget'  => '</div>',
 				)
 			);
-		}
+		} // Home Widgets Center
 
 		$widgets_bottom_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_bottom_widgets_visibility" );
 		if ( $widgets_bottom_visible == "1" )
@@ -95,7 +110,7 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 					'after_widget'  => '</div>',
 				)
 			);
-		} // Widgets Bottom
+		} // Home Widgets Bottom
 
 		// Blog
 		register_sidebar(
