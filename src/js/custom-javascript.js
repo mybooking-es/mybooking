@@ -120,16 +120,6 @@ $(document).ready(function () {
 });
 
 /*
- *  SUBNAVIGATION MOBILE OPENING
- *  Controls submenu item's behaivour on navigation
- */
-$(document).on("click", ".dropdown-menu li", function (e) {
-  $(".dropdown-menu li > .dropdown-menu").slide();
-  e.stopPropagation();
-});
-
-
-/*
  *  TOPBAR MARGIN
  *  Adds 40px extra if message is active
  */
@@ -158,55 +148,9 @@ $(document).ready(function () {
   });
 });
 
-
 /*
-    STICKY FOOTER
-    Requirement: The footer must not have margin
-*/
-
-// $(document).ready(function () {
-//   function stickyFooter() {
-//     var $copyWrapper = $(".copy-wrapper");
-//     var copyWrapperHeight = $copyWrapper.outerHeight(true);
-//     var $footer = $("#wrapper-footer");
-//     var footerTop = $footer.position().top; // Footer top position
-//     var footerHeight = $footer.outerHeight(false); //Footer FULL Height including paddings (false not to apply margin because we calculate it)
-//     var windowHeight = $(window).height();
-//     var documentHeight = $(document).height();
-
-//     var marginTop = windowHeight - footerTop - footerHeight - copyWrapperHeight;
-//     /*
-//     ----------------------------window         ------------------------window
-//     CONTENT                                    CONTENT
-//     ----------------------------footer         ..............................
-//     top
-//     outerHeight                                     MARGIN-TOP
-
-//     ----------------------------footer        -------------------------footer
-
-//                                               -------------------------footer
-//     ----------------------------window        -------------------------window
-//    */
-
-//     if (marginTop > 0) {
-//       $footer.css({
-//         "margin-top": marginTop + "px",
-//       });
-//     }
-//   }
-
-//   stickyFooter();
-//   //setTimeout(stickyFooter, 2000);
-
-//   $(window).bind("scroll", function (event) {
-//     stickyFooter();
-//   });
-
-//   $(window).bind("resize", function (event) {
-//     stickyFooter();
-//   });
-// });
-
+ * TOP BAR
+ */
 $(document).ready(function () {
   if ($(".topbar").length) {
     $("button.navbar-toggler").bind("click", function () {

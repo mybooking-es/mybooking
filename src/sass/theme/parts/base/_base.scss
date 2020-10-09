@@ -59,6 +59,11 @@ a:active {
   color: var(--color-link-active);
 }
 
+blockquote {
+    margin: 0 0 1rem 1rem;
+    font-size: 1.25rem;
+}
+
 // Card
 .card {
   border-radius: 0;

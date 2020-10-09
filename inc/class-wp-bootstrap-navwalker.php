@@ -144,8 +144,11 @@ if ( ! class_exists( 'Mybooking_WP_Bootstrap_Navwalker' ) ) {
 				if ($depth == 0) {
 				  $classes[] = 'dropdown';
 				}
-				else {
+				else if ($depth < 3) {
 				  $classes[] = 'dropdown-submenu'; // dropdown-submenu dropdown
+			    }
+			    else {
+			      $classes[] = 'dropdown-submenu dropdown-submenu-depth';	
 			    }
 			}
 			if ( in_array( 'current-menu-item', $classes, true ) || in_array( 'current-menu-parent', $classes, true ) ) {

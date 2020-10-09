@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.22] 2020-10-09
+
+### Updated
+- Styling
+
 ## [0.9.21] 2020-10-09
 
 ### Updated

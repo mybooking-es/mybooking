@@ -135,7 +135,8 @@ h3.post_title {
 }
 
 .mybooking-entry-links {
-  margin: 2rem 0;
+  padding: 2rem 0;
+  clear: both;
 }
 
 /*
@@ -279,4 +280,11 @@ h2.comments-title {
 
 .comment-reply-title {
   font-size: 1.2rem;
+}
+
+/**
+ * CATEGORY
+ */
+.category-markup {
+  margin-top: 1rem; 
 }
