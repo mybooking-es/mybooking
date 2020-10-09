@@ -38,6 +38,9 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.21 =
+* Updated: Screenshot
+
 = 0.9.20 =
 * Added: German translations
 
@@ -86,6 +89,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.21 =
+* Updated: Screenshot
 
 = 0.9.20 =
 * Added: German translations 
