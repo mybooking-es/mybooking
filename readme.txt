@@ -38,6 +38,9 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.20 =
+* Added: German translations
+
 = 0.9.19 =
 * Added:
   - MyBooking Home Template widgets top area
@@ -83,6 +86,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.20 =
+* Added: German translations 
 
 = 0.9.19 =
 * Added: Widgets areas on Home and Contact Template

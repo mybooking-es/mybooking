@@ -75,7 +75,8 @@
             <% } %> 
             <!-- Promotion Code -->
             <% if (typeof booking.promotion_code !== 'undefined' && booking.promotion_code !== '' &&
-                        typeof booking.booking_lines[idx].promotion_code_value !== 'undefined' && booking.booking_lines.promotion_code_value !== '') { %>
+                   typeof booking.booking_lines[idx].promotion_code_value !== 'undefined' && booking.booking_lines.promotion_code_value !== '' &&
+                   booking.booking_lines[idx].promotion_code_value !== '0.0') { %>
             <span class="badge badge-success"><%=booking.promotion_code%></span>
             <% if (booking.booking_lines[idx].promotion_code_discount_type === 'percentage' && booking.booking_lines[idx].promotion_code !== '') {%>
             <span class="text-danger"><%=parseInt(booking.booking_lines[idx].promotion_code_value)%>&#37;</span>
@@ -165,7 +166,7 @@
         <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.total_paid)%></span>
       </li>
     <% } %>
-    <% if (booking.total_pending < booking.total_cost) { %>
+    <% if (booking.total_pending > 0) { %>
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <span class="extra-name"><b><?php echo _x( 'Total pending', 'renting_summary', 'mybooking' ) ?></b></span>
         <span class="product-amount pull-right <% if (booking.total_pending > 0){ %>text-danger<%}%>"><b><%=configuration.formatCurrency(booking.total_pending)%></b></span>

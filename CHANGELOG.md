@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.20] 2020-10-09
+
+### Added
+- German translations
+
 ## [0.9.19] 2020-10-08
 
 ### Added

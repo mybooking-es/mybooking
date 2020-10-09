@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-08 22:11+0000\n"
-"PO-Revision-Date: 2020-10-09 13:26+0000\n"
+"PO-Revision-Date: 2020-10-09 17:03+0000\n"
 "Last-Translator: \n"
-"Language-Team: German\n"
+"Language-Team: Deutsch\n"
 "Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
@@ -974,7 +974,7 @@ msgstr "Lieferort"
 #: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:108
 msgctxt "renting_form_selector"
 msgid "Return place"
-msgstr "Return place supplement"
+msgstr "Rückgabeort"
 
 #: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:62
 #: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:31
@@ -1073,7 +1073,7 @@ msgstr "Lieferung"
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:314
 msgctxt "renting_complete"
 msgid "Collection"
-msgstr "Abholen"
+msgstr "Rückkehr"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:267
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:282
@@ -1234,7 +1234,7 @@ msgstr "Kundendaten"
 #: mybooking-templates/mybooking-plugin-complete.php:51
 msgctxt "renting_complete"
 msgid "Name"
-msgstr "Name"
+msgstr "Vorname"
 
 #: mybooking-templates/mybooking-plugin-complete.php:54
 #: mybooking-templates/mybooking-plugin-complete.php:56
@@ -1246,7 +1246,7 @@ msgstr "Nachname"
 #: mybooking-templates/mybooking-plugin-complete.php:61
 msgctxt "renting_complete"
 msgid "E-mail"
-msgstr "E-mail"
+msgstr "E-Mail-Adresse"
 
 #: mybooking-templates/mybooking-plugin-complete.php:64
 #: mybooking-templates/mybooking-plugin-complete.php:66
@@ -1275,7 +1275,7 @@ msgstr "Zusätzliche Information"
 #: mybooking-templates/mybooking-plugin-complete.php:85
 msgctxt "renting_complete"
 msgid "Comments"
-msgstr "Bemerkungen"
+msgstr "Kommentare"
 
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:63
 msgctxt "activity_my_reservation_item"
@@ -1352,7 +1352,7 @@ msgstr "Teilnehmer"
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:176
 msgctxt "activity_my_reservation"
 msgid "Name"
-msgstr "Name"
+msgstr "Vorname"
 
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:181
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:183
@@ -1387,7 +1387,7 @@ msgstr "Telefonnummer"
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:229
 msgctxt "activity_my_reservation"
 msgid "E-mail"
-msgstr "E-mail"
+msgstr "E-Mail-Adresse"
 
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:240
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:242
@@ -1631,7 +1631,7 @@ msgstr "Gezahlter Betrag"
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:170
 msgctxt "renting_summary"
 msgid "Total pending"
-msgstr "Betrag ausstehend"
+msgstr "Steht aus"
 
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:178
 msgctxt "renting_summary"
@@ -1646,7 +1646,7 @@ msgstr "Vollständiger Name"
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:187
 msgctxt "renting_summary"
 msgid "E-mail"
-msgstr "E-mail"
+msgstr "E-Mail-Adresse"
 
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:191
 msgctxt "renting_summary"
@@ -1668,7 +1668,7 @@ msgstr "Lieferung"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:92
 msgctxt "renting_my_reservation"
 msgid "Collection"
-msgstr "Abholen"
+msgstr "Rückkehr"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:83
 msgctxt "renting_my_reservation"
@@ -1811,7 +1811,7 @@ msgstr "Haupttreiber"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:676
 msgctxt "renting_my_reservation"
 msgid "Name"
-msgstr "Name"
+msgstr "Vorname"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:347
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:349
@@ -1951,7 +1951,7 @@ msgstr "Telefonnummer"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:710
 msgctxt "renting_my_reservation"
 msgid "E-mail"
-msgstr "E-mail"
+msgstr "E-Mail-Adresse"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:649
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:651
@@ -2050,7 +2050,7 @@ msgstr "Buch"
 #: mybooking-templates/mybooking-plugin-contact-widget.php:20
 msgctxt "contact_form"
 msgid "Name"
-msgstr "Name"
+msgstr "Vorname"
 
 #: mybooking-templates/mybooking-plugin-contact-widget.php:24
 #: mybooking-templates/mybooking-plugin-contact-widget.php:26
@@ -2062,7 +2062,7 @@ msgstr "Nachname"
 #: mybooking-templates/mybooking-plugin-contact-widget.php:35
 msgctxt "contact_form"
 msgid "E-mail"
-msgstr "E-mail"
+msgstr "E-Mail-Adresse"
 
 #: mybooking-templates/mybooking-plugin-contact-widget.php:40
 #: mybooking-templates/mybooking-plugin-contact-widget.php:42
@@ -2101,7 +2101,7 @@ msgstr "Gesamt"
 #: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:60
 msgctxt "activity_shopping_cart"
 msgid "Name"
-msgstr "Name"
+msgstr "Vorname"
 
 #: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:66
 #: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:68
@@ -2113,7 +2113,7 @@ msgstr "Nachname"
 #: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:78
 msgctxt "activity_shopping_cart"
 msgid "E-mail"
-msgstr "E-mail"
+msgstr "E-Mail-Adresse"
 
 #: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:84
 #: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:86
@@ -2137,7 +2137,7 @@ msgstr "Alternatives Telefon"
 #: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:115
 msgctxt "activity_shopping_cart"
 msgid "Comments"
-msgstr "Bemerkungen"
+msgstr "Kommentare"
 
 #: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:153
 #: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:187
@@ -2452,7 +2452,7 @@ msgstr "WhatsApp-Nummer"
 #: mybooking-options/mybooking-settings.php:201
 msgctxt "theme_settings"
 msgid "E-mail address"
-msgstr "E-mail address"
+msgstr "E-Mail-Adresse"
 
 #: mybooking-options/mybooking-settings.php:208
 msgctxt "theme_settings"
@@ -2700,7 +2700,7 @@ msgstr "Benutzername oder E-Mail-Adresse"
 #: woocommerce/myaccount/form-login.php:99
 msgctxt "woocommerce_mybooking"
 msgid "Email address"
-msgstr "E-mail address"
+msgstr "E-Mail-Adresse"
 
 #: woocommerce/myaccount/form-login.php:112
 msgctxt "woocommerce_mybooking"
@@ -2823,7 +2823,7 @@ msgstr "Telefonnummer"
 #: mybooking-parts/contact/mybooking-contact-info.php:62
 msgctxt "contact"
 msgid "E-mail address"
-msgstr "E-mail address"
+msgstr "E-Mail-Adresse"
 
 #: mybooking-parts/site/mybooking-navigation-toggler.php:18
 msgctxt "toggle_navigation"

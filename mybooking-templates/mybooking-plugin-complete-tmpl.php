@@ -417,7 +417,8 @@
                     <% } %>
                     <!-- Promotion Code -->
                     <% if (typeof shopping_cart.promotion_code !== 'undefined' && shopping_cart.promotion_code !== '' &&
-                          typeof shopping_cart.items[idx].promotion_code_value !== 'undefined' && shopping_cart.items.promotion_code_value !== '') { %>
+                          typeof shopping_cart.items[idx].promotion_code_value !== 'undefined' && shopping_cart.items.promotion_code_value !== '' &&
+                          shopping_cart.items[idx].promotion_code_value !== '0.0') { %>
                       <span class="badge badge-success"><%=shopping_cart.promotion_code%></span>
                       <% if (shopping_cart.items[idx].promotion_code_discount_type === 'percentage' && shopping_cart.items[idx].promotion_code !== '') {%>
                         <span class="text-danger"><%=parseInt(shopping_cart.items[idx].promotion_code_value)%>&#37;</span>
