@@ -25396,7 +25396,7 @@ a:active {
   color: var(--color-link-active); }
 
 blockquote {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 1rem;
   font-size: 1.25rem; }
 
 .card {
