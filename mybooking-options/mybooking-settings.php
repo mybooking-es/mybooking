@@ -113,15 +113,14 @@
 		  if (!current_user_can('manage_options') || current_user_can('administrator')) {
 
 		    // Add settings submenu page
-		    add_submenu_page(
-		      "themes.php", // https://codex.wordpress.org/Adding_Administration_Menus
-		    	_x("Theme options", 'theme_settings', 'mybooking'),
-		    	_x("Theme options", 'theme_settings', 'mybooking'),
-		    	"manage_options",
-		    	"settings", // The same slug as the main menu so it will be the default option
-		    	array($this, 'mybooking_theme_settings_page'),
-  		    4
-		    );
+			add_theme_page(
+				_x("Theme options", 'theme_settings', 'mybooking'),
+				_x("Theme options", 'theme_settings', 'mybooking'),
+			    'edit_theme_options',                         // Capability
+			    "settings",                                   // Menu slug
+			    array($this, 'mybooking_theme_settings_page') // Callback
+			);
+
 		  }
 		}
 

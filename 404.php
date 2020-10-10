@@ -28,7 +28,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					     alt="<?php echo esc_attr( _x('Page not found', '404_page', 'mybooking') )?>" 
 					     style="max-width: 70%;margin-bottom:2rem;">
 					<h1 style="display:none;">404</h1>
-					<p class="lead"><?php _ex('Page not found', '404_page', 'mybooking') ?></p>
+					<p class="lead"><?php echo esc_html_x('Page not found', '404_page', 'mybooking') ?></p>
 					<hr>
 					<p>Puede regresar a la <a href="<?php echo esc_url( home_url( '/' ) ); ?>">página de inicio</a> o realizar una búqueda</p>
 					<?php get_search_form(); ?>

@@ -13,7 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Set the content width based on the theme's design and stylesheet.
-// TODO: check this condition because we don't know what exactly does... 
+global $content_width;
 if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }

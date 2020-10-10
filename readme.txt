@@ -7,7 +7,7 @@ Requires at least:  5.2
 Tested up to:       5.5.1
 Stable tag:         trunk
 Requires PHP:       7.2
-License: GPLv2 or later
+License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Bootsrap based theme that improves MyBooking Reservation Engine plugin user experience.

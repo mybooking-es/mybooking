@@ -36,7 +36,7 @@ if ( post_password_required() ) {
 					printf(
 						/* translators: %s: post title */
 						esc_html_x( 'One thought on &ldquo;<span>%s</span>&rdquo;', 'comments', 'mybooking' ),
-						get_the_title()
+						esc_html( get_the_title() )
 					);
 				} else {
 					printf(
@@ -51,7 +51,7 @@ if ( post_password_required() ) {
 							)
 						),
 						number_format_i18n( $comments_number ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-						get_the_title()
+						esc_html( get_the_title() )
 					);
 				}
 				?>

@@ -72,17 +72,17 @@
             <a class="page-link"
               href="/<?php echo $args['url']?>?offsetpage=<?php echo $args['current_page']-1 ?><?php echo $args['querystring']?>"><?php echo _x( 'Previous', 'activities_list', 'mybooking' ) ?></a>
           </li>
-          <?php foreach ($args['pages'] as $page) { ?>
-          <?php if ($page == $args['current_page']) { ?>
+          <?php foreach ($args['pages'] as $activity_pagination_page) { ?>
+          <?php if ($activity_pagination_page == $args['current_page']) { ?>
           <li class="page-item active" aria-current="page">
             <span class="page-link">
-              <?php echo $page ?>
+              <?php echo $activity_pagination_page ?>
             </span>
           </li>
           <?php } else { ?>
           <li class="page-item">
             <a class="page-link"
-              href="/<?php echo $args['url']?>?offsetpage=<?php echo $page ?><?php echo $args['querystring']?>"><?php echo $page ?></a>
+              href="/<?php echo $args['url']?>?offsetpage=<?php echo $activity_pagination_page ?><?php echo $args['querystring']?>"><?php echo $activity_pagination_page ?></a>
           </li>
           <?php } ?>
           <?php } ?>

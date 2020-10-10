@@ -33,8 +33,8 @@ $mybooking_includes = array(
 
 foreach ( $mybooking_includes as $mybooking_file ) {
   $mybooking_filepath = locate_template( $mybooking_file );
-  if ( ! $mybooking_filepath ) {
-    trigger_error( sprintf( 'Error locating %s for inclusion', $mybooking_file ), E_USER_ERROR );
+  if ( empty( $mybooking_filepath ) ) {
+    trigger_error( esc_html_e( printf( 'Error locating %s for inclusion', $mybooking_file ) ), E_USER_ERROR );
   }
   require_once $mybooking_filepath;
 }
