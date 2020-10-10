@@ -1,18 +1,18 @@
 <section class="cards-static-container fleet">
   <!-- Products -->
-  <?php foreach( $args['data']->data as $product ) { ?>
+  <?php foreach( $args['data']->data as $renting_product ) { ?>
   <div class="card-static-wrapper">
     <div class="card-static">
       <div class="card-static_image">
-        <img src="<?php echo $product->photo_path?>" alt="?php echo $product->name?>">
+        <img src="<?php echo $renting_product->photo_path?>" alt="?php echo $renting_product->name?>">
       </div>
       <div class="card-static_body">
         <div class="card-static_header">
-          <h2 class="card-static_product-name"><?php echo $product->name ?></h2>
-          <h3 class="card-static_product-short-description"><?php echo $product->short_description ?></h3>
+          <h2 class="card-static_product-name"><?php echo $renting_product->name ?></h2>
+          <h3 class="card-static_product-short-description"><?php echo $renting_product->short_description ?></h3>
         </div>
         <div class="card-static_btn">
-          <a href="/<?php echo $args['url_detail']?>/<?php echo $product->code?>" class="button btn"><?php _ex('More information','renting_products','mybooking'); ?></a>
+          <a href="/<?php echo $args['url_detail']?>/<?php echo $renting_product->code?>" class="button btn"><?php _ex('More information','renting_products','mybooking'); ?></a>
         </div>
       </div>
     </div>
@@ -29,17 +29,17 @@
             <a class="page-link"
               href="/<?php echo $args['url']?>?offsetpage=<?php echo $args['current_page']-1 ?>"><?php _ex('Previous','renting_products','mybooking'); ?></a>
           </li>
-          <?php foreach ($args['pages'] as $page) { ?>
-          <?php if ($page == $args['current_page']) { ?>
+          <?php foreach ($args['pages'] as $renting_pagination_page) { ?>
+          <?php if ($renting_pagination_page == $args['current_page']) { ?>
           <li class="page-item active" aria-current="page">
             <span class="page-link">
-              <?php echo $page ?>
+              <?php echo $renting_pagination_page ?>
             </span>
           </li>
           <?php } else { ?>
           <li class="page-item">
             <a class="page-link"
-              href="/<?php echo $args['url']?>?offsetpage=<?php echo $page ?>"><?php echo $page ?></a>
+              href="/<?php echo $args['url']?>?offsetpage=<?php echo $renting_pagination_page ?>"><?php echo $renting_pagination_page ?></a>
           </li>
           <?php } ?>
           <?php } ?>
