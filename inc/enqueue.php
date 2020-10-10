@@ -34,5 +34,3 @@ if ( ! function_exists( 'mybooking_theme_enqueue_styles' ) ) {
 	}
 	add_action( 'wp_enqueue_scripts', 'mybooking_theme_enqueue_styles' );
 }
-
-?>

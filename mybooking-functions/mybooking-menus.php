@@ -26,4 +26,3 @@ if ( ! function_exists( 'mybooking_extra_menus' ) ) {
 	}
 	add_action( 'init', 'mybooking_extra_menus' );
 }
-?>

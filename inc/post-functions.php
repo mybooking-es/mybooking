@@ -43,7 +43,7 @@ if ( ! function_exists( 'mybooking_posted_on' ) ) {
 				esc_html( get_the_author() )
 			)
 		);
-		echo $posted_on . $byline; // WPCS: XSS OK.
+		echo $posted_on . $byline; 
 	}
 }
 
@@ -58,13 +58,13 @@ if ( ! function_exists( 'mybooking_entry_footer' ) ) {
 			$categories_list = mybooking_get_category_list( esc_html( ', ' ) );
 			if ( $categories_list && mybooking_categorized_blog() ) {
 				/* translators: %s: Categories of current post */
-				printf( '<span class="cat-links">' . esc_html_x( 'Published at %s', 'entry_footer', 'mybooking' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html_x( 'Published at %s', 'entry_footer', 'mybooking' ) . '</span>', $categories_list ); 
 			}
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html( ' | ' ) );
 			if ( $tags_list ) {
 				/* translators: %s: Tags of current post */
-				printf( '<span class="tags-links">' . esc_html_x( 'Labeled at %s', 'entry_footer', 'mybooking' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html_x( 'Labeled at %s', 'entry_footer', 'mybooking' ) . '</span>', $tags_list ); 
 			}
 		}
 		if ( ! is_page() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
