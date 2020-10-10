@@ -144,4 +144,4 @@ You can also setup the company and contact information on Theme options
 - WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
 - video-portada.mv4 @taryn-elliot Pexels https://www.pexels.com/es-es/video/3121459/
 - bg-image.jpg and screenshot.jpg Tamekia Andress CCO Public domain https://pixy.org/392915/
-- page_not_found.svg Katerina Limpitsouni https://undraw.co/license
+- page_not_found.svg https://commons.wikimedia.org/wiki/File:M-404_(cajet%C3%ADn).svg
