@@ -7,8 +7,8 @@ Requires at least:  5.2
 Tested up to:       5.5.1
 Stable tag:         trunk
 Requires PHP:       7.2
-License:            GPLv3 or later
-License URI:        http://www.gnu.org/licenses/gpl-3.0.html
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Bootsrap based theme that improves MyBooking Reservation Engine plugin user experience.
 
@@ -144,3 +144,4 @@ You can also setup the company and contact information on Theme options
 - WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
 - video-portada.mv4 @taryn-elliot Pexels https://www.pexels.com/es-es/video/3121459/
 - bg-image.jpg and screenshot.jpg Tamekia Andress CCO Public domain https://pixy.org/392915/
+- page_not_found.svg Katerina Limpitsouni https://undraw.co/license

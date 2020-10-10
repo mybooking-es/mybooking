@@ -35,23 +35,23 @@ if ( post_password_required() ) {
 				if ( 1 === (int) $comments_number ) {
 					printf(
 						/* translators: %s: post title */
-						esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments', 'mybooking' ),
-						'<span>' . get_the_title() . '</span>'
+						esc_html_x( 'One thought on &ldquo;<span>%s</span>&rdquo;', 'comments', 'mybooking' ),
+						get_the_title()
 					);
 				} else {
 					printf(
 						esc_html(
 							/* translators: 1: number of comments, 2: post title */
 							_nx(
-								'%1$s thought on &ldquo;%2$s&rdquo;',
-								'%1$s thoughts on &ldquo;%2$s&rdquo;',
+								'%1$s thought on &ldquo;<span>%2$s</span>&rdquo;',
+								'%1$s thoughts on &ldquo;<span>%2$s</span>&rdquo;',
 								$comments_number,
 								'comments title',
 								'mybooking'
 							)
 						),
 						number_format_i18n( $comments_number ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-						'<span>' . get_the_title() . '</span>'
+						get_the_title()
 					);
 				}
 				?>

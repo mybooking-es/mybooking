@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 </head>
 
 <body <?php body_class(); ?>>
-  <?php do_action( 'wp_body_open' ); ?>
+  <?php wp_body_open(); ?>
   <?php
     $navbar_integrated = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_navbar_integrated" );
     $navbar_class = ($navbar_integrated == '1' ? 'nav-container-absolute' : '');
@@ -33,12 +33,10 @@ defined( 'ABSPATH' ) || exit;
   ?>
   <div class="site" id="page">
 
-    <?php get_template_part('mybooking-parts/site/mybooking-cookies-notice'); ?>
-
-    <div id="wrapper-navbar" class="navbar-container <?php echo $navbar_class; ?>" itemscope
+    <div id="wrapper-navbar" class="navbar-container <?php echo esc_attr($navbar_class); ?>" itemscope
       itemtype="http://schema.org/WebSite">
       <a class="skip-link sr-only sr-only-focusable"
-        href="#content"><?php esc_html_x( 'Skip to content', 'header', 'mybooking' ); ?></a>
+        href="#content"><?php echo esc_html_x( 'Skip to content', 'header', 'mybooking' ); ?></a>
 
       <!-- Topbar -->
       <?php $topbar_active = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_global_topbar" );

@@ -31,17 +31,15 @@ $mybooking_includes = array(
   '/inc/typography.php'                             // Typography
 );
 
-foreach ( $mybooking_includes as $file ) {
-  $filepath = locate_template( $file );
-  if ( ! $filepath ) {
-    trigger_error( sprintf( 'Error locating %s for inclusion', $file ), E_USER_ERROR );
+foreach ( $mybooking_includes as $mybooking_file ) {
+  $mybooking_filepath = locate_template( $mybooking_file );
+  if ( ! $mybooking_filepath ) {
+    trigger_error( sprintf( 'Error locating %s for inclusion', $mybooking_file ), E_USER_ERROR );
   }
-  require_once $filepath;
+  require_once $mybooking_filepath;
 }
 
 // Start settings
 MyBookingThemeSettings::getInstance();
 // Start customize
 MyBookingCustomizer::getInstance();
-
-?>

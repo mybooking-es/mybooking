@@ -24,9 +24,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<main class="site-main" id="main">
 
 				<div class="col">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/images/page_not_found.svg" alt="<?php echo _x('Page not found', '404_page', 'mybooking') ?>" style="max-width: 70%;margin-bottom:2rem;">
+					<img src="<?php echo esc_url( get_stylesheet_directory_uri()."/images/page_not_found.svg" ) ?>"
+					     alt="<?php echo esc_attr( _x('Page not found', '404_page', 'mybooking') )?>" 
+					     style="max-width: 70%;margin-bottom:2rem;">
 					<h1 style="display:none;">404</h1>
-					<p class="lead"><?php echo _x('Page not found', '404_page', 'mybooking') ?></p>
+					<p class="lead"><?php _ex('Page not found', '404_page', 'mybooking') ?></p>
 					<hr>
 					<p>Puede regresar a la <a href="<?php echo esc_url( home_url( '/' ) ); ?>">página de inicio</a> o realizar una búqueda</p>
 					<?php get_search_form(); ?>
