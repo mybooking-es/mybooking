@@ -11,7 +11,7 @@
 ?>
 <?php
 get_header();?>
-<div class="container px-0">
+<div class="container px-0" id="content">
   <div class="row">
     <div class="col-md-8">
       <?php if (sizeof($args->photos) > 1) { ?>

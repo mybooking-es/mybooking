@@ -157,6 +157,7 @@ You can also setup the company and contact information on Theme options
 - SlickJS: https://kenwheeler.github.io/slick/ | https://github.com/kenwheeler/slick/blob/master/LICENSE (Code licensed under MIT)
 - Mobile Detect: @license Copyright 2013, Heinrich Goebl, License: MIT, see https://github.com/hgoebl/mobile-detect.js | https://github.com/hgoebl/mobile-detect.js/blob/master/LICENSE
 - WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
-- video-portada.mv4 @taryn-elliot Pexels https://www.pexels.com/es-es/video/3121459/
-- bg-image.jpg and screenshot.jpg Tamekia Andress CCO Public domain https://pixy.org/392915/
-- page_not_found.svg https://commons.wikimedia.org/wiki/File:M-404_(cajet%C3%ADn).svg
+- video-portada.mv4 (/images) @taryn-elliot Pexels https://www.pexels.com/es-es/video/3121459/
+- bg-image.jpg (/images) and screenshot.jpg (screenshot) Tamekia Andress CCO Public domain https://pixy.org/392915/
+- page_not_found.svg (/images) CC0 1.0 https://commons.wikimedia.org/wiki/File:M-404_(cajet%C3%ADn).svg
+- ajax-loader.git (/css) [SlickJS] https://github.com/kenwheeler/slick/blob/master/slick/ajax-loader.gif | https://github.com/kenwheeler/slick/blob/master/LICENSE (Code licensed under MIT)

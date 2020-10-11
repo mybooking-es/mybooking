@@ -1,6 +1,6 @@
 <?php get_header();?>
 <br>
-<div class="container">
+<div class="container" id="content">
 	<div class="row">
     <div class="col-md-8">
 			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

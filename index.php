@@ -29,7 +29,7 @@ defined( 'ABSPATH' ) || exit;
 get_header(); ?>
 
 <div class="page_content">
-	<div class="container" tabindex="-1">
+	<div class="container" id="content" tabindex="-1">
 		<div class="row">
 			<div class="col">
 				<div class="row">

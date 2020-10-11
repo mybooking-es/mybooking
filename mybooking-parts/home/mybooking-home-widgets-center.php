@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit; ?>
 if ($widgets_visible == "1") { ?>
 
   <div class="home-widgets">
-    <div class="container" id="content" tabindex="-1">
+    <div class="container" tabindex="-1">
       <div class="row">
         <?php if ( is_active_sidebar( 'home_widgets_center_1' ) ) : ?>
           <div class="col">

@@ -16,25 +16,26 @@ defined( 'ABSPATH' ) || exit;
 <?php get_header(); ?>
 
 <!-- MYBOOKING PARTIALS -->
+<div id="content">
+	<!-- Header -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-header' ); ?>
 
-<!-- Header -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-header' ); ?>
+	<!-- Mybooking Home Top Widgets -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-top' ); ?>
 
-<!-- Mybooking Home Top Widgets -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-top' ); ?>
+	<!-- WordPress Content -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-content' ); ?>
 
-<!-- WordPress Content -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-content' ); ?>
+	<!-- Mybooking Home Center Widgets -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-center' ); ?>
 
-<!-- Mybooking Home Center Widgets -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-center' ); ?>
+	<!-- Mybooking News -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-news' ); ?>
 
-<!-- Mybooking News -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-news' ); ?>
+	<!-- Mybooking Home Bottom Widgets -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-bottom' ); ?>
 
-<!-- Mybooking Home Bottom Widgets -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-bottom' ); ?>
-
-<!-- END MYBOOKING PARTIALS -->
+	<!-- END MYBOOKING PARTIALS -->
+</div>
 
 <?php get_footer();

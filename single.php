@@ -19,17 +19,19 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<div id="content">
+	<?php while ( have_posts() ) : the_post(); ?>
 
-	<?php get_template_part( 'mybooking-parts/blog/mybooking-content-single' ); ?>
+		<?php get_template_part( 'mybooking-parts/blog/mybooking-content-single' ); ?>
 
-	<?php
-	// If comments are open or we have at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) :
-		comments_template();
-	endif;
-	?>
+		<?php
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
+		?>
 
-<?php endwhile; ?>
+	<?php endwhile; ?>
+</div>
 
 <?php get_footer();
