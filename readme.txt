@@ -40,7 +40,9 @@ You can also setup the company and contact information on Theme options
 
 = 0.9.24 =
 * Fixed: Navigation branding no post
-* Updated: Removed unused resources
+* Updated: 
+  - Removed unused resources
+  - Moved theme settings to the customizer
 
 = 0.9.23 =
 * Updated: 404 image
@@ -101,7 +103,7 @@ You can also setup the company and contact information on Theme options
 == Upgrade Notice ==
 
 = 0.9.24 =
-* Fixed: Navigation branding no post
+* Navigation branding no post & moved theme settings to the customizer
 
 = 0.9.23 =
 * Updated: 404 image

@@ -1,12 +1,13 @@
 # Changelog
 
-## [0.9.23] 2020-10-11
+## [0.9.24] 2020-10-11
 
 ### Fixed
 - Navigation brand custom logo when no $post
 
 ### Updated
 - Removed unused resources
+- Moved company information to the customizer
 
 ## [0.9.23] 2020-10-10
 
