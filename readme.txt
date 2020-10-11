@@ -38,6 +38,10 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.24 =
+* Fixed: Navigation branding no post
+* Updated: Removed unused resources
+
 = 0.9.23 =
 * Updated: 404 image
 
@@ -95,6 +99,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.24 =
+* Fixed: Navigation branding no post
 
 = 0.9.23 =
 * Updated: 404 image

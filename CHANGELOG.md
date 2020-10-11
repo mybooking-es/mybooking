@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.9.22] 2020-10-10
+## [0.9.23] 2020-10-11
+
+### Fixed
+- Navigation brand custom logo when no $post
+
+### Updated
+- Removed unused resources
+
+## [0.9.23] 2020-10-10
 
 ### Updated
 - 404 image
