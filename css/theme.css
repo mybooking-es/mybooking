@@ -26804,7 +26804,10 @@ ol.comment-list {
   list-style: none; }
 
 .comment {
-  margin-top: 1.5rem; }
+  margin-top: 1.5rem;
+  background-color: var(--gray-50);
+  padding: 1rem;
+  border-radius: 5px; }
 
 .comment-metadata {
   margin-top: 0.5rem; }

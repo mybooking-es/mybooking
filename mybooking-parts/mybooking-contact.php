@@ -20,8 +20,12 @@ get_header(); ?>
     <div class="row">
       <div class="col-md-6">
 
-        <!-- Contact info -->
-        <?php get_template_part('mybooking-parts/contact/mybooking-contact-info') ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+
+          <?php the_content(); ?>
+          <?php get_template_part('mybooking-parts/contact/mybooking-contact-info') ?>
+                    
+        <?php endwhile;?>
 
       </div>
       <div class="col-md-6 embed-responsive embed-responsive-4by3">

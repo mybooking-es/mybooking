@@ -15,7 +15,6 @@ defined( 'ABSPATH' ) || exit;
 $mybooking_includes = array(
   '/inc/theme-settings.php',                        // Initialize theme default settings.
 	'/inc/setup.php',                                 // Theme setup and custom theme supports.
-  '/mybooking-options/mybooking-settings.php',      // Theme settings
   '/mybooking-functions/mybooking-menus.php',       // Theme menus
   '/mybooking-functions/mybooking-categories.php',  // Theme categories
   '/inc/enqueue.php',                               // Enqueue scripts and styles.
@@ -39,7 +38,5 @@ foreach ( $mybooking_includes as $mybooking_file ) {
   require_once $mybooking_filepath;
 }
 
-// Start settings
-MyBookingThemeSettings::getInstance();
 // Start customize
 MyBookingCustomizer::getInstance();

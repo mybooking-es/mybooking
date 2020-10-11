@@ -27,7 +27,6 @@ if ( $footer_layout == '0' ) { ?>
 
 </div>
 
-<?php get_template_part( 'mybooking-parts/site/mybooking-google-analytics' ) ?>
 <?php wp_footer(); ?>
 
 <!-- Back top link -->

@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
   <div class="<?php echo esc_attr( $container ); ?>">
 
     <span>
-      <?php $company_phone = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_phone");
+      <?php $company_phone = MyBookingCustomizer::getInstance()->get_theme_option("company_info_phone");
           if ($company_phone !== '')
           { ?>
             <a class="info_link" href="tel:<?php echo $company_phone ?>"><i class="fa fa-phone" aria-hidden="true"></i> <span class="info_text"><?php echo $company_phone ?></span></a>
@@ -41,7 +41,7 @@ defined( 'ABSPATH' ) || exit;
     </span>
 
     <span>
-      <?php $company_chat = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_chat");
+      <?php $company_chat = MyBookingCustomizer::getInstance()->get_theme_option("company_info_chat");
           if ($company_chat !== '')
           { ?>
   	  <a class="info_link" href="tel:<?php echo $company_chat ?>"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="info_text"><?php echo $company_chat ?></span></a>
@@ -49,7 +49,7 @@ defined( 'ABSPATH' ) || exit;
     </span>
 
     <span>
-      <?php $company_email = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_email");
+      <?php $company_email = MyBookingCustomizer::getInstance()->get_theme_option("company_info_email");
           if ($company_email !== '')
           { ?>
   	  <a class="info_link" href="mailto:<?php echo $company_email ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="info_text"><?php echo $company_email ?></span></a>
