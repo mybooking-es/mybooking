@@ -13,7 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-nav">
+<nav class="navbar navbar-expand-lg navbar-dark bg-nav" role="navigation">
 
   <?php $container = get_theme_mod( 'mybooking_container_type' ); ?>
   <div class="<?php echo esc_attr( $container ); ?>">

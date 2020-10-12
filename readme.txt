@@ -38,6 +38,10 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.28 =
+* Fixed: Keyboard navigation mobile - menu
+* Updated: Styling
+
 = 0.9.27 =
 * Fixed: iframe embed max width
 * Updated: blog entry style
@@ -111,6 +115,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.28 =
+* Fixed: Keyboard navigation mobile - menu
 
 = 0.9.27 =
 * Blog styling

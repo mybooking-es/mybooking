@@ -118,7 +118,7 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 				'name'          => _x( 'Blog sidebar','mybooking_widgets','mybooking' ),
 				'id'            => 'blog_sidebar',
 		    'description'    => _x( 'Blog sidebar widgets area','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="mybooking-widget mybooking-widget_blog-sidebar">',
+				'before_widget' => '<div id="%1$s" class="mybooking-widget mybooking-widget_blog-sidebar %2$s">',
 				'after_widget'  => '</div>',
 			)
 		);
@@ -129,7 +129,7 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 				'name'          => _x( 'Landing sidebar','mybooking_widgets','mybooking' ),
 				'id'            => 'mybooking_page_sidebar',
 		    'description'    => _x( 'Mybooking Landing template sidebar widgets area','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="mybooking-widget mybooking-widget_landing-sidebar">',
+				'before_widget' => '<div id="%1$s" class="mybooking-widget mybooking-widget_landing-sidebar %2$s">',
 				'after_widget'  => '</div>',
 			)
 		);

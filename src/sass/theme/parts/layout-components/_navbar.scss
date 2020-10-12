@@ -46,13 +46,9 @@
 }
 
 // Toggler
-.navbar-toggler {
-  border: none;
-  padding: 0;
-}
-button.navbar-toggler:focus {
-  outline: none;
-}
+// Important: Do not touch .navbar-toggler border/padding/outline because
+// it must be visible on Keyboard navigation
+
 .navbar-toggler-icon {
   background-image: none !important;
   i {

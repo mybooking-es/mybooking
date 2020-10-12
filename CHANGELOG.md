@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.9.28] 2020-10-13
+
+### Fixed
+- Keyboard Navigation Mobile
+
+### Updated
+- Styling
+
+
 ## [0.9.27] 2020-10-12
 
 ### Added

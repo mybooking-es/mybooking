@@ -11288,4 +11288,41 @@ $(function() {
     });
 
   });
+
+  // Keyboard Navigation on Mobile Menu
+  $(document).on('keydown', function(event) {
+
+    // If mobile
+    if ($('nav.navbar').length > 0 && $('nav.navbar').hasClass('fixed-top')) {
+
+      if ($('button.navbar-toggler').length > 0 && 
+          $('nav.navbar.fixed-top ul.navbar-nav > li.menu-item:last > a').length > 0) {
+
+        var first = $('button.navbar-toggler').get(0);
+        var last = $('nav.navbar.fixed-top ul.navbar-nav > li.menu-item:last > a').get(0);
+
+        var tabKey = event.keyCode === 9;
+        var shiftKey = event.shiftKey;
+
+        if (!shiftKey && tabKey) {
+          if ( event.target === last ) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
+
+        if (shiftKey && tabKey) {
+          if ( event.target === first ) {
+            event.preventDefault();
+            last.focus();
+          }
+        }
+      }
+
+    }
+
+  });
+
+
+
 });

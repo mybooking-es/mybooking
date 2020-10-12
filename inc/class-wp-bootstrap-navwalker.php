@@ -375,6 +375,7 @@ if ( ! class_exists( 'Mybooking_WP_Bootstrap_Navwalker' ) ) {
 					if ( $container_class ) {
 						$fallback_output .= ' class="' . esc_attr( $container_class ) . '"';
 					}
+					$fallback_output .= ' role="navigation" ';
 					$fallback_output .= '>';
 				}
 				$fallback_output .= '<ul';

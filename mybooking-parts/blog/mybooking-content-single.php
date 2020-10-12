@@ -25,10 +25,6 @@ defined( 'ABSPATH' ) || exit;
 		<?php $featured_img_url = get_the_post_thumbnail_url( $post->ID,'full' ); ?>
 		<div class="post_header" style="background-image:url('<?php echo esc_url( $featured_img_url ) ?>')"></div>
 
-	<?php } else { ?>
-
-		<div class="post_header" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/images/default-image.png')"></div>
-
 	<?php } ?>
 
 	<div class="post_content">
