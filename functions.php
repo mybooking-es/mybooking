@@ -15,8 +15,8 @@ defined( 'ABSPATH' ) || exit;
 $mybooking_includes = array(
   '/inc/theme-settings.php',                        // Initialize theme default settings.
 	'/inc/setup.php',                                 // Theme setup and custom theme supports.
-  '/mybooking-functions/mybooking-menus.php',       // Theme menus
-  '/mybooking-functions/mybooking-categories.php',  // Theme categories
+  '/inc/menus.php',                                 // Theme menus
+  '/inc/categories.php',                            // Theme categories
   '/inc/enqueue.php',                               // Enqueue scripts and styles.
 	'/inc/widgets.php',                               // Register widget area.
 	'/inc/pagination.php',                            // Custom pagination for this theme.
@@ -26,7 +26,7 @@ $mybooking_includes = array(
 	'/inc/customizer.php',                            // Customizer additions.
 	'/inc/class-wp-bootstrap-navwalker.php',          // Load custom WordPress nav walker.
   '/inc/post-functions.php',                        // Custom Post functions.
-  '/inc/comment-functions.php',                     // Custom Comment functions.
+  '/inc/comments.php',                              // Custom Comment functions.
   '/inc/typography.php'                             // Typography
 );
 

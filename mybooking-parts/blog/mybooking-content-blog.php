@@ -44,9 +44,9 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 
 			<?php the_title( sprintf(
-				'<h3 class="post_title">
+				'<h2 class="post_title">
 					<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),'</a>
-				</h3>' ); ?>
+				</h2>' ); ?>
 
 				<a class="btn btn-secondary mybooking-read-more-link" href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">
 					<?php echo _x( 'Read', 'home-news-button','mybooking' ) ?>

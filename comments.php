@@ -60,7 +60,7 @@ if ( post_password_required() ) {
 
 				<nav class="comment-navigation" id="comment-nav-above">
 
-					<h1 class="sr-only"><?php esc_html_x( 'Comment navigation', 'comments', 'mybooking' ); ?></h1>
+					<h2 class="sr-only"><?php esc_html_x( 'Comment navigation', 'comments', 'mybooking' ); ?></h2>
 
 					<?php if ( get_previous_comments_link() ) { ?>
 						<div class="nav-previous">
@@ -95,7 +95,7 @@ if ( post_password_required() ) {
 
 				<nav class="comment-navigation" id="comment-nav-below">
 
-					<h1 class="sr-only"><?php esc_html_x( 'Comment navigation', 'comments', 'mybooking' ); ?></h1>
+					<h2 class="sr-only"><?php esc_html_x( 'Comment navigation', 'comments', 'mybooking' ); ?></h2>
 
 					<?php if ( get_previous_comments_link() ) { ?>
 						<div class="nav-previous">

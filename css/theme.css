@@ -25291,7 +25291,8 @@ these properties do not need to be edited */
   --product-detail-group-name: var(--gray-900);
   --product-detail-duration-text: var(--gray-900);
   --margin-for-message: 0;
-  --margin-for-message-active: 40px; }
+  --margin-for-message-active: 40px;
+  --comment-bg-color: var(--gray-50); }
 
 @font-face {
   font-family: "Inter";
@@ -26708,7 +26709,7 @@ ul.social-links,
   background-color: var(--white);
   border: 1px solid var(--white); }
 
-h3.post_title {
+h2.post_title {
   font-size: 1.5rem !important; }
 
 /*
@@ -26805,7 +26806,7 @@ ol.comment-list {
 
 .comment {
   margin-top: 1.5rem;
-  background-color: var(--gray-50);
+  background-color: var(--comments-bg-color);
   padding: 1rem;
   border-radius: 5px; }
 

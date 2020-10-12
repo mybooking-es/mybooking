@@ -38,6 +38,9 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.26 =
+* Fixed: Headers blog and comments
+
 = 0.9.25 =
 * Fixed: Skip Link
 
@@ -104,6 +107,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.26 =
+* Fixed: Headers blog and comments
 
 = 0.9.25 =
 * Fixed: Skip Link

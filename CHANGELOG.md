@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.26] 2020-10-12
+
+### Fixed
+- Headers blog and comments
+
 ## [0.9.25] 2020-10-12
 
 ### Fixed

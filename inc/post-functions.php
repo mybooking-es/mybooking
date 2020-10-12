@@ -148,7 +148,7 @@ if ( ! function_exists( 'mybooking_post_nav' ) ) {
 		}
 		?>
 		<nav class="container navigation post-navigation">
-			<h2 class="sr-only"><?php esc_html_x( 'Post navigation', 'post_navigation', 'mybooking' ); ?></h2>
+			<h2 class="sr-only"><?php echo esc_html_x( 'Post navigation', 'post_navigation', 'mybooking' ); ?></h2>
 			<div class="row nav-links justify-content-between">
 				<?php
 				if ( get_previous_post_link() ) {
