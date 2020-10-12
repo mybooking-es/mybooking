@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.25] 2020-10-12
+
+### Fixed
+- Skip Link on all page templates
+
 ## [0.9.24] 2020-10-11
 
 ### Fixed

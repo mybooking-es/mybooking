@@ -38,6 +38,9 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.25 =
+* Fixed: Skip Link
+
 = 0.9.24 =
 * Fixed: Navigation branding no post
 * Updated: 
@@ -101,6 +104,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.25 =
+* Fixed: Skip Link
 
 = 0.9.24 =
 * Navigation branding no post & moved theme settings to the customizer
