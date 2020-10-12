@@ -35,8 +35,8 @@ defined( 'ABSPATH' ) || exit;
 		<div class="container" tabindex="-1">
 			<div class="row">
 				<div class="col-12 post_body">
-					<h1 class="post_title"><?php the_title(); ?></h1>
-					<p class="post_meta"><?php echo mybooking_posted_on(); ?></p>
+					<h1 class="post_title text-center display-3"><?php the_title(); ?></h1>
+					<p class="post_meta text-center"><?php echo mybooking_posted_on(); ?></p>
 					<?php the_content(); ?>
 
       		<?php

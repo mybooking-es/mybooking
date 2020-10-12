@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.27] 2020-10-12
+
+### Added
+- Styling blog posts
+
+### Fixed
+- Iframe max width
+
 ## [0.9.26] 2020-10-12
 
 ### Fixed

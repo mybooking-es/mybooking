@@ -40,6 +40,7 @@ h2.post_title {
   font-size: 1.5rem !important;
 }
 
+
 /*
 *  HOME NEWS
 */
@@ -290,4 +291,15 @@ h2.comments-title {
  */
 .category-markup {
   margin-top: 1rem; 
+}
+
+/**
+ * TAGS and categories
+ */
+.cat-links > span > a {
+  text-decoration: underline;  
+}
+
+.tags-links > span > a {
+  text-decoration: underline;
 }

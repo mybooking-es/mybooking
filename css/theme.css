@@ -25292,7 +25292,7 @@ these properties do not need to be edited */
   --product-detail-duration-text: var(--gray-900);
   --margin-for-message: 0;
   --margin-for-message-active: 40px;
-  --comment-bg-color: var(--gray-50); }
+  --comments-bg-color: var(--gray-50); }
 
 @font-face {
   font-family: "Inter";
@@ -25834,6 +25834,14 @@ select:disabled {
 
 .wc-block-featured-product {
   margin-bottom: 3rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word; }
+
+iframe {
+  max-width: 100% !important; }
 
 /** Override JQUERY UI **/
 @font-face {
@@ -26922,6 +26930,15 @@ h2.comments-title {
 .category-markup {
   margin-top: 1rem; }
 
+/**
+ * TAGS and categories
+ */
+.cat-links > span > a {
+  text-decoration: underline; }
+
+.tags-links > span > a {
+  text-decoration: underline; }
+
 .site-main {
   width: 100%; }
 
@@ -27590,47 +27607,6 @@ a.dropdown-item {
 
 .vehicle_description {
   padding-top: 1rem; }
-
-.gallery {
-  margin: 0 auto; }
-
-.gallery .gallery-item {
-  float: left;
-  margin-top: 0;
-  text-align: center;
-  width: 33%; }
-
-.gallery-columns-2 .gallery-item {
-  width: 50%; }
-
-.gallery-columns-4 .gallery-item {
-  width: 25%; }
-
-.gallery img {
-  padding: 5px; }
-
-.gallery img:hover {
-  background: var(--white); }
-
-.gallery-columns-2 .attachment-medium {
-  max-width: 92%;
-  height: auto; }
-
-.gallery-columns-4 .attachment-thumbnail {
-  max-width: 84%;
-  height: auto; }
-
-.gallery .gallery-caption {
-  color: var(--gray-700);
-  font-size: 12px;
-  margin: 0 0 12px; }
-
-.gallery dl,
-.gallery dt {
-  margin: 0; }
-
-.gallery br + br {
-  display: none; }
 
 .mybooking-widget {
   margin-bottom: 2rem; }

@@ -29,16 +29,15 @@ if ( ! function_exists( 'mybooking_posted_on' ) ) {
 		);
 		$posted_on   = apply_filters(
 			'mybooking_posted_on', sprintf(
-				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
-				esc_html_x( 'Published on', 'post-meta', 'mybooking' ),
+				'<span class="posted-on"><i class="far fa-calendar-alt"></i>&nbsp;<a href="%1$s" rel="bookmark">%2$s</a></span>',
 				esc_url( get_permalink() ),
 				apply_filters( 'mybooking_posted_on_time', $time_string )
 			)
 		);
 		$byline      = apply_filters(
 			'mybooking_posted_by', sprintf(
-				'<span class="byline"> %1$s<span class="author vcard"><a class="url fn n" href="%2$s"> %3$s</a></span></span>',
-				$posted_on ? esc_html_x( 'by', 'post-meta', 'mybooking' ) : esc_html_x( 'Published by', 'post-meta', 'mybooking' ),
+				'&nbsp;<span class="byline"><i class="far fa-user-circle"></i> %1$s <span class="author vcard"><a class="url fn n" href="%2$s"> %3$s</a></span></span>',
+				esc_html_x( 'by', 'post-meta', 'mybooking' ),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_html( get_the_author() )
 			)
@@ -55,16 +54,16 @@ if ( ! function_exists( 'mybooking_entry_footer' ) ) {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = mybooking_get_category_list( esc_html( ', ' ) );
+			$categories_list = mybooking_get_category_list( esc_html( ' ' ) );
 			if ( $categories_list && mybooking_categorized_blog() ) {
 				/* translators: %s: Categories of current post */
-				printf( '<span class="cat-links">' . esc_html_x( 'Published at %s', 'entry_footer', 'mybooking' ) . '</span>', $categories_list ); 
+				printf( '<div class="cat-links"><i class="far fa-folder"></i>&nbsp;<span>' . esc_html_x( '%s', 'entry_footer', 'mybooking' ) . '</span></div>', $categories_list ); 
 			}
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html( ' | ' ) );
+			$tags_list = get_the_tag_list( '', esc_html( ' ' ) );
 			if ( $tags_list ) {
 				/* translators: %s: Tags of current post */
-				printf( '<span class="tags-links">' . esc_html_x( 'Labeled at %s', 'entry_footer', 'mybooking' ) . '</span>', $tags_list ); 
+				printf( '<div class="tags-links"><i class="fas fa-tag"></i>&nbsp;<span>' . esc_html_x( '%s', 'entry_footer', 'mybooking' ) . '</span></div>', $tags_list ); 
 			}
 		}
 		if ( ! is_page() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
