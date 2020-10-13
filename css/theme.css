@@ -25108,6 +25108,29 @@ form.was-validated select:valid ~ .select2-container--bootstrap4 .select2-select
 .select2-container--bootstrap4 .select2-selection__clear:hover {
   background-color: #afafaf; }
 
+@media (min-width: 992px) {
+  .dropdown-submenu {
+    position: relative; }
+  /* Show horizontal arrow */
+  .dropdown-submenu > a:after {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+    float: right; }
+  .dropdown-submenu:not(.dropdown-submenu-depth) > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0px;
+    margin-left: 0px; } }
+
+@media (max-width: 992px) {
+  .dropdown-submenu > .dropdown-menu.show {
+    margin: 0 10px;
+    border-radius: 0; } }
+
 /*
 these properties do not need to be edited */
 :root {
@@ -25167,6 +25190,7 @@ these properties do not need to be edited */
   --navbar-dropdown-item-color: var(--gray-900);
   --navbar-dropdown-item-active-bg: var(--brand-secondary);
   --navbar-link-collapse: var(--white);
+  --navbar-branding: #424242;
   --custom-logo-height: 40px;
   --toggler-icon-font-size: 1.3rem;
   --toggler-icon-color: var(--gray-900);
@@ -25267,7 +25291,8 @@ these properties do not need to be edited */
   --product-detail-group-name: var(--gray-900);
   --product-detail-duration-text: var(--gray-900);
   --margin-for-message: 0;
-  --margin-for-message-active: 40px; }
+  --margin-for-message-active: 40px;
+  --comments-bg-color: var(--gray-50); }
 
 @font-face {
   font-family: "Inter";
@@ -25370,6 +25395,10 @@ a:focus {
 
 a:active {
   color: var(--color-link-active); }
+
+blockquote {
+  margin: 0 0 1rem 1rem;
+  font-size: 1.25rem; }
 
 .card {
   border-radius: 0; }
@@ -25687,8 +25716,14 @@ select:disabled {
 *  BLOCKS
 *
 */
-.wp-block-buttons {
-  margin: 0; }
+.wp-block-button {
+  margin: 3rem 0; }
+
+.wp-block-button.alignleft {
+  margin: 0 1rem 0 0; }
+
+.wp-block-button.alignright {
+  margin: 0 0 0 1rem; }
 
 .wp-block-button__link {
   border-radius: 0;
@@ -25698,6 +25733,19 @@ select:disabled {
   letter-spacing: 1px;
   font-weight: var(--btn-font-w);
   text-transform: var(--btn-text-transform); }
+
+.wp-block-button.is-style-outline > .wp-block-button__link {
+  color: var(--btn-bg-color) !important;
+  background-color: var(--white);
+  border: 1px solid var(--btn-bg-color); }
+
+.wp-block-button.is-style-outline > .wp-block-button__link:hover {
+  color: var(--white) !important;
+  background-color: var(--btn-bg-color);
+  border: 1px solid var(--btn-bg-color); }
+
+.wp-block-button.is-style-squared > .wp-block-button__link {
+  border-radius: 0; }
 
 .wp-block-button__link:hover {
   text-decoration: none; }
@@ -25805,6 +25853,14 @@ select:disabled {
 
 .wc-block-featured-product {
   margin-bottom: 3rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word; }
+
+iframe {
+  max-width: 100% !important; }
 
 /** Override JQUERY UI **/
 @font-face {
@@ -26156,7 +26212,7 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
 
 @media (min-width: 992px) {
   .woocommerce ul.products[class*=columns-3] li.product {
-    width: 30%; }
+    width: 32%; }
   .woocommerce-page ul.products[class*=columns-4] li.product {
     width: 23.65%; }
   .woocommerce-page ul.products[class*=columns-] li.product .woocommerce-loop-product__title {
@@ -26582,6 +26638,9 @@ ul.social-links,
   border-radius: var(--bootstrap-form-control-border-radius);
   margin-bottom: 2em; }
 
+.widget_mybooking_engine_contact textarea {
+  margin-bottom: 1rem; }
+
 .footer {
   overflow-x: hidden;
   padding: 3rem 0 3rem 0;
@@ -26652,8 +26711,71 @@ ul.social-links,
 /*
 *  LOOP
 */
-.blog .post {
-  margin-bottom: 2rem; }
+.home.blog .page_content {
+  padding: 3rem 0; }
+
+.blog .post,
+.archive.author .post,
+.archive.category .post {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem; }
+
+/* Sticky posts */
+.post.sticky {
+  background-color: var(--brand-primary);
+  border-radius: 4px; }
+
+.post.sticky .post_title a,
+.post.sticky .post_title a:visited {
+  color: var(--white);
+  margin-left: 1rem; }
+
+.post.sticky a.btn.btn-secondary.mybooking-read-more-link {
+  color: var(--white);
+  background-color: transparent;
+  border: 1px solid var(--white);
+  margin-left: 1rem; }
+
+.post.sticky a.btn.btn-secondary.mybooking-read-more-link:hover {
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--white); }
+
+h2.post_title {
+  margin-bottom: 0; }
+
+h2.post_title > a {
+  text-align: center; }
+
+.block-ellipsis {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: 2.05rem;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.widget li {
+  margin: 2rem 0 0 0; }
+
+/*
+ * Recent posts
+ */
+.widget_recent_entries ul {
+  list-style: none;
+  padding-left: 0; }
+
+/*
+ * Recent comments
+ */
+.widget_recent_comments ul {
+  list-style: none;
+  padding-left: 0; }
 
 /*
 *  HOME NEWS
@@ -26683,6 +26805,13 @@ ul.social-links,
 /*
 *  SINGLE
 */
+.entry-title {
+  margin-bottom: 2rem;
+  font-weight: 700; }
+
+.entry-footer {
+  clear: both; }
+
 .post_header {
   height: 50vh;
   overflow: hidden;
@@ -26691,14 +26820,30 @@ ul.social-links,
   background-position: center center; }
 
 .post_content {
-  background-color: #fff;
-  padding-top: 2rem; }
+  background-color: var(--white);
+  padding: 2rem 0 1rem 0; }
 
 .post_title {
+  margin-bottom: 2rem;
   font-weight: 700; }
 
 .post_meta {
-  margin: 1rem 0; }
+  margin: 1rem 0 3rem 0; }
+
+.edit-link > a.btn.btn-primary.post-edit-link {
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
+  min-width: 10rem;
+  text-transform: inherit;
+  font-weight: 400; }
+  .edit-link > a.btn.btn-primary.post-edit-link:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark); }
+
+.mybooking-post-edit-link.edit-link {
+  margin-top: 1.5rem; }
 
 @media (max-width: 1024px) {
   .post_header {
@@ -26706,11 +26851,154 @@ ul.social-links,
   .post_header img {
     bottom: 0; } }
 
+.mybooking-entry-links {
+  padding: 2rem 0;
+  clear: both; }
+
+/*
+*  COMMENTS
+*/
+.comments-link {
+  margin: 1rem 0 2rem 0; }
+
+.comment-list {
+  margin-top: 1.5rem; }
+
+ol.comment-list {
+  list-style: none; }
+
+.comment {
+  margin-top: 1.5rem;
+  background-color: var(--comments-bg-color);
+  padding: 1rem;
+  border-radius: 5px; }
+
+.comment-metadata {
+  margin-top: 0.5rem; }
+
+.comment-content {
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+.comments-area {
+  margin-top: 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid #EFEFEF;
+  clear: both; }
+
+h2.comments-title {
+  font-size: 1.2em; }
+
+.comment-form label {
+  display: block !important; }
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"] {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 .8rem;
+  font-size: var(--form-control-font-size);
+  line-height: 18px;
+  color: var(--form-control-color);
+  border: 1px solid var(--form-control-border-color);
+  border-radius: var(--flex-form-control-border-radius);
+  height: var(--form-control-height);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  min-width: 100%; }
+
+.comment-form-comment textarea {
+  width: 100%;
+  min-height: 300px;
+  padding-top: 1rem;
+  font-size: var(--form-control-font-size);
+  line-height: 18px;
+  color: var(--form-control-color);
+  border: 1px solid var(--form-control-border-color);
+  border-radius: var(--flex-form-control-border-radius);
+  height: var(--form-control-height);
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.comments-area [type="button"],
+.comments-area [type="reset"],
+.comments-area [type="submit"],
+.comments-area button {
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
+  border-radius: 3px;
+  padding: .375rem .75rem;
+  min-width: 10rem; }
+  .comments-area [type="button"]:hover,
+  .comments-area [type="reset"]:hover,
+  .comments-area [type="submit"]:hover,
+  .comments-area button:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark); }
+
+.edit-link > a.btn.btn-primary.comment-edit-link,
+.reply > a.btn.btn-primary.comment-reply-link {
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
+  text-transform: inherit;
+  font-weight: 400; }
+  .edit-link > a.btn.btn-primary.comment-edit-link:hover,
+  .reply > a.btn.btn-primary.comment-reply-link:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark); }
+
+.reply > a.btn.btn-primary.comment-reply-link {
+  min-width: 10rem; }
+
+#cancel-comment-reply-link {
+  margin-left: 1rem;
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
+  border-radius: 3px;
+  padding: .375rem .75rem;
+  text-decoration: none; }
+  #cancel-comment-reply-link:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark); }
+
+.comment-respond {
+  margin-top: 1.5rem; }
+
+.comment-reply-title {
+  font-size: 1.2rem; }
+
+/**
+ * CATEGORY
+ */
+.category-markup {
+  margin-top: 1rem; }
+
+/**
+ * TAGS and categories
+ */
+.cat-links > span > a {
+  text-decoration: underline; }
+
+.tags-links > span > a {
+  text-decoration: underline; }
+
 .site-main {
   width: 100%; }
 
 .page_content {
   padding: 3rem 0; }
+
+.home .page_content {
+  padding: 0; }
 
 .post-navigation {
   margin: 2rem 0; }
@@ -26861,12 +27149,11 @@ ul.social-links,
      object-fit: contain;
   width: auto; }
 
-.navbar-toggler {
-  border: none;
-  padding: 0; }
+.navbar-dark .navbar-brand, .navbar-dark .navbar-brand a {
+  color: var(--navbar-branding) !important; }
 
-button.navbar-toggler:focus {
-  outline: none; }
+.navbar-dark .navbar-brand:hover {
+  opacity: .5; }
 
 .navbar-toggler-icon {
   background-image: none !important; }
@@ -26877,7 +27164,7 @@ button.navbar-toggler:focus {
 
 .navbar-dark .navbar-nav .nav-link {
   color: var(--navbar-link-color);
-  text-transform: uppercase;
+  text-transform: inherit;
   letter-spacing: 1px;
   font-weight: 500; }
 
@@ -27226,9 +27513,6 @@ a.dropdown-item {
     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); } }
 
-/*
-* MYBOOKING TESTIMONIALS
-*************************************/
 .mybooking-home_testimonials {
   max-width: 100vw;
   overflow-x: hidden; }
@@ -27327,7 +27611,7 @@ a.dropdown-item {
         -ms-flex-direction: row;
             flex-direction: row; }
   .testimonial-item_content {
-    margin-left: 25px;
+    margin-left: 2.5rem;
     width: 80%;
     padding: 0;
     text-align: left; }
@@ -27369,47 +27653,6 @@ a.dropdown-item {
 .vehicle_description {
   padding-top: 1rem; }
 
-.gallery {
-  margin: 0 auto; }
-
-.gallery .gallery-item {
-  float: left;
-  margin-top: 0;
-  text-align: center;
-  width: 33%; }
-
-.gallery-columns-2 .gallery-item {
-  width: 50%; }
-
-.gallery-columns-4 .gallery-item {
-  width: 25%; }
-
-.gallery img {
-  padding: 5px; }
-
-.gallery img:hover {
-  background: var(--white); }
-
-.gallery-columns-2 .attachment-medium {
-  max-width: 92%;
-  height: auto; }
-
-.gallery-columns-4 .attachment-thumbnail {
-  max-width: 84%;
-  height: auto; }
-
-.gallery .gallery-caption {
-  color: var(--gray-700);
-  font-size: 12px;
-  margin: 0 0 12px; }
-
-.gallery dl,
-.gallery dt {
-  margin: 0; }
-
-.gallery br + br {
-  display: none; }
-
 .mybooking-widget {
   margin-bottom: 2rem; }
 
@@ -27417,6 +27660,12 @@ a.dropdown-item {
 *  Mybooking Widgets integration
 *
 **/
+/* Home widgets areas needs a top-margin */
+.home-top-widgets,
+.home-bottom-widgets,
+.home-bottom-widgets {
+  margin-top: 2rem; }
+
 /* Selector Widget on Home's Widget zone */
 .home-widgets .flex-form-group-wrapper input[type=text],
 .home-widgets .flex-form-group label i {
@@ -29472,7 +29721,7 @@ ul.summary-modal_prices {
 *   @since Mybooking WordPress Theme 0.9.9
 */
 .mybooking-popup_backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   width: 100vw;
@@ -29496,7 +29745,7 @@ ul.summary-modal_prices {
 @media (min-width: 992px) {
   .mybooking-popup {
     width: 50vw;
-    height: 50vh; } }
+    height: auto; } }
 
 .mybooking-popup_content {
   position: relative;

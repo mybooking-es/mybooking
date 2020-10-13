@@ -6,7 +6,7 @@
 * 	Eventually, some of the functionality here could be replaced by core features.
 *
 *
-* 	@version 0.0.1
+* 	@version 0.0.2
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.3
@@ -21,32 +21,39 @@ defined( 'ABSPATH' ) || exit;
 if ( ! function_exists( 'mybooking_posted_on' ) ) {
 	function mybooking_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		// if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		// 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s"> (%4$s) </time>';
-		// }
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),
 			esc_attr( get_the_modified_date( 'c' ) ),
 			esc_html( get_the_modified_date() )
 		);
-		$posted_on   = apply_filters(
+		$posted_on = apply_filters(
 			'mybooking_posted_on', sprintf(
-				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
-				esc_html_x( 'Published on', 'post-meta', 'mybooking' ),
+				'<span class="posted-on"><i class="far fa-calendar-alt"></i>&nbsp;<a href="%1$s" rel="bookmark">%2$s</a></span>',
 				esc_url( get_permalink() ),
 				apply_filters( 'mybooking_posted_on_time', $time_string )
 			)
 		);
-		$byline      = apply_filters(
+		$byline = apply_filters(
 			'mybooking_posted_by', sprintf(
-				'<span class="byline"> %1$s<span class="author vcard"><a class="url fn n" href="%2$s"> %3$s</a></span></span>',
-				$posted_on ? esc_html_x( 'by', 'post-meta', 'mybooking' ) : esc_html_x( 'Published by', 'post-meta', 'mybooking' ),
+				'&nbsp;<span class="byline"><i class="far fa-user-circle"></i> %1$s <span class="author vcard"><a class="url fn n" href="%2$s"> %3$s</a></span></span>',
+				esc_html_x( 'by', 'post-meta', 'mybooking' ),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_html( get_the_author() )
 			)
 		);
-		echo $posted_on . $byline; // WPCS: XSS OK.
+
+		echo $posted_on;
+		echo $byline;
+
+		$comments = '';
+
+		if ( ! is_page() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+			echo '&nbsp;<span class="comments-link"><i class="far fa-comment"></i>&nbsp;';
+			comments_popup_link( esc_html_x( 'Leave a comment', 'entry_footer', 'mybooking' ), esc_html_x( '1 Comment', 'entry_footer', 'mybooking' ), esc_html_x( '% Comments', 'comments', 'mybooking' ) );
+			echo '</span>';
+		}
+
 	}
 }
 
@@ -58,31 +65,29 @@ if ( ! function_exists( 'mybooking_entry_footer' ) ) {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html( ', ' ) );
+			$categories_list = mybooking_get_category_list( esc_html( ' ' ) );
 			if ( $categories_list && mybooking_categorized_blog() ) {
 				/* translators: %s: Categories of current post */
-				printf( '<span class="cat-links">' . esc_html_x( 'Published at %s', 'entry_footer', 'mybooking' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<div class="cat-links"><i class="far fa-folder"></i>&nbsp;<span> %s</span></div>', $categories_list ); 
 			}
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html( ', ' ) );
+			$tags_list = get_the_tag_list( '', esc_html( ' ' ) );
 			if ( $tags_list ) {
 				/* translators: %s: Tags of current post */
-				printf( '<span class="tags-links">' . esc_html_x( 'Labeled at %s', 'entry_footer', 'mybooking' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<div class="tags-links"><i class="fas fa-tag"></i>&nbsp;<span> %s</span></div>', $tags_list ); 
 			}
 		}
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link( esc_html_x( 'Leave a comment', 'entry_footer', 'mybooking' ), esc_html_x( '1 Comment', 'entry_footer', 'mybooking' ), esc_html_x( '% Comments', 'comments', 'mybooking' ) );
-			echo '</span>';
-		}
+		// Edit post link: Added classes to show as a button
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Name of current post */
 				esc_html_x( 'Edit %s', 'entry_footer', 'mybooking' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			),
-			'<span class="edit-link">',
-			'</span>'
+			'<div class="edit-link mybooking-post-edit-link">',
+			'</div>',
+			0,
+			'btn btn-primary post-edit-link'
 		);
 	}
 }
@@ -117,11 +122,6 @@ if ( ! function_exists( 'mybooking_categorized_blog' ) ) {
 }
 
 
-/**
- * Flush out the transients used in mybooking_categorized_blog.
- */
-add_action( 'edit_category', 'mybooking_category_transient_flusher' );
-add_action( 'save_post',     'mybooking_category_transient_flusher' );
 
 if ( ! function_exists( 'mybooking_category_transient_flusher' ) ) {
 	function mybooking_category_transient_flusher() {
@@ -131,6 +131,11 @@ if ( ! function_exists( 'mybooking_category_transient_flusher' ) ) {
 		// Like, beat it. Dig?
 		delete_transient( 'mybooking_categories' );
 	}
+	/**
+	 * Flush out the transients used in mybooking_categorized_blog.
+	 */
+	add_action( 'edit_category', 'mybooking_category_transient_flusher' );
+	add_action( 'save_post',     'mybooking_category_transient_flusher' );
 }
 
 /**
@@ -148,7 +153,7 @@ if ( ! function_exists( 'mybooking_post_nav' ) ) {
 		}
 		?>
 		<nav class="container navigation post-navigation">
-			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'mybooking' ); ?></h2>
+			<h2 class="sr-only"><?php echo esc_html_x( 'Post navigation', 'post_navigation', 'mybooking' ); ?></h2>
 			<div class="row nav-links justify-content-between">
 				<?php
 				if ( get_previous_post_link() ) {
@@ -173,8 +178,9 @@ if ( ! function_exists( 'mybooking_pingback' ) ) {
 			echo '<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">' . "\n";
 		}
 	}
+	add_action( 'wp_head', 'mybooking_pingback' );
 }
-add_action( 'wp_head', 'mybooking_pingback' );
+
 
 if ( ! function_exists( 'mybooking_mobile_web_app_meta' ) ) {
 	/**
@@ -185,5 +191,5 @@ if ( ! function_exists( 'mybooking_mobile_web_app_meta' ) ) {
 		echo '<meta name="apple-mobile-web-app-capable" content="yes">' . "\n";
 		echo '<meta name="apple-mobile-web-app-title" content="' . esc_attr( get_bloginfo( 'name' ) ) . ' - ' . esc_attr( get_bloginfo( 'description' ) ) . '">' . "\n";
 	}
+	add_action( 'wp_head', 'mybooking_mobile_web_app_meta' );
 }
-add_action( 'wp_head', 'mybooking_mobile_web_app_meta' );

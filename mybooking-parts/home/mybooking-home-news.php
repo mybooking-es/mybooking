@@ -11,7 +11,7 @@
 ?>
 
 <?php $news_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_news_visibility" );
-if ($news_visible) { ?>
+if ($news_visible == "1") { ?>
 
   <div class="news_container">
     <div class="container">

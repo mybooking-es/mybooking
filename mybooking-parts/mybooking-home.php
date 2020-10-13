@@ -3,7 +3,7 @@
 *   Template Name: MyBooking Home
 *  	-----------------------------
 *
-* 	@version 0.0.5
+* 	@version 0.0.8
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -16,22 +16,26 @@ defined( 'ABSPATH' ) || exit;
 <?php get_header(); ?>
 
 <!-- MYBOOKING PARTIALS -->
+<div id="content">
+	<!-- Header -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-header' ); ?>
 
-<!-- Header -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-header' ); ?>
+	<!-- Mybooking Home Top Widgets -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-top' ); ?>
 
-<!-- WordPress Content -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-content' ); ?>
+	<!-- WordPress Content -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-content' ); ?>
 
-<!-- Mybooking Widgets Module -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets' ); ?>
+	<!-- Mybooking Home Center Widgets -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-center' ); ?>
 
-<!-- Mybooking News Module -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-news' ); ?>
+	<!-- Mybooking News -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-news' ); ?>
 
-<!-- Mybooking Testimonials Module -->
-<?php get_template_part( 'mybooking-parts/home/mybooking-home-testimonials' ); ?>
+	<!-- Mybooking Home Bottom Widgets -->
+	<?php get_template_part( 'mybooking-parts/home/mybooking-home-widgets-bottom' ); ?>
 
-<!-- END MYBOOKING PARTIALS -->
+	<!-- END MYBOOKING PARTIALS -->
+</div>
 
 <?php get_footer();

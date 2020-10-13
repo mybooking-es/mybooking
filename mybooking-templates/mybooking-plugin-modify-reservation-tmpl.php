@@ -17,7 +17,7 @@
       <!-- Pickup / Return place -->
       <div class="flex-form-group">
         <div class="flex-form-box">
-          <label><?php echo _x( 'Pick-up place', 'renting_form_selector', 'mybooking-wp-plugin') ?></label>
+          <label><?php echo _x( 'Pick-up place', 'renting_form_selector', 'mybooking') ?></label>
           <div class="flex-form-item pickup_place_group">
             <label class="form_selector-select_label_wrap mb-0">
               <select id="pickup_place" name="pickup_place" class="form_selector-select_dropdown"></select>
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="flex-form-box">
-          <label><?php echo _x( 'Return place', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
+          <label><?php echo _x( 'Return place', 'renting_form_selector', 'mybooking' ) ?></label>
           <div class="flex-form-item return_place_group">
             <label class="form_selector-select_label_wrap mb-0">
               <select id="return_place" name="return_place" class="form_selector-select_dropdown">
@@ -59,7 +59,7 @@
     <!-- Date/Time from / to -->
     <div class="flex-form-group">
       <div class="flex-form-box">
-        <label><?php echo _x( 'Pick-up date', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
+        <label><?php echo _x( 'Pick-up date', 'renting_form_selector', 'mybooking' ) ?></label>
         <div class="flex-form-item">
           <label class="mb-0" for="date_from"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
           <input type="text" id="date_from" name="date_from" readonly="true"/>
@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="flex-form-box">
-        <label><?php echo _x( 'Return date', 'renting_form_selector', 'mybooking-wp-plugin' ) ?></label>
+        <label><?php echo _x( 'Return date', 'renting_form_selector', 'mybooking' ) ?></label>
         <div class="flex-form-item">
           <label class="mb-0" for="date_to"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
           <input type="text" id="date_to" name="date_to" readonly="true"/>
@@ -86,9 +86,19 @@
       </div>
     </div>
   </div>
+
+  <% if (not_hidden_family_id && configuration.selectFamily) { %>
+    <div class="flex-form-horizontal-box family" style="display: none">
+      <label class="mb-0" for="family_id"><?php echo _x( 'Family', 'renting_form_selector', 'mybooking' ) ?></label>
+      <div class="flex-form-horizontal-item">
+        <select name="family_id" id="family_id" class="form-control"></select>
+      </div>
+    </div>
+  <% } %>
+
   <div class="flex-form-box">
     <input type="submit" class="btn btn-primary mt-3"
-      value="<?php echo _x( 'Search', 'renting_form_selector', 'mybooking-wp-plugin') ?>" />
+      value="<?php echo _x( 'Search', 'renting_form_selector', 'mybooking') ?>" />
   </div>
 
 </script>

@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
   aria-controls="navbarNavDropdown" aria-expanded="false"
-  aria-label="<?php esc_attr_x( 'Toggle navigation', 'toggle_navigation', 'mybooking' ); ?>">
+  aria-label="<?php echo esc_attr_x( 'Toggle navigation', 'toggle_navigation', 'mybooking' ); ?>">
   <span class="navbar-toggler-icon">
     <i class="fa fa-bars"></i>
   </span>

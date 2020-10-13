@@ -11,13 +11,26 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @package WooCommerce\Templates
  * @version 3.4.0
  */
+
+ /**
+  * 	Mybooking Tweaks
+  *
+  * 	- No sidebar version
+	*
+	* 	@version: 0.0.1
+	*   @package WordPress
+	*   @subpackage Mybooking WordPress Theme
+	*   @since Mybooking WordPress Theme 0.9.9
+	*/
 
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
+
+
 
 /**
  * Hook: woocommerce_before_main_content.
@@ -94,12 +107,5 @@ if ( woocommerce_product_loop() ) {
  * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
  */
 do_action( 'woocommerce_after_main_content' );
-
-/**
- * Hook: woocommerce_sidebar.
- *
- * @hooked woocommerce_get_sidebar - 10
- */
-do_action( 'woocommerce_sidebar' );
 
 get_footer( 'shop' );

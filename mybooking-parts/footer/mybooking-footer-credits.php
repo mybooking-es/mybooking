@@ -16,24 +16,12 @@ defined( 'ABSPATH' ) || exit;
 <div class="container-fluid copy copy-wrapper">
   <div class="row">
     <div class="col text-center">
-      <?php $company_trade_name = MyBookingThemeSettings::getInstance()->get_theme_option("company_info_trade_name");
-      if ($company_trade_name !== '') { ?>
+      <?php $mybooking_footer_credits = MyBookingCustomizer::getInstance()->get_theme_option("mybooking_global_footer_credits");?>
       <p class="footer_copyright">
         <small>
-          &copy; <?php echo date('Y'); ?> <?php echo $company_trade_name ?>
-          <span> | <?php _e('Powered by', 'mybooking') ?> <a href="https://mybooking.es/"
-              target="_blank">mybooking</a></span>
+          <?php echo sprintf( '&copy; %s %s', date('Y'), $mybooking_footer_credits ); ?>
         </small>
       </p>
-      <?php } else { ?>
-      <p class="footer_copyright">
-        <small>
-          <span><?php _e('Powered by', 'mybooking') ?> <a href="https://mybooking.es/"
-              target="_blank">mybooking</a></span>
-        </small>
-      </p>
-      <?php } ?>
-
     </div>
   </div>
 </div>

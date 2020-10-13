@@ -16,12 +16,14 @@ defined( 'ABSPATH' ) || exit;
 <?php wp_nav_menu(
   array(
     'theme_location'  => 'primary',
+    'container'       => 'div',
     'container_class' => 'collapse navbar-collapse',
     'container_id'    => 'navbarNavDropdown',
     'menu_class'      => 'navbar-nav ml-auto',
-    'fallback_cb'     => '',
+    'fallback_cb'     => 'Mybooking_WP_Bootstrap_Navwalker::fallback',
     'menu_id'         => 'main-menu',
-    'depth'           => 3,
+    'role'            => 'navigation',
+    'depth'           => 10,
     'walker'          => new Mybooking_WP_Bootstrap_Navwalker(),
   )
 );

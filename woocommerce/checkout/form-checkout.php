@@ -19,8 +19,9 @@
   * Mybooking Tweaks
   *
   * - Changed col classes to avoid Bootstrap conflicts
+	*	- Changed textdomain to match theme and add context
 	*
-	* 	@version: 0.0.1
+	* 	@version: 0.0.2
 	*   @package WordPress
 	*   @subpackage Mybooking WordPress Theme
 	*   @since Mybooking WordPress Theme 0.9.9
@@ -34,7 +35,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
 
 // If checkout registration is disabled and not logged in, the user cannot checkout.
 if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_required() && ! is_user_logged_in() ) {
-	echo esc_html( apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) ) );
+	echo esc_html( apply_filters( 'woocommerce_checkout_must_be_logged_in_message', _ex( 'You must be logged in to checkout.','woocommerce_mybooking', 'mybooking' ) ) );
 	return;
 }
 
@@ -62,7 +63,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 
-	<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
+	<h3 id="order_review_heading"><?php echo esc_html_x( 'Your order','woocommerce_mybooking', 'mybooking' ); ?></h3>
 
 	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 

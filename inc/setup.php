@@ -3,7 +3,7 @@
 *		MYBOOKING THEME SETUP
 *  	---------------------
 *
-* 	@version 0.0.5
+* 	@version 0.0.6
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.6.0
@@ -13,6 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Set the content width based on the theme's design and stylesheet.
+global $content_width;
 if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
@@ -88,18 +89,6 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		 */
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		/*
-		 * Enable support for Post Formats.
-		 * See http://codex.wordpress.org/Post_Formats
-		 *
-		 */
-		add_theme_support( 'post-formats', array(
-			'aside',
-			'image',
-			'video',
-			'quote',
-			'link',
-		) );
 
 		/*
 		* Set up the WordPress Theme logo feature.
@@ -114,13 +103,27 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		add_theme_support( 'responsive-embeds' );
 
 		/*
+		 * Set up the WordPress core custom background feature.
+		 */
+		add_theme_support( 'custom-background', apply_filters( 'mybooking_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
+
+		$custom_header_args = array(
+					'default-image' => get_parent_theme_file_uri( '/images/header.jpg' ),
+					'width'         => 2000,
+					'height'        => 1200,
+					'flex-height'   => true
+				);
+
+		add_theme_support( 'custom-header', $custom_header_args );
+
+		/*
 		* Add support for Woocommerce
 		*
 		*/
-		add_action( 'after_setup_theme', 'woocommerce_support' );
-		function woocommerce_support() {
-		   add_theme_support( 'woocommerce' );
-		}
+		add_theme_support( 'woocommerce' );
 
 		/*
 		* Gutenberg support
@@ -202,20 +205,6 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 
 	}
 }
-
-/**
- * Mybooking settings & functions
- *
- */
-
-// Prepare the theme settings page
-require_once( get_template_directory() . '/mybooking-options/mybooking-settings.php' );
-MyBookingThemeSettings::getInstance();
-
-// Functions
-require_once( get_template_directory() . '/mybooking-functions/mybooking-menus.php' );
-require_once( get_template_directory() . '/mybooking-functions/mybooking-categories.php' );
-
 
 /**
  * Post excerpts

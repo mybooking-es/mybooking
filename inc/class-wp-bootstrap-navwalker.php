@@ -3,6 +3,7 @@
  * WP Bootstrap Navwalker
  *
  * @package WP-Bootstrap-Navwalker
+ * @see https://bootstrapious.com/p/bootstrap-multilevel-dropdown
  */
 
 // Exit if accessed directly.
@@ -51,8 +52,9 @@ if ( ! class_exists( 'Mybooking_WP_Bootstrap_Navwalker' ) ) {
 				$n = "\n";
 			}
 			$indent = str_repeat( $t, $depth );
-			// Default class to add to the file.
-			$classes = array( 'dropdown-menu' );
+
+			// Default class to add to the file. 
+            $classes = array( 'dropdown-menu' );
 			/**
 			 * Filters the CSS class(es) applied to a menu list element.
 			 *
@@ -137,7 +139,17 @@ if ( ! class_exists( 'Mybooking_WP_Bootstrap_Navwalker' ) ) {
 
 			// Add .dropdown or .active classes where they are needed.
 			if ( isset( $args->has_children ) && $args->has_children ) {
-				$classes[] = 'dropdown';
+				//$classes[] = 'dropdown'; 
+                // Multi-level menu updated (2020.10.03)
+				if ($depth == 0) {
+				  $classes[] = 'dropdown';
+				}
+				else if ($depth < 3) {
+				  $classes[] = 'dropdown-submenu'; // dropdown-submenu dropdown
+			    }
+			    else {
+			      $classes[] = 'dropdown-submenu dropdown-submenu-depth';	
+			    }
 			}
 			if ( in_array( 'current-menu-item', $classes, true ) || in_array( 'current-menu-parent', $classes, true ) ) {
 				$classes[] = 'active';
@@ -363,6 +375,7 @@ if ( ! class_exists( 'Mybooking_WP_Bootstrap_Navwalker' ) ) {
 					if ( $container_class ) {
 						$fallback_output .= ' class="' . esc_attr( $container_class ) . '"';
 					}
+					$fallback_output .= ' role="navigation" ';
 					$fallback_output .= '>';
 				}
 				$fallback_output .= '<ul';
@@ -371,7 +384,7 @@ if ( ! class_exists( 'Mybooking_WP_Bootstrap_Navwalker' ) ) {
 				if ( $menu_class ) {
 					$fallback_output .= ' class="' . esc_attr( $menu_class ) . '"'; }
 				$fallback_output .= '>';
-				$fallback_output .= '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="' . esc_attr__( 'Add a menu', 'understrap' ) . '">' . esc_html__( 'Add a menu', 'understrap' ) . '</a></li>';
+				$fallback_output .= '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="' . esc_attr_x( 'Add a menu', 'navwalker', 'mybooking' ) . '">' . esc_html_x( 'Add a menu', 'navwalker', 'mybooking' ) . '</a></li>';
 				$fallback_output .= '</ul>';
 				if ( $container ) {
 					$fallback_output .= '</' . esc_attr( $container ) . '>';
@@ -379,7 +392,7 @@ if ( ! class_exists( 'Mybooking_WP_Bootstrap_Navwalker' ) ) {
 
 				// if $args has 'echo' key and it's true echo, otherwise return.
 				if ( array_key_exists( 'echo', $args ) && $args['echo'] ) {
-					echo $fallback_output; // WPCS: XSS OK.
+					echo $fallback_output; 
 				} else {
 					return $fallback_output;
 				}

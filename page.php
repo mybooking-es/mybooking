@@ -3,7 +3,7 @@
 *		DEFAULT PAGE
 *  	------------
 *
-* 	@version 0.0.5
+* 	@version 0.0.6
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.1.2
@@ -27,16 +27,40 @@ get_header(); ?>
 <div class="wrapper page_content " id="page-wrapper">
   <div class="container" id="content" tabindex="-1">
     <div class="row">
-      <main class="site-main" id="main">
+      <div class="col-md-12">
+        <main class="site-main" id="main">
 
-        <?php while ( have_posts() ) : the_post(); ?>
-        <h2 class="entry-title"><?php the_title(); ?></h2>
-        <?php the_content(); ?>
-        <?php endwhile; ?>
+          <?php while ( have_posts() ) : the_post(); ?>
+            <h1 class="entry-title text-center display-3"><?php the_title(); ?></h1>
 
-      </main>
+            <?php the_content(); ?>
+
+            <?php
+        		wp_link_pages(
+        			array(
+        				'before' => '<div class="mybooking-entry-links">' . _x( 'Pages', 'pages_navigation', 'mybooking' ),
+        				'after'  => '</div>',
+        			)
+        		);
+        		?>
+
+            <footer class="entry-footer">
+  						<?php mybooking_entry_footer(); ?>
+  					</footer>
+
+          <?php endwhile; ?>
+
+        </main>
+      </div>
     </div>
   </div>
 </div>
+
+<?php
+// If comments are open or we have at least one comment, load up the comment template.
+if ( comments_open() || get_comments_number() ) :
+  comments_template();
+endif;
+?>
 
 <?php get_footer();

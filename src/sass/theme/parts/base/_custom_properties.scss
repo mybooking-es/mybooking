@@ -74,6 +74,7 @@ these properties do not need to be edited */
   --navbar-dropdown-item-color: var(--gray-900);
   --navbar-dropdown-item-active-bg: var(--brand-secondary);
   --navbar-link-collapse: var(--white);
+  --navbar-branding: #424242;
   // Logo
   --custom-logo-height: 40px;
   // Toggler
@@ -202,4 +203,6 @@ these properties do not need to be edited */
   --product-detail-duration-text: var(--gray-900);
   --margin-for-message: 0;
   --margin-for-message-active: 40px;
+  // Comments
+  --comments-bg-color: var(--gray-50);
 }

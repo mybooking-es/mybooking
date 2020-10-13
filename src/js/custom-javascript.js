@@ -2,7 +2,7 @@
  *   MYBOOKING CUSTOM JS
  *   -------------------
  *
- *   @version 0.0.4
+ *   @version 0.0.5
  *   @package WordPress
  *   @subpackage Mybooking WordPress Theme
  *   @since Mybooking WordPress Theme 0.0.1
@@ -17,21 +17,15 @@ if (typeof $ === "undefined") {
  *  Carousel settings
  */
 $(document).ready(function () {
-  // Home page carousel
-  $(".-carrusel-portada").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-  });
-
-  // Testimonials
-  $(".-carrusel-testimonials").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 4000,
-  });
+  if ( $(".-carrusel-portada").length > 0 ) {
+    // Home page carousel
+    $(".-carrusel-portada").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+    });
+  }
 });
 
 
@@ -125,39 +119,6 @@ $(document).ready(function () {
   });
 });
 
-
-/*
- *  PROMO POPUP
- *  Very simple popup with cookie
- */
-function promoClosed(){
-  document.cookie="promoclosed=1; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/",
-  document.getElementById( "PromotionsPopup" ).style.visibility="hidden"
-}
-document.cookie.indexOf( "promoclosed" ) < 0 && ( document.getElementById( "PromotionsPopup" ).style.visibility="visible" );
-
-
-/*
- *  COOKIES NOTICE
- *  Very simple and no-compilant-para-salir-del-paso script
- */
-function acceptCookie(){
-  document.cookie="cookieaccepted=1; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/",
-  document.getElementById( "cookie-notice" ).style.visibility="hidden"
-}
-document.cookie.indexOf( "cookieaccepted" ) < 0 && ( document.getElementById( "cookie-notice" ).style.visibility="visible" );
-
-
-/*
- *  SUBNAVIGATION MOBILE OPENING
- *  Controls submenu item's behaivour on navigation
- */
-$(document).on("click", ".dropdown-menu li", function (e) {
-  $(".dropdown-menu li > .dropdown-menu").slide();
-  e.stopPropagation();
-});
-
-
 /*
  *  TOPBAR MARGIN
  *  Adds 40px extra if message is active
@@ -187,55 +148,9 @@ $(document).ready(function () {
   });
 });
 
-
 /*
-    STICKY FOOTER
-    Requirement: The footer must not have margin
-*/
-
-// $(document).ready(function () {
-//   function stickyFooter() {
-//     var $copyWrapper = $(".copy-wrapper");
-//     var copyWrapperHeight = $copyWrapper.outerHeight(true);
-//     var $footer = $("#wrapper-footer");
-//     var footerTop = $footer.position().top; // Footer top position
-//     var footerHeight = $footer.outerHeight(false); //Footer FULL Height including paddings (false not to apply margin because we calculate it)
-//     var windowHeight = $(window).height();
-//     var documentHeight = $(document).height();
-
-//     var marginTop = windowHeight - footerTop - footerHeight - copyWrapperHeight;
-//     /*
-//     ----------------------------window         ------------------------window
-//     CONTENT                                    CONTENT
-//     ----------------------------footer         ..............................
-//     top
-//     outerHeight                                     MARGIN-TOP
-
-//     ----------------------------footer        -------------------------footer
-
-//                                               -------------------------footer
-//     ----------------------------window        -------------------------window
-//    */
-
-//     if (marginTop > 0) {
-//       $footer.css({
-//         "margin-top": marginTop + "px",
-//       });
-//     }
-//   }
-
-//   stickyFooter();
-//   //setTimeout(stickyFooter, 2000);
-
-//   $(window).bind("scroll", function (event) {
-//     stickyFooter();
-//   });
-
-//   $(window).bind("resize", function (event) {
-//     stickyFooter();
-//   });
-// });
-
+ * TOP BAR
+ */
 $(document).ready(function () {
   if ($(".topbar").length) {
     $("button.navbar-toggler").bind("click", function () {
@@ -258,4 +173,66 @@ $(document).ready(function () {
       }
     });
   }
+});
+
+/**
+ * MULTI-LEVEL MENU
+ * Force click
+ */
+$(function() {
+  // ------------------------------------------------------- //
+  // Multi Level dropdowns
+  // ------------------------------------------------------ //
+  $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    $(this).siblings().toggleClass("show");
+
+
+    if (!$(this).next().hasClass('show')) {
+      $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    }
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+      $('.dropdown-submenu .show').removeClass("show");
+    });
+
+  });
+
+  // Keyboard Navigation on Mobile Menu
+  $(document).on('keydown', function(event) {
+
+    // If mobile
+    if ($('nav.navbar').length > 0 && $('nav.navbar').hasClass('fixed-top')) {
+
+      if ($('button.navbar-toggler').length > 0 && 
+          $('nav.navbar.fixed-top ul.navbar-nav > li.menu-item:last > a').length > 0) {
+
+        var first = $('button.navbar-toggler').get(0);
+        var last = $('nav.navbar.fixed-top ul.navbar-nav > li.menu-item:last > a').get(0);
+
+        var tabKey = event.keyCode === 9;
+        var shiftKey = event.shiftKey;
+
+        if (!shiftKey && tabKey) {
+          if ( event.target === last ) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
+
+        if (shiftKey && tabKey) {
+          if ( event.target === first ) {
+            event.preventDefault();
+            last.focus();
+          }
+        }
+      }
+
+    }
+
+  });
+
+
+
 });

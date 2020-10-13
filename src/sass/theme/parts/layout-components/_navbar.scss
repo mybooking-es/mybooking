@@ -29,7 +29,7 @@
   }
 }
 
-// Logo
+// Branding
 .custom-logo-link img {
   height: var(--custom-logo-height);
   overflow: hidden;
@@ -37,14 +37,18 @@
   width: auto;
 }
 
+.navbar-dark .navbar-brand, .navbar-dark .navbar-brand a {
+  color: var(--navbar-branding)!important;
+}
+
+.navbar-dark .navbar-brand:hover {
+  opacity: .5;
+}
+
 // Toggler
-.navbar-toggler {
-  border: none;
-  padding: 0;
-}
-button.navbar-toggler:focus {
-  outline: none;
-}
+// Important: Do not touch .navbar-toggler border/padding/outline because
+// it must be visible on Keyboard navigation
+
 .navbar-toggler-icon {
   background-image: none !important;
   i {
@@ -57,7 +61,7 @@ button.navbar-toggler:focus {
 // All menu items
 .navbar-dark .navbar-nav .nav-link {
   color: var(--navbar-link-color);
-  text-transform: uppercase;
+  text-transform: inherit;
   letter-spacing: 1px;
   font-weight: 500;
 }

@@ -6,9 +6,80 @@
 *  LOOP
 */
 
-.blog .post {
-  margin-bottom: 2rem;
+.home.blog .page_content {
+  padding: 3rem 0;
 }
+
+.blog .post,
+.archive.author .post,
+.archive.category .post {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* Sticky posts */
+.post.sticky {
+  background-color: var(--brand-primary);
+  border-radius: 4px;
+}
+
+.post.sticky .post_title a,
+.post.sticky .post_title a:visited{
+  color: var(--white);
+  margin-left: 1rem;
+}
+
+.post.sticky a.btn.btn-secondary.mybooking-read-more-link {
+  color: var(--white);
+  background-color: transparent;
+  border: 1px solid var(--white);
+  margin-left: 1rem;
+}
+
+.post.sticky a.btn.btn-secondary.mybooking-read-more-link:hover {
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--white);
+}
+
+h2.post_title {
+  margin-bottom: 0;
+}
+
+h2.post_title > a {
+  text-align: center;
+}
+
+.block-ellipsis {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: 2.05rem;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*
+ * Recent posts
+ */
+.widget_recent_entries ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/*
+ * Recent comments
+ */
+.widget_recent_comments ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 
 /*
 *  HOME NEWS
@@ -45,17 +116,14 @@
 *  SINGLE
 */
 
-// .post_header {
-//   height: 50vh;
-//   overflow: hidden;
-// }
-//
-// .post_header img {
-//   position: relative;
-//   bottom: 25vh; // Centers featured image on desktop
-//   object-fit: cover;
-//   z-index: -1;
-// }
+.entry-title {
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.entry-footer {
+  clear: both;
+}
 
 .post_header {
   height: 50vh;
@@ -66,16 +134,37 @@
 }
 
 .post_content {
-  background-color: #fff;
-  padding-top: 2rem;
+  background-color: var(--white);
+  padding: 2rem 0 1rem 0;
 }
 
 .post_title {
+  margin-bottom: 2rem;
   font-weight: 700;
 }
 
 .post_meta {
-  margin: 1rem 0;
+  margin: 1rem 0 3rem 0;
+}
+
+.edit-link > a.btn.btn-primary.post-edit-link {
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
+  min-width: 10rem;
+  text-transform: inherit;
+  font-weight: 400;
+  &:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark);
+  }
+}
+
+.mybooking-post-edit-link.edit-link {
+
+  margin-top: 1.5rem;
+
 }
 
 @media (max-width: 1024px) {
@@ -86,4 +175,165 @@
   .post_header img {
     bottom: 0;
   }
+}
+
+.mybooking-entry-links {
+  padding: 2rem 0;
+  clear: both;
+}
+
+/*
+*  COMMENTS
+*/
+
+.comments-link {
+  margin: 1rem 0 2rem 0;
+}
+
+.comment-list {
+  margin-top: 1.5rem;
+}
+
+ol.comment-list {
+  list-style: none;
+}
+
+.comment {
+  margin-top: 1.5rem;
+  background-color: var(--comments-bg-color);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.comment-metadata {
+  margin-top: 0.5rem;
+}
+
+.comment-content {
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.comments-area {
+  margin-top: 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid #EFEFEF;
+  clear: both;
+}
+
+h2.comments-title {
+  font-size: 1.2em;
+}
+
+.comment-form label {
+  display: block!important;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"] {
+  display: inline-flex;
+  padding: 0 .8rem;
+  font-size: var(--form-control-font-size);
+  line-height: 18px;
+  color: var(--form-control-color);
+  border: 1px solid var(--form-control-border-color);
+  border-radius: var(--flex-form-control-border-radius);
+  height: var(--form-control-height);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  min-width: 100%;
+}
+
+.comment-form-comment textarea {
+  width: 100%;
+  min-height: 300px;
+  padding-top: 1rem;
+  font-size: var(--form-control-font-size);
+  line-height: 18px;
+  color: var(--form-control-color);
+  border: 1px solid var(--form-control-border-color);
+  border-radius: var(--flex-form-control-border-radius);
+  height: var(--form-control-height);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.comments-area [type="button"],
+.comments-area [type="reset"],
+.comments-area [type="submit"],
+.comments-area button {
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
+  border-radius: 3px;
+  padding: .375rem .75rem;
+  min-width: 10rem;
+  &:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark);
+  }
+}
+
+
+.edit-link > a.btn.btn-primary.comment-edit-link,
+.reply > a.btn.btn-primary.comment-reply-link
+{
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
+  text-transform: inherit;
+  font-weight: 400;
+  &:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark);
+  }
+}
+
+.reply > a.btn.btn-primary.comment-reply-link {
+  min-width: 10rem;
+}
+
+#cancel-comment-reply-link {
+  margin-left: 1rem;
+  color: var(--brand-primary);
+  background-color: var(--white);
+  border: 1px solid var(--brand-primary);
+  border-radius: 3px;
+  padding: .375rem .75rem;
+  text-decoration: none;
+  &:hover {
+    color: var(--white);
+    background-color: var(--brand-primary-dark);
+    border: 1px solid var(--brand-primary-dark);
+  }
+}
+
+.comment-respond {
+  margin-top: 1.5rem;
+}
+
+.comment-reply-title {
+  font-size: 1.2rem;
+}
+
+/**
+ * CATEGORY
+ */
+.category-markup {
+  margin-top: 1rem; 
+}
+
+/**
+ * TAGS and categories
+ */
+.cat-links > span > a {
+  text-decoration: underline;  
+}
+
+.tags-links > span > a {
+  text-decoration: underline;
 }

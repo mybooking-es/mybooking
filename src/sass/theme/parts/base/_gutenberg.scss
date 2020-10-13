@@ -116,9 +116,18 @@
 */
 
 // Buttons Block
-.wp-block-buttons {
-  margin: 0;
+.wp-block-button {
+  margin: 3rem 0;
 }
+
+.wp-block-button.alignleft {
+  margin: 0 1rem 0 0;
+}
+
+.wp-block-button.alignright {
+  margin: 0 0 0 1rem;
+}
+
 
 .wp-block-button__link {
   border-radius: 0;
@@ -128,6 +137,25 @@
   letter-spacing: 1px;
   font-weight: var(--btn-font-w);
   text-transform: var(--btn-text-transform);
+}
+
+// Outline button
+.wp-block-button.is-style-outline > .wp-block-button__link {
+  color: var(--btn-bg-color) !important;
+  background-color: var(--white);
+  border: 1px solid var(--btn-bg-color);
+}
+
+.wp-block-button.is-style-outline > .wp-block-button__link:hover {
+  color: var(--white) !important;
+  background-color: var(--btn-bg-color);
+  border: 1px solid var(--btn-bg-color);
+}
+
+
+// Squared button
+.wp-block-button.is-style-squared > .wp-block-button__link {
+  border-radius: 0;
 }
 
 .wp-block-button__link:hover {

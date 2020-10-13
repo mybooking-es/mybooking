@@ -39,4 +39,20 @@
 			}
 		} );
 	} );
+
+  // TopBar
+  /*
+  wp.customize( 'mybooking_global_topbar', function( value ) {
+  	value.bind( function ( newValue )  {
+  		//console.log ( newValue );
+  		if ( newValue === true ) {
+  			$('.topbar').show();
+  		}
+  		else {
+  			$('.topbar').hide();
+  		}
+  	});
+  });
+  */
+
 } )( jQuery );

@@ -43,46 +43,46 @@
           <!-- Reservation complete -->
           <form id="form-reservation" name="reservation_form" class="">
             <h4 class="brand-primary my-3">
-            <?php echo _x( "Customer's details", 'renting_complete', 'mybooking-wp-plugin') ?></h4>
+            <?php echo _x( "Customer's details", 'renting_complete', 'mybooking') ?></h4>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="name"><?php echo _x( 'Name', 'renting_complete', 'mybooking-wp-plugin') ?> *</label>
+                <label for="name"><?php echo _x( 'Name', 'renting_complete', 'mybooking') ?> *</label>
                 <input class="form-control" id="customer_name" name="customer_name" type="text"
-                  placeholder="<?php echo _x( 'Name', 'renting_complete', 'mybooking-wp-plugin') ?>*" maxlength="40">
+                  placeholder="<?php echo _x( 'Name', 'renting_complete', 'mybooking') ?>*" maxlength="40">
               </div>
               <div class="form-group col-md-6">
-                <label for="surname"><?php echo _x( 'Surname', 'renting_complete', 'mybooking-wp-plugin') ?> *</label>
+                <label for="surname"><?php echo _x( 'Surname', 'renting_complete', 'mybooking') ?> *</label>
                 <input class="form-control" id="customer_surname" name="customer_surname" type="text"
-                  placeholder="<?php echo _x( 'Surname', 'renting_complete', 'mybooking-wp-plugin') ?>" maxlength="40">
+                  placeholder="<?php echo _x( 'Surname', 'renting_complete', 'mybooking') ?>" maxlength="40">
               </div>
               <div class="form-group col-md-6">
-                <label for="email"><?php echo _x( 'E-mail', 'renting_complete', 'mybooking-wp-plugin') ?> *</label>
+                <label for="email"><?php echo _x( 'E-mail', 'renting_complete', 'mybooking') ?> *</label>
                 <input class="form-control" id="customer_email" name="customer_email" type="text"
-                  placeholder="<?php echo _x( 'E-mail', 'renting_complete', 'mybooking-wp-plugin') ?>" maxlength="50">
+                  placeholder="<?php echo _x( 'E-mail', 'renting_complete', 'mybooking') ?>" maxlength="50">
               </div>
               <div class="form-group col-md-6">
-                <label for="confirm_customer_email"><?php echo _x( 'Confirm E-mail', 'renting_complete', 'mybooking-wp-plugin') ?> *</label>
+                <label for="confirm_customer_email"><?php echo _x( 'Confirm E-mail', 'renting_complete', 'mybooking') ?> *</label>
                 <input class="form-control" id="confirm_customer_email" name="confirm_customer_email" type="text"
-                  placeholder="<?php echo _x( 'Confirm E-mail', 'renting_complete', 'mybooking-wp-plugin') ?>" maxlength="50">
+                  placeholder="<?php echo _x( 'Confirm E-mail', 'renting_complete', 'mybooking') ?>" maxlength="50">
               </div>
               <div class="form-group col-md-6">
-                <label for="customer_phone"><?php echo _x( 'Phone number', 'renting_complete', 'mybooking-wp-plugin') ?>
+                <label for="customer_phone"><?php echo _x( 'Phone number', 'renting_complete', 'mybooking') ?>
                   *</label>
                 <input class="form-control" id="customer_phone" name="customer_phone" type="text"
-                  placeholder="<?php echo _x( 'Phone number', 'renting_complete', 'mybooking-wp-plugin') ?>" maxlength="15">
+                  placeholder="<?php echo _x( 'Phone number', 'renting_complete', 'mybooking') ?>" maxlength="15">
               </div>
               <div class="form-group col-md-6">
                 <label
-                  for="customer_mobile_phone"><?php echo _x( 'Alternative phone number', 'renting_complete', 'mybooking-wp-plugin') ?></label>
+                  for="customer_mobile_phone"><?php echo _x( 'Alternative phone number', 'renting_complete', 'mybooking') ?></label>
                 <input class="form-control" id="customer_mobile_phone" name="customer_mobile_phone" type="text"
-                  placeholder="<?php echo _x( 'Alternative phone number', 'renting_complete', 'mybooking-wp-plugin') ?>" maxlength="15">
+                  placeholder="<?php echo _x( 'Alternative phone number', 'renting_complete', 'mybooking') ?>" maxlength="15">
               </div>
             </div>
-            <h4 class="brand-primary my-3"><?php echo _x( "Additional information", 'renting_complete', 'mybooking-wp-plugin') ?></h4>
+            <h4 class="brand-primary my-3"><?php echo _x( "Additional information", 'renting_complete', 'mybooking') ?></h4>
             <div class="form-row">
               <div class="form-group col-md-12">
-                <label for="comments"><?php echo _x( 'Comments', 'renting_complete', 'mybooking-wp-plugin') ?></label>
-                <textarea name="comments" id="comments" placeholder="<?php echo _x( 'Comments', 'renting_complete', 'mybooking-wp-plugin') ?>"
+                <label for="comments"><?php echo _x( 'Comments', 'renting_complete', 'mybooking') ?></label>
+                <textarea name="comments" id="comments" placeholder="<?php echo _x( 'Comments', 'renting_complete', 'mybooking') ?>"
                   style="width: 100%; height: 100px; padding: 0.8rem;"></textarea>
               </div>
             </div>
@@ -101,7 +101,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title modal-extra-detail-title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo esc_attr_x( 'Close', 'renting_complete', 'mybooking' ); ?>">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

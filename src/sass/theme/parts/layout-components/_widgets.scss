@@ -11,6 +11,13 @@
 *
 **/
 
+/* Home widgets areas needs a top-margin */
+.home-top-widgets,
+.home-bottom-widgets,
+.home-bottom-widgets {
+	margin-top: 2rem;
+}
+
 /* Selector Widget on Home's Widget zone */
 .home-widgets .flex-form-group-wrapper input[type=text],
 .home-widgets .flex-form-group label i {
