@@ -3,7 +3,7 @@
 *		SITE TOP BAR PARTIAL
 *  	--------------------
 *
-* 	@version 0.0.5
+* 	@version 0.0.6
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -44,7 +44,8 @@ defined( 'ABSPATH' ) || exit;
       <?php $company_chat = MyBookingCustomizer::getInstance()->get_theme_option("company_info_chat");
           if ($company_chat !== '')
           { ?>
-  	  <a class="info_link" href="tel:<?php echo $company_chat ?>"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="info_text"><?php echo $company_chat ?></span></a>
+  	  <a class="info_link" href="whatsapp://send?phone=<?php echo $company_chat ?>&abid=<?php echo $company_chat ?>"><i class="fa fa-whatsapp"
+  	      aria-hidden="true"></i> <span class="info_text"><?php echo $company_chat ?></span></a>
       <?php } ?>
     </span>
 
