@@ -38,6 +38,10 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.29 =
+* Fixed: Blog style
+* License information
+
 = 0.9.28 =
 * Fixed: Keyboard navigation mobile - menu
 * Updated: Styling
@@ -115,6 +119,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.29 =
+* Fixed: Blog style
 
 = 0.9.28 =
 * Fixed: Keyboard navigation mobile - menu

@@ -9,7 +9,7 @@ We usually use Bootstrap as CSS Frameword and we wanted to use it on WordPress. 
 Mybooking WordPress Theme, Copyright 2020 MyBooking
 Mybooking is distributed under the terms of the GNU GPL version 2
 
-http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+See [license](LICENSE.md)
 
 ## Changelog
 
