@@ -194,6 +194,18 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 				'slug'  => 'error',
 				'color'	=> '#e6546e',
 			),
+			// White
+			array(
+				'name'  => _x( 'White','gutenberg_palette','mybooking' ),
+				'slug'  => 'white',
+				'color'	=> '#ffffff',
+			),
+			// Black
+			array(
+				'name'  => _x( 'Black','gutenberg_palette','mybooking' ),
+				'slug'  => 'black',
+				'color'	=> '#000000',
+			),			
 
 		) );
 

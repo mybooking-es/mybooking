@@ -22,7 +22,7 @@
       <div class="card-static_body">
         <div class="card-static_header-catalog">
           <h2 class="card-static_product-name "><?php echo $mybooking_activity->name ?></h2>
-          <?php if ($mybooking_activity->address) { ?>
+          <?php if ( isset( $mybooking_activity->address) ) { ?>
           <div class="text-center"><i class="fa fa-map-marker"
               aria-hidden="true"></i>&nbsp;<?php echo $mybooking_activity->address->street ?>,
             <?php echo $mybooking_activity->address->city ?> <?php echo $mybooking_activity->address->zip ?></div>
