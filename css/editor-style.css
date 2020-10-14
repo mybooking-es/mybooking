@@ -75,7 +75,7 @@ h6 {
 
 /* Main column width */
 .wp-block {
-    max-width: 720px;
+    max-width: 1140px;
 }
  
 /* Width of "wide" blocks */
@@ -191,10 +191,10 @@ h6 {
 *  BLOCKS
 *
 */
-
 .wp-block-button {
   margin: 3rem 0;
 }
+
 
 .wp-block-button.alignleft {
   margin: 0 1rem 0 0;
