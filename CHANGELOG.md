@@ -5,6 +5,9 @@
 ### Fixed
 - Blog styling
 
+### Updated
+- Resource taking into account licensing
+
 ## [0.9.28] 2020-10-13
 
 ### Fixed

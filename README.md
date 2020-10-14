@@ -20,6 +20,8 @@ See [changelog](CHANGELOG.md)
 MyBooking is a simple theme but allow to customize the colors and offers three
 templates to easy build a company website.
 
+- Font Awesome integration 5.0
+
 ### Header and Footer
 
 1. Header with notification and top bar areas where widgets can be placed

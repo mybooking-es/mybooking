@@ -40,6 +40,7 @@ You can also setup the company and contact information on Theme options
 
 = 0.9.29 =
 * Fixed: Blog style
+* Assets with license information
 * License information
 
 = 0.9.28 =
@@ -184,6 +185,8 @@ You can also setup the company and contact information on Theme options
 
 === Resources ===
 
+* Based on Understrap https://github.com/understrap/understrap | GNU GPL
+
 JS Libraries:
 
 * Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
@@ -211,6 +214,15 @@ Icons:
 Image ajax-loader.git (under css folder)
 License: https://github.com/kenwheeler/slick/blob/master/LICENSE (Code licensed under MIT)
 Source: https://github.com/kenwheeler/slick/blob/master/slick/ajax-loader.gif
+
+Payment icons:
+
+Image Copyright © 2015-2019, HiQDev (http://hiqdev.com/)
+License: https://github.com/hiqdev/payment-icons/blob/master/LICENSE
+Source: https://github.com/hiqdev/payment-icons/src/assets/png/xs/mastercard.png
+Source: https://github.com/hiqdev/payment-icons/src/assets/png/xs/visa.png
+Source: https://github.com/hiqdev/payment-icons/src/assets/png/xs/paypal.png
+Source: https://github.com/hiqdev/payment-icons/src/assets/png/xs/stripe.png
 
 Own theme assets. License: CC0 Public Domain
 

@@ -654,7 +654,7 @@
                       <div class="form-group col-md-12">
                         <label for="payments_paypal_standard">
                         <input type="radio" id="payments_paypal_standard" name="payment_method_select" class="payment_method_select" value="paypal_standard">&nbsp;Paypal
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-paypal.jpg"/>
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/paypal.png"/>
                         </label>
                       </div>
                       <div class="form-group col-md-12">
@@ -662,18 +662,18 @@
                         <input type="radio" id="payments_credit_card" name="payment_method_select"
                           class="payment_method_select"
                           value="<%=sales_process.payment_methods.tpv_virtual%>">&nbsp;<?php echo _x( 'Credit or debit card', 'renting_complete', 'mybooking' ) ?>
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-visa.jpg"/>
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-mastercard.jpg"/>
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/visa.png"/>
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/mastercard.png"/>
                         </label>
                       </div>
                     </div>
                     <div id="payment_method_select_error" class="form-row">
                     </div>
                 <% } else if (sales_process.payment_methods.paypal_standard) { %>
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-paypal.jpg"/>
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/paypal.png"/>
                 <% } else if (sales_process.payment_methods.tpv_virtual) { %>
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-mastercard.jpg"/>
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-visa.jpg"/>
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/mastercard.png"/>
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/visa.png"/>
                 <% } %>
 
                 <hr>

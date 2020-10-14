@@ -506,7 +506,7 @@
                           <input type="radio" id="payments_paypal_standard" name="payment_method_value"
                             class="payment_method_select"
                             value="paypal_standard">&nbsp;<?php echo _x( 'Paypal', 'activity_my_reservation', 'mybooking' ) ?>
-                          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-paypal.jpg"/>
+                          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/paypal.png"/>
                         </label>
                       </div>
                       <div class="form-group col-md-12">
@@ -514,19 +514,19 @@
                           <input type="radio" id="payments_credit_card" name="payment_method_value"
                             class="payment_method_select"
                             value="<%=order.payment_methods.tpv_virtual%>">&nbsp;<?php echo _x( 'Credit or debit card', 'activity_my_reservation', 'mybooking' ) ?>
-                          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-visa.jpg" />
-                          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-mastercard.jpg" />
+                          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/visa.png" />
+                          <img src="<?php echo get_stylesheet_directory_uri() ?>/images/mastercard.png" />
                         </label>
                       </div>
                     </div>
                     <div id="payment_method_select_error" class="form-row">
                     </div>
                     <% } else if (order.payment_methods.paypal_standard) { %>
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-paypal.jpg"/>
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/paypal.png"/>
                     <input type="hidden" name="payment_method_value" value="paypal_standard">
                     <% } else if (order.payment_methods.tpv_virtual) { %>
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-mastercard.jpg" />
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pm-visa.jpg" />
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/mastercard.png" />
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/visa.png" />
                     <input type="hidden" name="payment_method_value" value="<%=order.payment_methods.tpv_virtual%>">
                     <% } %>
 
