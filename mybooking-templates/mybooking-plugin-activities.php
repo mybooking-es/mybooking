@@ -9,42 +9,42 @@
 <?php } else { ?>
 <!-- Products -->
 <section class="cards-static-container fleet">
-  <?php foreach( $args['data']->data as $activity ) { ?>
+  <?php foreach( $args['data']->data as $mybooking_activity ) { ?>
   <div class="card-static-wrapper">
     <div class="card-static">
-      <?php if ( !empty( $activity->photo_url_full ) ) { ?>
+      <?php if ( !empty( $mybooking_activity->photo_url_full ) ) { ?>
       <div class="card-static_image">
-        <img src="<?php echo $activity->photo_url_full?>" alt="<?php echo $activity->name?>">
+        <img src="<?php echo $mybooking_activity->photo_url_full?>" alt="<?php echo $mybooking_activity->name?>">
       </div>
       <?php } else { ?>
       <div class="text-center no-product-photo pt-3"><i class="fa fa-camera" aria-hidden="true"></i></div>
       <?php } ?>
       <div class="card-static_body">
         <div class="card-static_header-catalog">
-          <h2 class="card-static_product-name "><?php echo $activity->name ?></h2>
-          <?php if ($activity->address) { ?>
+          <h2 class="card-static_product-name "><?php echo $mybooking_activity->name ?></h2>
+          <?php if ($mybooking_activity->address) { ?>
           <div class="text-center"><i class="fa fa-map-marker"
-              aria-hidden="true"></i>&nbsp;<?php echo $activity->address->street ?>,
-            <?php echo $activity->address->city ?> <?php echo $activity->address->zip ?></div>
+              aria-hidden="true"></i>&nbsp;<?php echo $mybooking_activity->address->street ?>,
+            <?php echo $mybooking_activity->address->city ?> <?php echo $mybooking_activity->address->zip ?></div>
           <?php } ?>
-          <?php if ( $activity->use_rates ) { ?>
+          <?php if ( $mybooking_activity->use_rates ) { ?>
           <p>
             <span
               class="text-muted"><small><?php echo _x( 'From', 'activities_list', 'mybooking' ) ?></small></span>
             <span class="h5 mt-10 color-brand-primary">
-              <strong><?php echo $activity->from_price_formatted ?></strong></span>
+              <strong><?php echo $mybooking_activity->from_price_formatted ?></strong></span>
           </p>
           <?php } ?>
         </div>
 
-        <?php if ( !empty( $activity->slug) ) {
-                    $activityIdAnchor = $activity->slug;
+        <?php if ( !empty( $mybooking_activity->slug) ) {
+                    $mybooking_activityIdAnchor = $mybooking_activity->slug;
                   } else {
-                    $activityIdAnchor = $activity->id;
+                    $mybooking_activityIdAnchor = $mybooking_activity->id;
                   }
               ?>
         <div class="card-static_btn mt-5">
-          <a href="/<?php echo $args['url_detail']?>/<?php echo $activityIdAnchor?>"
+          <a href="/<?php echo $args['url_detail']?>/<?php echo $mybooking_activityIdAnchor?>"
             class="button btn btn-choose-product"><?php echo _x( 'More information', 'activities_list', 'mybooking' ) ?></a>
         </div>
       </div>
@@ -72,17 +72,17 @@
             <a class="page-link"
               href="/<?php echo $args['url']?>?offsetpage=<?php echo $args['current_page']-1 ?><?php echo $args['querystring']?>"><?php echo _x( 'Previous', 'activities_list', 'mybooking' ) ?></a>
           </li>
-          <?php foreach ($args['pages'] as $activity_pagination_page) { ?>
-          <?php if ($activity_pagination_page == $args['current_page']) { ?>
+          <?php foreach ($args['pages'] as $mybooking_page) { ?>
+          <?php if ($mybooking_page == $args['current_page']) { ?>
           <li class="page-item active" aria-current="page">
             <span class="page-link">
-              <?php echo $activity_pagination_page ?>
+              <?php echo $mybooking_page ?>
             </span>
           </li>
           <?php } else { ?>
           <li class="page-item">
             <a class="page-link"
-              href="/<?php echo $args['url']?>?offsetpage=<?php echo $activity_pagination_page ?><?php echo $args['querystring']?>"><?php echo $activity_pagination_page ?></a>
+              href="/<?php echo $args['url']?>?offsetpage=<?php echo $mybooking_page ?><?php echo $args['querystring']?>"><?php echo $mybooking_page ?></a>
           </li>
           <?php } ?>
           <?php } ?>

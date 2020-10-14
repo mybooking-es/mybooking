@@ -26,7 +26,7 @@
           <div class="wizard-summary_datefrom"><%= summary.dateFrom %> <% if (summary.timeFrom != null) {%><%= summary.timeFrom %><% } %> </div>
         <% } %>
       </div>
-      <img class="wizard-summary_separator" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icono_flecha_der.png" alt=">">
+      <img class="wizard-summary_separator" src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow-icon.png" alt=">">
       <div class="wizard-summary_item col wizard-summary_collection">
         <div class="wizard-summary_return"><%= summary.returnPlaceDescription || summary.returnPlace %></div>
         <% if (summary.dateTo != null) {%>

@@ -44,33 +44,42 @@ if ($home_header_visible == '1') { ?>
     <?php $options_header_background = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_bg' );
       if ( $options_header_background == 0 ) { ?>
 
-    <!-- Image background -->
-    <?php $image_header = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_image_bg' ); ?>
-    <img class="home-header_background home-header_background-img" src="<?php echo $image_header ?>">
+        <!-- Image background -->
+        <?php $image_header = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_image_bg' ); ?>
+        <?php if ( !empty($image_header) ) { ?>
+          <img class="home-header_background home-header_background-img" src="<?php echo $image_header ?>">
+        <?php } else { ?>
+          <div class="home-header_background home-header_background-img"></div>
+        <?php } ?>
 
     <?php } elseif ( $options_header_background == 1 ) { ?>
 
-    <!-- Video background -->
-    <?php $video_header = MyBookingCustomizer::getInstance()->get_theme_options( 'mybooking_home_header_video_bg' ); ?>
-    <div class="home-header_background-video-container">
-      <video class="home-header_background-video" autoplay loop muted poster="<?php echo $image_header ?>">
-        <source src="<?php echo $video_header ?>">
-      </video>
-    </div>
-
+      <!-- Video background -->
+      <?php $video_header = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_video_bg' ); ?>
+      <div class="home-header_background-video-container">
+        <?php if ( !empty($video_header) ) { ?>
+            <video class="home-header_background-video" autoplay loop muted>
+              <source src="<?php echo $video_header ?>">
+            </video>
+        <?php } else { ?>
+            <div class="home-header_background-video"></div>
+        <?php } ?>
+      </div>
     <?php } elseif ( $options_header_background == 2 ) { ?>
 
-    <!-- Carrousel backgrond -->
-    <div class="home-header_background home-header_background_carrusel portada-carrusel -carrusel-portada">
-      <?php $carousel_items = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_carrousel_bg' ); ?>
-      <?php $first = true; ?>
-      <?php foreach( $carousel_items as $carousel_item ) :  ?>
-      <div class="carrusel-item">
-        <img src="<?php echo $carousel_item ?>">
+      <!-- Carrousel backgrond -->
+      <div class="home-header_background home-header_background_carrusel portada-carrusel -carrusel-portada">
+        <?php $mybooking_carousel_items = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_carrousel_bg' ); ?>
+        <?php if ( is_array($mybooking_carousel_items) && !empty( $mybooking_carousel_items ) ) { ?>
+          <?php $mybooking_first = true; ?>
+          <?php foreach( $mybooking_carousel_items as $mybooking_carousel_item ) :  ?>
+            <div class="carrusel-item">
+              <img src="<?php echo $mybooking_carousel_item ?>">
+            </div>
+            <?php $mybooking_first = false; ?>
+          <?php endforeach; ?>
+        <?php } ?>
       </div>
-      <?php $first = false; ?>
-      <?php endforeach; ?>
-    </div>
 
     <?php } ?>
 

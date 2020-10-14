@@ -5,9 +5,9 @@
     <div class="col-md-8">
 			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
-			  	<?php foreach( $args->photos as $key => $photo ) { ?>
-			    <div class="carousel-item <?php if ($key == key($args->photos)) { ?>active<?php } ?>">
-			      <img class="d-block w-100" src="<?php echo $photo->full_photo_path?>" alt="<?php echo $args->name?>">
+			  	<?php foreach( $args->photos as $mybooking_key => $mybooking_photo ) { ?>
+			    <div class="carousel-item <?php if ($mybooking_key == key($args->photos)) { ?>active<?php } ?>">
+			      <img class="d-block w-100" src="<?php echo $mybooking_photo->full_photo_path?>" alt="<?php echo $args->name?>">
 			    </div>
 			    <?php } ?>
 			  </div>

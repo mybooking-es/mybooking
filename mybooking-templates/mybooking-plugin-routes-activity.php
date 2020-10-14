@@ -19,11 +19,11 @@ get_header();?>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <!-- Product -->
-            <?php foreach( $args->photos as $key => $photo ) { ?>
-            <div class="carousel-item <?php if ($key == key($args->photos)) { ?>active<?php } ?>">
+            <?php foreach( $args->photos as $mybooking_key => $mybooking_photo ) { ?>
+            <div class="carousel-item <?php if ($mybooking_key == key($args->photos)) { ?>active<?php } ?>">
               <div class="card-img-bg-color">
                 <div class="activity-card__img">
-                  <img class="d-block product-photo" src="<?php echo $photo->full_photo_path?>"
+                  <img class="d-block product-photo" src="<?php echo $mybooking_photo->full_photo_path?>"
                     alt="<?php echo $args->name?>" style="height:400px;">
                 </div>
                 <div class="activity-card__img-text" style="height: 400px;">

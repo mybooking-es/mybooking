@@ -365,20 +365,16 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 					{
 			  		case '0':
 					  	$header_image_bg = get_theme_mod( 'mybooking_home_header_image_bg', "" );
-							if ( empty( $header_image_bg ) )
-							{
-								$header_image_bg = get_template_directory_uri().'/images/bg-image.jpg';
-							}
+							//if ( empty( $header_image_bg ) )
+							//{
+							//	$header_image_bg = get_template_directory_uri().'/images/bg-image.jpg';
+							//}
 							$this->theme_options['mybooking_home_header_image_bg'] = $header_image_bg;
 			  			break;
 
 			  		case '1':
 							$header_video_bg = get_theme_mod( 'mybooking_home_header_video_bg', "" );
-							if ( empty( $header_video_bg ) )
-							{
-								$header_video_bg = get_template_directory_uri().'/images/video-portada.m4v';
-							}
-							else
+							if ( ! empty( $header_video_bg ) )
 							{
 								$header_video_bg = wp_get_attachment_url( $header_video_bg );
 							}
@@ -1642,7 +1638,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 		        'mybooking_home_header_video_bg',
 		        array(
 		            'transport' => 'refresh',
-		            'sanitize_callback' => 'esc_url_raw'
+		            'sanitize_callback' => 'absint'
 		        )
 		    );
 

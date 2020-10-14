@@ -27313,7 +27313,7 @@ a.dropdown-item {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background: rgba(66, 66, 66, 0.8) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+  background: rgba(66, 66, 66, 0.8) url(../images/cd-top-arrow-icon.svg) no-repeat center 50%;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;

@@ -177,13 +177,40 @@ You can also setup the company and contact information on Theme options
 
 === Resources ===
 
-- Inter font by Rasmus Andersson, https://fonts.google.com/specimen/Inter Sil Open Font License https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
-- Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
-- Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
-- SlickJS: https://kenwheeler.github.io/slick/ | https://github.com/kenwheeler/slick/blob/master/LICENSE (Code licensed under MIT)
-- Mobile Detect: @license Copyright 2013, Heinrich Goebl, License: MIT, see https://github.com/hgoebl/mobile-detect.js | https://github.com/hgoebl/mobile-detect.js/blob/master/LICENSE
-- WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
-- video-portada.mv4 (/images) @taryn-elliot Pexels https://www.pexels.com/es-es/video/3121459/
-- bg-image.jpg (/images) and screenshot.jpg (screenshot) Tamekia Andress CCO Public domain https://pixy.org/392915/
-- page_not_found.svg (/images) CC0 1.0 https://commons.wikimedia.org/wiki/File:M-404_(cajet%C3%ADn).svg
-- ajax-loader.git (/css) [SlickJS] https://github.com/kenwheeler/slick/blob/master/slick/ajax-loader.gif | https://github.com/kenwheeler/slick/blob/master/LICENSE (Code licensed under MIT)
+JS Libraries:
+
+* Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
+* SlickJS: https://kenwheeler.github.io/slick/ | https://github.com/kenwheeler/slick/blob/master/LICENSE (Code licensed under MIT)
+* Mobile Detect: @license Copyright 2013, Heinrich Goebl, License: MIT, see https://github.com/hgoebl/mobile-detect.js | https://github.com/hgoebl/mobile-detect.js/blob/master/LICENSE
+* WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+
+Fonts:
+
+* Inter font by Rasmus Andersson, https://fonts.google.com/specimen/Inter Sil Open Font License https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+* Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+
+Screenshot and background image:
+
+Image for theme screenshot, Copyright Tamekia Andress
+License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Source: https://pixy.org/392915/
+
+Image for 404 Not Found Page (page_not_found.svg)
+License: CC0 1.0
+Source: https://commons.wikimedia.org/wiki/File:M-404_(cajet%C3%ADn).svg
+
+Icons:
+
+Image ajax-loader.git (under css folder)
+License: https://github.com/kenwheeler/slick/blob/master/LICENSE (Code licensed under MIT)
+Source: https://github.com/kenwheeler/slick/blob/master/slick/ajax-loader.gif
+
+Own theme assets. License: CC0 Public Domain
+
+* header.jpg (white empty image)
+* close-icon.png
+* right-arrow-icon.png
+* cd-top-arrow-icon.svg
+* default-avatar.png
+* default-image.pnh
+* key_characteristics folder
