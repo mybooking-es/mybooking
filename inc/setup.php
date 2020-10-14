@@ -137,7 +137,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		add_theme_support( 'editor-styles' );
 
 		// Path to our custom editor styles
-		add_editor_style( 'css/editor-styles.css' );
+		add_editor_style( 'css/editor-style.css' );
 
 		// Default palette
 		add_theme_support( 'editor-color-palette', array(
@@ -205,7 +205,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 				'name'  => _x( 'Black','gutenberg_palette','mybooking' ),
 				'slug'  => 'black',
 				'color'	=> '#000000',
-			),			
+			)			
 
 		) );
 
