@@ -211,7 +211,7 @@ Source: https://commons.wikimedia.org/wiki/File:M-404_(cajet%C3%ADn).svg
 
 Icons:
 
-Image ajax-loader.git (under css folder)
+Image ajax-loader.gif (under css folder)
 License: https://github.com/kenwheeler/slick/blob/master/LICENSE (Code licensed under MIT)
 Source: https://github.com/kenwheeler/slick/blob/master/slick/ajax-loader.gif
 
