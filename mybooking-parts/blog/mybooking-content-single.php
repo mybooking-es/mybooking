@@ -32,9 +32,9 @@ defined( 'ABSPATH' ) || exit;
 			<div class="row">
 				<div class="col-12 post_body">
 					<?php if ( empty( get_the_title() ) ) { ?>
-						<h1 class="post_title text-center display-3 untitled"><?php _ex('Untitled', 'content_blog', 'mybooking'); ?></h1>
+						<h1 class="post_title untitled"><?php _ex('Untitled', 'content_blog', 'mybooking'); ?></h1>
 					<?php } else { ?>
-						<h1 class="post_title text-center display-3"><?php the_title(); ?></h1>
+						<h1 class="post_title"><?php the_title(); ?></h1>
 					<?php } ?>	
 					<p class="post_meta text-center"><?php echo mybooking_posted_on(); ?></p>
 					<?php the_content(); ?>

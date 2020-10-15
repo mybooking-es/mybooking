@@ -24,10 +24,9 @@ $mybooking_container = MyBookingCustomizer::getInstance()->get_theme_option( 'my
 			<main class="site-main" id="main">
 
 				<div class="col">
-					<img src="<?php echo esc_url( get_stylesheet_directory_uri()."/images/page_not_found.svg" ) ?>"
+					<h1><img src="<?php echo esc_url( get_stylesheet_directory_uri()."/images/page_not_found.svg" ) ?>"
 					     alt="<?php echo esc_attr( _x('Page not found', '404_page', 'mybooking') )?>" 
-					     style="max-width: 70%;margin-bottom:2rem;">
-					<h1 style="display:none;">404</h1>
+					     style="max-width: 70%;margin-bottom:2rem;"></h1>
 					<p class="lead"><?php echo esc_html_x('Page not found', '404_page', 'mybooking') ?></p>
 					<hr>
 					<p><?php printf( _x('You can go back to <a href="%s">home page</a> or do a search', '404_page', 'mybooking'),
