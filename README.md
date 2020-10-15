@@ -10,7 +10,7 @@ theme, so we can fully customize it. This is the theme we are using on our WordP
 
 **Theme Name:** MyBooking  
 **Theme URI:** https://github.com/mybooking-es/mybooking  
-**Contributors:** hectorasencio, marcelreig, juanmiqueo 
+**Contributors:** MyBooking Team - hectorasencio marcelreig juanmiqueo 
 **Requires at least:** WordPress 5.2  
 **Version:** 0.9.31  
 **License:** GPLv2 or later  
