@@ -133,6 +133,9 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 		// Wide Blocks
 		add_theme_support( 'align-wide' );
 
+		// Loads editor styles for Gutenberg
+		add_theme_support( 'editor-styles' );
+
 		// Default palette
 		add_theme_support( 'editor-color-palette', array(
 			// Primary
