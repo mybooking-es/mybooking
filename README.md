@@ -4,7 +4,7 @@
 
 We usually use Bootstrap as a CSS Frameword for developing webapps and we wanted to use it on WordPress. 
 We started creating a child theme from [Understrap](https://github.com/understrap/understrap), but finally we decided to create our own
-theme, so we can fully customize it. This is the theme we are using on our WordPress projects.
+theme, so we can fully customize it. 
 
 ---
 
