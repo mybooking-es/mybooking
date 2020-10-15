@@ -4,12 +4,16 @@
 
 We usually use Bootstrap as CSS Frameword and we wanted to use it on WordPress. We started creating a child theme from [Understrap](https://github.com/understrap/understrap), but finally we decided to create a fork from it, so we can fully customize it. This is the theme we are using on our WordPress projects.
 
-## License
+---
 
-Mybooking WordPress Theme, Copyright 2020 MyBooking
-Mybooking is distributed under the terms of the GNU GPL version 2
-
-See [license](LICENSE.md)
+**Theme Name:** MyBooking  
+**Theme URI:** https://github.com/mybooking-es/mybooking  
+**Contributors:** hectorasencio, marcelreig, juanmiqueo 
+**Requires at least:** WordPress 5.2  
+**Version:** 0.9.31  
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
+**Tags:** e-commerce
 
 ## Changelog
 
@@ -20,7 +24,17 @@ See [changelog](CHANGELOG.md)
 MyBooking is a simple theme but allow to customize the colors and offers three
 templates to easy build a company website.
 
+- Boostrap integration 4.4
 - Font Awesome integration 5.0
+- Customizer
+  - Header and Footer
+  - Colors and Typography
+- Widgets areas
+  - Notification Top Bar
+  - TopBar
+  - Footer
+  - Special areas on MyBooking Home Template to build complex home pages
+- Custom templates
 
 ### Header and Footer
 
@@ -73,3 +87,15 @@ Browsersync settings is setup in a gulpenv.json file. This file is not hold in V
 }
 ```
 **NOTE: Localhost port depends of your local server configuration.**
+
+## Copyright 
+
+MyBooking WordPress Theme, Copyright 2020 mybooking.es. Mybooking is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+Mybooking is derived from Understrap, Copyright 2013-2018 Holger Koenemann. Understrap theme is distributed under license GPL V2
+
+See [license](LICENSE.md)

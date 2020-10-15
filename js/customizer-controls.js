@@ -59,11 +59,13 @@
 
 		// Show/Hide advanced colors
   	var advancedMode = wp.customize.instance( 'mybooking_colors_advanced' ).get();
+  	console.log(advancedMode);
 		mybookingHideShowAdvancedColors(advancedMode);
 
 		// Advanced colors is changed
 		wp.customize.control('mybooking_colors_advanced', function(control) {
 			control.setting.bind(function(value){
+				console.log(value);
 				mybookingHideShowAdvancedColors(value);
 				myBookingShowHideBookingFormsSection(value);
 			});

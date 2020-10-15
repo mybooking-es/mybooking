@@ -38,6 +38,9 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.31 =
+* Added: Editor styles
+
 = 0.9.30 =
 * Added: Notification message widget area
 * Updated: Variables prefix
@@ -125,6 +128,9 @@ You can also setup the company and contact information on Theme options
 
 == Upgrade Notice ==
 
+= 0.9.31 =
+* Added: Editor styles
+
 = 0.9.30 =
 * Added: Notification message widget area
 
@@ -190,9 +196,17 @@ You can also setup the company and contact information on Theme options
 = 0.9.10 =
 * First release
 
-=== Resources ===
+=== Copyright ===
 
-* Based on Understrap https://github.com/understrap/understrap | GNU GPL
+MyBooking WordPress Theme, Copyright 2020 mybooking.es. Mybooking is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+Mybooking is derived from Understrap, Copyright 2013-2018 Holger Koenemann. Understrap theme is distributed under license GPL V2
+
+Mybooking bundles the following third-party resources:
 
 Libraries:
 
@@ -232,9 +246,8 @@ Source: https://github.com/hiqdev/payment-icons/src/assets/png/xs/visa.png
 Source: https://github.com/hiqdev/payment-icons/src/assets/png/xs/paypal.png
 Source: https://github.com/hiqdev/payment-icons/src/assets/png/xs/stripe.png
 
-MyBooking own theme assets. License: CC0 Public Domain
+MyBooking assets created for MyBooking. License: CC0 Public Domain
 
-* header.jpg (white empty image)
 * close-icon.png
 * right-arrow-icon.png
 * cd-top-arrow-icon.svg

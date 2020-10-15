@@ -15,6 +15,8 @@
 .archive.category .post {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
+  background-color: var(--gray-100);
+  border-radius: 4px;  
 }
 
 /* Sticky posts */
@@ -44,6 +46,9 @@
 
 h2.post_title {
   margin-bottom: 0;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  word-break: break-word;  
 }
 
 h2.post_title > a {

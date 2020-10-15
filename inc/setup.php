@@ -110,15 +110,6 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 			'default-image' => '',
 		) ) );
 
-		$custom_header_args = array(
-					'default-image' => get_parent_theme_file_uri( '/images/header.jpg' ),
-					'width'         => 2000,
-					'height'        => 1200,
-					'flex-height'   => true
-				);
-
-		add_theme_support( 'custom-header', $custom_header_args );
-
 		/*
 		* Add support for Woocommerce
 		*
@@ -132,13 +123,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 
 		// Wide Blocks
 		add_theme_support( 'align-wide' );
-/*
-		// Loads editor styles for Gutenberg
-		add_theme_support( 'editor-styles' );
-		
-		// Path to our custom editor styles
-		add_editor_style( 'css/editor-style.css' );
-*/
+
 		// Default palette
 		add_theme_support( 'editor-color-palette', array(
 			// Primary

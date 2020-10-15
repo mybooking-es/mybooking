@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.30] 2020-10-16
+
+### Added
+- Editor style
+
 ## [0.9.30] 2020-10-15
 
 ### Added
