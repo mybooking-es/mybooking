@@ -12,15 +12,19 @@
 
 <div class="contact-info">
 
+  <?php $mybooking_company_adress =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_adress"); ?>
+  <?php $mybooking_company_phone =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_phone"); ?>
+  <?php $mybooking_company_chat =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_chat"); ?>
+  <?php $mybooking_company_email =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_email"); ?>
+
   <!-- Address -->
   <div class="h6">
     <i class="fa fa-map-marker" aria-hidden="true"></i>
     <?php echo _x('Address', 'contact', 'mybooking'); ?>
   </div>
 
-  <?php $company_adress =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_adress");
-    if ($company_adress !== '') { ?>
-      <p><?php echo $company_adress ?></p>
+  <?php if ( !empty( $mybooking_company_adress ) ) { ?>
+      <p><?php echo $mybooking_company_adress ?></p>
   <?php } ?>
 
   <!-- Phone number -->
@@ -28,60 +32,59 @@
     <i class="fa fa-phone" aria-hidden="true"></i>
     <?php echo _x('Phone number', 'contact', 'mybooking'); ?>
   </div>
-
-  <?php $company_phone =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_phone");
-        $company_chat =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_chat");
-    if ($company_phone !== '') { ?>
-      <p><?php echo $company_phone ?><br>
-    <?php }
-    if ($company_chat !== '') { ?>
-      <?php echo $company_chat ?></p>
+  <?php if ( !empty( $mybooking_company_phone ) ) { ?>
+      <p><?php echo $mybooking_company_phone ?><br>
+  <?php } ?>
+  <?php if ( !empty( $mybooking_company_chat ) ) { ?>
+      <?php echo $mybooking_company_chat ?></p>
   <?php } ?>
 
+  <!-- Email address -->
   <div class="h6">
     <i class="fa fa-envelope" aria-hidden="true"></i>
     <?php echo _x('E-mail address', 'contact', 'mybooking'); ?>
   </div>
-
-  <?php $company_email =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_email");
-    if ($company_email !== '') { ?>
-      <p><?php echo $company_email ?></p>
+  <?php if ( !empty ( $mybooking_company_email ) ) { ?>
+      <p><?php echo $mybooking_company_email ?></p>
   <?php } ?>
 
   <!-- Social links -->
 
-  <ul class="contact-social social-links">
-    <li class="social__item">
+  <?php $mybooking_company_facebook = MyBookingCustomizer::getInstance()->get_theme_option("company_info_facebook_url");?>
+  <?php $mybooking_company_instagram = MyBookingCustomizer::getInstance()->get_theme_option("company_info_instagram_url"); ?>
+  <?php $mybooking_company_twitter = MyBookingCustomizer::getInstance()->get_theme_option("company_info_twitter_url"); ?>
+  <?php $mybooking_company_linkedin = MyBookingCustomizer::getInstance()->get_theme_option("company_info_linkedin_url"); ?>
+  <?php $mybooking_company_youtube = MyBookingCustomizer::getInstance()->get_theme_option("company_info_youtube_url"); ?>
 
-      <?php $company_twitter =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_twitter_url");
-        if ($company_twitter !== '') { ?>
-          <a href="<?php echo $company_twitter ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+  <?php if ( !empty( $mybooking_company_facebook ) || !empty( $mybooking_company_instagram) || 
+             !empty( $mybooking_company_twitter) || !empty( $mybooking_company_linkedin) ||
+             !empty( $mybooking_company_youtube) ) { ?>
+    <ul class="contact-social social-links">
+      <?php if ( !empty( $mybooking_company_twitter ) ) { ?>
+        <li class="social__item">
+              <a href="<?php echo $mybooking_company_twitter ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+        </li>
       <?php } ?>
-
-    </li>
-    <li class="social__item">
-
-      <?php $company_facebook =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_facebook_url");
-        if ($company_facebook !== '') { ?>
-          <a href="<?php echo $company_facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+      <?php if ( !empty( $mybooking_company_facebook ) ) { ?>
+        <li class="social__item">
+              <a href="<?php echo $mybooking_company_facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+        </li>
       <?php } ?>
-
-    </li>
-    <li class="social__item">
-
-      <?php $company_instagram =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_instagram_url");
-        if ($company_instagram !== '') { ?>
-          <a href="<?php echo $company_instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+      <?php if ( !empty( $mybooking_company_instagram ) ) { ?>
+        <li class="social__item">
+          <a href="<?php echo $mybooking_company_instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+        </li>
       <?php } ?>
-
-    </li>
-    <li class="social__item">
-
-      <?php $company_linkedin =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_linkedin_url");
-        if ($company_linkedin !== '') { ?>
-          <a href="<?php echo $company_linkedin ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <?php if ( !empty( $mybooking_company_linkedin ) ) { ?>
+        <li class="social__item">
+              <a href="<?php echo $mybooking_company_linkedin ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </li>
       <?php } ?>
-
-    </li>
-  </ul>
+      <?php if ( !empty( $mybooking_company_youtube ) ) { ?>
+        <li class="social__item">
+              <a href="<?php echo $mybooking_company_youtube ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </li>
+      <?php } ?>
+    </ul>
+  <?php } ?>
 </div>

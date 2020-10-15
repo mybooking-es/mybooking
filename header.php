@@ -38,6 +38,13 @@ defined( 'ABSPATH' ) || exit;
       <a class="skip-link sr-only sr-only-focusable"
         href="#content"><?php echo esc_html_x( 'Skip to content', 'header', 'mybooking' ); ?></a>
 
+      <!-- TopBar Message area -->
+      <?php if ( is_active_sidebar( 'mybooking_global_top_notification' ) ) { ?>
+        <div class="topbar-message">
+          <?php dynamic_sidebar( 'mybooking_global_top_notification' ); ?>
+        </div>
+      <?php } ?>
+
       <!-- Topbar -->
       <?php $topbar_active = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_global_topbar" );
         if ( $topbar_active == '1' ) {

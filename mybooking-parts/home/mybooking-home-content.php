@@ -13,9 +13,8 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php $content_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_content_visibility" );
-if ($content_visible == "1") { ?>
-
+<?php $mybooking_content_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_content_visibility" ); ?>
+<?php if ($mybooking_content_visible == "1") { ?>
   <div class="container page_content">
     <div class="row">
       <div class="col">
@@ -36,5 +35,4 @@ if ($content_visible == "1") { ?>
       </div>
     </div>
   </div>
-
 <?php } ?>

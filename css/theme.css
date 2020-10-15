@@ -26749,6 +26749,9 @@ h2.post_title {
 h2.post_title > a {
   text-align: center; }
 
+.untitled {
+  font-style: italic; }
+
 .block-ellipsis {
   display: block;
   display: -webkit-box;

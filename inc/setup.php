@@ -209,12 +209,6 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 
 		) );
 
-		/*
-		* Check and setup theme default settings.
-		*
-		*/
-		mybooking_setup_theme_default_settings();
-
 	}
 }
 

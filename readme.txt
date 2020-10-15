@@ -38,6 +38,10 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.30 =
+* Added: Notification message widget area
+* Updated: Variables prefix
+
 = 0.9.29 =
 * Fixed: Blog style
 * Assets with license information
@@ -121,6 +125,9 @@ You can also setup the company and contact information on Theme options
 
 == Upgrade Notice ==
 
+= 0.9.30 =
+* Added: Notification message widget area
+
 = 0.9.29 =
 * Fixed: Blog style
 
@@ -187,12 +194,13 @@ You can also setup the company and contact information on Theme options
 
 * Based on Understrap https://github.com/understrap/understrap | GNU GPL
 
-JS Libraries:
+Libraries:
 
 * Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
-* SlickJS: https://kenwheeler.github.io/slick/ | https://github.com/kenwheeler/slick/blob/master/LICENSE (Code licensed under MIT)
-* Mobile Detect: @license Copyright 2013, Heinrich Goebl, License: MIT, see https://github.com/hgoebl/mobile-detect.js | https://github.com/hgoebl/mobile-detect.js/blob/master/LICENSE
-* WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+* SlickJS: https://kenwheeler.github.io/slick/ | License: MIT, https://github.com/kenwheeler/slick/blob/master/LICENSE 
+* Mobile Detect: @license Copyright 2013, Heinrich Goebl https://github.com/hgoebl/mobile-detect.js | License: MIT, https://github.com/hgoebl/mobile-detect.js/blob/master/LICENSE
+* WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL 3.0 https://github.com/wp-bootstrap/wp-bootstrap-navwalker/blob/master/LICENSE.txt
+* Select2 (customizer): https://select2.github.io | License MIT: https://github.com/select2/select2/blob/master/LICENSE.md
 
 Fonts:
 
@@ -224,12 +232,12 @@ Source: https://github.com/hiqdev/payment-icons/src/assets/png/xs/visa.png
 Source: https://github.com/hiqdev/payment-icons/src/assets/png/xs/paypal.png
 Source: https://github.com/hiqdev/payment-icons/src/assets/png/xs/stripe.png
 
-Own theme assets. License: CC0 Public Domain
+MyBooking own theme assets. License: CC0 Public Domain
 
 * header.jpg (white empty image)
 * close-icon.png
 * right-arrow-icon.png
 * cd-top-arrow-icon.svg
 * default-avatar.png
-* default-image.pnh
-* key_characteristics folder
+* default-image.png
+* key_characteristics 

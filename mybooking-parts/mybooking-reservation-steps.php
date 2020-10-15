@@ -37,19 +37,19 @@
     <div id="steps">
 
       <?php
-      $classes = get_body_class();
+      $mybooking_step_classes = get_body_class();
 
-      if ( in_array('choose_product',$classes) ) {
-        $choose_active = 'active';
-      } elseif ( in_array('complete',$classes) ) {
-        $complete_active = 'active';
-      } elseif ( in_array('summary',$classes) ) {
-        $summary_active = 'active';
+      if ( in_array('choose_product',$mybooking_step_classes) ) {
+        $mybooking_choose_active = 'active';
+      } elseif ( in_array('complete',$mybooking_step_classes) ) {
+        $mybooking_complete_active = 'active';
+      } elseif ( in_array('summary',$mybooking_step_classes) ) {
+        $mybooking_summary_active = 'active';
       } ?>
-      <div data-desc="<?php echo _x( 'Place and date', 'reservation_step', 'mybooking' ) ?>" class="step">1</div>
-      <div data-desc="<?php echo _x( 'Select product', 'reservation_step', 'mybooking' ) ?>" class="<?php echo $choose_active ?> step">2</div>
-      <div data-desc="<?php echo _x( 'Complete reservation', 'reservation_step', 'mybooking' ) ?>" class="<?php echo $complete_active ?> step">3</div>
-      <div data-desc="<?php echo _x( 'Summary', 'reservation_step', 'mybooking' ) ?>" class="<?php echo $summary_active ?> step">4</div>
+      <div data-desc="<?php _ex( 'Place and date', 'reservation_step', 'mybooking' ) ?>" class="step">1</div>
+      <div data-desc="<?php _ex( 'Select product', 'reservation_step', 'mybooking' ) ?>" class="<?php echo $mybooking_choose_active ?> step">2</div>
+      <div data-desc="<?php _ex( 'Complete reservation', 'reservation_step', 'mybooking' ) ?>" class="<?php echo $mybooking_complete_active ?> step">3</div>
+      <div data-desc="<?php _ex( 'Summary', 'reservation_step', 'mybooking' ) ?>" class="<?php echo $mybooking_summary_active ?> step">4</div>
     </div>
   </div>
 </div>

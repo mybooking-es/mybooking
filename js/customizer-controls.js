@@ -9,7 +9,7 @@
 
   wp.customize.bind( 'ready', function() {
 
-  	function hideShowAdvancedColors(show) {
+  	function mybookingHideShowAdvancedColors(show) {
 
 			// array of Color properties
 			var colorControlIds = [
@@ -46,7 +46,7 @@
   	/**
   	 * Show Hide Booking Forms Section
   	 */
-  	function showHideBookingFormsSection(show) {
+  	function myBookingShowHideBookingFormsSection(show) {
   		if (show) {
 				wp.customize.section( 'mybooking_theme_selector_options').container.show();
   		}
@@ -59,13 +59,13 @@
 
 		// Show/Hide advanced colors
   	var advancedMode = wp.customize.instance( 'mybooking_colors_advanced' ).get();
-		hideShowAdvancedColors(advancedMode);
+		mybookingHideShowAdvancedColors(advancedMode);
 
 		// Advanced colors is changed
 		wp.customize.control('mybooking_colors_advanced', function(control) {
 			control.setting.bind(function(value){
-				hideShowAdvancedColors(value);
-				showHideBookingFormsSection(value);
+				mybookingHideShowAdvancedColors(value);
+				myBookingShowHideBookingFormsSection(value);
 			});
 		});
 

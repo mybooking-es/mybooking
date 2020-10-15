@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.9.30] 2020-10-15
+
+### Added
+- Notification message widget area
+
+### Updated
+- Review variables prefix
+
+
 ## [0.9.29] 2020-10-14
 
 ### Fixed

@@ -13,7 +13,6 @@
 defined( 'ABSPATH' ) || exit;
 
 $mybooking_includes = array(
-  '/inc/theme-settings.php',                        // Initialize theme default settings.
 	'/inc/setup.php',                                 // Theme setup and custom theme supports.
   '/inc/menus.php',                                 // Theme menus
   '/inc/categories.php',                            // Theme categories

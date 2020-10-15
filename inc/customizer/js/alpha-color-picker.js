@@ -37,7 +37,7 @@ Color.prototype.toString = function( flag ) {
 /**
  * Given an RGBa, RGB, or hex color value, return the alpha channel value.
  */
-function acp_get_alpha_value_from_color( value ) {
+function mybooking_acp_get_alpha_value_from_color( value ) {
 	var alphaVal;
 
 	// Remove all spaces from the passed in value to help our RGBa regex.
@@ -56,7 +56,7 @@ function acp_get_alpha_value_from_color( value ) {
 /**
  * Given a hex color value convert to rgba
  */
-function convertHexToRgbA(hexVal) { 
+function mybooking_convertHexToRgbA(hexVal) { 
     
   // If the hex value is valid. 
   if(/^#([A-Fa-f0-9]{3,6})[0-9]{0,2}$/.test(hexVal)) { 
@@ -117,7 +117,7 @@ function convertHexToRgbA(hexVal) {
 /**
  * Force update the alpha value of the color picker object and maybe the alpha slider.
  */
-function acp_update_alpha_value_on_color_control( alpha, $control, $alphaSlider, update_slider ) {
+function mybooking_acp_update_alpha_value_on_color_control( alpha, $control, $alphaSlider, update_slider ) {
 	var iris, colorPicker, color;
 
 	iris = $control.data( 'a8cIris' );
@@ -141,7 +141,7 @@ function acp_update_alpha_value_on_color_control( alpha, $control, $alphaSlider,
 
 	// Maybe update the alpha slider itself.
 	if ( update_slider ) {
-		acp_update_alpha_value_on_alpha_slider( alpha, $alphaSlider );
+		mybooking_acp_update_alpha_value_on_alpha_slider( alpha, $alphaSlider );
 	}
 
 	// Update the color value of the color picker object.
@@ -151,7 +151,7 @@ function acp_update_alpha_value_on_color_control( alpha, $control, $alphaSlider,
 /**
  * Update the slider handle position and label.
  */
-function acp_update_alpha_value_on_alpha_slider( alpha, $alphaSlider ) {
+function mybooking_acp_update_alpha_value_on_alpha_slider( alpha, $alphaSlider ) {
 	$alphaSlider.slider( 'value', alpha );
 	$alphaSlider.find( '.ui-slider-handle' ).text( alpha.toString() );
 }
@@ -178,8 +178,8 @@ jQuery( document ).ready(
 
 					// Check if it is a Hex Color with transparency => convert to rgba and assign 
 					// to the control
-					var tmpColor = convertHexToRgbA(startingColor);
-					if (acp_get_alpha_value_from_color(tmpColor) < 100) {
+					var tmpColor = mybooking_convertHexToRgbA(startingColor);
+					if (mybooking_acp_get_alpha_value_from_color(tmpColor) < 100) {
 						startingColor = tmpColor;
 						$control.val(tmpColor);
 					}
@@ -208,7 +208,7 @@ jQuery( document ).ready(
 
 							// Set the opacity value on the slider handle when the default color button is clicked.
 							if ( defaultColor == value ) {
-								alpha = acp_get_alpha_value_from_color( value );
+								alpha = mybooking_acp_get_alpha_value_from_color( value );
 								$alphaSlider.find( '.ui-slider-handle' ).text( alpha );
 							}
 
@@ -245,7 +245,7 @@ jQuery( document ).ready(
 					$alphaSlider = $container.find( '.alpha-slider' );
 
 					// If starting value is in format RGBa, grab the alpha channel.
-					alphaVal = acp_get_alpha_value_from_color( startingColor );
+					alphaVal = mybooking_acp_get_alpha_value_from_color( startingColor );
 
 					// Set up jQuery UI slider() options.
 					sliderOptions = {
@@ -275,12 +275,12 @@ jQuery( document ).ready(
 					// Bind event handlers for the click zones.
 					$container.find( '.min-click-zone' ).on(
 						'click', function() {
-							acp_update_alpha_value_on_color_control( 0, $control, $alphaSlider, true );
+							mybooking_acp_update_alpha_value_on_color_control( 0, $control, $alphaSlider, true );
 						}
 					);
 					$container.find( '.max-click-zone' ).on(
 						'click', function() {
-							acp_update_alpha_value_on_color_control( 100, $control, $alphaSlider, true );
+							mybooking_acp_update_alpha_value_on_color_control( 100, $control, $alphaSlider, true );
 						}
 					);
 
@@ -290,9 +290,9 @@ jQuery( document ).ready(
 							var color, alpha;
 
 							color = $( this ).css( 'background-color' );
-							alpha = acp_get_alpha_value_from_color( color );
+							alpha = mybooking_acp_get_alpha_value_from_color( color );
 
-							acp_update_alpha_value_on_alpha_slider( alpha, $alphaSlider );
+							mybooking_acp_update_alpha_value_on_alpha_slider( alpha, $alphaSlider );
 
 							// Sometimes Iris doesn't set a perfect background-color on the palette,
 							// for example rgba(20, 80, 100, 0.3) becomes rgba(20, 80, 100, 0.298039).
@@ -322,16 +322,16 @@ jQuery( document ).ready(
 								}
 							);
 
-							acp_update_alpha_value_on_alpha_slider( 100, $alphaSlider );
+							mybooking_acp_update_alpha_value_on_alpha_slider( 100, $alphaSlider );
 						}
 					);
 
 					// Bind event handler for clicking on the 'Default' button.
 					$container.find( '.button.wp-picker-default' ).on(
 						'click', function() {
-							var alpha = acp_get_alpha_value_from_color( defaultColor );
+							var alpha = mybooking_acp_get_alpha_value_from_color( defaultColor );
 
-							acp_update_alpha_value_on_alpha_slider( alpha, $alphaSlider );
+							mybooking_acp_update_alpha_value_on_alpha_slider( alpha, $alphaSlider );
 						}
 					);
 
@@ -339,9 +339,9 @@ jQuery( document ).ready(
 					$control.on(
 						'input', function() {
 							var value = $( this ).val();
-							var alpha = acp_get_alpha_value_from_color( value );
+							var alpha = mybooking_acp_get_alpha_value_from_color( value );
 
-							acp_update_alpha_value_on_alpha_slider( alpha, $alphaSlider );
+							mybooking_acp_update_alpha_value_on_alpha_slider( alpha, $alphaSlider );
 						}
 					);
 
@@ -350,7 +350,7 @@ jQuery( document ).ready(
 						'slide', function( event, ui ) {
 							var alpha = parseFloat( ui.value ) / 100.0;
 
-							acp_update_alpha_value_on_color_control( alpha, $control, $alphaSlider, false );
+							mybooking_acp_update_alpha_value_on_color_control( alpha, $control, $alphaSlider, false );
 
 							// Change value shown on slider handle.
 							$( this ).find( '.ui-slider-handle' ).text( ui.value );

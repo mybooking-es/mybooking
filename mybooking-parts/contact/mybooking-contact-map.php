@@ -12,9 +12,9 @@
 
 <div class="contact-left-map">
 
-  <?php $contact_map = MyBookingCustomizer::getInstance()->get_theme_option("contact_map_code");
-    if ($contact_map !== '') { ?>
-        <?php echo html_entity_decode( $contact_map ) ?>
+  <?php $mybooking_contact_map = MyBookingCustomizer::getInstance()->get_theme_option("contact_map_code");
+    if ( !empty( $mybooking_contact_map ) ) { ?>
+        <?php echo html_entity_decode( $mybooking_contact_map ) ?>
   <?php } ?>
 
 </div>

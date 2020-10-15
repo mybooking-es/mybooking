@@ -14,12 +14,12 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$container = get_theme_mod( 'mybooking_container_type' );
+$mybooking_container = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_container_type' );
 
 ?>
 
 <div class="wrapper" id="page-wrapper">
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="<?php echo esc_attr( $mybooking_container ); ?>" id="content" tabindex="-1">
 		<div class="row justify-content-center text-center">
 			<main class="site-main" id="main">
 
@@ -30,7 +30,8 @@ $container = get_theme_mod( 'mybooking_container_type' );
 					<h1 style="display:none;">404</h1>
 					<p class="lead"><?php echo esc_html_x('Page not found', '404_page', 'mybooking') ?></p>
 					<hr>
-					<p>Puede regresar a la <a href="<?php echo esc_url( home_url( '/' ) ); ?>">página de inicio</a> o realizar una búqueda</p>
+					<p><?php printf( _x('You can go back to <a href="%s">home page</a> or do a search', '404_page', 'mybooking'),
+					                 esc_url( home_url( '/' ) ) ); ?></p>
 					<?php get_search_form(); ?>
 				</div>
 

@@ -12,9 +12,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit; ?>
 
-<?php $widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_center_widgets_visibility" );
-if ($widgets_visible == "1") { ?>
-
+<?php $mybooking_widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_center_widgets_visibility" ); ?>
+<?php if ($mybooking_widgets_visible == "1") { ?>
   <div class="home-widgets">
     <div class="container" tabindex="-1">
       <div class="row">
@@ -38,5 +37,4 @@ if ($widgets_visible == "1") { ?>
       </div>
     </div>
   </div>
-
 <?php } ?>

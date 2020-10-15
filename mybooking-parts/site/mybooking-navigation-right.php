@@ -15,22 +15,15 @@ defined( 'ABSPATH' ) || exit;
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-nav" role="navigation">
 
-  <?php $container = get_theme_mod( 'mybooking_container_type' ); ?>
-  <div class="<?php echo esc_attr( $container ); ?>">
-
+  <?php $mybooking_container = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_container_type' ); ?>
+  <div class="<?php echo esc_attr( $mybooking_container ); ?>">
     <div class="navbar-main nav-right">
-
       <!-- Logo & branding -->
       <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-branding' ) ?>
-
       <!-- Menu toggler -->
       <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-toggler' ) ?>
-
-
     </div>
-
     <!-- WordPress menu -->
     <?php get_template_part( 'mybooking-parts/site/mybooking-navigation-walker' ) ?>
-
   </div>
 </nav>

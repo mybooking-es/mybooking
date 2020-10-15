@@ -19,13 +19,24 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 	 */
 	function mybooking_widgets_init() {
 
+    // Top Notification
+		register_sidebar(
+			array(
+				'name'          => _x( 'Top Notification','mybooking_widgets','mybooking' ),
+				'id'            => 'mybooking_global_top_notification',
+				'description'   => _x( 'Notification area at Top','mybooking_widgets', 'mybooking' ),
+				'before_widget' => '<div id="%1$s" class="mybooking-widget_topbar_message %2$s">',
+				'after_widget'  => '</div>',
+			)
+		);
+
 		// Navigation
 		register_sidebar(
 			array(
 				'name'          => _x( 'Main Menu','mybooking_widgets','mybooking' ),
 				'id'            => 'mybooking_primary_menu',
 		    'description'    => _x( 'Widgets area at Main Menu right side','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="mybooking-widget mybooking-widget_menu">',
+				'before_widget' => '<div  id="%1$s" class="mybooking-widget mybooking-widget_menu %2$s">',
 				'after_widget'  => '</div>',
 			)
 		);
@@ -36,7 +47,7 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 				'name'          => _x( 'Mybooking Home Template Header Left','mybooking_widgets','mybooking' ),
 				'id'            => 'mybooking_home_izquierda',
 		    'description'    => _x( 'Mybooking Home Template widgets area at left of Home header','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="mybooking-widget mybooking-widget_header-left">',
+				'before_widget' => '<div id="%1$s" class="mybooking-widget mybooking-widget_header-left %2$s">',
 				'after_widget'  => '</div>',
 			)
 		);
@@ -45,36 +56,36 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 				'name'          => _x( 'Mybooking Home Template Header Right','mybooking_widgets','mybooking' ),
 				'id'            => 'mybooking_home_derecha',
 		    'description'    => _x( 'Mybooking Home Template widgets area at right of Home header','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="mybooking-widget mybooking-widget_header-right">',
+				'before_widget' => '<div id="%1$s" class="mybooking-widget mybooking-widget_header-right %2$s">',
 				'after_widget'  => '</div>',
 			)
 		);
 
 		// Home Widgets Top
-		$widgets_top_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_top_widgets_visibility" );
-		if ( $widgets_top_visible == "1" )
+		$mybooking_widgets_top_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_top_widgets_visibility" );
+		if ( $mybooking_widgets_top_visible == "1" )
 		{
 			register_sidebar(
 				array(
 					'name'          => _x( 'Mybooking Home Template Top','mybooking_widgets','mybooking' ),
 					'id'            => 'home_widgets_top',
 					'description'   => _x( 'Mybooking Home Template widgets area at top','mybooking_widgets','mybooking' ),
-					'before_widget' => '<div class="mybooking-widget widget-home-bottom">',
+					'before_widget' => '<div id="%1$s" class="mybooking-widget widget-home-bottom %2$s">',
 					'after_widget'  => '</div>',
 				)
 			);
 		} // Widgets Bottom
 
 		// Home Widgets Center
-		$widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_center_widgets_visibility" );
-		if ( $widgets_visible == "1")
+		$mybooking_widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_center_widgets_visibility" );
+		if ( $mybooking_widgets_visible == "1")
 		{
 			register_sidebar(
 				array(
 					'name'          => _x( 'Mybooking Home Template Center One', 'mybooking_widgets', 'mybooking' ),
 					'id'            => 'home_widgets_center_1',
 					'description'   => _x( 'Mybooking Home Template Center One', 'mybooking_widgets', 'mybooking' ),
-					'before_widget' => '<div class="mybooking-widget widget-1">',
+					'before_widget' => '<div id="%1$s" class="mybooking-widget widget-1 %2$s">',
 					'after_widget'  => '</div>',
 				)
 			);
@@ -83,7 +94,7 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 					'name'          => _x( 'Mybooking Home Template Center Two', 'mybooking_widgets', 'mybooking' ),
 					'id'            => 'home_widgets_center_2',
 					'description'   => _x( 'Mybooking Home Template Center Two', 'mybooking_widgets', 'mybooking' ),
-					'before_widget' => '<div class="mybooking-widget widget-2">',
+					'before_widget' => '<div id="%1$s" class="mybooking-widget widget-2 %2$s">',
 					'after_widget'  => '</div>',
 				)
 			);
@@ -92,21 +103,21 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 					'name'          => _x( 'Mybooking Home Template Center Three', 'mybooking_widgets', 'mybooking' ),
 					'id'            => 'home_widgets_center_3',
 					'description'   => _x( 'Mybooking Home Template Center Three', 'mybooking_widgets', 'mybooking' ),
-					'before_widget' => '<div class="mybooking-widget widget-3">',
+					'before_widget' => '<div id="%1$s" class="mybooking-widget widget-3 %2$s">',
 					'after_widget'  => '</div>',
 				)
 			);
 		} // Home Widgets Center
 
-		$widgets_bottom_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_bottom_widgets_visibility" );
-		if ( $widgets_bottom_visible == "1" )
+		$mybooking_widgets_bottom_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_bottom_widgets_visibility" );
+		if ( $mybooking_widgets_bottom_visible == "1" )
 		{
 			register_sidebar(
 				array(
 					'name'          => _x( 'Mybooking Home Template Bottom','mybooking_widgets','mybooking' ),
 					'id'            => 'home_widgets_bottom',
 					'description'   => _x( 'Mybooking Home Template bottom widgets area','mybooking_widgets','mybooking' ),
-					'before_widget' => '<div class="mybooking-widget widget-home-bottom">',
+					'before_widget' => '<div id="%1$s" class="mybooking-widget widget-home-bottom %2$s">',
 					'after_widget'  => '</div>',
 				)
 			);
@@ -140,7 +151,7 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 				'name'          => _x( 'Mybooking Contact Template Contact Form','mybooking_widgets','mybooking' ),
 				'id'            => 'mybooking_contact',
 		    'description'    => _x( 'Place your contact form at here','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="mybooking-widget mybooking-widget_contact">',
+				'before_widget' => '<div id="%1$s" class="mybooking-widget mybooking-widget_contact %2$s">',
 				'after_widget'  => '</div>',
 			)
 		);
@@ -151,7 +162,7 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 				'name'          => _x( 'Footer One','mybooking_widgets','mybooking' ),
 				'id'            => 'mybooking_global_footer_1',
 				'description'   => _x( 'Footer first widgets area','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="mybooking-widget mybooking-widget_footer-1">',
+				'before_widget' => '<div id="%1$s" class="mybooking-widget mybooking-widget_footer-1 %2$s">',
 				'after_widget'  => '</div>',
 			)
 		);
@@ -160,7 +171,7 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 				'name'          => _x( 'Footer Two','mybooking_widgets','mybooking' ),
 				'id'            => 'mybooking_global_footer_2',
 				'description'   => _x( 'Footer second widgets area','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="mybooking-widget mybooking-widget_footer-2">',
+				'before_widget' => '<div id="%1$s" class="mybooking-widget mybooking-widget_footer-2 %2$s">',
 				'after_widget'  => '</div>',
 			)
 		);
@@ -169,7 +180,7 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 				'name'          => _x( 'Footer Three','mybooking_widgets','mybooking' ),
 				'id'            => 'mybooking_global_footer_3',
 				'description'   => _x( 'Footer third widgets area','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="mybooking-widget mybooking-widget_footer-3">',
+				'before_widget' => '<div id="%1$s" class="mybooking-widget mybooking-widget_footer-3 %2$s">',
 				'after_widget'  => '</div>',
 			)
 		);
@@ -178,7 +189,7 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 				'name'          => _x( 'Footer Four','mybooking_widgets','mybooking' ),
 				'id'            => 'mybooking_global_footer_4',
 				'description'   => _x( 'Footer fourth widgets area','mybooking_widgets','mybooking' ),
-				'before_widget' => '<div class="mybooking-widget mybooking-widget_footer-4">',
+				'before_widget' => '<div id="%1$s" class="mybooking-widget mybooking-widget_footer-4 %2$s">',
 				'after_widget'  => '</div>',
 			)
 		);

@@ -19,10 +19,10 @@ defined( 'ABSPATH' ) || exit;
     // Check if the post has a custom logo
     global $post;
     if ( isset($post) ) {
-      $custom_logo = get_post_meta($post->ID, 'custom_logo', true);
-      if ( !empty( $custom_logo ) ) { ?>
+      $mybooking_custom_logo = get_post_meta($post->ID, 'custom_logo', true);
+      if ( !empty( $mybooking_custom_logo ) ) { ?>
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand custom-logo-link" rel="home">
-          <img src="<?php echo $custom_logo; ?>" class="img-fluid">
+          <img src="<?php echo $mybooking_custom_logo; ?>" class="img-fluid">
         </a>
 <?php } 
       else {

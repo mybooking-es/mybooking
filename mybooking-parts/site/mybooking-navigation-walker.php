@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
     'container_class' => 'collapse navbar-collapse',
     'container_id'    => 'navbarNavDropdown',
     'menu_class'      => 'navbar-nav ml-auto',
-    'fallback_cb'     => 'Mybooking_WP_Bootstrap_Navwalker::fallback',
+    'fallback_cb'     => '',
     'menu_id'         => 'main-menu',
     'role'            => 'navigation',
     'depth'           => 10,

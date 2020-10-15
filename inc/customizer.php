@@ -309,6 +309,9 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 				{
 			  	$this->theme_options = array();
 
+          // Container type
+          $this->theme_options['mybooking_container_type'] = get_theme_mod( 'mybooking_container_type', 'container' );
+
 			  	// Contact
 		  	  $this->theme_options['company_info_trade_name'] = get_theme_mod( 'mybooking_company_info_trade_name', '' );
 		  	  $this->theme_options['company_info_name'] = get_theme_mod( 'mybooking_company_info_name', '' );
@@ -327,9 +330,6 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 
 		  	  $this->theme_options['contact_map_code'] = get_theme_mod( 'mybooking_company_google_maps_code', '' );		
 
-			  	// Topbar Global Message
-			  	$this->theme_options['mybooking_global_topbar_message'] = get_theme_mod( "mybooking_global_topbar_message", '' );
-
 			  	// TopBar Global [contact and TopBar Menu]
 			  	$this->theme_options['mybooking_global_topbar'] = get_theme_mod( "mybooking_global_topbar", '0');
 
@@ -338,6 +338,9 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 
 			  	// Navigation at Home Template: "1" overlapped with header and transparent - "0" background color
 			  	$this->theme_options['mybooking_home_navbar_integrated'] = get_theme_mod( "mybooking_home_navbar_integrated", "0" );
+
+			  	// Header Layout - "0" 50-50
+			  	$this->theme_options['mybooking_home_header_layout'] = get_theme_mod( "mybooking_home_header_layout", "0" );
 
 			  	// Home Header visibility at Home Template: "1" visible "0" not visible
 			  	$this->theme_options['mybooking_home_header_visibility'] = get_theme_mod( "mybooking_home_header_visibility", "1" );
@@ -365,10 +368,6 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 					{
 			  		case '0':
 					  	$header_image_bg = get_theme_mod( 'mybooking_home_header_image_bg', "" );
-							//if ( empty( $header_image_bg ) )
-							//{
-							//	$header_image_bg = get_template_directory_uri().'/images/bg-image.jpg';
-							//}
 							$this->theme_options['mybooking_home_header_image_bg'] = $header_image_bg;
 			  			break;
 
@@ -1382,32 +1381,6 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 					'section'    => 'mybooking_theme_topbar_options',
 					'settings'   => 'mybooking_topbar_link_hover_color',
 				) ) );
-
-				// == TopBar Notification message
-
-				$wp_customize->add_setting( 'mybooking_global_topbar_message',
-					 array(
-							'default' => '',
-							'transport' => 'refresh',
-							'sanitize_callback' => 'wp_kses_post'
-					 )
-				);
-
-				$wp_customize->add_control( 'mybooking_global_topbar_message',
-					 array(
-							'label' => _x( 'Hightlight message', 'customizer_topbar', 'mybooking' ),
-							'description' => esc_html_x( 'Show a warning message to the users', 'customizer_topbar', 'mybooking' ),
-							'section' => 'mybooking_theme_topbar_options',
-							'priority' => 10,
-							'type' => 'textarea',
-							'capability' => 'edit_theme_options',
-							'input_attrs' => array(
-								 'class' => 'mybooking-customizer-textarea',
-								 'style' => 'border: 1px solid #999',
-								 'placeholder' => _x( 'Highlight text or HTML on top of Topbar.', 'customizer_topbar', 'mybooking' ),
-							),
-					 )
-				);
 
 				// Notification Message Advanced Settings
 
