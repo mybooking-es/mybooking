@@ -38,6 +38,9 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.33 =
+* Updated: Removed topbar menu
+
 = 0.9.32 =
 * Updated: Sticky post full width
 
@@ -130,6 +133,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.33 =
+* Updated: Removed topbar menu
 
 = 0.9.32 =
 * Updated: Sticky post full width

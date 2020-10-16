@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.33] 2020-10-16
+
+### Updated
+- Removed TopBar menu
+
 ## [0.9.32] 2020-10-16
 
 ### Updated

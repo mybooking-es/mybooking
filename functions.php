@@ -14,7 +14,6 @@ defined( 'ABSPATH' ) || exit;
 
 $mybooking_includes = array(
 	'/inc/setup.php',                                 // Theme setup and custom theme supports.
-  '/inc/menus.php',                                 // Theme menus
   '/inc/categories.php',                            // Theme categories
   '/inc/enqueue.php',                               // Enqueue scripts and styles.
 	'/inc/widgets.php',                               // Register widget area.
