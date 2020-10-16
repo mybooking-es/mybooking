@@ -33,7 +33,6 @@ get_header(); ?>
 		<div class="row">
 			<div class="col">
 				<div class="row">
-
 					<?php if ( have_posts() ) : ?>
 						<?php while ( have_posts() ) : the_post(); ?>
 							<?php get_template_part( 'mybooking-parts/blog/mybooking-content-blog' ); ?>

@@ -38,6 +38,9 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.32 =
+* Updated: Sticky post full width
+
 = 0.9.31 =
 * Added: Editor styles
 
@@ -127,6 +130,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.32 =
+* Updated: Sticky post full width
 
 = 0.9.31 =
 * Added: Editor styles

@@ -1,6 +1,11 @@
 # Changelog
 
-## [0.9.30] 2020-10-16
+## [0.9.32] 2020-10-16
+
+### Updated
+- Stick post full width
+
+## [0.9.31] 2020-10-16
 
 ### Added
 - Editor style

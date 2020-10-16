@@ -17,8 +17,11 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-
+    <?php if ( is_sticky() ) { ?>
+    <div class="col-md-12 col-lg-12">
+   	<?php } else { ?>
 	<div class="col-md-6 col-lg-4">
+	<?php } ?>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<?php $mybooking_permalink = get_permalink(); ?>
 			<div class="news_thumbnail">
