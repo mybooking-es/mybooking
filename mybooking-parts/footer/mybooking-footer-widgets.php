@@ -50,7 +50,7 @@ defined( 'ABSPATH' ) || exit;
           <?php } ?>
           <?php if ( !empty( $mybooking_company_adress) ) { ?>
             <li>
-                <?php echo $company_adress ?>
+                <?php echo $mybooking_company_adress ?>
             </li>
           <?php } ?>
         </ul>

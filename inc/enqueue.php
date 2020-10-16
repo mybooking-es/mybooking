@@ -30,9 +30,11 @@ if ( ! function_exists( 'mybooking_theme_enqueue_styles' ) ) {
   
     // == Load Customizer front-end
     $custom_css = MyBookingCustomizer::getInstance()->customize_enqueue( 'front-end' );
-		wp_register_style( 'mybooking-customizer', false );
-		wp_enqueue_style( 'mybooking-customizer' );
-		wp_add_inline_style( 'mybooking-customizer', $custom_css );
+    if ( !empty($custom_css) ) { 
+			wp_register_style( 'mybooking-customizer', false );
+			wp_enqueue_style( 'mybooking-customizer' );
+			wp_add_inline_style( 'mybooking-customizer', $custom_css );
+	  }
 
 		// == Typography
 
@@ -72,10 +74,11 @@ if ( ! function_exists( 'mybooking_theme_enqueue_block_editor_styles' ) ) {
 
     // == Load Customizer block-editor
     $custom_css = MyBookingCustomizer::getInstance()->customize_enqueue( 'block-editor' );
-		wp_register_style( 'mybooking-customizer-block-editor-styles', false );
-		wp_enqueue_style( 'mybooking-customizer-block-editor-styles' );    
-		wp_add_inline_style( 'mybooking-customizer-block-editor-styles', $custom_css );
-
+    if ( !empty($custom_css) ) {    
+			wp_register_style( 'mybooking-customizer-block-editor-styles', false );
+			wp_enqueue_style( 'mybooking-customizer-block-editor-styles' );    
+			wp_add_inline_style( 'mybooking-customizer-block-editor-styles', $custom_css );
+	  }
 
 		// == Typography
 		$typography_body = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_font_body' );

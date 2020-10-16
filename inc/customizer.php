@@ -151,6 +151,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 		   */
 	    public function customize_enqueue( $type='frontend' ) {
 
+	    	$custom_css = '';
 
 	    	if ( $type == 'front-end' ) {
 
@@ -214,7 +215,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 					}
 
 					// == Build the css-properties
-				  $custom_css = ":root {";
+				  $custom_css .= ":root {";
 
 				  // Typography
 				  if ( !empty( $typography_body ) && $typography_body != 'default' ) {
@@ -312,7 +313,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 		    	$body_color = get_theme_mod( 'mybooking_body_color', '#212121' );
 		      $header_text_color = get_theme_mod('mybooking_headers_color', '#424242');
 
-				  $custom_css = ":root {";
+				  $custom_css.= ":root {";
 				  
 				  // Typography
 				  if ( !empty( $typography_body ) && $typography_body != 'default' ) {
