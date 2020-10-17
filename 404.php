@@ -24,13 +24,10 @@ $mybooking_container = MyBookingCustomizer::getInstance()->get_theme_option( 'my
 			<main class="site-main" id="main">
 
 				<div class="col">
-					<h1><img src="<?php echo esc_url( get_stylesheet_directory_uri()."/images/page_not_found.svg" ) ?>"
-					     alt="<?php echo esc_attr( _x('Page not found', '404_page', 'mybooking') )?>" 
-					     style="max-width: 70%;margin-bottom:2rem;"></h1>
-					<p class="lead"><?php echo esc_html_x('Page not found', '404_page', 'mybooking') ?></p>
+					<h1 class="title-404"><?php echo esc_html_x('404', '404_page', 'mybooking') ?></h1>
+					<h2 class="subtitle-404 lead"><?php echo esc_html_x('Page not found', '404_page', 'mybooking') ?></h2>
 					<hr>
-					<p><?php echo wp_kses( sprintf( _x('You can go back to <a href="%s">home page</a> or do a search', '404_page', 'mybooking'),
-					                 	esc_url( home_url( '/' ) ) ), array( 'a' => array( 'href'  => array() ) ) ); ?></p>
+					<p><?php echo esc_html_x('We are sorry. The page you were looking for could not be found', '404_page', 'mybooking' ); ?></p>
 					<?php get_search_form(); ?>
 				</div>
 

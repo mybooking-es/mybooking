@@ -30,7 +30,7 @@ defined( 'ABSPATH' ) || exit;
 					<a class="news_post-image"
 						 href="<?php echo esc_attr( esc_url ( $mybooking_permalink ) ) ?>"
 						 rel="bookmark"
-						 style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/default-image.png')">
+						 style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image.png') ?>')">
 					</a>
 
 				<?php } else { ?>
@@ -50,8 +50,19 @@ defined( 'ABSPATH' ) || exit;
 					  		 		      esc_attr( esc_url( $mybooking_permalink ) ) ),
 										  '</a></h2>' ); ?>
             <?php } else { ?>	
-                <h2 class="post_title"><?php printf( _x('<a href="%s" rel="bookmark" class="block-ellipsis untitled">Untitled</a>', 'content_blog', 'mybooking'), 
-                                                     esc_attr( esc_url( $mybooking_permalink ) ) ); ?></h2>
+
+	          <?php           
+	            $mybooking_allowed_html = array(
+				                      'a' => array(
+				                          'href' => array(),
+				                          'rel' => array(),
+				                          'class' => array()
+				                       )
+				                     ) ?>
+
+                <h2 class="post_title"><?php echo wp_kses( sprintf( _x('<a href="%s" rel="bookmark" class="block-ellipsis untitled">Untitled</a>', 'content_blog', 'mybooking'),
+                                                                    esc_attr( esc_url( $mybooking_permalink ) ) ), 
+                                                           $mybooking_allowed_html ); ?></h2>
             <?php } ?> 	
 
 		</article>

@@ -229,10 +229,15 @@ Mybooking bundles the following third-party resources:
 Libraries:
 
 * Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
-* SlickJS: https://kenwheeler.github.io/slick/ | License: MIT, https://github.com/kenwheeler/slick/blob/master/LICENSE 
+* SlickJS: Copyright (c) 2017 Ken Wheeler | https://kenwheeler.github.io/slick/ | License: MIT, https://github.com/kenwheeler/slick/blob/master/LICENSE 
 * Mobile Detect: @license Copyright 2013, Heinrich Goebl https://github.com/hgoebl/mobile-detect.js | License: MIT, https://github.com/hgoebl/mobile-detect.js/blob/master/LICENSE
 * WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL 3.0 https://github.com/wp-bootstrap/wp-bootstrap-navwalker/blob/master/LICENSE.txt
-* Select2 (customizer): https://select2.github.io | License MIT: https://github.com/select2/select2/blob/master/LICENSE.md
+* Select2, Copyright (c) 2012-2017 Kevin Brown, Igor Vaynberg, and Select2 contributors: https://select2.github.io | License MIT: https://github.com/select2/select2/blob/master/LICENSE.md
+
+Customizer controls:
+
+* MyBookingCustomizer_Alpha_Color_Control derived from Alpha Color Picker Customizer Control | https://github.com/Codeinwp/customizer-controls | License: MIT, https://github.com/Codeinwp/customizer-controls/blob/master/LICENSE 
+* MyBookingFont_Selector derived from Font Selector Customizer Control| https://github.com/Codeinwp/customizer-controls | License: MIT, https://github.com/Codeinwp/customizer-controls/blob/master/LICENSE 
 
 Fonts:
 
@@ -244,10 +249,6 @@ Screenshot and background image:
 Image for theme screenshot, Copyright Tamekia Andress
 License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
 Source: https://pixy.org/392915/
-
-Image for 404 Not Found Page (page_not_found.svg)
-License: CC0 1.0
-Source: https://commons.wikimedia.org/wiki/File:M-404_(cajet%C3%ADn).svg
 
 Icons:
 

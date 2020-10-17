@@ -37,15 +37,15 @@ if ( ! function_exists( 'mybooking_pagination' ) ) {
 
 		?>
 
-		<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+		<nav aria-label="<?php echo esc_attr( $args['screen_reader_text'] ); ?>">
 
 			<ul class="pagination">
 
 				<?php
 				foreach ( $links as $key => $link ) {
 					?>
-					<li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
-						<?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
+					<li class="page-item <?php echo esc_attr( strpos( $link, 'current' ) ? 'active' : '' ); ?>">
+						<?php echo wp_kses_post( str_replace( 'page-numbers', 'page-link', $link ) ); ?>
 					</li>
 					<?php
 				}

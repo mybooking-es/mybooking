@@ -32,17 +32,17 @@ defined( 'ABSPATH' ) || exit;
 			<div class="row">
 				<div class="col-12 post_body">
 					<?php if ( empty( get_the_title() ) ) { ?>
-						<h1 class="post_title untitled"><?php _ex('Untitled', 'content_blog', 'mybooking'); ?></h1>
+						<h1 class="post_title untitled"><?php echo esc_html_x('Untitled', 'content_blog', 'mybooking'); ?></h1>
 					<?php } else { ?>
 						<h1 class="post_title"><?php the_title(); ?></h1>
 					<?php } ?>	
-					<p class="post_meta text-center"><?php echo mybooking_posted_on(); ?></p>
+					<p class="post_meta text-center"><?php echo wp_kses_post( mybooking_posted_on() ); ?></p>
 					<?php the_content(); ?>
 
 		      		<?php
 		      		wp_link_pages(
 		      			array(
-		      				'before' => '<div class="mybooking-entry-links">' . _x( 'Pages', 'pages_navigation', 'mybooking' ),
+		      				'before' => '<div class="mybooking-entry-links">' . esc_html_x( 'Pages', 'pages_navigation', 'mybooking' ),
 		      				'after'  => '</div>',
 		      			)
 		      		);

@@ -458,18 +458,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 			  	// Footer layout: "0" four sections "1" only copyright
 			  	$this->theme_options['mybooking_global_footer_layout'] = get_theme_mod( "mybooking_global_footer_layout", "1" );
 			  	// Footer credits
-				$allowed_html = array(
-								    'a' => array(
-								        'href' => array(),
-								        'title' => array()
-								    ),
-								    'br' => array(),
-								    'em' => array(),
-								    'strong' => array(),
-								);
-
-			  	$default_credits = $this->footer_default_credits();
-			  	$this->theme_options['mybooking_global_footer_credits'] = wp_kses( get_theme_mod( "mybooking_global_footer_credits", $default_credits ), $allowed_html );
+			  	$this->theme_options['mybooking_global_footer_credits'] = get_theme_mod( "mybooking_global_footer_credits", '' );
 
 
 		  	}
@@ -1911,11 +1900,10 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 
 				// == Footer message
 
-				$default_footer_credits =  $this->footer_default_credits();
 				$wp_customize->add_setting( 'mybooking_global_footer_credits',
 					 array(
-							'default' => $default_footer_credits,
-							'transport' => 'postMessage',
+							'default' => '',
+							'transport' => 'refresh',
 							'sanitize_callback' => 'wp_kses_post'
 					 )
 				);
@@ -1936,18 +1924,6 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 					 )
 				);
 
-
-			}
-
-	    /**
-	     * Footer default credits
-	     */
-			private function footer_default_credits() {
-
-				$value = sprintf( _x( '| <span>Powered by <a href="%s" target="_blank">mybooking</a></span>', 'footer_credits', 'mybooking' ),
-					                'https://mybooking.es' );
-
-				return $value;
 
 			}
 

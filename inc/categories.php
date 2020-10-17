@@ -57,6 +57,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 					case 'multiple':
 						if ( $category->parent ) {
 							$thelist .= get_category_parents( $category->parent, true, $separator );
+						  /* translators: %s: category nicename %s: category link %s: category title %s: rel %s: category name */	
 						  $thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 						                     $category->category_nicename,
 						                     get_category_link( $category->term_id ),
@@ -72,6 +73,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 					  	$category_full_name = get_category_parents( $category->parent, false, $separator );
 					  }
 					  $category_full_name .= $category->name;
+					  /* translators: %s: category nicename %s: category link %s: category title %s: rel %s: category name */
 					  $thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 					                     $category->category_nicename,
 					                     get_category_link( $category->term_id ),
@@ -82,6 +84,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 						break;
 					case '':
 					default:
+					    /* translators: %s: category nicename %s: category link %s: category title %s: rel %s: category name */
 						$thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 						                     $category->category_nicename,
 						                     get_category_link( $category->term_id ),
@@ -103,6 +106,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 	  				case 'multiple':
 	  					if ( $category->parent ) {
 	  						$thelist .= get_category_parents( $category->parent, true, $separator );
+	  						  /* translators: %s: category nicename %s: category link %s: category title %s: rel %s: category name */
 							  $thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 							                     $category->category_nicename,
 							                     get_category_link( $category->term_id ),
@@ -118,6 +122,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 						  	$category_full_name = get_category_parents( $category->parent, false, $separator );
 						  }
 						  $category_full_name .= $category->name;
+						  /* translators: %s: category nicename %s: category link %s: category title %s: rel %s: category name */
 						  $thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 						                     $category->category_nicename,
 						                     get_category_link( $category->term_id ),
@@ -128,6 +133,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 	  					break; 
 	  				case '':
 	  				default:
+	  				      /* translators: %s: category nicename %s: category link %s: category title %s: rel %s: category name */
 						  $thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 						                     $category->category_nicename,
 						                     get_category_link( $category->term_id ),
@@ -142,4 +148,3 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 	  	return apply_filters( 'the_category', $thelist, $separator, $parents );
 	}
 }
-?>

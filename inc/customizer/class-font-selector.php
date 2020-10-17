@@ -1,9 +1,4 @@
 <?php
-/**
- * Font selector.
- *
- * @package customizer-controls
- */
 
 if ( ! class_exists( 'WP_Customize_Control' ) ) {
 	return;
@@ -11,7 +6,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 
 if ( ! class_exists( 'MyBookingFont_Selector' ) ) {
 	/**
-	 * Class Hestia_Font_Selector
+	 * Class MyBookingFont_Selector
 	 */
 	class MyBookingFont_Selector extends WP_Customize_Control {
 
@@ -29,10 +24,10 @@ if ( ! class_exists( 'MyBookingFont_Selector' ) ) {
 		 * @access public
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'select-script', get_template_directory_uri() . '/inc/customizer/js/select.js', array( 'jquery' ), MYBOOKING_FONT_SELECTOR_VERSION, true );
-			wp_enqueue_style( 'select-style', get_template_directory_uri() . '/inc/customizer/css/select.css', null, MYBOOKING_FONT_SELECTOR_VERSION );
-			wp_enqueue_script( 'typography-js', get_template_directory_uri() . '/inc/customizer/js/typography.js', array( 'jquery', 'select-script' ), MYBOOKING_FONT_SELECTOR_VERSION, true );
-			wp_enqueue_style( 'typography', get_template_directory_uri() . '/inc/customizer/css/typography.css', null );
+			wp_enqueue_script( 'mybooking-select-script', get_template_directory_uri() . '/inc/customizer/js/select.js', array( 'jquery' ), MYBOOKING_FONT_SELECTOR_VERSION, true );
+			wp_enqueue_style( 'mybooking-select-style', get_template_directory_uri() . '/inc/customizer/css/select.css', null, MYBOOKING_FONT_SELECTOR_VERSION );
+			wp_enqueue_script( 'mybooking-typography-js', get_template_directory_uri() . '/inc/customizer/js/typography.js', array( 'jquery', 'select-script' ), MYBOOKING_FONT_SELECTOR_VERSION, true );
+			wp_enqueue_style( 'mybooking-typography', get_template_directory_uri() . '/inc/customizer/css/typography.css', null );
 		}
 
 		/**
@@ -53,13 +48,13 @@ if ( ! class_exists( 'MyBookingFont_Selector' ) ) {
 
 				<select class="typography-select" <?php $this->link(); ?>>
 					<option value="" 
-					<?php	if ( ! $this_val ) { echo 'selected="selected"'; } ?>><?php echo _x( 'Default', 'customize_font_selector', 'mybooking' ); ?></option>
+					<?php	if ( ! $this_val ) { echo 'selected="selected"'; } ?>><?php echo esc_html_x( 'Default', 'customize_font_selector', 'mybooking' ); ?></option>
 					<?php
 					// Get Standard font options
 					$std_fonts = mybooking_font_selector_get_standard_fonts();
 					if ( ! empty( $std_fonts ) ) {
 					?>
-						<optgroup label="<?php echo _x( 'Standard Fonts', 'customize_font_selector', 'mybooking' ); ?>">
+						<optgroup label="<?php echo esc_html_x( 'Standard Fonts', 'customize_font_selector', 'mybooking' ); ?>">
 							<?php
 							// Loop through font options and add to select
 							foreach ( $std_fonts as $font ) {
@@ -74,7 +69,7 @@ if ( ! class_exists( 'MyBookingFont_Selector' ) ) {
 					$google_fonts = mybooking_font_selector_get_google_fonts_array();
 					if ( ! empty( $google_fonts ) ) {
 					?>
-						<optgroup label="<?php echo _x( 'Google Fonts', 'customize_font_selector', 'mybooking' ); ?>">
+						<optgroup label="<?php echo esc_html_x( 'Google Fonts', 'customize_font_selector', 'mybooking' ); ?>">
 							<?php
 							// Loop through font options and add to select
 							foreach ( $google_fonts as $font ) {

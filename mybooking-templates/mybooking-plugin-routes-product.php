@@ -17,11 +17,11 @@
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only"><? echo esc_html_x('Previous', 'renting_product_detail', 'mybooking-wp-plugin' ) ?></span>
+              <span class="sr-only"><? echo esc_html_x('Previous', 'renting_product_detail', 'mybooking' ) ?></span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only"><? echo esc_html_x('Next', 'renting_product_detail', 'mybooking-wp-plugin' ) ?></span>
+              <span class="sr-only"><? echo esc_html_x('Next', 'renting_product_detail', 'mybooking' ) ?></span>
             </a>
           </div>
           <?php } else if (count($args->photos) == 1) { ?>
@@ -41,7 +41,7 @@
             <?php } ?>
             <!-- From price -->
             <?php if ($args->from_price > 0) { ?>
-            <h2 class="h4 mt-3 text-danger font-weight-normal"><?php wp_kses_post( sprintf( _x('From <b>%s</b>', 'renting_product_detail', 'mybooking-wp-plugin' ), number_format_i18n( $args->from_price ) ) )?>€</h2>
+            <h2 class="h4 mt-3 text-danger font-weight-normal"><?php wp_kses_post( sprintf( _x('From <b>%s</b>', 'renting_product_detail', 'mybooking' ), number_format_i18n( $args->from_price ) ) )?>€</h2>
             <?php } ?>
             <!-- Key characteristics -->
             <?php if ( isset( $args->key_characteristics) && !empty( $args->key_characteristics ) ) { ?>
@@ -52,7 +52,7 @@
                       <span class="icon-list-icon">
                          <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/characteristics/length.svg' ) )?>"/>
                       </span>
-                      <span class="icon-list-text text-muted"><?php wp_kses_post( sprintf( _x('<b>%.2f</b> m.', 'renting_product_detail', 'mybooking-wp-plugin' ), $args->characteristic_length ) ) ?></span>
+                      <span class="icon-list-text text-muted"><?php wp_kses_post( sprintf( _x('<b>%.2f</b> m.', 'renting_product_detail', 'mybooking' ), $args->characteristic_length ) ) ?></span>
                   </li>
                 <?php } ?>  
                 <?php foreach ( $args->key_characteristics as $mybooking_key => $value) { ?>
@@ -70,7 +70,7 @@
             <?php if ( !empty( $args->description ) ) { ?>
               <hr>
               <div class="mt-3">
-                <h2 class="h3 mb-3"><? echo esc_html_x('Details', 'renting_product_detail', 'mybooking-wp-plugin' ) ?></h2>
+                <h2 class="h3 mb-3"><? echo esc_html_x('Details', 'renting_product_detail', 'mybooking' ) ?></h2>
                 <?php echo wp_kses_post( $args->description )?>
               </div>
             <?php } ?>
@@ -83,7 +83,7 @@
         <div class="row">
           <div class="col-md-12">
             <h2 class="h2"><b><?php echo esc_html( $args->name ) ?></b></h2>
-            <p class="mt-3 text-muted"><? echo esc_html_x('Please choose your dates in the availability calendar', 'renting_product_detail', 'mybooking-wp-plugin' ) ?>
+            <p class="mt-3 text-muted"><? echo esc_html_x('Please choose your dates in the availability calendar', 'renting_product_detail', 'mybooking' ) ?>
           </div>
         </div>
       </div>

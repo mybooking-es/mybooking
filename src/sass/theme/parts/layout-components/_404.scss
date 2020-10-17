@@ -1,0 +1,19 @@
+h1.title-404 {
+    font-size: 8rem;
+	text-align: center;
+	font-weight: 700;
+}
+
+h2.subtitle-404 {
+    font-size: 2.5rem;
+	text-align: center;
+	font-weight: 600;
+}
+
+@media (min-width: 992px) {
+
+	h2.subtitle-404 {
+	    margin-bottom: 5rem;	
+	}
+
+}

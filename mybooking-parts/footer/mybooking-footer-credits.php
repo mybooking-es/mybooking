@@ -19,7 +19,20 @@ defined( 'ABSPATH' ) || exit;
       <?php $mybooking_footer_credits = MyBookingCustomizer::getInstance()->get_theme_option("mybooking_global_footer_credits");?>
       <p class="footer_copyright">
         <small>
-          <?php echo sprintf( '&copy; %s %s', date('Y'), $mybooking_footer_credits ); ?>
+          <?php           
+            $mybooking_allowed_html = array(
+                      'a' => array(
+                          'href' => array(),
+                          'title' => array(),
+                          'rel' => array(),
+                          'class' => array(),
+                          'target' => array()
+                      ),
+                      'br' => array(),
+                      'em' => array(),
+                      'strong' => array()
+                  ); ?>
+          <?php echo wp_kses( $mybooking_footer_credits, $mybooking_allowed_html )  ?>
         </small>
       </p>
     </div>

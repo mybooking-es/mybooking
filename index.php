@@ -39,7 +39,7 @@ get_header(); ?>
 						<?php endwhile; ?>
 					<?php else : ?>
 
-						<h3><?php echo _x( 'No content found. Please publish at least one post to show something at here', 'blog_message', 'mybooking' ); ?></h3>
+						<h3><?php echo esc_html_x( 'No content found. Please publish at least one post to show something at here', 'blog_message', 'mybooking' ); ?></h3>
 
 					<?php endif; ?>
 
