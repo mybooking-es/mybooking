@@ -17,7 +17,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-    <?php if ( is_sticky() ) { ?>
+    <?php if ( is_sticky() && is_home() && !is_paged() ) { ?>
     <div class="col-md-12 col-lg-12">
    	<?php } else { ?>
 	<div class="col-md-6 col-lg-4">
@@ -45,8 +45,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php } ?>
 			</div>
 
-            <?php $mybooking_post_title = get_the_title(); ?>
-            <?php if ( !empty( $mybooking_post_title ) ) { ?>
+            <?php if ( !empty( get_the_title() ) ) { ?>
 				<?php the_title( sprintf( '<h2 class="post_title"><a href="%s" rel="bookmark" class="block-ellipsis">', 
 					  		 		      esc_attr( esc_url( $mybooking_permalink ) ) ),
 										  '</a></h2>' ); ?>

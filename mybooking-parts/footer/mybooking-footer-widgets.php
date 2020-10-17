@@ -39,18 +39,18 @@ defined( 'ABSPATH' ) || exit;
         <ul>
           <?php if ( !empty( $mybooking_company_name ) ) { ?>
             <li>
-              <?php echo $mybooking_company_name ?>
+              <?php echo esc_html( $mybooking_company_name ) ?>
             </li>
           <?php } ?>
 
           <?php if ( !empty( $mybooking_company_vat_number) ) { ?>
             <li>
-               <?php echo $mybooking_company_vat_number ?>
+               <?php echo esc_html( $mybooking_company_vat_number ) ?>
             </li>
           <?php } ?>
           <?php if ( !empty( $mybooking_company_adress) ) { ?>
             <li>
-                <?php echo $mybooking_company_adress ?>
+                <?php echo esc_html( $mybooking_company_adress ) ?>
             </li>
           <?php } ?>
         </ul>
@@ -93,31 +93,31 @@ defined( 'ABSPATH' ) || exit;
         <ul class="social-links d-flex justify-content-center justify-content-md-end">
           <?php if ( !empty( $mybooking_company_facebook ) ) { ?>
             <li class="social__item">
-              <a href="<?php echo $company_facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="<?php echo esc_attr( $company_facebook ) ?>" target="_blank"><i class="fa fa-facebook"></i></a>
             </li>
           <?php } ?>
           
           <?php if ( !empty( $mybooking_company_instagram ) ) { ?>
             <li class="social__item">
-              <a href="<?php echo $company_instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+              <a href="<?php echo esc_attr( $company_instagram ) ?>" target="_blank"><i class="fa fa-instagram"></i></a>
             </li>
           <?php } ?>
           
           <?php if ( !empty( $mybooking_company_twitter ) ) { ?>
             <li class="social__item">
-              <a href="<?php echo $company_twitter ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="<?php echo esc_attr( $company_twitter ) ?>" target="_blank"><i class="fa fa-twitter"></i></a>
             </li>
           <?php } ?>
 
           <?php if ( !empty( $mybooking_company_linkedin ) ) { ?>
             <li class="social__item">
-              <a href="<?php echo $company_linkedin ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="<?php echo esc_attr( $company_linkedin ) ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
             </li>
           <?php } ?>
           
           <?php if ( !empty( $mybooking_company_youtube ) ) { ?>
             <li class="social__item">
-              <a href="<?php echo $company_youtube ?>" target="_blank"><i class="fa fa-youtube"></i></a>
+              <a href="<?php echo esc_attr( $company_youtube ) ?>" target="_blank"><i class="fa fa-youtube"></i></a>
             </li>
           <?php } ?>
         </ul>
@@ -128,14 +128,14 @@ defined( 'ABSPATH' ) || exit;
       <?php if ( !empty( $mybooking_company_phone ) || !empty( $mybooking_company_email) ) { ?>
         <p class="info_bloc">
           <?php if ( !empty( $mybooking_company_phone ) ) { ?>
-              <a class="info_link" href="tel:<?php echo $mybooking_company_phone ?>">
+              <a class="info_link" href="<?php echo esc_attr( 'tel:'.str_replace(' ','',$mybooking_company_phone) ) ?>">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span class="info_text"><?php echo $mybooking_company_phone ?></span>
               </a>
           <?php } ?>        
           <?php if ( !empty( $mybooking_company_email ) ) { ?>
               <br>
-              <a class="info_link" href="mailto:<?php echo $mybooking_company_email ?>">
+              <a class="info_link" href="<?php echo esc_attr( 'mailto:'.$mybooking_company_email ) ?>">
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 <span class="info_text"><?php echo $mybooking_company_email ?></span>
               </a>

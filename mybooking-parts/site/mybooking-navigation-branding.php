@@ -21,8 +21,8 @@ defined( 'ABSPATH' ) || exit;
     if ( isset($post) ) {
       $mybooking_custom_logo = get_post_meta($post->ID, 'custom_logo', true);
       if ( !empty( $mybooking_custom_logo ) ) { ?>
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand custom-logo-link" rel="home">
-          <img src="<?php echo $mybooking_custom_logo; ?>" class="img-fluid">
+        <a href="<?php echo esc_attr ( esc_url( home_url( '/' ) ) ); ?>" class="navbar-brand custom-logo-link" rel="home">
+          <img src="<?php echo esc_attr ( esc_url ( $mybooking_custom_logo ) ); ?>" class="img-fluid">
         </a>
 <?php } 
       else {
@@ -41,7 +41,7 @@ defined( 'ABSPATH' ) || exit;
     <h1 class="navbar-brand mb-0">
       <a
         rel="home"
-        href="<?php echo esc_url( home_url( '/' ) ); ?>"
+        href="<?php echo esc_attr ( esc_url( home_url( '/' ) ) ); ?>"
         title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
         itemprop="url">
           <?php bloginfo( 'name' ); ?>
@@ -54,7 +54,7 @@ defined( 'ABSPATH' ) || exit;
     <a
       class="navbar-brand"
       rel="home"
-      href="<?php echo esc_url( home_url( '/' ) ); ?>"
+      href="<?php echo esc_attr( esc_url( home_url( '/' ) ) ); ?>"
       title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
       itemprop="url">
         <?php bloginfo( 'name' ); ?>

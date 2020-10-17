@@ -27,30 +27,29 @@ defined( 'ABSPATH' ) || exit;
     <!-- Top Bar content -->
     <?php $mybooking_container = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_container_type' ); ?>
     <div class="<?php echo esc_attr( $mybooking_container ); ?>">
-      <span>
-        <?php if ( !empty( $mybooking_company_phone) ) { ?>
-          <a class="info_link" href="tel:<?php echo $mybooking_company_phone ?>"><i class="fa fa-phone" aria-hidden="true"></i> <span class="info_text"><?php echo $mybooking_company_phone ?></span></a>
-        <?php } ?>
-      </span>
+      <?php if ( !empty( $mybooking_company_phone) ) { ?>
+        <span>
+          <a class="info_link" href="<?php echo esc_attr( 'tel:'.str_replace(' ','',$mybooking_company_phone) ) ?>"><i class="fa fa-phone" aria-hidden="true"></i> <span class="info_text"><?php echo esc_html( $mybooking_company_phone ) ?></span></a>
+        </span>
+      <?php } ?>
 
-      <span>
-        <?php if ( !empty( $mybooking_company_chat) ) { ?>
-      	  <a class="info_link" href="whatsapp://send?phone=<?php echo $mybooking_company_chat ?>&abid=<?php echo $mybooking_company_chat ?>"><i class="fa fa-whatsapp"
-      	      aria-hidden="true"></i> <span class="info_text"><?php echo $mybooking_company_chat ?></span></a>
-        <?php } ?>
-      </span>
+      <?php if ( !empty( $mybooking_company_chat) ) { ?>
+        <span>
+      	  <a class="info_link" href="<?php echo esc_attr( 'whatsapp://send?phone='.str_replace(' ','',$mybooking_company_chat).'&abid='.str_replace(' ','',$mybooking_company_chat) ) ?>"><i class="fa fa-whatsapp"
+      	      aria-hidden="true"></i> <span class="info_text"><?php echo esc_html( $mybooking_company_chat ) ?></span></a>
+        </span>
+      <?php } ?>
 
-      <span>
-        <?php if ( !empty( $mybooking_company_email) ) { ?>
-          <a class="info_link" href="mailto:<?php echo $mybooking_company_email ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="info_text"><?php echo $mybooking_company_email ?></span></a>
-        <?php } ?>
-      </span>   
+      <?php if ( !empty( $mybooking_company_email) ) { ?>
+        <span>
+          <a class="info_link" href="<?php echo esc_attr( 'mailto:'.$mybooking_company_email ) ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="info_text"><?php echo esc_html( $mybooking_company_email ) ?></span></a>
+        </span>   
+      <?php } ?>
 
       <!-- TopBar Message area -->
       <?php if ( is_active_sidebar( 'mybooking_global_topbar_right' ) ) { ?>
          <?php dynamic_sidebar( 'mybooking_global_topbar_right' ); ?>
       <?php } ?>
-
     </div>
 
   </div>
