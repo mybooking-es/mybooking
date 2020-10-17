@@ -27102,13 +27102,9 @@ h2.comments-title {
     color: var(--topbar-icon-color); }
   .topbar .info_link {
     margin: 0 0 0 1em; }
-  .topbar .topbar_menu {
+  .topbar .topbar_right {
+    display: inline-block;
     float: right; }
-    .topbar .topbar_menu .menu {
-      margin: 0; }
-    .topbar .topbar_menu li {
-      display: inline-block;
-      margin: 0 0.5em; }
 
 .topbar-message {
   padding: 0.5rem 2rem;
@@ -27122,9 +27118,12 @@ h2.comments-title {
 .topbar-message a:hover {
   color: var(--topbar-message-link-hover); }
 
+@media (max-width: 578px) {
+  .topbar .container {
+    padding: 0; } }
+
 @media (max-width: 991.98px) {
-  .topbar .info_text,
-  .topbar_menu {
+  .topbar .info_text {
     display: none; }
   .topbar .info_link {
     margin: 0 2em; }

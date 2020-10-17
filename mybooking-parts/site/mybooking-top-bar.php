@@ -21,7 +21,8 @@ defined( 'ABSPATH' ) || exit;
 <?php $mybooking_company_chat = MyBookingCustomizer::getInstance()->get_theme_option("company_info_chat"); ?>
 <?php $mybooking_company_email = MyBookingCustomizer::getInstance()->get_theme_option("company_info_email"); ?>
 
-<?php if ( !empty($mybooking_company_phone) || !empty($mybooking_company_chat) || !empty($mybooking_company_email) ) { ?>
+<?php if ( !empty($mybooking_company_phone) || !empty($mybooking_company_chat) || !empty($mybooking_company_email) ||
+           is_active_sidebar( 'mybooking_global_topbar_right' ) ) { ?>
   <div class="topbar">
     <!-- Top Bar content -->
     <?php $mybooking_container = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_container_type' ); ?>
@@ -44,6 +45,13 @@ defined( 'ABSPATH' ) || exit;
           <a class="info_link" href="mailto:<?php echo $mybooking_company_email ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="info_text"><?php echo $mybooking_company_email ?></span></a>
         <?php } ?>
       </span>   
+
+      <!-- TopBar Message area -->
+      <?php if ( is_active_sidebar( 'mybooking_global_topbar_right' ) ) { ?>
+         <?php dynamic_sidebar( 'mybooking_global_topbar_right' ); ?>
+      <?php } ?>
+
     </div>
+
   </div>
 <?php } ?>

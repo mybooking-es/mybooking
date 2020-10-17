@@ -21,15 +21,9 @@
   .info_link {
     margin: 0 0 0 1em;
   }
-  .topbar_menu {
+  .topbar_right {
+    display: inline-block;
     float: right;
-    .menu {
-      margin: 0;
-    }
-    li {
-      display: inline-block;
-      margin: 0 0.5em;
-    }
   }
 }
 
@@ -49,12 +43,17 @@
   color: var(--topbar-message-link-hover);
 }
 
+// Small devices
+@media (max-width: 578px) {
+  .topbar .container {
+    padding: 0;
+  }
+}
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-  .topbar .info_text,
-  .topbar_menu {
+  .topbar .info_text {
     display: none;
-  }
+  }  
   .topbar .info_link {
     margin: 0 2em;
   }

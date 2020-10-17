@@ -30,6 +30,17 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 			)
 		);
 
+    // TopBar right
+		register_sidebar(
+			array(
+				'name'          => _x( 'TopBar Right','mybooking_widgets','mybooking' ),
+				'id'            => 'mybooking_global_topbar_right',
+				'description'   => _x( 'TopBar Right Area','mybooking_widgets', 'mybooking' ),
+				'before_widget' => '<div id="%1$s" class="mybooking-widget_topbar_right topbar_right %2$s">',
+				'after_widget'  => '</div>',
+			)
+		);
+
 		// Navigation
 		register_sidebar(
 			array(
