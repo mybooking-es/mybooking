@@ -29,8 +29,8 @@ $mybooking_container = MyBookingCustomizer::getInstance()->get_theme_option( 'my
 					     style="max-width: 70%;margin-bottom:2rem;"></h1>
 					<p class="lead"><?php echo esc_html_x('Page not found', '404_page', 'mybooking') ?></p>
 					<hr>
-					<p><?php printf( _x('You can go back to <a href="%s">home page</a> or do a search', '404_page', 'mybooking'),
-					                 esc_url( home_url( '/' ) ) ); ?></p>
+					<p><?php echo wp_kses( sprintf( _x('You can go back to <a href="%s">home page</a> or do a search', '404_page', 'mybooking'),
+					                 	esc_url( home_url( '/' ) ) ), array( 'a' => array( 'href'  => array() ) ) ); ?></p>
 					<?php get_search_form(); ?>
 				</div>
 
