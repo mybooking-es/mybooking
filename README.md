@@ -12,7 +12,7 @@ theme, so we can fully customize it.
 **Theme URI:** https://github.com/mybooking-es/mybooking  
 **Contributors:** MyBooking Team - hectorasencio marcelreig juanmiqueo 
 **Requires at least:** WordPress 5.2  
-**Version:** 0.9.33  
+**Version:** 0.9.34  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** e-commerce
@@ -28,31 +28,59 @@ templates to easy build a company website.
 
 - Boostrap integration 4.4
 - Font Awesome integration 5.0
-- Customizer
-  - Header and Footer
-  - Colors and Typography
-- Widgets areas
-  - Notification Top Bar
-  - TopBar
-  - Footer
-  - Special areas on MyBooking Home Template to build complex home pages
-- Custom templates
 
-### Header and Footer
+These are the main components of the theme:
 
-1. Header with notification and top bar areas where widgets can be placed
-2. Footer with four widgets areas
+### Notification area
+
+It is shown at top of any pages. It is only visible if a widget is added to the
+Top Notification Widget Area.
+
+It can be used to show notification messages.
+
+### TopBar
+
+It is shown at top, below the notification area and above the navigation menu.
+
+It shows the contact information and has a widget area at right, where any widget
+like social media links can be placed. 
+
+### Footer
+
+The footer has 4 widgets areas, so different information can we placed there.
 
 ### Templates
+
+MyBooking theme defines three templates:
 
 1. MyBooking Home to create the home page with a background image, video or slide.
 2. MyBooking Contact to create the contact page with map and contact form.
 3. MyBooking Empty to use Elementor or any Page Builder.
 
+#### MyBooking Home Template
+
+It is an special template used to build the homepage. Below the navigation menu
+is shown an image/video/carrousel with two widgets areas, Header Right and Header
+Left, so a message or form can be placed over the image.
+
+Moreover it has some areas that widgets areas that are show above and below the
+page content. They allow to place any widget like banners, news, testimonials, a
+map, ... so it can be used to show dynamic content.
+
+#### MyBooking Contact Template
+
+It is a basic template to create a contact page. It shows the map with the location
+of the company office. Moreover, it has a widget area where any contact form can
+be placed.
+
+#### MyBooking Empty Template
+
+It is an empty template that can be used with any PageBuild to create custom contents.
+
 ### Customizer
 
-1. Customize colors (brand primary and secondary, navigation bar and so on)
-2. Typography
+Colors, typography and layout can be configured in the customizer. It allows to 
+customize the aspect of the website.
 
 ## Installation
 

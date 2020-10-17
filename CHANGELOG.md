@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.34] 2020-10-17
+
+### Updated
+- Added TopBar Right Widget area
+
 ## [0.9.33] 2020-10-16
 
 ### Updated

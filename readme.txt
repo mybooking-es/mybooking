@@ -38,6 +38,9 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.34 =
+* Added: Topbar widget area
+
 = 0.9.33 =
 * Updated: Removed topbar menu
 
@@ -133,6 +136,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.34 =
+* Added: Topbar widget area
 
 = 0.9.33 =
 * Updated: Removed topbar menu
