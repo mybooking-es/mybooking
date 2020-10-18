@@ -97,21 +97,21 @@
                           <label
                             for="street"><?php echo esc_html_x( 'Address', 'activity_my_reservation', 'mybooking') ?></label>
                           <input class="form-control" id="street" name="customer_address[street]" type="text"
-                            placeholder="<%=configuration.escapeHtml("<?php echo _x( 'Address', 'activity_my_reservation', 'mybooking') ?>")%>"
+                            placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x( 'Address', 'activity_my_reservation', 'mybooking') ?>")%>"
                             value="<%=order.address_street%>" maxlength="60">
                         </div>
                         <div class="form-group col-md-3">
                           <label
                             for="number"><?php echo esc_html_x( 'Number', 'activity_my_reservation', 'mybooking') ?></label>
                           <input class="form-control" id="number" name="customer_address[number]" type="text"
-                            placeholder="<%=configuration.escapeHtml("<?php echo _x( 'Number', 'activity_my_reservation', 'mybooking') ?>")%>"
+                            placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x( 'Number', 'activity_my_reservation', 'mybooking') ?>")%>"
                             value="<%=order.address_number%>" maxlength="10">
                         </div>
                         <div class="form-group col-md-3">
                           <label
                             for="complement"><?php echo esc_html_x( 'Complement', 'activity_my_reservation', 'mybooking') ?></label>
                           <input class="form-control" id="complement" name="customer_address[complement]" type="text"
-                            placeholder="<%=configuration.escapeHtml("<?php echo _x( 'Complement', 'activity_my_reservation', 'mybooking') ?>")%>"
+                            placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x( 'Complement', 'activity_my_reservation', 'mybooking') ?>")%>"
                             value="<%=order.address_complement%>" max_length="20">
                         </div>
                       </div>
@@ -120,14 +120,14 @@
                           <label
                             for="city"><?php echo esc_html_x( 'City', 'activity_my_reservation', 'mybooking') ?></label>
                           <input class="form-control" id="city" name="customer_address[city]" type="text"
-                            placeholder="<%=configuration.escapeHtml("<?php echo _x( 'City', 'activity_my_reservation', 'mybooking') ?>")%>"
+                            placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x( 'City', 'activity_my_reservation', 'mybooking') ?>")%>"
                             value="<%=order.address_city%>" max_length="60">
                         </div>
                         <div class="form-group col-md-6">
                           <label
                             for="state"><?php echo esc_html_x( 'State', 'activity_my_reservation', 'mybooking') ?></label>
                           <input class="form-control" id="state" name="customer_address[state]" type="text"
-                            placeholder="<%=configuration.escapeHtml("<?php echo _x( 'State', 'activity_my_reservation', 'mybooking') ?>")%>"
+                            placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x( 'State', 'activity_my_reservation', 'mybooking') ?>")%>"
                             value="<%=order.address_state%>" max_length="60">
                         </div>
                       </div>

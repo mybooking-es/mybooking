@@ -81,7 +81,7 @@
               <li class="page-item <?php echo esc_attr( $mybooking_disabled_previous ) ?>">
                 <a class="page-link"
                    href="<?php echo esc_attr( esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']-1).$args['querystring'] ) ) ?>">
-                   <?php echo _x( 'Previous', 'activities_list', 'mybooking' ) ?></a>
+                   <?php echo esc_html_x( 'Previous', 'activities_list', 'mybooking' ) ?></a>
               </li>
               <?php foreach ($args['pages'] as $mybooking_page) { ?>
                 <?php if ($mybooking_page == $args['current_page']) { ?>
@@ -102,7 +102,7 @@
               <li class="page-item <?php echo esc_attr( $mybooking_disabled_next ) ?>">
                 <a class="page-link"
                    href="<?php echo esc_attr( esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']+1).$args['querystring'] ) )?>">
-                  <?php echo _x( 'Next', 'activities_list', 'mybooking' ) ?></a>
+                  <?php echo esc_html_x( 'Next', 'activities_list', 'mybooking' ) ?></a>
               </li>
             </ul>
           </nav>
