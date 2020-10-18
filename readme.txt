@@ -38,6 +38,9 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.35 =
+* Updated: Theme review for publishing
+
 = 0.9.34 =
 * Added: Topbar widget area
 
@@ -136,6 +139,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.35 =
+* Updated: Theme review for publishing
 
 = 0.9.34 =
 * Added: Topbar widget area

@@ -7,7 +7,7 @@ define( 'MYBOOKING_ALPHA_VERSION', '1.0.0' );
 
 if ( ! class_exists( 'MyBookingCustomizer_Alpha_Color_Control' ) ) {
 	/**
-	 * Class Hestia_Customize_Alpha_Color_Control
+	 * Class MyBooking_Customize_Alpha_Color_Control
 	 */
 	class MyBookingCustomizer_Alpha_Color_Control extends WP_Customize_Control {
 		/**

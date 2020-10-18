@@ -35,6 +35,3 @@ foreach ( $mybooking_includes as $mybooking_file ) {
   }
   require_once $mybooking_filepath;
 }
-
-// Start customize
-MyBookingCustomizer::getInstance();

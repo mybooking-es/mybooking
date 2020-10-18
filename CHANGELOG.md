@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.35] 2020-10-17
+
+### Updated
+- Theme review for publishing
+
 ## [0.9.34] 2020-10-17
 
 ### Updated
