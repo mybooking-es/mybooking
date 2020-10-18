@@ -47,10 +47,10 @@
               <?php } ?>
             </div>
             <h2 class="news_title">
-              <?php echo get_the_title( $mybooking_news_item ); ?>
+              <?php echo wp_kses_post( get_the_title( $mybooking_news_item ) ); ?>
             </h2>
             <div class="news_extract">
-              <?php echo get_the_excerpt( $mybooking_news_item ); ?>
+              <?php echo wp_kses_post( get_the_excerpt( $mybooking_news_item ) ); ?>
               <p>
                 <a class="btn btn-secondary mybooking-read-more-link" href="<?php echo esc_attr( esc_url( $mybooking_permalink ) ) ?>">
                   <?php echo esc_html_x( 'Read', 'home-news-button','mybooking' ) ?>
