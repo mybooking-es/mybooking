@@ -30,7 +30,7 @@ if ( ! function_exists( 'mybooking_posted_on' ) ) {
 		$posted_on = apply_filters(
 			'mybooking_posted_on', sprintf(
 				'<span class="posted-on"><i class="far fa-calendar-alt"></i>&nbsp;<a href="%1$s" rel="bookmark">%2$s</a></span>',
-				esc_url( get_permalink() ),
+				esc_attr( esc_url( get_permalink() ) ),
 				apply_filters( 'mybooking_posted_on_time', $time_string )
 			)
 		);
@@ -38,7 +38,7 @@ if ( ! function_exists( 'mybooking_posted_on' ) ) {
 			'mybooking_posted_by', sprintf(
 				'&nbsp;<span class="byline"><i class="far fa-user-circle"></i> %1$s <span class="author vcard"><a class="url fn n" href="%2$s"> %3$s</a></span></span>',
 				esc_html_x( 'by', 'post-meta', 'mybooking' ),
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+				esc_attr( esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) ),
 				esc_html( get_the_author() )
 			)
 		);
@@ -50,7 +50,9 @@ if ( ! function_exists( 'mybooking_posted_on' ) ) {
 
 		if ( ! is_page() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '&nbsp;<span class="comments-link"><i class="far fa-comment"></i>&nbsp;';
-			comments_popup_link( esc_html_x( 'Leave a comment', 'entry_footer', 'mybooking' ), esc_html_x( '1 Comment', 'entry_footer', 'mybooking' ), esc_html_x( '% Comments', 'comments', 'mybooking' ) );
+			comments_popup_link( esc_html_x( 'Leave a comment', 'entry_footer', 'mybooking' ), 
+								 esc_html_x( '1 Comment', 'entry_footer', 'mybooking' ), 
+								 esc_html_x( '% Comments', 'comments', 'mybooking' ) );
 			echo '</span>';
 		}
 
@@ -157,10 +159,12 @@ if ( ! function_exists( 'mybooking_post_nav' ) ) {
 			<div class="row nav-links justify-content-between">
 				<?php
 				if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'mybooking' ) );
+					previous_post_link( '<span class="nav-previous">%link</span>', 
+										_x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'mybooking' ) );
 				}
 				if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'mybooking' ) );
+					next_post_link( '<span class="nav-next">%link</span>', 
+									_x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'mybooking' ) );
 				}
 				?>
 			</div>
@@ -175,7 +179,7 @@ if ( ! function_exists( 'mybooking_pingback' ) ) {
 	 */
 	function mybooking_pingback() {
 		if ( is_singular() && pings_open() ) {
-			echo '<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">' . "\n";
+			echo '<link rel="pingback" href="' . esc_attr( esc_url( get_bloginfo( 'pingback_url' ) ) ). '">' . "\n";
 		}
 	}
 	add_action( 'wp_head', 'mybooking_pingback' );
