@@ -60,7 +60,9 @@ defined( 'ABSPATH' ) || exit;
 				                       )
 				                     ) ?>
 
-                <h2 class="post_title"><?php echo wp_kses( sprintf( _x('<a href="%s" rel="bookmark" class="block-ellipsis untitled">Untitled</a>', 'content_blog', 'mybooking'),
+                <h2 class="post_title">
+                	<?php /* translators: %s: permalink */ ?>
+                	<?php echo wp_kses( sprintf( _x('<a href="%s" rel="bookmark" class="block-ellipsis untitled">Untitled</a>', 'content_blog', 'mybooking'),
                                                                     esc_attr( esc_url( $mybooking_permalink ) ) ), 
                                                            $mybooking_allowed_html ); ?></h2>
             <?php } ?> 	

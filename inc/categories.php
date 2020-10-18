@@ -61,6 +61,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 						  $thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 						                     $category->category_nicename,
 						                     get_category_link( $category->term_id ),
+						                     /* translators: %s: category name */
 						                     esc_attr( sprintf( _x( "View all posts in %s", 'categories', 'mybooking' ), $category->name ) ),
 						                     $rel,
 						                     $category->name
@@ -77,6 +78,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 					  $thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 					                     $category->category_nicename,
 					                     get_category_link( $category->term_id ),
+					                     /* translators: %s: category name */
 					                     esc_attr( sprintf( _x( "View all posts in %s", 'categories', 'mybooking' ), $category->name ) ),
 					                     $rel,
 					                     $category_full_name
@@ -88,6 +90,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 						$thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 						                     $category->category_nicename,
 						                     get_category_link( $category->term_id ),
+						                     /* translators: %s: category name */
 						                     esc_attr( sprintf( _x( "View all posts in %s", 'categories', 'mybooking' ), $category->name ) ),
 						                     $rel,
 						                     $category->name
@@ -110,6 +113,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 							  $thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 							                     $category->category_nicename,
 							                     get_category_link( $category->term_id ),
+							                     /* translators: %s: category name */
 							                     esc_attr( sprintf( _x( "View all posts in %s", 'categories', 'mybooking' ), $category->name ) ),
 							                     $rel,
 							                     $category->name
@@ -126,6 +130,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 						  $thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 						                     $category->category_nicename,
 						                     get_category_link( $category->term_id ),
+						                     /* translators: %s: category name */
 						                     esc_attr( sprintf( _x( "View all posts in %s", 'categories', 'mybooking' ), $category->name ) ),
 						                     $rel,
 						                     $category_full_name
@@ -137,6 +142,7 @@ if ( ! function_exists( 'mybooking_get_category_list' ) ) {
 						  $thelist .= sprintf('<a class="category-%s" href="%s" title="%s" %s>%s</a></li>', 
 						                     $category->category_nicename,
 						                     get_category_link( $category->term_id ),
+						                     /* translators: %s: category name */
 						                     esc_attr( sprintf( _x( "View all posts in %s", 'categories', 'mybooking' ), $category->name ) ),
 						                     $rel,
 						                     $category->name

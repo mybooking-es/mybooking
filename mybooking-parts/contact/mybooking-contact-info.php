@@ -20,7 +20,7 @@
   <!-- Address -->
   <div class="h6">
     <i class="fa fa-map-marker" aria-hidden="true"></i>
-    <?php echo _x('Address', 'contact', 'mybooking'); ?>
+    <?php echo esc_html_x('Address', 'contact', 'mybooking'); ?>
   </div>
 
   <?php if ( !empty( $mybooking_company_adress ) ) { ?>
@@ -30,7 +30,7 @@
   <!-- Phone number -->
   <div class="h6">
     <i class="fa fa-phone" aria-hidden="true"></i>
-    <?php echo _x('Phone number', 'contact', 'mybooking'); ?>
+    <?php echo esc_html_x('Phone number', 'contact', 'mybooking'); ?>
   </div>
   <?php if ( !empty( $mybooking_company_phone ) ) { ?>
       <p><?php echo esc_html( $mybooking_company_phone ) ?><br>
@@ -42,7 +42,7 @@
   <!-- Email address -->
   <div class="h6">
     <i class="fa fa-envelope" aria-hidden="true"></i>
-    <?php echo _x('E-mail address', 'contact', 'mybooking'); ?>
+    <?php echo esc_html_x('E-mail address', 'contact', 'mybooking'); ?>
   </div>
   <?php if ( !empty ( $mybooking_company_email ) ) { ?>
       <p><?php echo esc_html( $mybooking_company_email ) ?></p>

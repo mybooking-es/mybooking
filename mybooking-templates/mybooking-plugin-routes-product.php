@@ -17,11 +17,11 @@
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only"><? echo esc_html_x('Previous', 'renting_product_detail', 'mybooking' ) ?></span>
+              <span class="sr-only"><?php echo esc_html_x('Previous', 'renting_product_detail', 'mybooking' ) ?></span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only"><? echo esc_html_x('Next', 'renting_product_detail', 'mybooking' ) ?></span>
+              <span class="sr-only"><?php echo esc_html_x('Next', 'renting_product_detail', 'mybooking' ) ?></span>
             </a>
           </div>
           <?php } else if (count($args->photos) == 1) { ?>
@@ -70,7 +70,7 @@
             <?php if ( !empty( $args->description ) ) { ?>
               <hr>
               <div class="mt-3">
-                <h2 class="h3 mb-3"><? echo esc_html_x('Details', 'renting_product_detail', 'mybooking' ) ?></h2>
+                <h2 class="h3 mb-3"><?php echo esc_html_x('Details', 'renting_product_detail', 'mybooking' ) ?></h2>
                 <?php echo wp_kses_post( $args->description )?>
               </div>
             <?php } ?>
@@ -83,7 +83,7 @@
         <div class="row">
           <div class="col-md-12">
             <h2 class="h2"><b><?php echo esc_html( $args->name ) ?></b></h2>
-            <p class="mt-3 text-muted"><? echo esc_html_x('Please choose your dates in the availability calendar', 'renting_product_detail', 'mybooking' ) ?>
+            <p class="mt-3 text-muted"><?php echo esc_html_x('Please choose your dates in the availability calendar', 'renting_product_detail', 'mybooking' ) ?>
           </div>
         </div>
       </div>
