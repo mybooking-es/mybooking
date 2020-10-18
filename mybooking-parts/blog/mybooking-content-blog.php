@@ -46,6 +46,7 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 
             <?php if ( !empty( get_the_title() ) ) { ?>
+            	<?php /* translators: %s: permalink */ ?>
 				<?php the_title( sprintf( '<h2 class="post_title"><a href="%s" rel="bookmark" class="block-ellipsis">', 
 					  		 		      esc_attr( esc_url( $mybooking_permalink ) ) ),
 										  '</a></h2>' ); ?>

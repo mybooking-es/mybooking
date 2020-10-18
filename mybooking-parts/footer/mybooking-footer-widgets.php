@@ -130,14 +130,14 @@ defined( 'ABSPATH' ) || exit;
           <?php if ( !empty( $mybooking_company_phone ) ) { ?>
               <a class="info_link" href="<?php echo esc_attr( 'tel:'.str_replace(' ','',$mybooking_company_phone) ) ?>">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <span class="info_text"><?php echo $mybooking_company_phone ?></span>
+                <span class="info_text"><?php echo esc_html( $mybooking_company_phone ) ?></span>
               </a>
           <?php } ?>        
           <?php if ( !empty( $mybooking_company_email ) ) { ?>
               <br>
               <a class="info_link" href="<?php echo esc_attr( 'mailto:'.$mybooking_company_email ) ?>">
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                <span class="info_text"><?php echo $mybooking_company_email ?></span>
+                <span class="info_text"><?php echo esc_html( $mybooking_company_email ) ?></span>
               </a>
           <?php } ?>
         </p>

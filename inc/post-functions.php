@@ -43,8 +43,8 @@ if ( ! function_exists( 'mybooking_posted_on' ) ) {
 			)
 		);
 
-		echo $posted_on;
-		echo $byline;
+		echo wp_kses_post( $posted_on );
+		echo wp_kses_post( $byline );
 
 		$comments = '';
 
@@ -68,13 +68,13 @@ if ( ! function_exists( 'mybooking_entry_footer' ) ) {
 			$categories_list = mybooking_get_category_list( esc_html( ' ' ) );
 			if ( $categories_list && mybooking_categorized_blog() ) {
 				/* translators: %s: Categories of current post */
-				printf( '<div class="cat-links"><i class="far fa-folder"></i>&nbsp;<span> %s</span></div>', $categories_list ); 
+				printf( '<div class="cat-links"><i class="far fa-folder"></i>&nbsp;<span> %s</span></div>', wp_kses_post( $categories_list ) ); 
 			}
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html( ' ' ) );
 			if ( $tags_list ) {
 				/* translators: %s: Tags of current post */
-				printf( '<div class="tags-links"><i class="fas fa-tag"></i>&nbsp;<span> %s</span></div>', $tags_list ); 
+				printf( '<div class="tags-links"><i class="fas fa-tag"></i>&nbsp;<span> %s</span></div>', wp_kses_post( $tags_list ) ); 
 			}
 		}
 		// Edit post link: Added classes to show as a button

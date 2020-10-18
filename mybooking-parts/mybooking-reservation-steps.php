@@ -22,7 +22,7 @@
 <div class="wizard-container full-size-datepicker-container" id="wizard_container">
   <div class="wizard-step_header container">
     <span class="wizard-close" id="close_wizard_btn">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/close-icon.png" alt="<?php echo esc_html('X') ?>">
+      <img src="<?php echo esc_attr( get_stylesheet_directory_uri().'/images/close-icon.png' ) ?>" alt="<?php echo esc_html('X') ?>">
     </span>
     <div class="wizard-step_title step_title" id="step_title"></div>
   </div>

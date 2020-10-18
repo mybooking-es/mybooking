@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 <div class="wizard-container full-size-datepicker-container" id="wizard_container">
   <div class="wizard-step_header container">
     <span class="wizard-close" id="close_wizard_btn">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/close-icon.png" alt="<?php echo esc_html('X') ?>">
+      <img src="<?php echo esc_attr( get_stylesheet_directory_uri().'/images/close-icon.png' ) ?>" alt="<?php echo esc_html('X') ?>">
     </span>
     <div class="wizard-step_title step_title" id="step_title"></div>
   </div>
@@ -88,7 +88,7 @@ defined( 'ABSPATH' ) || exit;
     <?php $mybooking_navbar_fixed_class = ($mybooking_navbar_integrated == '1' ? 'header-container_margin' : ''); ?>
 
     <div id="home-header_content_container"
-      class="container home-header_content_container <?php echo $mybooking_navbar_fixed_class; ?>">
+      class="container home-header_content_container <?php echo esc_attr( $mybooking_navbar_fixed_class ); ?>">
       <div class="row justify-content-center">
 
         <?php $mybooking_options_header_layout = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_layout'); ?>
