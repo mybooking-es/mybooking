@@ -20,7 +20,7 @@ $mybooking_includes = array(
 	'/inc/pagination.php',                            // Custom pagination for this theme.
   '/inc/customizer/alpha-color-picker.php',
   '/inc/customizer/class-font-selector.php',
-  '/inc/customizer/gallery-control.php',
+  '/inc/customizer/carrousel-control.php',
 	'/inc/customizer.php',                            // Customizer additions.
 	'/inc/class-wp-bootstrap-navwalker.php',          // Load custom WordPress nav walker.
   '/inc/post-functions.php',                        // Custom Post functions.

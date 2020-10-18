@@ -94,8 +94,8 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 				$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 				$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
-				// Register control type for Gallery
-				$wp_customize->register_control_type( 'MyBookingCustomizeGalleryControl' );
+				// Register control type for Carrousel
+				$wp_customize->register_control_type( 'MyBookingCustomizeCarrouselControl' );
 
 				// Register panel
 				$this->mybooking_settings_panel( $wp_customize );
@@ -1693,14 +1693,14 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 				    )
 				);
 
-				$wp_customize->add_control( new MyBookingCustomizeGalleryControl(
+				$wp_customize->add_control( new MyBookingCustomizeCarrouselControl(
 				        $wp_customize,
-				        'mybooking_home_header_carrouse_bgl',
+				        'mybooking_home_header_carrousel_bg',
 				        array(
 				            'label'    => _x( 'Background Carrousel', 'customizer_header', 'mybooking' ),
 				            'section'  => 'mybooking_theme_header_options',
 				            'settings' => 'mybooking_home_header_carrousel_bg',
-				            'type'     => 'image_gallery',
+				            'type'     => 'carrousel',
 				        )
 				    ) );
 

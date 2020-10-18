@@ -1,0 +1,21 @@
+#carrousel-configure-btn {
+    margin-top: 1rem;
+}
+
+.carrousel-container {
+    background: white;
+    float: left;
+    clear: both;
+}
+
+.carrousel-item-container {
+    width: 45%;
+    padding: 2% 2% 0 2%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.carrousel-item-container img {
+    height: auto;
+    width: 100%;
+}
