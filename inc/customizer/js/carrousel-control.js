@@ -15,21 +15,20 @@
          * 
          */
         ready: function() {
-            var self = this;
 
             // Use underscore bindAll method to be sure that the following methods
             // will be invoked with a this that correspond to the control
-            _.bindAll( self, 'initData', 'openMediaGallery', 'selectMediaGalleryImages', 'showCurrentSelectionInMediaGallery' );
+            _.bindAll( this, 'initData', 'openMediaGallery', 'selectMediaGalleryImages', 'showCurrentSelectionInMediaGallery' );
 
             // Initialize data
-            self.initData();
+            this.initData();
 
             // Update the data and render the control when the setting changes.
-            self.setting.bind( self.initData );
+            this.setting.bind( this.initData );
 
             // Events : Open Media Gallery on upload-button click or keydown
-            self.container.on( 'click', '.configure-carrousel-button', self.openMediaGallery );
-            self.container.on( 'keydown', '.configure-carrousel-button', self.openMediaGallery );
+            this.container.on( 'click', '.configure-carrousel-button', this.openMediaGallery );
+            this.container.on( 'keydown', '.configure-carrousel-button', this.openMediaGallery );
         },
 
         // ---------------------- Support methods ---------------------------------------
