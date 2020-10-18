@@ -27,9 +27,22 @@ if ( ! class_exists( 'MyBookingCustomizeCarrouselControl' ) ) {
 		 * Render the control using JS
 		 */
 		protected function content_template() {
-			
-			include_once('templates/carrousel-control.tmpl');
-
+?>			
+			<span class="customize-control-title"><label>{{ data.label }}</label></span>
+			<# if ( data.carrousel_items ) { #>
+				<div class="carrousel-container">
+					<# data.carrousel_items.forEach( function( carrousel_item ) { #>
+					  <div class="carrousel-item-container" data-id="{{ carrousel_item.id }}">
+					  	<img src="{{ carrousel_item.url }}"/>
+					  </div>
+					<#	} ) #>
+				</div>	
+			<# } #>
+			<div>
+				<button type="button" class="button configure-carrousel-button" id="carrousel-configure-btn"><?php echo esc_html_x( 'Configure Carrousel', 'customize-image-gallery-control', 'mybooking' ) ?></button>
+			</div>
+			<div class="customize-control-notifications"></div>
+<?php
 		}
 
 	}

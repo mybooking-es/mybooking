@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-18 02:37+0000\n"
+"POT-Creation-Date: 2020-10-18 07:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -2605,41 +2605,6 @@ msgstr ""
 #: woocommerce/checkout/form-checkout.php:66
 msgctxt "woocommerce_mybooking"
 msgid "Your order"
-msgstr ""
-
-#: inc/customizer/gallery-control.php:59
-msgctxt "customize-image-gallery-control"
-msgid "Select Images"
-msgstr ""
-
-#: inc/customizer/gallery-control.php:60
-msgctxt "customize-image-gallery-control"
-msgid "Modify Gallery"
-msgstr ""
-
-#: inc/customizer/gallery-control.php:61
-msgctxt "customize-image-gallery-control"
-msgid "Default"
-msgstr ""
-
-#: inc/customizer/gallery-control.php:62
-msgctxt "customize-image-gallery-control"
-msgid "Remove"
-msgstr ""
-
-#: inc/customizer/gallery-control.php:63
-msgctxt "customize-image-gallery-control"
-msgid "No images selected"
-msgstr ""
-
-#: inc/customizer/gallery-control.php:64
-msgctxt "customize-image-gallery-control"
-msgid "Select Gallery Images"
-msgstr ""
-
-#: inc/customizer/gallery-control.php:65
-msgctxt "customize-image-gallery-control"
-msgid "Choose Images"
 msgstr ""
 
 #: inc/customizer/class-font-selector.php:51

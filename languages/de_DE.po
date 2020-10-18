@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-18 02:37+0000\n"
-"PO-Revision-Date: 2020-10-18 03:01+0000\n"
+"POT-Creation-Date: 2020-10-18 07:35+0000\n"
+"PO-Revision-Date: 2020-10-18 07:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -2643,41 +2643,6 @@ msgstr "Sie müssen zur Kasse angemeldet sein."
 msgctxt "woocommerce_mybooking"
 msgid "Your order"
 msgstr "Ihre Bestellung"
-
-#: inc/customizer/gallery-control.php:59
-msgctxt "customize-image-gallery-control"
-msgid "Select Images"
-msgstr "Bilder auswählen"
-
-#: inc/customizer/gallery-control.php:60
-msgctxt "customize-image-gallery-control"
-msgid "Modify Gallery"
-msgstr "Galerie modifizieren"
-
-#: inc/customizer/gallery-control.php:61
-msgctxt "customize-image-gallery-control"
-msgid "Default"
-msgstr "Standardmäßig"
-
-#: inc/customizer/gallery-control.php:62
-msgctxt "customize-image-gallery-control"
-msgid "Remove"
-msgstr "Entfernen"
-
-#: inc/customizer/gallery-control.php:63
-msgctxt "customize-image-gallery-control"
-msgid "No images selected"
-msgstr "Keine Bilder ausgewählt"
-
-#: inc/customizer/gallery-control.php:64
-msgctxt "customize-image-gallery-control"
-msgid "Select Gallery Images"
-msgstr "Galeriebilder auswählen"
-
-#: inc/customizer/gallery-control.php:65
-msgctxt "customize-image-gallery-control"
-msgid "Choose Images"
-msgstr "Bilder auswählen"
 
 #: inc/customizer/class-font-selector.php:51
 msgctxt "customize_font_selector"
