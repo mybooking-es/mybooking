@@ -71,7 +71,7 @@ get_header();?>
       <div class="media">
         <div class="media-body">
           <h5 class="mt-0"><?php echo esc_html_x('Calendar, timetable and duration','activity_routes','mybooking'); ?></h5>
-          <p class="mb-0"><?php echo esc_html_x('From monday to Sunday, tours at 08:00 and 14:00','activity_routes','mybooking'); ?></p>
+          <p class="mb-0"><?php echo wp_kses_post( $args->detailed_info_timetable_duration ) ?></p>
         </div>
         <i class="far fa-calendar-alt align-self-center ml-3"></i>
       </div>

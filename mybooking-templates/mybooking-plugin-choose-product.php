@@ -19,7 +19,7 @@
 
   <!-- Modify reservation -->
   <?php if ( $args['selector_in_process'] != 'wizard' ) { ?>
-  <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
+    <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
   <?php } ?>
 
 </div>

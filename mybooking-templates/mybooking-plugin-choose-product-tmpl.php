@@ -38,7 +38,7 @@
             <button id="modify_reservation_button"
               class="modify-button"><i
                 class="d-none d-md-inline mr-2 fas fa-pen"></i>
-                <?php echo _x( 'Edit', 'renting_choose_product', 'mybooking' ) ?>
+                <?php echo esc_html_x( 'Edit', 'renting_choose_product', 'mybooking' ) ?>
             </button>
           </div>
         </div>
@@ -64,7 +64,7 @@
           <div class="modify-button-wrapper">
             <button id="modify_reservation_button"
               class="modify-button"><i class="d-none d-lg-inline mr-2 fas fa-pen"></i>
-              <?php echo _x( 'Edit', 'renting_choose_product', 'mybooking' ) ?>
+              <?php echo esc_html_x( 'Edit', 'renting_choose_product', 'mybooking' ) ?>
             </button>
           </div>
         </div>
@@ -100,7 +100,7 @@
         
             <% if (product.few_available_units) { %>
               <p class="text-danger card-static_low-availability">
-                <?php echo _x('Few units left!','renting_choose_product','mybooking') ?></p>
+                <?php echo esc_html_x('Few units left!','renting_choose_product','mybooking') ?></p>
             <% } %>
 
             <% if (!configuration.multipleProductsSelection) { %>
@@ -154,12 +154,12 @@
                 <!-- Button -->
                   <div class="card-static_btn">
                     <a class="button btn btn-choose-product"
-                      data-product="<%=product.code%>"><?php echo _x('Book it!', 'renting_choose_product', 'mybooking') ?></a>
+                      data-product="<%=product.code%>"><?php echo esc_html_x('Book it!', 'renting_choose_product', 'mybooking') ?></a>
                   </div>
               <% } %>  
             <% } else { %> 
                   <p class="text-center text-muted">
-                  <?php echo _x( 'Model not available in the office and selected dates', 'renting_choose_product', 'mybooking') ?>
+                  <?php echo esc_html_x( 'Model not available in the office and selected dates', 'renting_choose_product', 'mybooking') ?>
                   </p>
             <% } %>  
           </div>
@@ -173,7 +173,7 @@
       <div class="row">
         <div class="col-md-12">
           <button id="go_to_complete"
-            class="btn btn-primary"><?php echo _x( 'Next', 'renting_choose_product', 'mybooking') ?></button>
+            class="btn btn-primary"><?php echo esc_html_x( 'Next', 'renting_choose_product', 'mybooking') ?></button>
         </div>
       </div>
     </div>

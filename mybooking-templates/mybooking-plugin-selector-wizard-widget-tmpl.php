@@ -26,7 +26,8 @@
           <div class="wizard-summary_datefrom"><%= summary.dateFrom %> <% if (summary.timeFrom != null) {%><%= summary.timeFrom %><% } %> </div>
         <% } %>
       </div>
-      <img class="wizard-summary_separator" src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow-icon.png" alt=">">
+      <img class="wizard-summary_separator" src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/right-arrow-icon.png' ) ) ?>" 
+           alt="<?php echo esc_attr_x( 'Separator', 'renting_form_selector_wizard', 'mybooking') ?>">
       <div class="wizard-summary_item col wizard-summary_collection">
         <div class="wizard-summary_return"><%= summary.returnPlaceDescription || summary.returnPlace %></div>
         <% if (summary.dateTo != null) {%>
@@ -65,7 +66,7 @@
     <div class="wizard-multi-place_selectors row">
       <div class="col-md-12">
         <button class="wizard-multi-place_btn btn btn-primary destination-selector" type="button"
-          data-destination-id="all"><?php echo _x( 'All', 'renting_form_selector_wizard', 'mybooking' ) ?></button>
+          data-destination-id="all"><?php echo esc_html_x( 'All', 'renting_form_selector_wizard', 'mybooking' ) ?></button>
         <% for (var idx=0; idx<places.destinations.length; idx++) { %>
           <button class="wizard-multi-place_btn btn btn-primary destination-selector"  type="button"
              data-destination-id="<%=places.destinations[idx].id%>"><%=places.destinations[idx].name%></button>

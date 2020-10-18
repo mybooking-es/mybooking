@@ -24,24 +24,24 @@
       <div class="row">
         <div class="wizard-selector_field col-md-3">
             <label
-              for="place_holder"><?php echo _x( 'Where?', 'renting_form_selector_wizard', 'mybooking') ?></label>
+              for="place_holder"><?php echo esc_html_x( 'Where?', 'renting_form_selector_wizard', 'mybooking') ?></label>
             <input type="text" class="form-control form-control-lg bg-white" id="place_holder"
-                   aria-describedby="pickupPlaceHolder" placeholder="Elige un lugar" readonly="true">
+                   aria-describedby="pickupPlaceHolder" placeholder="<?php echo esc_attr_x( 'Choose a place', 'renting_form_selector_wizard', 'mybooking') ?>" readonly="true">
         </div>
         <div class="wizard-selector_field col-md-3">
             <label
-              for="from_holder"><?php echo _x( 'When?', 'renting_form_selector_wizard', 'mybooking') ?></label>
+              for="from_holder"><?php echo esc_html_x( 'When?', 'renting_form_selector_wizard', 'mybooking') ?></label>
             <input type="text" class="form-control form-control-lg bg-white" id="from_holder"
-                   aria-describedby="FromHolder" placeholder="Fecha de salida" readonly="true">
+                   aria-describedby="FromHolder" placeholder="<?php echo esc_attr_x( 'The pick-up date', 'renting_form_selector_wizard', 'mybooking') ?>" readonly="true">
         </div>
         <div class="wizard-selector_field col-md-3 d-flex align-items-end">
             <input type="text" class="form-control form-control-lg bg-white" id="to_holder"
-                   aria-describedby="FromHolder" placeholder="Fecha de salida" readonly="true">
+                   aria-describedby="FromHolder" placeholder="<?php echo esc_attr_x( 'The return date', 'renting_form_selector_wizard', 'mybooking') ?>" readonly="true">
         </div>
         <br>
         <div class="col-md-3 d-flex align-items-end">
             <button class="wizard-selector_btn btn" id="btn_reservation"
-              type="button"><?php echo _x( 'Book', 'renting_form_selector_wizard', 'mybooking') ?></button>
+              type="button"><?php echo esc_html_x( 'Book', 'renting_form_selector_wizard', 'mybooking') ?></button>
         </div>
       </div>
     </form>

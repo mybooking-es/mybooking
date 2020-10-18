@@ -16,14 +16,10 @@
     class="flex-form" autocomplete="off">
 
     <?php if ( array_key_exists('sales_channel_code', $args) && $args['sales_channel_code'] != '' ) : ?>
-
-    <input type="hidden" name="sales_channel_code" value="<?php echo $args['sales_channel_code']?>" />
-
+    	<input type="hidden" name="sales_channel_code" value="<?php echo $args['sales_channel_code']?>" />
     <?php endif; ?>
     <?php if ( array_key_exists('family_id', $args) && $args['family_id'] != '' ) : ?>
-
-    <input type="hidden" name="family_id" value="<?php echo $args['family_id']?>" />
-
+	    <input type="hidden" name="family_id" value="<?php echo $args['family_id']?>" />
     <?php endif; ?>
 
   </form>

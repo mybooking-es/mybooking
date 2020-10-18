@@ -14,7 +14,7 @@
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="process-section-box">
     <small class="detail-text"> 
-      <?php echo _x( 'Reservation Id', 'renting_summary', 'mybooking') ?>
+      <?php echo esc_html_x( 'Reservation Id', 'renting_summary', 'mybooking') ?>
     </small>
     <h3><%=booking.id%></h3>
     <div class="product-detail-summary-dates mb-3">
@@ -112,28 +112,28 @@
     <% if (booking.time_from_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <span
-        class="extra-name"><?php echo _x( 'Pick-up time supplement', 'renting_summary', 'mybooking' ) ?></span>
+        class="extra-name"><?php echo esc_html_x( 'Pick-up time supplement', 'renting_summary', 'mybooking' ) ?></span>
       <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.time_from_cost)%></span>
     </li>
     <% } %>
     <% if (booking.pickup_place_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <span
-        class="extra-name"><?php echo _x( 'Pick-up place supplement', 'renting_summary', 'mybooking' ) ?></span>
+        class="extra-name"><?php echo esc_html_x( 'Pick-up place supplement', 'renting_summary', 'mybooking' ) ?></span>
       <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.pickup_place_cost)%></span>
     </li>
     <% } %>
     <% if (booking.time_to_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <span
-        class="extra-name"><?php echo _x( 'Return time supplement', 'renting_summary', 'mybooking' ) ?></span>
+        class="extra-name"><?php echo esc_html_x( 'Return time supplement', 'renting_summary', 'mybooking' ) ?></span>
       <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.time_to_cost)%></span>
     </li>
     <% } %>
     <% if (booking.return_place_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <span
-        class="extra-name"><?php echo _x( 'Return place supplement', 'renting_summary', 'mybooking' ) ?></span>
+        class="extra-name"><?php echo esc_html_x( 'Return place supplement', 'renting_summary', 'mybooking' ) ?></span>
       <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.return_place_cost)%></span>
     </li>
     <% } %>
@@ -141,13 +141,13 @@
     <% if (booking.driver_age_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <span
-        class="extra-name"><?php echo _x( "Driver's age supplement", 'renting_summary', 'mybooking' ) ?></span>
+        class="extra-name"><?php echo esc_html_x( "Driver's age supplement", 'renting_summary', 'mybooking' ) ?></span>
       <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.driver_age_cost)%></span>
     </li>
     <% } %>
     <% if (booking.category_supplement_1_cost > 0) { %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="extra-name"><?php echo _x( "Petrol supplement", 'renting_summary', 'mybooking' ) ?></span>
+      <span class="extra-name"><?php echo esc_html_x( "Petrol supplement", 'renting_summary', 'mybooking' ) ?></span>
       <span
         class="product-amount pull-right"><%=configuration.formatCurrency(booking.category_supplement_1_cost)%></span>
     </li>
@@ -157,18 +157,18 @@
  
   <ul class="list-group mb-3">
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="extra-name"><b><?php echo _x( 'Total', 'renting_summary', 'mybooking' ) ?></b></span>
+      <span class="extra-name"><b><?php echo esc_html_x( 'Total', 'renting_summary', 'mybooking' ) ?></b></span>
       <span class="product-amount pull-right"><b><%=configuration.formatCurrency(booking.total_cost)%></b></span>
     </li>
     <% if (booking.total_paid > 0) { %>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <span class="extra-name"><b><?php echo _x( 'Total paid', 'renting_summary', 'mybooking' ) ?></b></span>
+        <span class="extra-name"><b><?php echo esc_html_x( 'Total paid', 'renting_summary', 'mybooking' ) ?></b></span>
         <span class="product-amount pull-right"><%=configuration.formatCurrency(booking.total_paid)%></span>
       </li>
     <% } %>
     <% if (booking.total_pending > 0) { %>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <span class="extra-name"><b><?php echo _x( 'Total pending', 'renting_summary', 'mybooking' ) ?></b></span>
+        <span class="extra-name"><b><?php echo esc_html_x( 'Total pending', 'renting_summary', 'mybooking' ) ?></b></span>
         <span class="product-amount pull-right <% if (booking.total_pending > 0){ %>text-danger<%}%>"><b><%=configuration.formatCurrency(booking.total_pending)%></b></span>
         </li>
       </ul>
@@ -176,20 +176,20 @@
 
   </div>
   <div class="process-section-box">
-    <h4 class="my-3"><?php echo _x( "Customer's details", 'renting_summary', 'mybooking') ?></h4>
+    <h4 class="my-3"><?php echo esc_html_x( "Customer's details", 'renting_summary', 'mybooking') ?></h4>
     <div class="table-responsive">
       <table class="table table-borderless table-striped">
         <tbody>
           <tr>
-            <th scope="row"><?php echo _x( "Full name", 'renting_summary', 'mybooking') ?>:</th>
+            <th scope="row"><?php echo esc_html_x( "Full name", 'renting_summary', 'mybooking') ?>:</th>
             <td><%=booking.customer_name%> <%=booking.customer_surname%></td>
           </tr>
           <tr>
-            <th scope="row"><?php echo _x( "E-mail", 'renting_summary', 'mybooking') ?>:</th>
+            <th scope="row"><?php echo esc_html_x( "E-mail", 'renting_summary', 'mybooking') ?>:</th>
             <td><%=booking.customer_email%></td>
           </tr>
           <tr>
-            <th scope="row"><?php echo _x( "Phone number", 'renting_summary', 'mybooking') ?>:</th>
+            <th scope="row"><?php echo esc_html_x( "Phone number", 'renting_summary', 'mybooking') ?>:</th>
             <td><%=booking.customer_phone%> <%=booking.customer_mobile_phone%></td>
           </tr>
         </tbody>
