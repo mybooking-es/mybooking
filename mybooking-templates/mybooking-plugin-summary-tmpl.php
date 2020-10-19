@@ -54,7 +54,7 @@
           </span>
           <!-- Quantity -->
           <% if (configuration.multipleProductsSelection) { %>
-          <span class="badge badge-info"><%=booking.booking_lines[idx].quantity%></span>
+            <span class="badge badge-info"><%=booking.booking_lines[idx].quantity%></span>
           <% } %>
           <!-- Price -->
           <span
@@ -63,30 +63,30 @@
           <!-- Offer/Promotion Code Appliance -->
           <% if (booking.booking_lines[idx].item_unit_cost_base != booking.booking_lines[idx].item_unit_cost) { %>
             <span class="float-right mr-2">
-            <!-- Offer -->
-            <% if (typeof booking.booking_lines[idx].offer_name !== 'undefined' &&
-                        booking.booking_lines[idx].offer_name !== null && booking.booking_lines[idx].offer_name !== '') { %>
-            <span class="badge badge-info"><%=booking.booking_lines[idx].offer_name%></span>
-            <% if (booking.booking_lines[idx].offer_discount_type === 'percentage' && booking.booking_lines[idx].offer_value !== '') {%>
-            <span class="text-danger"><%=parseInt(booking.booking_lines[idx].offer_value)%>&#37;</span>
-            <% } %>
-            <% } %> 
-            <!-- Promotion Code -->
-            <% if (typeof booking.promotion_code !== 'undefined' && booking.promotion_code !== '' &&
-                   typeof booking.booking_lines[idx].promotion_code_value !== 'undefined' && booking.booking_lines.promotion_code_value !== '' &&
-                   booking.booking_lines[idx].promotion_code_value !== '0.0') { %>
-            <span class="badge badge-success"><%=booking.promotion_code%></span>
-            <% if (booking.booking_lines[idx].promotion_code_discount_type === 'percentage' && booking.booking_lines[idx].promotion_code !== '') {%>
-            <span class="text-danger"><%=parseInt(booking.booking_lines[idx].promotion_code_value)%>&#37;</span>
-            <% } %>
-            <% } %>
-            <span class="text-muted">
-              <del><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost_base * booking.booking_lines[idx].quantity)%></del>
+              <!-- Offer -->
+              <% if (typeof booking.booking_lines[idx].offer_name !== 'undefined' &&
+                          booking.booking_lines[idx].offer_name !== null && booking.booking_lines[idx].offer_name !== '') { %>
+                <span class="badge badge-info"><%=booking.booking_lines[idx].offer_name%></span>
+                <% if (booking.booking_lines[idx].offer_discount_type === 'percentage' && booking.booking_lines[idx].offer_value !== '') {%>
+                  <span class="text-danger"><%=parseInt(booking.booking_lines[idx].offer_value)%>&#37;</span>
+                <% } %>
+              <% } %> 
+              <!-- Promotion Code -->
+              <% if (typeof booking.promotion_code !== 'undefined' && booking.promotion_code !== '' &&
+                     typeof booking.booking_lines[idx].promotion_code_value !== 'undefined' && booking.booking_lines.promotion_code_value !== '' &&
+                     booking.booking_lines[idx].promotion_code_value !== '0.0') { %>
+                <span class="badge badge-success"><%=booking.promotion_code%></span>
+                <% if (booking.booking_lines[idx].promotion_code_discount_type === 'percentage' && booking.booking_lines[idx].promotion_code !== '') {%>
+                  <span class="text-danger"><%=parseInt(booking.booking_lines[idx].promotion_code_value)%>&#37;</span>
+                <% } %>
+              <% } %>
+              <span class="text-muted">
+                <del><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost_base * booking.booking_lines[idx].quantity)%></del>
+              </span>
             </span>
-            <% } %>
-            </span>
-            </li>
           <% } %>
+        </li>
+      <% } %>
   </ul>
   
   <!-- Extras -->

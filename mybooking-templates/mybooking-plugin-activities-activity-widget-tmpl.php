@@ -5,7 +5,7 @@
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php
    *
    * @phpcs:disable PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
-   * @phpcs:ignore Generic.PHP.DisallowAlternativePHPTags.MaybeASPOpenTagFound
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPOpenTagFound
    */
 ?>
     <!-- Micro templates -->
