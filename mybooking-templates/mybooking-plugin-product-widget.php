@@ -1,18 +1,14 @@
 <?php
-/**
-*   PLUGIN PRODUCT WIDGET
-*   ---------------------
-*
-* 	@version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.2.0
-*/
+  /** 
+   * The Template for showing the product calendar widget
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-product-widget.php
+   *
+   */
 ?>
-
 <div id="product_selector" data-code="<?php echo esc_attr( $args['code'] )?>"
 													 <?php if ( array_key_exists('sales_channel_code', $args) && $args['sales_channel_code'] != '' ) : ?>
-                           data-sales-channel-code="<?php echo esc_attr( $args['sales_channel_code'] )?>" 
+                             data-sales-channel-code="<?php echo esc_attr( $args['sales_channel_code'] )?>" 
                            <?php endif; ?> 
 	   class="container">
   <div class="row">

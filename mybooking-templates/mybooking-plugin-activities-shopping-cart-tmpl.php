@@ -1,3 +1,12 @@
+<?php
+  /** 
+   * The Template for showing the activity shopping cart - JS Microtemplates
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php
+   *
+   * @phpcs:ignore PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   */
+?>
 <!-- Microtemplates -->
 
 <script type="text/tpml" id="script_shopping_cart_empty">

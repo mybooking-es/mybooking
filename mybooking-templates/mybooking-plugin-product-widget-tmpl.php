@@ -1,15 +1,12 @@
 <?php
-/**
-*   PLUGIN PRODUCT WIDGET TEMPLATE
-*   ------------------------------
-*
-* 	@version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.2.0
-*/
+  /** 
+   * The Template for showing the product calendar widget - JS Microtemplates
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-widget-tmpl.php
+   *
+   * @phpcs:ignore PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   */
 ?>
-
 <script type="text/tmpl" id="form_calendar_selector_tmpl">
   <% if (configuration.pickupReturnPlace) { %> 
         <!-- Pickup Place -->

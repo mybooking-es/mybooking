@@ -1,13 +1,10 @@
 <?php
-/**
-*   ACTIVITIES PRODUCT TEMPLATE
-*   ---------------------------
-*
-* 	@version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.9.9
-*/
+  /** 
+   * The Template for showing the activity detail page
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-routes-activity.php
+   *
+   */
 ?>
 <?php
 get_header();?>

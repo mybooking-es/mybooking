@@ -1,13 +1,11 @@
 <?php
-/**
-*   PLUGIN SELECTOR WIZARD TEMPLATES
-*   --------------------------------
-*
-* 	@version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.5.0
-*/
+  /** 
+   * The Template for showing the renting selector wizard widget - JS Microtemplates
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-wizard-plugin-tmpl.php
+   *
+   * @phpcs:ignore PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   */
 ?>
 
 <!-- ===================================================== -->

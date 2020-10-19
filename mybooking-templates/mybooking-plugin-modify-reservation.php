@@ -1,13 +1,10 @@
 <?php
-/**
-*   PLUGIN MODIFY RESERVATION
-*   -------------------------
-*
-* 	@version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.0.1
-*/
+  /** 
+   * The Template for showing the renting modify reservation form
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-modify-reservation.php
+   *
+   */
 ?>
 <!-- FLEX-FORM-MODIFY MODAL -->
 <!-- Modal -->

@@ -1,3 +1,11 @@
+<?php
+  /** 
+   * The Template for showing the index of products
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-products.php
+   *
+   */
+?>
 <section class="cards-static-container fleet">
   <!-- Products -->
   <?php foreach( $args['data']->data as $mybooking_product ) { ?>

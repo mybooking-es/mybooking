@@ -1,15 +1,11 @@
 <?php
-/**
-*   PLUGIN SELECTOR WIDGET
-*   ----------------------
-*
-* 	@version 0.0.2
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.0.1
-*/
+  /** 
+   * The Template for showing the renting selector widget
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-selector-widget.php
+   *
+   */
 ?>
-
 <!-- FLEX-FORM-SELECTOR -->
 <section class="widget widget_mybooking_rent_engine_selector widget-reservation-step">
   <form id="form-selector" name="widget_search_form" method="get" enctype="application/x-www-form-urlencoded"

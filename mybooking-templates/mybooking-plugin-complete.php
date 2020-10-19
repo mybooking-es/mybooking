@@ -1,22 +1,19 @@
 <?php
-/**
-*   PLUGIN COMPLETE PAGE
-*   --------------------
-*
-* 	@version 0.0.2
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.0.1
-*
-*   Areas managed by the Reservation engine
-*
-*   Container                        Script
-*   ----------------------------     ------------------------
-*   id=reservation_detail_sticky ->  script_reservation_summary_sticky
-*   id=reservation_detail        ->  script_reservation_summary
-*   id=extras_listing            ->  script_detailed_extra
-*   id=payment_detail            ->  script_payment_detail
-*/
+  /** 
+   * The Template for showing the renting complete step
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-complete.php
+   *
+   *   Areas managed by the Reservation engine
+   *
+   *   Container                        Script
+   *   ----------------------------     ------------------------
+   *   id=reservation_detail_sticky ->  script_reservation_summary_sticky
+   *   id=reservation_detail        ->  script_reservation_summary
+   *   id=extras_listing            ->  script_detailed_extra
+   *   id=payment_detail            ->  script_payment_detail
+   *
+   */
 ?>
 <?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
 

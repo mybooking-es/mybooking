@@ -1,3 +1,11 @@
+<?php
+  /** 
+   * The Template for showing the activities search component
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-activities-search.php
+   *
+   */
+?>
 <div class="jumbotron jumbotron-fluid">
   <div class="container-fluid">
     <form name="search_activities_form" class="form-horizontal" method="get"

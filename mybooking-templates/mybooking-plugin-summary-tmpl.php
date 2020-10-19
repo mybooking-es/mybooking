@@ -1,15 +1,12 @@
 <?php
-/**
-*   PLUGIN SUMMARY TEMPLATE
-*   -----------------------
-*
-* 	@version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.0.1
-*/
+  /** 
+   * The Template for showing the renting summary step - JS Microtemplates
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-summary-tmpl.php
+   *
+   * @phpcs:ignore PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   */
 ?>
-
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="process-section-box">

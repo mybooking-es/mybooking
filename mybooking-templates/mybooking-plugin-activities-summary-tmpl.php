@@ -1,3 +1,12 @@
+<?php
+  /** 
+   * The Template for showing the activity summary step - JS microtemplates
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-activities-summary-tmpl.php
+   *
+   * @phpcs:ignore PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   */
+?>
     <script type="text/tpml" id="script_order">
 
       <!-- Status -->

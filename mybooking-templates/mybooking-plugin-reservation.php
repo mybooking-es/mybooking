@@ -1,13 +1,10 @@
 <?php
-/**
-*   PLUGIN RESERVATION PAGE
-*   -----------------------
-*
-* 	@version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.2.0
-*/
+  /** 
+   * The Template for showing the renting reservation
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-reservation.php
+   *
+   */
 ?>
 <div class="reservation-step process-container reservation-step-reservation custom-form">
   <div class="process-message">

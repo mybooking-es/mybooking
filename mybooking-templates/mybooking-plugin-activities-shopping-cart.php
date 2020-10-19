@@ -1,3 +1,11 @@
+<?php
+  /** 
+   * The Template for showing the activity shopping cart
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-activities-shopping-cart.php
+   *
+   */
+?>
     <!-- Activities : Shopping cart page -->
     <section class="section reservation-step process-container">
       <div class="container">

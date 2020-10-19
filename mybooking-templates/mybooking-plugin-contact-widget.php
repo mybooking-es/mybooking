@@ -1,15 +1,11 @@
 <?php
-/**
-*   PLUGIN CONTACT FORM WIDGET
-*   --------------------------
-*
-* 	@version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.1.2
-*/
+  /** 
+   * The Template for showing the contact form widget
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-contact-widget.php
+   *
+   */
 ?>
-
 <section class="widget widget_mybooking_engine_contact">
   <form id="widget_contact_form" name="widget_contact_form" autocomplete="off">
 

@@ -1,13 +1,9 @@
 <?php
-/**
-*   PLUGIN SUMMARY PAGE
-*   -------------------
-*
-* 	@version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.0.1
-*/
+  /** 
+   * The Template for showing the renting summary step
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-summary.php
+   */
 ?>
 <?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
 

@@ -1,13 +1,11 @@
 <?php
-/**
-*   Renting Modify Reservation Form Template
-*   -----------------------------------------
-*
-*   @version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Plugin
-*   @since Mybooking WordPress Plugin 0.0.1
-*/
+  /** 
+   * The Template for showing the renting modify reservation form - JS Microtemplates
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php
+   *
+   * @phpcs:ignore PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   */
 ?>
 <script type="text/tmpl" id="form_selector_tmpl">
 

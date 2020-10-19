@@ -1,15 +1,10 @@
 <?php
-/**
-*   PLUGIN SELECTOR WIZARD
-*   ----------------------
-*
-* 	@version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.5.0
-*/
+  /** 
+   * The Template for showing the renting selector widget
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-wizard-widget.php
+   */
 ?>
-
 <!-- Search form -->
 <section class="section">
   <div class="wizard-selector container">

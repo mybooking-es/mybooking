@@ -1,3 +1,11 @@
+<?php
+  /** 
+   * The Template for showing the renting product detail page
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-routes-product.php
+   *
+   */
+?>
 <?php get_header();?>
 <br>
 <div class="container product-container">

@@ -1,15 +1,9 @@
 <?php
-/**
-*   PLUGIN SELECTOR WIZARD CONTAINER
-*   --------------------------------
-*
-* 	@version 0.0.1
-*   @package WordPress
-*   @subpackage Mybooking WordPress Theme
-*   @since Mybooking WordPress Theme 0.5.0
-*
-*   Keep empty in the Theme because the container is managed on mybooking-home-header.php
-*   due to HTML structure
-*
-*/
+  /** 
+   * The Template for showing the renting selector wizard container 
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-wizard-container.php
+   *
+   * Keep empty in the Theme because the container is managed on mybooking-home-header.php due to HTML structure
+   */
 ?>

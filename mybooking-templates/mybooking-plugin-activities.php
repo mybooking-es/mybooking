@@ -1,3 +1,11 @@
+<?php
+  /** 
+   * The Template for showing the index of activities
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-activities.php
+   *
+   */
+?>
 <?php if ( $args['total'] == 0 ) { ?>
   <div class="row">
     <div class="col-lg-12">
