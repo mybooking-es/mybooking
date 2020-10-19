@@ -127,7 +127,7 @@
               <% if (product.key_characteristics) { %> 
                 <% for (characteristic in product.key_characteristics) { %>
                   <div class="icon">
-                    <% var characteristic_image_path = '<?php echo get_stylesheet_directory_uri() ?>/images/key_characteristics/'+characteristic+'.svg';%>
+                    <% var characteristic_image_path = '<?php echo esc_url( get_stylesheet_directory_uri().'/images/key_characteristics/' ) ?>'+characteristic+'.svg'; %>
                     <img src="<%=characteristic_image_path%>" />
                     <span><%=product.key_characteristics[characteristic]%> </span>
                   </div>
