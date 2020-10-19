@@ -33,16 +33,16 @@
             <div class="news_thumbnail">
               <?php if ( !has_post_thumbnail( $mybooking_news_item->ID ) ) { ?>
                 <a class="news_post-image"
-                   href="<?php echo esc_attr( esc_url( $mybooking_permalink ) ) ?>"
+                   href="<?php echo esc_url( $mybooking_permalink ) ?>"
                    rel="bookmark"
                    style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image.png') ?>')">
                 </a>
               <?php } else { ?>
                 <?php $mybooking_featured_img_url = get_the_post_thumbnail_url( $mybooking_news_item, 'full' ); ?>
                 <a class="news_post-image"
-                   href="<?php echo esc_attr( esc_url( $mybooking_permalink ) ) ?>"
+                   href="<?php echo esc_url( $mybooking_permalink ) ?>"
                    rel="bookmark"
-                   style="background-image: url('<?php echo esc_attr( esc_url( $mybooking_featured_img_url ) ) ?>')">
+                   style="background-image: url('<?php echo esc_url( $mybooking_featured_img_url ) ?>')">
                 </a>
               <?php } ?>
             </div>
@@ -52,7 +52,7 @@
             <div class="news_extract">
               <?php echo wp_kses_post( get_the_excerpt( $mybooking_news_item ) ); ?>
               <p>
-                <a class="btn btn-secondary mybooking-read-more-link" href="<?php echo esc_attr( esc_url( $mybooking_permalink ) ) ?>">
+                <a class="btn btn-secondary mybooking-read-more-link" href="<?php echo esc_url( $mybooking_permalink ) ?>">
                   <?php echo esc_html_x( 'Read', 'home-news-button','mybooking' ) ?>
                 </a>
               </p>

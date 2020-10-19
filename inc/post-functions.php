@@ -30,7 +30,7 @@ if ( ! function_exists( 'mybooking_posted_on' ) ) {
 		$posted_on = apply_filters(
 			'mybooking_posted_on', sprintf(
 				'<span class="posted-on"><i class="far fa-calendar-alt"></i>&nbsp;<a href="%1$s" rel="bookmark">%2$s</a></span>',
-				esc_attr( esc_url( get_permalink() ) ),
+				esc_url( get_permalink() ),
 				apply_filters( 'mybooking_posted_on_time', $time_string )
 			)
 		);
@@ -38,7 +38,7 @@ if ( ! function_exists( 'mybooking_posted_on' ) ) {
 			'mybooking_posted_by', sprintf(
 				'&nbsp;<span class="byline"><i class="far fa-user-circle"></i> %1$s <span class="author vcard"><a class="url fn n" href="%2$s"> %3$s</a></span></span>',
 				esc_html_x( 'by', 'post-meta', 'mybooking' ),
-				esc_attr( esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) ),
+				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_html( get_the_author() )
 			)
 		);
@@ -179,7 +179,7 @@ if ( ! function_exists( 'mybooking_pingback' ) ) {
 	 */
 	function mybooking_pingback() {
 		if ( is_singular() && pings_open() ) {
-			echo '<link rel="pingback" href="' . esc_attr( esc_url( get_bloginfo( 'pingback_url' ) ) ). '">' . "\n";
+			echo '<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ). '">' . "\n";
 		}
 	}
 	add_action( 'wp_head', 'mybooking_pingback' );

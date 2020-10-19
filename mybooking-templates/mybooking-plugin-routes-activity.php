@@ -20,7 +20,7 @@ get_header();?>
               <div class="carousel-item <?php if ($mybooking_key == key($args->photos)) { ?>active<?php } ?>">
                 <div class="card-img-bg-color">
                   <div class="activity-card__img">
-                    <img class="d-block product-photo" src="<?php echo esc_attr( esc_url ( $mybooking_photo->full_photo_path ) )?>"
+                    <img class="d-block product-photo" src="<?php echo esc_url ( $mybooking_photo->full_photo_path ) ?>"
                       alt="<?php echo esc_attr( $args->name )?>" style="height:400px;">
                   </div>
                   <div class="activity-card__img-text" style="height: 400px;">
@@ -49,7 +49,7 @@ get_header();?>
         <div class="activity-view-card">
           <div class="card-img-bg-color">
             <div class="activity-card__img">
-              <img class="d-block product-photo" src="<?php echo esc_attr( esc_url( $args->photos[0]->full_photo_path ) )?>"
+              <img class="d-block product-photo" src="<?php echo esc_url( $args->photos[0]->full_photo_path )?>"
                 alt="<?php echo esc_attr( $args->name ) ?>" style="height:400px;">
             </div>
             <div class="activity-card__img-text" style="height: 400px;">

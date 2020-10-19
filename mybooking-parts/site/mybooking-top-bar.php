@@ -29,20 +29,20 @@ defined( 'ABSPATH' ) || exit;
     <div class="<?php echo esc_attr( $mybooking_container ); ?>">
       <?php if ( !empty( $mybooking_company_phone) ) { ?>
         <span>
-          <a class="info_link" href="<?php echo esc_attr( 'tel:'.str_replace(' ','',$mybooking_company_phone) ) ?>"><i class="fa fa-phone" aria-hidden="true"></i> <span class="info_text"><?php echo esc_html( $mybooking_company_phone ) ?></span></a>
+          <a class="info_link" href="<?php echo esc_url( 'tel:'.str_replace(' ','',$mybooking_company_phone) ) ?>"><i class="fa fa-phone" aria-hidden="true"></i> <span class="info_text"><?php echo esc_html( $mybooking_company_phone ) ?></span></a>
         </span>
       <?php } ?>
 
       <?php if ( !empty( $mybooking_company_chat) ) { ?>
         <span>
-      	  <a class="info_link" href="<?php echo esc_attr( 'whatsapp://send?phone='.str_replace(' ','',$mybooking_company_chat).'&abid='.str_replace(' ','',$mybooking_company_chat) ) ?>"><i class="fa fa-whatsapp"
+      	  <a class="info_link" href="<?php echo esc_url( 'whatsapp://send?phone='.str_replace(' ','',$mybooking_company_chat).'&abid='.str_replace(' ','',$mybooking_company_chat) ) ?>"><i class="fa fa-whatsapp"
       	      aria-hidden="true"></i> <span class="info_text"><?php echo esc_html( $mybooking_company_chat ) ?></span></a>
         </span>
       <?php } ?>
 
       <?php if ( !empty( $mybooking_company_email) ) { ?>
         <span>
-          <a class="info_link" href="<?php echo esc_attr( 'mailto:'.$mybooking_company_email ) ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="info_text"><?php echo esc_html( $mybooking_company_email ) ?></span></a>
+          <a class="info_link" href="<?php echo esc_url( 'mailto:'.$mybooking_company_email ) ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="info_text"><?php echo esc_html( $mybooking_company_email ) ?></span></a>
         </span>   
       <?php } ?>
 

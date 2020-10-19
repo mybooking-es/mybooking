@@ -62,27 +62,27 @@
     <ul class="contact-social social-links">
       <?php if ( !empty( $mybooking_company_twitter ) ) { ?>
         <li class="social__item">
-              <a href="<?php echo esc_attr( $mybooking_company_twitter ) ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="<?php echo esc_url( $mybooking_company_twitter ) ?>" target="_blank"><i class="fa fa-twitter"></i></a>
         </li>
       <?php } ?>
       <?php if ( !empty( $mybooking_company_facebook ) ) { ?>
         <li class="social__item">
-              <a href="<?php echo esc_attr( $mybooking_company_facebook ) ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="<?php echo esc_url( $mybooking_company_facebook ) ?>" target="_blank"><i class="fa fa-facebook"></i></a>
         </li>
       <?php } ?>
       <?php if ( !empty( $mybooking_company_instagram ) ) { ?>
         <li class="social__item">
-          <a href="<?php echo esc_attr( $mybooking_company_instagram ) ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="<?php echo esc_url( $mybooking_company_instagram ) ?>" target="_blank"><i class="fa fa-instagram"></i></a>
         </li>
       <?php } ?>
       <?php if ( !empty( $mybooking_company_linkedin ) ) { ?>
         <li class="social__item">
-              <a href="<?php echo esc_attr( $mybooking_company_linkedin ) ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="<?php echo esc_url( $mybooking_company_linkedin ) ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
         </li>
       <?php } ?>
       <?php if ( !empty( $mybooking_company_youtube ) ) { ?>
         <li class="social__item">
-              <a href="<?php echo esc_attr( $mybooking_company_youtube ) ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="<?php echo esc_url( $mybooking_company_youtube ) ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
         </li>
       <?php } ?>
     </ul>

@@ -227,25 +227,25 @@
                       <div class="form-group col-md-12">
                         <label for="payments_paypal_standard">
                           <input type="radio" id="payments_paypal_standard" name="payment_method_select" class="payment_method_select" value="paypal_standard">&nbsp;<?php echo esc_html_x( 'Paypal', 'activity_shopping_cart', 'mybooking' ) ?>
-                          <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ) ?>" />
+                          <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>" />
                         </label>
                       </div>
                       <div class="form-group col-md-12">
                       <label for="payments_credit_card">
                         <input type="radio" id="payments_credit_card" name="payment_method_select" class="payment_method_select" value="<%=shopping_cart.payment_methods.tpv_virtual%>">&nbsp;<?php echo esc_html_x( 'Credit or debit card', 'activity_shopping_cart', 'mybooking' ) ?>
-                        <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ) ?>"/>
-                        <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ) ?>"/>
+                        <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
+                        <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>
                         </label>
                       </div>
                     </div>
                     <div id="payment_method_select_error" class="form-row">
                     </div>
                 <% } else if (shopping_cart.payment_methods.paypal_standard) { %>
-                    <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ) ?>" />
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>" />
                     <input type="hidden" id="payment_method_value" value="paypal_standard">
                 <% } else if (shopping_cart.payment_methods.tpv_virtual) { %>
-                    <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ) ?>"/>
-                    <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ) ?>"/>
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' )  ?>"/>
                     <input type="hidden" id="payment_method_value" value="<%=shopping_cart.payment_methods.tpv_virtual%>">
                 <% } %>
 

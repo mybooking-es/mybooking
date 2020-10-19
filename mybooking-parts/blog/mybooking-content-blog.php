@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php if ( !has_post_thumbnail( $post->ID ) ) { ?>
 
 					<a class="news_post-image"
-						 href="<?php echo esc_attr( esc_url ( $mybooking_permalink ) ) ?>"
+						 href="<?php echo esc_url ( $mybooking_permalink ) ?>"
 						 rel="bookmark"
 						 style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image.png') ?>')">
 					</a>
@@ -37,9 +37,9 @@ defined( 'ABSPATH' ) || exit;
 					<?php $mybooking_featured_img_url = get_the_post_thumbnail_url( $post->ID, 'full' ); ?>
 
 					<a class="news_post-image"
-						 href="<?php echo esc_attr( esc_url ( $mybooking_permalink ) ) ?>"
+						 href="<?php echo esc_url ( $mybooking_permalink ) ?>"
 						 rel="bookmark"
-						 style="background-image: url('<?php echo esc_attr( esc_url( $mybooking_featured_img_url ) ) ?>')">
+						 style="background-image: url('<?php echo esc_url( $mybooking_featured_img_url ) ?>')">
 					</a>
 
 				<?php } ?>
@@ -48,8 +48,8 @@ defined( 'ABSPATH' ) || exit;
             <?php if ( !empty( get_the_title() ) ) { ?>
             	<?php /* translators: %s: permalink */ ?>
 				<?php the_title( sprintf( '<h2 class="post_title"><a href="%s" rel="bookmark" class="block-ellipsis">', 
-					  		 		      esc_attr( esc_url( $mybooking_permalink ) ) ),
-										  '</a></h2>' ); ?>
+					  		 		      esc_url( $mybooking_permalink ) ),
+								 '</a></h2>' ); ?>
             <?php } else { ?>	
 
 	          <?php           
@@ -64,8 +64,8 @@ defined( 'ABSPATH' ) || exit;
                 <h2 class="post_title">
                 	<?php /* translators: %s: permalink */ ?>
                 	<?php echo wp_kses( sprintf( _x('<a href="%s" rel="bookmark" class="block-ellipsis untitled">Untitled</a>', 'content_blog', 'mybooking'),
-                                                                    esc_attr( esc_url( $mybooking_permalink ) ) ), 
-                                                           $mybooking_allowed_html ); ?></h2>
+                                                     esc_url( $mybooking_permalink ) ), 
+                                        $mybooking_allowed_html ); ?></h2>
             <?php } ?> 	
 
 		</article>

@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.9.36] 2020-10-19
+
+### Updated
+- Translations
+
+### Added
+- Remove all carrousel photo
+
+### Updated
+- Theme sniffer warning check
+
 ## [0.9.35] 2020-10-17
 
 ### Updated

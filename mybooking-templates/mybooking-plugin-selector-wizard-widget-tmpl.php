@@ -26,7 +26,7 @@
           <div class="wizard-summary_datefrom"><%= summary.dateFrom %> <% if (summary.timeFrom != null) {%><%= summary.timeFrom %><% } %> </div>
         <% } %>
       </div>
-      <img class="wizard-summary_separator" src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/right-arrow-icon.png' ) ) ?>" 
+      <img class="wizard-summary_separator" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/right-arrow-icon.png' ) ?>" 
            alt="<?php echo esc_attr_x( 'Separator', 'renting_form_selector_wizard', 'mybooking') ?>">
       <div class="wizard-summary_item col wizard-summary_collection">
         <div class="wizard-summary_return"><%= summary.returnPlaceDescription || summary.returnPlace %></div>

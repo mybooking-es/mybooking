@@ -21,10 +21,10 @@
       <div class="card-static-wrapper">
         <div class="card-static">
           <?php if ( !empty( $mybooking_activity->photo_url_full ) ) { ?>
-            <img class="activity-card-img card-img-top" src="<?php echo esc_attr( esc_url( $mybooking_activity->photo_url_full ) )?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>">
+            <img class="activity-card-img card-img-top" src="<?php echo esc_url( $mybooking_activity->photo_url_full ) ?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>">
           <?php } else { ?>
             <div class="text-center no-product-photo pt-3">
-              <img class="activity-card-img card-img-top" src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/default-image.png') )?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>"/>
+              <img class="activity-card-img card-img-top" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image.png') ?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>"/>
             </div>
           <?php } ?>
           <div class="card-static_body">
@@ -51,7 +51,7 @@
                   } 
              ?>
             <div class="card-static_btn mt-5">
-              <a href="<?php echo esc_attr( esc_url( '/'.$args['url_detail'].'/'.$mybooking_activityIdAnchor ) )?>"
+              <a href="<?php echo esc_url( '/'.$args['url_detail'].'/'.$mybooking_activityIdAnchor ) ?>"
                 class="button btn btn-choose-product"><?php echo esc_html_x( 'More information', 'activities_list', 'mybooking' ) ?></a>
             </div>
           </div>
@@ -87,7 +87,7 @@
               <?php $mybooking_disabled_previous = ($args['current_page'] == 1 ? 'disabled' : '') ?>              
               <li class="page-item <?php echo esc_attr( $mybooking_disabled_previous ) ?>">
                 <a class="page-link"
-                   href="<?php echo esc_attr( esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']-1).$args['querystring'] ) ) ?>">
+                   href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']-1).$args['querystring'] ) ?>">
                    <?php echo esc_html_x( 'Previous', 'activities_list', 'mybooking' ) ?></a>
               </li>
               <?php foreach ($args['pages'] as $mybooking_page) { ?>
@@ -100,7 +100,7 @@
                 <?php } else { ?>
                   <li class="page-item">
                     <a class="page-link"
-                       href="<?php echo esc_attr( esc_url( '/'.$args['url'].'?offsetpage='.($mybooking_page).$args['querystring'] ) )?>">
+                       href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($mybooking_page).$args['querystring'] )?>">
                       <?php echo esc_html( $mybooking_page ) ?></a>
                   </li>
                 <?php } ?>
@@ -108,7 +108,7 @@
               <?php $mybooking_disabled_next = ($args['current_page'] == $args['total_pages'] ? 'disabled' : '') ?>
               <li class="page-item <?php echo esc_attr( $mybooking_disabled_next ) ?>">
                 <a class="page-link"
-                   href="<?php echo esc_attr( esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']+1).$args['querystring'] ) )?>">
+                   href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']+1).$args['querystring'] )?>">
                   <?php echo esc_html_x( 'Next', 'activities_list', 'mybooking' ) ?></a>
               </li>
             </ul>

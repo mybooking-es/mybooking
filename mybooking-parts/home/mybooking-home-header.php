@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 <div class="wizard-container full-size-datepicker-container" id="wizard_container">
   <div class="wizard-step_header container">
     <span class="wizard-close" id="close_wizard_btn">
-      <img src="<?php echo esc_attr( get_stylesheet_directory_uri().'/images/close-icon.png' ) ?>" alt="<?php echo esc_html('X') ?>">
+      <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/close-icon.png' ) ?>" alt="<?php echo esc_attr_x( 'Close', 'wizard_container', 'mybooking' ); ?>">
     </span>
     <div class="wizard-step_title step_title" id="step_title"></div>
   </div>
@@ -46,7 +46,7 @@ defined( 'ABSPATH' ) || exit;
         <!-- Image background -->
         <?php $mybooking_image_header = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_image_bg' ); ?>
         <?php if ( !empty($mybooking_image_header) ) { ?>
-          <img class="home-header_background home-header_background-img" src="<?php echo esc_attr( esc_url( $mybooking_image_header ) ) ?>">
+          <img class="home-header_background home-header_background-img" src="<?php echo esc_url( $mybooking_image_header ) ?>">
         <?php } else { ?>
           <div class="home-header_background home-header_background-img"></div>
         <?php } ?>
@@ -58,7 +58,7 @@ defined( 'ABSPATH' ) || exit;
       <div class="home-header_background-video-container">
         <?php if ( !empty($mybooking_video_header) ) { ?>
             <video class="home-header_background-video" autoplay loop muted>
-              <source src="<?php echo esc_attr( esc_url ( $mybooking_video_header ) ) ?>">
+              <source src="<?php echo esc_url ( $mybooking_video_header ) ?>">
             </video>
         <?php } else { ?>
             <div class="home-header_background-video"></div>
@@ -73,7 +73,7 @@ defined( 'ABSPATH' ) || exit;
           <?php $mybooking_first = true; ?>
           <?php foreach( $mybooking_carousel_items as $mybooking_carousel_item ) :  ?>
             <div class="carrusel-item">
-              <img src="<?php echo esc_attr( esc_url ( $mybooking_carousel_item ) ) ?>">
+              <img src="<?php echo esc_url ( $mybooking_carousel_item ) ?>">
             </div>
             <?php $mybooking_first = false; ?>
           <?php endforeach; ?>

@@ -16,15 +16,15 @@ if ( ! class_exists( 'MyBookingCustomizeCarrouselControl' ) ) {
 		public $type = 'carrousel';
 		
 		/**
-	     * 	Enqueue scripts and styles.		
+	     * 	Enqueue the component JS and CSS	
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'mybooking-customize-gallery-control-js', get_template_directory_uri() . '/inc/customizer/js/carrousel-control.js', array( 'jquery' ), null, true );
-			wp_enqueue_style( 'mybooking-customize-gallery-control-css', get_template_directory_uri() . '/inc/customizer/css/carrousel-control.css', null );
+			wp_enqueue_script( 'mybooking-customize-carrousel-control-js', get_template_directory_uri() . '/inc/customizer/js/carrousel-control.js', array( 'jquery' ), null, true );
+			wp_enqueue_style( 'mybooking-customize-carrousel-control-css', get_template_directory_uri() . '/inc/customizer/css/carrousel-control.css', null );
 		}
 
 		/**
-		 * Render the control using JS
+		 * Render the control using JS template
 		 */
 		protected function content_template() {
 ?>			
@@ -38,7 +38,8 @@ if ( ! class_exists( 'MyBookingCustomizeCarrouselControl' ) ) {
 					<#	} ) #>
 				</div>	
 			<# } #>
-			<div>
+			<div class="actions">
+				<button type="button" class="button clear-carrousel-button" id="carrousel-clear-btn"><?php echo esc_html_x( 'Remove All', 'customize-image-gallery-control', 'mybooking' ) ?></button>
 				<button type="button" class="button configure-carrousel-button" id="carrousel-configure-btn"><?php echo esc_html_x( 'Configure Carrousel', 'customize-image-gallery-control', 'mybooking' ) ?></button>
 			</div>
 			<div class="customize-control-notifications"></div>

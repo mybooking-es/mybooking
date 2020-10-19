@@ -18,7 +18,7 @@
             <div class="carousel-inner">
               <?php foreach( $args->photos as $mybooking_key => $mybooking_photo ) { ?>
               <div class="carousel-item <?php if ($mybooking_key == key($args->photos)) { ?>active<?php } ?>">
-                <img class="d-block w-100" src="<?php echo esc_attr( esc_url ( $mybooking_photo->full_photo_path ) )?>" 
+                <img class="d-block w-100" src="<?php echo esc_url ( $mybooking_photo->full_photo_path ) ?>" 
                      alt="<?php echo esc_attr( $args->name )?>">
               </div>
               <?php } ?>
@@ -33,7 +33,7 @@
             </a>
           </div>
           <?php } else if (count($args->photos) == 1) { ?>
-            <img class="d-block product-photo" src="<?php echo esc_attr( esc_url ( $args->photos[0]->full_photo_path ) )?>" 
+            <img class="d-block product-photo" src="<?php echo esc_url ( $args->photos[0]->full_photo_path ) ?>" 
                  alt="<?php echo esc_attr( $args->name )?>">
           <?php } else { ?>
               <div class="text-center no-product-photo pt-3"><i class="fa fa-camera" aria-hidden="true"></i></div>
@@ -59,7 +59,7 @@
                 <?php if ( isset( $args->characteristic_length ) && !empty( $args->characteristic_length ) ) { ?>
                   <li class="icon-list-item icon">
                       <span class="icon-list-icon">
-                         <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/characteristics/length.svg' ) )?>"/>
+                         <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/characteristics/length.svg' ) ?>"/>
                       </span>
                       <?php /* translators: %.2f: Length */ ?>
                       <span class="icon-list-text text-muted"><?php wp_kses_post( sprintf( _x('<b>%.2f</b> m.', 'renting_product_detail', 'mybooking' ), $args->characteristic_length ) ) ?></span>
@@ -68,7 +68,7 @@
                 <?php foreach ( $args->key_characteristics as $mybooking_key => $value) { ?>
                 <li class="icon-list-item icon">
                     <span class="icon-list-icon">
-                      <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/key_characteristics/'.$mybooking_key.'.svg' ) ) ?>"/>
+                      <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/key_characteristics/'.$mybooking_key.'.svg' ) ?>"/>
                     </span>
                     <span class="icon-list-text text-muted"><?php echo esc_html( $value ) ?></span>
                 </li>

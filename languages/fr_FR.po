@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-18 07:35+0000\n"
-"PO-Revision-Date: 2020-10-18 07:35+0000\n"
+"POT-Creation-Date: 2020-10-19 23:39+0000\n"
+"PO-Revision-Date: 2020-10-19 23:40+0000\n"
 "Last-Translator: \n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -1102,8 +1102,8 @@ msgstr "Suppléments"
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:273
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:293
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:493
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:52
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:68
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:51
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:67
 msgctxt "renting_complete"
 msgid "Total"
 msgstr "Total"
@@ -1134,24 +1134,24 @@ msgstr "Ramassage"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:267
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:282
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:47
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:62
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:46
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:61
 msgctxt "renting_complete"
 msgid "Product"
 msgstr "Produit"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:269
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:286
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:48
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:64
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:47
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:63
 msgctxt "renting_complete"
 msgid "Price"
 msgstr "Prix"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:271
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:290
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:50
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:66
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:49
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:65
 msgctxt "renting_complete"
 msgid "Quantity"
 msgstr "Quantité"
@@ -1182,7 +1182,7 @@ msgid "Reservation summary"
 msgstr "Résumé de la réservation"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:346
-#: mybooking-templates/mybooking-plugin-complete.php:104
+#: mybooking-templates/mybooking-plugin-complete.php:101
 msgctxt "renting_complete"
 msgid "Close"
 msgstr "Proche"
@@ -1218,7 +1218,7 @@ msgid "Petrol supplement"
 msgstr "Supplément essence"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:554
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:599
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:600
 msgctxt "renting_complete"
 msgid "Request reservation"
 msgstr "Demander une réservation"
@@ -1234,15 +1234,16 @@ msgid "Pay now"
 msgstr "Payez maintenant"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:588
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:620
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:685
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:621
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:687
 msgctxt "renting_complete"
 msgid "I have read and hereby accept the conditions of rental"
 msgstr "J&#39;ai lu et j&#39;accepte les conditions de location"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:590
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:622
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:687
+#. %s: terms and conditions URL
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:591
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:624
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:690
 #, php-format
 msgctxt "renting_complete"
 msgid ""
@@ -1252,17 +1253,17 @@ msgstr ""
 "J&#39;ai lu et j&#39;accepte les <a href=\"%s\" target=\"_blank\">"
 "conditions</a> de location"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:629
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:631
 msgctxt "renting_complete"
 msgid "Confirm"
 msgstr "Confirmez"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:656
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:658
 msgctxt "renting_complete"
 msgid "Paypal"
 msgstr "Paypal"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:664
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:666
 msgctxt "renting_complete"
 msgid "Credit or debit card"
 msgstr "Carte de crédit ou de débit"
@@ -1277,101 +1278,103 @@ msgctxt "renting_form_selector_wizard"
 msgid "All"
 msgstr "Tout"
 
-#: mybooking-templates/mybooking-plugin-routes-product.php:20
+#: mybooking-templates/mybooking-plugin-routes-product.php:28
 msgctxt "renting_product_detail"
 msgid "Previous"
 msgstr "Précédent"
 
-#: mybooking-templates/mybooking-plugin-routes-product.php:24
+#: mybooking-templates/mybooking-plugin-routes-product.php:32
 msgctxt "renting_product_detail"
 msgid "Next"
 msgstr "Suivant"
 
-#: mybooking-templates/mybooking-plugin-routes-product.php:44
+#. %s: From price
+#: mybooking-templates/mybooking-plugin-routes-product.php:53
 #, php-format
 msgctxt "renting_product_detail"
 msgid "From <b>%s</b>"
 msgstr "De <b>%s</b>"
 
-#: mybooking-templates/mybooking-plugin-routes-product.php:55
+#. %.2f: Length
+#: mybooking-templates/mybooking-plugin-routes-product.php:65
 #, php-format
 msgctxt "renting_product_detail"
 msgid "<b>%.2f</b> m."
 msgstr "<b>%.2f</b> m."
 
-#: mybooking-templates/mybooking-plugin-routes-product.php:73
+#: mybooking-templates/mybooking-plugin-routes-product.php:83
 msgctxt "renting_product_detail"
 msgid "Details"
 msgstr "Détails"
 
-#: mybooking-templates/mybooking-plugin-routes-product.php:86
+#: mybooking-templates/mybooking-plugin-routes-product.php:96
 msgctxt "renting_product_detail"
 msgid "Please choose your dates in the availability calendar"
 msgstr "Veuillez choisir vos dates dans le calendrier des disponibilités"
 
-#: mybooking-templates/mybooking-plugin-complete.php:46
+#: mybooking-templates/mybooking-plugin-complete.php:43
 msgctxt "renting_complete"
 msgid "Customer's details"
 msgstr "Coordonnées du client"
 
-#: mybooking-templates/mybooking-plugin-complete.php:49
-#: mybooking-templates/mybooking-plugin-complete.php:51
+#: mybooking-templates/mybooking-plugin-complete.php:46
+#: mybooking-templates/mybooking-plugin-complete.php:48
 msgctxt "renting_complete"
 msgid "Name"
 msgstr "Nom"
 
-#: mybooking-templates/mybooking-plugin-complete.php:54
-#: mybooking-templates/mybooking-plugin-complete.php:56
+#: mybooking-templates/mybooking-plugin-complete.php:51
+#: mybooking-templates/mybooking-plugin-complete.php:53
 msgctxt "renting_complete"
 msgid "Surname"
 msgstr "Nom de famille"
 
-#: mybooking-templates/mybooking-plugin-complete.php:59
-#: mybooking-templates/mybooking-plugin-complete.php:61
+#: mybooking-templates/mybooking-plugin-complete.php:56
+#: mybooking-templates/mybooking-plugin-complete.php:58
 msgctxt "renting_complete"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: mybooking-templates/mybooking-plugin-complete.php:64
-#: mybooking-templates/mybooking-plugin-complete.php:66
+#: mybooking-templates/mybooking-plugin-complete.php:61
+#: mybooking-templates/mybooking-plugin-complete.php:63
 msgctxt "renting_complete"
 msgid "Confirm E-mail"
 msgstr "Confirmez votre e-mail"
 
+#: mybooking-templates/mybooking-plugin-complete.php:66
 #: mybooking-templates/mybooking-plugin-complete.php:69
-#: mybooking-templates/mybooking-plugin-complete.php:72
 msgctxt "renting_complete"
 msgid "Phone number"
 msgstr "Numéro de téléphone"
 
-#: mybooking-templates/mybooking-plugin-complete.php:76
-#: mybooking-templates/mybooking-plugin-complete.php:78
+#: mybooking-templates/mybooking-plugin-complete.php:73
+#: mybooking-templates/mybooking-plugin-complete.php:75
 msgctxt "renting_complete"
 msgid "Alternative phone number"
 msgstr "Numéro de téléphone alternatif"
 
-#: mybooking-templates/mybooking-plugin-complete.php:81
+#: mybooking-templates/mybooking-plugin-complete.php:78
 msgctxt "renting_complete"
 msgid "Additional information"
 msgstr "Information additionnelle"
 
-#: mybooking-templates/mybooking-plugin-complete.php:84
-#: mybooking-templates/mybooking-plugin-complete.php:85
+#: mybooking-templates/mybooking-plugin-complete.php:81
+#: mybooking-templates/mybooking-plugin-complete.php:82
 msgctxt "renting_complete"
 msgid "Comments"
 msgstr "Commentaires"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:63
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:78
 msgctxt "activity_my_reservation_item"
 msgid "Total"
 msgstr "Total"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:83
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:99
 msgctxt "activity_my_reservation"
 msgid "Complete reservation"
 msgstr "Réservation complète"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:88
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:105
 msgctxt "activity_my_reservation"
 msgid ""
 "Please complete the information to speed up the delivery process on the "
@@ -1380,282 +1383,282 @@ msgstr ""
 "Veuillez compléter les informations pour accélérer le processus de livraison "
 "à la date prévue"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:94
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:111
 msgctxt "activity_my_reservation"
 msgid "Customer address"
 msgstr "Adresse du client"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:98
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:100
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:115
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:117
 msgctxt "activity_my_reservation"
 msgid "Address"
 msgstr "Adresse"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:105
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:107
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:122
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:124
 msgctxt "activity_my_reservation"
 msgid "Number"
 msgstr "Nombre"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:112
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:114
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:129
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:131
 msgctxt "activity_my_reservation"
 msgid "Complement"
 msgstr "Complément"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:121
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:123
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:138
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:140
 msgctxt "activity_my_reservation"
 msgid "City"
 msgstr "Ville"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:128
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:130
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:145
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:147
 msgctxt "activity_my_reservation"
 msgid "State"
 msgstr "Province"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:137
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:154
 msgctxt "activity_my_reservation"
 msgid "Country"
 msgstr "Pays"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:143
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:145
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:160
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:162
 msgctxt "activity_my_reservation"
 msgid "Postal Code"
 msgstr "Code postal"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:166
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:182
 msgctxt "activity_my_reservation"
 msgid "Partipant"
 msgstr "Participant"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:172
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:174
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:176
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:187
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:189
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:191
 msgctxt "activity_my_reservation"
 msgid "Name"
 msgstr "Nom"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:181
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:183
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:185
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:196
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:198
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:200
 msgctxt "activity_my_reservation"
 msgid "Surname"
 msgstr "Nom de famille"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:191
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:193
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:195
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:206
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:208
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:210
 msgctxt "activity_my_reservation"
 msgid "Document ID"
 msgstr "ID de document"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:202
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:204
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:206
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:217
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:219
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:221
 msgctxt "activity_my_reservation"
 msgid "Date of birth"
 msgstr "Date de naissance"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:214
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:216
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:218
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:229
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:231
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:233
 msgctxt "activity_my_reservation"
 msgid "Phone number"
 msgstr "Numéro de téléphone"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:225
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:227
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:229
-msgctxt "activity_my_reservation"
-msgid "E-mail"
-msgstr "E-mail"
 
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:240
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:242
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:244
 msgctxt "activity_my_reservation"
+msgid "E-mail"
+msgstr "E-mail"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:255
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:257
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:259
+msgctxt "activity_my_reservation"
 msgid "Height (cm)"
 msgstr "Hauteur (cm)"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:251
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:253
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:255
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:266
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:268
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:270
 msgctxt "activity_my_reservation"
 msgid "Weight (kg)"
 msgstr "Poids (kg)"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:267
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:270
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:281
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:284
 msgctxt "activity_my_reservation"
 msgid "Allergies"
 msgstr "Les allergies"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:274
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:276
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:278
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:288
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:290
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:292
 msgctxt "activity_my_reservation"
 msgid "Allergies detail"
 msgstr "Allergies detail"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:286
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:289
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:300
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:303
 msgctxt "activity_my_reservation"
 msgid "Intolerances"
 msgstr "Intolérances"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:293
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:295
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:297
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:307
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:309
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:311
 msgctxt "activity_my_reservation"
 msgid "Intolerances detail"
 msgstr "Détail des intolérances"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:307
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:310
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:321
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:324
 msgctxt "activity_my_reservation"
 msgid "Slight injuries"
 msgstr "Blessures légères"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:314
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:316
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:318
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:328
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:330
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:332
 msgctxt "activity_my_reservation"
 msgid "Slight injuries detail"
 msgstr "Détail de légères blessures"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:328
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:331
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:342
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:345
 msgctxt "activity_my_reservation"
 msgid "Diseases"
 msgstr "Maladies"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:335
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:337
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:339
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:349
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:351
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:353
 msgctxt "activity_my_reservation"
 msgid "Diseases detail"
 msgstr "Détail des maladies"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:358
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:374
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:393
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:407
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:372
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:387
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:406
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:418
 msgctxt "activity_my_reservation"
 msgid "Select the option"
 msgstr "Sélectionnez l&#39;option"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:360
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:376
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:374
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:388
 msgctxt "activity_my_reservation"
 msgid "Never"
 msgstr "Jamais"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:361
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:377
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:375
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:389
 msgctxt "activity_my_reservation"
 msgid "Once"
 msgstr "Une fois"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:362
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:378
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:376
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:390
 msgctxt "activity_my_reservation"
 msgid "Twice"
 msgstr "Deux fois"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:363
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:379
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:377
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:391
 msgctxt "activity_my_reservation"
 msgid "Three or more times"
 msgstr "Trois fois ou plus"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:395
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:409
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:407
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:419
 msgctxt "activity_my_reservation"
 msgid "No"
 msgstr "Non"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:396
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:410
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:408
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:420
 msgctxt "activity_my_reservation"
 msgid "Yes"
 msgstr "Oui"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:416
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:434
 msgctxt "activity_my_reservation"
 msgid "Update"
 msgstr "Mise à jour"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:432
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:450
 msgctxt "activity_my_reservation"
 msgid "Reservation ID"
 msgstr "ID de réservation"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:440
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:458
 msgctxt "activity_my_reservation"
 msgid "Cancel Reservation"
 msgstr "Annuler une réservation"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:449
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:467
 msgctxt "activity_my_reservation"
 msgid "Customer's details"
 msgstr "Coordonnées du client"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:462
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:480
 msgctxt "activity_my_reservation"
 msgid "Total"
 msgstr "Total"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:465
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:483
 msgctxt "activity_my_reservation"
 msgid "Paid"
 msgstr "Payé"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:467
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:485
 msgctxt "activity_my_reservation"
 msgid "Pending"
 msgstr "En attente"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:508
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:526
 msgctxt "activity_my_reservation"
 msgid "Paypal"
 msgstr "Paypal"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:516
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:534
 msgctxt "activity_my_reservation"
 msgid "Credit or debit card"
 msgstr "Carte de crédit ou de débit"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:35
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:51
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:46
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:62
 msgctxt "activity_tickets_form_selector"
 msgid "Select date"
 msgstr "Sélectionner une date"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:65
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:76
 msgctxt "activity_tickets_form_selector"
 msgid "We are sorry. There are not schedules available"
 msgstr "Nous sommes désolés. Il n&#39;y a pas d'horaires disponibles"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:69
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:80
 msgctxt "activity_tickets_form_selector"
 msgid "Select hour"
 msgstr "Sélectionnez l&#39;heure"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:89
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:100
 msgctxt "activity_tickets_form_selector"
 msgid "People"
 msgstr "Gens"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:102
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:129
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:113
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:140
 msgctxt "activity_tickets_form_selector"
 msgid "Book now"
 msgstr "Reserve maintenant"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:120
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:131
 msgctxt "activity_tickets_form_selector"
 msgid "Please, select an option"
 msgstr "Veuillez sélectionner une option"
@@ -1666,434 +1669,434 @@ msgctxt "renting_form_selector"
 msgid "Promotion code"
 msgstr "Code promotionnel"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:17
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:20
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:16
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:19
 msgctxt "renting_summary"
 msgid "Reservation Id"
 msgstr "ID de réservation"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:115
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:114
 msgctxt "renting_summary"
 msgid "Pick-up time supplement"
 msgstr "Supplément heure de prise en charge"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:122
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:121
 msgctxt "renting_summary"
 msgid "Pick-up place supplement"
 msgstr "Supplément lieu de prise en charge"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:129
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:128
 msgctxt "renting_summary"
 msgid "Return time supplement"
 msgstr "Supplément de temps de retour"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:136
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:135
 msgctxt "renting_summary"
 msgid "Return place supplement"
 msgstr "Supplément lieu de retour"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:144
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:143
 msgctxt "renting_summary"
 msgid "Driver's age supplement"
 msgstr "Supplément d&#39;âge du conducteur"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:150
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:149
 msgctxt "renting_summary"
 msgid "Petrol supplement"
 msgstr "Supplément essence"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:160
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:159
 msgctxt "renting_summary"
 msgid "Total"
 msgstr "Total"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:165
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:164
 msgctxt "renting_summary"
 msgid "Total paid"
 msgstr "Total payé"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:171
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:170
 msgctxt "renting_summary"
 msgid "Total pending"
 msgstr "Total payé"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:179
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:178
 msgctxt "renting_summary"
 msgid "Customer's details"
 msgstr "Coordonnées du client"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:184
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:183
 msgctxt "renting_summary"
 msgid "Full name"
 msgstr "Nom complet"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:188
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:187
 msgctxt "renting_summary"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:192
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:191
 msgctxt "renting_summary"
 msgid "Phone number"
 msgstr "Numéro de téléphone"
 
-#: mybooking-templates/mybooking-plugin-choose-product.php:32
+#: mybooking-templates/mybooking-plugin-choose-product.php:29
 msgctxt "renting_choose_product"
 msgid "Close"
 msgstr "Proche"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:25
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:85
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:24
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:84
 msgctxt "renting_my_reservation"
 msgid "Delivery"
 msgstr "Livraison"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:34
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:92
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:33
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:91
 msgctxt "renting_my_reservation"
 msgid "Collection"
 msgstr "Ramassage"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:83
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:82
 msgctxt "renting_my_reservation"
 msgid "Reservation Id"
 msgstr "ID de réservation"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:101
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:104
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:100
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:103
 msgctxt "renting_my_reservation"
 msgid "Rental duration"
 msgstr "Durée de la location"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:102
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:101
 msgctxt "renting_my_reservation"
 msgid "day(s)"
 msgstr "journée(s)"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:105
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:104
 msgctxt "renting_my_reservation"
 msgid "hour(s)"
 msgstr "heure(s)"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:129
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:128
 msgctxt "renting_my_reservation"
 msgid "My reservation"
 msgstr "Ma réservation"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:194
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:193
 msgctxt "renting_my_reservation"
 msgid "Pick-up time supplement"
 msgstr "Supplément heure de prise en charge"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:201
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:200
 msgctxt "renting_my_reservation"
 msgid "Pick-up place supplement"
 msgstr "Supplément lieu de prise en charge"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:209
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:208
 msgctxt "renting_my_reservation"
 msgid "Return time supplement"
 msgstr "Supplément de temps de retour"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:216
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:215
 msgctxt "renting_my_reservation"
 msgid "Return place supplement"
 msgstr "Supplément lieu de retour"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:225
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:224
 msgctxt "renting_my_reservation"
 msgid "Driver's age supplement"
 msgstr "Supplément d'âge du conducteur"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:232
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:231
 msgctxt "renting_my_reservation"
 msgid "Petrol supplement"
 msgstr "Supplément essence"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:242
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:241
 msgctxt "renting_my_reservation"
 msgid "Total"
 msgstr "Total"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:248
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:247
 msgctxt "renting_my_reservation"
 msgid "Paid"
 msgstr "Payé"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:253
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:252
 msgctxt "renting_my_reservation"
 msgid "Pending"
 msgstr "En attente"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:261
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:260
 msgctxt "renting_my_reservation"
 msgid "Customer's details"
 msgstr "Coordonnées du client"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:296
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:295
 msgctxt "renting_my_reservation"
 msgid "Customer address"
 msgstr "Adresse du client"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:299
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:301
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:298
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:300
 msgctxt "renting_my_reservation"
 msgid "Address"
 msgstr "Adresse"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:304
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:306
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:303
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:305
 msgctxt "renting_my_reservation"
 msgid "Number"
 msgstr "Nombre"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:309
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:311
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:308
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:310
 msgctxt "renting_my_reservation"
 msgid "Complement"
 msgstr "Complément"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:314
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:316
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:313
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:315
 msgctxt "renting_my_reservation"
 msgid "City"
 msgstr "Ville"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:319
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:321
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:326
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:318
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:320
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:325
 msgctxt "renting_my_reservation"
 msgid "State"
 msgstr "Province"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:324
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:323
 msgctxt "renting_my_reservation"
 msgid "Postal Code"
 msgstr "Code postal"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:330
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:329
 msgctxt "renting_my_reservation"
 msgid "Country"
 msgstr "Pays"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:337
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:336
 msgctxt "renting_my_reservation"
 msgid "Main driver"
 msgstr "Conducteur principal"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:340
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:342
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:442
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:444
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:498
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:500
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:606
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:608
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:610
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:672
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:674
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:676
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:339
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:341
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:441
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:443
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:497
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:499
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:605
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:607
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:609
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:671
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:673
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:675
 msgctxt "renting_my_reservation"
 msgid "Name"
 msgstr "Nom"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:347
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:349
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:449
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:451
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:505
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:507
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:614
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:616
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:618
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:680
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:682
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:684
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:346
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:348
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:448
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:450
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:504
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:506
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:613
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:615
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:617
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:679
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:681
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:683
 msgctxt "renting_my_reservation"
 msgid "Surname"
 msgstr "Nom de famille"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:355
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:357
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:354
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:356
 msgctxt "renting_my_reservation"
 msgid "ID card or passport"
 msgstr "Carte d&#39;identité ou passeport"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:362
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:361
 msgctxt "renting_my_reservation"
 msgid "Date of Issue"
 msgstr "Date d&#39;emission"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:383
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:385
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:459
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:461
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:515
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:517
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:382
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:384
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:458
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:460
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:514
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:516
 msgctxt "renting_my_reservation"
 msgid "Driving license number"
 msgstr "Numéro de permis de conduire"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:391
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:467
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:523
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:390
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:466
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:522
 msgctxt "renting_my_reservation"
 msgid "Driving license date of issue"
 msgstr "Date de délivrance du permis de conduire"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:412
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:486
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:542
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:411
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:485
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:541
 msgctxt "renting_my_reservation"
 msgid "Driving license expedition country"
 msgstr "Pays d&#39;expédition du permis de conduire"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:420
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:419
 msgctxt "renting_my_reservation"
 msgid "Date of birth"
 msgstr "Date de naissance"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:439
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:438
 msgctxt "renting_my_reservation"
 msgid "Additional drivers"
 msgstr "Pilotes supplémentaires"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:553
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:552
 msgctxt "renting_my_reservation"
 msgid "Flight"
 msgstr "Vol"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:556
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:558
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:574
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:576
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:555
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:557
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:573
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:575
 msgctxt "renting_my_reservation"
 msgid "Company"
 msgstr "Compagnie"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:561
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:563
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:579
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:581
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:560
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:562
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:578
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:580
 msgctxt "renting_my_reservation"
 msgid "Flight Number"
 msgstr "Numéro de vol"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:566
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:568
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:584
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:586
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:565
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:567
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:583
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:585
 msgctxt "renting_my_reservation"
 msgid "Estimated Time"
 msgstr "Heure estimée"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:571
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:570
 msgctxt "renting_my_reservation"
 msgid "Return flight"
 msgstr "Vol de retour"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:599
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:598
 msgctxt "renting_my_reservation"
 msgid "Participant"
 msgstr "Participant"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:601
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:600
 msgctxt "renting_my_reservation"
 msgid "Participants"
 msgstr "Participants"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:602
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:601
 msgctxt "renting_my_reservation"
 msgid "Pax 1"
 msgstr "Pax 1"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:622
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:624
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:626
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:688
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:690
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:692
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:621
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:623
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:625
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:687
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:689
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:691
 msgctxt "renting_my_reservation"
 msgid "Document ID"
 msgstr "ID de document"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:632
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:634
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:636
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:698
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:700
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:702
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:631
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:633
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:635
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:697
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:699
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:701
 msgctxt "renting_my_reservation"
 msgid "Phone number"
 msgstr "Numéro de téléphone"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:640
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:642
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:644
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:706
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:708
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:710
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:639
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:641
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:643
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:705
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:707
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:709
 msgctxt "renting_my_reservation"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:649
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:651
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:653
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:715
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:717
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:719
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:648
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:650
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:652
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:714
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:716
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:718
 msgctxt "renting_my_reservation"
 msgid "Height (cm)"
 msgstr "Hauteur (cm)"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:659
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:661
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:663
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:725
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:727
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:729
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:658
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:660
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:662
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:724
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:726
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:728
 msgctxt "renting_my_reservation"
 msgid "Weight (kg)"
 msgstr "Poids (kg)"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:669
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:668
 msgctxt "renting_my_reservation"
 msgid "Pax 2"
 msgstr "Pax 2"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:742
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:741
 msgctxt "renting_my_reservation"
 msgid "Update"
 msgstr "Mise à jour"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:767
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:766
 msgctxt "renting_my_reservation"
 msgid "Paypal"
 msgstr "Paypal"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:774
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:773
 msgctxt "renting_my_reservation"
 msgid "Credit or debit card"
 msgstr "Carte de crédit ou de débit"
 
-#: mybooking-templates/mybooking-plugin-activities.php:5
+#: mybooking-templates/mybooking-plugin-activities.php:13
 msgctxt "activities_list"
 msgid "No results found"
 msgstr "Aucun résultat trouvé"
 
-#: mybooking-templates/mybooking-plugin-activities.php:33
+#: mybooking-templates/mybooking-plugin-activities.php:41
 msgctxt "activities_list"
 msgid "From"
 msgstr "De"
 
-#: mybooking-templates/mybooking-plugin-activities.php:48
+#: mybooking-templates/mybooking-plugin-activities.php:55
 msgctxt "activities_list"
 msgid "More information"
 msgstr "Plus d'information"
 
 #. 1: Number of results, 2: Number of results
-#: mybooking-templates/mybooking-plugin-activities.php:61
+#: mybooking-templates/mybooking-plugin-activities.php:68
 #, php-format
 msgctxt "activity_shopping_cart"
 msgid "<b>%s</b> result found"
@@ -2101,163 +2104,164 @@ msgid_plural "<b>%s</b> results found"
 msgstr[0] "<b>%s </b> résultat trouvé"
 msgstr[1] "<b>%s </b> résultats trouvés"
 
-#: mybooking-templates/mybooking-plugin-activities.php:78
+#: mybooking-templates/mybooking-plugin-activities.php:85
 msgctxt "activities_list"
 msgid "Page navigation"
 msgstr "Navigation de la page"
 
-#: mybooking-templates/mybooking-plugin-activities.php:84
+#: mybooking-templates/mybooking-plugin-activities.php:91
 msgctxt "activities_list"
 msgid "Previous"
 msgstr "Précédent"
 
-#: mybooking-templates/mybooking-plugin-activities.php:105
+#: mybooking-templates/mybooking-plugin-activities.php:112
 msgctxt "activities_list"
 msgid "Next"
 msgstr "Suivant"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:27
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:22
 msgctxt "renting_form_selector_wizard"
 msgid "Where?"
 msgstr "Où?"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:29
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:24
 msgctxt "renting_form_selector_wizard"
 msgid "Choose a place"
 msgstr "Choisissez un lieu"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:33
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:28
 msgctxt "renting_form_selector_wizard"
 msgid "When?"
 msgstr "Quand?"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:35
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:30
 msgctxt "renting_form_selector_wizard"
 msgid "Pick-up date"
 msgstr "Le lieu de prise en charge"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:39
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:34
 msgctxt "renting_form_selector_wizard"
 msgid "Return date"
 msgstr "Le lieu de retour"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:44
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:39
 msgctxt "renting_form_selector_wizard"
 msgid "Book"
 msgstr "Réserver"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:18
-#: mybooking-templates/mybooking-plugin-contact-widget.php:20
+#: mybooking-templates/mybooking-plugin-contact-widget.php:14
+#: mybooking-templates/mybooking-plugin-contact-widget.php:16
 msgctxt "contact_form"
 msgid "Name"
 msgstr "Nom"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:24
-#: mybooking-templates/mybooking-plugin-contact-widget.php:26
+#: mybooking-templates/mybooking-plugin-contact-widget.php:20
+#: mybooking-templates/mybooking-plugin-contact-widget.php:22
 msgctxt "contact_form"
 msgid "Surname"
 msgstr "Nom de famille"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:32
-#: mybooking-templates/mybooking-plugin-contact-widget.php:35
+#: mybooking-templates/mybooking-plugin-contact-widget.php:28
+#: mybooking-templates/mybooking-plugin-contact-widget.php:31
 msgctxt "contact_form"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:40
-#: mybooking-templates/mybooking-plugin-contact-widget.php:42
+#: mybooking-templates/mybooking-plugin-contact-widget.php:36
+#: mybooking-templates/mybooking-plugin-contact-widget.php:38
 msgctxt "contact_form"
 msgid "Phone number"
 msgstr "Numéro de téléphone"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:47
-#: mybooking-templates/mybooking-plugin-contact-widget.php:49
+#: mybooking-templates/mybooking-plugin-contact-widget.php:43
+#: mybooking-templates/mybooking-plugin-contact-widget.php:45
 msgctxt "contact_form"
 msgid "Message"
 msgstr "Message"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:60
+#: mybooking-templates/mybooking-plugin-contact-widget.php:56
 msgctxt "contact_form"
 msgid "Send"
 msgstr "Envoyer"
 
-#: mybooking-templates/mybooking-plugin-activities-search.php:13
+#: mybooking-templates/mybooking-plugin-activities-search.php:24
 msgctxt "activities_search"
 msgid "Search"
 msgstr "Chercher"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:5
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:16
 msgctxt "activity_shopping_cart"
 msgid "Shopping cart is empty"
 msgstr "Le panier d&#39;achat est vide"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:41
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:127
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:52
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:139
 msgctxt "activity_shopping_cart"
 msgid "Total"
 msgstr "Total"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:58
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:60
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:69
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:71
 msgctxt "activity_shopping_cart"
 msgid "Name"
 msgstr "Nom"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:66
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:68
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:77
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:79
 msgctxt "activity_shopping_cart"
 msgid "Surname"
 msgstr "Nom de famille"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:76
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:78
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:87
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:89
 msgctxt "activity_shopping_cart"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:84
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:86
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:95
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:97
 msgctxt "activity_shopping_cart"
 msgid "Confirm E-mail"
 msgstr "Confirmez votre e-mail"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:95
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:97
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:106
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:108
 msgctxt "activity_shopping_cart"
 msgid "Phone number"
 msgstr "Numéro de téléphone"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:104
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:106
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:115
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:117
 msgctxt "activity_shopping_cart"
 msgid "Alternative phone number"
 msgstr "Numéro de téléphone alternatif"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:114
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:115
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:125
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:127
 msgctxt "activity_shopping_cart"
 msgid "Comments"
 msgstr "Commentaires"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:153
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:187
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:165
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:203
 msgctxt "activity_shopping_cart"
 msgid "Request reservation"
 msgstr "Demander une réservation"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:160
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:172
 msgctxt "activity_shopping_cart"
 msgid "Pay now"
 msgstr "Payez maintenant"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:177
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:242
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:189
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:258
 msgctxt "activity_shopping_cart"
 msgid "I have read and hereby accept the terms and conditions"
 msgstr "J&#39;ai lu et j&#39;accepte les termes et conditions"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:179
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:244
+#. %s: terms and conditions URL
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:192
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:261
 #, php-format
 msgctxt "activity_shopping_cart"
 msgid ""
@@ -2267,226 +2271,226 @@ msgstr ""
 "J&#39;ai lu et j&#39;accepte les <a href=\"%s\" target=\"_blank\">termes et "
 "conditions</a>"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:213
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:229
 msgctxt "activity_shopping_cart"
 msgid "Paypal"
 msgstr "Paypal"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:219
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:235
 msgctxt "activity_shopping_cart"
 msgid "Credit or debit card"
 msgstr "Carte de crédit ou de débit"
 
-#: mybooking-templates/mybooking-plugin-products.php:19
+#: mybooking-templates/mybooking-plugin-products.php:27
 msgctxt "renting_products"
 msgid "More information"
 msgstr "Plus d&#39;information"
 
-#: mybooking-templates/mybooking-plugin-products.php:30
+#: mybooking-templates/mybooking-plugin-products.php:38
 msgctxt "renting_products_list"
 msgid "Page navigation"
 msgstr "Navigation de la page"
 
-#: mybooking-templates/mybooking-plugin-products.php:36
+#: mybooking-templates/mybooking-plugin-products.php:44
 msgctxt "renting_products"
 msgid "Previous"
 msgstr "Précédent"
 
-#: mybooking-templates/mybooking-plugin-products.php:57
+#: mybooking-templates/mybooking-plugin-products.php:65
 msgctxt "renting_products"
 msgid "Next"
 msgstr "Suivant"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:56
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:70
 msgctxt "activity_order_item"
 msgid "Total"
 msgstr "Total"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:78
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:92
 msgctxt "activity_summary"
 msgid "Reservation ID"
 msgstr "ID de réservation"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:89
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:103
 msgctxt "activity_summary"
 msgid "Customer's details"
 msgstr "Coordonnées du client"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:100
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:114
 msgctxt "activity_summary"
 msgid "Total"
 msgstr "Total"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:102
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:116
 msgctxt "activity_summary"
 msgid "Paid"
 msgstr "Payé"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:103
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:117
 msgctxt "activity_summary"
 msgid "Pending"
 msgstr "En attente"
 
-#: mybooking-templates/mybooking-plugin-activities-search-tmpl.php:6
+#: mybooking-templates/mybooking-plugin-activities-search-tmpl.php:17
 msgctxt "activities_search"
 msgid "Destination"
 msgstr "Destination"
 
-#: mybooking-templates/mybooking-plugin-activities-search-tmpl.php:14
+#: mybooking-templates/mybooking-plugin-activities-search-tmpl.php:25
 msgctxt "activities_search"
 msgid "Category"
 msgstr "Catégorie"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:39
+#: mybooking-templates/mybooking-plugin-routes-activity.php:36
 msgctxt "activity_detail"
 msgid "Previous"
 msgstr "Précédent"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:44
+#: mybooking-templates/mybooking-plugin-routes-activity.php:41
 msgctxt "activity_detail"
 msgid "Next"
 msgstr "Suivant"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:73
+#: mybooking-templates/mybooking-plugin-routes-activity.php:70
 msgctxt "activity_routes"
 msgid "Calendar, timetable and duration"
 msgstr "Calendrier, horaire et durée"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:91
+#: mybooking-templates/mybooking-plugin-routes-activity.php:88
 msgctxt "activity_routes"
 msgid "What's included?"
 msgstr "Ce qui est inclu?"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:101
+#: mybooking-templates/mybooking-plugin-routes-activity.php:98
 msgctxt "activity_routes"
 msgid "Recomendations"
 msgstr "Recomendations"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:111
+#: mybooking-templates/mybooking-plugin-routes-activity.php:108
 msgctxt "activity_routes"
 msgid "What to bring?"
 msgstr "Ce qu&#39;il faut apporter?"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:121
+#: mybooking-templates/mybooking-plugin-routes-activity.php:118
 msgctxt "activity_routes"
 msgid "Dates and timetables"
 msgstr "Dates et horaires"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:131
+#: mybooking-templates/mybooking-plugin-routes-activity.php:128
 msgctxt "activity_routes"
 msgid "Ages"
 msgstr "Âge"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:141
+#: mybooking-templates/mybooking-plugin-routes-activity.php:138
 msgctxt "activity_routes"
 msgid "Difficulty"
 msgstr "Difficulté"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:151
+#: mybooking-templates/mybooking-plugin-routes-activity.php:148
 msgctxt "activity_routes"
 msgid "Prices"
 msgstr "Des prix"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:161
+#: mybooking-templates/mybooking-plugin-routes-activity.php:158
 msgctxt "activity_routes"
 msgid "Meeting point"
 msgstr "Point de rencontre"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:173
+#: mybooking-templates/mybooking-plugin-routes-activity.php:170
 msgctxt "activity_detail"
 msgid "Please choose your dates in the availability calendar"
 msgstr "Veuillez choisir vos dates dans le calendrier des disponibilités"
 
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:17
 #: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:18
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:19
 msgctxt "renting_product_calendar"
 msgid "Select pick-up place"
 msgstr "Sélectionnez le lieu de prise en charge"
 
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:25
 #: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:26
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:27
 msgctxt "renting_product_calendar"
 msgid "Select return place"
 msgstr "Sélectionnez le lieu de retour"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:41
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:40
 msgctxt "renting_product_calendar"
 msgid "Delivery time"
 msgstr "Heure de livraison"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:42
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:48
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:41
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:47
 msgctxt "renting_product_calendar"
 msgid "hh:mm"
 msgstr "hh:mm"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:47
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:46
 msgctxt "renting_product_calendar"
 msgid "Collection time"
 msgstr "Heure de ramassage"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:67
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:66
 msgctxt "renting_product_calendar"
 msgid "Reservation summary"
 msgstr "Résumé de la réservation"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:70
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:74
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:69
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:73
 msgctxt "renting_product_calendar"
 msgid "Rental duration"
 msgstr "Durée de la location"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:72
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:71
 msgctxt "renting_product_calendar"
 msgid "day(s)"
 msgstr "journée(s)"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:76
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:75
 msgctxt "renting_product_calendar"
 msgid "hours(s)"
 msgstr "heure(s)"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:79
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:78
 msgctxt "renting_product_calendar"
 msgid "Product"
 msgstr "Produit"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:83
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:82
 msgctxt "renting_product_calendar"
 msgid "Pick-up time supplement"
 msgstr "Supplément heure de prise en charge"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:88
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:87
 msgctxt "renting_product_calendar"
 msgid "Pick-up place supplement"
 msgstr "Supplément lieu de prise en charge"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:93
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:92
 msgctxt "renting_product_calendar"
 msgid "Return time supplement"
 msgstr "Supplément de temps de retour"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:98
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:97
 msgctxt "renting_product_calendar"
 msgid "Return place supplement"
 msgstr "Supplément lieu de retour"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:103
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:102
 msgctxt "renting_product_calendar"
 msgid "Total"
 msgstr "Total"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:111
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:110
 msgctxt "renting_product_calendar"
 msgid "Book"
 msgstr "Réserver"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:118
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:117
 msgctxt "renting_product_calendar"
 msgid "Sorry, there is no availability during these hours"
 msgstr "Désolé, il n&#39;y a pas de disponibilité pendant ces heures"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:124
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:123
 msgctxt "renting_product_calendar"
 msgid ""
 "Sorry, there is no availability for the entire period. The calendar shows "
@@ -2497,12 +2501,12 @@ msgstr ""
 "calendrier affiche les jours où il y a de la disponibilité, mais il peut ne "
 "pas être disponible pour certaines dates consécutives."
 
-#: mybooking-templates/mybooking-plugin-modify-reservation.php:21
+#: mybooking-templates/mybooking-plugin-modify-reservation.php:18
 msgctxt "renting_form_modify_reservation"
 msgid "Modify reservation"
 msgstr "Modifier la réservation"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation.php:22
+#: mybooking-templates/mybooking-plugin-modify-reservation.php:19
 msgctxt "renting_form_modify_reservation"
 msgid "Close"
 msgstr "Proche"
@@ -2511,25 +2515,51 @@ msgstr "Proche"
 msgid "MyBooking Contact"
 msgstr "MyBooking Contact"
 
+#: mybooking-parts/mybooking-reservation-steps.php:25
+#: mybooking-parts/home/mybooking-home-header.php:27
+msgctxt "wizard_container"
+msgid "Close"
+msgstr "Proche"
+
 #: mybooking-parts/mybooking-reservation-steps.php:49
 msgctxt "reservation_step"
 msgid "Place and date"
 msgstr "Lieu et date"
+
+#: mybooking-parts/mybooking-reservation-steps.php:49
+msgctxt "renting_reservation_steps"
+msgid "1"
+msgstr "1"
 
 #: mybooking-parts/mybooking-reservation-steps.php:50
 msgctxt "reservation_step"
 msgid "Select product"
 msgstr "Sélectionner un produit"
 
+#: mybooking-parts/mybooking-reservation-steps.php:50
+msgctxt "renting_reservation_steps"
+msgid "2"
+msgstr "2"
+
 #: mybooking-parts/mybooking-reservation-steps.php:51
 msgctxt "reservation_step"
 msgid "Complete reservation"
 msgstr "Réservation complète"
 
+#: mybooking-parts/mybooking-reservation-steps.php:51
+msgctxt "renting_reservation_steps"
+msgid "3"
+msgstr "3"
+
 #: mybooking-parts/mybooking-reservation-steps.php:52
 msgctxt "reservation_step"
 msgid "Summary"
 msgstr "Résumé"
+
+#: mybooking-parts/mybooking-reservation-steps.php:52
+msgctxt "renting_reservation_steps"
+msgid "4"
+msgstr "4"
 
 #. Name of the template
 msgid "MyBooking Home"
@@ -2637,6 +2667,16 @@ msgstr "Vous devez être connecté pour payer."
 msgctxt "woocommerce_mybooking"
 msgid "Your order"
 msgstr "Votre commande"
+
+#: inc/customizer/carrousel-control.php:42
+msgctxt "customize-image-gallery-control"
+msgid "Remove All"
+msgstr "Enlever tout"
+
+#: inc/customizer/carrousel-control.php:43
+msgctxt "customize-image-gallery-control"
+msgid "Configure Carrousel"
+msgstr "Configurer Carrousel"
 
 #: inc/customizer/class-font-selector.php:51
 msgctxt "customize_font_selector"

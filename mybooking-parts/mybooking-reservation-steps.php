@@ -22,7 +22,7 @@
 <div class="wizard-container full-size-datepicker-container" id="wizard_container">
   <div class="wizard-step_header container">
     <span class="wizard-close" id="close_wizard_btn">
-      <img src="<?php echo esc_attr( get_stylesheet_directory_uri().'/images/close-icon.png' ) ?>" alt="<?php echo esc_html('X') ?>">
+      <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/close-icon.png' ) ?>" alt="<?php echo esc_attr_x( 'Close', 'wizard_container', 'mybooking' ); ?>">
     </span>
     <div class="wizard-step_title step_title" id="step_title"></div>
   </div>
@@ -46,10 +46,10 @@
       } elseif ( in_array('summary',$mybooking_step_classes) ) {
         $mybooking_summary_active = 'active';
       } ?>
-      <div data-desc="<?php echo esc_attr_x( 'Place and date', 'reservation_step', 'mybooking' ) ?>" class="step">1</div>
-      <div data-desc="<?php echo esc_attr_x( 'Select product', 'reservation_step', 'mybooking' ) ?>" class="<?php echo esc_attr( $mybooking_choose_active ) ?> step">2</div>
-      <div data-desc="<?php echo esc_attr_x( 'Complete reservation', 'reservation_step', 'mybooking' ) ?>" class="<?php echo esc_attr( $mybooking_complete_active ) ?> step">3</div>
-      <div data-desc="<?php echo esc_attr_x( 'Summary', 'reservation_step', 'mybooking' ) ?>" class="<?php echo esc_attr( $mybooking_summary_active ) ?> step">4</div>
+      <div data-desc="<?php echo esc_attr_x( 'Place and date', 'reservation_step', 'mybooking' ) ?>" class="step"><?php echo esc_html_x('1','renting_reservation_steps', 'mybooking');?></div>
+      <div data-desc="<?php echo esc_attr_x( 'Select product', 'reservation_step', 'mybooking' ) ?>" class="<?php echo esc_attr( $mybooking_choose_active ) ?> step"><?php echo esc_html_x('2','renting_reservation_steps', 'mybooking');?></div>
+      <div data-desc="<?php echo esc_attr_x( 'Complete reservation', 'reservation_step', 'mybooking' ) ?>" class="<?php echo esc_attr( $mybooking_complete_active ) ?> step"><?php echo esc_html_x('3','renting_reservation_steps', 'mybooking');?></div>
+      <div data-desc="<?php echo esc_attr_x( 'Summary', 'reservation_step', 'mybooking' ) ?>" class="<?php echo esc_attr( $mybooking_summary_active ) ?> step"><?php echo esc_html_x('4','renting_reservation_steps', 'mybooking');?></div>
     </div>
   </div>
 </div>
