@@ -587,6 +587,7 @@
                   <?php if ( empty($args['terms_and_conditions']) ) { ?>
                     <?php echo esc_html_x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking' ) ?>
                   <?php } else { ?>
+                    <?php /* translators: %s: terms and conditions URL */ ?>
                     <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ) ?>
                   <?php } ?>
                 </label>
@@ -619,6 +620,7 @@
                         <?php if ( empty($args['terms_and_conditions']) ) { ?>
                           <?php echo esc_html_x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking' ) ?>
                         <?php } else { ?>
+                          <?php /* translators: %s: terms and conditions URL */ ?>
                           <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ) ?>
                         <?php } ?>
                       </label>
@@ -684,6 +686,7 @@
                       <?php if ( empty($args['terms_and_conditions']) ) { ?>
                         <?php echo esc_html_x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking' ) ?>
                       <?php } else { ?>
+                        <?php /* translators: %s: terms and conditions URL */ ?>
                         <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ) ?>
                       <?php } ?>
                     </label>

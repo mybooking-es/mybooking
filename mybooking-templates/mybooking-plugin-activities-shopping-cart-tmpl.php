@@ -188,6 +188,7 @@
                   <?php if ( empty($args['terms_and_conditions']) ) { ?>
                     <?php echo esc_html_x( 'I have read and hereby accept the terms and conditions', 'activity_shopping_cart', 'mybooking' ) ?>
                   <?php } else { ?>
+                    <?php /* translators: %s: terms and conditions URL */ ?>
                     <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">terms and conditions</a>', 
                                                            'activity_shopping_cart',
                                                            'mybooking' ), 
@@ -256,6 +257,7 @@
                       <?php if ( empty($args['terms_and_conditions']) ) { ?>
                         <?php echo esc_html_x( 'I have read and hereby accept the terms and conditions', 'activity_shopping_cart', 'mybooking' ) ?>
                       <?php } else { ?>
+                        <?php /* translators: %s: terms and conditions URL */ ?>
                         <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">terms and conditions</a>', 
                                                                'activity_shopping_cart', 
                                                                'mybooking' ), 
