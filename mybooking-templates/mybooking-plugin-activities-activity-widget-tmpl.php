@@ -1,3 +1,12 @@
+    <?php
+      /** 
+       * The Template for showing the activity selector widget - js templates
+       *
+       * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php
+       *
+       * @phpcs:ignore PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+       */
+    ?>
     <!-- Micro templates -->
 
     <!-- Activity One Time Selector -->

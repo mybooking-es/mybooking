@@ -654,7 +654,7 @@
                       <div class="form-group col-md-12">
                         <label for="payments_paypal_standard">
                         <input type="radio" id="payments_paypal_standard" name="payment_method_select" class="payment_method_select" value="paypal_standard">&nbsp;<?php echo esc_html_x( 'Paypal', 'renting_complete', 'mybooking' ) ?>
-                        <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ) ?>" />
+                        <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ) ?>"/>
                         </label>
                       </div>
                       <div class="form-group col-md-12">
@@ -670,7 +670,7 @@
                     <div id="payment_method_select_error" class="form-row">
                     </div>
                 <% } else if (sales_process.payment_methods.paypal_standard) { %>
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/images/paypal.png"/>
+                    <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ) ?>"/>
                 <% } else if (sales_process.payment_methods.tpv_virtual) { %>
                     <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ) ?>"/>
                     <img src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ) ?>"/>
@@ -684,7 +684,7 @@
                       <?php if ( empty($args['terms_and_conditions']) ) { ?>
                         <?php echo esc_html_x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking' ) ?>
                       <?php } else { ?>
-                        <?php wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ) ?>
+                        <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ) ?>
                       <?php } ?>
                     </label>
                   </div>

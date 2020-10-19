@@ -13,11 +13,11 @@
       <div class="card-static-wrapper">
         <div class="card-static">
           <?php if ( !empty( $mybooking_activity->photo_url_full ) ) { ?>
-                <img class="activity-card-img card-img-top" src="<?php echo esc_attr( esc_url( $mybooking_activity->photo_url_full ) )?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>">
+            <img class="activity-card-img card-img-top" src="<?php echo esc_attr( esc_url( $mybooking_activity->photo_url_full ) )?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>">
           <?php } else { ?>
-                <div class="text-center no-product-photo pt-3">
-                  <img class="activity-card-img card-img-top" src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/default-image.png') )?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>"/>
-                </div>
+            <div class="text-center no-product-photo pt-3">
+              <img class="activity-card-img card-img-top" src="<?php echo esc_attr( esc_url( get_stylesheet_directory_uri().'/images/default-image.png') )?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>"/>
+            </div>
           <?php } ?>
           <div class="card-static_body">
             <div class="card-static_header-catalog">
@@ -37,12 +37,11 @@
               <?php } ?>
             </div>
 
-            <?php if ( !empty( $mybooking_activity->slug) ) {
+            <?php $mybooking_activityIdAnchor = $mybooking_activity->id;
+                  if ( !empty( $mybooking_activity->slug) ) {
                         $mybooking_activityIdAnchor = $mybooking_activity->slug;
-                      } else {
-                        $mybooking_activityIdAnchor = $mybooking_activity->id;
-                      }
-                  ?>
+                  } 
+             ?>
             <div class="card-static_btn mt-5">
               <a href="<?php echo esc_attr( esc_url( '/'.$args['url_detail'].'/'.$mybooking_activityIdAnchor ) )?>"
                 class="button btn btn-choose-product"><?php echo esc_html_x( 'More information', 'activities_list', 'mybooking' ) ?></a>

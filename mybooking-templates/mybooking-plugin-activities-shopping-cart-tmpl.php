@@ -112,7 +112,8 @@
         <div class="col">
           <div class="form-group">
             <label for="comments"><?php echo esc_html_x( 'Comments', 'activity_shopping_cart', 'mybooking' ) ?></label>
-            <textarea class="w-100 p-3" name="comments" id="comments" placeholder="<?php echo esc_attr_x( 'Comments', 'activity_shopping_cart', 'mybooking' ) ?>" style="height: 100px"></textarea>
+            <textarea class="w-100 p-3" name="comments" id="comments" rows="5"
+                      placeholder="<?php echo esc_attr_x( 'Comments', 'activity_shopping_cart', 'mybooking' ) ?>"></textarea>
           </div>
         </div>
       </div>
@@ -176,7 +177,10 @@
                   <?php if ( empty($args['terms_and_conditions']) ) { ?>
                     <?php echo esc_html_x( 'I have read and hereby accept the terms and conditions', 'activity_shopping_cart', 'mybooking' ) ?>
                   <?php } else { ?>
-                    <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">terms and conditions</a>', 'activity_shopping_cart', 'mybooking' ), $args['terms_and_conditions'] ) ) ?> 
+                    <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">terms and conditions</a>', 
+                                                           'activity_shopping_cart',
+                                                           'mybooking' ), 
+                                                       $args['terms_and_conditions'] ) ) ?> 
                   <?php } ?>  
               </label>
             </div>
@@ -241,9 +245,10 @@
                       <?php if ( empty($args['terms_and_conditions']) ) { ?>
                         <?php echo esc_html_x( 'I have read and hereby accept the terms and conditions', 'activity_shopping_cart', 'mybooking' ) ?>
                       <?php } else { ?>
-                        <?php wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">terms and conditions</a>', 
-                                                          'activity_shopping_cart', 'mybooking' ), 
-                                                      $args['terms_and_conditions'] ) ) ?> 
+                        <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">terms and conditions</a>', 
+                                                               'activity_shopping_cart', 
+                                                               'mybooking' ), 
+                                                           $args['terms_and_conditions'] ) ) ?> 
                       <?php } ?>  
                     </label>
                   </div>
