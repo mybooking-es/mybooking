@@ -5,6 +5,7 @@
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php
    *
    * @phpcs:ignore PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   * @phpcs:ignore Generic.PHP.DisallowAlternativePHPTags.MaybeASPOpenTagFound
    */
 ?>
 <script type="text/tmpl" id="widget_form_selector_tmpl">

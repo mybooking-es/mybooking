@@ -47,14 +47,14 @@
             <?php if ($mybooking_page == $args['current_page']) { ?>
               <li class="page-item active" aria-current="page">
                 <span class="page-link">
-                  <?php echo $mybooking_page ?>
+                  <?php echo esc_html( $mybooking_page ) ?>
                 </span>
               </li>
             <?php } else { ?>
               <li class="page-item">
                 <a class="page-link"
                   href="<?php echo esc_attr( esc_url( '/'.$args['url'].'?offsetpage='.($mybooking_page).$args['querystring'] ) )?>">
-                  <?php echo $mybooking_page ?></a>
+                  <?php echo esc_html( $mybooking_page ) ?></a>
               </li>
             <?php } ?>
           <?php } ?>
