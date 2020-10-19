@@ -6,4 +6,3 @@
    *
    * Keep empty in the Theme because the container is managed on mybooking-home-header.php due to HTML structure
    */
-?>

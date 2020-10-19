@@ -6,6 +6,7 @@
    *
    * @phpcs:disable PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound
    * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPOpenTagFound 
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPShortOpenTagFound   
    */
 ?>
     <script type="text/tpml" id="script_order">
