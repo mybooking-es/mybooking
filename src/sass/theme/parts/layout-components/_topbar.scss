@@ -27,6 +27,17 @@
   }
 }
 
+// Top bar menu Widget
+.mybooking-widget_topbar_right .menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mybooking-widget_topbar_right .menu-item {
+  display: inline-block;
+}
+
 // Topbar message
 .topbar-message {
   padding: 0.5rem 2rem;
@@ -53,7 +64,7 @@
 @media (max-width: 991.98px) {
   .topbar .info_text {
     display: none;
-  }  
+  }
   .topbar .info_link {
     margin: 0 2em;
   }
