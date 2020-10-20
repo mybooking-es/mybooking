@@ -35,7 +35,7 @@ defined( 'ABSPATH' ) || exit;
 
       <?php if ( !empty( $mybooking_company_chat) ) { ?>
         <span>
-      	  <a class="info_link" href="<?php echo esc_url( 'whatsapp://send?phone='.str_replace(' ','',$mybooking_company_chat).'&abid='.str_replace(' ','',$mybooking_company_chat) ) ?>"><i class="fa fa-whatsapp"
+      	  <a class="info_link" href="<?php echo esc_url( 'whatsapp://send?phone='.str_replace(' ','',$mybooking_company_chat).'&abid='.str_replace(' ','',$mybooking_company_chat), ['whatsapp'] ) ?>"><i class="fa fa-whatsapp"
       	      aria-hidden="true"></i> <span class="info_text"><?php echo esc_html( $mybooking_company_chat ) ?></span></a>
         </span>
       <?php } ?>
