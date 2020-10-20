@@ -19,42 +19,42 @@
 
 <script type="text/tpml" id="script_products_detail">
   <% for (idx in shopping_cart.items) { %>
-  <div class="activity-view-card">
-    <div class="card-img-bg-color">
-        <div class="activity-card__img">
-          <img src="<%=shopping_cart.items[idx].photo_full%>" alt=""/>
-        </div>
-        <div class="trash-button btn-delete-shopping-cart-item"
-            data-item-id="<%=shopping_cart.items[idx].item_id%>"
-            data-date="<%=shopping_cart.items[idx].date%>"
-            data-time="<%=shopping_cart.items[idx].time%>">
-            <i class="fas fa-trash-alt"></i>
-        </div>
-        <div class="activity-card__img-text">
-          <h5 class="card-title color-white"><%=shopping_cart.items[idx].item_description_customer_translation%></h5>
-          <p class="card-text color-white"><%= configuration.formatDate(shopping_cart.items[idx].date) %> <%= shopping_cart.items[idx].time %></p>
-        </div>
-    </div><!-- /bg-color -->
-      <table class="table table-activities">
-        <tbody>
-          <% for (var x=0; x<shopping_cart.items[idx]['items'].length; x++) { %>
+    <div class="activity-view-card">
+      <div class="card-img-bg-color">
+          <div class="activity-card__img">
+            <img src="<%=shopping_cart.items[idx].photo_full%>" alt=""/>
+          </div>
+          <div class="trash-button btn-delete-shopping-cart-item"
+              data-item-id="<%=shopping_cart.items[idx].item_id%>"
+              data-date="<%=shopping_cart.items[idx].date%>"
+              data-time="<%=shopping_cart.items[idx].time%>">
+              <i class="fas fa-trash-alt"></i>
+          </div>
+          <div class="activity-card__img-text">
+            <h5 class="card-title color-white"><%=shopping_cart.items[idx].item_description_customer_translation%></h5>
+            <p class="card-text color-white"><%= configuration.formatDate(shopping_cart.items[idx].date) %> <%= shopping_cart.items[idx].time %></p>
+          </div>
+      </div><!-- /bg-color -->
+        <table class="table table-activities">
+          <tbody>
+            <% for (var x=0; x<shopping_cart.items[idx]['items'].length; x++) { %>
+              <tr>
+                  <td><%=shopping_cart.items[idx]['items'][x].quantity %>
+                      <%=shopping_cart.items[idx]['items'][x].item_price_description %> x
+                      <%=configuration.formatCurrency(shopping_cart.items[idx]['items'][x].item_unit_cost) %>
+                  </td>
+                  <td class="text-right">
+                      <%=configuration.formatCurrency(shopping_cart.items[idx]['items'][x].item_cost) %>
+                  </td>
+              </tr>
+            <% } %>  
             <tr>
-                <td><%=shopping_cart.items[idx]['items'][x].quantity %>
-                    <%=shopping_cart.items[idx]['items'][x].item_price_description %> x
-                    <%=configuration.formatCurrency(shopping_cart.items[idx]['items'][x].item_unit_cost) %>
-                </td>
-                <td class="text-right">
-                    <%=configuration.formatCurrency(shopping_cart.items[idx]['items'][x].item_cost) %>
-                </td>
+              <td><?php echo esc_html_x( 'Total', 'activity_shopping_cart', 'mybooking' ) ?></td>
+              <td class="text-right fw-800"><%=configuration.formatCurrency(shopping_cart.items[idx]['total'])%></td>
             </tr>
-          <% } %>  
-          <tr>
-            <td><?php echo esc_html_x( 'Total', 'activity_shopping_cart', 'mybooking' ) ?></td>
-            <td class="text-right fw-800"><%=configuration.formatCurrency(shopping_cart.items[idx]['total'])%></td>
-          </tr>
-        </tbody>
-      </table>
-  </div><!-- /activity-card -->
+          </tbody>
+        </table>
+    </div><!-- /activity-card -->
   <% } %>
 </script>
 

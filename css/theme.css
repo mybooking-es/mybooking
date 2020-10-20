@@ -27891,7 +27891,7 @@ select#cat {
   height: 100%; }
 
 .activity-content__widget {
-  margin: 20px;
+  margin: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
