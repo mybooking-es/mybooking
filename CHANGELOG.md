@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.37] 2020-10-20
+
+### Deleted
+- Mybooking Home category references
+
 ## [0.9.36] 2020-10-19
 
 ### Updated
@@ -158,7 +163,7 @@
 ### Fixed
 
 - Site name
-- Comments 
+- Comments
 - Sticky Post
 
 ## [0.9.11] 2020-10-01
