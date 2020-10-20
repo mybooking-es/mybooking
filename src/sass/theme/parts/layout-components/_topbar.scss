@@ -39,18 +39,6 @@
   margin-left: 16px;
 }
 
-@media (max-width: 991.98px) {
-.topbar .info_link {
-    margin: 0 2em 0 0;
-	}
-}
-
-@media (max-width: 991.98px) {
-.topbar {
-    text-align: left;
-	}
-}
-
 // Topbar message
 .topbar-message {
   padding: 0.5rem 2rem;
@@ -79,10 +67,9 @@
     display: none;
   }
   .topbar .info_link {
-    margin: 0 2em;
+    margin: 0 2em 0 0;
   }
   .topbar {
-    text-align: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
