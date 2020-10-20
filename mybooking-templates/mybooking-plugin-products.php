@@ -59,7 +59,7 @@
             <?php } ?>
           <?php } ?>
           <?php $mybooking_disabled_next = ($args['current_page'] == $args['total_pages'] ? 'disabled' : '') ?>
-          <li class="page-item <?php echo esc_attr( $mybooking_disabled_next ) ?> ?>">
+          <li class="page-item <?php echo esc_attr( $mybooking_disabled_next ) ?>">
             <a class="page-link"
                href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']+1).$args['querystring'] ) ?>">
               <?php echo esc_html_x('Next','renting_products','mybooking'); ?></a>

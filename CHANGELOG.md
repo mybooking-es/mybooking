@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.38] 2020-10-20
+
+### Updated
+- Templates reviews
+
 ## [0.9.37] 2020-10-20
 
 ### Deleted

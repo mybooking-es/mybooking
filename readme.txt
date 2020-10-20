@@ -38,6 +38,9 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.38 =
+* Updated: Templates review
+
 = 0.9.37 =
 * Updated: TopBar styling
 * Updated: Mybooking Home Template shows last 3 posts
@@ -147,6 +150,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.38 =
+* Updated: Templates review
 
 = 0.9.37 =
 * Updated: Mybooking Home Template shows last 3 posts

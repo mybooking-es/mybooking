@@ -50,7 +50,7 @@
             <!-- From price -->
             <?php if ($args->from_price > 0) { ?>
             <?php /* translators: %s: From price */ ?>  
-            <h2 class="h4 mt-3 text-danger font-weight-normal"><?php wp_kses_post( sprintf( _x('From <b>%s</b>', 'renting_product_detail', 'mybooking' ), number_format_i18n( $args->from_price ) ) )?>€</h2>
+              <h2 class="h4 mt-3 text-danger font-weight-normal"><?php echo wp_kses_post( sprintf( _x('From <b>%s</b>', 'renting_product_detail', 'mybooking' ), number_format_i18n( $args->from_price ) ) )?>€</h2>
             <?php } ?>
             <!-- Key characteristics -->
             <?php if ( isset( $args->key_characteristics) && !empty( $args->key_characteristics ) ) { ?>
@@ -62,7 +62,7 @@
                          <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/characteristics/length.svg' ) ?>"/>
                       </span>
                       <?php /* translators: %.2f: Length */ ?>
-                      <span class="icon-list-text text-muted"><?php wp_kses_post( sprintf( _x('<b>%.2f</b> m.', 'renting_product_detail', 'mybooking' ), $args->characteristic_length ) ) ?></span>
+                      <span class="icon-list-text text-muted"><?php echo wp_kses_post( sprintf( _x('<b>%.2f</b> m.', 'renting_product_detail', 'mybooking' ), $args->characteristic_length ) ) ?></span>
                   </li>
                 <?php } ?>  
                 <?php foreach ( $args->key_characteristics as $mybooking_key => $value) { ?>
