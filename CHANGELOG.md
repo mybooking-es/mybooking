@@ -167,7 +167,7 @@
 ### Fixed
 
 - Site name
-- Comments 
+- Comments
 - Sticky Post
 
 ## [0.9.11] 2020-10-01

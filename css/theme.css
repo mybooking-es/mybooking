@@ -26807,6 +26807,9 @@ h2.post_title > a {
 .news_thumbnail {
   margin-bottom: 10px; }
 
+.news_thumbnail:hover {
+  opacity: .8; }
+
 .news_post-image {
   display: block;
   background-repeat: no-repeat;
@@ -26820,6 +26823,10 @@ h2.post_title > a {
 .sticky .news_post-image {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
+
+.news_title {
+  font-size: 1.5em;
+  font-weight: 700; }
 
 .news_extract {
   color: var(--gray-600); }
@@ -27126,7 +27133,8 @@ h2.comments-title {
   list-style: none; }
 
 .mybooking-widget_topbar_right .menu-item {
-  display: inline-block; }
+  display: inline-block;
+  margin-left: 16px; }
 
 .topbar-message {
   padding: 0.5rem 2rem;
@@ -27148,9 +27156,8 @@ h2.comments-title {
   .topbar .info_text {
     display: none; }
   .topbar .info_link {
-    margin: 0 2em; }
+    margin: 0 2em 0 0; }
   .topbar {
-    text-align: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem; } }
 
