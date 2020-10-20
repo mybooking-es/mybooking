@@ -36,6 +36,19 @@
 
 .mybooking-widget_topbar_right .menu-item {
   display: inline-block;
+  margin-left: 16px;
+}
+
+@media (max-width: 991.98px) {
+.topbar .info_link {
+    margin: 0 2em 0 0;
+	}
+}
+
+@media (max-width: 991.98px) {
+.topbar {
+    text-align: left;
+	}
 }
 
 // Topbar message
