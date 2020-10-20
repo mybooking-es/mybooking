@@ -38,6 +38,10 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.37 =
+* Updated: TopBar styling
+* Updated: Mybooking Home Template shows last 3 posts
+
 = 0.9.36 =
 * Updated: Review translations
 * Added: Remove all carrousel images
@@ -143,6 +147,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.37 =
+* Updated: Mybooking Home Template shows last 3 posts
 
 = 0.9.36 =
 * Added: Remove all carrousel images
@@ -283,6 +290,5 @@ MyBooking assets created for MyBooking. License: CC0 Public Domain
 * close-icon.png
 * right-arrow-icon.png
 * cd-top-arrow-icon.svg
-* default-avatar.png
 * default-image.png
 * key_characteristics 

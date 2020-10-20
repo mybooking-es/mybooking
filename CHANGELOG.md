@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.9.37] 2020-10-20
+
+### Deleted
+- Mybooking Home category references
+- Unused default_avatar.png
+
+### Updated
+- TopBar style
+
 ## [0.9.36] 2020-10-19
 
 ### Updated
