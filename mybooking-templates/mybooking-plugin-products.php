@@ -33,41 +33,42 @@
 
   <!-- Pagination -->
   <?php if ($args['total_pages'] > 1) { ?>
-  <div class="row">
-    <div class="col-md-12">
-      <nav aria-label="<?php echo esc_attr_x( 'Page navigation', 'renting_products_list', 'mybooking' ); ?>" class="pull-right">
-        <ul class="pagination">
-          <?php $mybooking_disabled_previous = ($args['current_page'] == 1 ? 'disabled' : '') ?>
-          <li class="page-item <?php echo esc_attr( $mybooking_disabled_previous ) ?>">
-            <a class="page-link"
-               href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']-1).$args['querystring'] ) ?>">
-              <?php echo esc_html_x('Previous','renting_products','mybooking'); ?></a>
-          </li>
-          <?php foreach ($args['pages'] as $mybooking_page) { ?>
-            <?php if ($mybooking_page == $args['current_page']) { ?>
-              <li class="page-item active" aria-current="page">
-                <span class="page-link">
-                  <?php echo esc_html( $mybooking_page ) ?>
-                </span>
-              </li>
-            <?php } else { ?>
-              <li class="page-item">
-                <a class="page-link"
-                  href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($mybooking_page).$args['querystring'] ) ?>">
-                  <?php echo esc_html( $mybooking_page ) ?></a>
-              </li>
+    <?php $mybooking_querystring = array_key_exists('querystring', $args) ? $args['querystring'] : '' ?>
+    <div class="row">
+      <div class="col-md-12">
+        <nav aria-label="<?php echo esc_attr_x( 'Page navigation', 'renting_products_list', 'mybooking' ); ?>" class="pull-right">
+          <ul class="pagination">
+            <?php $mybooking_disabled_previous = ($args['current_page'] == 1 ? 'disabled' : '') ?>
+            <li class="page-item <?php echo esc_attr( $mybooking_disabled_previous ) ?>">
+              <a class="page-link"
+                 href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']-1).$mybooking_querystring ) ?>">
+                <?php echo esc_html_x('Previous','renting_products','mybooking'); ?></a>
+            </li>
+            <?php foreach ($args['pages'] as $mybooking_page) { ?>
+              <?php if ($mybooking_page == $args['current_page']) { ?>
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">
+                    <?php echo esc_html( $mybooking_page ) ?>
+                  </span>
+                </li>
+              <?php } else { ?>
+                <li class="page-item">
+                  <a class="page-link"
+                    href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($mybooking_page).$mybooking_querystring ) ?>">
+                    <?php echo esc_html( $mybooking_page ) ?></a>
+                </li>
+              <?php } ?>
             <?php } ?>
-          <?php } ?>
-          <?php $mybooking_disabled_next = ($args['current_page'] == $args['total_pages'] ? 'disabled' : '') ?>
-          <li class="page-item <?php echo esc_attr( $mybooking_disabled_next ) ?>">
-            <a class="page-link"
-               href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']+1).$args['querystring'] ) ?>">
-              <?php echo esc_html_x('Next','renting_products','mybooking'); ?></a>
-          </li>
-        </ul>
-      </nav>
+            <?php $mybooking_disabled_next = ($args['current_page'] == $args['total_pages'] ? 'disabled' : '') ?>
+            <li class="page-item <?php echo esc_attr( $mybooking_disabled_next ) ?>">
+              <a class="page-link"
+                 href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']+1).$mybooking_querystring ) ?>">
+                <?php echo esc_html_x('Next','renting_products','mybooking'); ?></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
   <?php } ?>
 
 </section>

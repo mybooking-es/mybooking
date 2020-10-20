@@ -38,6 +38,9 @@ You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
+= 0.9.39 =
+* Updated: Templates review
+
 = 0.9.38 =
 * Updated: Templates review
 
@@ -150,6 +153,9 @@ You can also setup the company and contact information on Theme options
 * First release
 
 == Upgrade Notice ==
+
+= 0.9.39 =
+* Updated: Templates review
 
 = 0.9.38 =
 * Updated: Templates review

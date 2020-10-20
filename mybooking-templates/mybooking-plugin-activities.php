@@ -79,6 +79,7 @@
   </div>
   <!-- Pagination -->
   <?php if ($args['total_pages'] > 1) { ?>
+    <?php $mybooking_querystring = array_key_exists('querystring', $args) ? $args['querystring'] : '' ?>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -87,7 +88,7 @@
               <?php $mybooking_disabled_previous = ($args['current_page'] == 1 ? 'disabled' : '') ?>              
               <li class="page-item <?php echo esc_attr( $mybooking_disabled_previous ) ?>">
                 <a class="page-link"
-                   href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']-1).$args['querystring'] ) ?>">
+                   href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']-1).$mybooking_querystring ) ?>">
                    <?php echo esc_html_x( 'Previous', 'activities_list', 'mybooking' ) ?></a>
               </li>
               <?php foreach ($args['pages'] as $mybooking_page) { ?>
@@ -100,7 +101,7 @@
                 <?php } else { ?>
                   <li class="page-item">
                     <a class="page-link"
-                       href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($mybooking_page).$args['querystring'] )?>">
+                       href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($mybooking_page).$mybooking_querystring )?>">
                       <?php echo esc_html( $mybooking_page ) ?></a>
                   </li>
                 <?php } ?>
@@ -108,7 +109,7 @@
               <?php $mybooking_disabled_next = ($args['current_page'] == $args['total_pages'] ? 'disabled' : '') ?>
               <li class="page-item <?php echo esc_attr( $mybooking_disabled_next ) ?>">
                 <a class="page-link"
-                   href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']+1).$args['querystring'] )?>">
+                   href="<?php echo esc_url( '/'.$args['url'].'?offsetpage='.($args['current_page']+1).$mybooking_querystring )?>">
                   <?php echo esc_html_x( 'Next', 'activities_list', 'mybooking' ) ?></a>
               </li>
             </ul>
