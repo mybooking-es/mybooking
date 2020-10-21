@@ -55,7 +55,7 @@ EOT;
 
 		}
 
-		return wp_kses_post( $result ); 
+		return wp_kses_post( $result ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
@@ -72,7 +72,7 @@ if ( ! function_exists( 'mybooking_site_description' ) ) {
                         							esc_html( get_bloginfo( 'description' ) ) );
     }
 
-    return wp_kses_post( $result ); 
+    return wp_kses_post( $result ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 }
