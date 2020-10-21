@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <div class="header-titles">
   
-  <?php echo mybooking_site_logo() ?>
-  <?php echo mybooking_site_description() ?>
+  <?php echo wp_kses_post( mybooking_site_logo() ) ?>
+  <?php echo wp_kses_post( mybooking_site_description() ) ?>
 
 </div>
