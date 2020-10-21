@@ -15,12 +15,11 @@ defined( 'ABSPATH' ) || exit;
 
   <?php while ( have_posts() ) : the_post(); ?>
 
-    <?php $mybooking_home_content = apply_filters('the_content', get_the_content()); ?>
-    <?php if ( !empty( $mybooking_home_content ) ) : ?>
+    <?php if ( !empty( get_the_content() ) ) : ?>
       <div class="container page_content">
         <div class="row">
           <div class="col">
-            <?php echo $mybooking_home_content; ?>
+            <?php the_content(); ?>
           </div>
         </div>
       </div>
