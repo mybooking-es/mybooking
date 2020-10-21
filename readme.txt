@@ -15,31 +15,35 @@ Bootsrap based theme that improves MyBooking Reservation Engine plugin user expe
 == Description ==
 
 Bootstrap based theme. Forked from Understrap, it has been improved in order the support
-woocommerce and improve MyBooking Reservation Engine user experience.
+woocommerce and improve MyBooking Reservation Engine plugin user experience.
 
 Characteristics:
 
 - JS and CSS gulp build process.
 - Bootstrap 4
-- MyBooking Reservation Engine plugin integration
-- Woocommerce integration
-- It defines four templates:
+- Color customization
+- Footer areas
+- Google Fonts
+- Four templates
   - MyBooking Home for creating the homepage with a video, slide or photo
   - MyBooking Empty page for creating content with a page builder
   - MyBooking Contact for creating contact page
   - MyBooking Landing for creating landing pages
+- MyBooking Reservation Engine plugin integration.
+- Woocommerce integration
 
 == Frequently Asked Questions ==
 
 = How do I change theme settings? =
 
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
-You can also setup the company and contact information on Theme options
 
 == Changelog ==
 
 = 0.9.40 =
 * Updated: Theme review
+  - Tagline visualization
+  - Controlling MyBooking Home Template widgets areas, content and news visualization
 
 = 0.9.39 =
 * Updated: Templates review

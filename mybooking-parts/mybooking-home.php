@@ -17,6 +17,7 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- MYBOOKING PARTIALS -->
 <div id="content">
+	
 	<!-- Header -->
 	<?php get_template_part( 'mybooking-parts/home/mybooking-home-header' ); ?>
 

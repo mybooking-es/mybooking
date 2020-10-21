@@ -73,66 +73,54 @@ if ( ! function_exists( 'mybooking_widgets_init' ) ) {
 		);
 
 		// Home Widgets Top
-		$mybooking_widgets_top_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_top_widgets_visibility" );
-		if ( $mybooking_widgets_top_visible == "1" )
-		{
-			register_sidebar(
-				array(
-					'name'          => _x( 'Mybooking Home Template Top','mybooking_widgets','mybooking' ),
-					'id'            => 'home_widgets_top',
-					'description'   => _x( 'Mybooking Home Template widgets area at top','mybooking_widgets','mybooking' ),
-					'before_widget' => '<div id="%1$s" class="mybooking-widget widget-home-bottom %2$s">',
-					'after_widget'  => '</div>',
-				)
-			);
-		} // Widgets Bottom
+		register_sidebar(
+			array(
+				'name'          => _x( 'Mybooking Home Template Top','mybooking_widgets','mybooking' ),
+				'id'            => 'home_widgets_top',
+				'description'   => _x( 'Mybooking Home Template widgets area at top','mybooking_widgets','mybooking' ),
+				'before_widget' => '<div id="%1$s" class="mybooking-widget widget-home-bottom %2$s">',
+				'after_widget'  => '</div>',
+			)
+		);
 
 		// Home Widgets Center
-		$mybooking_widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_center_widgets_visibility" );
-		if ( $mybooking_widgets_visible == "1")
-		{
-			register_sidebar(
-				array(
-					'name'          => _x( 'Mybooking Home Template Center One', 'mybooking_widgets', 'mybooking' ),
-					'id'            => 'home_widgets_center_1',
-					'description'   => _x( 'Mybooking Home Template Center One', 'mybooking_widgets', 'mybooking' ),
-					'before_widget' => '<div id="%1$s" class="mybooking-widget widget-1 %2$s">',
-					'after_widget'  => '</div>',
-				)
-			);
-			register_sidebar(
-				array(
-					'name'          => _x( 'Mybooking Home Template Center Two', 'mybooking_widgets', 'mybooking' ),
-					'id'            => 'home_widgets_center_2',
-					'description'   => _x( 'Mybooking Home Template Center Two', 'mybooking_widgets', 'mybooking' ),
-					'before_widget' => '<div id="%1$s" class="mybooking-widget widget-2 %2$s">',
-					'after_widget'  => '</div>',
-				)
-			);
-			register_sidebar(
-				array(
-					'name'          => _x( 'Mybooking Home Template Center Three', 'mybooking_widgets', 'mybooking' ),
-					'id'            => 'home_widgets_center_3',
-					'description'   => _x( 'Mybooking Home Template Center Three', 'mybooking_widgets', 'mybooking' ),
-					'before_widget' => '<div id="%1$s" class="mybooking-widget widget-3 %2$s">',
-					'after_widget'  => '</div>',
-				)
-			);
-		} // Home Widgets Center
+		register_sidebar(
+			array(
+				'name'          => _x( 'Mybooking Home Template Center One', 'mybooking_widgets', 'mybooking' ),
+				'id'            => 'home_widgets_center_1',
+				'description'   => _x( 'Mybooking Home Template Center One', 'mybooking_widgets', 'mybooking' ),
+				'before_widget' => '<div id="%1$s" class="mybooking-widget widget-1 %2$s">',
+				'after_widget'  => '</div>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => _x( 'Mybooking Home Template Center Two', 'mybooking_widgets', 'mybooking' ),
+				'id'            => 'home_widgets_center_2',
+				'description'   => _x( 'Mybooking Home Template Center Two', 'mybooking_widgets', 'mybooking' ),
+				'before_widget' => '<div id="%1$s" class="mybooking-widget widget-2 %2$s">',
+				'after_widget'  => '</div>',
+			)
+		);
+		register_sidebar(
+			array(
+				'name'          => _x( 'Mybooking Home Template Center Three', 'mybooking_widgets', 'mybooking' ),
+				'id'            => 'home_widgets_center_3',
+				'description'   => _x( 'Mybooking Home Template Center Three', 'mybooking_widgets', 'mybooking' ),
+				'before_widget' => '<div id="%1$s" class="mybooking-widget widget-3 %2$s">',
+				'after_widget'  => '</div>',
+			)
+		);
 
-		$mybooking_widgets_bottom_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_bottom_widgets_visibility" );
-		if ( $mybooking_widgets_bottom_visible == "1" )
-		{
-			register_sidebar(
-				array(
-					'name'          => _x( 'Mybooking Home Template Bottom','mybooking_widgets','mybooking' ),
-					'id'            => 'home_widgets_bottom',
-					'description'   => _x( 'Mybooking Home Template bottom widgets area','mybooking_widgets','mybooking' ),
-					'before_widget' => '<div id="%1$s" class="mybooking-widget widget-home-bottom %2$s">',
-					'after_widget'  => '</div>',
-				)
-			);
-		} // Home Widgets Bottom
+		register_sidebar(
+			array(
+				'name'          => _x( 'Mybooking Home Template Bottom','mybooking_widgets','mybooking' ),
+				'id'            => 'home_widgets_bottom',
+				'description'   => _x( 'Mybooking Home Template bottom widgets area','mybooking_widgets','mybooking' ),
+				'before_widget' => '<div id="%1$s" class="mybooking-widget widget-home-bottom %2$s">',
+				'after_widget'  => '</div>',
+			)
+		);
 
 		// Blog
 		register_sidebar(

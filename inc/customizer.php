@@ -19,14 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 	/**
-	 *
-	 * mybooking_home_header_visibility
-	 * mybooking_home_content_visibility
-	 * mybooking_home_news_visibility
-	 * mybooking_home_testimonial_carousel_visibility
-	 * mybooking_home_top_widgets_visibility
-	 * mybooking_home_center_widgets_visibility
-	 * mybooking_home_bottom_widgets_visibility
+	 * Customizer class
 	 *
 	 */
 	class MyBookingCustomizer {
@@ -105,7 +98,6 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 				$this->customize_layout_section( $wp_customize );
 				$this->customize_typography_section( $wp_customize );
 				$this->customize_colors_section( $wp_customize );
-				$this->customize_home_section( $wp_customize );
 				$this->customize_topbar_section( $wp_customize );
 				$this->customize_navbar_section( $wp_customize );
 				$this->customize_header_section( $wp_customize );
@@ -399,21 +391,6 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 
 			  	// Home Header visibility at Home Template: "1" visible "0" not visible
 			  	$this->theme_options['mybooking_home_header_visibility'] = get_theme_mod( "mybooking_home_header_visibility", "1" );
-
-					// Home Top Widgets visibility at Home Template: "1" visible "0" not visible
-					$this->theme_options['mybooking_home_top_widgets_visibility'] = get_theme_mod( 'mybooking_home_top_widgets_visibility', "1" );
-
-			  	// Home Content visibility at Home Template: "1" visible "0" not visible
-			  	$this->theme_options['mybooking_home_content_visibility'] = get_theme_mod( "mybooking_home_content_visibility", "1" );
-
-					// Home Center Widgets visibility at Home Template: "1" visible "0" not visible
-					$this->theme_options['mybooking_home_center_widgets_visibility'] = get_theme_mod( 'mybooking_home_center_widgets_visibility', "1" );
-
-			  	// Home News visibility at Home Template: "1" visible "0" not visible
-			  	$this->theme_options['mybooking_home_news_visibility'] = get_theme_mod( 'mybooking_home_news_visibility', "1" );
-
-					// Home Bottom Widgets visibility at Home Template: "1" visible "0" not visible
-					$this->theme_options['mybooking_home_bottom_widgets_visibility'] = get_theme_mod( 'mybooking_home_bottom_widgets_visibility', "1" );
 
 			  	// Header Background
 			  	$header_bg = get_theme_mod( 'mybooking_home_header_bg' );
@@ -2022,127 +1999,6 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 		 				) ) );
 
 			}
-
-
-			/**
-	     * 	Customize Home Section
-			 *	----------------------
-			 *
-			 *	We don't use section declaration here because these controls appears in
-			 *	Homepage Settings section
-	     */
-
-	    private function customize_home_section( $wp_customize )
-			{
-
-				// == Widgets Top section positioning and visibility
-
-				// --Visibility
-
-				// Setting
-				$wp_customize->add_setting( 'mybooking_home_top_widgets_visibility' , array(
-				    'default'   => '1',
-				    'transport' => 'refresh',
-				    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
-				) );
-
-				// Control
-				$wp_customize->add_control( 'mybooking_home_top_widgets_visibility',
-				   array(
-				      'label' => _x( 'Activate home top widgets', 'customizer_home', 'mybooking' ),
-				      'section'  => 'static_front_page',
-				      'priority' => 10,
-				      'type'=> 'checkbox',
-				      'capability' => 'edit_theme_options',
-				   )
-				);
-
-				// --Visibility
-
-				// Setting
-				$wp_customize->add_setting( 'mybooking_home_content_visibility' , array(
-				    'default'   => '1',
-				    'transport' => 'refresh',
-						'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
-				) );
-
-				// Control
-				$wp_customize->add_control( 'mybooking_home_content_visibility',
-				   array(
-				      'label' => _x( 'Activate deafult content area', 'customizer_home', 'mybooking' ),
-				      'section'  => 'static_front_page',
-				      'type'=> 'checkbox',
-				      'capability' => 'edit_theme_options',
-				   )
-				);
-
-				// == Widgets Center section positioning and visibility
-
-				// --Visibility
-
-				// Setting
-				$wp_customize->add_setting( 'mybooking_home_center_widgets_visibility' , array(
-				    'default'   => '1',
-				    'transport' => 'refresh',
-				    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
-				) );
-
-				// Control
-				$wp_customize->add_control( 'mybooking_home_center_widgets_visibility',
-				   array(
-				      'label' => _x( 'Activate content widgets', 'customizer_home', 'mybooking' ),
-				      'section'  => 'static_front_page',
-				      'priority' => 10,
-				      'type'=> 'checkbox',
-				      'capability' => 'edit_theme_options',
-				   )
-				);
-
-				// == News section positioning and visibility
-
-				// --Visibility
-
-				// Setting
-				$wp_customize->add_setting( 'mybooking_home_news_visibility' , array(
-				    'default'   => '1',
-				    'transport' => 'refresh',
-				    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
-				) );
-
-				// Content
-				$wp_customize->add_control( 'mybooking_home_news_visibility',
-				   array(
-				      'label' => _x( 'Activate news', 'customizer_home', 'mybooking' ),
-				      'section'  => 'static_front_page',
-				      'type'=> 'checkbox',
-				      'capability' => 'edit_theme_options',
-				   )
-				);
-
-				// == Widgets Bottom section positioning and visibility
-
-				// --Visibility
-
-				// Setting
-				$wp_customize->add_setting( 'mybooking_home_bottom_widgets_visibility' , array(
-				    'default'   => '1',
-				    'transport' => 'refresh',
-				    'sanitize_callback' => array( $this, 'slug_sanitize_checkbox')
-				) );
-
-				// Control
-				$wp_customize->add_control( 'mybooking_home_bottom_widgets_visibility',
-				   array(
-				      'label' => _x( 'Activate home bottom widgets', 'customizer_home', 'mybooking' ),
-				      'section'  => 'static_front_page',
-				      'priority' => 10,
-				      'type'=> 'checkbox',
-				      'capability' => 'edit_theme_options',
-				   )
-				);
-
-	    }
-
 
 			/**
 	     * 	Customize Identity Section

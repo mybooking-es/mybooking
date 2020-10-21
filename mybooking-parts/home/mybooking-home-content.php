@@ -13,26 +13,27 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php $mybooking_content_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_content_visibility" ); ?>
-<?php if ($mybooking_content_visible == "1") { ?>
-  <div class="container page_content">
-    <div class="row">
-      <div class="col">
+  <?php while ( have_posts() ) : the_post(); ?>
 
-        <?php while ( have_posts() ) : the_post(); ?>
-          
-          <?php the_content(); ?>
-
-          <?php
-          // If comments are open or we have at least one comment, load up the comment template.
-          if ( comments_open() || get_comments_number() ) :
-            comments_template();
-          endif;
-          ?>
-
-        <?php endwhile;?>
-
+    <?php $mybooking_home_content = apply_filters('the_content', get_the_content()); ?>
+    <?php if ( !empty( $mybooking_home_content ) ) : ?>
+      <div class="container page_content">
+        <div class="row">
+          <div class="col">
+            <?php echo $mybooking_home_content; ?>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-<?php } ?>
+    <?php else: ?>
+      <?php the_content(); ?>
+    <?php endif;?>
+
+    <?php
+    // If comments are open or we have at least one comment, load up the comment template.
+    if ( comments_open() || get_comments_number() ) :
+      comments_template();
+    endif;
+    ?>
+
+  <?php endwhile;?>
+

@@ -12,8 +12,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit; ?>
 
-<?php $mybooking_widgets_visible = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_center_widgets_visibility" ); ?>
-<?php if ($mybooking_widgets_visible == "1") { ?>
+<?php if ( is_active_sidebar( 'home_widgets_center_1' ) || is_active_sidebar( 'home_widgets_center_2' ) || 
+           is_active_sidebar( 'home_widgets_center_3' ) ) { ?>
   <div class="home-widgets">
     <div class="container" tabindex="-1">
       <div class="row">

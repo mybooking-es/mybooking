@@ -4,6 +4,8 @@
 
 ### Updated
 - Theme review
+  - Tagline visualization
+  - Controlling MyBooking Home Template widgets areas, content and news visualization
 
 ## [0.9.39] 2020-10-20
 
