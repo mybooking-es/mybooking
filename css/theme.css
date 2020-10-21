@@ -27191,6 +27191,14 @@ h2.comments-title {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
+.site-title {
+  font-weight: 700;
+  color: var(--navbar-branding) !important;
+  font-family: var(--font-heading); }
+
+.site-title:hover {
+  text-decoration: underline; }
+
 .site-description {
   display: none; }
 
