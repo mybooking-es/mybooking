@@ -14,7 +14,7 @@ theme, so we can fully customize it.
 **Theme URI:** https://github.com/mybooking-es/mybooking  
 **Contributors:** MyBooking Team - hectorasencio marcelreig juanmiqueo 
 **Requires at least:** WordPress 5.2  
-**Version:** 0.9.39  
+**Version:** 0.9.40  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** e-commerce
@@ -61,23 +61,67 @@ MyBooking theme defines three templates:
 
 #### MyBooking Home Template
 
-It is an special template used to build the homepage. Below the navigation menu
-is shown an image/video/carrousel with two widgets areas, Header Right and Header
-Left, so a message or form can be placed over the image.
+It is an special template used to build the homepage. 
 
-Moreover it has some areas that widgets areas that are show above and below the
-page content. They allow to place any widget like banners, news, testimonials, a
-map, ... so it can be used to show dynamic content.
+The home template has the following areas that are rendered in the following order
+
+- The header
+- MyBooking Home Template Top widgets
+- Content 
+- Mybooking Home Template Center widgets
+- News
+- MyBooking Home Template Bottom widgets
+
+In the customizer > Home Page you can configure which of this components will be shown
+
+##### The header
+
+The header can be configured in the customizer: MyBooking Theme > Header
+
+It renders a background that can be made by a photo, a video or a carrousel.
+In two the background two widget areas are available, mybooking_home_derecha (at right)
+and mybooking_home_izquierda (at left). 
+
+The layout can also be configured in the customizer. It means the width porcentage
+of the widgets areas and if the must be placed in columns or in rows.
+
+##### Top widgets area
+
+It allows to place some widgets between the header and the content.
+
+##### The content
+
+Where the page content is placed
+
+##### Center Widgets
+
+There are up to three widgets areas that can used below the content. They are shown in
+a row.
+
+##### News
+
+The last three posts are show
+
+##### Bottom widgets
+
+Below the news another widget area that can be used to render extra information.
 
 #### MyBooking Contact Template
 
 It is a basic template to create a contact page. It shows the map with the location
 of the company office. Moreover, it has a widget area where any contact form can
-be placed.
+be placed. It can be integrated with any plugin that offers a contact form as a
+widget.
+
+#### MyBooking Landing Template
+
+It is a template used to create landing pages with the page featured image at full
+width an a widget area to include any required widget.
 
 #### MyBooking Empty Template
 
-It is an empty template that can be used with any PageBuild to create custom contents.
+It is an empty template that can be used with any page builder to create custom contents.
+It does not show the page title.
 
 ### Customizer
 

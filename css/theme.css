@@ -27181,6 +27181,23 @@ h2.comments-title {
   .navbar-nav {
     display: -webkit-box !important; } }
 
+.header-titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.site-description {
+  display: none; }
+
+@media (min-width: 700px) {
+  .site-description {
+    display: block; } }
+
 .custom-logo-link img {
   height: var(--custom-logo-height);
   overflow: hidden;

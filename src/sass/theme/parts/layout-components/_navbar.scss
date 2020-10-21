@@ -30,6 +30,23 @@
 }
 
 // Branding
+
+.header-titles {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.site-description {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .site-description {
+    display: block;
+  }
+}
+
 .custom-logo-link img {
   height: var(--custom-logo-height);
   overflow: hidden;

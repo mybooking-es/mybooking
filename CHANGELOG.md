@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.40] 2020-10-21
+
+### Updated
+- Theme review
+
 ## [0.9.39] 2020-10-20
 
 ### Updated

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-19 23:39+0000\n"
+"POT-Creation-Date: 2020-10-21 14:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -67,9 +67,14 @@ msgctxt "comments"
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: header.php:39
+#: header.php:45
 msgctxt "header"
 msgid "Skip to content"
+msgstr ""
+
+#: footer.php:33
+msgctxt "footer"
+msgid "Top"
 msgstr ""
 
 #: page.php:41 mybooking-parts/blog/mybooking-content-single.php:45
@@ -289,370 +294,370 @@ msgctxt "pagination"
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/customizer.php:481
+#: inc/customizer.php:480
 msgctxt "customizer_panel"
 msgid "Mybooking Theme"
 msgstr ""
 
-#: inc/customizer.php:482
+#: inc/customizer.php:481
 msgctxt "customizer_panel"
 msgid "Customise your installation of Mybooking"
 msgstr ""
 
-#: inc/customizer.php:497 inc/customizer.php:499
+#: inc/customizer.php:496 inc/customizer.php:498
 msgctxt "customizer_company"
 msgid "Contact details"
 msgstr ""
 
-#: inc/customizer.php:514 inc/customizer.php:515 inc/customizer.php:523
+#: inc/customizer.php:513 inc/customizer.php:514 inc/customizer.php:522
 msgctxt "customizer_company"
 msgid "Trade name"
 msgstr ""
 
-#: inc/customizer.php:536 inc/customizer.php:537 inc/customizer.php:545
+#: inc/customizer.php:535 inc/customizer.php:536 inc/customizer.php:544
 msgctxt "customizer_company"
 msgid "Legal name"
 msgstr ""
 
-#: inc/customizer.php:558 inc/customizer.php:559 inc/customizer.php:567
+#: inc/customizer.php:557 inc/customizer.php:558 inc/customizer.php:566
 msgctxt "customizer_company"
 msgid "Vat number"
 msgstr ""
 
-#: inc/customizer.php:583 inc/customizer.php:584 inc/customizer.php:592
+#: inc/customizer.php:582 inc/customizer.php:583 inc/customizer.php:591
 msgctxt "customizer_company"
 msgid "Address"
 msgstr ""
 
-#: inc/customizer.php:606 inc/customizer.php:607 inc/customizer.php:615
+#: inc/customizer.php:605 inc/customizer.php:606 inc/customizer.php:614
 msgctxt "customizer_company"
 msgid "Phone number"
 msgstr ""
 
-#: inc/customizer.php:628 inc/customizer.php:629 inc/customizer.php:637
+#: inc/customizer.php:627 inc/customizer.php:628 inc/customizer.php:636
 msgctxt "customizer_company"
 msgid "WhatsApp number"
 msgstr ""
 
-#: inc/customizer.php:650 inc/customizer.php:651 inc/customizer.php:659
+#: inc/customizer.php:649 inc/customizer.php:650 inc/customizer.php:658
 msgctxt "customizer_company"
 msgid "Email address"
 msgstr ""
 
-#: inc/customizer.php:672 inc/customizer.php:673 inc/customizer.php:681
+#: inc/customizer.php:671 inc/customizer.php:672 inc/customizer.php:680
 msgctxt "customizer_company"
 msgid "Twitter URL"
 msgstr ""
 
-#: inc/customizer.php:694 inc/customizer.php:695 inc/customizer.php:703
+#: inc/customizer.php:693 inc/customizer.php:694 inc/customizer.php:702
 msgctxt "customizer_company"
 msgid "Facebook URL"
 msgstr ""
 
-#: inc/customizer.php:716 inc/customizer.php:717 inc/customizer.php:725
+#: inc/customizer.php:715 inc/customizer.php:716 inc/customizer.php:724
 msgctxt "customizer_company"
 msgid "Instagram URL"
 msgstr ""
 
-#: inc/customizer.php:738 inc/customizer.php:739 inc/customizer.php:747
+#: inc/customizer.php:737 inc/customizer.php:738 inc/customizer.php:746
 msgctxt "customizer_company"
 msgid "Linkedin URL"
 msgstr ""
 
-#: inc/customizer.php:761
+#: inc/customizer.php:760
 msgctxt "customizer_company"
 msgid " YouTube URL"
 msgstr ""
 
-#: inc/customizer.php:762 inc/customizer.php:770
+#: inc/customizer.php:761 inc/customizer.php:769
 msgctxt "customizer_company"
 msgid "YouTube URL"
 msgstr ""
 
-#: inc/customizer.php:786 inc/customizer.php:787
+#: inc/customizer.php:785 inc/customizer.php:786
 msgctxt "customizer_company"
 msgid "Google maps iframe"
 msgstr ""
 
-#: inc/customizer.php:795
+#: inc/customizer.php:794
 msgctxt "customizer_company"
 msgid "Copy Google Maps iframe"
 msgstr ""
 
-#: inc/customizer.php:815
+#: inc/customizer.php:814
 msgctxt "customizer_colors"
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer.php:817
+#: inc/customizer.php:816
 msgctxt "customizer_colors"
 msgid "Theme colors"
 msgstr ""
 
-#: inc/customizer.php:834
+#: inc/customizer.php:833
 msgctxt "customizer_colors"
 msgid "Brand Primary color"
 msgstr ""
 
-#: inc/customizer.php:849
+#: inc/customizer.php:848
 msgctxt "customizer_colors"
 msgid "Brand Primary light color"
 msgstr ""
 
-#: inc/customizer.php:863
+#: inc/customizer.php:862
 msgctxt "customizer_colors"
 msgid "Brand Primary dark color"
 msgstr ""
 
-#: inc/customizer.php:879
+#: inc/customizer.php:878
 msgctxt "customizer_colors"
 msgid "Brand Secondary color"
 msgstr ""
 
-#: inc/customizer.php:893
+#: inc/customizer.php:892
 msgctxt "customizer_colors"
 msgid "Brand Secondary light color"
 msgstr ""
 
-#: inc/customizer.php:907
+#: inc/customizer.php:906
 msgctxt "customizer_colors"
 msgid "Brand Secondary dark color"
 msgstr ""
 
-#: inc/customizer.php:924
+#: inc/customizer.php:923
 msgctxt "customizer_colors"
 msgid "Body Background color"
 msgstr ""
 
-#: inc/customizer.php:940
+#: inc/customizer.php:939
 msgctxt "customizer_colors"
 msgid "Body Text color"
 msgstr ""
 
-#: inc/customizer.php:956
+#: inc/customizer.php:955
 msgctxt "customizer_colors"
 msgid "Headers Text color"
 msgstr ""
 
-#: inc/customizer.php:975
+#: inc/customizer.php:974
 msgctxt "customizer_navbar"
 msgid "NavBar background color"
 msgstr ""
 
-#: inc/customizer.php:993
+#: inc/customizer.php:992
 msgctxt "customizer_navbar"
 msgid "NavBar Link color"
 msgstr ""
 
-#: inc/customizer.php:1010
+#: inc/customizer.php:1009
 msgctxt "customizer_navbar"
 msgid "NavBar Link hover color"
 msgstr ""
 
-#: inc/customizer.php:1027
+#: inc/customizer.php:1026
 msgctxt "customizer_navbar"
 msgid "NavBar Link active color"
 msgstr ""
 
-#: inc/customizer.php:1044
+#: inc/customizer.php:1043
 msgctxt "customizer_navbar"
 msgid "NavBar DropDown Item color"
 msgstr ""
 
-#: inc/customizer.php:1061
+#: inc/customizer.php:1060
 msgctxt "customizer_navbar"
 msgid "NavBar DropDown Item Active color"
 msgstr ""
 
-#: inc/customizer.php:1078
+#: inc/customizer.php:1077
 msgctxt "customizer_navbar"
 msgid "NavBar Link collapse color"
 msgstr ""
 
-#: inc/customizer.php:1095
+#: inc/customizer.php:1094
 msgctxt "customizer_navbar"
 msgid "NavBar Toggler Icon color"
 msgstr ""
 
-#: inc/customizer.php:1112
+#: inc/customizer.php:1111
 msgctxt "customizer_footer"
 msgid "Footer background color"
 msgstr ""
 
-#: inc/customizer.php:1129
+#: inc/customizer.php:1128
 msgctxt "customizer_footer"
 msgid "Footer color"
 msgstr ""
 
-#: inc/customizer.php:1146
+#: inc/customizer.php:1145
 msgctxt "customizer_footer"
 msgid "Footer Link color"
 msgstr ""
 
-#: inc/customizer.php:1163
+#: inc/customizer.php:1162
 msgctxt "customizer_footer"
 msgid "Footer Link hover color"
 msgstr ""
 
-#: inc/customizer.php:1179
+#: inc/customizer.php:1178
 msgctxt "customizer_colors"
 msgid "Activate advanced color mode"
 msgstr ""
 
-#: inc/customizer.php:1180
+#: inc/customizer.php:1179
 msgctxt "customizer_colors"
 msgid ""
 "If <b>checked</b> activates advanced color controls on several Customizer "
 "sections. Uncheck for basic color control (default)."
 msgstr ""
 
-#: inc/customizer.php:1201
+#: inc/customizer.php:1200
 msgctxt "customizer_typography"
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer.php:1203
+#: inc/customizer.php:1202
 msgctxt "customizer_typography"
 msgid "Typography defaults"
 msgstr ""
 
-#: inc/customizer.php:1225
+#: inc/customizer.php:1224
 msgctxt "customizer_typography"
 msgid "Font Body family"
 msgstr ""
 
-#: inc/customizer.php:1226
+#: inc/customizer.php:1225
 msgctxt "customizer_typography"
 msgid "Select the body typography"
 msgstr ""
 
-#: inc/customizer.php:1245
+#: inc/customizer.php:1244
 msgctxt "customizer_typography"
 msgid "Font Heading family"
 msgstr ""
 
-#: inc/customizer.php:1246
+#: inc/customizer.php:1245
 msgctxt "customizer_typography"
 msgid "Select the heading typography"
 msgstr ""
 
-#: inc/customizer.php:1268
+#: inc/customizer.php:1267
 msgctxt "customizer_layout"
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:1270
+#: inc/customizer.php:1269
 msgctxt "customizer_layout"
 msgid "Layout defaults"
 msgstr ""
 
-#: inc/customizer.php:1296
+#: inc/customizer.php:1295
 msgctxt "customizer_layout"
 msgid "Navigation and Topbar container Width"
 msgstr ""
 
-#: inc/customizer.php:1297
+#: inc/customizer.php:1296
 msgctxt "customizer_layout"
 msgid "Choose between Bootstrap's container and container-fluid"
 msgstr ""
 
-#: inc/customizer.php:1304
+#: inc/customizer.php:1303
 msgctxt "customizer_layout"
 msgid "Boxed navbar and topbar"
 msgstr ""
 
-#: inc/customizer.php:1305
+#: inc/customizer.php:1304
 msgctxt "customizer_layout"
 msgid "Full width navbar and topbar"
 msgstr ""
 
-#: inc/customizer.php:1325 inc/customizer.php:1327
+#: inc/customizer.php:1324 inc/customizer.php:1326
 msgctxt "customizer_topbar"
 msgid "Top Bar"
 msgstr ""
 
-#: inc/customizer.php:1344
+#: inc/customizer.php:1343
 msgctxt "customizer_topbar"
 msgid "Top Bar active"
 msgstr ""
 
-#: inc/customizer.php:1345
+#: inc/customizer.php:1344
 msgctxt "customizer_topbar"
 msgid ""
 "If checked the TopBar will be shown on top of pages with company information "
 "and warning message. Uncheck to hide the TopBar"
 msgstr ""
 
-#: inc/customizer.php:1369
+#: inc/customizer.php:1368
 msgctxt "customizer_topbar"
 msgid "Home Topbar Background"
 msgstr ""
 
-#: inc/customizer.php:1370
+#: inc/customizer.php:1369
 msgctxt "customizer_topbar"
 msgid ""
 "This setting affects ONLY the home page topbar. You can set transparency for "
 "better integration when navbar's Transparent Header option is checked."
 msgstr ""
 
-#: inc/customizer.php:1387
+#: inc/customizer.php:1386
 msgctxt "customizer_topbar"
 msgid "Topbar Background"
 msgstr ""
 
-#: inc/customizer.php:1403
+#: inc/customizer.php:1402
 msgctxt "customizer_topbar"
 msgid "Topbar Text"
 msgstr ""
 
-#: inc/customizer.php:1419
+#: inc/customizer.php:1418
 msgctxt "customizer_topbar"
 msgid "Topbar Link"
 msgstr ""
 
-#: inc/customizer.php:1435
+#: inc/customizer.php:1434
 msgctxt "customizer_topbar"
 msgid "Topbar Link Hover"
 msgstr ""
 
-#: inc/customizer.php:1454
+#: inc/customizer.php:1453
 msgctxt "customizer_topbar"
 msgid "Notice Background"
 msgstr ""
 
-#: inc/customizer.php:1470
+#: inc/customizer.php:1469
 msgctxt "customizer_topbar"
 msgid "Notice Text"
 msgstr ""
 
-#: inc/customizer.php:1486
+#: inc/customizer.php:1485
 msgctxt "customizer_topbar"
 msgid "Notice Link"
 msgstr ""
 
-#: inc/customizer.php:1502
+#: inc/customizer.php:1501
 msgctxt "customizer_topbar"
 msgid "Notice Link Hover"
 msgstr ""
 
-#: inc/customizer.php:1521
+#: inc/customizer.php:1520
 msgctxt "customizer_navbar"
 msgid "Nav Bar"
 msgstr ""
 
-#: inc/customizer.php:1523
+#: inc/customizer.php:1522
 msgctxt "customizer_navbar"
 msgid ""
 "Settings for toggler position, header integration and background and menu "
 "colors"
 msgstr ""
 
-#: inc/customizer.php:1540
+#: inc/customizer.php:1539
 msgctxt "customizer_navbar"
 msgid "Transparent Header"
 msgstr ""
 
-#: inc/customizer.php:1541
+#: inc/customizer.php:1540
 msgctxt "customizer_navbar"
 msgid ""
 "If <b>checked</b> the navbar will be shown overlapped with Header section "
@@ -660,264 +665,264 @@ msgid ""
 "Header section"
 msgstr ""
 
-#: inc/customizer.php:1562
+#: inc/customizer.php:1561
 msgctxt "customizer_navbar"
 msgid "Mobile Toggler Position"
 msgstr ""
 
-#: inc/customizer.php:1563
+#: inc/customizer.php:1562
 msgctxt "customizer_navbar"
 msgid "Toggler position on mobile devices"
 msgstr ""
 
-#: inc/customizer.php:1568
+#: inc/customizer.php:1567
 msgctxt "customizer_navbar"
 msgid "Right"
 msgstr ""
 
-#: inc/customizer.php:1569
+#: inc/customizer.php:1568
 msgctxt "customizer_navbar"
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:1587
+#: inc/customizer.php:1586
 msgctxt "customizer_home"
 msgid "Header"
 msgstr ""
 
-#: inc/customizer.php:1589
+#: inc/customizer.php:1588
 msgctxt "customizer_header"
 msgid "Defines header's background type and widget's columns layout"
 msgstr ""
 
-#: inc/customizer.php:1608
+#: inc/customizer.php:1607
 msgctxt "customizer_header"
 msgid "Home Header visible"
 msgstr ""
 
-#: inc/customizer.php:1628
+#: inc/customizer.php:1627
 msgctxt "customizer_header"
 msgid "Header section background"
 msgstr ""
 
-#: inc/customizer.php:1629
+#: inc/customizer.php:1628
 msgctxt "customizer_header"
 msgid "Define the header section background"
 msgstr ""
 
-#: inc/customizer.php:1634 inc/customizer.php:1656
+#: inc/customizer.php:1633 inc/customizer.php:1655
 msgctxt "customizer_header"
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer.php:1635
+#: inc/customizer.php:1634
 msgctxt "customizer_header"
 msgid "Video"
 msgstr ""
 
-#: inc/customizer.php:1636
+#: inc/customizer.php:1635
 msgctxt "customizer_header"
 msgid "Carrousel"
 msgstr ""
 
-#: inc/customizer.php:1678
+#: inc/customizer.php:1677
 msgctxt "customizer_header"
 msgid "Background Video"
 msgstr ""
 
-#: inc/customizer.php:1700
+#: inc/customizer.php:1699
 msgctxt "customizer_header"
 msgid "Background Carrousel"
 msgstr ""
 
-#: inc/customizer.php:1719
+#: inc/customizer.php:1718
 msgctxt "customizer_header"
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:1720
+#: inc/customizer.php:1719
 msgctxt "customizer_header"
 msgid "Define the widget areas on header layout"
 msgstr ""
 
-#: inc/customizer.php:1725
+#: inc/customizer.php:1724
 #, php-format
 msgctxt "customizer_header"
 msgid "Two columns (50% - 50%)"
 msgstr ""
 
-#: inc/customizer.php:1726
+#: inc/customizer.php:1725
 #, php-format
 msgctxt "customizer_header"
 msgid "Two columns (33% - 66%)"
 msgstr ""
 
-#: inc/customizer.php:1727
+#: inc/customizer.php:1726
 #, php-format
 msgctxt "customizer_header"
 msgid "Two columns (66% - 33%)"
 msgstr ""
 
-#: inc/customizer.php:1728
+#: inc/customizer.php:1727
 msgctxt "customizer_home"
 msgid "One column"
 msgstr ""
 
-#: inc/customizer.php:1748
+#: inc/customizer.php:1747
 msgctxt "customizer_header"
 msgid "Header Widget Title color"
 msgstr ""
 
-#: inc/customizer.php:1765
+#: inc/customizer.php:1764
 msgctxt "customizer_header"
 msgid "Header Widget Text color"
 msgstr ""
 
-#: inc/customizer.php:1782
+#: inc/customizer.php:1781
 msgctxt "customizer_header"
 msgid "Header Widget Link color"
 msgstr ""
 
-#: inc/customizer.php:1806
+#: inc/customizer.php:1805
 msgctxt "customizer_header"
 msgid "Widget Title Align"
 msgstr ""
 
-#: inc/customizer.php:1811 inc/customizer.php:1843
+#: inc/customizer.php:1810 inc/customizer.php:1842
 msgctxt "customizer_header"
 msgid "Default to the left"
 msgstr ""
 
-#: inc/customizer.php:1812 inc/customizer.php:1844
+#: inc/customizer.php:1811 inc/customizer.php:1843
 msgctxt "customizer_header"
 msgid "Align center"
 msgstr ""
 
-#: inc/customizer.php:1813 inc/customizer.php:1845
+#: inc/customizer.php:1812 inc/customizer.php:1844
 msgctxt "customizer_header"
 msgid "Align right"
 msgstr ""
 
-#: inc/customizer.php:1838
+#: inc/customizer.php:1837
 msgctxt "customizer_header"
 msgid "Widget Text Align"
 msgstr ""
 
-#: inc/customizer.php:1866
+#: inc/customizer.php:1865
 msgctxt "customizer_footer"
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer.php:1868
+#: inc/customizer.php:1867
 msgctxt "customizer_footer"
 msgid ""
 "Controls footer layout and, if advanced mode enabled on Colors section, also "
 "background and link colors."
 msgstr ""
 
-#: inc/customizer.php:1888
+#: inc/customizer.php:1887
 msgctxt "customizer_footer"
 msgid "Footer layout"
 msgstr ""
 
-#: inc/customizer.php:1889
+#: inc/customizer.php:1888
 msgctxt "customizer_footer"
 msgid "Footer layout (managed with widget areas)"
 msgstr ""
 
-#: inc/customizer.php:1894
+#: inc/customizer.php:1893
 msgctxt "customizer_footer"
 msgid "Four columns"
 msgstr ""
 
-#: inc/customizer.php:1895
+#: inc/customizer.php:1894
 msgctxt "customizer_footer"
 msgid "Minimal (show only copyright)"
 msgstr ""
 
-#: inc/customizer.php:1913
+#: inc/customizer.php:1912
 msgctxt "customizer_topbar"
 msgid "Footer message"
 msgstr ""
 
-#: inc/customizer.php:1914
+#: inc/customizer.php:1913
 msgctxt "customizer_topbar"
 msgid "Footer detailed message"
 msgstr ""
 
-#: inc/customizer.php:1922
+#: inc/customizer.php:1921
 msgctxt "customizer_footer"
 msgid "Detail message on Footer."
 msgstr ""
 
-#: inc/customizer.php:1942
+#: inc/customizer.php:1941
 msgctxt "customizer_selector"
 msgid "Booking Forms"
 msgstr ""
 
-#: inc/customizer.php:1943
+#: inc/customizer.php:1942
 msgctxt "customizer_selector"
 msgid "Controls the booking forms apperance on Home and process pages."
 msgstr ""
 
-#: inc/customizer.php:1964
+#: inc/customizer.php:1963
 msgctxt "customizer_selector"
 msgid "Home Booking Form background"
 msgstr ""
 
-#: inc/customizer.php:1965
+#: inc/customizer.php:1964
 msgctxt "customizer_selector"
 msgid ""
 "Usefull when the form is placed inside the Header and needs some "
 "transparency."
 msgstr ""
 
-#: inc/customizer.php:1983
+#: inc/customizer.php:1982
 msgctxt "customizer_selector"
 msgid "General Form labels"
 msgstr ""
 
-#: inc/customizer.php:2001
+#: inc/customizer.php:2000
 msgctxt "customizer_selector"
 msgid "Sticky Booking Form background"
 msgstr ""
 
-#: inc/customizer.php:2019
+#: inc/customizer.php:2018
 msgctxt "customizer_selector"
 msgid "Sticky Form labels"
 msgstr ""
 
-#: inc/customizer.php:2053
+#: inc/customizer.php:2052
 msgctxt "customizer_home"
 msgid "Activate home top widgets"
 msgstr ""
 
-#: inc/customizer.php:2073
+#: inc/customizer.php:2072
 msgctxt "customizer_home"
 msgid "Activate deafult content area"
 msgstr ""
 
-#: inc/customizer.php:2094
+#: inc/customizer.php:2093
 msgctxt "customizer_home"
 msgid "Activate content widgets"
 msgstr ""
 
-#: inc/customizer.php:2116
+#: inc/customizer.php:2115
 msgctxt "customizer_home"
 msgid "Activate news"
 msgstr ""
 
-#: inc/customizer.php:2137
+#: inc/customizer.php:2136
 msgctxt "customizer_home"
 msgid "Activate home bottom widgets"
 msgstr ""
 
-#: inc/customizer.php:2171
+#: inc/customizer.php:2170
 msgctxt "customizer_identity"
 msgid "Site's logo height"
 msgstr ""
 
-#: inc/customizer.php:2172
+#: inc/customizer.php:2171
 msgctxt "customizer_identity"
 msgid "Value in pixels."
 msgstr ""
@@ -993,8 +998,8 @@ msgid "Add a menu"
 msgstr ""
 
 #. %s: category name
-#: inc/categories.php:65 inc/categories.php:82 inc/categories.php:94
-#: inc/categories.php:117 inc/categories.php:134 inc/categories.php:146
+#: inc/categories.php:52 inc/categories.php:69 inc/categories.php:81
+#: inc/categories.php:104 inc/categories.php:121 inc/categories.php:133
 #, php-format
 msgctxt "categories"
 msgid "View all posts in %s"
@@ -2079,17 +2084,17 @@ msgid_plural "<b>%s</b> results found"
 msgstr[0] ""
 msgstr[1] ""
 
-#: mybooking-templates/mybooking-plugin-activities.php:85
+#: mybooking-templates/mybooking-plugin-activities.php:86
 msgctxt "activities_list"
 msgid "Page navigation"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-activities.php:91
+#: mybooking-templates/mybooking-plugin-activities.php:92
 msgctxt "activities_list"
 msgid "Previous"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-activities.php:112
+#: mybooking-templates/mybooking-plugin-activities.php:113
 msgctxt "activities_list"
 msgid "Next"
 msgstr ""
@@ -2259,17 +2264,17 @@ msgctxt "renting_products"
 msgid "More information"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-products.php:38
+#: mybooking-templates/mybooking-plugin-products.php:39
 msgctxt "renting_products_list"
 msgid "Page navigation"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-products.php:44
+#: mybooking-templates/mybooking-plugin-products.php:45
 msgctxt "renting_products"
 msgid "Previous"
 msgstr ""
 
-#: mybooking-templates/mybooking-plugin-products.php:65
+#: mybooking-templates/mybooking-plugin-products.php:66
 msgctxt "renting_products"
 msgid "Next"
 msgstr ""
@@ -2662,7 +2667,7 @@ msgctxt "customize_font_selector"
 msgid "Google Fonts"
 msgstr ""
 
-#: mybooking-parts/home/mybooking-home-news.php:56
+#: mybooking-parts/home/mybooking-home-news.php:55
 msgctxt "home-news-button"
 msgid "Read"
 msgstr ""

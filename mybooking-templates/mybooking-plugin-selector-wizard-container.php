@@ -4,5 +4,5 @@
    *
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-wizard-container.php
    *
-   * Keep empty in the Theme because the container is managed on mybooking-home-header.php due to HTML structure
+   * This file is empty because the container is managed on mybooking-home-header.php due to the HTML structure
    */

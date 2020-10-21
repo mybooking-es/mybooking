@@ -21,7 +21,7 @@
                   value="<?php echo esc_attr( $args['q'] )?>"
                 <?php } ?> 
                 name="q" id="search_q"
-                placeholder="<?php echo esc_attr( esc_html_x( 'Search', 'activities_search', 'mybooking' ) ) ?>">
+                placeholder="<?php echo esc_attr_x( 'Search', 'activities_search', 'mybooking' ) ?>">
             </div>
             <div class="form-group col-md-1">
               <button type="submit" class="btn btn-primary mb-2 w-100"><i class="fa fa-search"></i>&nbsp;</button>

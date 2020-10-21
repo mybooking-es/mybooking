@@ -30,7 +30,7 @@ if ( $footer_layout == '0' ) { ?>
 <?php wp_footer(); ?>
 
 <!-- Back top link -->
-<a href="#0" class="cd-top">Top</a>
+<a href="#0" class="cd-top"><?php echo esc_html_x( 'Top', 'footer', 'mybooking' ); ?></a>
 </body>
 
 </html>

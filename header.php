@@ -25,7 +25,15 @@ defined( 'ABSPATH' ) || exit;
 </head>
 
 <body <?php body_class(); ?>>
-  <?php wp_body_open(); ?>
+
+  <?php 
+    if ( function_exists( 'wp_body_open' ) ) {
+      wp_body_open();
+    } else {
+      do_action( 'wp_body_open' );
+    }
+  ?>
+  
   <?php
     $navbar_integrated = MyBookingCustomizer::getInstance()->get_theme_option( "mybooking_home_navbar_integrated" );
     $navbar_class = ($navbar_integrated == '1' ? 'nav-container-absolute' : '');

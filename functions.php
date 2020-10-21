@@ -24,6 +24,7 @@ $mybooking_includes = array(
 	'/inc/customizer.php',                            // Customizer additions.
 	'/inc/class-wp-bootstrap-navwalker.php',          // Load custom WordPress nav walker.
   '/inc/post-functions.php',                        // Custom Post functions.
+  '/inc/site-functions.php',                        // Custom Site functions.
   '/inc/comments.php',                              // Custom Comment functions.
   '/inc/typography.php'                             // Typography
 );
