@@ -48,14 +48,14 @@ EOT;
 			    <a class="site-title navbar-brand" rel="home" href="%s" title="%s" itemprop="url">%s</a>
 EOT;
 			}
-			$result = wp_kses_post( sprintf($brand_no_logo_html, 
+			$result = sprintf($brand_no_logo_html, 
 										                  esc_url( home_url( '/' ) ),
 										                  esc_attr( get_bloginfo( 'name', 'display' ) ),
-										                  esc_html( get_bloginfo( 'name' ) ) ) );
+										                  esc_html( get_bloginfo( 'name' ) ) );
 
 		}
 
-		return $result; 
+		return wp_kses_post( $result ); 
 	}
 }
 
@@ -68,11 +68,11 @@ if ( ! function_exists( 'mybooking_site_description' ) ) {
 		$result = '';
 
     if ( !empty ( get_bloginfo('description') ) ) {
-    	$result = wp_kses_post( sprintf('<div class="site-description"><small>%s</small></div>',
-                        							esc_html( get_bloginfo( 'description' ) ) ) );
+    	$result = sprintf('<div class="site-description"><small>%s</small></div>',
+                        							esc_html( get_bloginfo( 'description' ) ) );
     }
 
-    return $result; 
+    return wp_kses_post( $result ); 
 
 	}
 }
