@@ -24,7 +24,7 @@
             <img class="activity-card-img card-img-top" src="<?php echo esc_url( $mybooking_activity->photo_url_full ) ?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>">
           <?php } else { ?>
             <div class="text-center no-product-photo pt-3">
-              <img class="activity-card-img card-img-top" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image.png') ?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>"/>
+              <img class="activity-card-img card-img-top" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image-product.png') ?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>"/>
             </div>
           <?php } ?>
           <div class="card-static_body">

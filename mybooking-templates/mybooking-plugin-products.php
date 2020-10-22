@@ -12,7 +12,13 @@
   <div class="card-static-wrapper">
     <div class="card-static">
       <div class="card-static_image">
-        <img src="<?php echo esc_url( $mybooking_product->photo_path ) ?>" alt="?php echo esc_attr( $mybooking_product->name )?>">
+        <?php if ( !empty( $mybooking_product->photo_path ) ) { ?>
+          <img src="<?php echo esc_url( $mybooking_product->photo_path ) ?>" alt="?php echo esc_attr( $mybooking_product->name )?>">
+        <?php } else { ?>
+          <div class="text-center no-product-photo pt-3">
+            <img class="activity-card-img card-img-top" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image-product.png') ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>"/>
+          </div>
+        <?php } ?>          
       </div>
       <div class="card-static_body">
         <div class="card-static_header-catalog">

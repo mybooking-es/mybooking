@@ -327,4 +327,5 @@ MyBooking assets created for MyBooking. License: CC0 Public Domain
 * right-arrow-icon.png
 * cd-top-arrow-icon.svg
 * default-image.png
+* default-image-product.png
 * key_characteristics 
