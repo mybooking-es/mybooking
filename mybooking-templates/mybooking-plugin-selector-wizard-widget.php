@@ -7,8 +7,6 @@
 ?>
 <!-- Search form -->
 <section class="section">
-  <!-- Take into account the theme due to HTML elements -->
-  <?php mybooking_engine_get_template('mybooking-plugin-selector-wizard-container.php') ?>  
   <div class="wizard-selector container">
     <form class="wizard-selector_form" name="wizard_search_form">
 
