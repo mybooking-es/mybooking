@@ -27,10 +27,10 @@ ul.social-links,
 }
 
 .social-links a {
-  color: var(--brand-secondary);
+  color: var(--font-heading-color);
   transition: ease-in-out 0.5ms;
   &:hover {
-    color: var(--brand-secondary-light);
+    opacity: 0.8;
   }
 }
 

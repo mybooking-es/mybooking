@@ -3,7 +3,7 @@
 *   CONTACT INFO PARTIAL
 *   --------------------
 *
-* 	@version 0.0.2
+* 	@version 0.0.3
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -82,7 +82,7 @@
       <?php } ?>
       <?php if ( !empty( $mybooking_company_youtube ) ) { ?>
         <li class="social__item">
-              <a href="<?php echo esc_url( $mybooking_company_youtube ) ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="<?php echo esc_url( $mybooking_company_youtube ) ?>" target="_blank"><i class="fa fa-youtube"></i></a>
         </li>
       <?php } ?>
     </ul>
