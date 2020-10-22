@@ -32,6 +32,8 @@ body {
 body.modal-open {
   height: 100vh;
   overflow-y: hidden;
+  padding-right: 0px !important;
+  overflow-y: scroll !important;
 }
 
 // Typo

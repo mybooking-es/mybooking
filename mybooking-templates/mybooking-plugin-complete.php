@@ -15,12 +15,16 @@
    *
    */
 ?>
-<?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
 
-<!-- Modify reservation -->
-<?php if ( $args['selector_in_process'] != 'wizard' ) { ?>
+<!-- Complement to modify reservation dates -->
+<?php if ( $args['selector_in_process'] == 'wizard' ) { ?>
+  <?php mybooking_engine_get_template('mybooking-plugin-selector-wizard-container.php') ?>
+<?php } else { ?>
   <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
 <?php } ?>
+
+<!-- Reservation steps -->
+<?php get_template_part('mybooking-templates/mybooking-reservation-steps'); ?>
 
 <div class="reservation-step process-container reservation-step-complete custom-form">
 

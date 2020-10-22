@@ -6,18 +6,22 @@
    *
    */
 ?>
-<?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
+
+<!-- Complement to modify reservation dates -->
+<?php if ( $args['selector_in_process'] == 'wizard' ) { ?>
+  <?php mybooking_engine_get_template('mybooking-plugin-selector-wizard-container.php') ?>
+<?php } else { ?>
+  <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
+<?php } ?>
+
+<!-- Reservation steps -->
+<?php get_template_part('mybooking-templates/mybooking-reservation-steps'); ?>
 
 <div class="reservation-step process-container reservation-step-choose-product">
   <!-- Reservation : Pickup/Return information -->
 
   <div id="reservation_detail" class="sticky-top"></div>
   <div id="product_listing"></div>
-
-  <!-- Modify reservation -->
-  <?php if ( $args['selector_in_process'] != 'wizard' ) { ?>
-    <?php mybooking_engine_get_template('mybooking-plugin-modify-reservation.php') ?>
-  <?php } ?>
 
 </div>
 

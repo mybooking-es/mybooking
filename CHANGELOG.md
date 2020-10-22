@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.9.41] 2020-10-22
+
+### Updated
+- Theme review
+  - MyBooking Reservation Engine plugin templates
+
 ## [0.9.40] 2020-10-21
 
 ### Updated

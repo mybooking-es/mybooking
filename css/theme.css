@@ -25377,7 +25377,9 @@ body {
 
 body.modal-open {
   height: 100vh;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  padding-right: 0px !important;
+  overflow-y: scroll !important; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
@@ -28419,9 +28421,9 @@ button.another_return_place_group_close {
 .wizard-summary_collection {
   text-align: left; }
 
-.wizard-summary_separator {
-  width: 20px;
-  height: 20px; }
+img.wizard-summary_separator {
+  width: 20px !important;
+  height: 20px !important; }
 
 .wizard-time {
   width: 80%; }

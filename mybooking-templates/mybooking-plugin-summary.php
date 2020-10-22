@@ -5,7 +5,7 @@
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-summary.php
    */
 ?>
-<?php get_template_part('mybooking-parts/mybooking-reservation-steps'); ?>
+<?php get_template_part('mybooking-templates/mybooking-reservation-steps'); ?>
 
 <div class="reservation-step process-container reservation-step-summary custom-form">
   <div class="process-message">
