@@ -28313,7 +28313,14 @@ button.another_return_place_group_close {
     margin-left: 10px; } }
 
 .wizard-selector {
-  margin-top: 1rem; }
+  padding: 1rem; }
+
+@media (min-width: 991.98px) {
+  .wizard-selector {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px; }
+  .wizard-selector label {
+    color: var(--font-heading-color); } }
 
 .wizard-selector_field input {
   border: 1px solid var(--wizard-input-border-color);
@@ -28323,11 +28330,11 @@ button.another_return_place_group_close {
   height: var(--form-control-height);
   width: 100%;
   padding: 0.5rem 1.6rem;
+  margin-bottom: 10px;
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 13px;
   background-color: var(--btn-bg-color);
   color: var(--btn-color); }
   .wizard-selector_btn:hover {
@@ -28342,7 +28349,7 @@ button.another_return_place_group_close {
   z-index: 1060;
   width: 100%;
   height: 100%;
-  padding-top: 1rem;
+  padding-top: 2rem;
   overflow: hidden;
   background-color: var(--wizard-bg-color); }
 
@@ -28350,15 +28357,29 @@ button.another_return_place_group_close {
   position: fixed;
   top: 20px;
   right: 20px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  cursor: pointer; }
+
+.wizard-close:hover {
+  opacity: .5; }
+
+@media (min-width: 991.98px) {
+  .wizard-close {
+    top: 32px;
+    right: 32px; } }
+
+.wizard-step_header {
+  border-bottom: 1px solid #ccc; }
 
 .wizard-step_title {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   font-size: 28px;
   font-weight: 700;
   overflow-x: hidden;
   overflow-y: hidden;
-  cursor: pointer; }
+  cursor: pointer;
+  text-align: center;
+  color: var(--font-heading-color); }
 
 .wizard-step_container {
   width: 100%;
@@ -28395,26 +28416,42 @@ button.another_return_place_group_close {
 
 .wizard-place_list {
   padding-left: 0;
-  list-style-type: none; }
+  list-style-type: none;
+  text-align: center;
+  margin-top: 2rem; }
 
 .wizard-place_item {
   padding: 0.1rem 0; }
 
 .selector_place {
-  font-size: 14px;
-  font-weight: 500 !important;
-  cursor: pointer; }
-  .selector_place:hover {
-    background-color: var(--btn-bg-color-hover);
-    color: var(--btn-color-hover);
-    padding: 0.2rem 0.5rem; }
+  cursor: pointer;
+  line-height: 3rem;
+  background-color: transparent;
+  border: 1px solid var(--brand-primary);
+  padding: 0.5rem 1.6rem;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  border-radius: 4px; }
+  .selector_place.text-primary:hover {
+    background-color: var(--brand-primary);
+    color: var(--btn-color-hover) !important; }
 
 .wizard-summary {
-  margin-bottom: 2rem; }
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc; }
 
 .wizard-summary_pickup,
 .wizard-summary_return {
-  font-size: 1em; }
+  font-size: 1em;
+  color: var(--font-heading-color); }
+
+.wizard-summary_collection,
+.wizard-summary_delivery {
+  color: var(--font-heading-color); }
 
 .wizard-summary_delivery {
   text-align: right; }
@@ -28430,16 +28467,70 @@ img.wizard-summary_separator {
   width: 80%; }
 
 .wizard-time_btn {
-  border: 1px solid #333;
-  background-color: #fff;
-  color: #333;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: var(--font-heading-color);
   padding: 0.3rem 0.9rem;
   margin: 5px 0;
   font-size: 1.4em;
   width: 100%; }
 
+.wizard-time_btn {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: var(--font-heading-color); }
+
+.wizard-time_btn:hover {
+  color: #FFF;
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary-dark); }
+
+/* Hides scrollbars on wizard's choose time step */
+.wizard-step_container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; }
+
+.wizard-step_container {
+  scrollbar-width: none;
+  -ms-overflow-style: none; }
+
 .wizard-date_calendar .ui-widget-content {
   background: transparent !important; }
+
+@media (min-width: 991.98px) {
+  .wizard-date_calendar .ui-datepicker td .ui-state-default {
+    border: 0;
+    background: 0 0;
+    margin-bottom: 0;
+    padding: 1rem;
+    color: gray;
+    text-align: center;
+    -webkit-filter: none;
+    filter: none; } }
+
+@media (min-width: 1600px) {
+  .wizard-date_calendar .ui-datepicker td .ui-state-default {
+    border: 0;
+    background: 0 0;
+    margin-bottom: 0;
+    padding: 2rem;
+    color: gray;
+    text-align: center;
+    -webkit-filter: none;
+    filter: none; } }
+
+.wizard-date_calendar .ui-datepicker td .ui-state-default:hover {
+  background-color: var(--brand-primary);
+  color: #FFF;
+  border-radius: 4px; }
+
+.wizard-date_calendar .ui-datepicker td.ui-state-disabled .ui-state-default:hover {
+  background-color: var(--brand-secondary-light);
+  color: #FFF; }
+
+.wizard-date_calendar .ui-datepicker .ui-datepicker-prev:not(.ui-state-disabled),
+.wizard-date_calendar .ui-datepicker .ui-datepicker-next:not(.ui-state-disabled) {
+  cursor: pointer; }
 
 .cards-static-container {
   margin: 0 auto;
