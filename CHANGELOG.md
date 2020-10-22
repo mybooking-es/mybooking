@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.9.42] 2020-10-22
+
+### Updated
+- MyBooking Reservation engine templates
+
 ## [0.9.41] 2020-10-22
 
 ### Updated
