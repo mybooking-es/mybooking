@@ -27733,7 +27733,8 @@ a.dropdown-item {
   padding-top: 1rem; }
 
 .mybooking-widget {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  width: 100%; }
 
 /**
 *  Mybooking Widgets integration
