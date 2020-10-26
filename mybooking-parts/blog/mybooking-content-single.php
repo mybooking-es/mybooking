@@ -31,26 +31,33 @@ defined( 'ABSPATH' ) || exit;
 		<div class="container" tabindex="-1">
 			<div class="row">
 				<div class="col-12 post_body">
-					<?php if ( empty( get_the_title() ) ) { ?>
-						<h1 class="post_title untitled"><?php echo esc_html_x('Untitled', 'content_blog', 'mybooking'); ?></h1>
-					<?php } else { ?>
-						<h1 class="post_title"><?php the_title(); ?></h1>
-					<?php } ?>	
-					<p class="post_meta text-center"><?php echo wp_kses_post( mybooking_posted_on() ); ?></p>
-					<?php the_content(); ?>
-
-		      		<?php
-		      		wp_link_pages(
-		      			array(
-		      				'before' => '<div class="mybooking-entry-links">' . esc_html_x( 'Pages', 'pages_navigation', 'mybooking' ),
-		      				'after'  => '</div>',
-		      			)
-		      		);
-		      		?>
-
+					<!-- Header -->
+					<div class="entry-header">
+						<?php if ( empty( get_the_title() ) ) { ?>
+							<h1 class="post_title untitled"><?php echo esc_html_x('Untitled', 'content_blog', 'mybooking'); ?></h1>
+						<?php } else { ?>
+							<h1 class="post_title"><?php the_title(); ?></h1>
+						<?php } ?>	
+						<p class="post_meta text-center"><?php echo wp_kses_post( mybooking_posted_on() ); ?></p>
+					</div>
+					<!-- Content -->
+					<div class="entry-content">
+					  <?php the_content(); ?>
+				  </div>
+				  <!-- Link pages -->
+      		<?php
+      		wp_link_pages(
+      			array(
+      				'before' => '<div class="mybooking-entry-links">' . esc_html_x( 'Pages', 'pages_navigation', 'mybooking' ),
+      				'after'  => '</div>',
+      			)
+      		);
+      		?>
+      		<!-- Footer -->
 					<footer class="entry-footer">
 						<?php mybooking_entry_footer(); ?>
 					</footer>
+					<!-- Posts navigation -->
 					<?php mybooking_post_nav(); ?>
 				</div>
 			</div>

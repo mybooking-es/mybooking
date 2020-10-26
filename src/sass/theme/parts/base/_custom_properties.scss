@@ -205,4 +205,7 @@ these properties do not need to be edited */
   --alignwide-centering: calc(50% - 740px);
   --alignfull-width: 100vw;
   --alignfull-centering: calc(50% - 50vw);
+  // Content width
+  --page-width: 100%;
+  --post-width: 100%;
 }
