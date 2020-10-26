@@ -27,6 +27,9 @@
   --btn-color-hover: var(--white);
   --btn-font-w: 600;
   --btn-text-transform: uppercase;
+  --font-heading: Inter, sans-serif;
+  --font-body: Inter, sans-serif;
+  --body-bg: var(--white);
 }
 
 /* ------------- Basic ----------------------- */
@@ -36,10 +39,12 @@
   color: var(--body-color);
 }
 
-.editor-styles-wrapper > * {
+.editor-styles-wrapper .wp-block > * {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 1em;
 }
+
+/* ------------- Post Title ----------------------------------- */
 
 .editor-post-title__block .editor-post-title__input,
 .editor-styles-wrapper .wp-block h1,
@@ -48,25 +53,43 @@
 .editor-styles-wrapper .wp-block h4,
 .editor-styles-wrapper .wp-block h5,
 .editor-styles-wrapper .wp-block h6 {
-	  font-family: var(--font-heading) !important;
+	  font-family: var(--font-heading);
 	  color: var(--font-heading-color);
+}
+
+.editor-post-title__block .editor-post-title__input,
+.editor-styles-wrapper .wp-block h1 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 /* --------------- Structure --------------------------------- */
 
 /* Main column width */
 .wp-block {
-    max-width: 800px;
+  max-width: 1140px;
 }
- 
+
 /* Width of "wide" blocks */
 .wp-block[data-align="wide"] {
-    max-width: 1080px;
+  max-width: 1480px;
 }
- 
+
+[data-align="wide"] .wp-block-group > .wp-block-group__inner-container > .wp-block {
+  max-width: 1480px;
+}
+
 /* Width of "full-wide" blocks */
 .wp-block[data-align="full"] {
-    max-width: none;
+  max-width: 100%;
+}
+
+[data-align="full"] .wp-block-group > .wp-block-group__inner-container > .wp-block {
+  min-width: 100%;
 }
 
 /* --------------- Colors ----------------------------------- */
@@ -151,17 +174,6 @@
   background-color: var(--error);
 }
 
-/* ------------- Post Title ----------------------------------- */
-
-.editor-post-title__block .editor-post-title__input, .editor-styles-wrapper .wp-block h1 {
-  margin-bottom: 2rem;
-  font-weight: 700;
-  text-align: center;
-  font-size: 4.5rem;
-  font-weight: 700;
-  line-height: 1.2;  
-}
-
 /* =========================================================== */
 /* ======================= BLOCKS ============================ */
 /* =========================================================== */
@@ -186,6 +198,7 @@
   border-color: var(--btn-border-color);
   border-radius: 3px;
   letter-spacing: 1px;
+  font-family: var(--font-body);
   font-weight: var(--btn-font-w);
   text-transform: var(--btn-text-transform);
 }
@@ -246,7 +259,7 @@
 /* --------------- Block cover -------------------- */
 
 .wp-block-cover {
-  height: 0; 
+  height: 0;
   margin-bottom: 3rem;
 }
 
@@ -274,7 +287,7 @@
 
 .wp-block-table.alignwide,
 .wp-block-table.alignfull {
-  max-width: fit-content; 
+  max-width: fit-content;
 }
 
 .wp-block-table tfoot {
@@ -305,14 +318,6 @@
 
 /* ------------ Block media text ------------------- */
 
-.wp-block-media-text {
-  margin-bottom: 3rem;
-}
-
-.wp-block-media-text .wp-block-media-text__content {
-  padding: 0;
-}
-
 .wp-block-media-text .wp-block-media-text__content p {
   margin-bottom: 0;
 }
@@ -330,10 +335,9 @@
   margin-bottom: 3rem;
 }
 
-/*
-*  WOOCOMMERCE BLOCKS
-*
-*/
+/* ----------- Woocommerce Block ------------------------- */
+
+/* Product grid */
 .wc-block-grid {
   margin-bottom: 3rem;
 }
@@ -352,11 +356,20 @@
   padding: .5rem;
 }
 
-
+/* Category grid */
 .wc-block-product-category {
   margin-bottom: 3rem;
 }
 
+/* Featured product */
 .wc-block-featured-product {
   margin-bottom: 3rem;
+}
+
+/* ----------- Twentig Blocks ------------------------- */
+
+.editor-styles-wrapper .wp-block-media-text.is-style-tw-overlap .wp-block-media-text__content,
+.editor-styles-wrapper .wp-block-media-text.is-style-tw-overlap > .block-editor-inner-blocks {
+  background: var(--body-bg)!important;
+  padding: 3rem;
 }
