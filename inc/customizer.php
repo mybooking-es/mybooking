@@ -359,8 +359,8 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
           $this->theme_options['mybooking_container_type'] = get_theme_mod( 'mybooking_container_type', 'container' );
 
           // Typography
-					$this->theme_options['mybooking_font_body'] = get_theme_mod( 'mybooking_font_body', 'container' );
-					$this->theme_options['mybooking_font_heading'] = get_theme_mod( 'mybooking_font_heading', 'container' );
+					$this->theme_options['mybooking_font_body'] = get_theme_mod( 'mybooking_font_body', 'default' );
+					$this->theme_options['mybooking_font_heading'] = get_theme_mod( 'mybooking_font_heading', 'default' );
 
 			  	// Contact
 		  	  $this->theme_options['company_info_trade_name'] = get_theme_mod( 'mybooking_company_info_trade_name', '' );
