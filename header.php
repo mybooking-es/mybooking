@@ -21,6 +21,8 @@ defined( 'ABSPATH' ) || exit;
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="profile" href="http://gmpg.org/xfn/11">
+  <link rel="preload" href="<?php echo esc_url( get_stylesheet_directory_uri().'/fonts/fontawesome/fa-solid-900.woff2' ) ?>" crossorigin="anonymous" as="font">
+  <link rel="preload" href="<?php echo esc_url( get_stylesheet_directory_uri().'/fonts/fontawesome/fa-brands-400.woff2' ) ?>" crossorigin="anonymous" as="font">
   <?php wp_head(); ?>
 </head>
 
