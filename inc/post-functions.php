@@ -173,6 +173,19 @@ if ( ! function_exists( 'mybooking_post_nav' ) ) {
 	}
 }
 
+if ( ! function_exists( 'mybooking_preload_fonts' ) ) {
+
+    function mybooking_preload_fonts() {
+      echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                  esc_url( get_stylesheet_directory_uri().'/fonts/fontawesome/fa-solid-900.woff2' ));
+
+      echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                  esc_url( get_stylesheet_directory_uri().'/fonts/fontawesome/fa-brands-400.woff2' ));
+    }
+
+	add_action( 'wp_head', 'mybooking_preload_fonts' );
+}
+
 if ( ! function_exists( 'mybooking_pingback' ) ) {
 	/**
 	 * Add a pingback url auto-discovery header for single posts of any post type.
