@@ -189,8 +189,7 @@ if ( ! function_exists( 'mybooking_preload_fonts' ) ) {
 	  $typography_body = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_font_body' );
 	  $typography_heading = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_font_heading' );
 
-	  if ( empty( $typography_body ) || empty ( $typography_heading ) ||
-	       $typography_body == 'default' || $typography_heading == 'default' ) {
+	  if ( $typography_body == 'default' || $typography_heading == 'default' ) {
         echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
                      esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Black.woff2' ));	
         echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
@@ -208,7 +207,6 @@ if ( ! function_exists( 'mybooking_preload_fonts' ) ) {
         echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
                      esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Semibold.woff2' ));	                            
 	  }
-      echo "empty:".empty( $typography_body).'--'.empty( $typography_heading ).'**'.$typography_body.'**';
 
     }
 
