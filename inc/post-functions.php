@@ -185,6 +185,30 @@ if ( ! function_exists( 'mybooking_preload_fonts' ) ) {
       echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
                   esc_url( get_stylesheet_directory_uri().'/fonts/fontawesome/fa-regular-400.woff2' ));
 
+
+	  $typography_body = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_font_body' );
+	  $typography_heading = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_font_heading' );
+
+	  if ( $typography_body == 'default' || $typography_heading == 'default' ) {
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Black.woff2' ));	
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Bold.woff2' ));	 
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-ExtraBold.woff2' ));	
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-ExtraLight.woff2' ));
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Light.woff2' ));	
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Medium.woff2' ));	
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Regular.woff2' ));	 
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Semibold.woff2' ));	                            
+	  }
+
+
     }
 
 	add_action( 'wp_head', 'mybooking_preload_fonts' );
