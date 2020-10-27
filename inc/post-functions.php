@@ -181,6 +181,10 @@ if ( ! function_exists( 'mybooking_preload_fonts' ) ) {
 
       echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
                   esc_url( get_stylesheet_directory_uri().'/fonts/fontawesome/fa-brands-400.woff2' ));
+
+      echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                  esc_url( get_stylesheet_directory_uri().'/fonts/fontawesome/fa-regular-400.woff2' ));
+
     }
 
 	add_action( 'wp_head', 'mybooking_preload_fonts' );
