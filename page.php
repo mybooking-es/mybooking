@@ -31,10 +31,12 @@ get_header(); ?>
         <main class="site-main" id="main">
 
           <?php while ( have_posts() ) : the_post(); ?>
-            <h1 class="entry-title"><?php the_title(); ?></h1>
-
-            <?php the_content(); ?>
-
+            <div class="entry-header">
+              <h1 class="entry-title"><?php the_title(); ?></h1>
+            </div>
+            <div class="entry-content">
+              <?php the_content(); ?>
+            </div>
             <?php
         		wp_link_pages(
         			array(

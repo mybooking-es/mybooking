@@ -173,6 +173,47 @@ if ( ! function_exists( 'mybooking_post_nav' ) ) {
 	}
 }
 
+if ( ! function_exists( 'mybooking_preload_fonts' ) ) {
+
+    function mybooking_preload_fonts() {
+
+      // Preload fontawesome
+      echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                  esc_url( get_stylesheet_directory_uri().'/fonts/fontawesome/fa-solid-900.woff2' ));
+
+      echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                  esc_url( get_stylesheet_directory_uri().'/fonts/fontawesome/fa-brands-400.woff2' ));
+
+      echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                  esc_url( get_stylesheet_directory_uri().'/fonts/fontawesome/fa-regular-400.woff2' ));
+
+      // Preload default theme fonts
+	  $typography_body = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_font_body' );
+	  $typography_heading = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_font_heading' );
+	  if ( $typography_body == 'default' || $typography_heading == 'default' ) {
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Black.woff2' ));	
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Bold.woff2' ));	 
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-ExtraBold.woff2' ));	
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-ExtraLight.woff2' ));
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Light.woff2' ));	
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Medium.woff2' ));	
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-Regular.woff2' ));	 
+        echo sprintf('<link rel="preload" href="%s" crossorigin="anonymous" as="font" type="font/woff2">',
+                     esc_url( get_stylesheet_directory_uri().'/fonts/Inter-SemiBold.woff2' ));	                            
+	  }
+
+    }
+
+	add_action( 'wp_head', 'mybooking_preload_fonts' );
+}
+
 if ( ! function_exists( 'mybooking_pingback' ) ) {
 	/**
 	 * Add a pingback url auto-discovery header for single posts of any post type.

@@ -5,6 +5,11 @@
 ### Updated
 - MyBooking Reservation engine templates
 
+### Fixed
+- Customizer
+  Header widgets headings and text align
+- MyBooking widgets width  
+
 ## [0.9.41] 2020-10-22
 
 ### Updated

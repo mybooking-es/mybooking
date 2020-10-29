@@ -29,7 +29,6 @@ if ( post_password_required() ) {
 				<?php if ( have_comments() ) : ?>
 
 					<h2 class="comments-title">
-
 						<?php
 						$comments_number = get_comments_number();
 						if ( 1 === (int) $comments_number ) {
@@ -53,7 +52,6 @@ if ( post_password_required() ) {
 														), array( 'span' => array( ) ) );
 						}
 						?>
-
 					</h2><!-- .comments-title -->
 
 					<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
