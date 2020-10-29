@@ -36,9 +36,6 @@ if ( ! function_exists( 'mybooking_theme_enqueue_styles' ) ) {
 			wp_add_inline_style( 'mybooking-customizer', $custom_css );
 	  }
 
-    // Avoid enqueue elementor font-awesome
-    add_action( 'elementor/frontend/after_enqueue_styles', function () { wp_dequeue_style( 'font-awesome' ); } );
-
 		// == Typography
 
 		$typography_body = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_font_body' );
