@@ -41,6 +41,7 @@ these properties do not need to be edited */
   --font-heading-color: #424242;
   --body-bg: var(--white);
   --body-color: var(--gray-900);
+  --border-radius: 3px;
   // Process pages
   --process-container-bg: var(--gray-200);
   --process-message-bg: var(--brand-primary);
@@ -167,8 +168,8 @@ these properties do not need to be edited */
   --form-control-border-color: var(--gray-400);
   --form-control-height: 38px;
   --form-control-font-size: 0.8rem;
-  --flex-form-control-border-radius: 3px;
-  --bootstrap-form-control-border-radius: 3px;
+  --flex-form-control-border-radius: var(--border-radius);
+  --bootstrap-form-control-border-radius: var(--border-radius);
   --text-area-bg: var(--gray-50);
   --textarea-bg: var(--gray-50);
   --form-control-disabled: var(--gray-200);

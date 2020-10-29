@@ -190,7 +190,7 @@ if ( ! function_exists( 'mybooking_setup' ) ) {
 				'name'  => _x( 'Black','gutenberg_palette','mybooking' ),
 				'slug'  => 'black',
 				'color'	=> '#000000',
-			)			
+			)
 
 		) );
 

@@ -2,6 +2,11 @@
 // Base/ forms
 //==============================================
 
+
+/*
+*  VENDOR FORMS
+*/
+
 // Flex-form we use them in form selector and in modify forms
 .flex-form-group-wrapper {
   select {
@@ -25,7 +30,6 @@
 }
 
 // Bootstrap forms we use them in complete page
-
 .form-group {
   select {
     border: 1px solid var(--form-control-border-color);
