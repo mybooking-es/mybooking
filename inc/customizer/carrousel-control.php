@@ -13,7 +13,7 @@ if ( ! class_exists( 'MyBookingCustomizeCarrouselControl' ) ) {
 		/**
 		 * Configure the control type
 		 */
-		public $type = 'carrousel';
+		public $type = 'mybooking_carrousel';
 		
 		/**
 	     * 	Enqueue the component JS and CSS	

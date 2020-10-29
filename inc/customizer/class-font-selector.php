@@ -16,7 +16,7 @@ if ( ! class_exists( 'MyBookingFont_Selector' ) ) {
 		 * @access public
 		 * @var string
 		 */
-		public $type = 'selector-font';
+		public $type = 'mybooking_selector-font';
 
 		/**
 		 * Enqueue control related scripts/styles.

@@ -15,7 +15,7 @@ if ( ! class_exists( 'MyBookingCustomizer_Alpha_Color_Control' ) ) {
 		 *
 		 * @var string
 		 */
-		public $type = 'alpha-color';
+		public $type = 'mybooking_alpha-color';
 		/**
 		 * Add support for palettes to be passed in.
 		 *

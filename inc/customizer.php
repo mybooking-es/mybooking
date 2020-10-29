@@ -1679,7 +1679,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 				            'label'    => _x( 'Background Carrousel', 'customizer_header', 'mybooking' ),
 				            'section'  => 'mybooking_theme_header_options',
 				            'settings' => 'mybooking_home_header_carrousel_bg',
-				            'type'     => 'carrousel',
+				            'type'     => 'mybooking_carrousel',
 				        )
 				    ) );
 

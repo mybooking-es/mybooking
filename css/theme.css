@@ -8170,20 +8170,41 @@ a.skip-link {
 .navbar h1 {
   font-weight: 400; }
 
-/*!
- * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/fontawesome//fa-solid-900.eot");
+  src: url("../fonts/fontawesome//fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome//fa-solid-900.woff2") format("woff2"), url("../fonts/fontawesome//fa-solid-900.woff") format("woff"), url("../fonts/fontawesome//fa-solid-900.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/fontawesome//fa-regular-400.eot");
+  src: url("../fonts/fontawesome//fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome//fa-regular-400.woff2") format("woff2"), url("../fonts/fontawesome//fa-regular-400.woff") format("woff"), url("../fonts/fontawesome//fa-regular-400.ttf") format("truetype"); }
+
 @font-face {
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url("../fonts/fontawesome//fa-brands-400.eot");
-  src: url("../fonts/fontawesome//fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome//fa-brands-400.woff2") format("woff2"), url("../fonts/fontawesome//fa-brands-400.woff") format("woff"), url("../fonts/fontawesome//fa-brands-400.ttf") format("truetype"), url("../fonts/fontawesome//fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("../fonts/fontawesome//fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome//fa-brands-400.woff2") format("woff2"), url("../fonts/fontawesome//fa-brands-400.woff") format("woff"), url("../fonts/fontawesome//fa-brands-400.ttf") format("truetype"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands';
+  font-weight: 400; }
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }
+
+.far {
+  font-family: 'Font Awesome 5 Free';
   font-weight: 400; }
 
 /*!
@@ -12708,39 +12729,6 @@ readers do not read off random characters that represent icons */
   overflow: visible;
   position: static;
   width: auto; }
-
-/*!
- * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/fontawesome//fa-regular-400.eot");
-  src: url("../fonts/fontawesome//fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome//fa-regular-400.woff2") format("woff2"), url("../fonts/fontawesome//fa-regular-400.woff") format("woff"), url("../fonts/fontawesome//fa-regular-400.ttf") format("truetype"), url("../fonts/fontawesome//fa-regular-400.svg#fontawesome") format("svg"); }
-
-.far {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 400; }
-
-/*!
- * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../fonts/fontawesome//fa-solid-900.eot");
-  src: url("../fonts/fontawesome//fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome//fa-solid-900.woff2") format("woff2"), url("../fonts/fontawesome//fa-solid-900.woff") format("woff"), url("../fonts/fontawesome//fa-solid-900.ttf") format("truetype"), url("../fonts/fontawesome//fa-solid-900.svg#fontawesome") format("svg"); }
-
-.fa,
-.fas {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900; }
 
 /*!
  * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
@@ -25158,7 +25146,7 @@ these properties do not need to be edited */
   --brand-secondary: #424242;
   --brand-secondary-light: #6d6d6d;
   --brand-secondary-dark: #1b1b1b;
-  --font-family: "Inter", sans-serif;
+  --font-family: "Inter var", sans-serif;
   --font-body: var(--font-family);
   --font-heading: var(--font-family);
   --font-heading-color: #424242;
@@ -25301,61 +25289,30 @@ these properties do not need to be edited */
   --page-width: 100%;
   --post-width: 100%; }
 
+/* -------------------------------------------------------
+Variable font.
+Usage:
+
+  html { font-family: 'Inter', sans-serif; }
+  @supports (font-variation-settings: normal) {
+    html { font-family: 'Inter var', sans-serif; }
+  }
+*/
 @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 200;
+  font-family: 'Inter var';
+  font-weight: 100 900;
   font-display: swap;
-  src: url("../fonts/Inter-ExtraLight.woff2") format("woff2"), url("../fonts/Inter-ExtraLight.woff") format("woff"); }
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("../fonts/Inter-roman-var.woff2") format("woff2"); }
 
 @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 300;
+  font-family: 'Inter var';
+  font-weight: 100 900;
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff"); }
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"); }
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff"); }
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff"); }
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff"); }
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("../fonts/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter-ExtraBold.woff") format("woff"); }
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../fonts/Inter-Black.woff2") format("woff2"), url("../fonts/Inter-Black.woff") format("woff"); }
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("../fonts/Inter-italic-var.woff2") format("woff2"); }
 
 html {
   -webkit-box-sizing: border-box;

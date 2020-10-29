@@ -24,7 +24,7 @@
 
       <?php
       $mybooking_step_classes = get_body_class();
-
+      $mybooking_choose_active = '';
       if ( in_array('choose_product',$mybooking_step_classes) ) {
         $mybooking_choose_active = 'active';
       } elseif ( in_array('complete',$mybooking_step_classes) ) {
