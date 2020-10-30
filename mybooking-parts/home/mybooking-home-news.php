@@ -20,7 +20,6 @@
         <div class="news_container">
           <div class="container">
             <div class="row">
-
               <?php foreach($mybooking_news_items as $mybooking_news_item) :?>
                 <?php $mybooking_permalink = get_permalink( $mybooking_news_item ); ?>
                 <div class="col-md-4">
@@ -53,9 +52,10 @@
                   </div>
                 </div>
               <?php endforeach; ?>
-
             </div>
           </div>
         </div>
+        <!-- reset global post variable -->
+        <?php wp_reset_postdata(); ?>
       <?php endif; ?>
 
