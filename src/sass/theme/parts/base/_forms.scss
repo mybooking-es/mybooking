@@ -66,6 +66,7 @@ textarea,
   height: var(--form-control-height);
   box-shadow: none;
 }
+
 // Custom forms
 .custom-form {
   input[type="text"],
@@ -77,10 +78,12 @@ textarea,
     border-radius: var(--bootstrap-form-control-border-radius);
   }
 }
+
 // Labels
 label {
   position: relative;
 }
+
 // Custom icons
 .custom-icon {
   position: absolute;
@@ -89,10 +92,12 @@ label {
   right: 8px;
   top: var(--form-control-height);
 }
+
 .custom-icon-select {
   @extend .custom-icon;
   top: 16px;
 }
+
 // Error styles
 .form-reservation-error,
 input.form-reservation-error {
@@ -110,9 +115,11 @@ input.form-reservation-error {
     margin-left: -20px;
   }
 }
+
 .custom-date-form > div:nth-child(2n) {
   margin: 0 5px;
 }
+
 .custom-date-item {
   display: flex;
   align-items: baseline;
@@ -121,16 +128,19 @@ input.form-reservation-error {
     margin-top: 0;
   }
 }
+
 // Extra inputs
 .input-group > .form-control.extra-input {
   border-top: 1px solid var(--form-control-border-color);
   border-bottom: 1px solid var(--form-control-border-color);
 }
+
 // Disabled components
 input[type="text"]:disabled,
 select:disabled {
   background-color: var(--form-control-disabled);
 }
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   .flex-form-group input.hasDatepicker {

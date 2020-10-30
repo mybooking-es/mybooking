@@ -27248,6 +27248,9 @@ h2.comments-title {
   height: var(--form-control-height);
   -webkit-box-shadow: none;
   box-shadow: none; }
+  .comment-form-comment textarea:focus {
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6); }
 
 .comments-area [type="button"],
 .comments-area [type="reset"],
@@ -27266,6 +27269,12 @@ h2.comments-title {
     color: var(--white);
     background-color: var(--brand-primary-dark);
     border: 1px solid var(--brand-primary-dark); }
+  .comments-area [type="button"]:focus,
+  .comments-area [type="reset"]:focus,
+  .comments-area [type="submit"]:focus,
+  .comments-area button:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
 
 .edit-link > a.btn.btn-primary.comment-edit-link,
 .reply > a.btn.btn-primary.comment-reply-link {
