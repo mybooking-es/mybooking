@@ -3,8 +3,7 @@
 //==============================================
 
 @import "404";
-@import "home_header"; // Uncomment for cropped header images
-// @import "home_header_alt"; // Uncomment for no-cropped header images
+@import "home_header";
 @import "contact";
 @import "footer";
 @import "blog";
@@ -20,3 +19,4 @@
 @import "vehicle_post";
 @import "widgets";
 @import "activities";
+@import "pagination";

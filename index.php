@@ -49,8 +49,11 @@ get_header(); ?>
 			<?php get_sidebar(); ?>
 
 			<div class="col-12">
-				<?php mybooking_pagination(); ?>
+
+				<?php get_template_part( 'mybooking-parts/blog/mybooking-pagination' ); ?>
+
 			</div>
+
 		</div>
 	</div>
 </div>
