@@ -52,12 +52,6 @@
   width: 100%;
 }
 
-@media (min-width: 992px) {
-  .nav-container-absolute ~ .home-header {
-    padding-top: var(--margin-for-message);
-  }
-}
-
 // Background image, video & carousel
 .home-header_background-img,
 .home-header_background-video,

@@ -145,15 +145,18 @@ h2.post_title > a {
     margin-right: auto;
 }
 
-.post .entry-content, .post .entry-footer, .post .mybooking-entry-links,
-.post .comments-title, .post .comment, .post .comment-respond,
-.mybooking-comments .comments-title, .mybooking-comments .comment, .mybooking-comments .comment-respond, {
-    width: var(--post-width);
-}
+// Large devices 
+@media (min-width: 992px) {
+  .post .entry-content, .post .entry-footer, .post .mybooking-entry-links,
+  .post .comments-title, .post .comment, .post .comment-respond,
+  .mybooking-comments .comments-title, .mybooking-comments .comment, .mybooking-comments .comment-respond, {
+      width: var(--post-width);
+  }
 
-.page .entry-content, .page .entry-footer, .page .mybooking-entry-links,
-.page .comments-title, .page .comment, .page .comment-respond {
-    width: var(--page-width);
+  .page .entry-content, .page .entry-footer, .page .mybooking-entry-links,
+  .page .comments-title, .page .comment, .page .comment-respond {
+      width: var(--page-width);
+  }
 }
 
 /* -- Title -- */

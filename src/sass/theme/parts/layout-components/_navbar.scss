@@ -85,6 +85,29 @@
   }
 }
 
+// Button Toogler - menu collapsed
+button.navbar-toggler.collapsed > .navbar-toggler-icon > i:first-child {
+  display: inline;
+}
+button.navbar-toggler.collapsed > .navbar-toggler-icon > i:last-child {
+  display: none;
+}
+
+// Toggler shown - menu shown
+button.navbar-toggler:not(.collapsed) > .navbar-toggler-icon > i:first-child {
+  display: none;
+}
+
+button.navbar-toggler:not(.collapsed) > .navbar-toggler-icon > i:last-child {
+  display: inline;
+}
+
+button.navbar-toggler > .navbar-toggler-icon > i {
+  position: relative;
+  top: 5px;
+}
+
+
 // All menu items
 .navbar-dark .navbar-nav .nav-link {
   color: var(--navbar-link-color);
@@ -127,11 +150,7 @@
 
 // Dropdown navigation full height
 .navbar-collapse {
-  transition: height 0.01s; // Resets Bootstrap's animation
-}
-
-.topbar-height {
-  margin-top: 37px;
+  transition: none; //height 0.01s; // Resets Bootstrap's animation
 }
 
 .navbar-collapse.show {
@@ -163,6 +182,7 @@
 a.dropdown-item {
   color: var(--navbar-dropdown-item-color);
 }
+
 // Dropdown active menu item
 .dropdown-item.active,
 .dropdown-item:active {
@@ -199,8 +219,8 @@ a.dropdown-item {
     }
   }
 }
-// Controls behaviour when is set to overlap on home
 
+// Controls behaviour when is set to overlap on home
 @media (min-width: 991.98px) {
   .home {
     .nav-container-absolute {
@@ -210,6 +230,9 @@ a.dropdown-item {
     }
   }
   .home .nav-container-absolute {
+    // It affects to the wrapper-navbar and makes the
+    // navbar in desktop to be integrated with the header
+    // showing the brand logo in front of the header background
     position: absolute;
   }
   .navbar {

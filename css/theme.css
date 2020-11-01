@@ -25279,15 +25279,13 @@ these properties do not need to be edited */
   --product-detail-dates-text: var(--gray-500);
   --product-detail-group-name: var(--gray-900);
   --product-detail-duration-text: var(--gray-900);
-  --margin-for-message: 0;
-  --margin-for-message-active: 40px;
   --comments-bg-color: var(--gray-50);
   --alignwide-width: 1480px;
   --alignwide-centering: calc(50% - 740px);
   --alignfull-width: 100vw;
   --alignfull-centering: calc(50% - 50vw);
   --page-width: 100%;
-  --post-width: 100%; }
+  --post-width: 70%; }
 
 /* -------------------------------------------------------
 Variable font.
@@ -25318,7 +25316,6 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
-  position: relative;
   margin: 0;
   padding: 0; }
 
@@ -25331,7 +25328,6 @@ html {
 body {
   height: 100%;
   width: 100%;
-  position: relative;
   margin: 0;
   padding: 0;
   font-family: var(--font-body);
@@ -26814,10 +26810,6 @@ h2.subtitle-404 {
 .home-header_background {
   width: 100%; }
 
-@media (min-width: 992px) {
-  .nav-container-absolute ~ .home-header {
-    padding-top: var(--margin-for-message); } }
-
 .home-header_background-img,
 .home-header_background-video,
 .home-header_background_carrusel .carrusel-item img {
@@ -27113,14 +27105,14 @@ h2.post_title > a {
   margin-left: auto;
   margin-right: auto; }
 
-.post .entry-content, .post .entry-footer, .post .mybooking-entry-links,
-.post .comments-title, .post .comment, .post .comment-respond,
-.mybooking-comments .comments-title, .mybooking-comments .comment, .mybooking-comments .comment-respond {
-  width: var(--post-width); }
-
-.page .entry-content, .page .entry-footer, .page .mybooking-entry-links,
-.page .comments-title, .page .comment, .page .comment-respond {
-  width: var(--page-width); }
+@media (min-width: 992px) {
+  .post .entry-content, .post .entry-footer, .post .mybooking-entry-links,
+  .post .comments-title, .post .comment, .post .comment-respond,
+  .mybooking-comments .comments-title, .mybooking-comments .comment, .mybooking-comments .comment-respond {
+    width: var(--post-width); }
+  .page .entry-content, .page .entry-footer, .page .mybooking-entry-links,
+  .page .comments-title, .page .comment, .page .comment-respond {
+    width: var(--page-width); } }
 
 /* -- Title -- */
 .entry-title {
@@ -27539,6 +27531,22 @@ form.wp-block-search input[type=submit] {
     font-size: var(--toggler-icon-font-size);
     margin-top: var(--toggler-icon-mt); }
 
+button.navbar-toggler.collapsed > .navbar-toggler-icon > i:first-child {
+  display: inline; }
+
+button.navbar-toggler.collapsed > .navbar-toggler-icon > i:last-child {
+  display: none; }
+
+button.navbar-toggler:not(.collapsed) > .navbar-toggler-icon > i:first-child {
+  display: none; }
+
+button.navbar-toggler:not(.collapsed) > .navbar-toggler-icon > i:last-child {
+  display: inline; }
+
+button.navbar-toggler > .navbar-toggler-icon > i {
+  position: relative;
+  top: 5px; }
+
 .navbar-dark .navbar-nav .nav-link {
   color: var(--navbar-link-color);
   text-transform: inherit;
@@ -27561,11 +27569,8 @@ form.wp-block-search input[type=submit] {
   color: var(--navbar-link-active) !important; }
 
 .navbar-collapse {
-  -webkit-transition: height 0.01s;
-  transition: height 0.01s; }
-
-.topbar-height {
-  margin-top: 37px; }
+  -webkit-transition: none;
+  transition: none; }
 
 .navbar-collapse.show {
   margin: 1rem 0;
