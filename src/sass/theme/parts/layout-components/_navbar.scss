@@ -33,7 +33,7 @@
 
 .header-titles {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -54,6 +54,8 @@
 @media (min-width: 700px) {
   .site-description {
     display: block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
   }
 }
 

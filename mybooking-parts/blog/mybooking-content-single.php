@@ -57,10 +57,10 @@ defined( 'ABSPATH' ) || exit;
 					<footer class="entry-footer">
 						<?php mybooking_entry_footer(); ?>
 					</footer>
-					<!-- Posts navigation -->
-					<?php mybooking_post_nav(); ?>
 				</div>
 			</div>
 		</div>
+		<!-- Posts navigation -->
+		<?php mybooking_post_nav(); ?>
 	</div>
 </article>

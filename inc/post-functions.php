@@ -154,21 +154,28 @@ if ( ! function_exists( 'mybooking_post_nav' ) ) {
 			return;
 		}
 		?>
-		<nav class="container navigation post-navigation">
-			<h2 class="sr-only"><?php echo esc_html_x( 'Post navigation', 'post_navigation', 'mybooking' ); ?></h2>
-			<div class="row nav-links justify-content-between">
-				<?php
-				if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>',
-										_x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'mybooking' ) );
-				}
-				if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>',
-									_x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'mybooking' ) );
-				}
-				?>
+		<hr class="mybooking-post-navigation-separator">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="container navigation post-navigation">
+						<h2 class="sr-only"><?php echo esc_html_x( 'Post navigation', 'post_navigation', 'mybooking' ); ?></h2>
+						<div class="row nav-links justify-content-between">
+							<?php
+							if ( get_previous_post_link() ) {
+								previous_post_link( '<span class="nav-previous">%link</span>',
+													_x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'mybooking' ) );
+							}
+							if ( get_next_post_link() ) {
+								next_post_link( '<span class="nav-next">%link</span>',
+												_x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'mybooking' ) );
+							}
+							?>
+						</div>
+					</nav>
+				</div>
 			</div>
-		</nav>
+		</div>
 		<?php
 	}
 }

@@ -27349,6 +27349,9 @@ form.wp-block-search input[type=submit] {
 .home .page_content {
   padding: 0; }
 
+.mybooking-post-navigation-separator {
+  margin-top: 4rem; }
+
 .post-navigation {
   margin: 2rem 0; }
 
@@ -27502,9 +27505,9 @@ form.wp-block-search input[type=submit] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
@@ -27521,7 +27524,9 @@ form.wp-block-search input[type=submit] {
 
 @media (min-width: 700px) {
   .site-description {
-    display: block; } }
+    display: block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem; } }
 
 .custom-logo-link img {
   height: var(--custom-logo-height);
