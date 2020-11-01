@@ -28314,6 +28314,9 @@ table.table-activities th {
   display: none;
   visibility: hidden; }
 
+.pagination .page-numbers {
+  display: inline-block; }
+
 .pagination a {
   text-decoration: none;
   border: 1px solid var(--brand-primary-dark);
@@ -28337,6 +28340,9 @@ table.table-activities th {
 .pagination .dots {
   color: #6d6d6d;
   padding: .5rem 1rem; }
+
+.pagination .nav-links {
+  font-size: 1rem; }
 
 .widget_mybooking_rent_engine_selector {
   width: 100%; }

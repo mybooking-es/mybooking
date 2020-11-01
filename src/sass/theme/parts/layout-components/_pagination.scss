@@ -15,6 +15,10 @@
 	visibility: hidden;
 }
 
+.pagination .page-numbers {
+    display: inline-block;
+}
+
 .pagination a {
 	text-decoration: none;
 	border: 1px solid var(--brand-primary-dark);
@@ -41,4 +45,8 @@
 .pagination .dots {
 	color: #6d6d6d;
 	padding: .5rem 1rem;
+}
+
+.pagination .nav-links {
+	font-size: 1rem;
 }
