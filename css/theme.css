@@ -27122,6 +27122,10 @@ h2.post_title > a {
   font-size: 4.5rem;
   line-height: 1.2; }
 
+@media (max-width: 575.98px) {
+  .entry-title {
+    font-size: 3rem; } }
+
 /* -- Footer -- */
 .entry-footer {
   clear: both;
@@ -27144,6 +27148,10 @@ h2.post_title > a {
   text-align: center;
   font-size: 4.5rem;
   line-height: 1.2; }
+
+@media (max-width: 575.98px) {
+  .post_title {
+    font-size: 3rem; } }
 
 .post_meta {
   margin: 1rem 0 3rem 0; }
