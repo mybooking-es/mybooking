@@ -27633,7 +27633,10 @@ a.dropdown-item {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .home .nav-container-absolute .navbar-dark .navbar-nav .nav-link {
   color: var(--black); }
