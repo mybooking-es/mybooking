@@ -201,7 +201,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 						$header_widget_text_color = get_theme_mod( 'mybooking_header_widget_text_color', '#FFFFFF' );
 						$header_widget_link_color = get_theme_mod( 'mybooking_header_widget_link_color', '#FFFFFF' );
 
-						$home_selector_background = get_theme_mod( 'mybooking_home_selector_background', '#FFFFFF50' );
+						$home_selector_background = get_theme_mod( 'mybooking_home_selector_background', 'rgba(255,255,255,0.5)' );
 						$home_selector_labels = get_theme_mod( 'mybooking_home_selector_labels', '#212121' );
 						$sticky_selector_background = get_theme_mod( 'mybooking_sticky_selector_background', '#2193F2' );
 						$sticky_selector_labels = get_theme_mod( 'mybooking_sticky_selector_labels', '#212121' );
@@ -1932,7 +1932,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 
 		 				// Setting
 		 				$wp_customize->add_setting( 'mybooking_home_selector_background' , array(
-		 						'default'   => '#FFFFFF60',
+		 						'default'   => 'rgba(255,255,255,0.5)',
 		 						'transport' => 'refresh',
 		 						'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
 		 				) );

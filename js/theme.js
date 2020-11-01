@@ -11290,8 +11290,8 @@ mybooking.navBarMenu = {
     if ( adminBar ) {
       // 1 - Navigation bar
       if ( $('#wrapper-navbar').hasClass('nav-container-absolute') && 
-           $('.nav-container-absolute ~ ').find('.home-header').length > 0 ) { 
-        // Navbar integrated CSS rule (.nav-container-absolute ~ .home-header)
+           $('body').hasClass('home') && $('.home-header').length > 0 ) { 
+        // Navbar integrated CSS rule (.nav-container-absolute on body home class and .home-header)
         var navbarToggleVisible = $('button.navbar-toggler').is(':visible');
         if ( navbarToggleVisible ) {
           if ( modalMenuShown ) {
