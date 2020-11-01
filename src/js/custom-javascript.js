@@ -226,18 +226,22 @@ mybooking.navBarMenu = {
           $('#wrapper-navbar').css('margin-top', '');
         }
       }
-      // 2 - Reservation detail (choose product)
+      // 2 - Form
+      if ( $('form[name=widget_search_form]').length > 0 ) {
+        $('form[name=widget_search_form]').css('top', this.getAdminBarHeight()+'px');
+      }      
+      // 3 - Reservation detail (choose product)
       if ( $('#reservation_detail.sticky-top').length > 0 ) {
         $('#reservation_detail').css('top', this.getAdminBarHeight()+'px');
       }
-      // 3 - Reservation detail (complete)
+      // 4 - Reservation detail (complete)
       if ( $('#reservation_detail_sticky.sticky-top').length > 0 ) {
         $('#reservation_detail_sticky').css('top', this.getAdminBarHeight()+'px');
       }
     }
 
   },
- 
+
   /**
    * Get the wordpress wpadminbar height
    */

@@ -1,14 +1,9 @@
 # Changelog
 
-## [0.9.42] 2020-10-22
-
-### Updated
-- MyBooking Reservation engine templates
+## [1.0.0] 2020-11-01
 
 ### Fixed
-- Customizer
-  Header widgets headings and text align
-- MyBooking widgets width  
+- Theme review
 
 ## [0.9.41] 2020-10-22
 

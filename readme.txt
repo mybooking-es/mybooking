@@ -5,7 +5,7 @@ Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
 Tested up to:       5.5.1
-Stable tag:         0.9.42
+Stable tag:         1.0.0
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -40,9 +40,8 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 
 == Changelog ==
 
-= 0.9.42 =
-* Updated: Theme review
-  - MyBooking Reservation Engine templates
+= 1.0.0 =
+* Fixed: Theme review
 
 = 0.9.41 =
 * Updated: Theme review
@@ -169,8 +168,8 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 
 == Upgrade Notice ==
 
-= 0.9.42 =
-* Updated: MyBooking Reservation Engine templates
+= 1.0.0 =
+* Fixed: Theme review
 
 = 0.9.41 =
 * Updated: MyBooking Reservation Engine templates
