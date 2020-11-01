@@ -58,8 +58,11 @@
   	// == Initialize
 
 		// Show/Hide advanced colors
-  	var advancedMode = wp.customize.instance( 'mybooking_colors_advanced' ).get();
-		mybookingHideShowAdvancedColors(advancedMode);
+  	var myBookingAdvancedMode = wp.customize.instance( 'mybooking_colors_advanced' ).get();
+  	if ( typeof myBookingAdvancedMode === 'undefined' ) {
+  		myBookingAdvancedMode = false;
+  	}
+		mybookingHideShowAdvancedColors(myBookingAdvancedMode);
 
 		// Advanced colors is changed
 		wp.customize.control('mybooking_colors_advanced', function(control) {
