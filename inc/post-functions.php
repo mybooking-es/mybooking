@@ -50,8 +50,8 @@ if ( ! function_exists( 'mybooking_posted_on' ) ) {
 
 		if ( ! is_page() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '&nbsp;<span class="comments-link"><i class="far fa-comment"></i>&nbsp;';
-			comments_popup_link( esc_html_x( 'Leave a comment', 'entry_footer', 'mybooking' ), 
-								 esc_html_x( '1 Comment', 'entry_footer', 'mybooking' ), 
+			comments_popup_link( esc_html_x( 'Leave a comment', 'entry_footer', 'mybooking' ),
+								 esc_html_x( '1 Comment', 'entry_footer', 'mybooking' ),
 								 esc_html_x( '% Comments', 'comments', 'mybooking' ) );
 			echo '</span>';
 		}
@@ -70,13 +70,13 @@ if ( ! function_exists( 'mybooking_entry_footer' ) ) {
 			$categories_list = mybooking_get_category_list( esc_html( ' ' ) );
 			if ( $categories_list && mybooking_categorized_blog() ) {
 				/* translators: %s: Categories of current post */
-				printf( '<div class="cat-links"><i class="far fa-folder"></i>&nbsp;<span> %s</span></div>', wp_kses_post( $categories_list ) ); 
+				printf( '<div class="cat-links"><i class="far fa-folder"></i>&nbsp;<span> %s</span></div>', wp_kses_post( $categories_list ) );
 			}
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html( ' ' ) );
 			if ( $tags_list ) {
 				/* translators: %s: Tags of current post */
-				printf( '<div class="tags-links"><i class="fas fa-tag"></i>&nbsp;<span> %s</span></div>', wp_kses_post( $tags_list ) ); 
+				printf( '<div class="tags-links"><i class="fas fa-tag"></i>&nbsp;<span> %s</span></div>', wp_kses_post( $tags_list ) );
 			}
 		}
 		// Edit post link: Added classes to show as a button
@@ -159,11 +159,11 @@ if ( ! function_exists( 'mybooking_post_nav' ) ) {
 			<div class="row nav-links justify-content-between">
 				<?php
 				if ( get_previous_post_link() ) {
-					previous_post_link( '<span class="nav-previous">%link</span>', 
+					previous_post_link( '<span class="nav-previous">%link</span>',
 										_x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'mybooking' ) );
 				}
 				if ( get_next_post_link() ) {
-					next_post_link( '<span class="nav-next">%link</span>', 
+					next_post_link( '<span class="nav-next">%link</span>',
 									_x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'mybooking' ) );
 				}
 				?>

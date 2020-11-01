@@ -1,0 +1,44 @@
+//==============================================
+// Layout components/Pagination
+//==============================================
+
+.nav-links {
+	margin-top: 2rem;
+}
+
+.nav-links > * {
+	margin: .3rem;
+}
+
+.nav-links .placeholder {
+	display: none;
+	visibility: hidden;
+}
+
+.pagination a {
+	text-decoration: none;
+	border: 1px solid var(--brand-primary-dark);
+	padding: .5rem 1rem;
+	border-radius: var(--border-radius);
+	color: var(--brand-primary-dark);
+}
+
+.pagination a:hover {
+	background-color: var(--brand-primary);
+	color: var(--white);
+	text-decoration: none;
+	border: 1px solid var(--brand-primary);
+}
+
+.page-numbers.current {
+	border: 1px solid var(--brand-primary-dark);
+	padding: .5rem 1rem;
+	background-color: var(--brand-primary-dark);
+	color: #FFF;
+	border-radius: var(--border-radius);
+}
+
+.pagination .dots {
+	color: #6d6d6d;
+	padding: .5rem 1rem;
+}

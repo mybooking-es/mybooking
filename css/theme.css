@@ -27228,6 +27228,10 @@ h2.comments-title {
   box-shadow: none;
   min-width: 100%; }
 
+.comment-form input:focus {
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6); }
+
 .comment-form-comment textarea {
   width: 100%;
   min-height: 300px;
@@ -28300,6 +28304,40 @@ table.table-activities th {
 .activity-card-title {
   height: 50px; }
 
+.nav-links {
+  margin-top: 2rem; }
+
+.nav-links > * {
+  margin: .3rem; }
+
+.nav-links .placeholder {
+  display: none;
+  visibility: hidden; }
+
+.pagination a {
+  text-decoration: none;
+  border: 1px solid var(--brand-primary-dark);
+  padding: .5rem 1rem;
+  border-radius: var(--border-radius);
+  color: var(--brand-primary-dark); }
+
+.pagination a:hover {
+  background-color: var(--brand-primary);
+  color: var(--white);
+  text-decoration: none;
+  border: 1px solid var(--brand-primary); }
+
+.page-numbers.current {
+  border: 1px solid var(--brand-primary-dark);
+  padding: .5rem 1rem;
+  background-color: var(--brand-primary-dark);
+  color: #FFF;
+  border-radius: var(--border-radius); }
+
+.pagination .dots {
+  color: #6d6d6d;
+  padding: .5rem 1rem; }
+
 .widget_mybooking_rent_engine_selector {
   width: 100%; }
 
@@ -28671,7 +28709,6 @@ button.another_return_place_group_close {
 
 .wizard-close {
   position: fixed;
-  top: 20px;
   right: 20px;
   margin-right: 10px;
   cursor: pointer; }
@@ -28681,7 +28718,6 @@ button.another_return_place_group_close {
 
 @media (min-width: 991.98px) {
   .wizard-close {
-    top: 32px;
     right: 32px; } }
 
 .wizard-step_header {

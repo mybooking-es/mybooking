@@ -17,7 +17,6 @@ $mybooking_includes = array(
   '/inc/categories.php',                            // Theme categories
   '/inc/enqueue.php',                               // Enqueue scripts and styles.
 	'/inc/widgets.php',                               // Register widget area.
-	'/inc/pagination.php',                            // Custom pagination for this theme.
   '/inc/customizer/alpha-color-picker.php',
   '/inc/customizer/class-font-selector.php',
   '/inc/customizer/carrousel-control.php',
