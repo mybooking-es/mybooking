@@ -33,9 +33,9 @@ body {
 // Avoid issues when showing modals
 body.modal-open {
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: hidden !important;
   padding-right: 0px !important;
-  overflow-y: scroll !important;
+//  overflow-y: scroll !important;
 }
 
 // Typo
