@@ -145,7 +145,13 @@ mybooking.navBarMenu = {
 
     // On Window resize
     $(window).resize( function(){
-      self.adminBarMargins( );
+      self.adminBarMargins();
+      self.complementsTop();
+    });
+
+    // On window scroll
+    $(window).scroll( function() {
+      self.complementsTop();
     });
 
     // Shows the navigation margin at start
@@ -226,21 +232,51 @@ mybooking.navBarMenu = {
           $('#wrapper-navbar').css('margin-top', '');
         }
       }
-      // 2 - Form
-      if ( $('form[name=widget_search_form]').length > 0 ) {
-        $('form[name=widget_search_form]').css('top', this.getAdminBarHeight()+'px');
+    }
+
+  },
+
+  /**
+   * Complements Top
+   */
+  complementsTop: function() {
+
+    var modalMenuShown = $(".navbar-collapse").hasClass("show");
+    var adminBar = document.getElementById('wpadminbar');
+    var adminBarAbsolute = ($(adminBar).css('position') === 'absolute');
+
+    if ( adminBar ) {
+      // 1 - Form
+      if ( $('form[name=widget_search_form]').length > 0 ) { 
+        if ( adminBarAbsolute ) {
+          $('form[name=widget_search_form]').css('top', '0');
+        }
+        else {
+          $('form[name=widget_search_form]').css('top', this.getAdminBarHeight()+'px');
+        }
       }      
-      // 3 - Reservation detail (choose product)
+      // 2 - Reservation detail (choose product)
       if ( $('#reservation_detail.sticky-top').length > 0 ) {
-        $('#reservation_detail').css('top', this.getAdminBarHeight()+'px');
+        if ( adminBarAbsolute ) {
+          $('#reservation_detail').css('top', '0');
+        }    
+        else {    
+          $('#reservation_detail').css('top', this.getAdminBarHeight()+'px');
+        }
       }
-      // 4 - Reservation detail (complete)
+      // 3 - Reservation detail (complete)
       if ( $('#reservation_detail_sticky.sticky-top').length > 0 ) {
-        $('#reservation_detail_sticky').css('top', this.getAdminBarHeight()+'px');
+        if ( adminBarAbsolute ) {        
+          $('#reservation_detail_sticky').css('top', '0');
+        }
+        else {  
+          $('#reservation_detail_sticky').css('top', this.getAdminBarHeight()+'px');
+        }
       }
     }
 
   },
+
 
   /**
    * Get the wordpress wpadminbar height
