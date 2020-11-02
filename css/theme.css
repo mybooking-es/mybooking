@@ -28731,7 +28731,8 @@ button.another_return_place_group_close {
 
 .wizard-close {
   position: fixed;
-  right: 20px;
+  right: 10px;
+  top: 10px;
   margin-right: 10px;
   cursor: pointer; }
 

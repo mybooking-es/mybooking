@@ -130,10 +130,11 @@ mybooking.modalMargin = {
  */
 mybooking.navBarMenu = {
 
+  wizardCloseTop: 10,
+
   init: function() {
 
     var self = this;
-
     // Menu Toggler  
     $('#navbarNavDropdown').on('shown.bs.collapse', function () {
       self.toggleMenu();
@@ -155,7 +156,8 @@ mybooking.navBarMenu = {
     });
 
     // Shows the navigation margin at start
-    this.adminBarMargins( );
+    this.adminBarMargins();
+    this.complementsTop();
 
   },
   
@@ -246,7 +248,7 @@ mybooking.navBarMenu = {
     var adminBarAbsolute = ($(adminBar).css('position') === 'absolute');
 
     if ( adminBar ) {
-      // 1 - Form
+      // 1 - Form Selector
       if ( $('form[name=widget_search_form]').length > 0 ) { 
         if ( adminBarAbsolute ) {
           $('form[name=widget_search_form]').css('top', '0');
@@ -255,7 +257,20 @@ mybooking.navBarMenu = {
           $('form[name=widget_search_form]').css('top', this.getAdminBarHeight()+'px');
         }
       }      
-      // 2 - Reservation detail (choose product)
+      // 2 - Wizard Container
+      if ( $('.wizard-container').length > 0 ) { 
+        if ( adminBarAbsolute ) {
+          $('.wizard-container').css('top', '0');
+          $('.wizard-close').css('top', this.wizardCloseTop + 'px');
+          $('.wizard-container').css('padding-top', this.getAdminBarHeight()+'px');
+        }
+        else {
+          $('.wizard-container').css('top', this.getAdminBarHeight()+'px');
+          $('.wizard-close').css('top', this.getAdminBarHeight() + this.wizardCloseTop + 'px');
+          $('.wizard-container').css('padding-top', '');
+        }
+      }        
+      // 3 - Reservation detail (choose product)
       if ( $('#reservation_detail.sticky-top').length > 0 ) {
         if ( adminBarAbsolute ) {
           $('#reservation_detail').css('top', '0');
@@ -264,7 +279,7 @@ mybooking.navBarMenu = {
           $('#reservation_detail').css('top', this.getAdminBarHeight()+'px');
         }
       }
-      // 3 - Reservation detail (complete)
+      // 4 - Reservation detail (complete)
       if ( $('#reservation_detail_sticky.sticky-top').length > 0 ) {
         if ( adminBarAbsolute ) {        
           $('#reservation_detail_sticky').css('top', '0');
