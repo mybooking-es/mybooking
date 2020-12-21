@@ -16,6 +16,13 @@
       <input type="hidden" name="time_from">
       <input type="hidden" name="time_to">
 
+      <?php if ( array_key_exists('sales_channel_code', $args) && $args['sales_channel_code'] != '' ) : ?>
+        <input type="hidden" name="sales_channel_code" value="<?php echo esc_attr( $args['sales_channel_code'] )?>" />
+      <?php endif; ?>
+      <?php if ( array_key_exists('family_id', $args) && $args['family_id'] != '' ) : ?>
+        <input type="hidden" name="family_id" value="<?php echo esc_attr(  $args['family_id'] )?>" />
+      <?php endif; ?>
+
       <div class="row">
         <div class="wizard-selector_field col-md-3">
             <label

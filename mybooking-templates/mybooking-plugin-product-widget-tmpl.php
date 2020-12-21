@@ -66,16 +66,16 @@
       <?php echo esc_html_x( 'Reservation summary', 'renting_product_calendar', 'mybooking') ?></h4>
 
     <% if (shopping_cart.days > 0) { %>
-    <p class="color-gray-600"><?php echo esc_html_x( 'Rental duration', 'renting_product_calendar', 'mybooking' ) ?>:
+    <p class="color-gray-600">
       <span><%=shopping_cart.days%>
-        <?php echo esc_html_x( 'day(s)', 'renting_product_calendar', 'mybooking' ) ?></span></p>
+        <?php echo MyBookingEngineContext::getInstance()->getDuration() ?></span></p>
     <% } else if (shopping_cart.hours > 0) { %>
-    <p class="color-gray-600"><?php echo esc_html_x( 'Rental duration', 'renting_product_calendar', 'mybooking' ) ?>:
+    <p class="color-gray-600">
       <span><%=shopping_cart.hours%>
         <?php echo esc_html_x( 'hours(s)', 'renting_product_calendar', 'mybooking' ) ?></span></p>
     <% } %>
 
-    <h5><?php echo esc_html_x('Product', 'renting_product_calendar', 'mybooking') ?></h5>
+    <h5><?php echo MyBookingEngineContext::getInstance()->getProduct() ?></h5>
     <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
 
     <% if (shopping_cart.time_from_cost > 0) { %>

@@ -43,7 +43,7 @@
             <thead>
               <tr class="bg-gray-100">
                 <th></th>
-                <th scope="col"><?php echo esc_html_x( 'Product', 'renting_complete', 'mybooking' ) ?></th>
+                <th scope="col"><?php echo MyBookingEngineContext::getInstance()->getProduct() ?></th>
                 <th scope="col" class="text-right"><?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?></th>
                 <th scope="col" class="text-right">
                   <?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?></th>
@@ -58,7 +58,7 @@
                     src="<%=booking.booking_lines[idx].photo_medium%>"
                     alt="">
                 </td>
-                <td data-label="<?php echo esc_html_x( 'Product', 'renting_complete', 'mybooking' ) ?>"
+                <td data-label="<?php echo MyBookingEngineContext::getInstance()->getProduct() ?>"
                   class="align-middle"><%=booking.booking_lines[idx].item_description_customer_translation%></td>
                 <td data-label="<?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>"
                   class="align-middle text-right"><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost)%></td>
@@ -97,11 +97,11 @@
             </ul>
             <% if (booking.days > 0) { %>
               <p class="detail-text mt-3">
-              <?php echo esc_html_x( 'Rental duration', 'renting_my_reservation', 'mybooking' ) ?>: <span><%=booking.days%>
-                  <?php echo esc_html_x( 'day(s)', 'renting_my_reservation', 'mybooking' ) ?></span></p>
+              <span><%=booking.days%>
+              <?php echo MyBookingEngineContext::getInstance()->getDuration() ?></span></p>
             <% } else if (booking.hours > 0) { %>
-              <p class="detail-text"><?php echo esc_html_x( 'Rental duration', 'renting_my_reservation', 'mybooking' ) ?>: <span><%=booking.hours%>
-                  <?php echo esc_html_x('hour(s)', 'renting_my_reservation', 'mybooking') ?></span></p>
+              <p class="detail-text"><span><%=booking.hours%>
+              <?php echo esc_html_x('hour(s)', 'renting_my_reservation', 'mybooking') ?></span></p>
             <% } %>
           <% } %>
         </div>

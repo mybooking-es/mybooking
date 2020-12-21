@@ -89,7 +89,7 @@
             <% if (!configuration.multipleProductsSelection) { %>
               <!-- Price -->
               <div class="card-static_price">
-                <h2><%=configuration.formatCurrency(product.price)%></h2>
+                <h2><%=configuration.formatCurrency(product.price)%></h2>             
               </div>
             <% } %>
 
@@ -120,8 +120,13 @@
                   </p>
                 <% } %>
               <% } %>
-            <% } %>  
-            
+            <% } %>     
+
+            <?php if ( array_key_exists('show_taxes_included', $args) && ( $args['show_taxes_included'] ) ): ?>
+            <br>
+            <small><?php echo esc_html_x( 'Taxes included', 'renting_choose_product', 'mybooking-wp-plugin') ?></small>
+            <?php endif; ?>   
+
             <!-- Key characteristics -->
             <div class="card-static_icons">
               <% if (product.key_characteristics) { %> 

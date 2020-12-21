@@ -264,7 +264,7 @@
                 <tr class="bg-gray-100">
                   <th></th>
                   <th scope="col">
-                    <?php echo esc_html_x( 'Product', 'renting_complete', 'mybooking' ) ?></th>
+                    <?php echo MyBookingEngineContext::getInstance()->getProduct() ?></th>
                   <th scope="col" class="text-right">
                     <?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?></th>
                   <th scope="col" class="text-right">
@@ -279,7 +279,7 @@
                     <td class="text-center text-md-left"><img class="img-fluid" style="max-width: 120px"
                         src="<%=shopping_cart.items[idx].photo_medium%>" alt="">
                     </td>
-                    <td data-label="<?php echo esc_html_x( 'Product', 'renting_complete', 'mybooking' ) ?>" 
+                    <td data-label="<?php echo MyBookingEngineContext::getInstance()->getProduct() ?>" 
                       class="align-middle">
                       <%=shopping_cart.items[idx].item_description_customer_translation%>
                     </td>
@@ -318,11 +318,11 @@
                   <li><%=shopping_cart.return_place_customer_translation%></li>
                 </ul>
                 <% if (shopping_cart.days > 0) { %>
-                <p class="detail-text mt-3"><?php echo esc_html_x( 'Rental duration', 'renting_complete', 'mybooking' ) ?>: <span><%=shopping_cart.days%>
-                    <?php echo esc_html_x( 'day(s)', 'renting_complete', 'mybooking' ) ?>
+                <p class="detail-text mt-3"><span><%=shopping_cart.days%>
+                    <?php echo MyBookingEngineContext::getInstance()->getDuration() ?>
                     </span></p>
                 <% } else if (shopping_cart.hours > 0) { %>
-                <p class="detail-text"><?php echo esc_html_x( 'Rental duration', 'renting_complete', 'mybooking' ) ?>: <span><%=shopping_cart.hours%>
+                <p class="detail-text"><span><%=shopping_cart.hours%>
                     <?php echo esc_html_x( 'hour(s)', 'renting_complete', 'mybooking' ) ?></span></p>
                 <% } %>
             <% } %>
@@ -374,13 +374,11 @@
         <div class="rent-duration p-3">
           <p class="mb-0">
             <% if (shopping_cart.days > 0) { %>
-            <?php echo esc_html_x( 'Rental duration', 'renting_complete', 'mybooking' ) ?>:
             <%=shopping_cart.days%>
-            <?php echo esc_html_x( 'day(s)', 'renting_complete', 'mybooking' ) ?></p>
+            <?php echo MyBookingEngineContext::getInstance()->getDuration() ?></p>
           <% } else if (shopping_cart.hours > 0) { %>
-          <?php echo esc_html_x( 'Rental duration', 'renting_complete', 'mybooking' ) ?>:
-          <%=shopping_cart.hours%>
-          <?php echo esc_html_x('hour(s)', 'renting_complete', 'mybooking') ?></p>
+            <%=shopping_cart.hours%>
+            <?php echo esc_html_x('hour(s)', 'renting_complete', 'mybooking') ?></p>
           <% } %>
         </div>      
           <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
