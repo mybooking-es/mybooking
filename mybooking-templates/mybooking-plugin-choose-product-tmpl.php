@@ -86,45 +86,53 @@
               <i type="button" class="fa fa-info-circle js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>"></i>
           </div>
           <div class="card-static_body">
-            <% if (!configuration.multipleProductsSelection) { %>
-              <!-- Price -->
-              <div class="card-static_price">
-                <h2><%=configuration.formatCurrency(product.price)%></h2>             
-              </div>
+
+            <!-- Price (single product selection) -->
+            <% if (!product.exceeds_max && !product.be_less_than_min) { %>
+              <% if (!configuration.multipleProductsSelection) { %>
+                <div class="card-static_price">
+                  <h2><%=configuration.formatCurrency(product.price)%></h2>             
+                </div>
+              <% } %>
             <% } %>
 
+            <!-- Product name and description -->
             <div class="card-static_header">
                 <h2 class="card-static_product-name"><%=product.name%></h2>
                 <h3 class="card-static_product-short-description"><%=product.short_description%></h3>
             </div>
-        
+            
+            <!-- Few units warning -->
             <% if (product.few_available_units) { %>
               <p class="text-danger card-static_low-availability">
                 <?php echo esc_html_x('Few units left!','renting_choose_product','mybooking') ?></p>
             <% } %>
 
-            <% if (!configuration.multipleProductsSelection) { %>
-              <!-- Offer name -->
-              <% if (product.price != product.base_price) { %>
-                <% if (product.offer_discount_type == 'percentage' || product.offer_discount_type == 'amount') { %>
-                  <p class="card-static_discount">
-                    <span class="badge badge-info"><%=new Number(product.offer_value)%>% <%=product.offer_name%></span><br>
-                    <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small>
-                  </p>
-                <% } else if (typeof shoppingCart.promotion_code !== 'undefined' && shoppingCart.promotion_code !== null 
-                              && shoppingCart.promotion_code !== '' &&
-                              (product.promotion_code_discount_type == 'percentage' || product.promotion_code_discount_type == 'amount') ) { %>
-                  <p class="card-static_discount">
-                    <span class="badge badge-success"><%=new Number(product.promotion_code_value)%>% <%=shoppingCart.promotion_code%></span><br>
-                    <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small>
-                  </p>
+            <!-- Offer (single product selection) -->
+            <% if (!product.exceeds_max && !product.be_less_than_min) { %>            
+              <% if (!configuration.multipleProductsSelection) { %>
+                <% if (product.price != product.base_price) { %>
+                  <% if (product.offer_discount_type == 'percentage' || product.offer_discount_type == 'amount') { %>
+                    <p class="card-static_discount">
+                      <span class="badge badge-info"><%=new Number(product.offer_value)%>% <%=product.offer_name%></span><br>
+                      <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small>
+                    </p>
+                  <% } else if (typeof shoppingCart.promotion_code !== 'undefined' && shoppingCart.promotion_code !== null 
+                                && shoppingCart.promotion_code !== '' &&
+                                (product.promotion_code_discount_type == 'percentage' || product.promotion_code_discount_type == 'amount') ) { %>
+                    <p class="card-static_discount">
+                      <span class="badge badge-success"><%=new Number(product.promotion_code_value)%>% <%=shoppingCart.promotion_code%></span><br>
+                      <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small>
+                    </p>
+                  <% } %>
                 <% } %>
-              <% } %>
-            <% } %>     
+              <% } %>   
+            <% } %>  
 
+            <!-- Taxes included -->
             <?php if ( array_key_exists('show_taxes_included', $args) && ( $args['show_taxes_included'] ) ): ?>
-            <br>
-            <small><?php echo esc_html_x( 'Taxes included', 'renting_choose_product', 'mybooking-wp-plugin') ?></small>
+              <br>
+              <small><?php echo esc_html_x( 'Taxes included', 'renting_choose_product', 'mybooking-wp-plugin') ?></small>
             <?php endif; ?>   
 
             <!-- Key characteristics -->
@@ -140,7 +148,18 @@
               <% } %>
             </div>
             
-            <% if (product.availability) { %>
+            <!-- Exceeds max duration -->
+            <% if (product.exceeds_max) { %>
+              <p class="text-center">
+                <span class="badge badge-danger w-100 text-center"><%= i18next.t('chooseProduct.max_duration', {duration: i18next.t('common.'+product.price_units, {count: product.max_value, interpolation: {escapeValue: false}} ), interpolation: {escapeValue: false}}) %></span>
+              </p>
+            <!-- Less than min duration -->  
+            <% } else if (product.be_less_than_min) { %>
+              <p class="text-center">
+                <span class="badge badge-danger w-100 text-center"><%= i18next.t('chooseProduct.min_duration', {duration: i18next.t('common.'+product.price_units, {count: product.min_value, interpolation: {escapeValue: false}} ), interpolation: {escapeValue: false}}) %></span>
+              </p> 
+            <!-- Available -->
+            <% } else if (product.availability) { %>
               <% if (configuration.multipleProductsSelection) { %>
                 <!-- Selector -->
                 <div class="car-listing-selector">
@@ -161,12 +180,14 @@
                     <a class="button btn btn-choose-product"
                       data-product="<%=product.code%>"><?php echo esc_html_x('Book it!', 'renting_choose_product', 'mybooking') ?></a>
                   </div>
-              <% } %>  
+              <% } %> 
+            <!-- Not available -->   
             <% } else { %> 
                   <p class="text-center text-muted">
                   <?php echo esc_html_x( 'Model not available in the office and selected dates', 'renting_choose_product', 'mybooking') ?>
                   </p>
             <% } %>  
+
           </div>
         </div>
       </div>
