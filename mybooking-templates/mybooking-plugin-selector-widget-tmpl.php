@@ -18,7 +18,7 @@
       <% if (not_hidden_family_id && configuration.selectFamily) { %>
         <div class="flex-form-group widget_family" style="display: none">
           <div class="flex-form-box mb-0">
-            <label for="family_id"><?php echo esc_html_x( 'Family', 'renting_form_selector', 'mybooking' ) ?></label>
+            <label for="family_id"><?php echo MyBookingEngineContext::getInstance()->getFamily() ?></label>
             <div class="flex-form-item">
               <select name="family_id" id="widget_family_id" class="ml-1"></select>
             </div>
@@ -28,7 +28,7 @@
 
       <div class="flex-form-group">
         <div class="flex-form-box mb-0">
-          <label><?php echo esc_html_x( 'Pick-up date', 'renting_form_selector', 'mybooking' ) ?></label>
+          <label><?php echo MyBookingEngineContext::getInstance()->getDeliveryDate() ?></label>
           <div class="flex-form-item">
             <label for="widget_date_from"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
             <input class="only-dates" type="text" id="widget_date_from" name="date_from" readonly="true" />
@@ -44,7 +44,7 @@
       
       <div class="flex-form-group">
         <div class="flex-form-box mb-0">
-          <label><?php echo esc_html_x( 'Return date', 'renting_form_selector', 'mybooking' ) ?></label>
+          <label><?php echo MyBookingEngineContext::getInstance()->getCollectionDate() ?></label>
           <div class="flex-form-item">
             <label for="widget_date_to"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
             <input class="only-dates" type="text" id="widget_date_to" name="date_to" readonly="true" />
@@ -129,7 +129,7 @@
     <!-- Date/Time from / to -->
     <div class="flex-form-group">
       <div class="flex-form-box">
-        <label><?php echo esc_html_x( 'Pick-up date', 'renting_form_selector', 'mybooking' ) ?></label>
+        <label><?php echo MyBookingEngineContext::getInstance()->getDeliveryDate()?></label>
         <div class="flex-form-item">
           <label for="widget_date_from"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
           <input type="text" id="widget_date_from" name="date_from" readonly="true"/>
@@ -142,7 +142,7 @@
         </div>
       </div>
       <div class="flex-form-box">
-        <label><?php echo esc_html_x( 'Return date', 'renting_form_selector', 'mybooking' ) ?></label>
+        <label><?php echo MyBookingEngineContext::getInstance()->getCollectionDate() ?></label>
         <div class="flex-form-item">
           <label for="widget_date_to"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
           <input type="text" id="widget_date_to" name="date_to" readonly="true"/>
@@ -160,7 +160,7 @@
   <% if (not_hidden_family_id && configuration.selectFamily) { %>
     <div class="flex-form-group ml-0 widget_family" style="display: none">
       <div class="flex-form-box">
-        <label for="family_id"><?php echo esc_html_x( 'Family', 'renting_form_selector', 'mybooking' ) ?></label>
+        <label for="family_id"><?php echo MyBookingEngineContext::getInstance()->getFamily() ?></label>
         <div class="flex-form-horizontal-item">
           <select name="family_id" id="widget_family_id" class="form-control"></select>
         </div>

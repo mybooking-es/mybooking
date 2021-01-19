@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="beds.svg"
+   width="800"
+   height="800"
+   viewBox="0 0 211.66666 211.66667"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (1.0+r73+1)">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="30"
+     inkscape:window-x="0"
+     inkscape:window-height="1013"
+     inkscape:window-width="1920"
+     inkscape:guide-bbox="true"
+     showguides="true"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.75306872"
+     inkscape:cx="422.88197"
+     inkscape:cy="438.99653"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px">
+    <sodipodi:guide
+       position="0,211.66666"
+       orientation="0,800"
+       id="guide10" />
+    <sodipodi:guide
+       position="211.66666,211.66666"
+       orientation="800,0"
+       id="guide12" />
+    <sodipodi:guide
+       position="211.66666,0"
+       orientation="0,-800"
+       id="guide14" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="-800,0"
+       id="guide16" />
+    <sodipodi:guide
+       id="guide65"
+       orientation="1,0"
+       position="12.913271,259.30402" />
+    <sodipodi:guide
+       id="guide67"
+       orientation="1,0"
+       position="198.42693,260.17963" />
+    <sodipodi:guide
+       id="guide69"
+       orientation="0,-1"
+       position="-240.51312,198.52088" />
+    <sodipodi:guide
+       id="guide71"
+       orientation="0,-1"
+       position="-205.82869,13.316532" />
+    <inkscape:grid
+       id="grid77"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="stroke-width:1.06136"
+       transform="matrix(0.94240918,0,0,0.94197348,-7.0826787,-5.9169834)"
+       id="g1686">
+      <g
+         style="stroke-width:1.06136"
+         id="g1678"
+         transform="translate(0,10.568297)">
+        <path
+           id="path1101"
+           d="M 41.205734,178.25683 V 122.37501 H 198.42693 v 55.88182"
+           style="fill:none;stroke:#000000;stroke-width:11.2326;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           id="path1103"
+           d="M 41.361504,164.63311 H 197.77616"
+           style="fill:none;stroke:#000000;stroke-width:11.2326;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+      <path
+         id="path1666"
+         d="M 74.313772,74.167454 V 48.44337 h 91.005118 v 25.724084"
+         style="fill:none;stroke:#000000;stroke-width:11.2326;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:11.2326;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 51.384763,132.21892 74.313771,74.380154 h 18.581539 52.00384 20.41974 l 22.23665,57.422676"
+         id="path1668"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:11.2326;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 66.860062,95.900051 H 171.7527"
+         id="path1674" />
+    </g>
+  </g>
+</svg>

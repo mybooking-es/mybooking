@@ -61,23 +61,45 @@
 
   <br>
   <hr>
-  <% if (product_available) { %>    
+  <!-- Exceeds max duration -->
+  <% if (product && product.exceeds_max) { %>
+     <div class="alert alert-danger">
+        <p class="text-center"><%= i18next.t('chooseProduct.max_duration', {duration: i18next.t('common.'+product.price_units, {count: product.max_value, interpolation: {escapeValue: false}} ), interpolation: {escapeValue: false}}) %></p>
+     </div>  
+  <!-- Less than min duration -->  
+  <% } else if (product && product.be_less_than_min) { %>
+     <div class="alert alert-danger">
+        <p class="text-center"><%= i18next.t('chooseProduct.min_duration', {duration: i18next.t('common.'+product.price_units, {count: product.min_value, interpolation: {escapeValue: false}} ), interpolation: {escapeValue: false}}) %></p>
+     </div>  
+  <!-- Available --> 
+  <% } else if (product_available) { %>    
     <h4 class="brand-primary my-3">
-      <?php echo esc_html_x( 'Reservation summary', 'renting_product_calendar', 'mybooking') ?></h4>
-
+    <?php echo esc_html_x( 'Reservation summary', 'renting_product_calendar', 'mybooking') ?></h4>
+    
+    <!-- Duration -->
     <% if (shopping_cart.days > 0) { %>
-    <p class="color-gray-600"><?php echo esc_html_x( 'Rental duration', 'renting_product_calendar', 'mybooking' ) ?>:
+    <p class="color-gray-600">
       <span><%=shopping_cart.days%>
-        <?php echo esc_html_x( 'day(s)', 'renting_product_calendar', 'mybooking' ) ?></span></p>
+        <?php echo MyBookingEngineContext::getInstance()->getDuration() ?></span></p>
     <% } else if (shopping_cart.hours > 0) { %>
-    <p class="color-gray-600"><?php echo esc_html_x( 'Rental duration', 'renting_product_calendar', 'mybooking' ) ?>:
+    <p class="color-gray-600">
       <span><%=shopping_cart.hours%>
         <?php echo esc_html_x( 'hours(s)', 'renting_product_calendar', 'mybooking' ) ?></span></p>
     <% } %>
 
-    <h5><?php echo esc_html_x('Product', 'renting_product_calendar', 'mybooking') ?></h5>
+    <!-- Product -->
+    <h5><?php echo MyBookingEngineContext::getInstance()->getProduct() ?></h5>
     <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
 
+    <!-- Extras -->
+    <% if (shopping_cart.extras.length > 0) { %>
+      <% for (var idx=0;idx<shopping_cart.extras.length;idx++) { %>
+        <h6><%=shopping_cart.extras[idx].extra_description%> <% if (shopping_cart.extras[idx].quantity > 1) { %><span class="badge badge-info"><%=shopping_cart.extras[idx].quantity%></span> <% } %></h6>
+        <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></p>
+      <% } %>
+    <% } %>
+
+    <!-- Supplements -->
     <% if (shopping_cart.time_from_cost > 0) { %>
     <h6><?php echo esc_html_x('Pick-up time supplement', 'renting_product_calendar', 'mybooking') ?></h6>
     <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.time_from_cost)%></p>
@@ -98,6 +120,7 @@
     <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.return_place_cost)%></p>
     <% } %>
 
+    <!-- Total -->
     <h4 class="color-brand-primary my-3">
     <?php echo esc_html_x( 'Total', 'renting_product_calendar', 'mybooking' ) ?>
     </h4>

@@ -59,7 +59,7 @@
     <!-- Date/Time from / to -->
     <div class="flex-form-group">
       <div class="flex-form-box">
-        <label><?php echo esc_html_x( 'Pick-up date', 'renting_form_selector', 'mybooking' ) ?></label>
+        <label><?php echo MyBookingEngineContext::getInstance()->getDeliveryDate() ?></label>
         <div class="flex-form-item">
           <label class="mb-0" for="date_from"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
           <input type="text" id="date_from" name="date_from" readonly="true"/>
@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="flex-form-box">
-        <label><?php echo esc_html_x( 'Return date', 'renting_form_selector', 'mybooking' ) ?></label>
+        <label><?php echo MyBookingEngineContext::getInstance()->getCollectionDate() ?></label>
         <div class="flex-form-item">
           <label class="mb-0" for="date_to"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
           <input type="text" id="date_to" name="date_to" readonly="true"/>
@@ -89,7 +89,7 @@
 
   <% if (not_hidden_family_id && configuration.selectFamily) { %>
     <div class="flex-form-horizontal-box family" style="display: none">
-      <label class="mb-0" for="family_id"><?php echo esc_html_x( 'Family', 'renting_form_selector', 'mybooking' ) ?></label>
+      <label class="mb-0" for="family_id"><?php echo MyBookingEngineContext::getInstance()->getFamily() ?></label>
       <div class="flex-form-horizontal-item">
         <select name="family_id" id="family_id" class="form-control"></select>
       </div>
