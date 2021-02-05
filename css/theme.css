@@ -28915,15 +28915,6 @@ img.wizard-summary_separator {
       flex-wrap: wrap;
   max-width: 1140px; }
 
-.cards-static-container.fleet .card-static_body {
-  height: -webkit-fit-content !important;
-  height: -moz-fit-content !important;
-  height: fit-content !important;
-  min-height: 0; }
-
-.cards-static-container.fleet .card-static_image {
-  height: auto; }
-
 .cards-static-container:first-child {
   padding-top: 2rem; }
 
@@ -28962,7 +28953,9 @@ img.wizard-summary_separator {
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-item-align: center;
-      align-self: center; }
+      align-self: center;
+  -webkit-box-shadow: -6px 12px 50px -10px #cccccc;
+          box-shadow: -6px 12px 50px -10px #cccccc; }
   .card-static i {
     position: absolute;
     left: 10px;
@@ -28975,22 +28968,132 @@ img.wizard-summary_separator {
       cursor: pointer;
       color: var(--card-info-icon-color-hover); }
 
-.card-static_image {
+.card-static_image-container {
   width: 100%;
   height: 300px; }
-  .card-static_image img {
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    background-color: var(--card-image-bg-color);
-    -o-object-fit: var(--card-image-object-fit);
-       object-fit: var(--card-image-object-fit);
-    -webkit-box-shadow: -6px 12px 50px -10px #cccccc;
-            box-shadow: -6px 12px 50px -10px #cccccc; }
+
+.card-static_image {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: var(--card-image-bg-color);
+  -o-object-fit: var(--card-image-object-fit);
+     object-fit: var(--card-image-object-fit); }
+
+.card-static_custom-message {
+  font-size: 14px;
+  color: white;
+  background-color: var(--brand-primary);
+  text-align: center;
+  padding: 10px 20px;
+  position: absolute;
+  left: 0;
+  top: 260px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.card-static_header, .card-static_header-catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 10px 20px;
+  background: #f4f0ec;
+  height: 70px; }
+
+.card-static_price {
+  width: 100%; }
+
+.card-static_amount {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--brand-primary);
+  margin: 0; }
+
+.card-static_taxes {
+  width: auto;
+  float: right;
+  display: inline-block;
+  text-align: right;
+  line-height: 1;
+  float: right; }
+
+.card-static_header-catalog {
+  width: 100%; }
+  .card-static_header-catalog h2.card-static_product-name {
+    max-width: 300px; }
+
+.card-static_discount {
+  display: inline-block;
+  font-size: 14px;
+  width: 100%;
+  margin: 0; }
+
+.card-static_discount-badge {
+  display: inline-block;
+  width: auto;
+  float: right; }
+
+.card-static_original-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through; }
 
 .card-static_body {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 110px;
+  padding: 10px 20px 20px 20px;
+  background-color: var(--card-body-bg-color); }
+
+.card-static_product-name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--card-product-name-color);
+  font-weight: 800;
+  font-size: 1.4rem; }
+
+.card-static_product-short-description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--gray-500);
+  font-weight: 400;
+  font-size: 0.8rem;
+  max-width: 150px; }
+
+.card-static-not-available {
+  font-size: 14px;
+  margin-bottom: 0; }
+
+.card-static_low-availability {
+  font-size: 0.8rem;
+  color: red; }
+
+.card-static_footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -29003,95 +29106,12 @@ img.wizard-summary_separator {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  min-height: 200px;
-  padding: 80px 20px 20px 20px;
+  height: 140px;
+  padding: 20px 20px 20px 20px;
   background-color: var(--card-body-bg-color);
   border-radius: 10px;
   border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  -webkit-box-shadow: -6px 12px 50px -10px #cccccc;
-          box-shadow: -6px 12px 50px -10px #cccccc; }
-
-.card-static_btn {
-  -ms-flex-item-align: self-end;
-      align-self: self-end;
-  width: 100%; }
-  .card-static_btn .btn-choose-product {
-    width: 100%;
-    -webkit-transition: ease-in-out 0.15s;
-    transition: ease-in-out 0.15s;
-    border-radius: 50px;
-    background-color: transparent;
-    border-color: var(--brand-primary);
-    color: var(--brand-primary) !important; }
-    .card-static_btn .btn-choose-product:hover {
-      background-color: var(--brand-primary-dark);
-      border-color: var(--brand-primary-dark);
-      color: var(--white) !important;
-      cursor: pointer; }
-
-.card-static-not-available {
-  font-size: 13px;
-  margin-bottom: 0; }
-
-.card-static_header, .card-static_header-catalog {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: calc(100% - 120px);
-  position: absolute;
-  top: 20px;
-  left: 20px; }
-  .card-static_header h2.card-static_product-name, .card-static_header-catalog h2.card-static_product-name {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    color: var(--card-product-name-color);
-    font-weight: 600;
-    font-size: 1rem;
-    max-width: 150px; }
-  .card-static_header h3.card-static_product-short-description, .card-static_header-catalog h3.card-static_product-short-description {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    color: var(--gray-500);
-    font-weight: 400;
-    font-size: 0.8rem;
-    max-width: 150px; }
-
-.card-static_header-catalog {
-  width: 100%; }
-  .card-static_header-catalog h2.card-static_product-name {
-    max-width: 300px; }
-
-.card-static_price {
-  width: 100px;
-  text-align: right;
-  position: absolute;
-  right: 20px;
-  top: 20px; }
-  .card-static_price h2 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--brand-primary); }
-
-.card-static_low-availability {
-  position: absolute;
-  left: 20px;
-  top: 60px;
-  font-size: 0.8rem; }
-
-.card-static_discount {
-  font-size: 13px;
-  text-align: right;
-  position: absolute;
-  right: 20px;
-  top: 45px;
-  line-height: 1; }
+  border-top-right-radius: 0; }
 
 .card-static_icons {
   display: -webkit-box;
@@ -29100,7 +29120,6 @@ img.wizard-summary_separator {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 30px;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap; }
   .card-static_icons .icon {
@@ -29123,6 +29142,31 @@ img.wizard-summary_separator {
     .card-static_icons .icon img {
       height: 30px;
       width: 30px; }
+
+.card-static_btn {
+  width: 100%; }
+  .card-static_btn .btn-choose-product {
+    width: 100%;
+    -webkit-transition: ease-in-out 0.15s;
+    transition: ease-in-out 0.15s;
+    border-radius: 50px;
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: white !important; }
+    .card-static_btn .btn-choose-product:hover {
+      background-color: var(--brand-primary-dark);
+      border-color: var(--brand-primary-dark);
+      color: var(--white) !important;
+      cursor: pointer; }
+
+.cards-static-container.fleet .card-static_body {
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  min-height: 0; }
+
+.cards-static-container.fleet .card-static_image {
+  height: auto; }
 
 @media (min-width: 576px) {
   .key-icon {

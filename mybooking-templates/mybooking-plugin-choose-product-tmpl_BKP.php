@@ -81,66 +81,61 @@
       <% var product = products[idx]; %>
       <div class="card-static-wrapper">
         <div class="card-static">
-
-          <div class="card-static_image-container">
-            <img class="card-static_image" src="<%=product.photo%>">
-            <i type="button" class="card-static_info-button fa fa-info-circle js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>"></i>
-            <div class="card-static_custom-message">MENSAJE PERSONALIZADO</div>
+          <div class="card-static_image">
+              <img src="<%=product.photo%>">
+              <i type="button" class="fa fa-info-circle js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>"></i>
+              <div class="card-static_custom-message" style="font-size:12px;color:white;background-color:var(--brand-primary);text-align:center;padding:5px 0;position:absolute;left:0;top:265px;width:100%;">MENSAJE PERSONALIZADO</div>
           </div>
+          <div class="card-static_body">
 
-          <div class="card-static_header">
-            <div class="card-static_price">
-              <!-- Price (single product selection) -->
-              <% if (!product.exceeds_max && !product.be_less_than_min) { %>
-                <% if (!configuration.multipleProductsSelection) { %>
-                  <h2 class="card-static_amount"><%=configuration.formatCurrency(product.price)%></h2>
-                <% } %>
+            <!-- Price (single product selection) -->
+            <% if (!product.exceeds_max && !product.be_less_than_min) { %>
+              <% if (!configuration.multipleProductsSelection) { %>
+                <div class="card-static_price">
+                  <h2><%=configuration.formatCurrency(product.price)%></h2>
+                </div>
               <% } %>
+            <% } %>
 
-              <!-- Taxes included -->
-              <?php if ( array_key_exists('show_taxes_included', $args) && ( $args['show_taxes_included'] ) ): ?>
-                <span class="card-static_taxes">
-                  <small><?php echo esc_html_x( 'Taxes included', 'renting_choose_product', 'mybooking-wp-plugin') ?></small>
-                </span>
-              <?php endif; ?>
+            <!-- Product name and description -->
+            <div class="card-static_header">
+                <h2 class="card-static_product-name"><%=product.name%></h2>
+                <h3 class="card-static_product-short-description"><%=product.short_description%></h3>
             </div>
+
+            <!-- Few units warning -->
+            <% if (product.few_available_units) { %>
+              <p class="text-danger card-static_low-availability">
+                <?php echo esc_html_x('Few units left!','renting_choose_product','mybooking') ?></p>
+            <% } %>
 
             <!-- Offer (single product selection) -->
             <% if (!product.exceeds_max && !product.be_less_than_min) { %>
               <% if (!configuration.multipleProductsSelection) { %>
                 <% if (product.price != product.base_price) { %>
                   <% if (product.offer_discount_type == 'percentage' || product.offer_discount_type == 'amount') { %>
-                    <span class="card-static_discount">
-                      <span class="card-static_discount-badge badge badge-info"><%=new Number(product.offer_value)%>% <%=product.offer_name%></span>
-                      <span class="card-static_original-price"><%= configuration.formatCurrency(product.base_price)%></span>
-                    </span>
+                    <p class="card-static_discount">
+                      <span class="badge badge-info"><%=new Number(product.offer_value)%>% <%=product.offer_name%></span><br>
+                      <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small>
+                    </p>
                   <% } else if (typeof shoppingCart.promotion_code !== 'undefined' && shoppingCart.promotion_code !== null
                                 && shoppingCart.promotion_code !== '' &&
                                 (product.promotion_code_discount_type == 'percentage' || product.promotion_code_discount_type == 'amount') ) { %>
-                    <span class="card-static_discount">
-                      <span class="card-static_discount-badge badge badge-success"><%=new Number(product.promotion_code_value)%>% <%=shoppingCart.promotion_code%></span>
-                      <span class="card-static_original-price"><%= configuration.formatCurrency(product.base_price)%></span>
-                    </span>
+                    <p class="card-static_discount">
+                      <span class="badge badge-success"><%=new Number(product.promotion_code_value)%>% <%=shoppingCart.promotion_code%></span><br>
+                      <small class="text-muted ml-2"><s><%= configuration.formatCurrency(product.base_price)%></s></small>
+                    </p>
                   <% } %>
                 <% } %>
               <% } %>
             <% } %>
-          </div>
 
-          <div class="card-static_body">
-            <!-- Product name and description -->
-            <h2 class="card-static_product-name"><%=product.name%></h2>
-            <h3 class="card-static_product-short-description"><%=product.short_description%></h3>
+            <!-- Taxes included -->
+            <?php if ( array_key_exists('show_taxes_included', $args) && ( $args['show_taxes_included'] ) ): ?>
+              <br>
+              <small><?php echo esc_html_x( 'Taxes included', 'renting_choose_product', 'mybooking-wp-plugin') ?></small>
+            <?php endif; ?>
 
-            <!-- Few units warning -->
-            <% if (product.few_available_units) { %>
-              <span class="card-static_low-availability">
-                <?php echo esc_html_x('Few units left!','renting_choose_product','mybooking') ?>
-              </span>
-            <% } %>
-          </div>
-
-          <div class="card-static_footer">
             <!-- Key characteristics -->
             <div class="card-static_icons">
               <% if (product.key_characteristics) { %>
@@ -156,12 +151,12 @@
 
             <!-- Exceeds max duration -->
             <% if (product.exceeds_max) { %>
-              <p class="text-center" style="margin:0">
+              <p class="text-center">
                 <span class="badge badge-danger w-100 text-center"><%= i18next.t('chooseProduct.max_duration', {duration: i18next.t('common.'+product.price_units, {count: product.max_value, interpolation: {escapeValue: false}} ), interpolation: {escapeValue: false}}) %></span>
               </p>
             <!-- Less than min duration -->
             <% } else if (product.be_less_than_min) { %>
-              <p class="text-center" style="margin:0">
+              <p class="text-center">
                 <span class="badge badge-danger w-100 text-center"><%= i18next.t('chooseProduct.min_duration', {duration: i18next.t('common.'+product.price_units, {count: product.min_value, interpolation: {escapeValue: false}} ), interpolation: {escapeValue: false}}) %></span>
               </p>
             <!-- Available -->
@@ -189,7 +184,7 @@
               <% } %>
             <!-- Not available -->
             <% } else { %>
-                  <p class="text-center text-muted" style="margin:0">
+                  <p class="text-center text-muted">
                   <?php echo esc_html_x( 'Model not available in the office and selected dates', 'renting_choose_product', 'mybooking') ?>
                   </p>
             <% } %>
