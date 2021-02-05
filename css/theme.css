@@ -28989,14 +28989,11 @@ img.wizard-summary_separator {
   letter-spacing: 1px;
   background-color: var(--brand-primary);
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px;
   position: absolute;
   left: 0;
   top: 265px;
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden; }
+  width: 100%; }
 
 .card-static_header, .card-static_header-catalog {
   display: -webkit-box;
