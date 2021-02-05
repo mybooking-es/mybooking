@@ -85,7 +85,7 @@
           <div class="card-static_image-container">
             <img class="card-static_image" src="<%=product.photo%>">
             <i type="button" class="card-static_info-button fa fa-info-circle js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>"></i>
-            <div class="card-static_custom-message">MENSAJE PERSONALIZADO</div>
+            <div class="card-static_custom-message">MENSAJE PERSONALIZADO MENSAJE PERSONALIZADO</div>
           </div>
 
           <div class="card-static_header">
@@ -100,7 +100,7 @@
               <!-- Taxes included -->
               <?php if ( array_key_exists('show_taxes_included', $args) && ( $args['show_taxes_included'] ) ): ?>
                 <span class="card-static_taxes">
-                  <small><?php echo esc_html_x( 'Taxes included', 'renting_choose_product', 'mybooking-wp-plugin') ?></small>
+                  <?php echo esc_html_x( 'Taxes included', 'renting_choose_product', 'mybooking-wp-plugin') ?>
                 </span>
               <?php endif; ?>
             </div>

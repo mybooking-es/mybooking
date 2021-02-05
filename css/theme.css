@@ -28983,14 +28983,16 @@ img.wizard-summary_separator {
      object-fit: var(--card-image-object-fit); }
 
 .card-static_custom-message {
-  font-size: 14px;
+  font-size: 10px;
   color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
   background-color: var(--brand-primary);
   text-align: center;
   padding: 10px 20px;
   position: absolute;
   left: 0;
-  top: 260px;
+  top: 265px;
   width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -29024,11 +29026,10 @@ img.wizard-summary_separator {
 
 .card-static_taxes {
   width: auto;
-  float: right;
-  display: inline-block;
   text-align: right;
-  line-height: 1;
-  float: right; }
+  line-height: 1.5;
+  float: right;
+  font-size: 14px; }
 
 .card-static_header-catalog {
   width: 100%; }
