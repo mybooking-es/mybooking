@@ -72,17 +72,17 @@
 }
 
 .card-static_custom-message {
-  font-size:10px;
-  color:white;
+  font-size: 9px;
+  color: white;
   font-weight: 700;
   letter-spacing: 1px;
-  background-color:var(--brand-primary);
-  text-align:center;
-  padding:10px;
-  position:absolute;
-  left:0;
-  top:265px;
-  width:100%;
+  background-color: var(--brand-primary);
+  text-align: center;
+  padding: 13px;
+  position: absolute;
+  left: 0;
+  top: 265px;
+  width: 100%;
 }
 
 .card-static_header {
@@ -148,28 +148,21 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 110px;
+  height: 150px;
   padding: 10px 20px 20px 20px;
   background-color: var(--card-body-bg-color);
 }
 
 .card-static_product-name {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   color: var(--card-product-name-color);
   font-weight: 800;
   font-size: 1.4rem;
 }
 
 .card-static_product-short-description {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   color: var(--gray-500);
   font-weight: 400;
   font-size: 0.8rem;
-  max-width: 150px;
 }
 
 .card-static-not-available {
@@ -188,7 +181,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 140px;
+  height: 130px;
   padding: 20px 20px 20px 20px;
   background-color: var(--card-body-bg-color);
   border-radius: 10px;
