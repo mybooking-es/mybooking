@@ -191,9 +191,9 @@
               <% } %>
             <!-- Not available -->
             <% } else { %>
-                  <p class="text-center text-muted" style="margin:0">
+                  <span class="card-static_not-available">
                   <?php echo esc_html_x( 'Model not available in the office and selected dates', 'renting_choose_product', 'mybooking') ?>
-                  </p>
+                  </span>
             <% } %>
 
           </div>
