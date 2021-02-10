@@ -144,24 +144,68 @@
 <script type="text/tmpl" id="script_reservation_summary_sticky">
   <div class="reservation-summary-sticky-wrapper">
     <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
-    <div class="reservation-summary-sticky complete-sticky">
-      <div class="sandwitch-wrapper">
-          <% if (configuration.pickupReturnPlace) { %>
+      <div class="reservation-summary-sticky complete-sticky">
+        <div class="sandwitch-wrapper">
+            <% if (configuration.pickupReturnPlace) { %>
+            <div class="reservation-summary_pickup_place">
+              <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
+            </div>
+            <% } else { %>
+            <div class="ml-1"></div>
+            }
+            <% } %>
+          <div class="reservation-summary_pickup_date">
+            <span><%=shopping_cart.date_from_short_format%>
+              <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></span>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="sandwitch-wrapper push-to-the-right">
+          <div class="reservation-summary_return_place">
+            <span class="overflow-ellipsis">
+              <%=shopping_cart.return_place_customer_translation%>
+            </span>
+          </div>
+          <div class="reservation-summary_return_date">
+            <span><%=shopping_cart.date_to_short_format%>
+              <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
+          </div>
+        </div>
+          <!-- Row for price & buttons  -->
+          <div class="complete-summary-row">
+            <div class="complete-summary-price-wrapper">
+              <div class="complete-summary-total-title">
+                <?php echo esc_html_x( "Total", 'renting_complete', 'mybooking' ) ?></div>
+              <div class="complete-summary-total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
+              </div>
+            </div>
+            <div class="complete-buttons-wrapper">
+              <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
+                class="complete-button"><i class="fas fa-pen mr-2"></i>
+                <?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
+              </button>
+              <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
+                <i class="fas fa-info-circle mr-2"></i><?php echo esc_html_x( 'Info', 'renting_complete', 'mybooking' ) ?>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <% } else { %>
+
+      <div class="reservation-summary-sticky">
+        <% if (configuration.pickupReturnPlace) { %>
           <div class="reservation-summary_pickup_place">
             <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
           </div>
-          <% } else { %>
-          <div class="ml-1"></div>
-          }
-          <% } %>
+        <% } %>
         <div class="reservation-summary_pickup_date">
           <span><%=shopping_cart.date_from_short_format%>
             <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></span>
         </div>
-      </div>
-      <div class="separator"></div>
-      <div class="sandwitch-wrapper push-to-the-right">
-        <div class="reservation-summary_return_place">
+        <div class="separator"></div>
+        <div class="reservation-summary_return_place d-none d-md-flex">
           <span class="overflow-ellipsis">
             <%=shopping_cart.return_place_customer_translation%>
           </span>
@@ -170,69 +214,25 @@
           <span><%=shopping_cart.date_to_short_format%>
             <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
         </div>
-      </div>
-        <!-- Row for price & buttons  -->
-        <div class="complete-summary-row">
-          <div class="complete-summary-price-wrapper">
-            <div class="complete-summary-total-title">
-              <?php echo esc_html_x( "Total", 'renting_complete', 'mybooking' ) ?></div>
-            <div class="complete-summary-total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
+          <!-- Row for price & buttons -->
+          <div class="complete-summary-row">
+            <div class="complete-summary-price-wrapper">
+              <div class="complete-summary-total-title">
+                <?php echo esc_html_x( "Total", 'renting_complete', 'mybooking' ) ?></div>
+              <div class="complete-summary-total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
+              </div>
+            </div>
+
+            <div class="complete-buttons-wrapper">
+              <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
+                class="complete-button"><?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
+              </button>
+              <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
+                <i class="fas fa-info-circle mr-2"></i><?php echo esc_html_x('Info', 'renting_complete', 'mybooking') ?>
+              </button>
             </div>
           </div>
-          <div class="complete-buttons-wrapper">
-            <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
-              class="complete-button"><i class="fas fa-pen mr-2"></i>
-              <?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
-            </button>
-            <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
-              <i class="fas fa-info-circle mr-2"></i><?php echo esc_html_x( 'Info', 'renting_complete', 'mybooking' ) ?>
-            </button>
-          </div>
-        </div>
       </div>
-    </div>
-
-    <% } else { %>
-
-    <div class="reservation-summary-sticky">
-      <% if (configuration.pickupReturnPlace) { %>
-        <div class="reservation-summary_pickup_place">
-          <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
-        </div>
-      <% } %>
-      <div class="reservation-summary_pickup_date">
-        <span><%=shopping_cart.date_from_short_format%>
-          <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></span>
-      </div>
-      <div class="separator"></div>
-      <div class="reservation-summary_return_place d-none d-md-flex">
-        <span class="overflow-ellipsis">
-          <%=shopping_cart.return_place_customer_translation%>
-        </span>
-      </div>
-      <div class="reservation-summary_return_date">
-        <span><%=shopping_cart.date_to_short_format%>
-          <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
-      </div>
-        <!-- Row for price & buttons -->
-        <div class="complete-summary-row">
-          <div class="complete-summary-price-wrapper">
-            <div class="complete-summary-total-title">
-              <?php echo esc_html_x( "Total", 'renting_complete', 'mybooking' ) ?></div>
-            <div class="complete-summary-total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
-            </div>
-          </div>
-
-          <div class="complete-buttons-wrapper">
-            <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
-              class="complete-button"><?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
-            </button>
-            <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
-              <i class="fas fa-info-circle mr-2"></i><?php echo esc_html_x('Info', 'renting_complete', 'mybooking') ?>
-            </button>
-          </div>
-        </div>
-    </div>
 
     <% } %>
   </div>
@@ -258,53 +258,56 @@
                 <li><%=shopping_cart.return_place_customer_translation%></li>
               </ul>
             </div>  
-        <div class="table-responsive mt-5">
-          <table class="table product-detail-table table-borderless">
-              <thead>
-                <tr class="bg-gray-100">
-                  <th></th>
-                  <th scope="col">
-                    <?php echo MyBookingEngineContext::getInstance()->getProduct() ?></th>
-                  <th scope="col" class="text-right">
-                    <?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?></th>
-                  <th scope="col" class="text-right">
-                    <?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?></th>
-                  <th scope="col" class="text-right">
-                    <?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?></th>
-                </tr>
-              </thead>
-              <tbody>
-                <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-                  <tr>
-                    <td class="text-center text-md-left"><img class="img-fluid" style="max-width: 120px"
-                        src="<%=shopping_cart.items[idx].photo_medium%>" alt="">
-                    </td>
-                    <td data-label="<?php echo MyBookingEngineContext::getInstance()->getProduct() ?>" 
-                      class="align-middle">
-                      <%=shopping_cart.items[idx].item_description_customer_translation%>
-                    </td>
-                    <td data-label="<?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>"
-                      class="align-middle text-right">
-                      <%=configuration.formatCurrency(shopping_cart.items[idx].item_unit_cost)%>
-                    </td>
-                    <td data-label="<?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?>"
-                      class="align-middle text-right"><%=shopping_cart.items[idx].quantity%>
-                    </td>
-                    <td data-label="<?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?>"
-                      class="align-middle text-right">
-                      <%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%>
-                    </td>
+          <div class="table-responsive mt-5">
+            <table class="table product-detail-table table-borderless">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th></th>
+                    <th scope="col">
+                      <?php echo MyBookingEngineContext::getInstance()->getProduct() ?></th>
+                    <th scope="col" class="text-right">
+                      <?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?></th>
+                    <th scope="col" class="text-right">
+                      <?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?></th>
+                    <th scope="col" class="text-right">
+                      <?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?></th>
                   </tr>
-                <% } %>  
-              </tbody>
-          </table>
-        </div>
+                </thead>
+                <tbody>
+                  <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
+                    <tr>
+                      <td class="text-center text-md-left"><img class="img-fluid" style="max-width: 120px"
+                          src="<%=shopping_cart.items[idx].photo_medium%>" alt="">
+                      </td>
+                      <td data-label="<?php echo MyBookingEngineContext::getInstance()->getProduct() ?>" 
+                        class="align-middle">
+                        <%=shopping_cart.items[idx].item_description_customer_translation%>
+                      </td>
+                      <td data-label="<?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>"
+                        class="align-middle text-right">
+                        <%=configuration.formatCurrency(shopping_cart.items[idx].item_unit_cost)%>
+                      </td>
+                      <td data-label="<?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?>"
+                        class="align-middle text-right"><%=shopping_cart.items[idx].quantity%>
+                      </td>
+                      <td data-label="<?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?>"
+                        class="align-middle text-right">
+                        <%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%>
+                      </td>
+                    </tr>
+                  <% } %>  
+                </tbody>
+            </table>
+          </div>
         </div>
       <% } else { %>  
         <div class="product-detail-container">
           <div class="product-detail-content">
             <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
                 <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
+                <% if (shopping_cart.items[idx].highlight_message && shopping_cart.items[idx].highlight_message != '') { %>
+                  <h3 class="h6 text-muted"><%=shopping_cart.items[idx].highlight_message%></h3>
+                <% } %>
                 <h5 class="mt-3"><?php echo esc_html_x('Delivery', 'renting_complete', 'mybooking') ?></h5>
                 <ul>
                   <li><%=shopping_cart.date_from_full_format%>
@@ -329,7 +332,7 @@
           </div>  
         <div class="product-detail-image">
           <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-          <img class="img-fluid" src="<%=shopping_cart.items[idx].photo_full%>" alt="">
+            <img class="img-fluid" src="<%=shopping_cart.items[idx].photo_full%>" alt="">
           <% } %>
         </div>
       </div>    
@@ -382,20 +385,23 @@
           <% } %>
         </div>      
           <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-          <div class="product-view">
-            <div class="product-view_image d-none d-sm-block">
-              <img class="img-fluid" src="<%= shopping_cart.items[idx].photo_medium%>">
+            <div class="product-view">
+              <div class="product-view_image d-none d-sm-block">
+                <img class="img-fluid" src="<%= shopping_cart.items[idx].photo_medium%>">
+              </div>
+              <div class="product-view_text">
+                <p class="fw-700"><%=shopping_cart.items[idx].item_description_customer_translation%></p>
+                <% if (shopping_cart.items[idx].highlight_message && shopping_cart.items[idx].highlight_message != '') { %>
+                  <p class="fw-300 text-muted"><small><%=shopping_cart.items[idx].highlight_message%></small></p>
+                <% } %>
+              </div>
+              <!-- Quantity -->
+              <% if (configuration.multipleProductsSelection) { %>
+              <span class="badge badge-info"><%=shopping_cart.items[idx].quantity%></span>
+              <% } %>
+              <!-- Price -->
+              <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%></span>
             </div>
-            <div class="product-view_text">
-              <p class="fw-700"><%=shopping_cart.items[idx].item_description_customer_translation%></p>
-            </div>
-            <!-- Quantity -->
-            <% if (configuration.multipleProductsSelection) { %>
-            <span class="badge badge-info"><%=shopping_cart.items[idx].quantity%></span>
-            <% } %>
-            <!-- Price -->
-            <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%></span>
-          </div>
           <% } %>
           <ul class="list-group  summary-modal_list">
             <!-- Products -->
