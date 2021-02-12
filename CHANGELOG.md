@@ -1,6 +1,11 @@
 # Changelog
 
 ## [1.0.1] 2020-02-12
+
+### Fixed
+- Customizer carrousel was not working
+
+### Added
 - Mybooking Plugin integration improvements:
   - Cards with highlight message and taxes
   - Sales Channel in select forms

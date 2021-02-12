@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2021-01-18 13:38+0000\n"
+"PO-Revision-Date: 2021-02-12 07:36+0000\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "Language: ca\n"
@@ -29,6 +29,540 @@ msgctxt "404_page"
 msgid "We are sorry. The page you were looking for could not be found"
 msgstr "Ho sentim. No s'ha trobat la pàgina que cercàveu"
 
+#: mybooking-templates/mybooking-plugin-activities.php:41
+msgctxt "activities_list"
+msgid "From"
+msgstr "Des de"
+
+#: mybooking-templates/mybooking-plugin-activities.php:55
+msgctxt "activities_list"
+msgid "More information"
+msgstr "Més informació"
+
+#: mybooking-templates/mybooking-plugin-activities.php:113
+msgctxt "activities_list"
+msgid "Next"
+msgstr "Pròxim"
+
+#: mybooking-templates/mybooking-plugin-activities.php:13
+msgctxt "activities_list"
+msgid "No results found"
+msgstr "Sense resultats"
+
+#: mybooking-templates/mybooking-plugin-activities.php:86
+msgctxt "activities_list"
+msgid "Page navigation"
+msgstr "Navegació de pàgines"
+
+#: mybooking-templates/mybooking-plugin-activities.php:92
+msgctxt "activities_list"
+msgid "Previous"
+msgstr "Anterior"
+
+#: mybooking-templates/mybooking-plugin-activities-search-tmpl.php:25
+msgctxt "activities_search"
+msgid "Category"
+msgstr "Categoria"
+
+#: mybooking-templates/mybooking-plugin-activities-search-tmpl.php:17
+msgctxt "activities_search"
+msgid "Destination"
+msgstr "Destinació"
+
+#: mybooking-templates/mybooking-plugin-activities-search.php:24
+msgctxt "activities_search"
+msgid "Search"
+msgstr "Cerca"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:41
+msgctxt "activity_detail"
+msgid "Next"
+msgstr "Pròxim"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:170
+msgctxt "activity_detail"
+msgid "Please choose your dates in the availability calendar"
+msgstr "Seleccioneu les dates al calendari de disponibilitat"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:36
+msgctxt "activity_detail"
+msgid "Previous"
+msgstr "Anterior"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:115
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:117
+msgctxt "activity_my_reservation"
+msgid "Address"
+msgstr "Adreça"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:281
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:284
+msgctxt "activity_my_reservation"
+msgid "Allergies"
+msgstr "Al·lèrgies"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:288
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:290
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:292
+msgctxt "activity_my_reservation"
+msgid "Allergies detail"
+msgstr "Detall d’al·lèrgies"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:458
+msgctxt "activity_my_reservation"
+msgid "Cancel Reservation"
+msgstr "Cancel·la la reserva"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:138
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:140
+msgctxt "activity_my_reservation"
+msgid "City"
+msgstr "Ciutat"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:129
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:131
+msgctxt "activity_my_reservation"
+msgid "Complement"
+msgstr "Complement"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:99
+msgctxt "activity_my_reservation"
+msgid "Complete reservation"
+msgstr "Completar reserva"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:154
+msgctxt "activity_my_reservation"
+msgid "Country"
+msgstr "País"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:534
+msgctxt "activity_my_reservation"
+msgid "Credit or debit card"
+msgstr "Targeta de crèdit o dèbit"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:111
+msgctxt "activity_my_reservation"
+msgid "Customer address"
+msgstr "Adreça del client"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:467
+msgctxt "activity_my_reservation"
+msgid "Customer's details"
+msgstr "Adreça del client"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:217
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:219
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:221
+msgctxt "activity_my_reservation"
+msgid "Date of birth"
+msgstr "Data de naixement"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:342
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:345
+msgctxt "activity_my_reservation"
+msgid "Diseases"
+msgstr "Malalties"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:349
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:351
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:353
+msgctxt "activity_my_reservation"
+msgid "Diseases detail"
+msgstr "Detall de malalties"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:206
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:208
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:210
+msgctxt "activity_my_reservation"
+msgid "Document ID"
+msgstr "Identificador del document"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:240
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:242
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:244
+msgctxt "activity_my_reservation"
+msgid "E-mail"
+msgstr "Correu electrònic"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:255
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:257
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:259
+msgctxt "activity_my_reservation"
+msgid "Height (cm)"
+msgstr "Alçada (cm)"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:300
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:303
+msgctxt "activity_my_reservation"
+msgid "Intolerances"
+msgstr "Intoleràncies"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:307
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:309
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:311
+msgctxt "activity_my_reservation"
+msgid "Intolerances detail"
+msgstr "Detall de les intoleràncies"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:187
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:189
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:191
+msgctxt "activity_my_reservation"
+msgid "Name"
+msgstr "Nom"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:374
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:388
+msgctxt "activity_my_reservation"
+msgid "Never"
+msgstr "Mai"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:407
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:419
+msgctxt "activity_my_reservation"
+msgid "No"
+msgstr "No"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:122
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:124
+msgctxt "activity_my_reservation"
+msgid "Number"
+msgstr "Número"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:375
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:389
+msgctxt "activity_my_reservation"
+msgid "Once"
+msgstr "Un cop"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:483
+msgctxt "activity_my_reservation"
+msgid "Paid"
+msgstr "Pagat"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:182
+msgctxt "activity_my_reservation"
+msgid "Partipant"
+msgstr "Partipant"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:526
+msgctxt "activity_my_reservation"
+msgid "Paypal"
+msgstr "Paypal"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:485
+msgctxt "activity_my_reservation"
+msgid "Pending"
+msgstr "Pendents"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:229
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:231
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:233
+msgctxt "activity_my_reservation"
+msgid "Phone number"
+msgstr "Número de telèfon"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:105
+msgctxt "activity_my_reservation"
+msgid ""
+"Please complete the information to speed up the delivery process on the "
+"scheduled date"
+msgstr ""
+"Completeu la informació per accelerar el procés d’entrega a la data prevista"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:160
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:162
+msgctxt "activity_my_reservation"
+msgid "Postal Code"
+msgstr "Codi Postal"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:450
+msgctxt "activity_my_reservation"
+msgid "Reservation ID"
+msgstr "Identificador de reserva"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:372
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:387
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:406
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:418
+msgctxt "activity_my_reservation"
+msgid "Select the option"
+msgstr "Seleccioneu l'opció"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:321
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:324
+msgctxt "activity_my_reservation"
+msgid "Slight injuries"
+msgstr "Lesions lleus"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:328
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:330
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:332
+msgctxt "activity_my_reservation"
+msgid "Slight injuries detail"
+msgstr "Detall de lesions lleus"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:145
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:147
+msgctxt "activity_my_reservation"
+msgid "State"
+msgstr "Provincia"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:196
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:198
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:200
+msgctxt "activity_my_reservation"
+msgid "Surname"
+msgstr "Cognom"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:377
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:391
+msgctxt "activity_my_reservation"
+msgid "Three or more times"
+msgstr "Tres o més vegades"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:480
+msgctxt "activity_my_reservation"
+msgid "Total"
+msgstr "Total"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:376
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:390
+msgctxt "activity_my_reservation"
+msgid "Twice"
+msgstr "Dues vegades"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:434
+msgctxt "activity_my_reservation"
+msgid "Update"
+msgstr "Actualització"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:266
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:268
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:270
+msgctxt "activity_my_reservation"
+msgid "Weight (kg)"
+msgstr "Weight (kg)"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:408
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:420
+msgctxt "activity_my_reservation"
+msgid "Yes"
+msgstr "Sí"
+
+#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:78
+msgctxt "activity_my_reservation_item"
+msgid "Total"
+msgstr "Total"
+
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:70
+msgctxt "activity_order_item"
+msgid "Total"
+msgstr "Total"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:128
+msgctxt "activity_routes"
+msgid "Ages"
+msgstr "Edats"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:70
+msgctxt "activity_routes"
+msgid "Calendar, timetable and duration"
+msgstr "Calendari, horari i durada"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:118
+msgctxt "activity_routes"
+msgid "Dates and timetables"
+msgstr "Dates i horaris"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:138
+msgctxt "activity_routes"
+msgid "Difficulty"
+msgstr "Dificultat"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:158
+msgctxt "activity_routes"
+msgid "Meeting point"
+msgstr "Punt de trobada"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:148
+msgctxt "activity_routes"
+msgid "Prices"
+msgstr "Preus"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:98
+msgctxt "activity_routes"
+msgid "Recomendations"
+msgstr "Recomanacions"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:108
+msgctxt "activity_routes"
+msgid "What to bring?"
+msgstr "Què portar?"
+
+#: mybooking-templates/mybooking-plugin-routes-activity.php:88
+msgctxt "activity_routes"
+msgid "What's included?"
+msgstr "Què inclou?"
+
+#. 1: Number of results, 2: Number of results
+#: mybooking-templates/mybooking-plugin-activities.php:68
+#, php-format
+msgctxt "activity_shopping_cart"
+msgid "<b>%s</b> result found"
+msgid_plural "<b>%s</b> results found"
+msgstr[0] "<b>% s </b> resultat trobat"
+msgstr[1] "S'han trobat <b>% s </b> resultats"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:115
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:117
+msgctxt "activity_shopping_cart"
+msgid "Alternative phone number"
+msgstr "Número de telèfon alternatiu"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:125
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:127
+msgctxt "activity_shopping_cart"
+msgid "Comments"
+msgstr "Comentaris"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:95
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:97
+msgctxt "activity_shopping_cart"
+msgid "Confirm E-mail"
+msgstr "Confirma el correu electrònic"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:235
+msgctxt "activity_shopping_cart"
+msgid "Credit or debit card"
+msgstr "Targeta de crèdit o dèbit"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:87
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:89
+msgctxt "activity_shopping_cart"
+msgid "E-mail"
+msgstr "Correu electrònic"
+
+#. %s: terms and conditions URL
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:192
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:261
+#, php-format
+msgctxt "activity_shopping_cart"
+msgid ""
+"I have read and hereby accept the <a href=\"%s\" target=\"_blank\">terms and "
+"conditions</a>"
+msgstr ""
+"He llegit i accepto els <a href=\"%s\" target=\"_blank\"> termes i "
+"condicions </a>"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:189
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:258
+msgctxt "activity_shopping_cart"
+msgid "I have read and hereby accept the terms and conditions"
+msgstr "He llegit i accepto els termes i condicions"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:69
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:71
+msgctxt "activity_shopping_cart"
+msgid "Name"
+msgstr "Nom"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:172
+msgctxt "activity_shopping_cart"
+msgid "Pay now"
+msgstr "Paga ara"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:229
+msgctxt "activity_shopping_cart"
+msgid "Paypal"
+msgstr "Paypal"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:106
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:108
+msgctxt "activity_shopping_cart"
+msgid "Phone number"
+msgstr "Número de telèfon"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:165
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:203
+msgctxt "activity_shopping_cart"
+msgid "Request reservation"
+msgstr "Sol·licita reserva"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:16
+msgctxt "activity_shopping_cart"
+msgid "Shopping cart is empty"
+msgstr "El carretó de la compra està buit"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:77
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:79
+msgctxt "activity_shopping_cart"
+msgid "Surname"
+msgstr "Cognom"
+
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:52
+#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:139
+msgctxt "activity_shopping_cart"
+msgid "Total"
+msgstr "Total"
+
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:103
+msgctxt "activity_summary"
+msgid "Customer's details"
+msgstr "Adreça del client"
+
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:116
+msgctxt "activity_summary"
+msgid "Paid"
+msgstr "Pagat"
+
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:117
+msgctxt "activity_summary"
+msgid "Pending"
+msgstr "Pendents"
+
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:92
+msgctxt "activity_summary"
+msgid "Reservation ID"
+msgstr "Identificador de reserva"
+
+#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:114
+msgctxt "activity_summary"
+msgid "Total"
+msgstr "Total"
+
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:113
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:140
+msgctxt "activity_tickets_form_selector"
+msgid "Book now"
+msgstr "Reservar ara"
+
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:100
+msgctxt "activity_tickets_form_selector"
+msgid "People"
+msgstr "Persones"
+
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:131
+msgctxt "activity_tickets_form_selector"
+msgid "Please, select an option"
+msgstr "Seleccioneu una opció"
+
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:46
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:62
+msgctxt "activity_tickets_form_selector"
+msgid "Select date"
+msgstr "Seleccioneu la data"
+
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:80
+msgctxt "activity_tickets_form_selector"
+msgid "Select hour"
+msgstr "Seleccioneu l’hora"
+
+#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:76
+msgctxt "activity_tickets_form_selector"
+msgid "We are sorry. There are not schedules available"
+msgstr "Ho sentim. No hi ha horaris disponibles"
+
 #: index.php:42
 msgctxt "blog_message"
 msgid ""
@@ -37,15 +571,43 @@ msgstr ""
 "No s'ha trobat cap contingut. Si us plau, publiqueu com a mínim una "
 "publicació per mostrar-hi alguna cosa"
 
+#. %s: category name
+#: inc/categories.php:52 inc/categories.php:69 inc/categories.php:81
+#: inc/categories.php:104 inc/categories.php:121 inc/categories.php:133
+#, php-format
+msgctxt "categories"
+msgid "View all posts in %s"
+msgstr "Veure tots els missatges a %s"
+
+#: inc/post-functions.php:55
+msgctxt "comments"
+msgid "% Comments"
+msgstr "Comentaris"
+
+#: comments.php:65 comments.php:100
+msgctxt "comments"
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentaris Antics"
+
+#: comments.php:61 comments.php:96
+msgctxt "comments"
+msgid "Comment navigation"
+msgstr "Navegació de comentaris"
+
+#: comments.php:71 comments.php:106
+msgctxt "comments"
+msgid "Newer Comments &rarr;"
+msgstr "Comentaris més recents & rarr;"
+
 #. %s: post title
-#: comments.php:38
+#: comments.php:37
 #, php-format
 msgctxt "comments"
 msgid "One thought on &ldquo;<span>%s</span>&rdquo;"
 msgstr "Una resposta a &ldquo;<span>%s</span>&rdquo;"
 
 #. 1: number of comments, 2: post title
-#: comments.php:44
+#: comments.php:43
 #, php-format
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;<span>%2$s</span>&rdquo;"
@@ -53,464 +615,153 @@ msgid_plural "%1$s thoughts on &ldquo;<span>%2$s</span>&rdquo;"
 msgstr[0] "%1$s resposta a &ldquo;<span>%2$s</span>&rdquo;"
 msgstr[1] "%1$s respostes a &ldquo;<span>%2$s</span>&rdquo;"
 
-#: comments.php:63 comments.php:98
-msgctxt "comments"
-msgid "Comment navigation"
-msgstr "Navegació de comentaris"
-
-#: comments.php:67 comments.php:102
-msgctxt "comments"
-msgid "&larr; Older Comments"
-msgstr "&larr; Comentaris Antics"
-
-#: comments.php:73 comments.php:108
-msgctxt "comments"
-msgid "Newer Comments &rarr;"
-msgstr "Comentaris més recents & rarr;"
-
-#: header.php:45
-msgctxt "header"
-msgid "Skip to content"
-msgstr "Ves al contingut"
-
-#: footer.php:33
-msgctxt "footer"
-msgid "Top"
-msgstr "Top"
-
-#: page.php:41 mybooking-parts/blog/mybooking-content-single.php:45
-msgctxt "pages_navigation"
-msgid "Pages"
-msgstr "Pàgines"
-
-#: inc/widgets.php:25
-msgctxt "mybooking_widgets"
-msgid "Top Notification"
-msgstr "Notificació superior"
-
-#: inc/widgets.php:27
-msgctxt "mybooking_widgets"
-msgid "Notification area at Top"
-msgstr "Àrea de notificacions a la part superior"
-
-#: inc/widgets.php:36
-msgctxt "mybooking_widgets"
-msgid "TopBar Right"
-msgstr "Barra superior dreta"
-
-#: inc/widgets.php:38
-msgctxt "mybooking_widgets"
-msgid "TopBar Right Area"
-msgstr "Àrea dreta de la barra superior"
-
-#: inc/widgets.php:47
-msgctxt "mybooking_widgets"
-msgid "Main Menu"
-msgstr "Conductor principal"
-
-#: inc/widgets.php:49
-msgctxt "mybooking_widgets"
-msgid "Widgets area at Main Menu right side"
-msgstr "Zona dels ginys a la part dreta del menú principal"
-
-#: inc/widgets.php:58
-msgctxt "mybooking_widgets"
-msgid "Mybooking Home Template Header Left"
-msgstr "Capçalera de plantilla d'inici de Mybooking a l'esquerra"
-
-#: inc/widgets.php:60
-msgctxt "mybooking_widgets"
-msgid "Mybooking Home Template widgets area at left of Home header"
-msgstr ""
-"Àrea de widgets de plantilla d'inici Mybooking a l'esquerra de la capçalera "
-"d'inici"
-
-#: inc/widgets.php:67
-msgctxt "mybooking_widgets"
-msgid "Mybooking Home Template Header Right"
-msgstr "Capçalera de plantilla d'inici de Mybooking a la dreta"
-
-#: inc/widgets.php:69
-msgctxt "mybooking_widgets"
-msgid "Mybooking Home Template widgets area at right of Home header"
-msgstr ""
-"Àrea de widgets de plantilla d'inici de Mybooking a la dreta de la capçalera "
-"d'inici"
-
-#: inc/widgets.php:81
-msgctxt "mybooking_widgets"
-msgid "Mybooking Home Template Top"
-msgstr "Plantilla d'inici de Mybooking dalt"
-
-#: inc/widgets.php:83
-msgctxt "mybooking_widgets"
-msgid "Mybooking Home Template widgets area at top"
-msgstr "Àrea de widgets de plantilla d'inici Mybooking a la part superior"
-
-#: inc/widgets.php:96 inc/widgets.php:98
-msgctxt "mybooking_widgets"
-msgid "Mybooking Home Template Center One"
-msgstr "Plantilla Mybooking Home centre 1"
-
-#: inc/widgets.php:105 inc/widgets.php:107
-msgctxt "mybooking_widgets"
-msgid "Mybooking Home Template Center Two"
-msgstr "Plantilla Mybooking Home centre 2"
-
-#: inc/widgets.php:114 inc/widgets.php:116
-msgctxt "mybooking_widgets"
-msgid "Mybooking Home Template Center Three"
-msgstr "Plantilla Mybooking Home centre 3"
-
-#: inc/widgets.php:128
-msgctxt "mybooking_widgets"
-msgid "Mybooking Home Template Bottom"
-msgstr "Fons de plantilla Home de Mybooking"
-
-#: inc/widgets.php:130
-msgctxt "mybooking_widgets"
-msgid "Mybooking Home Template bottom widgets area"
-msgstr "Àrea inferior de widgets de la plantilla Home de Mybooking"
-
-#: inc/widgets.php:140
-msgctxt "mybooking_widgets"
-msgid "Blog sidebar"
-msgstr "Barra lateral del bloc"
-
-#: inc/widgets.php:142
-msgctxt "mybooking_widgets"
-msgid "Blog sidebar widgets area"
-msgstr "Àrea de ginys de la barra lateral del bloc"
-
-#: inc/widgets.php:151
-msgctxt "mybooking_widgets"
-msgid "Mybooking Landing Template Sidebar"
-msgstr "Barra lateral de la plantilla de Mybooking Landing"
-
-#: inc/widgets.php:153
-msgctxt "mybooking_widgets"
-msgid "Mybooking Landing template sidebar widgets area"
-msgstr ""
-"Àrea de widgets de la barra lateral de la plantilla de Landing Mybooking"
-
-#: inc/widgets.php:162
-msgctxt "mybooking_widgets"
-msgid "Mybooking Contact Template Contact Form"
-msgstr "Formulari de contacte de la plantilla de contacte Mybooking"
-
-#: inc/widgets.php:164
-msgctxt "mybooking_widgets"
-msgid "Place your contact form at here"
-msgstr "Col·loqueu el formulari de contacte aquí"
-
-#: inc/widgets.php:173
-msgctxt "mybooking_widgets"
-msgid "Footer One"
-msgstr "Peu de pàgina primer"
-
-#: inc/widgets.php:175
-msgctxt "mybooking_widgets"
-msgid "Footer first widgets area"
-msgstr "Primera zona de ginys de l'footer"
-
-#: inc/widgets.php:182
-msgctxt "mybooking_widgets"
-msgid "Footer Two"
-msgstr "Peu de pàgina dos"
-
-#: inc/widgets.php:184
-msgctxt "mybooking_widgets"
-msgid "Footer second widgets area"
-msgstr "Segona  zona de ginys de l'footer"
-
-#: inc/widgets.php:191
-msgctxt "mybooking_widgets"
-msgid "Footer Three"
-msgstr "Peu de pàgina tres"
-
-#: inc/widgets.php:193
-msgctxt "mybooking_widgets"
-msgid "Footer third widgets area"
-msgstr "Tercera  zona de ginys de l'footer"
-
-#: inc/widgets.php:200
-msgctxt "mybooking_widgets"
-msgid "Footer Four"
-msgstr "Peu de pàgina quatre"
-
-#: inc/widgets.php:202
-msgctxt "mybooking_widgets"
-msgid "Footer fourth widgets area"
-msgstr "Quarta zona de ginys de l'footer"
-
-#: inc/post-functions.php:40
-msgctxt "post-meta"
-msgid "by"
-msgstr "per"
-
-#: inc/post-functions.php:53
-msgctxt "entry_footer"
-msgid "Leave a comment"
-msgstr "Disseny"
-
-#: inc/post-functions.php:54
-msgctxt "entry_footer"
-msgid "1 Comment"
-msgstr "1 comentari"
-
-#: inc/post-functions.php:55
-msgctxt "comments"
-msgid "% Comments"
-msgstr "Comentaris"
-
-#. %s: Name of current post
-#: inc/post-functions.php:86
-#, php-format
-msgctxt "entry_footer"
-msgid "Edit %s"
-msgstr "Edita %s"
-
-#: inc/post-functions.php:158
-msgctxt "post_navigation"
-msgid "Post navigation"
-msgstr "Navegació de publicacions"
-
-#: inc/post-functions.php:163
-msgctxt "Previous post link"
-msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
-
-#: inc/post-functions.php:167
-msgctxt "Next post link"
-msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
-
-#: inc/pagination.php:28
-msgctxt "pagination"
-msgid "&laquo;"
-msgstr "&laquo;"
-
-#: inc/pagination.php:29
-msgctxt "pagination"
-msgid "&raquo;"
-msgstr "&raquo;"
-
-#: inc/pagination.php:30
-msgctxt "pagination"
-msgid "Posts navigation"
-msgstr "Navegació de publicacions"
-
-#: inc/customizer.php:480
-msgctxt "customizer_panel"
-msgid "Mybooking Theme"
-msgstr "Mybooking Theme"
-
-#: inc/customizer.php:481
-msgctxt "customizer_panel"
-msgid "Customise your installation of Mybooking"
-msgstr "Personalitzeu la vostra instal·lació de Mybooking"
-
-#: inc/customizer.php:496 inc/customizer.php:498
-msgctxt "customizer_company"
-msgid "Contact details"
-msgstr "Detalls de contacte"
-
-#: inc/customizer.php:513 inc/customizer.php:514 inc/customizer.php:522
-msgctxt "customizer_company"
-msgid "Trade name"
-msgstr "Nom comercial"
-
-#: inc/customizer.php:535 inc/customizer.php:536 inc/customizer.php:544
-msgctxt "customizer_company"
-msgid "Legal name"
-msgstr "Nom legal"
-
-#: inc/customizer.php:557 inc/customizer.php:558 inc/customizer.php:566
-msgctxt "customizer_company"
-msgid "Vat number"
-msgstr "Número d’IVA"
-
-#: inc/customizer.php:582 inc/customizer.php:583 inc/customizer.php:591
-msgctxt "customizer_company"
+#: mybooking-parts/contact/mybooking-contact-info.php:23
+msgctxt "contact"
 msgid "Address"
 msgstr "Adreça"
 
-#: inc/customizer.php:605 inc/customizer.php:606 inc/customizer.php:614
-msgctxt "customizer_company"
+#: mybooking-parts/contact/mybooking-contact-info.php:45
+msgctxt "contact"
+msgid "E-mail address"
+msgstr "Correu electrònic"
+
+#: mybooking-parts/contact/mybooking-contact-info.php:33
+msgctxt "contact"
 msgid "Phone number"
 msgstr "Número de telèfon"
 
-#: inc/customizer.php:627 inc/customizer.php:628 inc/customizer.php:636
-msgctxt "customizer_company"
-msgid "WhatsApp number"
-msgstr "Número de WhatsApp"
-
-#: inc/customizer.php:649 inc/customizer.php:650 inc/customizer.php:658
-msgctxt "customizer_company"
-msgid "Email address"
+#: mybooking-templates/mybooking-plugin-contact-widget.php:28
+#: mybooking-templates/mybooking-plugin-contact-widget.php:31
+msgctxt "contact_form"
+msgid "E-mail"
 msgstr "Correu electrònic"
 
-#: inc/customizer.php:671 inc/customizer.php:672 inc/customizer.php:680
-msgctxt "customizer_company"
-msgid "Twitter URL"
-msgstr "Twitter URL"
+#: mybooking-templates/mybooking-plugin-contact-widget.php:43
+#: mybooking-templates/mybooking-plugin-contact-widget.php:45
+msgctxt "contact_form"
+msgid "Message"
+msgstr "Missatge"
 
-#: inc/customizer.php:693 inc/customizer.php:694 inc/customizer.php:702
-msgctxt "customizer_company"
-msgid "Facebook URL"
-msgstr "Facebook URL"
+#: mybooking-templates/mybooking-plugin-contact-widget.php:14
+#: mybooking-templates/mybooking-plugin-contact-widget.php:16
+msgctxt "contact_form"
+msgid "Name"
+msgstr "Nom"
 
-#: inc/customizer.php:715 inc/customizer.php:716 inc/customizer.php:724
-msgctxt "customizer_company"
-msgid "Instagram URL"
-msgstr "Instagram URL"
+#: mybooking-templates/mybooking-plugin-contact-widget.php:36
+#: mybooking-templates/mybooking-plugin-contact-widget.php:38
+msgctxt "contact_form"
+msgid "Phone number"
+msgstr "Número de telèfon"
 
-#: inc/customizer.php:737 inc/customizer.php:738 inc/customizer.php:746
-msgctxt "customizer_company"
-msgid "Linkedin URL"
-msgstr "URL de Linkedin"
+#: mybooking-templates/mybooking-plugin-contact-widget.php:56
+msgctxt "contact_form"
+msgid "Send"
+msgstr "Envia"
 
-#: inc/customizer.php:760
-msgctxt "customizer_company"
-msgid " YouTube URL"
-msgstr " YouTube URL"
+#: mybooking-templates/mybooking-plugin-contact-widget.php:20
+#: mybooking-templates/mybooking-plugin-contact-widget.php:22
+msgctxt "contact_form"
+msgid "Surname"
+msgstr "Cognom"
 
-#: inc/customizer.php:761 inc/customizer.php:769
-msgctxt "customizer_company"
-msgid "YouTube URL"
-msgstr "YouTube URL"
+#. %s: permalink
+#: mybooking-parts/blog/mybooking-content-blog.php:66
+#, php-format
+msgctxt "content_blog"
+msgid ""
+"<a href=\"%s\" rel=\"bookmark\" class=\"block-ellipsis untitled\">"
+"Untitled</a>"
+msgstr ""
+"<a href=\"%s\" rel=\"bookmark\" class=\"block-ellipsis untitled\"> Sense "
+"títol </a>"
 
-#: inc/customizer.php:785 inc/customizer.php:786
-msgctxt "customizer_company"
-msgid "Google maps iframe"
-msgstr "Google maps iframe"
+#: mybooking-parts/blog/mybooking-content-single.php:37
+msgctxt "content_blog"
+msgid "Untitled"
+msgstr "Sense títol"
 
-#: inc/customizer.php:794
-msgctxt "customizer_company"
-msgid "Copy Google Maps iframe"
-msgstr "Copieu l'iframe de Google Maps"
+#: inc/customizer/carrousel-control.php:43
+msgctxt "customize-image-gallery-control"
+msgid "Configure Carrousel"
+msgstr "Configure el Carrousel"
 
-#: inc/customizer.php:814
-msgctxt "customizer_colors"
-msgid "Colors"
-msgstr "Colors"
+#: inc/customizer/carrousel-control.php:42
+msgctxt "customize-image-gallery-control"
+msgid "Remove All"
+msgstr "Esborra-ho tot"
 
-#: inc/customizer.php:816
-msgctxt "customizer_colors"
-msgid "Theme colors"
-msgstr "Colors del tema"
+#: inc/customizer/class-font-selector.php:51
+msgctxt "customize_font_selector"
+msgid "Default"
+msgstr "Per defecte"
 
-#: inc/customizer.php:833
-msgctxt "customizer_colors"
-msgid "Brand Primary color"
-msgstr "Color primari"
+#: inc/customizer/class-font-selector.php:72
+msgctxt "customize_font_selector"
+msgid "Google Fonts"
+msgstr "Google Fonts"
 
-#: inc/customizer.php:848
-msgctxt "customizer_colors"
-msgid "Brand Primary light color"
-msgstr "Color clar primari"
+#: inc/customizer/class-font-selector.php:57
+msgctxt "customize_font_selector"
+msgid "Standard Fonts"
+msgstr "Tipus de lletra estàndard"
 
-#: inc/customizer.php:862
-msgctxt "customizer_colors"
-msgid "Brand Primary dark color"
-msgstr "Color fosc primari"
-
-#: inc/customizer.php:878
-msgctxt "customizer_colors"
-msgid "Brand Secondary color"
-msgstr "Color secundari"
-
-#: inc/customizer.php:892
-msgctxt "customizer_colors"
-msgid "Brand Secondary light color"
-msgstr "Color clar secundari"
-
-#: inc/customizer.php:906
-msgctxt "customizer_colors"
-msgid "Brand Secondary dark color"
-msgstr "Color fosc secundari"
-
-#: inc/customizer.php:923
-msgctxt "customizer_colors"
-msgid "Body Background color"
-msgstr "Color de fons del body"
-
-#: inc/customizer.php:939
-msgctxt "customizer_colors"
-msgid "Body Text color"
-msgstr "Color del texte"
-
-#: inc/customizer.php:955
-msgctxt "customizer_colors"
-msgid "Headers Text color"
-msgstr "Capçaleres Color del text"
-
-#: inc/customizer.php:974
-msgctxt "customizer_navbar"
-msgid "NavBar background color"
-msgstr "Color de fons de NavBar"
-
-#: inc/customizer.php:992
-msgctxt "customizer_navbar"
-msgid "NavBar Link color"
-msgstr "NavBar Link color"
-
-#: inc/customizer.php:1009
-msgctxt "customizer_navbar"
-msgid "NavBar Link hover color"
-msgstr "NavBar Link hover color"
-
-#: inc/customizer.php:1026
-msgctxt "customizer_navbar"
-msgid "NavBar Link active color"
-msgstr "NavBar Link color actiu"
-
-#: inc/customizer.php:1043
-msgctxt "customizer_navbar"
-msgid "NavBar DropDown Item color"
-msgstr "NavBar DropDown Item color"
-
-#: inc/customizer.php:1060
-msgctxt "customizer_navbar"
-msgid "NavBar DropDown Item Active color"
-msgstr "NavBar DropDown Item Active color"
-
-#: inc/customizer.php:1077
-msgctxt "customizer_navbar"
-msgid "NavBar Link collapse color"
-msgstr "NavBar Link color desplegat"
-
-#: inc/customizer.php:1094
-msgctxt "customizer_navbar"
-msgid "NavBar Toggler Icon color"
-msgstr "NavBar Toggler Icona color"
-
-#: inc/customizer.php:1111
-msgctxt "customizer_footer"
-msgid "Footer background color"
-msgstr "Color de fons del peu de pàgina"
-
-#: inc/customizer.php:1128
-msgctxt "customizer_footer"
-msgid "Footer color"
-msgstr "Color del texte del peu de pàgina"
-
-#: inc/customizer.php:1145
-msgctxt "customizer_footer"
-msgid "Footer Link color"
-msgstr "Color de l'enllaç de peu de pàgina"
-
-#: inc/customizer.php:1162
-msgctxt "customizer_footer"
-msgid "Footer Link hover color"
-msgstr "Color ressaltat dels enllaços del footer"
-
-#: inc/customizer.php:1178
+#: inc/customizer.php:1158
 msgctxt "customizer_colors"
 msgid "Activate advanced color mode"
 msgstr "Activeu el mode de color avançat"
 
-#: inc/customizer.php:1179
+#: inc/customizer.php:903
+msgctxt "customizer_colors"
+msgid "Body Background color"
+msgstr "Color de fons del body"
+
+#: inc/customizer.php:919
+msgctxt "customizer_colors"
+msgid "Body Text color"
+msgstr "Color del texte"
+
+#: inc/customizer.php:813
+msgctxt "customizer_colors"
+msgid "Brand Primary color"
+msgstr "Color primari"
+
+#: inc/customizer.php:842
+msgctxt "customizer_colors"
+msgid "Brand Primary dark color"
+msgstr "Color fosc primari"
+
+#: inc/customizer.php:828
+msgctxt "customizer_colors"
+msgid "Brand Primary light color"
+msgstr "Color clar primari"
+
+#: inc/customizer.php:858
+msgctxt "customizer_colors"
+msgid "Brand Secondary color"
+msgstr "Color secundari"
+
+#: inc/customizer.php:886
+msgctxt "customizer_colors"
+msgid "Brand Secondary dark color"
+msgstr "Color fosc secundari"
+
+#: inc/customizer.php:872
+msgctxt "customizer_colors"
+msgid "Brand Secondary light color"
+msgstr "Color clar secundari"
+
+#: inc/customizer.php:794
+msgctxt "customizer_colors"
+msgid "Colors"
+msgstr "Colors"
+
+#: inc/customizer.php:935
+msgctxt "customizer_colors"
+msgid "Headers Text color"
+msgstr "Capçaleres Color del text"
+
+#: inc/customizer.php:1159
 msgctxt "customizer_colors"
 msgid ""
 "If <b>checked</b> activates advanced color controls on several Customizer "
@@ -520,161 +771,316 @@ msgstr ""
 "seccions del personalitzador. Desmarqueu el control bàsic del color (per "
 "defecte)."
 
-#: inc/customizer.php:1200
-msgctxt "customizer_typography"
-msgid "Typography"
-msgstr "Tipografia"
+#: inc/customizer.php:796
+msgctxt "customizer_colors"
+msgid "Theme colors"
+msgstr "Colors del tema"
 
-#: inc/customizer.php:1202
-msgctxt "customizer_typography"
-msgid "Typography defaults"
-msgstr "Valors predeterminats de tipografia"
+#: inc/customizer.php:740
+msgctxt "customizer_company"
+msgid " YouTube URL"
+msgstr " YouTube URL"
 
-#: inc/customizer.php:1224
-msgctxt "customizer_typography"
-msgid "Font Body family"
-msgstr "Família Font Body"
+#: inc/customizer.php:562 inc/customizer.php:563 inc/customizer.php:571
+msgctxt "customizer_company"
+msgid "Address"
+msgstr "Adreça"
 
-#: inc/customizer.php:1225
-msgctxt "customizer_typography"
-msgid "Select the body typography"
-msgstr "Seleccioneu la tipografia del body"
+#: inc/customizer.php:476 inc/customizer.php:478
+msgctxt "customizer_company"
+msgid "Contact details"
+msgstr "Detalls de contacte"
 
-#: inc/customizer.php:1244
-msgctxt "customizer_typography"
-msgid "Font Heading family"
-msgstr "Família Font Heading"
+#: inc/customizer.php:774
+msgctxt "customizer_company"
+msgid "Copy Google Maps iframe"
+msgstr "Copieu l'iframe de Google Maps"
 
-#: inc/customizer.php:1245
-msgctxt "customizer_typography"
-msgid "Select the heading typography"
-msgstr "Seleccioneu la tipografia de capçalera"
+#: inc/customizer.php:629 inc/customizer.php:630 inc/customizer.php:638
+msgctxt "customizer_company"
+msgid "Email address"
+msgstr "Correu electrònic"
 
-#: inc/customizer.php:1267
-msgctxt "customizer_layout"
+#: inc/customizer.php:673 inc/customizer.php:674 inc/customizer.php:682
+msgctxt "customizer_company"
+msgid "Facebook URL"
+msgstr "Facebook URL"
+
+#: inc/customizer.php:765 inc/customizer.php:766
+msgctxt "customizer_company"
+msgid "Google maps iframe"
+msgstr "Google maps iframe"
+
+#: inc/customizer.php:695 inc/customizer.php:696 inc/customizer.php:704
+msgctxt "customizer_company"
+msgid "Instagram URL"
+msgstr "Instagram URL"
+
+#: inc/customizer.php:515 inc/customizer.php:516 inc/customizer.php:524
+msgctxt "customizer_company"
+msgid "Legal name"
+msgstr "Nom legal"
+
+#: inc/customizer.php:717 inc/customizer.php:718 inc/customizer.php:726
+msgctxt "customizer_company"
+msgid "Linkedin URL"
+msgstr "URL de Linkedin"
+
+#: inc/customizer.php:585 inc/customizer.php:586 inc/customizer.php:594
+msgctxt "customizer_company"
+msgid "Phone number"
+msgstr "Número de telèfon"
+
+#: inc/customizer.php:493 inc/customizer.php:494 inc/customizer.php:502
+msgctxt "customizer_company"
+msgid "Trade name"
+msgstr "Nom comercial"
+
+#: inc/customizer.php:651 inc/customizer.php:652 inc/customizer.php:660
+msgctxt "customizer_company"
+msgid "Twitter URL"
+msgstr "Twitter URL"
+
+#: inc/customizer.php:537 inc/customizer.php:538 inc/customizer.php:546
+msgctxt "customizer_company"
+msgid "Vat number"
+msgstr "Número d’IVA"
+
+#: inc/customizer.php:607 inc/customizer.php:608 inc/customizer.php:616
+msgctxt "customizer_company"
+msgid "WhatsApp number"
+msgstr "Número de WhatsApp"
+
+#: inc/customizer.php:741 inc/customizer.php:749
+msgctxt "customizer_company"
+msgid "YouTube URL"
+msgstr "YouTube URL"
+
+#: inc/customizer.php:1847
+msgctxt "customizer_footer"
+msgid ""
+"Controls footer layout and, if advanced mode enabled on Colors section, also "
+"background and link colors."
+msgstr ""
+"Controla el disseny del peu de pàgina i, si el mode avançat està habilitat a "
+"la secció Colors, també els colors de fons i d’enllaç."
+
+#: inc/customizer.php:1901
+msgctxt "customizer_footer"
+msgid "Detail message on Footer."
+msgstr "Missatge de detall al peu de pàgina."
+
+#: inc/customizer.php:1845
+msgctxt "customizer_footer"
+msgid "Footer"
+msgstr "Peu de pàgina"
+
+#: inc/customizer.php:1091
+msgctxt "customizer_footer"
+msgid "Footer background color"
+msgstr "Color de fons del peu de pàgina"
+
+#: inc/customizer.php:1108
+msgctxt "customizer_footer"
+msgid "Footer color"
+msgstr "Color del texte del peu de pàgina"
+
+#: inc/customizer.php:1867
+msgctxt "customizer_footer"
+msgid "Footer layout"
+msgstr "Disseny del peu de pàgina"
+
+#: inc/customizer.php:1868
+msgctxt "customizer_footer"
+msgid "Footer layout (managed with widget areas)"
+msgstr "Disseny del peu de pàgina (gestionat amb àrees de widgets)"
+
+#: inc/customizer.php:1125
+msgctxt "customizer_footer"
+msgid "Footer Link color"
+msgstr "Color de l'enllaç de peu de pàgina"
+
+#: inc/customizer.php:1142
+msgctxt "customizer_footer"
+msgid "Footer Link hover color"
+msgstr "Color ressaltat dels enllaços del footer"
+
+#: inc/customizer.php:1873
+msgctxt "customizer_footer"
+msgid "Four columns"
+msgstr "Quatre columnes"
+
+#: inc/customizer.php:1874
+msgctxt "customizer_footer"
+msgid "Minimal (show only copyright)"
+msgstr "Mínim (mostra només el copyright)"
+
+#: inc/customizer.php:1791 inc/customizer.php:1823
+msgctxt "customizer_header"
+msgid "Align center"
+msgstr "Alinea al centre"
+
+#: inc/customizer.php:1792 inc/customizer.php:1824
+msgctxt "customizer_header"
+msgid "Align right"
+msgstr "Alineeu a la dreta"
+
+#: inc/customizer.php:1679
+msgctxt "customizer_header"
+msgid "Background Carrousel"
+msgstr "Carrusel de fons"
+
+#: inc/customizer.php:1613 inc/customizer.php:1635
+msgctxt "customizer_header"
+msgid "Background Image"
+msgstr "Imatge de fons"
+
+#: inc/customizer.php:1657
+msgctxt "customizer_header"
+msgid "Background Video"
+msgstr "Vídeo de fons"
+
+#: inc/customizer.php:1615
+msgctxt "customizer_header"
+msgid "Carrousel"
+msgstr "Carrusel"
+
+#: inc/customizer.php:1790 inc/customizer.php:1822
+msgctxt "customizer_header"
+msgid "Default to the left"
+msgstr "Per defecte a l'esquerra"
+
+#: inc/customizer.php:1608
+msgctxt "customizer_header"
+msgid "Define the header section background"
+msgstr "Definiu el fons de la secció de capçalera"
+
+#: inc/customizer.php:1699
+msgctxt "customizer_header"
+msgid "Define the widget areas on header layout"
+msgstr "Definiu les àrees del widget en el disseny de capçalera"
+
+#: inc/customizer.php:1568
+msgctxt "customizer_header"
+msgid "Defines header's background type and widget's columns layout"
+msgstr ""
+"Defineix el tipus de fons de la capçalera i el disseny de les columnes del "
+"widget"
+
+#: inc/customizer.php:1607
+msgctxt "customizer_header"
+msgid "Header section background"
+msgstr "Fons de la secció de capçalera"
+
+#: inc/customizer.php:1761
+msgctxt "customizer_header"
+msgid "Header Widget Link color"
+msgstr "Color de l'enllaç del widget de capçalera"
+
+#: inc/customizer.php:1744
+msgctxt "customizer_header"
+msgid "Header Widget Text color"
+msgstr "Color del text del widget de capçalera"
+
+#: inc/customizer.php:1727
+msgctxt "customizer_header"
+msgid "Header Widget Title color"
+msgstr "Color del títol del widget de capçalera"
+
+#: inc/customizer.php:1587
+msgctxt "customizer_header"
+msgid "Home Header visible"
+msgstr "Capçalera d'inici visible"
+
+#: inc/customizer.php:1698
+msgctxt "customizer_header"
 msgid "Layout"
 msgstr "Disseny"
 
-#: inc/customizer.php:1269
-msgctxt "customizer_layout"
-msgid "Layout defaults"
-msgstr "Configuració predeterminada del disseny"
+#: inc/customizer.php:1705
+#, php-format
+msgctxt "customizer_header"
+msgid "Two columns (33% - 66%)"
+msgstr "Dues vegades"
 
-#: inc/customizer.php:1295
-msgctxt "customizer_layout"
-msgid "Navigation and Topbar container Width"
-msgstr "Navegació i amplada del contenidor de la barra superior"
+#: inc/customizer.php:1704
+#, php-format
+msgctxt "customizer_header"
+msgid "Two columns (50% - 50%)"
+msgstr "Dues columnes (50% - 50%)"
 
-#: inc/customizer.php:1296
-msgctxt "customizer_layout"
-msgid "Choose between Bootstrap's container and container-fluid"
-msgstr "Trieu entre el contenidor normal i el contenidor fluid"
+#: inc/customizer.php:1706
+#, php-format
+msgctxt "customizer_header"
+msgid "Two columns (66% - 33%)"
+msgstr "Dues columnes (66% - 33%)"
 
-#: inc/customizer.php:1303
+#: inc/customizer.php:1614
+msgctxt "customizer_header"
+msgid "Video"
+msgstr "Vídeo"
+
+#: inc/customizer.php:1817
+msgctxt "customizer_header"
+msgid "Widget Text Align"
+msgstr "Widget Text Align"
+
+#: inc/customizer.php:1785
+msgctxt "customizer_header"
+msgid "Widget Title Align"
+msgstr "Alineació del títol del widget"
+
+#: inc/customizer.php:1566
+msgctxt "customizer_home"
+msgid "Header"
+msgstr "Capçalera"
+
+#: inc/customizer.php:1707
+msgctxt "customizer_home"
+msgid "One column"
+msgstr "Una columna"
+
+#: inc/customizer.php:2029
+msgctxt "customizer_identity"
+msgid "Site's logo height"
+msgstr "Alçada del logotip"
+
+#: inc/customizer.php:2030
+msgctxt "customizer_identity"
+msgid "Value in pixels."
+msgstr "Nom d'usuari"
+
+#: inc/customizer.php:1283
 msgctxt "customizer_layout"
 msgid "Boxed navbar and topbar"
 msgstr "Barra de navegació i barra superior en caixa"
 
-#: inc/customizer.php:1304
+#: inc/customizer.php:1276
+msgctxt "customizer_layout"
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr "Trieu entre el contenidor normal i el contenidor fluid"
+
+#: inc/customizer.php:1284
 msgctxt "customizer_layout"
 msgid "Full width navbar and topbar"
 msgstr "Barra de navegació i barra superior d’amplada completa"
 
-#: inc/customizer.php:1324 inc/customizer.php:1326
-msgctxt "customizer_topbar"
-msgid "Top Bar"
-msgstr "Barra superior"
+#: inc/customizer.php:1247
+msgctxt "customizer_layout"
+msgid "Layout"
+msgstr "Disseny"
 
-#: inc/customizer.php:1343
-msgctxt "customizer_topbar"
-msgid "Top Bar active"
-msgstr "Barra superior activa"
+#: inc/customizer.php:1249
+msgctxt "customizer_layout"
+msgid "Layout defaults"
+msgstr "Configuració predeterminada del disseny"
 
-#: inc/customizer.php:1344
-msgctxt "customizer_topbar"
-msgid ""
-"If checked the TopBar will be shown on top of pages with company information "
-"and warning message. Uncheck to hide the TopBar"
-msgstr ""
-"Si està marcat, TopBar es mostrarà a la part superior de les pàgines amb "
-"informació de l'empresa i missatge d'advertència. Desmarqueu aquesta opció "
-"per amagar la barra superior"
-
-#: inc/customizer.php:1368
-msgctxt "customizer_topbar"
-msgid "Home Topbar Background"
-msgstr "Fons de la barra superior inicial"
-
-#: inc/customizer.php:1369
-msgctxt "customizer_topbar"
-msgid ""
-"This setting affects ONLY the home page topbar. You can set transparency for "
-"better integration when navbar's Transparent Header option is checked."
-msgstr ""
-"Aquesta configuració afecta NOMÉS la barra superior de la pàgina inicial. "
-"Podeu configurar la transparència per a una millor integració quan es marca "
-"l'opció Capçalera transparent de navbar."
-
-#: inc/customizer.php:1386
-msgctxt "customizer_topbar"
-msgid "Topbar Background"
-msgstr "Fons de la barra superior"
-
-#: inc/customizer.php:1402
-msgctxt "customizer_topbar"
-msgid "Topbar Text"
-msgstr "Text de la barra superior"
-
-#: inc/customizer.php:1418
-msgctxt "customizer_topbar"
-msgid "Topbar Link"
-msgstr "Enllaç de la barra superior"
-
-#: inc/customizer.php:1434
-msgctxt "customizer_topbar"
-msgid "Topbar Link Hover"
-msgstr "Enllaç actiu de la barra superior"
-
-#: inc/customizer.php:1453
-msgctxt "customizer_topbar"
-msgid "Notice Background"
-msgstr "Fons de l’avís"
-
-#: inc/customizer.php:1469
-msgctxt "customizer_topbar"
-msgid "Notice Text"
-msgstr "Text de l'avís"
-
-#: inc/customizer.php:1485
-msgctxt "customizer_topbar"
-msgid "Notice Link"
-msgstr "Enllaç de l’avís"
-
-#: inc/customizer.php:1501
-msgctxt "customizer_topbar"
-msgid "Notice Link Hover"
-msgstr "Color de l'enllaç actiu a l'avís"
+#: inc/customizer.php:1275
+msgctxt "customizer_layout"
+msgid "Navigation and Topbar container Width"
+msgstr "Navegació i amplada del contenidor de la barra superior"
 
 #: inc/customizer.php:1520
-msgctxt "customizer_navbar"
-msgid "Nav Bar"
-msgstr "Barra de navegació"
-
-#: inc/customizer.php:1522
-msgctxt "customizer_navbar"
-msgid ""
-"Settings for toggler position, header integration and background and menu "
-"colors"
-msgstr ""
-"Configuració de la posició del commutador, integració de capçalera i colors "
-"de fons i de menú"
-
-#: inc/customizer.php:1539
-msgctxt "customizer_navbar"
-msgid "Transparent Header"
-msgstr "Capçalera transparent"
-
-#: inc/customizer.php:1540
 msgctxt "customizer_navbar"
 msgid ""
 "If <b>checked</b> the navbar will be shown overlapped with Header section "
@@ -685,218 +1091,128 @@ msgstr ""
 "secció de capçalera i el fons transparent. Desmarqueu la barra de navegació "
 "de color sòlid que apareix a la part superior de la secció de capçalera"
 
-#: inc/customizer.php:1561
-msgctxt "customizer_navbar"
-msgid "Mobile Toggler Position"
-msgstr "Posició del botó per mòbil"
-
-#: inc/customizer.php:1562
-msgctxt "customizer_navbar"
-msgid "Toggler position on mobile devices"
-msgstr "Posició del commutador en dispositius mòbils"
-
-#: inc/customizer.php:1567
-msgctxt "customizer_navbar"
-msgid "Right"
-msgstr "Dret"
-
-#: inc/customizer.php:1568
+#: inc/customizer.php:1548
 msgctxt "customizer_navbar"
 msgid "Left"
 msgstr "Esquerra"
 
-#: inc/customizer.php:1586
-msgctxt "customizer_home"
-msgid "Header"
-msgstr "Capçalera"
+#: inc/customizer.php:1541
+msgctxt "customizer_navbar"
+msgid "Mobile Toggler Position"
+msgstr "Posició del botó per mòbil"
 
-#: inc/customizer.php:1588
-msgctxt "customizer_header"
-msgid "Defines header's background type and widget's columns layout"
-msgstr ""
-"Defineix el tipus de fons de la capçalera i el disseny de les columnes del "
-"widget"
+#: inc/customizer.php:1500
+msgctxt "customizer_navbar"
+msgid "Nav Bar"
+msgstr "Barra de navegació"
 
-#: inc/customizer.php:1607
-msgctxt "customizer_header"
-msgid "Home Header visible"
-msgstr "Capçalera d'inici visible"
+#: inc/customizer.php:954
+msgctxt "customizer_navbar"
+msgid "NavBar background color"
+msgstr "Color de fons de NavBar"
 
-#: inc/customizer.php:1627
-msgctxt "customizer_header"
-msgid "Header section background"
-msgstr "Fons de la secció de capçalera"
+#: inc/customizer.php:1040
+msgctxt "customizer_navbar"
+msgid "NavBar DropDown Item Active color"
+msgstr "NavBar DropDown Item Active color"
 
-#: inc/customizer.php:1628
-msgctxt "customizer_header"
-msgid "Define the header section background"
-msgstr "Definiu el fons de la secció de capçalera"
+#: inc/customizer.php:1023
+msgctxt "customizer_navbar"
+msgid "NavBar DropDown Item color"
+msgstr "NavBar DropDown Item color"
 
-#: inc/customizer.php:1633 inc/customizer.php:1655
-msgctxt "customizer_header"
-msgid "Background Image"
-msgstr "Imatge de fons"
+#: inc/customizer.php:1006
+msgctxt "customizer_navbar"
+msgid "NavBar Link active color"
+msgstr "NavBar Link color actiu"
 
-#: inc/customizer.php:1634
-msgctxt "customizer_header"
-msgid "Video"
-msgstr "Vídeo"
+#: inc/customizer.php:1057
+msgctxt "customizer_navbar"
+msgid "NavBar Link collapse color"
+msgstr "NavBar Link color desplegat"
 
-#: inc/customizer.php:1635
-msgctxt "customizer_header"
-msgid "Carrousel"
-msgstr "Carrusel"
+#: inc/customizer.php:972
+msgctxt "customizer_navbar"
+msgid "NavBar Link color"
+msgstr "NavBar Link color"
 
-#: inc/customizer.php:1677
-msgctxt "customizer_header"
-msgid "Background Video"
-msgstr "Vídeo de fons"
+#: inc/customizer.php:989
+msgctxt "customizer_navbar"
+msgid "NavBar Link hover color"
+msgstr "NavBar Link hover color"
 
-#: inc/customizer.php:1699
-msgctxt "customizer_header"
-msgid "Background Carrousel"
-msgstr "Carrusel de fons"
+#: inc/customizer.php:1074
+msgctxt "customizer_navbar"
+msgid "NavBar Toggler Icon color"
+msgstr "NavBar Toggler Icona color"
 
-#: inc/customizer.php:1718
-msgctxt "customizer_header"
-msgid "Layout"
-msgstr "Disseny"
+#: inc/customizer.php:1547
+msgctxt "customizer_navbar"
+msgid "Right"
+msgstr "Dret"
 
-#: inc/customizer.php:1719
-msgctxt "customizer_header"
-msgid "Define the widget areas on header layout"
-msgstr "Definiu les àrees del widget en el disseny de capçalera"
-
-#: inc/customizer.php:1724
-#, php-format
-msgctxt "customizer_header"
-msgid "Two columns (50% - 50%)"
-msgstr "Dues columnes (50% - 50%)"
-
-#: inc/customizer.php:1725
-#, php-format
-msgctxt "customizer_header"
-msgid "Two columns (33% - 66%)"
-msgstr "Dues vegades"
-
-#: inc/customizer.php:1726
-#, php-format
-msgctxt "customizer_header"
-msgid "Two columns (66% - 33%)"
-msgstr "Dues columnes (66% - 33%)"
-
-#: inc/customizer.php:1727
-msgctxt "customizer_home"
-msgid "One column"
-msgstr "Una columna"
-
-#: inc/customizer.php:1747
-msgctxt "customizer_header"
-msgid "Header Widget Title color"
-msgstr "Color del títol del widget de capçalera"
-
-#: inc/customizer.php:1764
-msgctxt "customizer_header"
-msgid "Header Widget Text color"
-msgstr "Color del text del widget de capçalera"
-
-#: inc/customizer.php:1781
-msgctxt "customizer_header"
-msgid "Header Widget Link color"
-msgstr "Color de l'enllaç del widget de capçalera"
-
-#: inc/customizer.php:1805
-msgctxt "customizer_header"
-msgid "Widget Title Align"
-msgstr "Alineació del títol del widget"
-
-#: inc/customizer.php:1810 inc/customizer.php:1842
-msgctxt "customizer_header"
-msgid "Default to the left"
-msgstr "Per defecte a l'esquerra"
-
-#: inc/customizer.php:1811 inc/customizer.php:1843
-msgctxt "customizer_header"
-msgid "Align center"
-msgstr "Alinea al centre"
-
-#: inc/customizer.php:1812 inc/customizer.php:1844
-msgctxt "customizer_header"
-msgid "Align right"
-msgstr "Alineeu a la dreta"
-
-#: inc/customizer.php:1837
-msgctxt "customizer_header"
-msgid "Widget Text Align"
-msgstr "Widget Text Align"
-
-#: inc/customizer.php:1865
-msgctxt "customizer_footer"
-msgid "Footer"
-msgstr "Peu de pàgina"
-
-#: inc/customizer.php:1867
-msgctxt "customizer_footer"
+#: inc/customizer.php:1502
+msgctxt "customizer_navbar"
 msgid ""
-"Controls footer layout and, if advanced mode enabled on Colors section, also "
-"background and link colors."
+"Settings for toggler position, header integration and background and menu "
+"colors"
 msgstr ""
-"Controla el disseny del peu de pàgina i, si el mode avançat està habilitat a "
-"la secció Colors, també els colors de fons i d’enllaç."
+"Configuració de la posició del commutador, integració de capçalera i colors "
+"de fons i de menú"
 
-#: inc/customizer.php:1887
-msgctxt "customizer_footer"
-msgid "Footer layout"
-msgstr "Disseny del peu de pàgina"
+#: inc/customizer.php:1542
+msgctxt "customizer_navbar"
+msgid "Toggler position on mobile devices"
+msgstr "Posició del commutador en dispositius mòbils"
 
-#: inc/customizer.php:1888
-msgctxt "customizer_footer"
-msgid "Footer layout (managed with widget areas)"
-msgstr "Disseny del peu de pàgina (gestionat amb àrees de widgets)"
+#: inc/customizer.php:1519
+msgctxt "customizer_navbar"
+msgid "Transparent Header"
+msgstr "Capçalera transparent"
 
-#: inc/customizer.php:1893
-msgctxt "customizer_footer"
-msgid "Four columns"
-msgstr "Quatre columnes"
+#: inc/customizer.php:461
+msgctxt "customizer_panel"
+msgid "Customise your installation of Mybooking"
+msgstr "Personalitzeu la vostra instal·lació de Mybooking"
 
-#: inc/customizer.php:1894
-msgctxt "customizer_footer"
-msgid "Minimal (show only copyright)"
-msgstr "Mínim (mostra només el copyright)"
-
-#: inc/customizer.php:1912
-msgctxt "customizer_topbar"
-msgid "Footer message"
-msgstr "Missatge al peu de pàgina"
-
-#: inc/customizer.php:1913
-msgctxt "customizer_topbar"
-msgid "Footer detailed message"
-msgstr "Missatge detallat al peu de pàgina"
+#: inc/customizer.php:460
+msgctxt "customizer_panel"
+msgid "Mybooking Theme"
+msgstr "Mybooking Theme"
 
 #: inc/customizer.php:1921
-msgctxt "customizer_footer"
-msgid "Detail message on Footer."
-msgstr "Missatge de detall al peu de pàgina."
-
-#: inc/customizer.php:1941
 msgctxt "customizer_selector"
 msgid "Booking Forms"
 msgstr "Formularis de reserva"
 
-#: inc/customizer.php:1942
+#: inc/customizer.php:1922
 msgctxt "customizer_selector"
 msgid "Controls the booking forms apperance on Home and process pages."
 msgstr ""
 "Controla l'aparença dels formularis de reserva a les pàgines d'inici i de "
 "procés."
 
-#: inc/customizer.php:1963
+#: inc/customizer.php:1962
+msgctxt "customizer_selector"
+msgid "General Form labels"
+msgstr "Etiquetes de formulari general"
+
+#: inc/customizer.php:1943
 msgctxt "customizer_selector"
 msgid "Home Booking Form background"
 msgstr "Antecedents del formulari de reserva de casa"
 
-#: inc/customizer.php:1964
+#: inc/customizer.php:1980
+msgctxt "customizer_selector"
+msgid "Sticky Booking Form background"
+msgstr "Fons de formulari de reserva enganxós"
+
+#: inc/customizer.php:1998
+msgctxt "customizer_selector"
+msgid "Sticky Form labels"
+msgstr "Etiquetes de formulari enganxós"
+
+#: inc/customizer.php:1944
 msgctxt "customizer_selector"
 msgid ""
 "Usefull when the form is placed inside the Header and needs some "
@@ -905,95 +1221,187 @@ msgstr ""
 "Útil quan el formulari es col·loca dins de la capçalera i necessita una mica "
 "de transparència."
 
-#: inc/customizer.php:1982
-msgctxt "customizer_selector"
-msgid "General Form labels"
-msgstr "Etiquetes de formulari general"
+#: inc/customizer.php:1893
+msgctxt "customizer_topbar"
+msgid "Footer detailed message"
+msgstr "Missatge detallat al peu de pàgina"
 
-#: inc/customizer.php:2000
-msgctxt "customizer_selector"
-msgid "Sticky Booking Form background"
-msgstr "Fons de formulari de reserva enganxós"
+#: inc/customizer.php:1892
+msgctxt "customizer_topbar"
+msgid "Footer message"
+msgstr "Missatge al peu de pàgina"
 
-#: inc/customizer.php:2018
-msgctxt "customizer_selector"
-msgid "Sticky Form labels"
-msgstr "Etiquetes de formulari enganxós"
+#: inc/customizer.php:1348
+msgctxt "customizer_topbar"
+msgid "Home Topbar Background"
+msgstr "Fons de la barra superior inicial"
 
-#: inc/customizer.php:2052
-msgctxt "customizer_home"
-msgid "Activate home top widgets"
-msgstr "Activeu els ginys principals de la Home"
+#: inc/customizer.php:1324
+msgctxt "customizer_topbar"
+msgid ""
+"If checked the TopBar will be shown on top of pages with company information "
+"and warning message. Uncheck to hide the TopBar"
+msgstr ""
+"Si està marcat, TopBar es mostrarà a la part superior de les pàgines amb "
+"informació de l'empresa i missatge d'advertència. Desmarqueu aquesta opció "
+"per amagar la barra superior"
 
-#: inc/customizer.php:2072
-msgctxt "customizer_home"
-msgid "Activate deafult content area"
-msgstr "Activeu l'àrea de contingut sord"
+#: inc/customizer.php:1433
+msgctxt "customizer_topbar"
+msgid "Notice Background"
+msgstr "Fons de l’avís"
 
-#: inc/customizer.php:2093
-msgctxt "customizer_home"
-msgid "Activate content widgets"
-msgstr "Activeu widgets de contingut"
+#: inc/customizer.php:1465
+msgctxt "customizer_topbar"
+msgid "Notice Link"
+msgstr "Enllaç de l’avís"
 
-#: inc/customizer.php:2115
-msgctxt "customizer_home"
-msgid "Activate news"
-msgstr "Activeu les notícies"
+#: inc/customizer.php:1481
+msgctxt "customizer_topbar"
+msgid "Notice Link Hover"
+msgstr "Color de l'enllaç actiu a l'avís"
 
-#: inc/customizer.php:2136
-msgctxt "customizer_home"
-msgid "Activate home bottom widgets"
-msgstr "Activeu els ginys de la part inferior de la Home"
+#: inc/customizer.php:1449
+msgctxt "customizer_topbar"
+msgid "Notice Text"
+msgstr "Text de l'avís"
 
-#: inc/customizer.php:2170
-msgctxt "customizer_identity"
-msgid "Site's logo height"
-msgstr "Alçada del logotip"
+#: inc/customizer.php:1349
+msgctxt "customizer_topbar"
+msgid ""
+"This setting affects ONLY the home page topbar. You can set transparency for "
+"better integration when navbar's Transparent Header option is checked."
+msgstr ""
+"Aquesta configuració afecta NOMÉS la barra superior de la pàgina inicial. "
+"Podeu configurar la transparència per a una millor integració quan es marca "
+"l'opció Capçalera transparent de navbar."
 
-#: inc/customizer.php:2171
-msgctxt "customizer_identity"
-msgid "Value in pixels."
-msgstr "Nom d'usuari"
+#: inc/customizer.php:1304 inc/customizer.php:1306
+msgctxt "customizer_topbar"
+msgid "Top Bar"
+msgstr "Barra superior"
 
-#: inc/setup.php:64
-msgctxt "nav_menus"
-msgid "Primary Menu"
-msgstr "Menú principal"
+#: inc/customizer.php:1323
+msgctxt "customizer_topbar"
+msgid "Top Bar active"
+msgstr "Barra superior activa"
+
+#: inc/customizer.php:1366
+msgctxt "customizer_topbar"
+msgid "Topbar Background"
+msgstr "Fons de la barra superior"
+
+#: inc/customizer.php:1398
+msgctxt "customizer_topbar"
+msgid "Topbar Link"
+msgstr "Enllaç de la barra superior"
+
+#: inc/customizer.php:1414
+msgctxt "customizer_topbar"
+msgid "Topbar Link Hover"
+msgstr "Enllaç actiu de la barra superior"
+
+#: inc/customizer.php:1382
+msgctxt "customizer_topbar"
+msgid "Topbar Text"
+msgstr "Text de la barra superior"
+
+#: inc/customizer.php:1204
+msgctxt "customizer_typography"
+msgid "Font Body family"
+msgstr "Família Font Body"
+
+#: inc/customizer.php:1224
+msgctxt "customizer_typography"
+msgid "Font Heading family"
+msgstr "Família Font Heading"
+
+#: inc/customizer.php:1205
+msgctxt "customizer_typography"
+msgid "Select the body typography"
+msgstr "Seleccioneu la tipografia del body"
+
+#: inc/customizer.php:1225
+msgctxt "customizer_typography"
+msgid "Select the heading typography"
+msgstr "Seleccioneu la tipografia de capçalera"
+
+#: inc/customizer.php:1180
+msgctxt "customizer_typography"
+msgid "Typography"
+msgstr "Tipografia"
+
+#: inc/customizer.php:1182
+msgctxt "customizer_typography"
+msgid "Typography defaults"
+msgstr "Valors predeterminats de tipografia"
+
+#: inc/post-functions.php:54
+msgctxt "entry_footer"
+msgid "1 Comment"
+msgstr "1 comentari"
+
+#. %s: Name of current post
+#: inc/post-functions.php:86
+#, php-format
+msgctxt "entry_footer"
+msgid "Edit %s"
+msgstr "Edita %s"
+
+#: inc/post-functions.php:53
+msgctxt "entry_footer"
+msgid "Leave a comment"
+msgstr "Disseny"
+
+#: footer.php:33
+msgctxt "footer"
+msgid "Top"
+msgstr "Top"
+
+#: inc/setup.php:190
+msgctxt "gutenberg_palette"
+msgid "Black"
+msgstr "Negre"
+
+#: inc/setup.php:178
+msgctxt "gutenberg_palette"
+msgid "Error"
+msgstr "Error"
+
+#: inc/setup.php:163
+msgctxt "gutenberg_palette"
+msgid "Info"
+msgstr "Informació"
 
 #: inc/setup.php:131
 msgctxt "gutenberg_palette"
 msgid "Primary"
 msgstr "Primàri"
 
-#: inc/setup.php:136
-msgctxt "gutenberg_palette"
-msgid "Primary Light"
-msgstr "Primàri clar"
-
 #: inc/setup.php:141
 msgctxt "gutenberg_palette"
 msgid "Primary Dark"
 msgstr "Primàri fosc"
+
+#: inc/setup.php:136
+msgctxt "gutenberg_palette"
+msgid "Primary Light"
+msgstr "Primàri clar"
 
 #: inc/setup.php:147
 msgctxt "gutenberg_palette"
 msgid "Secondary"
 msgstr "Secundàri"
 
-#: inc/setup.php:152
-msgctxt "gutenberg_palette"
-msgid "Secondary Light"
-msgstr "Clar secundari"
-
 #: inc/setup.php:157
 msgctxt "gutenberg_palette"
 msgid "Secondary Dark"
 msgstr "Fosc secundari"
 
-#: inc/setup.php:163
+#: inc/setup.php:152
 msgctxt "gutenberg_palette"
-msgid "Info"
-msgstr "Informació"
+msgid "Secondary Light"
+msgstr "Clar secundari"
 
 #: inc/setup.php:168
 msgctxt "gutenberg_palette"
@@ -1005,73 +1413,282 @@ msgctxt "gutenberg_palette"
 msgid "Warning"
 msgstr "Avís"
 
-#: inc/setup.php:178
-msgctxt "gutenberg_palette"
-msgid "Error"
-msgstr "Error"
-
 #: inc/setup.php:184
 msgctxt "gutenberg_palette"
 msgid "White"
 msgstr "Blanc"
 
-#: inc/setup.php:190
-msgctxt "gutenberg_palette"
-msgid "Black"
-msgstr "Negre"
+#: header.php:47
+msgctxt "header"
+msgid "Skip to content"
+msgstr "Ves al contingut"
+
+#: mybooking-parts/home/mybooking-home-news.php:49
+msgctxt "home-news-button"
+msgid "Read"
+msgstr "Llegiu"
+
+#. URI of the theme
+msgid "https://github.com/mybooking-es/mybooking"
+msgstr "https://github.com/mybooking-es/mybooking"
+
+#. Author URI of the theme
+msgid "https://mybooking.es"
+msgstr "https://mybooking.es"
+
+#. Name of the theme
+msgid "Mybooking"
+msgstr "Mybooking"
+
+#. Author of the theme
+msgid "mybooking"
+msgstr "mybooking"
+
+#. Name of the template
+msgid "MyBooking Contact"
+msgstr "MyBooking Contact"
+
+#. Name of the template
+msgid "MyBooking Empty"
+msgstr "MyBooking Empty"
+
+#. Name of the template
+msgid "MyBooking Home"
+msgstr "MyBooking Home"
+
+#. Name of the template
+msgid "MyBooking Landing"
+msgstr "MyBooking Landing"
+
+#. Description of the theme
+msgid ""
+"Mybooking theme is a minimalistic Bootstrap 4 theme. It's perfect as base "
+"theme for renting and activities sites. Mybooking works perfectly with "
+"Elementor. Mybooking is also WooCommerce ready."
+msgstr ""
+"El tema Mybooking és un tema Bootstrap 4 minimalista. És perfecte com a tema "
+"base per a llocs de lloguer i activitats. Mybooking funciona perfectament "
+"amb Elementor. Mybooking també està preparat per a WooCommerce."
+
+#: inc/widgets.php:128
+msgctxt "mybooking_widgets"
+msgid "Blog sidebar"
+msgstr "Barra lateral del bloc"
+
+#: inc/widgets.php:130
+msgctxt "mybooking_widgets"
+msgid "Blog sidebar widgets area"
+msgstr "Àrea de ginys de la barra lateral del bloc"
+
+#: inc/widgets.php:163
+msgctxt "mybooking_widgets"
+msgid "Footer first widgets area"
+msgstr "Primera zona de ginys de l'footer"
+
+#: inc/widgets.php:188
+msgctxt "mybooking_widgets"
+msgid "Footer Four"
+msgstr "Peu de pàgina quatre"
+
+#: inc/widgets.php:190
+msgctxt "mybooking_widgets"
+msgid "Footer fourth widgets area"
+msgstr "Quarta zona de ginys de l'footer"
+
+#: inc/widgets.php:161
+msgctxt "mybooking_widgets"
+msgid "Footer One"
+msgstr "Peu de pàgina primer"
+
+#: inc/widgets.php:172
+msgctxt "mybooking_widgets"
+msgid "Footer second widgets area"
+msgstr "Segona  zona de ginys de l'footer"
+
+#: inc/widgets.php:181
+msgctxt "mybooking_widgets"
+msgid "Footer third widgets area"
+msgstr "Tercera  zona de ginys de l'footer"
+
+#: inc/widgets.php:179
+msgctxt "mybooking_widgets"
+msgid "Footer Three"
+msgstr "Peu de pàgina tres"
+
+#: inc/widgets.php:170
+msgctxt "mybooking_widgets"
+msgid "Footer Two"
+msgstr "Peu de pàgina dos"
+
+#: inc/widgets.php:47
+msgctxt "mybooking_widgets"
+msgid "Main Menu"
+msgstr "Conductor principal"
+
+#: inc/widgets.php:150
+msgctxt "mybooking_widgets"
+msgid "Mybooking Contact Template Contact Form"
+msgstr "Formulari de contacte de la plantilla de contacte Mybooking"
+
+#: inc/widgets.php:117
+msgctxt "mybooking_widgets"
+msgid "Mybooking Home Template Bottom"
+msgstr "Fons de plantilla Home de Mybooking"
+
+#: inc/widgets.php:119
+msgctxt "mybooking_widgets"
+msgid "Mybooking Home Template bottom widgets area"
+msgstr "Àrea inferior de widgets de la plantilla Home de Mybooking"
+
+#: inc/widgets.php:89 inc/widgets.php:91
+msgctxt "mybooking_widgets"
+msgid "Mybooking Home Template Center One"
+msgstr "Plantilla Mybooking Home centre 1"
+
+#: inc/widgets.php:107 inc/widgets.php:109
+msgctxt "mybooking_widgets"
+msgid "Mybooking Home Template Center Three"
+msgstr "Plantilla Mybooking Home centre 3"
+
+#: inc/widgets.php:98 inc/widgets.php:100
+msgctxt "mybooking_widgets"
+msgid "Mybooking Home Template Center Two"
+msgstr "Plantilla Mybooking Home centre 2"
+
+#: inc/widgets.php:58
+msgctxt "mybooking_widgets"
+msgid "Mybooking Home Template Header Left"
+msgstr "Capçalera de plantilla d'inici de Mybooking a l'esquerra"
+
+#: inc/widgets.php:67
+msgctxt "mybooking_widgets"
+msgid "Mybooking Home Template Header Right"
+msgstr "Capçalera de plantilla d'inici de Mybooking a la dreta"
+
+#: inc/widgets.php:78
+msgctxt "mybooking_widgets"
+msgid "Mybooking Home Template Top"
+msgstr "Plantilla d'inici de Mybooking dalt"
+
+#: inc/widgets.php:60
+msgctxt "mybooking_widgets"
+msgid "Mybooking Home Template widgets area at left of Home header"
+msgstr ""
+"Àrea de widgets de plantilla d'inici Mybooking a l'esquerra de la capçalera "
+"d'inici"
+
+#: inc/widgets.php:69
+msgctxt "mybooking_widgets"
+msgid "Mybooking Home Template widgets area at right of Home header"
+msgstr ""
+"Àrea de widgets de plantilla d'inici de Mybooking a la dreta de la capçalera "
+"d'inici"
+
+#: inc/widgets.php:80
+msgctxt "mybooking_widgets"
+msgid "Mybooking Home Template widgets area at top"
+msgstr "Àrea de widgets de plantilla d'inici Mybooking a la part superior"
+
+#: inc/widgets.php:139
+msgctxt "mybooking_widgets"
+msgid "Mybooking Landing Template Sidebar"
+msgstr "Barra lateral de la plantilla de Mybooking Landing"
+
+#: inc/widgets.php:141
+msgctxt "mybooking_widgets"
+msgid "Mybooking Landing template sidebar widgets area"
+msgstr ""
+"Àrea de widgets de la barra lateral de la plantilla de Landing Mybooking"
+
+#: inc/widgets.php:27
+msgctxt "mybooking_widgets"
+msgid "Notification area at Top"
+msgstr "Àrea de notificacions a la part superior"
+
+#: inc/widgets.php:152
+msgctxt "mybooking_widgets"
+msgid "Place your contact form at here"
+msgstr "Col·loqueu el formulari de contacte aquí"
+
+#: inc/widgets.php:25
+msgctxt "mybooking_widgets"
+msgid "Top Notification"
+msgstr "Notificació superior"
+
+#: inc/widgets.php:36
+msgctxt "mybooking_widgets"
+msgid "TopBar Right"
+msgstr "Barra superior dreta"
+
+#: inc/widgets.php:38
+msgctxt "mybooking_widgets"
+msgid "TopBar Right Area"
+msgstr "Àrea dreta de la barra superior"
+
+#: inc/widgets.php:49
+msgctxt "mybooking_widgets"
+msgid "Widgets area at Main Menu right side"
+msgstr "Zona dels ginys a la part dreta del menú principal"
+
+#: inc/setup.php:64
+msgctxt "nav_menus"
+msgid "Primary Menu"
+msgstr "Menú principal"
 
 #: inc/class-wp-bootstrap-navwalker.php:387
 msgctxt "navwalker"
 msgid "Add a menu"
 msgstr "Afegiu un menú"
 
-#. %s: category name
-#: inc/categories.php:52 inc/categories.php:69 inc/categories.php:81
-#: inc/categories.php:104 inc/categories.php:121 inc/categories.php:133
-#, php-format
-msgctxt "categories"
-msgid "View all posts in %s"
-msgstr "Veure tots els missatges a %s"
+#: inc/post-functions.php:171
+msgctxt "Next post link"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:20
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:90
-msgctxt "renting_form_selector"
-msgid "Pick-up place"
-msgstr "Lloc de recollida"
+#: page.php:43 mybooking-parts/blog/mybooking-content-single.php:51
+msgctxt "pages_navigation"
+msgid "Pages"
+msgstr "Pàgines"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:38
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:108
-msgctxt "renting_form_selector"
-msgid "Return place"
-msgstr "Lloc de retorn"
+#: inc/pagination.php:28 mybooking-parts/blog/mybooking-pagination.php:16
+msgctxt "pagination"
+msgid "&laquo;"
+msgstr "&laquo;"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:62
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:31
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:132
-msgctxt "renting_form_selector"
-msgid "Pick-up date"
-msgstr "Data de recollida"
+#: inc/pagination.php:29 mybooking-parts/blog/mybooking-pagination.php:18
+msgctxt "pagination"
+msgid "&raquo;"
+msgstr "&raquo;"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:75
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:47
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:145
-msgctxt "renting_form_selector"
-msgid "Return date"
-msgstr "Data de retorn"
+#: inc/pagination.php:30 mybooking-parts/blog/mybooking-pagination.php:22
+msgctxt "pagination"
+msgid "Posts navigation"
+msgstr "Navegació de publicacions"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:92
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:21
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:163
-msgctxt "renting_form_selector"
-msgid "Family"
-msgstr "Família"
+#: inc/post-functions.php:40
+msgctxt "post-meta"
+msgid "by"
+msgstr "per"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:101
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:76
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:186
-msgctxt "renting_form_selector"
-msgid "Search"
-msgstr "Cerca"
+#: inc/post-functions.php:162
+msgctxt "post_navigation"
+msgid "Post navigation"
+msgstr "Navegació de publicacions"
+
+#: inc/post-functions.php:167
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+
+#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:189
+msgctxt "renting_choose_product"
+msgid "Book it!"
+msgstr "Reserveu-lo!"
+
+#: mybooking-templates/mybooking-plugin-choose-product.php:26
+msgctxt "renting_choose_product"
+msgid "Close"
+msgstr "Tancar"
 
 #: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:41
 #: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:67
@@ -1079,46 +1696,97 @@ msgctxt "renting_choose_product"
 msgid "Edit"
 msgstr "Edita"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:103
+#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:140
 msgctxt "renting_choose_product"
 msgid "Few units left!"
 msgstr "Queden poques unitats!"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:157
-msgctxt "renting_choose_product"
-msgid "Book it!"
-msgstr "Reserveu-lo!"
-
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:162
+#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:195
 msgctxt "renting_choose_product"
 msgid "Model not available in the office and selected dates"
 msgstr "El model no està disponible a l'oficina i les dates seleccionades"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:176
+#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:210
 msgctxt "renting_choose_product"
 msgid "Next"
 msgstr "Pròxim"
+
+#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:105
+msgctxt "renting_choose_product"
+msgid "Taxes included"
+msgstr "Impostos inclosos"
+
+#: mybooking-templates/mybooking-plugin-complete.php:75
+msgctxt "renting_complete"
+msgid "Additional information"
+msgstr "Informació adicional"
+
+#: mybooking-templates/mybooking-plugin-complete.php:70
+#: mybooking-templates/mybooking-plugin-complete.php:72
+msgctxt "renting_complete"
+msgid "Alternative phone number"
+msgstr "Número de telèfon alternatiu"
+
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:349
+#: mybooking-templates/mybooking-plugin-complete.php:98
+msgctxt "renting_complete"
+msgid "Close"
+msgstr "Tancar"
+
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:254
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:317
+msgctxt "renting_complete"
+msgid "Collection"
+msgstr "Recollida"
+
+#: mybooking-templates/mybooking-plugin-complete.php:78
+#: mybooking-templates/mybooking-plugin-complete.php:79
+msgctxt "renting_complete"
+msgid "Comments"
+msgstr "Comentaris"
+
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:635
+msgctxt "renting_complete"
+msgid "Confirm"
+msgstr "Confirma"
+
+#: mybooking-templates/mybooking-plugin-complete.php:58
+#: mybooking-templates/mybooking-plugin-complete.php:60
+msgctxt "renting_complete"
+msgid "Confirm E-mail"
+msgstr "Confirma el correu electrònic"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:20
 msgctxt "renting_complete"
 msgid "Coverage"
 msgstr "Cobertura"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:67
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:670
 msgctxt "renting_complete"
-msgid "Extras"
-msgstr "Extras"
+msgid "Credit or debit card"
+msgstr "Targeta de crèdit o dèbit"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:178
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:221
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:273
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:293
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:493
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:51
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:67
+#: mybooking-templates/mybooking-plugin-complete.php:40
 msgctxt "renting_complete"
-msgid "Total"
-msgstr "Total"
+msgid "Customer's details"
+msgstr "Adreça del client"
+
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:246
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:311
+msgctxt "renting_complete"
+msgid "Delivery"
+msgstr "Lliurament"
+
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:480
+msgctxt "renting_complete"
+msgid "Driver's age supplement"
+msgstr "Suplement d’edat del conductor"
+
+#: mybooking-templates/mybooking-plugin-complete.php:53
+#: mybooking-templates/mybooking-plugin-complete.php:55
+msgctxt "renting_complete"
+msgid "E-mail"
+msgstr "Correu electrònic"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:185
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:228
@@ -1126,31 +1794,84 @@ msgctxt "renting_complete"
 msgid "Edit"
 msgstr "Edita"
 
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:67
+msgctxt "renting_complete"
+msgid "Extras"
+msgstr "Extras"
+
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:329
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:384
+msgctxt "renting_complete"
+msgid "hour(s)"
+msgstr "hora/es"
+
+#. %s: terms and conditions URL
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:595
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:628
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:694
+#, php-format
+msgctxt "renting_complete"
+msgid ""
+"I have read and hereby accept the <a href=\"%s\" target=\"_blank\">"
+"conditions</a> of rental"
+msgstr ""
+"I have read and hereby accept the <a href=\"%s\" target=\"_blank\">"
+"conditions</a> of rental"
+
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:592
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:625
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:691
+msgctxt "renting_complete"
+msgid "I have read and hereby accept the conditions of rental"
+msgstr "He llegit i accepto les condicions de lloguer"
+
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:188
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:231
 msgctxt "renting_complete"
 msgid "Info"
 msgstr "Informació"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:246
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:308
+#: mybooking-templates/mybooking-plugin-complete.php:43
+#: mybooking-templates/mybooking-plugin-complete.php:45
 msgctxt "renting_complete"
-msgid "Delivery"
-msgstr "Lliurament"
+msgid "Name"
+msgstr "Nom"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:254
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:314
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:574
 msgctxt "renting_complete"
-msgid "Collection"
-msgstr "Recollida"
+msgid "Pay now"
+msgstr "Paga ara"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:267
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:282
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:46
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:61
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:566
 msgctxt "renting_complete"
-msgid "Product"
-msgstr "Producte"
+msgid "Pay on arrival"
+msgstr "Paga a l'arribada"
+
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:662
+msgctxt "renting_complete"
+msgid "Paypal"
+msgstr "Paypal"
+
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:487
+msgctxt "renting_complete"
+msgid "Petrol supplement"
+msgstr "Suplement de combustible"
+
+#: mybooking-templates/mybooking-plugin-complete.php:63
+#: mybooking-templates/mybooking-plugin-complete.php:66
+msgctxt "renting_complete"
+msgid "Phone number"
+msgstr "Número de telèfon"
+
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:459
+msgctxt "renting_complete"
+msgid "Pick-up place supplement"
+msgstr "Suplement de lloc de recollida"
+
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:452
+msgctxt "renting_complete"
+msgid "Pick-up time supplement"
+msgstr "Suplement d'hora de recollida"
 
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:269
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:286
@@ -1168,511 +1889,59 @@ msgctxt "renting_complete"
 msgid "Quantity"
 msgstr "Quantitat"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:321
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:325
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:377
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:381
-msgctxt "renting_complete"
-msgid "Rental duration"
-msgstr "Durada del lloguer"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:322
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:379
-msgctxt "renting_complete"
-msgid "day(s)"
-msgstr "dia/es"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:326
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:383
-msgctxt "renting_complete"
-msgid "hour(s)"
-msgstr "hora/es"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:345
-msgctxt "renting_complete"
-msgid "Reservation summary"
-msgstr "Resum de la reserva"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:346
-#: mybooking-templates/mybooking-plugin-complete.php:101
-msgctxt "renting_complete"
-msgid "Close"
-msgstr "Tancar"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:448
-msgctxt "renting_complete"
-msgid "Pick-up time supplement"
-msgstr "Suplement d'hora de recollida"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:455
-msgctxt "renting_complete"
-msgid "Pick-up place supplement"
-msgstr "Suplement de lloc de recollida"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:462
-msgctxt "renting_complete"
-msgid "Return time supplement"
-msgstr "Suplement de l'hora de devolució"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:469
-msgctxt "renting_complete"
-msgid "Return place supplement"
-msgstr "Suplement de lloc de tornada"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:476
-msgctxt "renting_complete"
-msgid "Driver's age supplement"
-msgstr "Suplement d’edat del conductor"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:483
-msgctxt "renting_complete"
-msgid "Petrol supplement"
-msgstr "Suplement de combustible"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:554
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:600
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:558
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:604
 msgctxt "renting_complete"
 msgid "Request reservation"
 msgstr "Sol·licita reserva"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:562
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:348
 msgctxt "renting_complete"
-msgid "Pay on arrival"
-msgstr "Paga a l'arribada"
+msgid "Reservation summary"
+msgstr "Resum de la reserva"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:570
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:473
 msgctxt "renting_complete"
-msgid "Pay now"
-msgstr "Paga ara"
+msgid "Return place supplement"
+msgstr "Suplement de lloc de tornada"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:588
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:621
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:687
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:466
 msgctxt "renting_complete"
-msgid "I have read and hereby accept the conditions of rental"
-msgstr "He llegit i accepto les condicions de lloguer"
+msgid "Return time supplement"
+msgstr "Suplement de l'hora de devolució"
 
-#. %s: terms and conditions URL
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:591
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:624
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:690
-#, php-format
-msgctxt "renting_complete"
-msgid ""
-"I have read and hereby accept the <a href=\"%s\" target=\"_blank\">"
-"conditions</a> of rental"
-msgstr ""
-"I have read and hereby accept the <a href=\"%s\" target=\"_blank\">"
-"conditions</a> of rental"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:631
-msgctxt "renting_complete"
-msgid "Confirm"
-msgstr "Confirma"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:658
-msgctxt "renting_complete"
-msgid "Paypal"
-msgstr "Paypal"
-
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:666
-msgctxt "renting_complete"
-msgid "Credit or debit card"
-msgstr "Targeta de crèdit o dèbit"
-
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget-tmpl.php:30
-msgctxt "renting_form_selector_wizard"
-msgid "Separator"
-msgstr "Separador"
-
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget-tmpl.php:69
-msgctxt "renting_form_selector_wizard"
-msgid "All"
-msgstr "Tots"
-
-#: mybooking-templates/mybooking-plugin-routes-product.php:28
-msgctxt "renting_product_detail"
-msgid "Previous"
-msgstr "Anterior"
-
-#: mybooking-templates/mybooking-plugin-routes-product.php:32
-msgctxt "renting_product_detail"
-msgid "Next"
-msgstr "Pròxim"
-
-#. %s: From price
-#: mybooking-templates/mybooking-plugin-routes-product.php:53
-#, php-format
-msgctxt "renting_product_detail"
-msgid "From <b>%s</b>"
-msgstr "Des de <b>% s </b>"
-
-#. %.2f: Length
-#: mybooking-templates/mybooking-plugin-routes-product.php:65
-#, php-format
-msgctxt "renting_product_detail"
-msgid "<b>%.2f</b> m."
-msgstr "<b>%.2f</b> m."
-
-#: mybooking-templates/mybooking-plugin-routes-product.php:83
-msgctxt "renting_product_detail"
-msgid "Details"
-msgstr "Detalls"
-
-#: mybooking-templates/mybooking-plugin-routes-product.php:96
-msgctxt "renting_product_detail"
-msgid "Please choose your dates in the availability calendar"
-msgstr "Seleccioneu les dates al calendari de disponibilitat"
-
-#: mybooking-templates/mybooking-plugin-complete.php:43
-msgctxt "renting_complete"
-msgid "Customer's details"
-msgstr "Adreça del client"
-
-#: mybooking-templates/mybooking-plugin-complete.php:46
 #: mybooking-templates/mybooking-plugin-complete.php:48
-msgctxt "renting_complete"
-msgid "Name"
-msgstr "Nom"
-
-#: mybooking-templates/mybooking-plugin-complete.php:51
-#: mybooking-templates/mybooking-plugin-complete.php:53
+#: mybooking-templates/mybooking-plugin-complete.php:50
 msgctxt "renting_complete"
 msgid "Surname"
 msgstr "Cognom"
 
-#: mybooking-templates/mybooking-plugin-complete.php:56
-#: mybooking-templates/mybooking-plugin-complete.php:58
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:178
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:221
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:273
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:293
+#: mybooking-templates/mybooking-plugin-complete-tmpl.php:497
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:51
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:67
 msgctxt "renting_complete"
-msgid "E-mail"
-msgstr "Correu electrònic"
-
-#: mybooking-templates/mybooking-plugin-complete.php:61
-#: mybooking-templates/mybooking-plugin-complete.php:63
-msgctxt "renting_complete"
-msgid "Confirm E-mail"
-msgstr "Confirma el correu electrònic"
-
-#: mybooking-templates/mybooking-plugin-complete.php:66
-#: mybooking-templates/mybooking-plugin-complete.php:69
-msgctxt "renting_complete"
-msgid "Phone number"
-msgstr "Número de telèfon"
-
-#: mybooking-templates/mybooking-plugin-complete.php:73
-#: mybooking-templates/mybooking-plugin-complete.php:75
-msgctxt "renting_complete"
-msgid "Alternative phone number"
-msgstr "Número de telèfon alternatiu"
-
-#: mybooking-templates/mybooking-plugin-complete.php:78
-msgctxt "renting_complete"
-msgid "Additional information"
-msgstr "Informació adicional"
-
-#: mybooking-templates/mybooking-plugin-complete.php:81
-#: mybooking-templates/mybooking-plugin-complete.php:82
-msgctxt "renting_complete"
-msgid "Comments"
-msgstr "Comentaris"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:78
-msgctxt "activity_my_reservation_item"
 msgid "Total"
 msgstr "Total"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:99
-msgctxt "activity_my_reservation"
-msgid "Complete reservation"
-msgstr "Completar reserva"
+#: mybooking-templates/mybooking-plugin-modify-reservation.php:19
+msgctxt "renting_form_modify_reservation"
+msgid "Close"
+msgstr "Tancar"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:105
-msgctxt "activity_my_reservation"
-msgid ""
-"Please complete the information to speed up the delivery process on the "
-"scheduled date"
-msgstr ""
-"Completeu la informació per accelerar el procés d’entrega a la data prevista"
+#: mybooking-templates/mybooking-plugin-modify-reservation.php:18
+msgctxt "renting_form_modify_reservation"
+msgid "Modify reservation"
+msgstr "Modificar la reserva"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:111
-msgctxt "activity_my_reservation"
-msgid "Customer address"
-msgstr "Adreça del client"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:115
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:117
-msgctxt "activity_my_reservation"
-msgid "Address"
-msgstr "Adreça"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:122
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:124
-msgctxt "activity_my_reservation"
-msgid "Number"
-msgstr "Número"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:129
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:131
-msgctxt "activity_my_reservation"
-msgid "Complement"
-msgstr "Complement"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:138
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:140
-msgctxt "activity_my_reservation"
-msgid "City"
-msgstr "Ciutat"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:145
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:147
-msgctxt "activity_my_reservation"
-msgid "State"
-msgstr "Provincia"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:154
-msgctxt "activity_my_reservation"
-msgid "Country"
-msgstr "País"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:160
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:162
-msgctxt "activity_my_reservation"
-msgid "Postal Code"
-msgstr "Codi Postal"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:182
-msgctxt "activity_my_reservation"
-msgid "Partipant"
-msgstr "Partipant"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:187
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:189
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:191
-msgctxt "activity_my_reservation"
-msgid "Name"
-msgstr "Nom"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:196
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:198
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:200
-msgctxt "activity_my_reservation"
-msgid "Surname"
-msgstr "Cognom"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:206
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:208
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:210
-msgctxt "activity_my_reservation"
-msgid "Document ID"
-msgstr "Identificador del document"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:217
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:219
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:221
-msgctxt "activity_my_reservation"
-msgid "Date of birth"
-msgstr "Data de naixement"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:229
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:231
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:233
-msgctxt "activity_my_reservation"
-msgid "Phone number"
-msgstr "Número de telèfon"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:240
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:242
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:244
-msgctxt "activity_my_reservation"
-msgid "E-mail"
-msgstr "Correu electrònic"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:255
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:257
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:259
-msgctxt "activity_my_reservation"
-msgid "Height (cm)"
-msgstr "Alçada (cm)"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:266
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:268
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:270
-msgctxt "activity_my_reservation"
-msgid "Weight (kg)"
-msgstr "Weight (kg)"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:281
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:284
-msgctxt "activity_my_reservation"
-msgid "Allergies"
-msgstr "Al·lèrgies"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:288
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:290
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:292
-msgctxt "activity_my_reservation"
-msgid "Allergies detail"
-msgstr "Detall d’al·lèrgies"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:300
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:303
-msgctxt "activity_my_reservation"
-msgid "Intolerances"
-msgstr "Intoleràncies"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:307
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:309
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:311
-msgctxt "activity_my_reservation"
-msgid "Intolerances detail"
-msgstr "Detall de les intoleràncies"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:321
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:324
-msgctxt "activity_my_reservation"
-msgid "Slight injuries"
-msgstr "Lesions lleus"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:328
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:330
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:332
-msgctxt "activity_my_reservation"
-msgid "Slight injuries detail"
-msgstr "Detall de lesions lleus"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:342
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:345
-msgctxt "activity_my_reservation"
-msgid "Diseases"
-msgstr "Malalties"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:349
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:351
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:353
-msgctxt "activity_my_reservation"
-msgid "Diseases detail"
-msgstr "Detall de malalties"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:372
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:387
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:406
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:418
-msgctxt "activity_my_reservation"
-msgid "Select the option"
-msgstr "Seleccioneu l'opció"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:374
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:388
-msgctxt "activity_my_reservation"
-msgid "Never"
-msgstr "Mai"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:375
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:389
-msgctxt "activity_my_reservation"
-msgid "Once"
-msgstr "Un cop"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:376
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:390
-msgctxt "activity_my_reservation"
-msgid "Twice"
-msgstr "Dues vegades"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:377
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:391
-msgctxt "activity_my_reservation"
-msgid "Three or more times"
-msgstr "Tres o més vegades"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:407
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:419
-msgctxt "activity_my_reservation"
-msgid "No"
-msgstr "No"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:408
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:420
-msgctxt "activity_my_reservation"
-msgid "Yes"
-msgstr "Sí"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:434
-msgctxt "activity_my_reservation"
-msgid "Update"
-msgstr "Actualització"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:450
-msgctxt "activity_my_reservation"
-msgid "Reservation ID"
-msgstr "Identificador de reserva"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:458
-msgctxt "activity_my_reservation"
-msgid "Cancel Reservation"
-msgstr "Cancel·la la reserva"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:467
-msgctxt "activity_my_reservation"
-msgid "Customer's details"
-msgstr "Adreça del client"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:480
-msgctxt "activity_my_reservation"
-msgid "Total"
-msgstr "Total"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:483
-msgctxt "activity_my_reservation"
-msgid "Paid"
-msgstr "Pagat"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:485
-msgctxt "activity_my_reservation"
-msgid "Pending"
-msgstr "Pendents"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:526
-msgctxt "activity_my_reservation"
-msgid "Paypal"
-msgstr "Paypal"
-
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:534
-msgctxt "activity_my_reservation"
-msgid "Credit or debit card"
-msgstr "Targeta de crèdit o dèbit"
-
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:46
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:62
-msgctxt "activity_tickets_form_selector"
-msgid "Select date"
-msgstr "Seleccioneu la data"
-
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:76
-msgctxt "activity_tickets_form_selector"
-msgid "We are sorry. There are not schedules available"
-msgstr "Ho sentim. No hi ha horaris disponibles"
-
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:80
-msgctxt "activity_tickets_form_selector"
-msgid "Select hour"
-msgstr "Seleccioneu l’hora"
-
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:100
-msgctxt "activity_tickets_form_selector"
-msgid "People"
-msgstr "Persones"
-
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:113
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:140
-msgctxt "activity_tickets_form_selector"
-msgid "Book now"
-msgstr "Reservar ara"
-
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:131
-msgctxt "activity_tickets_form_selector"
-msgid "Please, select an option"
-msgstr "Seleccioneu una opció"
+#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:20
+#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:90
+msgctxt "renting_form_selector"
+msgid "Pick-up place"
+msgstr "Lloc de recollida"
 
 #: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:65
 #: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:176
@@ -1680,174 +1949,63 @@ msgctxt "renting_form_selector"
 msgid "Promotion code"
 msgstr "Codi de promoció"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:16
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:19
-msgctxt "renting_summary"
-msgid "Reservation Id"
-msgstr "Identificador de reserva"
+#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:38
+#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:108
+msgctxt "renting_form_selector"
+msgid "Return place"
+msgstr "Lloc de retorn"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:114
-msgctxt "renting_summary"
-msgid "Pick-up time supplement"
-msgstr "Suplement d'hora de recollida"
+#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:101
+#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:76
+#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:186
+msgctxt "renting_form_selector"
+msgid "Search"
+msgstr "Cerca"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:121
-msgctxt "renting_summary"
-msgid "Pick-up place supplement"
-msgstr "Suplement de lloc de recollida"
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget-tmpl.php:69
+msgctxt "renting_form_selector_wizard"
+msgid "All"
+msgstr "Tots"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:128
-msgctxt "renting_summary"
-msgid "Return time supplement"
-msgstr "Suplement de l'hora de devolució"
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:46
+msgctxt "renting_form_selector_wizard"
+msgid "Book"
+msgstr "Reserva"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:135
-msgctxt "renting_summary"
-msgid "Return place supplement"
-msgstr "Suplement de lloc de tornada"
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:31
+msgctxt "renting_form_selector_wizard"
+msgid "Choose a place"
+msgstr "Trieu un lloc"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:143
-msgctxt "renting_summary"
-msgid "Driver's age supplement"
-msgstr "Suplement d’edat del conductor"
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:37
+msgctxt "renting_form_selector_wizard"
+msgid "Pick-up date"
+msgstr "Data de recollida"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:149
-msgctxt "renting_summary"
-msgid "Petrol supplement"
-msgstr "Suplement de combustible"
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:41
+msgctxt "renting_form_selector_wizard"
+msgid "Return date"
+msgstr "Data de retorn"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:159
-msgctxt "renting_summary"
-msgid "Total"
-msgstr "Total"
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget-tmpl.php:30
+msgctxt "renting_form_selector_wizard"
+msgid "Separator"
+msgstr "Separador"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:164
-msgctxt "renting_summary"
-msgid "Total paid"
-msgstr "Total pagat"
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:35
+msgctxt "renting_form_selector_wizard"
+msgid "When?"
+msgstr "Quan?"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:170
-msgctxt "renting_summary"
-msgid "Total pending"
-msgstr "Total pendent"
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:29
+msgctxt "renting_form_selector_wizard"
+msgid "Where?"
+msgstr "On?"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:178
-msgctxt "renting_summary"
-msgid "Customer's details"
-msgstr "Adreça del client"
-
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:183
-msgctxt "renting_summary"
-msgid "Full name"
-msgstr "Nom complet"
-
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:187
-msgctxt "renting_summary"
-msgid "E-mail"
-msgstr "Correu electrònic"
-
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:191
-msgctxt "renting_summary"
-msgid "Phone number"
-msgstr "Número de telèfon"
-
-#: mybooking-templates/mybooking-plugin-choose-product.php:29
-msgctxt "renting_choose_product"
-msgid "Close"
-msgstr "Tancar"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:24
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:84
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:438
 msgctxt "renting_my_reservation"
-msgid "Delivery"
-msgstr "Lliurament"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:33
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:91
-msgctxt "renting_my_reservation"
-msgid "Collection"
-msgstr "Recollida"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:82
-msgctxt "renting_my_reservation"
-msgid "Reservation Id"
-msgstr "Identificador de reserva"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:100
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:103
-msgctxt "renting_my_reservation"
-msgid "Rental duration"
-msgstr "Durada del lloguer"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:101
-msgctxt "renting_my_reservation"
-msgid "day(s)"
-msgstr "dia/es"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:104
-msgctxt "renting_my_reservation"
-msgid "hour(s)"
-msgstr "hora/es"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:128
-msgctxt "renting_my_reservation"
-msgid "My reservation"
-msgstr "La meva reserva"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:193
-msgctxt "renting_my_reservation"
-msgid "Pick-up time supplement"
-msgstr "Suplement d'hora de recollida"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:200
-msgctxt "renting_my_reservation"
-msgid "Pick-up place supplement"
-msgstr "Suplement de lloc de recollida"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:208
-msgctxt "renting_my_reservation"
-msgid "Return time supplement"
-msgstr "Suplement de l'hora de devolució"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:215
-msgctxt "renting_my_reservation"
-msgid "Return place supplement"
-msgstr "Suplement de lloc de tornada"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:224
-msgctxt "renting_my_reservation"
-msgid "Driver's age supplement"
-msgstr "Suplement d’edat del conductor"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:231
-msgctxt "renting_my_reservation"
-msgid "Petrol supplement"
-msgstr "Suplement de combustible"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:241
-msgctxt "renting_my_reservation"
-msgid "Total"
-msgstr "Total"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:247
-msgctxt "renting_my_reservation"
-msgid "Paid"
-msgstr "Pagat"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:252
-msgctxt "renting_my_reservation"
-msgid "Pending"
-msgstr "Pendents"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:260
-msgctxt "renting_my_reservation"
-msgid "Customer's details"
-msgstr "Adreça del client"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:295
-msgctxt "renting_my_reservation"
-msgid "Customer address"
-msgstr "Adreça del client"
+msgid "Additional drivers"
+msgstr "Conductors adicionals"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:298
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:300
@@ -1855,11 +2013,25 @@ msgctxt "renting_my_reservation"
 msgid "Address"
 msgstr "Adreça"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:303
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:305
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:313
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:315
 msgctxt "renting_my_reservation"
-msgid "Number"
-msgstr "Número"
+msgid "City"
+msgstr "Ciutat"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:33
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:91
+msgctxt "renting_my_reservation"
+msgid "Collection"
+msgstr "Recollida"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:555
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:557
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:573
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:575
+msgctxt "renting_my_reservation"
+msgid "Company"
+msgstr "Empresa"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:308
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:310
@@ -1867,33 +2039,142 @@ msgctxt "renting_my_reservation"
 msgid "Complement"
 msgstr "Complement"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:313
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:315
-msgctxt "renting_my_reservation"
-msgid "City"
-msgstr "Ciutat"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:318
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:320
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:325
-msgctxt "renting_my_reservation"
-msgid "State"
-msgstr "Provincia"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:323
-msgctxt "renting_my_reservation"
-msgid "Postal Code"
-msgstr "Codi Postal"
-
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:329
 msgctxt "renting_my_reservation"
 msgid "Country"
 msgstr "País"
 
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:773
+msgctxt "renting_my_reservation"
+msgid "Credit or debit card"
+msgstr "Targeta de crèdit o dèbit"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:295
+msgctxt "renting_my_reservation"
+msgid "Customer address"
+msgstr "Adreça del client"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:260
+msgctxt "renting_my_reservation"
+msgid "Customer's details"
+msgstr "Adreça del client"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:419
+msgctxt "renting_my_reservation"
+msgid "Date of birth"
+msgstr "Data de naixement"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:361
+msgctxt "renting_my_reservation"
+msgid "Date of Issue"
+msgstr "Data d'emissió"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:24
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:84
+msgctxt "renting_my_reservation"
+msgid "Delivery"
+msgstr "Lliurament"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:621
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:623
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:625
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:687
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:689
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:691
+msgctxt "renting_my_reservation"
+msgid "Document ID"
+msgstr "Identificador del document"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:224
+msgctxt "renting_my_reservation"
+msgid "Driver's age supplement"
+msgstr "Suplement d’edat del conductor"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:390
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:466
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:522
+msgctxt "renting_my_reservation"
+msgid "Driving license date of issue"
+msgstr "Data d’expedició del permís de conduir"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:411
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:485
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:541
+msgctxt "renting_my_reservation"
+msgid "Driving license expedition country"
+msgstr "Llicència de conduir país d'expedició"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:382
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:384
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:458
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:460
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:514
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:516
+msgctxt "renting_my_reservation"
+msgid "Driving license number"
+msgstr "Número del permís de conduir"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:639
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:641
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:643
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:705
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:707
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:709
+msgctxt "renting_my_reservation"
+msgid "E-mail"
+msgstr "Correu electrònic"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:565
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:567
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:583
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:585
+msgctxt "renting_my_reservation"
+msgid "Estimated Time"
+msgstr "Hora estimada"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:552
+msgctxt "renting_my_reservation"
+msgid "Flight"
+msgstr "Vol"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:560
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:562
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:578
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:580
+msgctxt "renting_my_reservation"
+msgid "Flight Number"
+msgstr "Queden poques unitats!"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:648
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:650
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:652
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:714
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:716
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:718
+msgctxt "renting_my_reservation"
+msgid "Height (cm)"
+msgstr "Alçada (cm)"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:104
+msgctxt "renting_my_reservation"
+msgid "hour(s)"
+msgstr "hora/es"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:354
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:356
+msgctxt "renting_my_reservation"
+msgid "ID card or passport"
+msgstr "DNI o passaport"
+
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:336
 msgctxt "renting_my_reservation"
 msgid "Main driver"
 msgstr "Conductor principal"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:128
+msgctxt "renting_my_reservation"
+msgid "My reservation"
+msgstr "La meva reserva"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:339
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:341
@@ -1911,100 +2192,16 @@ msgctxt "renting_my_reservation"
 msgid "Name"
 msgstr "Nom"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:346
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:348
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:448
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:450
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:504
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:506
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:613
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:615
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:617
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:679
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:681
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:683
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:303
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:305
 msgctxt "renting_my_reservation"
-msgid "Surname"
-msgstr "Cognom"
+msgid "Number"
+msgstr "Número"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:354
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:356
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:247
 msgctxt "renting_my_reservation"
-msgid "ID card or passport"
-msgstr "DNI o passaport"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:361
-msgctxt "renting_my_reservation"
-msgid "Date of Issue"
-msgstr "Data d'emissió"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:382
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:384
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:458
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:460
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:514
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:516
-msgctxt "renting_my_reservation"
-msgid "Driving license number"
-msgstr "Número del permís de conduir"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:390
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:466
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:522
-msgctxt "renting_my_reservation"
-msgid "Driving license date of issue"
-msgstr "Data d’expedició del permís de conduir"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:411
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:485
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:541
-msgctxt "renting_my_reservation"
-msgid "Driving license expedition country"
-msgstr "Llicència de conduir país d'expedició"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:419
-msgctxt "renting_my_reservation"
-msgid "Date of birth"
-msgstr "Data de naixement"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:438
-msgctxt "renting_my_reservation"
-msgid "Additional drivers"
-msgstr "Conductors adicionals"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:552
-msgctxt "renting_my_reservation"
-msgid "Flight"
-msgstr "Vol"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:555
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:557
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:573
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:575
-msgctxt "renting_my_reservation"
-msgid "Company"
-msgstr "Empresa"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:560
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:562
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:578
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:580
-msgctxt "renting_my_reservation"
-msgid "Flight Number"
-msgstr "Queden poques unitats!"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:565
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:567
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:583
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:585
-msgctxt "renting_my_reservation"
-msgid "Estimated Time"
-msgstr "Hora estimada"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:570
-msgctxt "renting_my_reservation"
-msgid "Return flight"
-msgstr "Vol de tornada"
+msgid "Paid"
+msgstr "Pagat"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:598
 msgctxt "renting_my_reservation"
@@ -2021,15 +2218,25 @@ msgctxt "renting_my_reservation"
 msgid "Pax 1"
 msgstr "Pax 1"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:621
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:623
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:625
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:687
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:689
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:691
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:668
 msgctxt "renting_my_reservation"
-msgid "Document ID"
-msgstr "Identificador del document"
+msgid "Pax 2"
+msgstr "Pax 2"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:766
+msgctxt "renting_my_reservation"
+msgid "Paypal"
+msgstr "Paypal"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:252
+msgctxt "renting_my_reservation"
+msgid "Pending"
+msgstr "Pendents"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:231
+msgctxt "renting_my_reservation"
+msgid "Petrol supplement"
+msgstr "Suplement de combustible"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:631
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:633
@@ -2041,25 +2248,73 @@ msgctxt "renting_my_reservation"
 msgid "Phone number"
 msgstr "Número de telèfon"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:639
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:641
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:643
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:705
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:707
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:709
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:200
 msgctxt "renting_my_reservation"
-msgid "E-mail"
-msgstr "Correu electrònic"
+msgid "Pick-up place supplement"
+msgstr "Suplement de lloc de recollida"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:648
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:650
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:652
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:714
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:716
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:718
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:193
 msgctxt "renting_my_reservation"
-msgid "Height (cm)"
-msgstr "Alçada (cm)"
+msgid "Pick-up time supplement"
+msgstr "Suplement d'hora de recollida"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:323
+msgctxt "renting_my_reservation"
+msgid "Postal Code"
+msgstr "Codi Postal"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:82
+msgctxt "renting_my_reservation"
+msgid "Reservation Id"
+msgstr "Identificador de reserva"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:570
+msgctxt "renting_my_reservation"
+msgid "Return flight"
+msgstr "Vol de tornada"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:215
+msgctxt "renting_my_reservation"
+msgid "Return place supplement"
+msgstr "Suplement de lloc de tornada"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:208
+msgctxt "renting_my_reservation"
+msgid "Return time supplement"
+msgstr "Suplement de l'hora de devolució"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:318
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:320
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:325
+msgctxt "renting_my_reservation"
+msgid "State"
+msgstr "Provincia"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:346
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:348
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:448
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:450
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:504
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:506
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:613
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:615
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:617
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:679
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:681
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:683
+msgctxt "renting_my_reservation"
+msgid "Surname"
+msgstr "Cognom"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:241
+msgctxt "renting_my_reservation"
+msgid "Total"
+msgstr "Total"
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:741
+msgctxt "renting_my_reservation"
+msgid "Update"
+msgstr "Actualització"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:658
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:660
@@ -2071,346 +2326,56 @@ msgctxt "renting_my_reservation"
 msgid "Weight (kg)"
 msgstr "Pes (kg)"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:668
-msgctxt "renting_my_reservation"
-msgid "Pax 2"
-msgstr "Pax 2"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:741
-msgctxt "renting_my_reservation"
-msgid "Update"
-msgstr "Actualització"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:766
-msgctxt "renting_my_reservation"
-msgid "Paypal"
-msgstr "Paypal"
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:773
-msgctxt "renting_my_reservation"
-msgid "Credit or debit card"
-msgstr "Targeta de crèdit o dèbit"
-
-#: mybooking-templates/mybooking-plugin-activities.php:13
-msgctxt "activities_list"
-msgid "No results found"
-msgstr "Sense resultats"
-
-#: mybooking-templates/mybooking-plugin-activities.php:41
-msgctxt "activities_list"
-msgid "From"
-msgstr "Des de"
-
-#: mybooking-templates/mybooking-plugin-activities.php:55
-msgctxt "activities_list"
-msgid "More information"
-msgstr "Més informació"
-
-#. 1: Number of results, 2: Number of results
-#: mybooking-templates/mybooking-plugin-activities.php:68
-#, php-format
-msgctxt "activity_shopping_cart"
-msgid "<b>%s</b> result found"
-msgid_plural "<b>%s</b> results found"
-msgstr[0] "<b>% s </b> resultat trobat"
-msgstr[1] "S'han trobat <b>% s </b> resultats"
-
-#: mybooking-templates/mybooking-plugin-activities.php:86
-msgctxt "activities_list"
-msgid "Page navigation"
-msgstr "Navegació de pàgines"
-
-#: mybooking-templates/mybooking-plugin-activities.php:92
-msgctxt "activities_list"
-msgid "Previous"
-msgstr "Anterior"
-
-#: mybooking-templates/mybooking-plugin-activities.php:113
-msgctxt "activities_list"
-msgid "Next"
-msgstr "Pròxim"
-
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:22
-msgctxt "renting_form_selector_wizard"
-msgid "Where?"
-msgstr "On?"
-
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:24
-msgctxt "renting_form_selector_wizard"
-msgid "Choose a place"
-msgstr "Trieu un lloc"
-
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:28
-msgctxt "renting_form_selector_wizard"
-msgid "When?"
-msgstr "Quan?"
-
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:30
-msgctxt "renting_form_selector_wizard"
-msgid "Pick-up date"
-msgstr "Data de recollida"
-
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:34
-msgctxt "renting_form_selector_wizard"
-msgid "Return date"
-msgstr "Data de retorn"
-
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:39
-msgctxt "renting_form_selector_wizard"
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:133
+msgctxt "renting_product_calendar"
 msgid "Book"
 msgstr "Reserva"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:14
-#: mybooking-templates/mybooking-plugin-contact-widget.php:16
-msgctxt "contact_form"
-msgid "Name"
-msgstr "Nom"
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:46
+msgctxt "renting_product_calendar"
+msgid "Collection time"
+msgstr "Hora de recollida"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:20
-#: mybooking-templates/mybooking-plugin-contact-widget.php:22
-msgctxt "contact_form"
-msgid "Surname"
-msgstr "Cognom"
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:40
+msgctxt "renting_product_calendar"
+msgid "Delivery time"
+msgstr "Hora de lliurament"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:28
-#: mybooking-templates/mybooking-plugin-contact-widget.php:31
-msgctxt "contact_form"
-msgid "E-mail"
-msgstr "Correu electrònic"
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:41
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:47
+msgctxt "renting_product_calendar"
+msgid "hh:mm"
+msgstr "Alçada (cm)"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:36
-#: mybooking-templates/mybooking-plugin-contact-widget.php:38
-msgctxt "contact_form"
-msgid "Phone number"
-msgstr "Número de telèfon"
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:87
+msgctxt "renting_product_calendar"
+msgid "hours(s)"
+msgstr "hora/es"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:43
-#: mybooking-templates/mybooking-plugin-contact-widget.php:45
-msgctxt "contact_form"
-msgid "Message"
-msgstr "Missatge"
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:109
+msgctxt "renting_product_calendar"
+msgid "Pick-up place supplement"
+msgstr "Suplement de lloc de recollida"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:56
-msgctxt "contact_form"
-msgid "Send"
-msgstr "Envia"
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:104
+msgctxt "renting_product_calendar"
+msgid "Pick-up time supplement"
+msgstr "Suplement d'hora de recollida"
 
-#: mybooking-templates/mybooking-plugin-activities-search.php:24
-msgctxt "activities_search"
-msgid "Search"
-msgstr "Cerca"
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:77
+msgctxt "renting_product_calendar"
+msgid "Reservation summary"
+msgstr "Resum de la reserva"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:16
-msgctxt "activity_shopping_cart"
-msgid "Shopping cart is empty"
-msgstr "El carretó de la compra està buit"
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:119
+msgctxt "renting_product_calendar"
+msgid "Return place supplement"
+msgstr "Suplement de lloc de tornada"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:52
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:139
-msgctxt "activity_shopping_cart"
-msgid "Total"
-msgstr "Total"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:69
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:71
-msgctxt "activity_shopping_cart"
-msgid "Name"
-msgstr "Nom"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:77
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:79
-msgctxt "activity_shopping_cart"
-msgid "Surname"
-msgstr "Cognom"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:87
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:89
-msgctxt "activity_shopping_cart"
-msgid "E-mail"
-msgstr "Correu electrònic"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:95
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:97
-msgctxt "activity_shopping_cart"
-msgid "Confirm E-mail"
-msgstr "Confirma el correu electrònic"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:106
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:108
-msgctxt "activity_shopping_cart"
-msgid "Phone number"
-msgstr "Número de telèfon"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:115
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:117
-msgctxt "activity_shopping_cart"
-msgid "Alternative phone number"
-msgstr "Número de telèfon alternatiu"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:125
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:127
-msgctxt "activity_shopping_cart"
-msgid "Comments"
-msgstr "Comentaris"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:165
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:203
-msgctxt "activity_shopping_cart"
-msgid "Request reservation"
-msgstr "Sol·licita reserva"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:172
-msgctxt "activity_shopping_cart"
-msgid "Pay now"
-msgstr "Paga ara"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:189
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:258
-msgctxt "activity_shopping_cart"
-msgid "I have read and hereby accept the terms and conditions"
-msgstr "He llegit i accepto els termes i condicions"
-
-#. %s: terms and conditions URL
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:192
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:261
-#, php-format
-msgctxt "activity_shopping_cart"
-msgid ""
-"I have read and hereby accept the <a href=\"%s\" target=\"_blank\">terms and "
-"conditions</a>"
-msgstr ""
-"He llegit i accepto els <a href=\"%s\" target=\"_blank\"> termes i "
-"condicions </a>"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:229
-msgctxt "activity_shopping_cart"
-msgid "Paypal"
-msgstr "Paypal"
-
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:235
-msgctxt "activity_shopping_cart"
-msgid "Credit or debit card"
-msgstr "Targeta de crèdit o dèbit"
-
-#: mybooking-templates/mybooking-plugin-products.php:27
-msgctxt "renting_products"
-msgid "More information"
-msgstr "Més informació"
-
-#: mybooking-templates/mybooking-plugin-products.php:39
-msgctxt "renting_products_list"
-msgid "Page navigation"
-msgstr "Navegació de pàgines"
-
-#: mybooking-templates/mybooking-plugin-products.php:45
-msgctxt "renting_products"
-msgid "Previous"
-msgstr "Anterior"
-
-#: mybooking-templates/mybooking-plugin-products.php:66
-msgctxt "renting_products"
-msgid "Next"
-msgstr "Pròxim"
-
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:70
-msgctxt "activity_order_item"
-msgid "Total"
-msgstr "Total"
-
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:92
-msgctxt "activity_summary"
-msgid "Reservation ID"
-msgstr "Identificador de reserva"
-
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:103
-msgctxt "activity_summary"
-msgid "Customer's details"
-msgstr "Adreça del client"
-
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:114
-msgctxt "activity_summary"
-msgid "Total"
-msgstr "Total"
-
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:116
-msgctxt "activity_summary"
-msgid "Paid"
-msgstr "Pagat"
-
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:117
-msgctxt "activity_summary"
-msgid "Pending"
-msgstr "Pendents"
-
-#: mybooking-templates/mybooking-plugin-activities-search-tmpl.php:17
-msgctxt "activities_search"
-msgid "Destination"
-msgstr "Destinació"
-
-#: mybooking-templates/mybooking-plugin-activities-search-tmpl.php:25
-msgctxt "activities_search"
-msgid "Category"
-msgstr "Categoria"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:36
-msgctxt "activity_detail"
-msgid "Previous"
-msgstr "Anterior"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:41
-msgctxt "activity_detail"
-msgid "Next"
-msgstr "Pròxim"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:70
-msgctxt "activity_routes"
-msgid "Calendar, timetable and duration"
-msgstr "Calendari, horari i durada"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:88
-msgctxt "activity_routes"
-msgid "What's included?"
-msgstr "Què inclou?"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:98
-msgctxt "activity_routes"
-msgid "Recomendations"
-msgstr "Recomanacions"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:108
-msgctxt "activity_routes"
-msgid "What to bring?"
-msgstr "Què portar?"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:118
-msgctxt "activity_routes"
-msgid "Dates and timetables"
-msgstr "Dates i horaris"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:128
-msgctxt "activity_routes"
-msgid "Ages"
-msgstr "Edats"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:138
-msgctxt "activity_routes"
-msgid "Difficulty"
-msgstr "Dificultat"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:148
-msgctxt "activity_routes"
-msgid "Prices"
-msgstr "Preus"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:158
-msgctxt "activity_routes"
-msgid "Meeting point"
-msgstr "Punt de trobada"
-
-#: mybooking-templates/mybooking-plugin-routes-activity.php:170
-msgctxt "activity_detail"
-msgid "Please choose your dates in the availability calendar"
-msgstr "Seleccioneu les dates al calendari de disponibilitat"
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:114
+msgctxt "renting_product_calendar"
+msgid "Return time supplement"
+msgstr "Suplement de l'hora de devolució"
 
 #: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:17
 #: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:18
@@ -2424,84 +2389,12 @@ msgctxt "renting_product_calendar"
 msgid "Select return place"
 msgstr "Seleccioneu el lloc de tornada"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:40
-msgctxt "renting_product_calendar"
-msgid "Delivery time"
-msgstr "Hora de lliurament"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:41
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:47
-msgctxt "renting_product_calendar"
-msgid "hh:mm"
-msgstr "Alçada (cm)"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:46
-msgctxt "renting_product_calendar"
-msgid "Collection time"
-msgstr "Hora de recollida"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:66
-msgctxt "renting_product_calendar"
-msgid "Reservation summary"
-msgstr "Resum de la reserva"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:69
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:73
-msgctxt "renting_product_calendar"
-msgid "Rental duration"
-msgstr "Durada del lloguer"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:71
-msgctxt "renting_product_calendar"
-msgid "day(s)"
-msgstr "dia/es"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:75
-msgctxt "renting_product_calendar"
-msgid "hours(s)"
-msgstr "hora/es"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:78
-msgctxt "renting_product_calendar"
-msgid "Product"
-msgstr "Producte"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:82
-msgctxt "renting_product_calendar"
-msgid "Pick-up time supplement"
-msgstr "Suplement d'hora de recollida"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:87
-msgctxt "renting_product_calendar"
-msgid "Pick-up place supplement"
-msgstr "Suplement de lloc de recollida"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:92
-msgctxt "renting_product_calendar"
-msgid "Return time supplement"
-msgstr "Suplement de l'hora de devolució"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:97
-msgctxt "renting_product_calendar"
-msgid "Return place supplement"
-msgstr "Suplement de lloc de tornada"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:102
-msgctxt "renting_product_calendar"
-msgid "Total"
-msgstr "Total"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:110
-msgctxt "renting_product_calendar"
-msgid "Book"
-msgstr "Reserva"
-
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:117
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:140
 msgctxt "renting_product_calendar"
 msgid "Sorry, there is no availability during these hours"
 msgstr "Ho sentim, no hi ha disponibilitat durant aquestes hores"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:123
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:146
 msgctxt "renting_product_calendar"
 msgid ""
 "Sorry, there is no availability for the entire period. The calendar shows "
@@ -2512,108 +2405,232 @@ msgstr ""
 "els dies en què hi ha disponibilitat, però és possible que no estigui "
 "disponible per a determinades dates consecutives."
 
-#: mybooking-templates/mybooking-plugin-modify-reservation.php:18
-msgctxt "renting_form_modify_reservation"
-msgid "Modify reservation"
-msgstr "Modificar la reserva"
+#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:125
+msgctxt "renting_product_calendar"
+msgid "Total"
+msgstr "Total"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation.php:19
-msgctxt "renting_form_modify_reservation"
-msgid "Close"
-msgstr "Tancar"
+#. %.2f: Length
+#: mybooking-templates/mybooking-plugin-routes-product.php:65
+#, php-format
+msgctxt "renting_product_detail"
+msgid "<b>%.2f</b> m."
+msgstr "<b>%.2f</b> m."
 
-#. Name of the template
-msgid "MyBooking Contact"
-msgstr "MyBooking Contact"
+#: mybooking-templates/mybooking-plugin-routes-product.php:83
+msgctxt "renting_product_detail"
+msgid "Details"
+msgstr "Detalls"
 
-#: mybooking-parts/mybooking-reservation-steps.php:25
-#: mybooking-parts/home/mybooking-home-header.php:27
-msgctxt "wizard_container"
-msgid "Close"
-msgstr "Tancar"
+#. %s: From price
+#: mybooking-templates/mybooking-plugin-routes-product.php:53
+#, php-format
+msgctxt "renting_product_detail"
+msgid "From <b>%s</b>"
+msgstr "Des de <b>% s </b>"
 
-#: mybooking-parts/mybooking-reservation-steps.php:49
-msgctxt "reservation_step"
-msgid "Place and date"
-msgstr "Lloc i data"
+#: mybooking-templates/mybooking-plugin-routes-product.php:32
+msgctxt "renting_product_detail"
+msgid "Next"
+msgstr "Pròxim"
 
-#: mybooking-parts/mybooking-reservation-steps.php:49
+#: mybooking-templates/mybooking-plugin-routes-product.php:96
+msgctxt "renting_product_detail"
+msgid "Please choose your dates in the availability calendar"
+msgstr "Seleccioneu les dates al calendari de disponibilitat"
+
+#: mybooking-templates/mybooking-plugin-routes-product.php:28
+msgctxt "renting_product_detail"
+msgid "Previous"
+msgstr "Anterior"
+
+#: mybooking-templates/mybooking-plugin-products.php:33
+msgctxt "renting_products"
+msgid "More information"
+msgstr "Més informació"
+
+#: mybooking-templates/mybooking-plugin-products.php:72
+msgctxt "renting_products"
+msgid "Next"
+msgstr "Pròxim"
+
+#: mybooking-templates/mybooking-plugin-products.php:51
+msgctxt "renting_products"
+msgid "Previous"
+msgstr "Anterior"
+
+#: mybooking-templates/mybooking-plugin-products.php:45
+msgctxt "renting_products_list"
+msgid "Page navigation"
+msgstr "Navegació de pàgines"
+
+#: mybooking-templates/mybooking-reservation-steps.php:35
 msgctxt "renting_reservation_steps"
 msgid "1"
 msgstr "1"
 
-#: mybooking-parts/mybooking-reservation-steps.php:50
-msgctxt "reservation_step"
-msgid "Select product"
-msgstr "Seleccioneu el producte"
-
-#: mybooking-parts/mybooking-reservation-steps.php:50
+#: mybooking-templates/mybooking-reservation-steps.php:36
 msgctxt "renting_reservation_steps"
 msgid "2"
 msgstr "2"
 
-#: mybooking-parts/mybooking-reservation-steps.php:51
-msgctxt "reservation_step"
-msgid "Complete reservation"
-msgstr "Completar reserva"
-
-#: mybooking-parts/mybooking-reservation-steps.php:51
+#: mybooking-templates/mybooking-reservation-steps.php:37
 msgctxt "renting_reservation_steps"
 msgid "3"
 msgstr "3"
 
-#: mybooking-parts/mybooking-reservation-steps.php:52
-msgctxt "reservation_step"
-msgid "Summary"
-msgstr "Resum"
-
-#: mybooking-parts/mybooking-reservation-steps.php:52
+#: mybooking-templates/mybooking-reservation-steps.php:38
 msgctxt "renting_reservation_steps"
 msgid "4"
 msgstr "4"
 
-#. Name of the template
-msgid "MyBooking Home"
-msgstr "MyBooking Home"
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:178
+msgctxt "renting_summary"
+msgid "Customer's details"
+msgstr "Adreça del client"
 
-#. Name of the template
-msgid "MyBooking Empty"
-msgstr "MyBooking Empty"
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:143
+msgctxt "renting_summary"
+msgid "Driver's age supplement"
+msgstr "Suplement d’edat del conductor"
 
-#. Name of the template
-msgid "MyBooking Landing"
-msgstr "MyBooking Landing"
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:187
+msgctxt "renting_summary"
+msgid "E-mail"
+msgstr "Correu electrònic"
 
-#: woocommerce/myaccount/form-login.php:45
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:183
+msgctxt "renting_summary"
+msgid "Full name"
+msgstr "Nom complet"
+
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:149
+msgctxt "renting_summary"
+msgid "Petrol supplement"
+msgstr "Suplement de combustible"
+
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:191
+msgctxt "renting_summary"
+msgid "Phone number"
+msgstr "Número de telèfon"
+
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:121
+msgctxt "renting_summary"
+msgid "Pick-up place supplement"
+msgstr "Suplement de lloc de recollida"
+
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:114
+msgctxt "renting_summary"
+msgid "Pick-up time supplement"
+msgstr "Suplement d'hora de recollida"
+
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:16
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:19
+msgctxt "renting_summary"
+msgid "Reservation Id"
+msgstr "Identificador de reserva"
+
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:135
+msgctxt "renting_summary"
+msgid "Return place supplement"
+msgstr "Suplement de lloc de tornada"
+
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:128
+msgctxt "renting_summary"
+msgid "Return time supplement"
+msgstr "Suplement de l'hora de devolució"
+
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:159
+msgctxt "renting_summary"
+msgid "Total"
+msgstr "Total"
+
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:164
+msgctxt "renting_summary"
+msgid "Total paid"
+msgstr "Total pagat"
+
+#: mybooking-templates/mybooking-plugin-summary-tmpl.php:170
+msgctxt "renting_summary"
+msgid "Total pending"
+msgstr "Total pendent"
+
+#: mybooking-templates/mybooking-reservation-steps.php:37
+msgctxt "reservation_step"
+msgid "Complete reservation"
+msgstr "Completar reserva"
+
+#: mybooking-templates/mybooking-reservation-steps.php:35
+msgctxt "reservation_step"
+msgid "Place and date"
+msgstr "Lloc i data"
+
+#: mybooking-templates/mybooking-reservation-steps.php:36
+msgctxt "reservation_step"
+msgid "Select product"
+msgstr "Seleccioneu el producte"
+
+#: mybooking-templates/mybooking-reservation-steps.php:38
+msgctxt "reservation_step"
+msgid "Summary"
+msgstr "Resum"
+
+#: mybooking-parts/site/mybooking-navigation-toggler.php:18
+msgctxt "toggle_navigation"
+msgid "Toggle navigation"
+msgstr "Commutador de navegació mòbil"
+
+#: mybooking-templates/mybooking-plugin-selector-wizard-container.php:13
+msgctxt "wizard_container"
+msgid "Close"
+msgstr "Tancar"
+
+#: woocommerce/myaccount/form-login.php:112
 msgctxt "woocommerce_mybooking"
-msgid "Login"
-msgstr "Iniciar sessió"
+msgid "A password will be sent to your email address."
+msgstr "S’enviarà una contrasenya a la vostra adreça de correu electrònic."
 
-#: woocommerce/myaccount/form-login.php:52
+#: woocommerce/myaccount/my-address.php:75
 msgctxt "woocommerce_mybooking"
-msgid "Username or email address"
-msgstr "Nom d’usuari o adreça de correu electrònic"
+msgid "Add"
+msgstr "Afegeix"
 
-#: woocommerce/myaccount/form-login.php:56
-#: woocommerce/myaccount/form-login.php:106
+#: woocommerce/myaccount/my-address.php:38
+#: woocommerce/myaccount/my-address.php:47
 msgctxt "woocommerce_mybooking"
-msgid "Password"
-msgstr "Contrasenya"
+msgid "Billing address"
+msgstr "Adreça de facturació"
 
-#: woocommerce/myaccount/form-login.php:64
+#: woocommerce/myaccount/my-address.php:75
 msgctxt "woocommerce_mybooking"
-msgid "Remember me"
-msgstr "Recorda'm"
+msgid "Edit"
+msgstr "Edita"
+
+#: woocommerce/myaccount/form-login.php:99
+msgctxt "woocommerce_mybooking"
+msgid "Email address"
+msgstr "Correu electrònic"
 
 #: woocommerce/myaccount/form-login.php:67
 msgctxt "woocommerce_mybooking"
 msgid "Log in"
 msgstr "Iniciar sessió"
 
+#: woocommerce/myaccount/form-login.php:45
+msgctxt "woocommerce_mybooking"
+msgid "Login"
+msgstr "Iniciar sessió"
+
 #: woocommerce/myaccount/form-login.php:70
 msgctxt "woocommerce_mybooking"
 msgid "Lost your password?"
 msgstr "Has oblidat la teva contrasenya?"
+
+#: woocommerce/myaccount/form-login.php:56
+#: woocommerce/myaccount/form-login.php:106
+msgctxt "woocommerce_mybooking"
+msgid "Password"
+msgstr "Contrasenya"
 
 #: woocommerce/myaccount/form-login.php:83
 #: woocommerce/myaccount/form-login.php:120
@@ -2622,26 +2639,10 @@ msgctxt "woocommerce_mybooking"
 msgid "Register"
 msgstr "Registra't"
 
-#: woocommerce/myaccount/form-login.php:92
+#: woocommerce/myaccount/form-login.php:64
 msgctxt "woocommerce_mybooking"
-msgid "Username"
-msgstr "Nom d'usuari"
-
-#: woocommerce/myaccount/form-login.php:99
-msgctxt "woocommerce_mybooking"
-msgid "Email address"
-msgstr "Correu electrònic"
-
-#: woocommerce/myaccount/form-login.php:112
-msgctxt "woocommerce_mybooking"
-msgid "A password will be sent to your email address."
-msgstr "S’enviarà una contrasenya a la vostra adreça de correu electrònic."
-
-#: woocommerce/myaccount/my-address.php:38
-#: woocommerce/myaccount/my-address.php:47
-msgctxt "woocommerce_mybooking"
-msgid "Billing address"
-msgstr "Adreça de facturació"
+msgid "Remember me"
+msgstr "Recorda'm"
 
 #: woocommerce/myaccount/my-address.php:39
 msgctxt "woocommerce_mybooking"
@@ -2654,15 +2655,15 @@ msgid "The following addresses will be used on the checkout page by default."
 msgstr ""
 "Les adreces següents s’utilitzaran per defecte a la pàgina de pagament."
 
-#: woocommerce/myaccount/my-address.php:75
+#: woocommerce/myaccount/form-login.php:92
 msgctxt "woocommerce_mybooking"
-msgid "Edit"
-msgstr "Edita"
+msgid "Username"
+msgstr "Nom d'usuari"
 
-#: woocommerce/myaccount/my-address.php:75
+#: woocommerce/myaccount/form-login.php:52
 msgctxt "woocommerce_mybooking"
-msgid "Add"
-msgstr "Afegeix"
+msgid "Username or email address"
+msgstr "Nom d’usuari o adreça de correu electrònic"
 
 #: woocommerce/myaccount/my-address.php:79
 msgctxt "woocommerce_mybooking"
@@ -2678,95 +2679,3 @@ msgstr "Heu d’haver iniciat la sessió per fer el pagament."
 msgctxt "woocommerce_mybooking"
 msgid "Your order"
 msgstr "La seva comanda"
-
-#: inc/customizer/carrousel-control.php:42
-msgctxt "customize-image-gallery-control"
-msgid "Remove All"
-msgstr "Esborra-ho tot"
-
-#: inc/customizer/carrousel-control.php:43
-msgctxt "customize-image-gallery-control"
-msgid "Configure Carrousel"
-msgstr "Configure el Carrousel"
-
-#: inc/customizer/class-font-selector.php:51
-msgctxt "customize_font_selector"
-msgid "Default"
-msgstr "Per defecte"
-
-#: inc/customizer/class-font-selector.php:57
-msgctxt "customize_font_selector"
-msgid "Standard Fonts"
-msgstr "Tipus de lletra estàndard"
-
-#: inc/customizer/class-font-selector.php:72
-msgctxt "customize_font_selector"
-msgid "Google Fonts"
-msgstr "Google Fonts"
-
-#: mybooking-parts/home/mybooking-home-news.php:55
-msgctxt "home-news-button"
-msgid "Read"
-msgstr "Llegiu"
-
-#: mybooking-parts/contact/mybooking-contact-info.php:23
-msgctxt "contact"
-msgid "Address"
-msgstr "Adreça"
-
-#: mybooking-parts/contact/mybooking-contact-info.php:33
-msgctxt "contact"
-msgid "Phone number"
-msgstr "Número de telèfon"
-
-#: mybooking-parts/contact/mybooking-contact-info.php:45
-msgctxt "contact"
-msgid "E-mail address"
-msgstr "Correu electrònic"
-
-#. %s: permalink
-#: mybooking-parts/blog/mybooking-content-blog.php:66
-#, php-format
-msgctxt "content_blog"
-msgid ""
-"<a href=\"%s\" rel=\"bookmark\" class=\"block-ellipsis untitled\">"
-"Untitled</a>"
-msgstr ""
-"<a href=\"%s\" rel=\"bookmark\" class=\"block-ellipsis untitled\"> Sense "
-"títol </a>"
-
-#: mybooking-parts/blog/mybooking-content-single.php:35
-msgctxt "content_blog"
-msgid "Untitled"
-msgstr "Sense títol"
-
-#: mybooking-parts/site/mybooking-navigation-toggler.php:18
-msgctxt "toggle_navigation"
-msgid "Toggle navigation"
-msgstr "Commutador de navegació mòbil"
-
-#. Name of the theme
-msgid "Mybooking"
-msgstr "Mybooking"
-
-#. Description of the theme
-msgid ""
-"Mybooking theme is a minimalistic Bootstrap 4 theme. It's perfect as base "
-"theme for renting and activities sites. Mybooking works perfectly with "
-"Elementor. Mybooking is also WooCommerce ready."
-msgstr ""
-"El tema Mybooking és un tema Bootstrap 4 minimalista. És perfecte com a tema "
-"base per a llocs de lloguer i activitats. Mybooking funciona perfectament "
-"amb Elementor. Mybooking també està preparat per a WooCommerce."
-
-#. URI of the theme
-msgid "https://github.com/mybooking-es/mybooking"
-msgstr "https://github.com/mybooking-es/mybooking"
-
-#. Author of the theme
-msgid "mybooking"
-msgstr "mybooking"
-
-#. Author URI of the theme
-msgid "https://mybooking.es"
-msgstr "https://mybooking.es"

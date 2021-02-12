@@ -102,7 +102,7 @@
               <!-- Taxes included -->
               <?php if ( array_key_exists('show_taxes_included', $args) && ( $args['show_taxes_included'] ) ): ?>
                 <span class="card-static_taxes">
-                  <?php echo esc_html_x( 'Taxes included', 'renting_choose_product', 'mybooking-wp-plugin') ?>
+                  <?php echo esc_html_x( 'Taxes included', 'renting_choose_product', 'mybooking') ?>
                 </span>
               <?php endif; ?>
             </div>

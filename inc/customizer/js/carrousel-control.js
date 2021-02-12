@@ -1,7 +1,7 @@
 (function( api, $ ) {
     'use strict';
 
-    api.CarrouselControl = api.Control.extend({
+    var myBookingCarrouselControl = api.Control.extend({
 
         /**
          * Holds a reference to  wp.media to allow select the images
@@ -15,6 +15,8 @@
          * 
          */
         ready: function() {
+
+            console.log('ready-carrousel');
 
             // Use underscore bindAll method to be sure that the following methods
             // will be invoked with a this that correspond to the control
@@ -193,6 +195,6 @@
 
     });
 
-    $.extend( api.controlConstructor, {carrousel: api.CarrouselControl} );
+    api.controlConstructor['mybooking_carrousel'] = myBookingCarrouselControl;
 
 })( wp.customize, jQuery );

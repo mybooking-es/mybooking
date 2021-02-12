@@ -41,6 +41,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Changelog ==
 
 = 1.0.1 =
+* Fixed: Header carrousel customizer was not working
 * Mybooking Reservation Engine templates improvement
   - Sales channel in select form
   - Highlight message and taxes in selector card
