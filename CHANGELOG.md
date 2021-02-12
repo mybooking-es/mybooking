@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.1] 2020-02-12
+- Mybooking Plugin integration improvements:
+  - Cards with highlight message and taxes
+  - Sales Channel in select forms
+
 ## [1.0.0] 2020-11-01
 
 ### Fixed

@@ -4,8 +4,8 @@ Contributors:       hectorasencio, marcelreig, juanmiqueo
 Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
-Tested up to:       5.5.1
-Stable tag:         1.0.0
+Tested up to:       5.6.1
+Stable tag:         1.0.1
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,12 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.0.1 =
+* Mybooking Reservation Engine templates improvement
+  - Sales channel in select form
+  - Highlight message and taxes in selector card
+  - Delivery and Collection concepts
 
 = 1.0.0 =
 * Fixed: Theme review

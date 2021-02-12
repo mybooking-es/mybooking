@@ -29071,7 +29071,7 @@ img.wizard-summary_separator {
 .card-static_product-name {
   color: var(--card-product-name-color);
   font-weight: 800;
-  font-size: 1.4rem; }
+  font-size: 1.1rem; }
 
 .card-static_product-short-description {
   color: var(--gray-500);
