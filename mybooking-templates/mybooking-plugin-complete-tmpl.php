@@ -264,7 +264,7 @@
                   <tr class="bg-gray-100">
                     <th></th>
                     <th scope="col">
-                      <?php echo MyBookingEngineContext::getInstance()->getProduct() ?></th>
+                      <?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() )?></th>
                     <th scope="col" class="text-right">
                       <?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?></th>
                     <th scope="col" class="text-right">
@@ -279,7 +279,7 @@
                       <td class="text-center text-md-left"><img class="img-fluid" style="max-width: 120px"
                           src="<%=shopping_cart.items[idx].photo_medium%>" alt="">
                       </td>
-                      <td data-label="<?php echo MyBookingEngineContext::getInstance()->getProduct() ?>" 
+                      <td data-label="<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>" 
                         class="align-middle">
                         <%=shopping_cart.items[idx].item_description_customer_translation%>
                       </td>
@@ -322,7 +322,7 @@
                 </ul>
                 <% if (shopping_cart.days > 0) { %>
                 <p class="detail-text mt-3"><span><%=shopping_cart.days%>
-                    <?php echo MyBookingEngineContext::getInstance()->getDuration() ?>
+                    <?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?>
                     </span></p>
                 <% } else if (shopping_cart.hours > 0) { %>
                 <p class="detail-text"><span><%=shopping_cart.hours%>
@@ -378,7 +378,7 @@
           <p class="mb-0">
             <% if (shopping_cart.days > 0) { %>
             <%=shopping_cart.days%>
-            <?php echo MyBookingEngineContext::getInstance()->getDuration() ?></p>
+            <?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?></p>
           <% } else if (shopping_cart.hours > 0) { %>
             <%=shopping_cart.hours%>
             <?php echo esc_html_x('hour(s)', 'renting_complete', 'mybooking') ?></p>

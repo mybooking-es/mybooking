@@ -80,7 +80,7 @@
     <% if (shopping_cart.days > 0) { %>
     <p class="color-gray-600">
       <span><%=shopping_cart.days%>
-        <?php echo MyBookingEngineContext::getInstance()->getDuration() ?></span></p>
+        <?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?></span></p>
     <% } else if (shopping_cart.hours > 0) { %>
     <p class="color-gray-600">
       <span><%=shopping_cart.hours%>
@@ -88,7 +88,7 @@
     <% } %>
 
     <!-- Product -->
-    <h5><?php echo MyBookingEngineContext::getInstance()->getProduct() ?></h5>
+    <h5><?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?></h5>
     <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
 
     <!-- Extras -->
