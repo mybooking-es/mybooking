@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.2] 2020-02-20
+
+### Added
+- Mybooking plugin integration improvements:
+  - Contact Form new fields
+
 ## [1.0.1] 2020-02-12
 
 ### Fixed
