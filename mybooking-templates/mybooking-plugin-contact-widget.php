@@ -67,8 +67,8 @@
                </div>
           </div>
 
-          <?php if ( array_key_exists('google_captcha_api_key', $args) && !empty( $args['google_captcha_api_key'] ) : ?>
-          <div class="g-recaptcha mt-1 mb-3" data-sitekey="<?php echo esc_attr( $args['google_captcha_api_key'] )?>"></div>
+          <?php if ( array_key_exists('google_captcha_api_key', $args) && !empty( $args['google_captcha_api_key'] ) ): ?>
+            <div class="g-recaptcha mt-1 mb-3" data-sitekey="<?php echo esc_attr( $args['google_captcha_api_key'] )?>"></div>
           <?php endif; ?>
 
           <div class="field is-grouped">
