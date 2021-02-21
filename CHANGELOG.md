@@ -6,6 +6,10 @@
 - Mybooking plugin integration improvements:
   - Contact Form new fields
 
+### Fixed
+- Selector form
+  - Datepicker month navigation clickable area
+
 ## [1.0.1] 2020-02-12
 
 ### Fixed

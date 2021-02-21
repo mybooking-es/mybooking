@@ -58,18 +58,32 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   box-shadow: none !important; /* Avoid shadow on cells */
 }
 
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    position: absolute;
+    top: 2px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    display: block;
+    z-index: 10000; /* To allow clickabale area */
+}
+
+.ui-datepicker-prev.ui-state-hover,
+.ui-datepicker-next.ui-state-hover {
+  border: 1px solid #dddddd;
+  background: #eeeeee;
+}
+
 .ui-datepicker-prev:before {
   content: "\f053";
   font-family: "Font Awesome 5 Free";
   font-size: 20px;
-  /*left: -6px !important;*/
 }
 
 .ui-datepicker-next:before {
   content: "\f054";
   font-family: "Font Awesome 5 Free";
   font-size: 20px;
-  /*right: -6px !important;*/
 }
 
 .ui-icon {

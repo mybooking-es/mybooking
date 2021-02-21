@@ -43,6 +43,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 = 1.0.2 =
 * MyBooking reservation engine templates improvement
   - Contact form: New fields
+  - Renting selector: Datepicker next/prev month clickable area
 
 = 1.0.1 =
 * Fixed: Header carrousel customizer was not working
