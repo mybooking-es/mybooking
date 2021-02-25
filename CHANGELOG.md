@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.3] 2020-02-25
+
+### Fixed
+- MyBooking reservation engine templates
+  - Fixed renting my reservation complete maxlengths
+
 ## [1.0.2] 2020-02-20
 
 ### Added
