@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2021-02-12 07:38+0000\n"
+"PO-Revision-Date: 2021-02-25 07:06+0000\n"
 "Last-Translator: \n"
 "Language-Team: Spanish (Spain)\n"
 "Language: es_ES\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.4.3; wp-5.5.1"
+"X-Loco-Version: 2.5.0; wp-5.6.2"
 
 #: 404.php:27
 msgctxt "404_page"
@@ -117,7 +117,7 @@ msgstr "Cancelar reserva"
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:140
 msgctxt "activity_my_reservation"
 msgid "City"
-msgstr "Cuidad"
+msgstr "Ciudad"
 
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:129
 #: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:131
@@ -2008,7 +2008,7 @@ msgstr "Dirección"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:315
 msgctxt "renting_my_reservation"
 msgid "City"
-msgstr "Cuidad"
+msgstr "Ciudad"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:33
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:91

@@ -322,7 +322,7 @@
         <div class="form-group col-md-6">
           <label for="state"><?php echo esc_html_x( 'Postal Code', 'renting_my_reservation', 'mybooking') ?></label>
           <input class="form-control" id="zip" name="customer_address[zip]" type="text"
-            placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x( 'State', 'renting_my_reservation', 'mybooking') ?>")%>" value="<%=booking.zip%>"  maxlength="10">
+            placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x( 'Postal Code', 'renting_my_reservation', 'mybooking') ?>")%>" value="<%=booking.address_zip%>"  maxlength="10">
         </div>
         <div class="form-group col-md-6">
           <label class="full-width"

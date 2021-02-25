@@ -5,6 +5,8 @@
 ### Fixed
 - MyBooking reservation engine templates
   - Fixed renting my reservation complete maxlengths
+  - ZIP code field
+- City Spanish translation fixed
 
 ## [1.0.2] 2020-02-20
 

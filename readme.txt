@@ -43,6 +43,8 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 = 1.0.3 =
 * MyBooking reservation engine templates
   - Fixed renting my reservation complete maxlengths
+  - ZIP code field
+* Fixed City Spanish translation
 
 = 1.0.2 =
 * MyBooking reservation engine templates improvement
