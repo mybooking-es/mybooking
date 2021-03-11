@@ -420,6 +420,7 @@
                 <li class="list-group-item">
                   <span
                     class="deposit-name">
+                    <?php /* translators: %s: Product Type (Vehicle, Product, ...) */ ?>
                     <?php echo wp_kses_post( sprintf( _x( "%s deposit", 'renting_complete', 'mybooking' ), MyBookingEngineContext::getInstance()->getProduct() ) ) ?>
                   </span>
                   <span

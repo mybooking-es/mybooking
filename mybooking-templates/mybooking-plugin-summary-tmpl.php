@@ -188,8 +188,9 @@
       <% } %>
       <% if (booking.product_deposit_cost > 0) { %>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span
-            class="extra-name"><?php echo wp_kses_post( sprintf( _x( "%s deposit", 'renting_summary', 'mybooking' ), MyBookingEngineContext::getInstance()->getProduct() ) ) ?>
+          <span class="extra-name">
+             <?php /* translators: %s: Product Type (Vehicle, Product, ...) */ ?>
+             <?php echo wp_kses_post( sprintf( _x( "%s deposit", 'renting_summary', 'mybooking' ), MyBookingEngineContext::getInstance()->getProduct() ) ) ?>
           </span>
           <span
             class="product-amount pull-right"><%=configuration.formatCurrency(booking.product_deposit_cost)%></span>
