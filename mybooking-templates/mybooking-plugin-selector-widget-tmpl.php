@@ -94,7 +94,7 @@
             </label>
           </div>
           <!-- Custom delivery place -->
-          <div id="another_pickup_place_group" style="display: none;">
+          <div id="widget_another_pickup_place_group" style="display: none;">
             <div class="flex-form-item justify-content-between position-relative">
               <input class="w-100" type="text" id="widget_pickup_place_other" name="pickup_place_other" />
               <input type="hidden" name="custom_pickup_place" value="false" />
@@ -113,7 +113,7 @@
             </label>
           </div>
           <!-- Custom delivery place -->
-          <div id="another_return_place_group" style="display: none;">
+          <div id="widget_another_return_place_group" style="display: none;">
             <div class="flex-form-item justify-content-between position-relative">
               <input class="w-100" type="text" id="widget_return_place_other" name="return_place_other" />
               <input type="hidden" name="custom_return_place" value="false" />

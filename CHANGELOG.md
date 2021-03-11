@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.4] 2020-03-11
+
+### Added
+- MyBooking reservation engine templates
+  - Added deposit fields to complete, summary and my reservation templates
+
+### Fixed
+- MyBooking reservation engine templates
+  - Fixed product calendar colors
+  - Fixed selector widget another places 
+
 ## [1.0.3] 2020-02-25
 
 ### Fixed

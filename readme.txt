@@ -4,8 +4,8 @@ Contributors:       hectorasencio, marcelreig, juanmiqueo
 Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
-Tested up to:       5.6.1
-Stable tag:         1.0.3
+Tested up to:       5.7
+Stable tag:         1.0.4
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,12 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.0.4 =
+* MyBooking reservation engine templates
+  - Added deposit fields to complete, summary and my reservation templates
+  - Fixed product calendar colors
+  - Fixed selector widget another places 
 
 = 1.0.3 =
 * MyBooking reservation engine templates
@@ -185,6 +191,18 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+* MyBooking Reservation Engine templates - Added renting deposit information
+
+= 1.0.3 =
+* Fixed: MyBooking Reservation Engine templates - maxlengths and zip code
+
+= 1.0.2 =
+* Fixed: MyBooking Reservation Engine Templates - Contact Form new fields + Renting Selector clickable area
+
+= 1.0.1 =
+* Fixed: Header carrousel customizer was not working and MyBooking Reservation Engine templates improvement
 
 = 1.0.0 =
 * Fixed: Theme review

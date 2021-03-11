@@ -153,7 +153,7 @@
     <% } %>
   </ul>
   <% } %>
- 
+  
   <ul class="list-group mb-3">
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <span class="extra-name"><b><?php echo esc_html_x( 'Total', 'renting_summary', 'mybooking' ) ?></b></span>
@@ -169,9 +169,50 @@
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <span class="extra-name"><b><?php echo esc_html_x( 'Total pending', 'renting_summary', 'mybooking' ) ?></b></span>
         <span class="product-amount pull-right <% if (booking.total_pending > 0){ %>text-danger<%}%>"><b><%=configuration.formatCurrency(booking.total_pending)%></b></span>
-        </li>
-      </ul>
+      </li>
     <% } %>
+  </ul>
+
+  <% if ( booking.product_guarantee_cost > 0 || booking.product_deposit_cost > 0 || 
+         (typeof booking.driver_age_deposit !== 'undefined' && booking.driver_age_deposit > 0) || 
+         booking.total_deposit > 0) { %>
+   <ul class="list-group mb-3"> 
+      <!-- Deposit -->
+      <% if (booking.product_guarantee_cost > 0) { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span
+            class="extra-name"><?php echo esc_html_x( "Guarantee", 'renting_summary', 'mybooking' ) ?></span>
+          <span
+            class="product-amount pull-right"><%=configuration.formatCurrency(booking.product_guarantee_cost)%></span>
+        </li>            
+      <% } %>
+      <% if (booking.product_deposit_cost > 0) { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span
+            class="extra-name"><?php echo wp_kses_post( sprintf( _x( "%s deposit", 'renting_summary', 'mybooking' ), MyBookingEngineContext::getInstance()->getProduct() ) ) ?>
+          </span>
+          <span
+            class="product-amount pull-right"><%=configuration.formatCurrency(booking.product_deposit_cost)%></span>
+        </li>             
+      <% } %>
+      <% if (typeof booking.driver_age_deposit !== 'undefined' && booking.driver_age_deposit > 0) { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span
+            class="extra-name"><?php echo esc_html_x( "Driver age deposit", 'renting_summary', 'mybooking' ) ?></span>
+          <span
+            class="product-amount pull-right"><%=configuration.formatCurrency(booking.driver_age_deposit)%></span>
+        </li>               
+      <% } %>
+      <% if (booking.total_deposit > 0) { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span
+            class="extra-name"><?php echo esc_html_x( "Total deposit", 'renting_summary', 'mybooking' ) ?></span>
+          <span
+            class="product-amount pull-right"><%=configuration.formatCurrency(booking.total_deposit)%></span>
+        </li>                
+      <% } %>
+    </ul>  
+  <% } %>
 
   </div>
   <div class="process-section-box">

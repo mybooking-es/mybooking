@@ -30227,6 +30227,28 @@ a.magic-button.btn {
   .product-view_text p {
     margin-bottom: 0; }
 
+.deposit-view {
+  padding: 1rem 0;
+  background-color: var(--gray-50);
+  border-bottom: 1px solid #dee2e6; }
+
+.deposit-view_list li {
+  background-color: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .deposit-view_list li .deposit-name {
+    width: 60%; }
+  .deposit-view_list li .deposit-price {
+    color: var(--gray-600); }
+
 .product-summary-wrapper {
   padding: 1rem;
   border-bottom: 1px solid #dee2e6; }
@@ -30293,6 +30315,16 @@ ul.summary-modal_prices {
 .date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected, .date-picker-wrapper .date-selected {
   background-color: #4499ee !important;
   color: white !important; }
+
+.date-picker-wrapper .month-wrapper table .day.real-today {
+  background-color: #ffe684; }
+
+.date-picker-wrapper .month-wrapper table .day.real-today {
+  background-color: #aeecbc; }
+
+.date-picker-wrapper .month-wrapper table .day.not-selectable-day.real-today,
+.date-picker-wrapper .month-wrapper table .day.invalid.real-today {
+  background-color: #eeeeee; }
 
 /**
 *   PROMOTION POPUP

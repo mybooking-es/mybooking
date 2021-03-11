@@ -360,7 +360,6 @@
             <% if (configuration.timeToFrom) { %>
             <%=shopping_cart.time_from%>
             <% } %>
-            <!-- <%=shopping_cart.pickup_place_customer_translation%> -->
           </div>
           <div class="product-summary">
             <div class="product-summary_separator">
@@ -370,10 +369,9 @@
             <% if (configuration.timeToFrom) { %>
             <%=shopping_cart.time_to%>
             <% } %>
-            <!-- <%=shopping_cart.return_place_customer_translation%> -->
           </div>
         </div>
-        <!-- Duración del alquiler -->
+        <!-- Duration -->
         <div class="rent-duration p-3">
           <p class="mb-0">
             <% if (shopping_cart.days > 0) { %>
@@ -403,13 +401,58 @@
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%></span>
             </div>
           <% } %>
+
+          <!-- Deposit -->
+          <% if ( shopping_cart.product_guarantee_cost > 0 || shopping_cart.product_deposit_cost > 0 || 
+                 (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0) || 
+                 shopping_cart.total_deposit > 0) { %>
+            <div class="deposit-view">     
+              <ul class="list-group deposit-view_list">
+              <% if (shopping_cart.product_guarantee_cost > 0) { %>
+                <li class="list-group-item">
+                  <span
+                    class="deposit-name"><?php echo esc_html_x( "Guarantee", 'renting_complete', 'mybooking' ) ?></span>
+                  <span
+                    class="deposit-price"><%=configuration.formatCurrency(shopping_cart.product_guarantee_cost)%></span>
+                </li>            
+              <% } %>
+              <% if (shopping_cart.product_deposit_cost > 0) { %>
+                <li class="list-group-item">
+                  <span
+                    class="deposit-name">
+                    <?php echo wp_kses_post( sprintf( _x( "%s deposit", 'renting_complete', 'mybooking' ), MyBookingEngineContext::getInstance()->getProduct() ) ) ?>
+                  </span>
+                  <span
+                    class="deposit-price"><%=configuration.formatCurrency(shopping_cart.product_deposit_cost)%></span>
+                </li>             
+              <% } %>
+              <% if (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0) { %>
+                <li class="list-group-item">
+                  <span
+                    class="deposit-name"><?php echo esc_html_x( "Driver age deposit", 'renting_complete', 'mybooking' ) ?></span>
+                  <span
+                    class="deposit-price"><%=configuration.formatCurrency(shopping_cart.driver_age_deposit)%></span>
+                </li>               
+              <% } %>
+              <% if (shopping_cart.total_deposit > 0) { %>
+                <li class="list-group-item">
+                  <span
+                    class="deposit-name"><?php echo esc_html_x( "Total deposit", 'renting_complete', 'mybooking' ) ?></span>
+                  <span
+                    class="deposit-price"><%=configuration.formatCurrency(shopping_cart.total_deposit)%></span>
+                </li>                
+              <% } %>
+              </ul>
+            </div>
+          <% } %>  
+
           <ul class="list-group  summary-modal_list">
             <!-- Products -->
             <% for (var idx=0;idx<shopping_cart.items.length;idx++) { %>
               <!-- Offer/Promotion Code Appliance -->
               <% if (shopping_cart.items[idx].item_unit_cost_base != shopping_cart.items[idx].item_unit_cost) { %>
                 <li class="list-group-item">
-                  <span class="extra-name">&nbsp;</span>
+                  <span class="extra-name"><%=shopping_cart.items[idx].item_description_customer_translation%></span>
                   <span class="extra-price">
                     <!-- Offer -->
                     <% if (typeof shopping_cart.items[idx].offer_name !== 'undefined' &&
