@@ -28553,7 +28553,8 @@ table.table-activities th {
 
 .form_selector-select_label_wrap {
   width: 100%;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  position: relative; }
 
 .form_selector-select_dropdown {
   -webkit-appearance: none;
