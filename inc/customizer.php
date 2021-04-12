@@ -192,19 +192,19 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 			    	$topbar_color = get_theme_mod( 'mybooking_topbar_color', '#FFFFFF' );
 			    	$topbar_link_color = get_theme_mod( 'mybooking_topbar_link_color', '#FAFAFA' );
 			    	$topbar_link_hover_color = get_theme_mod( 'mybooking_topbar_link_hover_color', '#FAFAFA' );
-						$topbar_message_bg = get_theme_mod( 'mybooking_topbar_message_bg', '#FFB74D' );
-						$topbar_message_text = get_theme_mod( 'mybooking_topbar_message_text', '#212121' );
-						$topbar_message_link = get_theme_mod( 'mybooking_topbar_message_link', '#FAFAFA' );
-						$topbar_message_hover = get_theme_mod( 'mybooking_topbar_message_link_hover', '#FAFAFA' );
+					$topbar_message_bg = get_theme_mod( 'mybooking_topbar_message_bg', '#FFB74D' );
+					$topbar_message_text = get_theme_mod( 'mybooking_topbar_message_text', '#212121' );
+					$topbar_message_link = get_theme_mod( 'mybooking_topbar_message_link', '#FAFAFA' );
+					$topbar_message_hover = get_theme_mod( 'mybooking_topbar_message_link_hover', '#FAFAFA' );
 
-						$header_widget_title_color = get_theme_mod( 'mybooking_header_widget_title_color', '#FFFFFF' );
-						$header_widget_text_color = get_theme_mod( 'mybooking_header_widget_text_color', '#FFFFFF' );
-						$header_widget_link_color = get_theme_mod( 'mybooking_header_widget_link_color', '#FFFFFF' );
+					$header_widget_title_color = get_theme_mod( 'mybooking_header_widget_title_color', '#FFFFFF' );
+					$header_widget_text_color = get_theme_mod( 'mybooking_header_widget_text_color', '#FFFFFF' );
+					$header_widget_link_color = get_theme_mod( 'mybooking_header_widget_link_color', '#FFFFFF' );
 
-						$home_selector_background = get_theme_mod( 'mybooking_home_selector_background', 'rgba(255,255,255,0.5)' );
-						$home_selector_labels = get_theme_mod( 'mybooking_home_selector_labels', '#212121' );
-						$sticky_selector_background = get_theme_mod( 'mybooking_sticky_selector_background', '#2193F2' );
-						$sticky_selector_labels = get_theme_mod( 'mybooking_sticky_selector_labels', '#212121' );
+					$home_selector_background = get_theme_mod( 'mybooking_home_selector_background', 'rgba(255,255,255,0.5)' );
+					$home_selector_labels = get_theme_mod( 'mybooking_home_selector_labels', '#212121' );
+					$sticky_selector_background = get_theme_mod( 'mybooking_sticky_selector_background', '#2193F2' );
+					$sticky_selector_labels = get_theme_mod( 'mybooking_sticky_selector_labels', '#212121' );
 
 					}
 
@@ -403,6 +403,14 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 					{
 			  		case '0':
 					  	$header_image_bg = get_theme_mod( 'mybooking_home_header_image_bg', "" );
+					  	if ( !empty( $header_image_bg ) ) {
+					  	  $image_id = attachment_url_to_postid( $header_image_bg );
+					  	  if ( !empty( $image_id ) ) {
+					  	    $header_image_bg = wp_get_attachment_image( $image_id,
+					  	                                                'full', 
+					  	                                                false, ['src', 'class'=>"home-header_background home-header_background-img", 'alt']); 
+					  	  }
+					    }
 							$this->theme_options['mybooking_home_header_image_bg'] = $header_image_bg;
 			  			break;
 
@@ -422,10 +430,13 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 							{
 		  		  		foreach ( $header_carrousel_bg as $carrousel_img )
 								{
-		  		  			$img_src = wp_get_attachment_image_src( $carrousel_img, 'full' );
-		  		  			if ( is_array($img_src) )
+		  		  			$img_carrousel = wp_get_attachment_image( $carrousel_img, 
+		  		  				                                        'full',
+		  		  				                                        false,
+		  		  				                                        ['src', 'alt'] );
+		  		  			if ( !empty( $img_carrousel ) )
 									{
-		  		  				$header_carrousel_images[] = $img_src[0];
+		  		  				$header_carrousel_images[] = $img_carrousel;
 		  		  			}
 		  		  		}
 			  		  }

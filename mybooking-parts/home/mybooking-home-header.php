@@ -32,7 +32,7 @@ defined( 'ABSPATH' ) || exit;
         <!-- Image background -->
         <?php $mybooking_image_header = MyBookingCustomizer::getInstance()->get_theme_option( 'mybooking_home_header_image_bg' ); ?>
         <?php if ( !empty($mybooking_image_header) ) { ?>
-          <img class="home-header_background home-header_background-img" src="<?php echo esc_url( $mybooking_image_header ) ?>">
+          <?php echo wp_kses_post( $mybooking_image_header ) ?> 
         <?php } else { ?>
           <div class="home-header_background home-header_background-img"></div>
         <?php } ?>
@@ -59,7 +59,7 @@ defined( 'ABSPATH' ) || exit;
           <?php $mybooking_first = true; ?>
           <?php foreach( $mybooking_carousel_items as $mybooking_carousel_item ) :  ?>
             <div class="carrusel-item">
-              <img src="<?php echo esc_url ( $mybooking_carousel_item ) ?>">
+              <?php echo wp_kses_post( $mybooking_carousel_item ) ?> 
             </div>
             <?php $mybooking_first = false; ?>
           <?php endforeach; ?>

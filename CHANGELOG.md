@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.5] 2020-04-12
+
+### Fixed
+
+- Fixed : Header bg image & carrousel render process with wp_get_attachment_image
+
 ## [1.0.4] 2020-03-11
 
 ### Added
