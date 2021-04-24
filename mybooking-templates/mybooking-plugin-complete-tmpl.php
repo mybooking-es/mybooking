@@ -405,7 +405,7 @@
           <!-- Deposit -->
           <% if ( shopping_cart.product_guarantee_cost > 0 || shopping_cart.product_deposit_cost > 0 || 
                  (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0) || 
-                 shopping_cart.total_deposit > 0) { %>
+                 shopping_cart.total_deposit > 0 && shopping_cart.number_of_deposits > 1) { %>
             <div class="deposit-view">     
               <ul class="list-group deposit-view_list">
               <% if (shopping_cart.product_guarantee_cost > 0) { %>
@@ -416,7 +416,7 @@
                     class="deposit-price"><%=configuration.formatCurrency(shopping_cart.product_guarantee_cost)%></span>
                 </li>            
               <% } %>
-              <% if (shopping_cart.product_deposit_cost > 0) { %>
+              <% if (shopping_cart.product_deposit_cost > 0 && shopping_cart.number_of_deposits > 1) { %>
                 <li class="list-group-item">
                   <span
                     class="deposit-name">
@@ -427,7 +427,7 @@
                     class="deposit-price"><%=configuration.formatCurrency(shopping_cart.product_deposit_cost)%></span>
                 </li>             
               <% } %>
-              <% if (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0) { %>
+              <% if (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0 && shopping_cart.number_of_deposits > 1) { %>
                 <li class="list-group-item">
                   <span
                     class="deposit-name"><?php echo esc_html_x( "Driver age deposit", 'renting_complete', 'mybooking' ) ?></span>
