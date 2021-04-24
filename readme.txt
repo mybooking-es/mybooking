@@ -5,7 +5,7 @@ Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
 Tested up to:       5.7
-Stable tag:         1.0.4
+Stable tag:         1.0.5
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,13 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.0.5 =
+* SEO optimization header images rendering
+* Mybooking reservation engine templates
+  - Deposit: Avoid two deposit lines (with total) when only deposit
+  - Check when a booking can be edit
+  - Complete : Adding more information to payment gateway connection  
 
 = 1.0.4 =
 * MyBooking reservation engine templates
@@ -191,6 +198,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+* SEO header image rendering optimization + MyBooking Reservation Engine templates deposit and payment literals
 
 = 1.0.4 =
 * MyBooking Reservation Engine templates - Added renting deposit information
