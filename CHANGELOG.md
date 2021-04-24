@@ -11,6 +11,7 @@
 - Improvements to MyBooking Reservation Engine templates:
   - Deposit: Avoid two deposit lines (with total) when only deposit
   - Check when a booking can be edit
+  - Complete : Adding more information to payment gateway connection
 
 ## [1.0.4] 2020-03-11
 
