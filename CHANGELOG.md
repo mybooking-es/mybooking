@@ -4,7 +4,13 @@
 
 ### Fixed
 
-- Fixed : Header bg image & carrousel render process with wp_get_attachment_image
+- Fixed : Header bg image & carrousel render process with wp_get_attachment_image to improve SEO
+
+### Added
+
+- Improvements to MyBooking Reservation Engine templates:
+  - Deposit: Avoid two deposit lines (with total) when only deposit
+  - Check when a booking can be edit
 
 ## [1.0.4] 2020-03-11
 
