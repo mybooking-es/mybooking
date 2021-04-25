@@ -7,6 +7,10 @@
 - Fixed: MyBooking Reservation Engine complete, summary, my reservation deposit
 - Fixed: Activities Spanish Translations: Terms and conditions link text
 
+### Added
+
+- Renting: Not available message
+
 ## [1.0.5] 2020-04-24
 
 ### Fixed
