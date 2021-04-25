@@ -40,6 +40,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 
 == Changelog ==
 
+= 1.0.6 =
+* Fixed: MyBooking Reservation Engine complete, summary, my reservation deposit
+
 = 1.0.5 =
 * SEO optimization header images rendering
 * Mybooking reservation engine templates
@@ -198,6 +201,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.6 =
+* Fixed: MyBooking Reservation Engine deposit literals
 
 = 1.0.5 =
 * SEO header image rendering optimization + MyBooking Reservation Engine templates deposit and payment literals

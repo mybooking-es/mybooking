@@ -260,7 +260,7 @@
                  booking.total_deposit > 0) { %>
            <ul class="list-group border-0 list-group-flush mt-3"> 
               <!-- Deposit -->
-              <% if (booking.product_guarantee_cost > 0 && booking.number_of_deposits > 1) { %>
+              <% if (booking.product_guarantee_cost > 0) { %>
                 <li class="border-0 list-group-item d-flex justify-content-between align-items-center">
                   <span
                     class="extra-name"><?php echo esc_html_x( "Guarantee", 'renting_my_reservation', 'mybooking' ) ?></span>
@@ -268,7 +268,7 @@
                     class="product-amount pull-right"><%=configuration.formatCurrency(booking.product_guarantee_cost)%></span>
                 </li>            
               <% } %>
-              <% if (booking.product_deposit_cost > 0 && booking.number_of_deposits > 1) { %>
+              <% if (booking.product_deposit_cost > 0) { %>
                 <li class="border-0 list-group-item d-flex justify-content-between align-items-center">
                   <span class="extra-name">
                     <?php /* translators: %s: Product Type (Vehicle, Product, ...) */ ?>
@@ -278,7 +278,7 @@
                     class="product-amount pull-right"><%=configuration.formatCurrency(booking.product_deposit_cost)%></span>
                 </li>             
               <% } %>
-              <% if (typeof booking.driver_age_deposit !== 'undefined' && booking.driver_age_deposit > 0 && booking.number_of_deposits > 1) { %>
+              <% if (typeof booking.driver_age_deposit !== 'undefined' && booking.driver_age_deposit > 0) { %>
                 <li class="border-0 list-group-item d-flex justify-content-between align-items-center">
                   <span
                     class="extra-name"><?php echo esc_html_x( "Driver age deposit", 'renting_my_reservation', 'mybooking' ) ?></span>
@@ -286,7 +286,7 @@
                     class="product-amount pull-right"><%=configuration.formatCurrency(booking.driver_age_deposit)%></span>
                 </li>               
               <% } %>
-              <% if (booking.total_deposit > 0) { %>
+              <% if (booking.total_deposit > 0 && booking.number_of_deposits > 1) { %>
                 <li class="border-0 list-group-item d-flex justify-content-between align-items-center">
                   <span
                     class="extra-name"><?php echo esc_html_x( "Total deposit", 'renting_my_reservation', 'mybooking' ) ?></span>

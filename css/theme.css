@@ -29045,7 +29045,9 @@ img.wizard-summary_separator {
   font-size: 14px; }
 
 .card-static_header-catalog {
-  width: 100%; }
+  width: 100%;
+  background-color: transparent;
+  border: none; }
   .card-static_header-catalog h2.card-static_product-name {
     max-width: 300px; }
 

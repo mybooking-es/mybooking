@@ -192,7 +192,7 @@
             <!-- Not available -->
             <% } else { %>
                   <span class="card-static_not-available">
-                  <?php echo esc_html_x( 'Model not available in the office and selected dates', 'renting_choose_product', 'mybooking') ?>
+                  <?php echo esc_html( MyBookingEngineContext::getInstance()->getNotAvailableMessage() ) ?>  
                   </span>
             <% } %>
 
