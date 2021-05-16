@@ -5,7 +5,7 @@ Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
 Tested up to:       5.7
-Stable tag:         1.0.6
+Stable tag:         1.0.7
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,12 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.0.7 =
+* Added: MyBooking Reservation Engine: Renting Sign-in / Sign-up on complete template
+* Fixed: MyBooking Reservation Engine: calendar CSS show selected date
+* Fixed: MyBooking Reservation Engine: added characteristic length image
+* Fixed: MyBooking Reservation Engine: product/activities templates navigation multi language
 
 = 1.0.6 =
 * Fixed: MyBooking Reservation Engine complete, summary, my reservation deposit
@@ -203,6 +209,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.7 =
+* Added: Mybooking Reservation Engine Renting sign-in/sign-up con complete step + Fixed activities/products navigation
 
 = 1.0.6 =
 * Fixed: MyBooking Reservation Engine deposit literals + Not available message + Fixed activities shopping cart conditions link message
