@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.7] 2020-05-16
+
+### Added
+
+- Renting:
+  - Sign-in / Sign-up on complete template
+
+### Fixed
+
+- CSS Jquery calendar: Show selected date
+- Product/Activities templates multi language navigation
+- Characteristic length image
+
 ## [1.0.6] 2020-04-25
 
 ### Fixed

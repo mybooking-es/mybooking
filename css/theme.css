@@ -26146,11 +26146,11 @@ iframe {
   margin-bottom: 5px !important; }
 
 /** Selected date as none **/
-.ui-state-active, ui-state-highlight {
+.date-picker-wrapper .ui-state-active, ui-state-highlight {
   background: transparent !important;
   color: gray !important; }
 
-a.ui-state-default.ui-state-highlight.ui-state-active {
+.date-picker-wrapper a.ui-state-default.ui-state-highlight.ui-state-active {
   background: transparent !important; }
 
 /* Title */

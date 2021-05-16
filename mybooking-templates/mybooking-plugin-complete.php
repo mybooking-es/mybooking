@@ -32,58 +32,59 @@
       <div class="col">
         <!-- Reservation : Extras -->
         <div id="extras_listing" class="extras"></div>
-
-        <div class="process-section-box">
-          <!-- Reservation complete -->
-          <form id="form-reservation" name="reservation_form" class="">
-            <h4 class="brand-primary my-3">
-            <?php echo esc_html_x( "Customer's details", 'renting_complete', 'mybooking') ?></h4>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="name"><?php echo esc_html_x( 'Name', 'renting_complete', 'mybooking') ?> *</label>
-                <input class="form-control" id="customer_name" name="customer_name" type="text"
-                  placeholder="<?php echo esc_attr_x( 'Name', 'renting_complete', 'mybooking') ?>*" maxlength="40">
+        <!-- Reservation complete -->
+        <div class="reservation_form_container">
+          <div class="process-section-box">
+            <form id="form-reservation" name="reservation_form" class="">
+              <h4 class="brand-primary my-3 customer_component">
+              <?php echo esc_html_x( "Customer's details", 'renting_complete', 'mybooking') ?></h4>
+              <div class="form-row customer_component">
+                <div class="form-group col-md-6">
+                  <label for="name"><?php echo esc_html_x( 'Name', 'renting_complete', 'mybooking') ?> *</label>
+                  <input class="form-control" id="customer_name" name="customer_name" type="text"
+                    placeholder="<?php echo esc_attr_x( 'Name', 'renting_complete', 'mybooking') ?>*" maxlength="40">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="surname"><?php echo esc_html_x( 'Surname', 'renting_complete', 'mybooking') ?> *</label>
+                  <input class="form-control" id="customer_surname" name="customer_surname" type="text"
+                    placeholder="<?php echo esc_attr_x( 'Surname', 'renting_complete', 'mybooking') ?>" maxlength="40">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="email"><?php echo esc_html_x( 'E-mail', 'renting_complete', 'mybooking') ?> *</label>
+                  <input class="form-control" id="customer_email" name="customer_email" type="text"
+                    placeholder="<?php echo esc_attr_x( 'E-mail', 'renting_complete', 'mybooking') ?>" maxlength="50">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="confirm_customer_email"><?php echo esc_html_x( 'Confirm E-mail', 'renting_complete', 'mybooking') ?> *</label>
+                  <input class="form-control" id="confirm_customer_email" name="confirm_customer_email" type="text"
+                    placeholder="<?php echo esc_attr_x( 'Confirm E-mail', 'renting_complete', 'mybooking') ?>" maxlength="50">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="customer_phone"><?php echo esc_html_x( 'Phone number', 'renting_complete', 'mybooking') ?>
+                    *</label>
+                  <input class="form-control" id="customer_phone" name="customer_phone" type="text"
+                    placeholder="<?php echo esc_attr_x( 'Phone number', 'renting_complete', 'mybooking') ?>" maxlength="15">
+                </div>
+                <div class="form-group col-md-6">
+                  <label
+                    for="customer_mobile_phone"><?php echo esc_html_x( 'Alternative phone number', 'renting_complete', 'mybooking') ?></label>
+                  <input class="form-control" id="customer_mobile_phone" name="customer_mobile_phone" type="text"
+                    placeholder="<?php echo esc_attr_x( 'Alternative phone number', 'renting_complete', 'mybooking') ?>" maxlength="15">
+                </div>
               </div>
-              <div class="form-group col-md-6">
-                <label for="surname"><?php echo esc_html_x( 'Surname', 'renting_complete', 'mybooking') ?> *</label>
-                <input class="form-control" id="customer_surname" name="customer_surname" type="text"
-                  placeholder="<?php echo esc_attr_x( 'Surname', 'renting_complete', 'mybooking') ?>" maxlength="40">
+              <h4 class="brand-primary my-3"><?php echo esc_html_x( "Additional information", 'renting_complete', 'mybooking') ?></h4>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="comments"><?php echo esc_html_x( 'Comments', 'renting_complete', 'mybooking') ?></label>
+                  <textarea name="comments" id="comments" placeholder="<?php echo esc_attr_x( 'Comments', 'renting_complete', 'mybooking') ?>"
+                    style="width: 100%; height: 100px; padding: 0.8rem;"></textarea>
+                </div>
               </div>
-              <div class="form-group col-md-6">
-                <label for="email"><?php echo esc_html_x( 'E-mail', 'renting_complete', 'mybooking') ?> *</label>
-                <input class="form-control" id="customer_email" name="customer_email" type="text"
-                  placeholder="<?php echo esc_attr_x( 'E-mail', 'renting_complete', 'mybooking') ?>" maxlength="50">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="confirm_customer_email"><?php echo esc_html_x( 'Confirm E-mail', 'renting_complete', 'mybooking') ?> *</label>
-                <input class="form-control" id="confirm_customer_email" name="confirm_customer_email" type="text"
-                  placeholder="<?php echo esc_attr_x( 'Confirm E-mail', 'renting_complete', 'mybooking') ?>" maxlength="50">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="customer_phone"><?php echo esc_html_x( 'Phone number', 'renting_complete', 'mybooking') ?>
-                  *</label>
-                <input class="form-control" id="customer_phone" name="customer_phone" type="text"
-                  placeholder="<?php echo esc_attr_x( 'Phone number', 'renting_complete', 'mybooking') ?>" maxlength="15">
-              </div>
-              <div class="form-group col-md-6">
-                <label
-                  for="customer_mobile_phone"><?php echo esc_html_x( 'Alternative phone number', 'renting_complete', 'mybooking') ?></label>
-                <input class="form-control" id="customer_mobile_phone" name="customer_mobile_phone" type="text"
-                  placeholder="<?php echo esc_attr_x( 'Alternative phone number', 'renting_complete', 'mybooking') ?>" maxlength="15">
-              </div>
-            </div>
-            <h4 class="brand-primary my-3"><?php echo esc_html_x( "Additional information", 'renting_complete', 'mybooking') ?></h4>
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label for="comments"><?php echo esc_html_x( 'Comments', 'renting_complete', 'mybooking') ?></label>
-                <textarea name="comments" id="comments" placeholder="<?php echo esc_attr_x( 'Comments', 'renting_complete', 'mybooking') ?>"
-                  style="width: 100%; height: 100px; padding: 0.8rem;"></textarea>
-              </div>
-            </div>
-            <!-- Reservation : payment -->
-            <div id="payment_detail"></div>
-          </form>
-        </div>
+              <!-- Reservation : payment -->
+              <div id="payment_detail"></div>
+            </form>
+          </div>
+        </div>  
       </div>
     </div>
   </div>
