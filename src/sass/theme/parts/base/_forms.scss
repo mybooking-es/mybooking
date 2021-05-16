@@ -63,8 +63,14 @@ textarea,
   color: var(--form-control-color);
   border: 1px solid var(--form-control-border-color);
   border-radius: var(--flex-form-control-border-radius);
-  height: var(--form-control-height);
   box-shadow: none;
+}
+
+input[type="text"],
+input[type="password"],
+.ui-autocomplete-input,
+.uneditable-input {
+  height: var(--form-control-height);
 }
 
 // Custom forms
