@@ -93,12 +93,16 @@
           <div class="card-static_header">
             <div class="card-static_price">
               <!-- Price (single product selection) -->
+              <!-- Added category supplements -->
               <% if (!product.exceeds_max && !product.be_less_than_min) { %>
                 <% if (!configuration.multipleProductsSelection) { %>
-                  <h2 class="card-static_amount"><%=configuration.formatCurrency(product.price)%></h2>
+                  <h2 class="card-static_amount"><%=configuration.formatCurrency(+product.price + 
+                      (+product.category_supplement_1_cost || 0) + 
+                      (+product.category_supplement_2_cost || 0) +
+                      (+product.category_supplement_3_cost || 0))%>
+                  </h2>
                 <% } %>
               <% } %>
-
               <!-- Taxes included -->
               <?php if ( array_key_exists('show_taxes_included', $args) && ( $args['show_taxes_included'] ) ): ?>
                 <span class="card-static_taxes">
@@ -133,12 +137,21 @@
             <!-- Product name and description -->
             <h2 class="card-static_product-name"><%=product.name%></h2>
             <h3 class="card-static_product-short-description"><%=product.short_description%></h3>
-
             <!-- Few units warning -->
             <% if (product.few_available_units) { %>
               <span class="card-static_low-availability">
                 <?php echo esc_html_x('Few units left!','renting_choose_product','mybooking') ?>
               </span>
+            <% } %>
+            <% if (+product.category_supplement_1_cost > 0) { %>
+            <div class="card-static_price_supplement p-b-1">
+              <div class="card-static_price_supplement_price">
+                <small><b><%=configuration.formatCurrency(product.price)%></b>&nbsp;<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() )?></small>
+              </div>
+              <div class="card-static_price_supplement_supplement_1">
+                <small><b><%=configuration.formatCurrency(product.category_supplement_1_cost)%></b>&nbsp;<?php echo esc_html_x( "Petrol supplement", 'renting_complete', 'mybooking' ) ?></small>
+              </div>  
+            </div>
             <% } %>
           </div>
 
