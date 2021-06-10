@@ -185,13 +185,13 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 
 		    	// If advaced colors is active, load extended values for topbar/header/selector
 					$options_advanced_mode = get_theme_mod( 'mybooking_colors_advanced', '0' );
-		      if ( $options_advanced_mode != '0' ) {
+          if ( $options_advanced_mode != '0' ) {
 
-			    	$home_topbar_bg = get_theme_mod( 'mybooking_home_topbar_bg', '#2193F2' );
-			    	$topbar_bg = get_theme_mod( 'mybooking_topbar_bg', '#2193F2' );
-			    	$topbar_color = get_theme_mod( 'mybooking_topbar_color', '#FFFFFF' );
-			    	$topbar_link_color = get_theme_mod( 'mybooking_topbar_link_color', '#FAFAFA' );
-			    	$topbar_link_hover_color = get_theme_mod( 'mybooking_topbar_link_hover_color', '#FAFAFA' );
+          $home_topbar_bg = get_theme_mod( 'mybooking_home_topbar_bg', '#2193F2' );
+          $topbar_bg = get_theme_mod( 'mybooking_topbar_bg', '#2193F2' );
+          $topbar_color = get_theme_mod( 'mybooking_topbar_color', '#FFFFFF' );
+          $topbar_link_color = get_theme_mod( 'mybooking_topbar_link_color', '#FAFAFA' );
+          $topbar_link_hover_color = get_theme_mod( 'mybooking_topbar_link_hover_color', '#FAFAFA' );
 					$topbar_message_bg = get_theme_mod( 'mybooking_topbar_message_bg', '#FFB74D' );
 					$topbar_message_text = get_theme_mod( 'mybooking_topbar_message_text', '#212121' );
 					$topbar_message_link = get_theme_mod( 'mybooking_topbar_message_link', '#FAFAFA' );

@@ -88,6 +88,8 @@
 }
 .product-detail-list-img {
   max-width: 175px;
+  max-height: 100px;
+  object-fit: contain;
 }
 .list-group.resume-product-list {
   li.product-detail-list:first-child {

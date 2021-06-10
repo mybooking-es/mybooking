@@ -29680,7 +29680,10 @@ a.magic-button.btn {
   padding: 2rem 0; }
 
 .product-detail-list-img {
-  max-width: 175px; }
+  max-width: 175px;
+  max-height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain; }
 
 .list-group.resume-product-list li.product-detail-list:first-child {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important; }
