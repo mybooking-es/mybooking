@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2021-05-16 11:18+0000\n"
+"PO-Revision-Date: 2021-06-10 11:26+0000\n"
 "Last-Translator: \n"
 "Language-Team: Spanish (Spain)\n"
 "Language: es_ES\n"
@@ -453,7 +453,7 @@ msgid ""
 "conditions</a>"
 msgstr ""
 "He leído y acepto los <a href=\\\"%s\\\" target=\\\"_blank\\\">términos y "
-"condiciones"
+"condiciones</a>"
 
 #: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:189
 #: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:258
