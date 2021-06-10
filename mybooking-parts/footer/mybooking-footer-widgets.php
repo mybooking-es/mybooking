@@ -129,15 +129,26 @@ defined( 'ABSPATH' ) || exit;
     <?php } ?>
 
     <?php $mybooking_company_phone = MyBookingCustomizer::getInstance()->get_theme_option("company_info_phone"); ?>
+    <?php $mybooking_company_mobile = MyBookingCustomizer::getInstance()->get_theme_option("company_info_mobile"); ?>
     <?php $mybooking_company_email = MyBookingCustomizer::getInstance()->get_theme_option("company_info_email"); ?>
     <?php if ( !empty( $mybooking_company_phone ) || !empty( $mybooking_company_email) ) { ?>
     <p class="info_bloc">
+      <!-- Phone -->
       <?php if ( !empty( $mybooking_company_phone ) ) { ?>
       <a class="info_link" href="<?php echo esc_url( 'tel:'.str_replace(' ','',$mybooking_company_phone) ) ?>">
         <i class="fa fa-phone" aria-hidden="true"></i>
         <span class="info_text"><?php echo esc_html( $mybooking_company_phone ) ?></span>
       </a>
       <?php } ?>
+      <!-- Mobile -->
+      <?php if ( !empty( $mybooking_company_mobile ) ) { ?>
+      <br>
+      <a class="info_link" href="<?php echo esc_url( 'tel:'.str_replace(' ','',$mybooking_company_mobile) ) ?>">
+        <i class="fa fa-mobile" aria-hidden="true"></i>
+        <span class="info_text"><?php echo esc_html( $mybooking_company_mobile ) ?></span>
+      </a>
+      <?php } ?>
+      <!-- Email -->
       <?php if ( !empty( $mybooking_company_email ) ) { ?>
       <br>
       <a class="info_link" href="<?php echo esc_url( 'mailto:'.$mybooking_company_email ) ?>">

@@ -18,10 +18,10 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <?php $mybooking_company_phone = MyBookingCustomizer::getInstance()->get_theme_option("company_info_phone"); ?>
-<?php $mybooking_company_chat = MyBookingCustomizer::getInstance()->get_theme_option("company_info_chat"); ?>
+<?php $mybooking_company_mobile = MyBookingCustomizer::getInstance()->get_theme_option("company_info_mobile"); ?>
 <?php $mybooking_company_email = MyBookingCustomizer::getInstance()->get_theme_option("company_info_email"); ?>
 
-<?php if ( !empty($mybooking_company_phone) || !empty($mybooking_company_chat) || !empty($mybooking_company_email) ||
+<?php if ( !empty($mybooking_company_phone) || !empty($mybooking_company_mobile) || !empty($mybooking_company_email) ||
            is_active_sidebar( 'mybooking_global_topbar_right' ) ) { ?>
   <div class="topbar">
     <!-- Top Bar content -->
@@ -33,10 +33,10 @@ defined( 'ABSPATH' ) || exit;
         </span>
       <?php } ?>
 
-      <?php if ( !empty( $mybooking_company_chat) ) { ?>
+      <?php if ( !empty( $mybooking_company_mobile) ) { ?>
         <span>
-      	  <a class="info_link" href="<?php echo esc_url( 'whatsapp://send?phone='.str_replace(' ','',$mybooking_company_chat).'&abid='.str_replace(' ','',$mybooking_company_chat), ['whatsapp'] ) ?>"><i class="fa fa-whatsapp"
-      	      aria-hidden="true"></i> <span class="info_text"><?php echo esc_html( $mybooking_company_chat ) ?></span></a>
+      	  <a class="info_link" href="<?php echo esc_url( 'whatsapp://send?phone='.str_replace(' ','',$mybooking_company_mobile).'&abid='.str_replace(' ','',$mybooking_company_mobile), ['whatsapp'] ) ?>"><i class="fa fa-whatsapp"
+      	      aria-hidden="true"></i> <span class="info_text"><?php echo esc_html( $mybooking_company_mobile ) ?></span></a>
         </span>
       <?php } ?>
 

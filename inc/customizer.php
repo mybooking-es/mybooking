@@ -183,6 +183,11 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 					$footer_link_color = get_theme_mod( 'mybooking_footer_link_color', '#424242' );
 					$footer_link_hover_color = get_theme_mod( 'mybooking_footer_link_hover_color', '#2193F2' );
 
+          $subfooter_bg = get_theme_mod( 'mybooking_subfooter_bg', '#212121' );
+          $subfooter_color = get_theme_mod( 'mybooking_subfooter_color', '#e0e0e0' );
+          $subfooter_link_color = get_theme_mod( 'mybooking_subfooter_link_color', '#FFFFFF' );
+          $subfooter_link_hover_color = get_theme_mod( 'mybooking_subfooter_link_hover_color', '#bdbdbd' );
+
 		    	// If advaced colors is active, load extended values for topbar/header/selector
 					$options_advanced_mode = get_theme_mod( 'mybooking_colors_advanced', '0' );
           if ( $options_advanced_mode != '0' ) {
@@ -261,6 +266,12 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 					$custom_css.= "--footer-color: ".$this->slug_sanitize_rgba( $footer_color ).';';
 					$custom_css.= "--footer-color-link: ".$this->slug_sanitize_rgba( $footer_link_color ).';';
 					$custom_css.= "--footer-color-link-hover: ".$this->slug_sanitize_rgba( $footer_link_hover_color ).';';
+
+          // Sub Footer
+          $custom_css.= "--credits-bg: ".$this->slug_sanitize_rgba( $subfooter_bg ).';';
+          $custom_css.= "--credits-color: ".$this->slug_sanitize_rgba( $subfooter_color ).';';
+          $custom_css.= "--credits-color-link: ".$this->slug_sanitize_rgba( $subfooter_link_color ).';';
+          $custom_css.= "--credits-color-link-hover: ".$this->slug_sanitize_rgba( $subfooter_link_hover_color ).';';
 
 					if ( $options_advanced_mode != '0' ) {
 					  // Top bar
@@ -369,7 +380,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 		  	  $this->theme_options['company_info_adress'] = get_theme_mod( 'mybooking_company_address', '' );
 
 		  	  $this->theme_options['company_info_phone'] = get_theme_mod( 'mybooking_company_phone_number', '' );
-		  	  $this->theme_options['company_info_chat'] = get_theme_mod( 'mybooking_company_whatsapp_number', '' );
+		  	  $this->theme_options['company_info_mobile'] = get_theme_mod( 'mybooking_company_mobile_number', '' );
 		  	  $this->theme_options['company_info_email'] = get_theme_mod( 'mybooking_company_email', '' );
 
 		  	  $this->theme_options['company_info_twitter_url'] = get_theme_mod( 'mybooking_company_twitter_url', '' );
@@ -608,15 +619,15 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 
         // Company WhatsApp number
 
-				$wp_customize->add_setting( 'mybooking_company_whatsapp_number', array(
+				$wp_customize->add_setting( 'mybooking_company_mobile_number', array(
 				  'default' => '',
 				  'transport' => 'refresh',
 				  'sanitize_callback' => 'sanitize_text_field',
 				) );
 
-				$wp_customize->add_control( 'mybooking_company_whatsapp_number', array(
-					'label' => _x( 'WhatsApp number', 'customizer_company', 'mybooking' ),
-					'description' => esc_html_x( 'WhatsApp number', 'customizer_company', 'mybooking' ),
+				$wp_customize->add_control( 'mybooking_company_mobile_number', array(
+					'label' => _x( 'Mobile number', 'customizer_company', 'mybooking' ),
+					'description' => esc_html_x( 'Mobile number', 'customizer_company', 'mybooking' ),
 					'section' => 'mybooking_theme_company_options',
 					'priority' => 10,
 					'type' => 'text',
@@ -624,7 +635,7 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 					'input_attrs' => array(
 						 'class' => 'mybooking-customizer-text',
 						 'style' => 'border: 1px solid #999',
-						 'placeholder' => _x( 'WhatsApp number', 'customizer_company', 'mybooking' ),
+						 'placeholder' => _x( 'Mobile number', 'customizer_company', 'mybooking' ),
 					)
 				) );	
 
@@ -1913,6 +1924,74 @@ if ( ! class_exists( 'MyBookingCustomizer' ) ) {
 							),
 					 )
 				);
+
+        // -- SubFooter Background color
+
+        // Setting
+        $wp_customize->add_setting( 'mybooking_subfooter_bg' , array(
+        'default' => '#212121',
+        'transport' => 'refresh',
+        'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
+        ) );
+
+        // Control
+        $wp_customize->add_control( new MyBookingCustomizer_Alpha_Color_Control(
+        $wp_customize, 'subfooter_bg', array(
+        'label' => _x( 'Subfooter background color', 'customizer_footer', 'mybooking' ),
+        'section' => 'mybooking_theme_footer_options',
+        'settings' => 'mybooking_subfooter_bg'
+        ) ) );
+
+        // -- Footer Color
+
+        // Setting
+        $wp_customize->add_setting( 'mybooking_subfooter_color' , array(
+        'default' => '#e0e0e0',
+        'transport' => 'refresh',
+        'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
+        ) );
+
+        // Control
+        $wp_customize->add_control( new MyBookingCustomizer_Alpha_Color_Control(
+        $wp_customize, 'subfooter_color', array(
+        'label' => _x( 'Subfooter text color', 'customizer_footer', 'mybooking' ),
+        'section' => 'mybooking_theme_footer_options',
+        'settings' => 'mybooking_subfooter_color'
+        ) ) );
+
+        // -- Footer Link color
+
+        // Setting
+        $wp_customize->add_setting( 'mybooking_subfooter_link_color' , array(
+        'default' => '#FFFFFF',
+        'transport' => 'refresh',
+        'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
+        ) );
+
+        // Control
+        $wp_customize->add_control( new MyBookingCustomizer_Alpha_Color_Control(
+        $wp_customize, 'subfooter_link_color', array(
+        'label' => _x( 'Subfooter Link color', 'customizer_footer', 'mybooking' ),
+        'section' => 'mybooking_theme_footer_options',
+        'settings' => 'mybooking_subfooter_link_color'
+        ) ) );
+
+        // -- Link hover color
+
+        // Setting
+        $wp_customize->add_setting( 'mybooking_subfooter_link_hover_color' , array(
+        'default' => '#bdbdbd',
+        'transport' => 'refresh',
+        'sanitize_callback' => array( $this, 'slug_sanitize_rgba')
+        ) );
+
+        // Control
+        $wp_customize->add_control( new MyBookingCustomizer_Alpha_Color_Control(
+        $wp_customize, 'subfooter_link_hover_color', array(
+        'label' => _x( 'Subfooter Link hover color', 'customizer_footer', 'mybooking' ),
+        'section' => 'mybooking_theme_footer_options',
+        'settings' => 'mybooking_subfooter_link_hover_color'
+        ) ) );
 
 
 			}
