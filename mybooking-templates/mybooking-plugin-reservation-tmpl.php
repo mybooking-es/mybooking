@@ -820,7 +820,7 @@
   <form name="payment_form">
     <% if (sales_process.payment_methods.paypal_standard && sales_process.payment_methods.tpv_virtual) { %>
       <div class="alert alert-secondary" role="alert">
-        <?php echo wp_kses_post( _x( 'You will be redirected to the <b>payment platform</b> to make the confirmation payment securely. You can use <u>Paypal account</u> or <u>credit card</u> to make the payment.', 'renting_my_reservation', 'mybooking' ) )?>
+        <?php echo wp_kses_post( _x( 'You will be redirected to the <b>payment platform</b> to make the payment securely. You can use <u>Paypal account</u> or <u>credit card</u> to make the payment.', 'renting_my_reservation', 'mybooking' ) )?>
       </div>     
       <div class="form-row">
          <div class="form-group col-md-12">
@@ -840,7 +840,7 @@
       </div>
     <% } else if (sales_process.payment_methods.paypal_standard) {%>
       <div class="alert alert-secondary" role="alert">
-        <?php echo wp_kses_post( _x( 'You will be redirected to <b>Paypal payment platform</b> to make the confirmation payment securely. You can use <u>Paypal account</u> or <u>credit card</u> to make the payment.', 'renting_my_reservation', 'mybooking' ) )?>
+        <?php echo wp_kses_post( _x( 'You will be redirected to <b>Paypal payment platform</b> to make the payment securely. You can use <u>Paypal account</u> or <u>credit card</u> to make the payment.', 'renting_my_reservation', 'mybooking' ) )?>
       </div>      
       <div class="form-row">
         <div class="form-group col-md-12">
@@ -852,7 +852,7 @@
       <input type="hidden" name="payment_method_id" value="paypal_standard" data-payment-method="paypal_standard">
     <% } else if (sales_process.payment_methods.tpv_virtual) {%>
       <div class="alert alert-secondary" role="alert">
-        <?php echo wp_kses_post( _x( 'You will be redirected to the <b>credit card payment platform</b> to make the confirmation payment securely.',
+        <?php echo wp_kses_post( _x( 'You will be redirected to the <b>payment platform</b> to make the payment securely. You can use <u>credit or debit card</u> to make the payment.',
                                      'renting_my_reservation', 'mybooking' ) )?>
       </div>    
       <div class="form-row">

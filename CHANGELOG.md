@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.8] 2020-06-15
+
+### Added
+
+- MyBookingReservationEngine renting templates : Manage branch offices
+
+### Updated
+
+- MyBookingReservationEngine renting templates : Payment message and translations
+
+### Fixed
+
+- MyBookingReservationEngine activities templates : Accept conditions link spanish translation
+
 ## [1.0.7] 2020-05-16
 
 ### Added

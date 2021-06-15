@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2021-05-16 11:25+0000\n"
+"PO-Revision-Date: 2021-06-15 11:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -1713,7 +1713,7 @@ msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:189
+#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:202
 msgctxt "renting_choose_product"
 msgid "Book it!"
 msgstr "Prenotalo!"
@@ -1729,17 +1729,17 @@ msgctxt "renting_choose_product"
 msgid "Edit"
 msgstr "Editare"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:140
+#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:143
 msgctxt "renting_choose_product"
 msgid "Few units left!"
 msgstr "Poche unità rimaste!"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:210
+#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:223
 msgctxt "renting_choose_product"
 msgid "Next"
 msgstr "Prossimo"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:105
+#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:109
 msgctxt "renting_choose_product"
 msgid "Taxes included"
 msgstr "Tasse incluse"
@@ -1897,6 +1897,7 @@ msgctxt "renting_complete"
 msgid "Paypal"
 msgstr "Paypal"
 
+#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:152
 #: mybooking-templates/mybooking-plugin-complete-tmpl.php:598
 msgctxt "renting_complete"
 msgid "Petrol supplement"
@@ -2044,26 +2045,26 @@ msgid "Modify reservation"
 msgstr "Modifica prenotazione"
 
 #: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:20
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:90
+#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:99
 msgctxt "renting_form_selector"
 msgid "Pick-up place"
 msgstr "Luogo di ritiro"
 
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:65
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:176
+#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:74
+#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:185
 msgctxt "renting_form_selector"
 msgid "Promotion code"
 msgstr "Codice promozionale"
 
 #: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:38
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:108
+#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:117
 msgctxt "renting_form_selector"
 msgid "Return place"
 msgstr "Luogo di restituzione"
 
 #: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:101
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:76
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:186
+#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:85
+#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:195
 msgctxt "renting_form_selector"
 msgid "Search"
 msgstr "Cercare"
@@ -2073,22 +2074,22 @@ msgctxt "renting_form_selector_wizard"
 msgid "All"
 msgstr "Tutti"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:46
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:49
 msgctxt "renting_form_selector_wizard"
 msgid "Book"
 msgstr "Prenotare"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:31
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:34
 msgctxt "renting_form_selector_wizard"
 msgid "Choose a place"
 msgstr "Scegli un posto"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:37
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:40
 msgctxt "renting_form_selector_wizard"
 msgid "Pick-up date"
 msgstr "Data di ritiro"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:41
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:44
 msgctxt "renting_form_selector_wizard"
 msgid "Return date"
 msgstr "Data di restituzione"
@@ -2098,12 +2099,12 @@ msgctxt "renting_form_selector_wizard"
 msgid "Separator"
 msgstr "Separatore"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:35
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:38
 msgctxt "renting_form_selector_wizard"
 msgid "When?"
 msgstr "Quando?"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:29
+#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:32
 msgctxt "renting_form_selector_wizard"
 msgid "Where?"
 msgstr "Dove?"
@@ -2455,35 +2456,44 @@ msgid "Weight (kg)"
 msgstr "Peso (kg)"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:843
+#| msgid ""
+#| "You will be redirected to <b>Paypal payment platform</b> to make the "
+#| "confirmation payment securely. You can use <u>Paypal account</u> or <u>"
+#| "credit card</u> to make the payment."
 msgctxt "renting_my_reservation"
 msgid ""
-"You will be redirected to <b>Paypal payment platform</b> to make the "
-"confirmation payment securely. You can use <u>Paypal account</u> or <u>"
-"credit card</u> to make the payment."
+"You will be redirected to <b>Paypal payment platform</b> to make the payment "
+"securely. You can use <u>Paypal account</u> or <u>credit card</u> to make "
+"the payment."
 msgstr ""
-"Verrai reindirizzato alla <b>piattaforma di pagamento Paypal</b> per "
-"effettuare il pagamento di conferma in modo sicuro. Puoi utilizzare <u>"
-"Paypal</u> o <u>carta di credito</u> per effettuare il pagamento."
+"Verrai reindirizzato alla <b>piattaforma di pagamento PayPal</b> per "
+"effettuare il pagamento in modo sicuro. Puoi utilizzare <u>conto PayPal</u> "
+"o <u>carta di credito</u> per effettuare il pagamento."
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:855
 msgctxt "renting_my_reservation"
 msgid ""
-"You will be redirected to the <b>credit card payment platform</b> to make "
-"the confirmation payment securely."
-msgstr ""
-"Verrai reindirizzato alla <b>piattaforma di pagamento con carta di "
-"credito</b> per effettuare il pagamento di conferma in modo sicuro. "
-
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:823
-msgctxt "renting_my_reservation"
-msgid ""
-"You will be redirected to the <b>payment platform</b> to make the "
-"confirmation payment securely. You can use <u>Paypal account</u> or <u>"
-"credit card</u> to make the payment."
+"You will be redirected to the <b>payment platform</b> to make the payment "
+"securely. You can use <u>credit or debit card</u> to make the payment."
 msgstr ""
 "Verrai reindirizzato alla <b>piattaforma di pagamento</b> per effettuare il "
-"pagamento di conferma in modo sicuro. Puoi utilizzare <u>Paypal</u> o <u>"
-"carta di credito</u> per effettuare il pagamento."
+"pagamento in modo sicuro. Puoi utilizzare <u>carta di credito o di debito</u>"
+" per effettuare il pagamento."
+
+#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:823
+#| msgid ""
+#| "You will be redirected to the <b>payment platform</b> to make the "
+#| "confirmation payment securely. You can use <u>Paypal account</u> or <u>"
+#| "credit card</u> to make the payment."
+msgctxt "renting_my_reservation"
+msgid ""
+"You will be redirected to the <b>payment platform</b> to make the payment "
+"securely. You can use <u>Paypal account</u> or <u>credit card</u> to make "
+"the payment."
+msgstr ""
+"Verrai reindirizzato alla <b>piattaforma di pagamento</b> per effettuare il "
+"pagamento in modo sicuro. Puoi utilizzare <u>conto PayPal</u> o <u>carta di "
+"credito</u> per effettuare il pagamento."
 
 #: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:133
 msgctxt "renting_product_calendar"

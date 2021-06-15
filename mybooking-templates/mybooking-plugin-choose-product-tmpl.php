@@ -20,7 +20,7 @@
               <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
             </div>
             <div class="reservation-summary_pickup_date">
-              <span><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></span>
+              <span><%=shopping_cart.date_from_short_format%> <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%> <% } %></span>
             </div>
           </div>
           <div class="separator"></div>
@@ -31,7 +31,7 @@
               </span>
             </div>
             <div class="reservation-summary_return_date">
-              <span><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></span>
+              <span><%=shopping_cart.date_to_short_format%> <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><% } %></span>
             </div>
           </div>
           <div class="modify-button-wrapper push-to-the-right">
@@ -50,7 +50,7 @@
             <span class="overflow-ellipsis"><%=shopping_cart.pickup_place_customer_translation%></span>
           </div>
           <div class="reservation-summary_pickup_date">
-            <span><%=shopping_cart.date_from_short_format%> <%=shopping_cart.time_from%></span>
+            <span><%=shopping_cart.date_from_short_format%> <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></span>
           </div>
           <div class="separator"></div>
           <div class="reservation-summary_return_place d-none d-md-flex">
@@ -59,7 +59,7 @@
             </span>
           </div>
           <div class="reservation-summary_return_date">
-            <span><%=shopping_cart.date_to_short_format%> <%=shopping_cart.time_to%></span>
+            <span><%=shopping_cart.date_to_short_format%> <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
           </div>
           <div class="modify-button-wrapper">
             <button id="modify_reservation_button"

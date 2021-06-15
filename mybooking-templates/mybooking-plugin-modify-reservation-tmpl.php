@@ -54,6 +54,24 @@
           </div>
         </div>
       </div>
+    <% } else { %>
+      <% if (configuration.selectRentalLocation) { %>
+        <% if (not_hidden_rental_location_code) { %>
+          <div class="flex-form-group rental_location" style="display: none">
+            <div class="flex-form-box">
+              <label for="rental_location_code"><?php echo esc_html( MyBookingEngineContext::getInstance()->getRentalLocation() ) ?></label>
+              <div class="flex-form-horizontal-item">
+                <select name="rental_location_code" id="rental_location_code" class="form-control"></select>
+              </div>
+            </div>
+          </div>
+        <% } else { %>
+          <% if (rental_location_code && rental_location_code != '') { %>
+            <input type="hidden" name="rental_location_code" value="<%=rental_location_code%>"/>
+            <input type="hidden" name="engine_fixed_rental_location" value="true"/>
+          <% } %>               
+        <% } %>  
+      <% } %>
     <% } %>
 
     <!-- Date/Time from / to -->
@@ -87,13 +105,25 @@
     </div>
   </div>
 
-  <% if (not_hidden_family_id && configuration.selectFamily) { %>
-    <div class="flex-form-horizontal-box family" style="display: none">
-      <label class="mb-0" for="family_id"><?php echo esc_html( MyBookingEngineContext::getInstance()->getFamily() ) ?></label>
-      <div class="flex-form-horizontal-item">
-        <select name="family_id" id="family_id" class="form-control"></select>
+  <% if (configuration.selectFamily) { %>
+    <% if (not_hidden_family_id) { %>
+      <div class="flex-form-horizontal-box family" style="display: none">
+        <label class="mb-0" for="family_id"><?php echo esc_html( MyBookingEngineContext::getInstance()->getFamily() ) ?></label>
+        <div class="flex-form-horizontal-item">
+          <select name="family_id" id="family_id" class="form-control"></select>
+        </div>
       </div>
-    </div>
+    <% } else { %>
+        <% if (family_id && family_id != '') { %>
+          <input type="hidden" name="family_id" value="<%=family_id%>"/>
+          <input type="hidden" name="engine_fixed_family" value="true"/>
+        <% } %>  
+    <% } %>  
+  <% } else if (!not_hidden_family_id) { %>
+      <% if (family_id && family_id != '') { %>
+        <input type="hidden" name="family_id" value="<%=family_id%>"/>
+        <input type="hidden" name="engine_fixed_family" value="true"/>
+      <% } %>         
   <% } %>
 
   <div class="flex-form-box">

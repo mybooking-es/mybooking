@@ -247,10 +247,12 @@
               </div>
             </div>
             <div class="complete-buttons-wrapper">
-              <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
-                class="complete-button"><i class="fas fa-pen mr-2"></i>
-                <?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
-              </button>
+              <% if (shopping_cart.engine_modify_dates) { %>              
+                <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
+                  class="complete-button"><i class="fas fa-pen mr-2"></i>
+                  <?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
+                </button>
+              <% } %>
               <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
                 <i class="fas fa-info-circle mr-2"></i><?php echo esc_html_x( 'Info', 'renting_complete', 'mybooking' ) ?>
               </button>
@@ -291,9 +293,11 @@
             </div>
 
             <div class="complete-buttons-wrapper">
-              <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
-                class="complete-button"><?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
-              </button>
+              <% if (shopping_cart.engine_modify_dates) { %>
+                <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
+                  class="complete-button"><?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
+                </button>
+              <% } %>
               <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
                 <i class="fas fa-info-circle mr-2"></i><?php echo esc_html_x('Info', 'renting_complete', 'mybooking') ?>
               </button>
