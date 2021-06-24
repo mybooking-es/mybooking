@@ -67,12 +67,15 @@
   }
 }
 .home .flex-form {
-  background-color: var(--home-selector-bg);
+  background-color: var(--home-selector-mobile-bg);
 }
 
 // Horizontal Selector on Desktop
 
 @media (min-width: 992px) {
+  .home .flex-form {
+    background-color: var(--home-selector-bg);
+  }
   .home-alone .flex-form {
     // 1 column : Max width 745px
     max-width: 745px;

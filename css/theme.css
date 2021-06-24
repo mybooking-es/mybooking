@@ -25184,7 +25184,7 @@ these properties do not need to be edited */
   --toggler-icon-font-size: 1.3rem;
   --toggler-icon-color: var(--gray-900);
   --toggler-icon-mt: 6px;
-  --home-header-bg: var(--brand-secondary);
+  --home-header-bg-color: #fff;
   --home-header-color: var(--white);
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
@@ -25206,6 +25206,7 @@ these properties do not need to be edited */
   --cookies-bg-color: var(--brand-primary);
   --cookies-text-color: var(--body-color);
   --home-selector-bg: rgba(255, 255, 255, 0.6);
+  --home-selector-mobile-bg: var(--gray-100);
   --selector-bg: var(--gray-100);
   --selector-btn-bg-color: var(--brand-primary);
   --selector-btn-border-color: var(--brand-primary);
@@ -26791,7 +26792,7 @@ h2.subtitle-404 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: var(--home-header-bg);
+  background-color: var(--home-header-bg-color);
   z-index: 2;
   overflow-x: hidden; }
 
@@ -28436,9 +28437,11 @@ table.table-activities th {
     color: var(--selector-label-color); }
 
 .home .flex-form {
-  background-color: var(--home-selector-bg); }
+  background-color: var(--home-selector-mobile-bg); }
 
 @media (min-width: 992px) {
+  .home .flex-form {
+    background-color: var(--home-selector-bg); }
   .home-alone .flex-form {
     max-width: 745px;
     margin: 0 auto; }

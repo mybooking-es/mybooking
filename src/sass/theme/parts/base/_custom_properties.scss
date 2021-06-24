@@ -81,11 +81,10 @@ these properties do not need to be edited */
   --toggler-icon-color: var(--gray-900);
   --toggler-icon-mt: 6px;
   // Home header
-  --home-header-bg: var(--brand-secondary);
+  --home-header-bg-color: #fff;
   --home-header-color: var(--white);
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
-  //--home-header-top: calc(37px + 1rem + var(--custom-logo-height));
   --home-header-widget-title: #fff;
   --home-header-widget-title-align: left;
   --home-header-widget-text: #fff;
@@ -108,6 +107,7 @@ these properties do not need to be edited */
   --cookies-text-color: var(--body-color);
   // Home Selector bg
   --home-selector-bg: rgba(255, 255, 255, 0.6);
+  --home-selector-mobile-bg: var(--gray-100);
   // Selector bg outside home-page
   --selector-bg: var(--gray-100);
   // Selector search btn

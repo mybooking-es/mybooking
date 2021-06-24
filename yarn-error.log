@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/marcelreig/.nvm/versions/node/v12.17.0/bin/node /Users/marcelreig/.nvm/versions/node/v12.17.0/bin/yarn audit --json
+  /Users/marcelreig/.nvm/versions/node/v12.17.0/bin/node /Users/marcelreig/.nvm/versions/node/v12.17.0/bin/yarn outdated --json
 
 PATH: 
   /Users/marcelreig/.rvm/gems/ruby-2.7.0/bin:/Users/marcelreig/.rvm/gems/ruby-2.7.0@global/bin:/Users/marcelreig/.rvm/rubies/ruby-2.7.0/bin:/Users/marcelreig/.nvm/versions/node/v12.17.0/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/marcelreig/.rvm/bin
