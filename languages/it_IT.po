@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2021-05-16 11:25+0000\n"
+"PO-Revision-Date: 2021-06-29 16:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -14,398 +14,398 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.4.3; wp-5.5.1"
 
-#: 404.php:27
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/404.php:27
 msgctxt "404_page"
 msgid "404"
 msgstr "404"
 
-#: 404.php:28
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/404.php:28
 msgctxt "404_page"
 msgid "Page not found"
 msgstr "Pagina non trovata"
 
-#: 404.php:30
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/404.php:30
 msgctxt "404_page"
 msgid "We are sorry. The page you were looking for could not be found"
 msgstr "Ci dispiace. La pagina che stavi cercando non è stata trovata"
 
-#: mybooking-templates/mybooking-plugin-activities.php:41
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities.php:41
 msgctxt "activities_list"
 msgid "From"
 msgstr "A partire dal"
 
-#: mybooking-templates/mybooking-plugin-activities.php:56
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities.php:56
 msgctxt "activities_list"
 msgid "More information"
 msgstr "Informazioni"
 
-#: mybooking-templates/mybooking-plugin-activities.php:115
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities.php:115
 msgctxt "activities_list"
 msgid "Next"
 msgstr "Prossimo"
 
-#: mybooking-templates/mybooking-plugin-activities.php:13
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities.php:13
 msgctxt "activities_list"
 msgid "No results found"
 msgstr "Nessun risultato trovato"
 
-#: mybooking-templates/mybooking-plugin-activities.php:88
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities.php:88
 msgctxt "activities_list"
 msgid "Page navigation"
 msgstr "Navigazione tra le pagine"
 
-#: mybooking-templates/mybooking-plugin-activities.php:94
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities.php:94
 msgctxt "activities_list"
 msgid "Previous"
 msgstr "Precedente"
 
-#: mybooking-templates/mybooking-plugin-activities-search-tmpl.php:25
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-search-tmpl.php:25
 msgctxt "activities_search"
 msgid "Category"
 msgstr "Categoria"
 
-#: mybooking-templates/mybooking-plugin-activities-search-tmpl.php:17
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-search-tmpl.php:17
 msgctxt "activities_search"
 msgid "Destination"
 msgstr "Destinazione"
 
-#: mybooking-templates/mybooking-plugin-activities-search.php:24
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-search.php:24
 msgctxt "activities_search"
 msgid "Search"
 msgstr "Cercare"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:41
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:41
 msgctxt "activity_detail"
 msgid "Next"
 msgstr "Prossimo"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:170
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:170
 msgctxt "activity_detail"
 msgid "Please choose your dates in the availability calendar"
 msgstr "Si prega di scegliere le date nel calendario delle disponibilità"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:36
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:36
 msgctxt "activity_detail"
 msgid "Previous"
 msgstr "Precedente"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:115
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:117
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:115
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:117
 msgctxt "activity_my_reservation"
 msgid "Address"
 msgstr "Indirizzo"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:281
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:284
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:281
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:284
 msgctxt "activity_my_reservation"
 msgid "Allergies"
 msgstr "Allergie"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:288
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:290
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:292
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:288
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:290
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:292
 msgctxt "activity_my_reservation"
 msgid "Allergies detail"
 msgstr "Dettaglio allergie"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:458
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:458
 msgctxt "activity_my_reservation"
 msgid "Cancel Reservation"
 msgstr "Annulla prenotazione"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:138
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:140
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:138
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:140
 msgctxt "activity_my_reservation"
 msgid "City"
 msgstr "Città"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:129
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:131
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:129
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:131
 msgctxt "activity_my_reservation"
 msgid "Complement"
 msgstr "Complemento"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:99
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:99
 msgctxt "activity_my_reservation"
 msgid "Complete reservation"
 msgstr "Completa la prenotazione"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:154
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:154
 msgctxt "activity_my_reservation"
 msgid "Country"
 msgstr "Paese"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:534
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:534
 msgctxt "activity_my_reservation"
 msgid "Credit or debit card"
 msgstr "Credit or debit card"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:111
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:111
 msgctxt "activity_my_reservation"
 msgid "Customer address"
 msgstr "Indirizzo del cliente"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:467
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:467
 msgctxt "activity_my_reservation"
 msgid "Customer's details"
 msgstr "Dettagli del cliente"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:217
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:219
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:221
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:217
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:219
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:221
 msgctxt "activity_my_reservation"
 msgid "Date of birth"
 msgstr "Data di nascita"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:342
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:345
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:342
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:345
 msgctxt "activity_my_reservation"
 msgid "Diseases"
 msgstr "Malattie"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:349
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:351
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:353
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:349
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:351
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:353
 msgctxt "activity_my_reservation"
 msgid "Diseases detail"
 msgstr "Dettaglio delle malattie"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:206
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:208
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:210
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:206
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:208
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:210
 msgctxt "activity_my_reservation"
 msgid "Document ID"
 msgstr "ID documento"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:240
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:242
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:244
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:240
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:242
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:244
 msgctxt "activity_my_reservation"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:255
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:257
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:259
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:255
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:257
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:259
 msgctxt "activity_my_reservation"
 msgid "Height (cm)"
 msgstr "Altezza (cm)"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:300
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:303
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:300
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:303
 msgctxt "activity_my_reservation"
 msgid "Intolerances"
 msgstr "Intolleranze"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:307
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:309
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:311
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:307
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:309
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:311
 msgctxt "activity_my_reservation"
 msgid "Intolerances detail"
 msgstr "Dettaglio intolleranze"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:187
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:189
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:191
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:187
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:189
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:191
 msgctxt "activity_my_reservation"
 msgid "Name"
 msgstr "Nome"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:374
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:388
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:374
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:388
 msgctxt "activity_my_reservation"
 msgid "Never"
 msgstr "Mai"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:407
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:419
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:407
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:419
 msgctxt "activity_my_reservation"
 msgid "No"
 msgstr "No"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:122
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:124
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:122
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:124
 msgctxt "activity_my_reservation"
 msgid "Number"
 msgstr "Numero"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:375
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:389
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:375
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:389
 msgctxt "activity_my_reservation"
 msgid "Once"
 msgstr "Una volta"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:483
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:483
 msgctxt "activity_my_reservation"
 msgid "Paid"
 msgstr "Pagato"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:182
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:182
 msgctxt "activity_my_reservation"
 msgid "Partipant"
 msgstr "Partecipante"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:526
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:526
 msgctxt "activity_my_reservation"
 msgid "Paypal"
 msgstr "Paypal"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:485
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:485
 msgctxt "activity_my_reservation"
 msgid "Pending"
 msgstr "In sospeso"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:229
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:231
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:233
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:229
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:231
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:233
 msgctxt "activity_my_reservation"
 msgid "Phone number"
 msgstr "Numero di telefono"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:105
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:105
 msgctxt "activity_my_reservation"
 msgid ""
 "Please complete the information to speed up the delivery process on the "
 "scheduled date"
 msgstr "Si prega di scegliere le date nel calendario delle disponibilità"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:160
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:162
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:160
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:162
 msgctxt "activity_my_reservation"
 msgid "Postal Code"
 msgstr "Codice postale"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:450
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:450
 msgctxt "activity_my_reservation"
 msgid "Reservation ID"
 msgstr "ID prenotazion"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:372
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:387
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:406
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:418
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:372
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:387
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:406
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:418
 msgctxt "activity_my_reservation"
 msgid "Select the option"
 msgstr "Seleziona l'opzione"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:321
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:324
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:321
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:324
 msgctxt "activity_my_reservation"
 msgid "Slight injuries"
 msgstr "Lievi ferite"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:328
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:330
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:332
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:328
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:330
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:332
 msgctxt "activity_my_reservation"
 msgid "Slight injuries detail"
 msgstr "Dettaglio lievi ferite"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:145
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:147
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:145
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:147
 msgctxt "activity_my_reservation"
 msgid "State"
 msgstr "Provincia"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:196
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:198
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:200
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:196
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:198
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:200
 msgctxt "activity_my_reservation"
 msgid "Surname"
 msgstr "Cognome"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:377
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:391
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:377
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:391
 msgctxt "activity_my_reservation"
 msgid "Three or more times"
 msgstr "Tre o più volte"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:480
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:480
 msgctxt "activity_my_reservation"
 msgid "Total"
 msgstr "Totale"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:376
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:390
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:376
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:390
 msgctxt "activity_my_reservation"
 msgid "Twice"
 msgstr "Due volte"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:434
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:434
 msgctxt "activity_my_reservation"
 msgid "Update"
 msgstr "Aggiornare"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:266
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:268
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:270
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:266
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:268
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:270
 msgctxt "activity_my_reservation"
 msgid "Weight (kg)"
 msgstr "Peso (kg)"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:408
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:420
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:408
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:420
 msgctxt "activity_my_reservation"
 msgid "Yes"
 msgstr "Sì"
 
-#: mybooking-templates/mybooking-plugin-activities-order-tmpl.php:78
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-order-tmpl.php:78
 msgctxt "activity_my_reservation_item"
 msgid "Total"
 msgstr "Totale"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:70
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:70
 msgctxt "activity_order_item"
 msgid "Total"
 msgstr "Totale"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:128
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:128
 msgctxt "activity_routes"
 msgid "Ages"
 msgstr "Età"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:70
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:70
 msgctxt "activity_routes"
 msgid "Calendar, timetable and duration"
 msgstr "Calendario, orario e durata"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:118
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:118
 msgctxt "activity_routes"
 msgid "Dates and timetables"
 msgstr "Date e orari"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:138
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:138
 msgctxt "activity_routes"
 msgid "Difficulty"
 msgstr "Difficoltà"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:158
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:158
 msgctxt "activity_routes"
 msgid "Meeting point"
 msgstr "Punto d'incontro"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:148
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:148
 msgctxt "activity_routes"
 msgid "Prices"
 msgstr "Prezzi"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:98
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:98
 msgctxt "activity_routes"
 msgid "Recomendations"
 msgstr "Raccomandazioni"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:108
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:108
 msgctxt "activity_routes"
 msgid "What to bring?"
 msgstr "Cosa portare?"
 
-#: mybooking-templates/mybooking-plugin-routes-activity.php:88
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-activity.php:88
 msgctxt "activity_routes"
 msgid "What's included?"
 msgstr "Cosa è incluso?"
 
 #. 1: Number of results, 2: Number of results
-#: mybooking-templates/mybooking-plugin-activities.php:70
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities.php:70
 #, php-format
 msgctxt "activity_shopping_cart"
 msgid "<b>%s</b> result found"
@@ -413,38 +413,38 @@ msgid_plural "<b>%s</b> results found"
 msgstr[0] "<b>%s</b> risultato trovato"
 msgstr[1] "<b>%s</b> risultati trovato"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:115
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:117
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:115
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:117
 msgctxt "activity_shopping_cart"
 msgid "Alternative phone number"
 msgstr "Numero di telefono alternativo"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:125
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:127
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:125
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:127
 msgctxt "activity_shopping_cart"
 msgid "Comments"
 msgstr "Commenti"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:95
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:97
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:95
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:97
 msgctxt "activity_shopping_cart"
 msgid "Confirm E-mail"
 msgstr "Conferma email"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:235
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:235
 msgctxt "activity_shopping_cart"
 msgid "Credit or debit card"
 msgstr "Credit or debit card"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:87
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:89
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:87
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:89
 msgctxt "activity_shopping_cart"
 msgid "E-mail"
 msgstr "E-mail"
 
 #. %s: terms and conditions URL
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:192
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:261
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:192
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:261
 #, php-format
 msgctxt "activity_shopping_cart"
 msgid ""
@@ -454,115 +454,115 @@ msgstr ""
 "Ho letto e con la presente accetto i <a href=\"%s\" target=\"_blank\"> "
 "termini e condizioni </a>"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:189
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:258
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:189
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:258
 msgctxt "activity_shopping_cart"
 msgid "I have read and hereby accept the terms and conditions"
 msgstr "Ho letto e accetto i termini e le condizioni"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:69
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:71
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:69
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:71
 msgctxt "activity_shopping_cart"
 msgid "Name"
 msgstr "Nome"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:172
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:172
 msgctxt "activity_shopping_cart"
 msgid "Pay now"
 msgstr "Paga ora"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:229
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:229
 msgctxt "activity_shopping_cart"
 msgid "Paypal"
 msgstr "Paypal"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:106
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:108
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:106
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:108
 msgctxt "activity_shopping_cart"
 msgid "Phone number"
 msgstr "Numero di telefono"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:165
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:203
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:165
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:203
 msgctxt "activity_shopping_cart"
 msgid "Request reservation"
 msgstr "Richiedi prenotazione"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:16
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:16
 msgctxt "activity_shopping_cart"
 msgid "Shopping cart is empty"
 msgstr "Il carrello è vuoto"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:77
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:79
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:77
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:79
 msgctxt "activity_shopping_cart"
 msgid "Surname"
 msgstr "Cognome"
 
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:52
-#: mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:139
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:52
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:139
 msgctxt "activity_shopping_cart"
 msgid "Total"
 msgstr "Totale"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:103
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:103
 msgctxt "activity_summary"
 msgid "Customer's details"
 msgstr "Dettagli del cliente"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:116
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:116
 msgctxt "activity_summary"
 msgid "Paid"
 msgstr "Pagato"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:117
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:117
 msgctxt "activity_summary"
 msgid "Pending"
 msgstr "In sospeso"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:92
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:92
 msgctxt "activity_summary"
 msgid "Reservation ID"
 msgstr "ID prenotazion"
 
-#: mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:114
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-summary-tmpl.php:114
 msgctxt "activity_summary"
 msgid "Total"
 msgstr "Totale"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:113
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:140
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:113
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:140
 msgctxt "activity_tickets_form_selector"
 msgid "Book now"
 msgstr "Prenota ora"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:100
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:100
 msgctxt "activity_tickets_form_selector"
 msgid "People"
 msgstr "Persone"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:131
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:131
 msgctxt "activity_tickets_form_selector"
 msgid "Please, select an option"
 msgstr "Please, select an option"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:46
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:62
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:46
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:62
 msgctxt "activity_tickets_form_selector"
 msgid "Select date"
 msgstr "Seleziona la data"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:80
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:80
 msgctxt "activity_tickets_form_selector"
 msgid "Select hour"
 msgstr "Seleziona l'ora"
 
-#: mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:76
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-activity-widget-tmpl.php:76
 msgctxt "activity_tickets_form_selector"
 msgid "We are sorry. There are not schedules available"
 msgstr "Ci dispiace. Non ci sono orari disponibili"
 
-#: index.php:42
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/index.php:42
 msgctxt "blog_message"
 msgid ""
 "No content found. Please publish at least one post to show something at here"
@@ -571,42 +571,49 @@ msgstr ""
 "qualcosa qui"
 
 #. %s: category name
-#: inc/categories.php:52 inc/categories.php:69 inc/categories.php:81
-#: inc/categories.php:104 inc/categories.php:121 inc/categories.php:133
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/categories.php:52
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/categories.php:69
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/categories.php:81
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/categories.php:104
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/categories.php:121
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/categories.php:133
 #, php-format
 msgctxt "categories"
 msgid "View all posts in %s"
 msgstr "Visualizza tutti i post in % s"
 
-#: inc/post-functions.php:55
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/post-functions.php:55
 msgctxt "comments"
 msgid "% Comments"
 msgstr "% Commenti"
 
-#: comments.php:65 comments.php:100
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/comments.php:65
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/comments.php:100
 msgctxt "comments"
 msgid "&larr; Older Comments"
 msgstr "&larr; Vecchi commenti"
 
-#: comments.php:61 comments.php:96
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/comments.php:61
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/comments.php:96
 msgctxt "comments"
 msgid "Comment navigation"
 msgstr "Navigazione nei commenti"
 
-#: comments.php:71 comments.php:106
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/comments.php:71
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/comments.php:106
 msgctxt "comments"
 msgid "Newer Comments &rarr;"
 msgstr "Commenti più recenti & rarr;"
 
 #. %s: post title
-#: comments.php:37
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/comments.php:37
 #, php-format
 msgctxt "comments"
 msgid "One thought on &ldquo;<span>%s</span>&rdquo;"
 msgstr "Un commento nel & ldquo;% s & rdquo;"
 
 #. 1: number of comments, 2: post title
-#: comments.php:43
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/comments.php:43
 #, php-format
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;<span>%2$s</span>&rdquo;"
@@ -614,58 +621,58 @@ msgid_plural "%1$s thoughts on &ldquo;<span>%2$s</span>&rdquo;"
 msgstr[0] "%1$s commento nel &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s commenti su &ldquo;%2$s&rdquo;"
 
-#: mybooking-parts/contact/mybooking-contact-info.php:23
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:23
 msgctxt "contact"
 msgid "Address"
 msgstr "Indirizzo"
 
-#: mybooking-parts/contact/mybooking-contact-info.php:45
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:45
 msgctxt "contact"
 msgid "E-mail address"
 msgstr "Indirizzo email"
 
-#: mybooking-parts/contact/mybooking-contact-info.php:33
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-parts/contact/mybooking-contact-info.php:33
 msgctxt "contact"
 msgid "Phone number"
 msgstr "Numero di telefono"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:44
-#: mybooking-templates/mybooking-plugin-contact-widget.php:47
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:44
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:47
 msgctxt "contact_form"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:59
-#: mybooking-templates/mybooking-plugin-contact-widget.php:61
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:59
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:61
 msgctxt "contact_form"
 msgid "Message"
 msgstr "Messaggio"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:30
-#: mybooking-templates/mybooking-plugin-contact-widget.php:32
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:30
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:32
 msgctxt "contact_form"
 msgid "Name"
 msgstr "Nome"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:52
-#: mybooking-templates/mybooking-plugin-contact-widget.php:54
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:52
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:54
 msgctxt "contact_form"
 msgid "Phone number"
 msgstr "Numero di telefono"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:76
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:76
 msgctxt "contact_form"
 msgid "Send"
 msgstr "Spedire"
 
-#: mybooking-templates/mybooking-plugin-contact-widget.php:36
-#: mybooking-templates/mybooking-plugin-contact-widget.php:38
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:36
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:38
 msgctxt "contact_form"
 msgid "Surname"
 msgstr "Cognome"
 
 #. %s: permalink
-#: mybooking-parts/blog/mybooking-content-blog.php:66
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-parts/blog/mybooking-content-blog.php:66
 #, php-format
 msgctxt "content_blog"
 msgid ""
@@ -675,92 +682,92 @@ msgstr ""
 "<a href=\"%s\" rel=\"bookmark\" class=\"block-ellipsis untitled\">Senza "
 "titolo</a>"
 
-#: mybooking-parts/blog/mybooking-content-single.php:37
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-parts/blog/mybooking-content-single.php:37
 msgctxt "content_blog"
 msgid "Untitled"
 msgstr "Senza titolo"
 
-#: inc/customizer/carrousel-control.php:43
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer/carrousel-control.php:43
 msgctxt "customize-image-gallery-control"
 msgid "Configure Carrousel"
 msgstr "Configura Carrousel"
 
-#: inc/customizer/carrousel-control.php:42
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer/carrousel-control.php:42
 msgctxt "customize-image-gallery-control"
 msgid "Remove All"
 msgstr "Rimuovi tutto"
 
-#: inc/customizer/class-font-selector.php:51
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer/class-font-selector.php:51
 msgctxt "customize_font_selector"
 msgid "Default"
 msgstr "Predefinito"
 
-#: inc/customizer/class-font-selector.php:72
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer/class-font-selector.php:72
 msgctxt "customize_font_selector"
 msgid "Google Fonts"
 msgstr "Google Fonts"
 
-#: inc/customizer/class-font-selector.php:57
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer/class-font-selector.php:57
 msgctxt "customize_font_selector"
 msgid "Standard Fonts"
 msgstr "Caratteri standard"
 
-#: inc/customizer.php:1169
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:979
 msgctxt "customizer_colors"
 msgid "Activate advanced color mode"
 msgstr "Attiva la modalità colore avanzata"
 
-#: inc/customizer.php:914
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:931
 msgctxt "customizer_colors"
 msgid "Body Background color"
 msgstr "Colore di sfondo della pagina"
 
-#: inc/customizer.php:930
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:947
 msgctxt "customizer_colors"
 msgid "Body Text color"
 msgstr "Colore del testo della pagina"
 
-#: inc/customizer.php:824
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:841
 msgctxt "customizer_colors"
 msgid "Brand Primary color"
 msgstr "Colore primario"
 
-#: inc/customizer.php:853
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:870
 msgctxt "customizer_colors"
 msgid "Brand Primary dark color"
 msgstr "Colore scuro primario"
 
-#: inc/customizer.php:839
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:856
 msgctxt "customizer_colors"
 msgid "Brand Primary light color"
 msgstr "Colore chiaro primario"
 
-#: inc/customizer.php:869
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:886
 msgctxt "customizer_colors"
 msgid "Brand Secondary color"
 msgstr "Colore secondario"
 
-#: inc/customizer.php:897
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:914
 msgctxt "customizer_colors"
 msgid "Brand Secondary dark color"
 msgstr "Colore scuro secondario"
 
-#: inc/customizer.php:883
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:900
 msgctxt "customizer_colors"
 msgid "Brand Secondary light color"
 msgstr "Colore chiaro secondario"
 
-#: inc/customizer.php:805
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:822
 msgctxt "customizer_colors"
 msgid "Colors"
 msgstr "Colori"
 
-#: inc/customizer.php:946
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:963
 msgctxt "customizer_colors"
 msgid "Headers Text color"
 msgstr "Colore del testo delle intestazioni"
 
-#: inc/customizer.php:1170
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:980
 msgctxt "customizer_colors"
 msgid ""
 "If <b>checked</b> activates advanced color controls on several Customizer "
@@ -770,92 +777,117 @@ msgstr ""
 "sezioni di Customizer. Deseleziona per il controllo del colore di base "
 "(predefinito)."
 
-#: inc/customizer.php:807
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:824
 msgctxt "customizer_colors"
 msgid "Theme colors"
 msgstr "Colori del tema"
 
-#: inc/customizer.php:751
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:768
 msgctxt "customizer_company"
 msgid " YouTube URL"
 msgstr "URL di YouTube"
 
-#: inc/customizer.php:573 inc/customizer.php:574 inc/customizer.php:582
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:590
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:591
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:599
 msgctxt "customizer_company"
 msgid "Address"
 msgstr "Indirizzo"
 
-#: inc/customizer.php:487 inc/customizer.php:489
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:504
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:506
 msgctxt "customizer_company"
 msgid "Contact details"
 msgstr "Dettagli del contatto"
 
-#: inc/customizer.php:785
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:802
 msgctxt "customizer_company"
 msgid "Copy Google Maps iframe"
 msgstr "Copia l'iframe di Google Maps"
 
-#: inc/customizer.php:640 inc/customizer.php:641 inc/customizer.php:649
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:657
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:658
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:666
 msgctxt "customizer_company"
 msgid "Email address"
 msgstr "Indirizzo email"
 
-#: inc/customizer.php:684 inc/customizer.php:685 inc/customizer.php:693
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:701
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:702
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:710
 msgctxt "customizer_company"
 msgid "Facebook URL"
 msgstr "URL di Facebook"
 
-#: inc/customizer.php:776 inc/customizer.php:777
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:793
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:794
 msgctxt "customizer_company"
 msgid "Google maps iframe"
 msgstr "Iframe di Google Maps"
 
-#: inc/customizer.php:706 inc/customizer.php:707 inc/customizer.php:715
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:723
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:724
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:732
 msgctxt "customizer_company"
 msgid "Instagram URL"
 msgstr "URL di Instagram"
 
-#: inc/customizer.php:526 inc/customizer.php:527 inc/customizer.php:535
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:543
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:544
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:552
 msgctxt "customizer_company"
 msgid "Legal name"
 msgstr "Nome legale"
 
-#: inc/customizer.php:728 inc/customizer.php:729 inc/customizer.php:737
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:745
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:746
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:754
 msgctxt "customizer_company"
 msgid "Linkedin URL"
 msgstr "URL di LinkedIn"
 
-#: inc/customizer.php:596 inc/customizer.php:597 inc/customizer.php:605
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:635
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:636
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:644
+msgctxt "customizer_company"
+msgid "Mobile number"
+msgstr "Numero di cellulare"
+
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:613
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:614
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:622
 msgctxt "customizer_company"
 msgid "Phone number"
 msgstr "Numero di telefono"
 
-#: inc/customizer.php:504 inc/customizer.php:505 inc/customizer.php:513
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:521
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:522
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:530
 msgctxt "customizer_company"
 msgid "Trade name"
 msgstr "Nome depositato"
 
-#: inc/customizer.php:662 inc/customizer.php:663 inc/customizer.php:671
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:679
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:680
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:688
 msgctxt "customizer_company"
 msgid "Twitter URL"
 msgstr "URL di Twitter"
 
-#: inc/customizer.php:548 inc/customizer.php:549 inc/customizer.php:557
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:565
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:566
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:574
 msgctxt "customizer_company"
 msgid "Vat number"
 msgstr "Partita IVA"
 
-#: inc/customizer.php:618 inc/customizer.php:619 inc/customizer.php:627
-msgctxt "customizer_company"
-msgid "WhatsApp number"
-msgstr "Numero WhatsApp"
-
-#: inc/customizer.php:752 inc/customizer.php:760
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:769
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:777
 msgctxt "customizer_company"
 msgid "YouTube URL"
 msgstr "URL di YouTube"
 
-#: inc/customizer.php:1858
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1824
 msgctxt "customizer_footer"
 msgid ""
 "Controls footer layout and, if advanced mode enabled on Colors section, also "
@@ -864,221 +896,250 @@ msgstr ""
 "Controlla il layout del piè di pagina e, se la modalità avanzata è abilitata "
 "nella sezione Colori, anche i colori dello sfondo e dei collegamenti."
 
-#: inc/customizer.php:1912
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1948
 msgctxt "customizer_footer"
 msgid "Detail message on Footer."
 msgstr "Messaggio dettagliato a piè di pagina."
 
-#: inc/customizer.php:1856
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1822
 msgctxt "customizer_footer"
 msgid "Footer"
 msgstr "Piè di pagina"
 
-#: inc/customizer.php:1102
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1868
 msgctxt "customizer_footer"
 msgid "Footer background color"
 msgstr "Colore di sfondo del piè di pagina"
 
-#: inc/customizer.php:1119
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1885
 msgctxt "customizer_footer"
 msgid "Footer color"
 msgstr "Colore piè di pagina"
 
-#: inc/customizer.php:1878
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1844
 msgctxt "customizer_footer"
 msgid "Footer layout"
 msgstr "Layout piè di pagina"
 
-#: inc/customizer.php:1879
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1845
 msgctxt "customizer_footer"
 msgid "Footer layout (managed with widget areas)"
 msgstr "Layout di piè di pagina (gestito con aree widget)"
 
-#: inc/customizer.php:1136
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1902
 msgctxt "customizer_footer"
 msgid "Footer Link color"
 msgstr "Colore collegamento piè di pagina"
 
-#: inc/customizer.php:1153
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1919
 msgctxt "customizer_footer"
 msgid "Footer Link hover color"
 msgstr "Colore al passaggio del mouse del link a piè di pagina"
 
-#: inc/customizer.php:1884
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1850
 msgctxt "customizer_footer"
 msgid "Four columns"
 msgstr "Quattro colonne"
 
-#: inc/customizer.php:1885
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1851
 msgctxt "customizer_footer"
 msgid "Minimal (show only copyright)"
 msgstr "Minimo (mostra solo copyright)"
 
-#: inc/customizer.php:1802 inc/customizer.php:1834
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1965
+msgctxt "customizer_footer"
+msgid "Subfooter background color"
+msgstr "Colore di sfondo del subfooter"
+
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1999
+msgctxt "customizer_footer"
+msgid "Subfooter Link color"
+msgstr "Colore del link del subfooter"
+
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2016
+msgctxt "customizer_footer"
+msgid "Subfooter Link hover color"
+msgstr "Colore di hover del link del subfooter"
+
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1982
+msgctxt "customizer_footer"
+msgid "Subfooter text color"
+msgstr "Colore del testo del subfooter"
+
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1768
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1800
 msgctxt "customizer_header"
 msgid "Align center"
 msgstr "Allinea al centro"
 
-#: inc/customizer.php:1803 inc/customizer.php:1835
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1769
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1801
 msgctxt "customizer_header"
 msgid "Align right"
 msgstr "Allinea a destra"
 
-#: inc/customizer.php:1690
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1639
 msgctxt "customizer_header"
 msgid "Background Carrousel"
 msgstr "Carrousel di sfondo"
 
-#: inc/customizer.php:1624 inc/customizer.php:1646
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1573
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1595
 msgctxt "customizer_header"
 msgid "Background Image"
 msgstr "Immagine di sfondo"
 
-#: inc/customizer.php:1668
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1617
 msgctxt "customizer_header"
 msgid "Background Video"
 msgstr "Video di sfondo"
 
-#: inc/customizer.php:1626
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1575
 msgctxt "customizer_header"
 msgid "Carrousel"
 msgstr "Giostra"
 
-#: inc/customizer.php:1801 inc/customizer.php:1833
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1767
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1799
 msgctxt "customizer_header"
 msgid "Default to the left"
 msgstr "Predefinito a sinistra"
 
-#: inc/customizer.php:1619
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1568
 msgctxt "customizer_header"
 msgid "Define the header section background"
 msgstr "Definisci lo sfondo del Header"
 
-#: inc/customizer.php:1710
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1659
 msgctxt "customizer_header"
 msgid "Define the widget areas on header layout"
 msgstr "Definisci le aree del widget nel layout del Header"
 
-#: inc/customizer.php:1579
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1528
 msgctxt "customizer_header"
 msgid "Defines header's background type and widget's columns layout"
 msgstr ""
 "Definisce il tipo di sfondo del Header e il layout delle colonne del widget"
 
-#: inc/customizer.php:1618
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1687
+msgctxt "customizer_header"
+msgid "Header background color"
+msgstr ""
+
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1567
 msgctxt "customizer_header"
 msgid "Header section background"
 msgstr "Sfondo della sezione dell Header"
 
-#: inc/customizer.php:1772
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1738
 msgctxt "customizer_header"
 msgid "Header Widget Link color"
 msgstr "Colore del collegamento al widget dell Header"
 
-#: inc/customizer.php:1755
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1721
 msgctxt "customizer_header"
 msgid "Header Widget Text color"
 msgstr "Colore del testo del widget dell Header"
 
-#: inc/customizer.php:1738
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1704
 msgctxt "customizer_header"
 msgid "Header Widget Title color"
 msgstr "Colore del titolo del widget dell Header"
 
-#: inc/customizer.php:1598
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1547
 msgctxt "customizer_header"
 msgid "Home Header visible"
 msgstr "Intestazione della Home visibile"
 
-#: inc/customizer.php:1709
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1658
 msgctxt "customizer_header"
 msgid "Layout"
 msgstr "Layout"
 
-#: inc/customizer.php:1716
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1665
 #, php-format
 msgctxt "customizer_header"
 msgid "Two columns (33% - 66%)"
 msgstr "URL di Twitter"
 
-#: inc/customizer.php:1715
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1664
 #, php-format
 msgctxt "customizer_header"
 msgid "Two columns (50% - 50%)"
 msgstr "Due colonne (50% - 50%)"
 
-#: inc/customizer.php:1717
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1666
 #, php-format
 msgctxt "customizer_header"
 msgid "Two columns (66% - 33%)"
 msgstr "Due colonne (66% - 33%)"
 
-#: inc/customizer.php:1625
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1574
 msgctxt "customizer_header"
 msgid "Video"
 msgstr "Video"
 
-#: inc/customizer.php:1828
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1794
 msgctxt "customizer_header"
 msgid "Widget Text Align"
 msgstr "Allineamento del testo del widget"
 
-#: inc/customizer.php:1796
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1762
 msgctxt "customizer_header"
 msgid "Widget Title Align"
 msgstr "Allineamento del titolo del widget"
 
-#: inc/customizer.php:1577
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1526
 msgctxt "customizer_home"
 msgid "Header"
 msgstr "Header"
 
-#: inc/customizer.php:1718
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1667
 msgctxt "customizer_home"
 msgid "One column"
 msgstr "Una colonna"
 
-#: inc/customizer.php:2040
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2164
 msgctxt "customizer_identity"
 msgid "Site's logo height"
 msgstr "Altezza del logo del sito"
 
-#: inc/customizer.php:2041
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2165
 msgctxt "customizer_identity"
 msgid "Value in pixels."
 msgstr "Valore in pixel."
 
-#: inc/customizer.php:1294
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1104
 msgctxt "customizer_layout"
 msgid "Boxed navbar and topbar"
 msgstr "Barra di navigazione e barra superiore in scatola"
 
-#: inc/customizer.php:1287
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1097
 msgctxt "customizer_layout"
 msgid "Choose between Bootstrap's container and container-fluid"
 msgstr "Scegli tra il container di Bootstrap e il container-fluid"
 
-#: inc/customizer.php:1295
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1105
 msgctxt "customizer_layout"
 msgid "Full width navbar and topbar"
 msgstr "Barra di navigazione e barra superiore a tutta larghezza"
 
-#: inc/customizer.php:1258
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1068
 msgctxt "customizer_layout"
 msgid "Layout"
 msgstr "Layout"
 
-#: inc/customizer.php:1260
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1070
 msgctxt "customizer_layout"
 msgid "Layout defaults"
 msgstr "Impostazioni predefinite del layout"
 
-#: inc/customizer.php:1286
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1096
 msgctxt "customizer_layout"
 msgid "Navigation and Topbar container Width"
 msgstr "Larghezza del contenitore di navigazione e barra superiore"
 
-#: inc/customizer.php:1531
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1341
 msgctxt "customizer_navbar"
 msgid ""
 "If <b>checked</b> the navbar will be shown overlapped with Header section "
@@ -1090,67 +1151,67 @@ msgstr ""
 "la barra di navigazione a tinta unita nella parte superiore della sezione "
 "Intestazione"
 
-#: inc/customizer.php:1559
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1369
 msgctxt "customizer_navbar"
 msgid "Left"
 msgstr "Sinistra"
 
-#: inc/customizer.php:1552
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1362
 msgctxt "customizer_navbar"
 msgid "Mobile Toggler Position"
 msgstr "Posizione del commutatore a mobile"
 
-#: inc/customizer.php:1511
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1321
 msgctxt "customizer_navbar"
 msgid "Nav Bar"
 msgstr "Navigazione"
 
-#: inc/customizer.php:965
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1387
 msgctxt "customizer_navbar"
 msgid "NavBar background color"
 msgstr "Colore di sfondo della navigazione"
 
-#: inc/customizer.php:1051
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1473
 msgctxt "customizer_navbar"
 msgid "NavBar DropDown Item Active color"
 msgstr "Colore de l'elemento attivo del dropdown"
 
-#: inc/customizer.php:1034
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1456
 msgctxt "customizer_navbar"
 msgid "NavBar DropDown Item color"
 msgstr "Colore de l'elemento del dropdown"
 
-#: inc/customizer.php:1017
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1439
 msgctxt "customizer_navbar"
 msgid "NavBar Link active color"
 msgstr "Colore dei link attivo della navigazione"
 
-#: inc/customizer.php:1068
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1490
 msgctxt "customizer_navbar"
 msgid "NavBar Link collapse color"
 msgstr "Colore attivo dei link della navigazione di mobile aperta"
 
-#: inc/customizer.php:983
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1405
 msgctxt "customizer_navbar"
 msgid "NavBar Link color"
 msgstr "Colore dei link della navigazione"
 
-#: inc/customizer.php:1000
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1422
 msgctxt "customizer_navbar"
 msgid "NavBar Link hover color"
 msgstr "Colore dei link della navigazione al passaggio del mouse"
 
-#: inc/customizer.php:1085
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1507
 msgctxt "customizer_navbar"
 msgid "NavBar Toggler Icon color"
 msgstr "Colore dell'icona di navigazione mobile"
 
-#: inc/customizer.php:1558
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1368
 msgctxt "customizer_navbar"
 msgid "Right"
 msgstr "Destra"
 
-#: inc/customizer.php:1513
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1323
 msgctxt "customizer_navbar"
 msgid ""
 "Settings for toggler position, header integration and background and menu "
@@ -1159,59 +1220,64 @@ msgstr ""
 "Impostazioni per posizione del commutatore, integrazione dell Header e "
 "colori di sfondo e di menu"
 
-#: inc/customizer.php:1553
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1363
 msgctxt "customizer_navbar"
 msgid "Toggler position on mobile devices"
 msgstr "Posizione di commutazione sui dispositivi mobili"
 
-#: inc/customizer.php:1530
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1340
 msgctxt "customizer_navbar"
 msgid "Transparent Header"
 msgstr "Header transparente"
 
-#: inc/customizer.php:472
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:489
 msgctxt "customizer_panel"
 msgid "Customise your installation of Mybooking"
 msgstr "Customise your installation of Mybooking"
 
-#: inc/customizer.php:471
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:488
 msgctxt "customizer_panel"
 msgid "Mybooking Theme"
 msgstr "Tema Mybooking"
 
-#: inc/customizer.php:1932
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2036
 msgctxt "customizer_selector"
 msgid "Booking Forms"
 msgstr "Forme di prenotazione"
 
-#: inc/customizer.php:1933
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2037
 msgctxt "customizer_selector"
 msgid "Controls the booking forms apperance on Home and process pages."
 msgstr ""
 "Controlla l'aspetto dei moduli di prenotazione nella Home e nelle pagine di "
 "processi."
 
-#: inc/customizer.php:1973
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2097
 msgctxt "customizer_selector"
 msgid "General Form labels"
 msgstr "Etichette modulo generale"
 
-#: inc/customizer.php:1954
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2058
 msgctxt "customizer_selector"
 msgid "Home Booking Form background"
 msgstr "Sfondo dell forme di prenotazione alla Home"
 
-#: inc/customizer.php:1991
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2077
+msgctxt "customizer_selector"
+msgid "Home Booking Form Mobile background"
+msgstr "Home Booking Form Mobile background"
+
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2115
 msgctxt "customizer_selector"
 msgid "Sticky Booking Form background"
 msgstr "Sfondo del modulo di prenotazione sticky"
 
-#: inc/customizer.php:2009
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2133
 msgctxt "customizer_selector"
 msgid "Sticky Form labels"
 msgstr "Etichette dell modulo di prenotazione sticky"
 
-#: inc/customizer.php:1955
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2059
 msgctxt "customizer_selector"
 msgid ""
 "Usefull when the form is placed inside the Header and needs some "
@@ -1219,22 +1285,30 @@ msgid ""
 msgstr ""
 "Utile quando il form è inserito nell'header e necessita di trasparenza."
 
-#: inc/customizer.php:1904
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:2078
+msgctxt "customizer_selector"
+msgid ""
+"Usefull when the form is placed outside the Header and needs some opacity."
+msgstr ""
+"Utile quando il modulo è posto al di fuori dell'intestazione e ha bisogno di "
+"una certa opacità."
+
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1940
 msgctxt "customizer_topbar"
 msgid "Footer detailed message"
 msgstr "Messaggio dettagliato nel piè di pagina"
 
-#: inc/customizer.php:1903
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1939
 msgctxt "customizer_topbar"
 msgid "Footer message"
 msgstr "Messaggio a piè di pagina"
 
-#: inc/customizer.php:1359
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1169
 msgctxt "customizer_topbar"
 msgid "Home Topbar Background"
 msgstr "Sfondo della barra superiore alla Home"
 
-#: inc/customizer.php:1335
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1145
 msgctxt "customizer_topbar"
 msgid ""
 "If checked the TopBar will be shown on top of pages with company information "
@@ -1244,27 +1318,27 @@ msgstr ""
 "informazioni sulla società e un messaggio di avviso. Deseleziona per "
 "nascondere la TopBar"
 
-#: inc/customizer.php:1444
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1254
 msgctxt "customizer_topbar"
 msgid "Notice Background"
 msgstr "Avviso sfondo"
 
-#: inc/customizer.php:1476
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1286
 msgctxt "customizer_topbar"
 msgid "Notice Link"
 msgstr "Link del'avviso"
 
-#: inc/customizer.php:1492
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1302
 msgctxt "customizer_topbar"
 msgid "Notice Link Hover"
 msgstr "Link del'avviso al passaggio del mouse"
 
-#: inc/customizer.php:1460
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1270
 msgctxt "customizer_topbar"
 msgid "Notice Text"
 msgstr "Testo del'avviso"
 
-#: inc/customizer.php:1360
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1170
 msgctxt "customizer_topbar"
 msgid ""
 "This setting affects ONLY the home page topbar. You can set transparency for "
@@ -1274,154 +1348,155 @@ msgstr ""
 "Puoi impostare la trasparenza per una migliore integrazione quando è "
 "selezionata l'opzione Intestazione trasparente della barra di navigazione."
 
-#: inc/customizer.php:1315 inc/customizer.php:1317
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1125
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1127
 msgctxt "customizer_topbar"
 msgid "Top Bar"
 msgstr "Barra superiore"
 
-#: inc/customizer.php:1334
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1144
 msgctxt "customizer_topbar"
 msgid "Top Bar active"
 msgstr "Barra superiore attiva"
 
-#: inc/customizer.php:1377
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1187
 msgctxt "customizer_topbar"
 msgid "Topbar Background"
 msgstr "Sfondo della barra superiore"
 
-#: inc/customizer.php:1409
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1219
 msgctxt "customizer_topbar"
 msgid "Topbar Link"
 msgstr "Link della barra superiore"
 
-#: inc/customizer.php:1425
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1235
 msgctxt "customizer_topbar"
 msgid "Topbar Link Hover"
 msgstr "Passaggio del mouse su link della barra superiore"
 
-#: inc/customizer.php:1393
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1203
 msgctxt "customizer_topbar"
 msgid "Topbar Text"
 msgstr "Testo della barra superiore"
 
-#: inc/customizer.php:1215
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1025
 msgctxt "customizer_typography"
 msgid "Font Body family"
 msgstr "Famiglia di caratteri pagina"
 
-#: inc/customizer.php:1235
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1045
 msgctxt "customizer_typography"
 msgid "Font Heading family"
 msgstr "Famiglia di caratteri dell'intestazioni"
 
-#: inc/customizer.php:1216
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1026
 msgctxt "customizer_typography"
 msgid "Select the body typography"
 msgstr "Seleziona la tipografia del corpo di testo"
 
-#: inc/customizer.php:1236
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1046
 msgctxt "customizer_typography"
 msgid "Select the heading typography"
 msgstr "Seleziona la tipografia dell'intestazione"
 
-#: inc/customizer.php:1191
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1001
 msgctxt "customizer_typography"
 msgid "Typography"
 msgstr "Tipografia"
 
-#: inc/customizer.php:1193
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/customizer.php:1003
 msgctxt "customizer_typography"
 msgid "Typography defaults"
 msgstr "Impostazioni predefinite della tipografia"
 
-#: inc/post-functions.php:54
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/post-functions.php:54
 msgctxt "entry_footer"
 msgid "1 Comment"
 msgstr "1 Commento"
 
 #. %s: Name of current post
-#: inc/post-functions.php:86
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/post-functions.php:86
 #, php-format
 msgctxt "entry_footer"
 msgid "Edit %s"
 msgstr "Editare %s"
 
-#: inc/post-functions.php:53
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/post-functions.php:53
 msgctxt "entry_footer"
 msgid "Leave a comment"
 msgstr "Lascia un commento"
 
-#: footer.php:33
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/footer.php:33
 msgctxt "footer"
 msgid "Top"
 msgstr "Superiore"
 
-#: inc/setup.php:190
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:190
 msgctxt "gutenberg_palette"
 msgid "Black"
 msgstr "Nero"
 
-#: inc/setup.php:178
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:178
 msgctxt "gutenberg_palette"
 msgid "Error"
 msgstr "Errore"
 
-#: inc/setup.php:163
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:163
 msgctxt "gutenberg_palette"
 msgid "Info"
 msgstr "Info"
 
-#: inc/setup.php:131
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:131
 msgctxt "gutenberg_palette"
 msgid "Primary"
 msgstr "Primario"
 
-#: inc/setup.php:141
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:141
 msgctxt "gutenberg_palette"
 msgid "Primary Dark"
 msgstr "Scuro primario"
 
-#: inc/setup.php:136
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:136
 msgctxt "gutenberg_palette"
 msgid "Primary Light"
 msgstr "Chiaro primario"
 
-#: inc/setup.php:147
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:147
 msgctxt "gutenberg_palette"
 msgid "Secondary"
 msgstr "Secondario"
 
-#: inc/setup.php:157
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:157
 msgctxt "gutenberg_palette"
 msgid "Secondary Dark"
 msgstr "Scuro secondario"
 
-#: inc/setup.php:152
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:152
 msgctxt "gutenberg_palette"
 msgid "Secondary Light"
 msgstr "Chiaro secondario"
 
-#: inc/setup.php:168
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:168
 msgctxt "gutenberg_palette"
 msgid "Success"
 msgstr "Successo"
 
-#: inc/setup.php:173
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:173
 msgctxt "gutenberg_palette"
 msgid "Warning"
 msgstr "Avvertimento"
 
-#: inc/setup.php:184
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:184
 msgctxt "gutenberg_palette"
 msgid "White"
 msgstr "Bianco"
 
-#: header.php:47
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/header.php:47
 msgctxt "header"
 msgid "Skip to content"
 msgstr "Salta al contenuto"
 
-#: mybooking-parts/home/mybooking-home-news.php:49
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-parts/home/mybooking-home-news.php:49
 msgctxt "home-news-button"
 msgid "Read"
 msgstr "Leggere"
@@ -1434,33 +1509,33 @@ msgstr "https://github.com/mybooking-es/mybooking"
 msgid "https://mybooking.es"
 msgstr "https://mybooking.es"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:34
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:34
 msgctxt "login"
 msgid "Enter username or email"
 msgstr "Inserisci nome utente o e-mail"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:26
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:26
 msgctxt "login"
 msgid "I'm a new customer"
 msgstr "Sono un nuovo cliente"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:20
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:20
 msgctxt "login"
 msgid "I'm a registered customer"
 msgstr "Sono un cliente registrato"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:40
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:40
 msgctxt "login"
 msgid "Login"
 msgstr "Login"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:37
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:38
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:37
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:38
 msgctxt "login"
 msgid "Password"
 msgstr "Password"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:33
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:33
 msgctxt "login"
 msgid "Username or email"
 msgstr "Nome utente o email"
@@ -1504,366 +1579,373 @@ msgstr ""
 "base per noleggi e siti di attività. Mybooking funziona perfettamente con "
 "Elementor. Mybooking è anche pronto per WooCommerce."
 
-#: inc/widgets.php:128
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:128
 msgctxt "mybooking_widgets"
 msgid "Blog sidebar"
 msgstr "Barra laterale del blog"
 
-#: inc/widgets.php:130
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:130
 msgctxt "mybooking_widgets"
 msgid "Blog sidebar widgets area"
 msgstr "Area di widget della barra laterale del blog"
 
-#: inc/widgets.php:163
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:163
 msgctxt "mybooking_widgets"
 msgid "Footer first widgets area"
 msgstr "Prima area widget del piè di pagina"
 
-#: inc/widgets.php:188
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:188
 msgctxt "mybooking_widgets"
 msgid "Footer Four"
 msgstr "Piè di pagina quattro"
 
-#: inc/widgets.php:190
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:190
 msgctxt "mybooking_widgets"
 msgid "Footer fourth widgets area"
 msgstr "Quarta area widget del piè di pagina"
 
-#: inc/widgets.php:161
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:161
 msgctxt "mybooking_widgets"
 msgid "Footer One"
 msgstr "Piè di pagina uno"
 
-#: inc/widgets.php:172
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:172
 msgctxt "mybooking_widgets"
 msgid "Footer second widgets area"
 msgstr "Seconda area widget del piè di pagina"
 
-#: inc/widgets.php:181
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:181
 msgctxt "mybooking_widgets"
 msgid "Footer third widgets area"
 msgstr "Terza area widget del piè di pagina"
 
-#: inc/widgets.php:179
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:179
 msgctxt "mybooking_widgets"
 msgid "Footer Three"
 msgstr "Piè di pagina tre"
 
-#: inc/widgets.php:170
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:170
 msgctxt "mybooking_widgets"
 msgid "Footer Two"
 msgstr "Piè di pagina due"
 
-#: inc/widgets.php:47
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:47
 msgctxt "mybooking_widgets"
 msgid "Main Menu"
 msgstr "Menu principale"
 
-#: inc/widgets.php:150
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:150
 msgctxt "mybooking_widgets"
 msgid "Mybooking Contact Template Contact Form"
 msgstr "Modulo di contatto del modello di contatto di Mybooking"
 
-#: inc/widgets.php:117
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:117
 msgctxt "mybooking_widgets"
 msgid "Mybooking Home Template Bottom"
 msgstr "Mybooking Home Template in basso"
 
-#: inc/widgets.php:119
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:119
 msgctxt "mybooking_widgets"
 msgid "Mybooking Home Template bottom widgets area"
 msgstr "Area widget inferiore del modello Mybooking Home"
 
-#: inc/widgets.php:89 inc/widgets.php:91
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:89
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:91
 msgctxt "mybooking_widgets"
 msgid "Mybooking Home Template Center One"
 msgstr "Centro modelli Mybooking Home 1"
 
-#: inc/widgets.php:107 inc/widgets.php:109
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:107
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:109
 msgctxt "mybooking_widgets"
 msgid "Mybooking Home Template Center Three"
 msgstr "Centro modelli Mybooking Home 3"
 
-#: inc/widgets.php:98 inc/widgets.php:100
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:98
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:100
 msgctxt "mybooking_widgets"
 msgid "Mybooking Home Template Center Two"
 msgstr "Centro modelli Mybooking Home 2"
 
-#: inc/widgets.php:58
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:58
 msgctxt "mybooking_widgets"
 msgid "Mybooking Home Template Header Left"
 msgstr "Intestazione del modello di Mybooking Home a sinistra"
 
-#: inc/widgets.php:67
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:67
 msgctxt "mybooking_widgets"
 msgid "Mybooking Home Template Header Right"
 msgstr "Intestazione del modello di Mybooking Home a destra"
 
-#: inc/widgets.php:78
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:78
 msgctxt "mybooking_widgets"
 msgid "Mybooking Home Template Top"
 msgstr "Mybooking Home Template Top"
 
-#: inc/widgets.php:60
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:60
 msgctxt "mybooking_widgets"
 msgid "Mybooking Home Template widgets area at left of Home header"
 msgstr ""
 "Area dei widget del modello Home di Mybooking a sinistra dell'intestazione "
 "Home"
 
-#: inc/widgets.php:69
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:69
 msgctxt "mybooking_widgets"
 msgid "Mybooking Home Template widgets area at right of Home header"
 msgstr ""
 "Area dei widget del modello di Mybooking Home a destra dell'intestazione Home"
 
-#: inc/widgets.php:80
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:80
 msgctxt "mybooking_widgets"
 msgid "Mybooking Home Template widgets area at top"
 msgstr "Area dei widget del modello di Mybooking Home in alto"
 
-#: inc/widgets.php:139
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:139
 msgctxt "mybooking_widgets"
 msgid "Mybooking Landing Template Sidebar"
 msgstr "Area widget della barra laterale del modello Mybooking Landing"
 
-#: inc/widgets.php:141
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:141
 msgctxt "mybooking_widgets"
 msgid "Mybooking Landing template sidebar widgets area"
 msgstr "Area widget della barra laterale del modello Mybooking Landing"
 
-#: inc/widgets.php:27
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:27
 msgctxt "mybooking_widgets"
 msgid "Notification area at Top"
 msgstr "Area di notifica superiore"
 
-#: inc/widgets.php:152
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:152
 msgctxt "mybooking_widgets"
 msgid "Place your contact form at here"
 msgstr ""
 "Inserisci il tuo modulo di contatto qui\n"
 
-#: inc/widgets.php:25
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:25
 msgctxt "mybooking_widgets"
 msgid "Top Notification"
 msgstr "Area di notifica superiore"
 
-#: inc/widgets.php:36
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:36
 msgctxt "mybooking_widgets"
 msgid "TopBar Right"
 msgstr "TopBar a destra"
 
-#: inc/widgets.php:38
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:38
 msgctxt "mybooking_widgets"
 msgid "TopBar Right Area"
 msgstr "TopBar a destra"
 
-#: inc/widgets.php:49
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/widgets.php:49
 msgctxt "mybooking_widgets"
 msgid "Widgets area at Main Menu right side"
 msgstr "Area dei widget sul lato destro del Menu Principale"
 
-#: inc/setup.php:64
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/setup.php:64
 msgctxt "nav_menus"
 msgid "Primary Menu"
 msgstr "Menù primario"
 
-#: inc/class-wp-bootstrap-navwalker.php:387
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/class-wp-bootstrap-navwalker.php:387
 msgctxt "navwalker"
 msgid "Add a menu"
 msgstr "Aggiungi un menu"
 
-#: inc/post-functions.php:171
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/post-functions.php:171
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
-#: page.php:43 mybooking-parts/blog/mybooking-content-single.php:51
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/page.php:43
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-parts/blog/mybooking-content-single.php:51
 msgctxt "pages_navigation"
 msgid "Pages"
 msgstr "Pagine"
 
-#: inc/pagination.php:28 mybooking-parts/blog/mybooking-pagination.php:16
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/pagination.php:28
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-parts/blog/mybooking-pagination.php:16
 msgctxt "pagination"
 msgid "&laquo;"
 msgstr "&laquo;"
 
-#: inc/pagination.php:29 mybooking-parts/blog/mybooking-pagination.php:18
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/pagination.php:29
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-parts/blog/mybooking-pagination.php:18
 msgctxt "pagination"
 msgid "&raquo;"
 msgstr "&raquo;"
 
-#: inc/pagination.php:30 mybooking-parts/blog/mybooking-pagination.php:22
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/pagination.php:30
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-parts/blog/mybooking-pagination.php:22
 msgctxt "pagination"
 msgid "Posts navigation"
 msgstr "Navigazione di posts"
 
-#: inc/post-functions.php:40
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/post-functions.php:40
 msgctxt "post-meta"
 msgid "by"
 msgstr "di"
 
-#: inc/post-functions.php:162
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/post-functions.php:162
 msgctxt "post_navigation"
 msgid "Post navigation"
 msgstr "Navigazione di post"
 
-#: inc/post-functions.php:167
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/inc/post-functions.php:167
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:189
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:202
 msgctxt "renting_choose_product"
 msgid "Book it!"
 msgstr "Prenotalo!"
 
-#: mybooking-templates/mybooking-plugin-choose-product.php:26
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product.php:26
 msgctxt "renting_choose_product"
 msgid "Close"
 msgstr "Vicina"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:41
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:67
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:41
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:67
 msgctxt "renting_choose_product"
 msgid "Edit"
 msgstr "Editare"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:140
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:143
 msgctxt "renting_choose_product"
 msgid "Few units left!"
 msgstr "Poche unità rimaste!"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:210
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:223
 msgctxt "renting_choose_product"
 msgid "Next"
 msgstr "Prossimo"
 
-#: mybooking-templates/mybooking-plugin-choose-product-tmpl.php:105
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:109
 msgctxt "renting_choose_product"
 msgid "Taxes included"
 msgstr "Tasse incluse"
 
 #. %s: Product Type (Vehicle, Product, ...)
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:491
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:491
 #, php-format
 msgctxt "renting_complete"
 msgid "%s deposit"
 msgstr "Deposito %s"
 
-#: mybooking-templates/mybooking-plugin-complete.php:75
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:75
 msgctxt "renting_complete"
 msgid "Additional information"
 msgstr "Informazioni aggiuntive"
 
-#: mybooking-templates/mybooking-plugin-complete.php:70
-#: mybooking-templates/mybooking-plugin-complete.php:72
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:70
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:72
 msgctxt "renting_complete"
 msgid "Alternative phone number"
 msgstr "Numero di telefono alternativo"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:685
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:685
 msgctxt "renting_complete"
 msgid "Book now and pay now"
 msgstr "Prenota ora e paga ora"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:677
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:677
 msgctxt "renting_complete"
 msgid "Book now and pay on arrival"
 msgstr "Prenota ora e paga all&#39;arrivo"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:416
-#: mybooking-templates/mybooking-plugin-complete.php:99
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:416
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:99
 msgctxt "renting_complete"
 msgid "Close"
 msgstr "Vicina"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:321
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:384
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:321
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:384
 msgctxt "renting_complete"
 msgid "Collection"
 msgstr "Raccogliere"
 
-#: mybooking-templates/mybooking-plugin-complete.php:78
-#: mybooking-templates/mybooking-plugin-complete.php:79
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:78
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:79
 msgctxt "renting_complete"
 msgid "Comments"
 msgstr "Commenti"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:744
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:744
 msgctxt "renting_complete"
 msgid "Confirm"
 msgstr "Conferma"
 
-#: mybooking-templates/mybooking-plugin-complete.php:58
-#: mybooking-templates/mybooking-plugin-complete.php:60
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:58
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:60
 msgctxt "renting_complete"
 msgid "Confirm E-mail"
 msgstr "Conferma email"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:87
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:87
 msgctxt "renting_complete"
 msgid "Coverage"
 msgstr "Copertura"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:784
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:784
 msgctxt "renting_complete"
 msgid "Credit or debit card"
 msgstr "Credit or debit card"
 
-#: mybooking-templates/mybooking-plugin-complete.php:40
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:40
 msgctxt "renting_complete"
 msgid "Customer's details"
 msgstr "Dettagli del cliente"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:313
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:378
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:313
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:378
 msgctxt "renting_complete"
 msgid "Delivery"
 msgstr "Consegna"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:500
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:500
 msgctxt "renting_complete"
 msgid "Driver age deposit"
 msgstr "Deposito età conducente"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:591
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:591
 msgctxt "renting_complete"
 msgid "Driver's age supplement"
 msgstr "Supplemento età conducente"
 
-#: mybooking-templates/mybooking-plugin-complete.php:53
-#: mybooking-templates/mybooking-plugin-complete.php:55
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:53
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:55
 msgctxt "renting_complete"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:252
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:295
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:252
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:295
 msgctxt "renting_complete"
 msgid "Edit"
 msgstr "Editare"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:134
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:134
 msgctxt "renting_complete"
 msgid "Extras"
 msgstr "Extras"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:481
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:481
 msgctxt "renting_complete"
 msgid "Guarantee"
 msgstr "Garantia"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:396
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:449
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:396
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:449
 msgctxt "renting_complete"
 msgid "hour(s)"
 msgstr "Ora/e"
 
 #. %s: terms and conditions URL
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:706
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:737
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:817
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:706
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:737
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:817
 #, php-format
 msgctxt "renting_complete"
 msgid ""
@@ -1873,111 +1955,112 @@ msgstr ""
 "Ho letto e con la presente accetto le <a href=\"%s\" target=\"_blank\"> "
 "condizioni </a> di noleggio"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:703
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:734
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:814
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:703
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:734
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:814
 msgctxt "renting_complete"
 msgid "I have read and hereby accept the conditions of rental"
 msgstr "Ho letto e accetto le condizioni di noleggio"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:255
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:298
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:255
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:298
 msgctxt "renting_complete"
 msgid "Info"
 msgstr "Info"
 
-#: mybooking-templates/mybooking-plugin-complete.php:43
-#: mybooking-templates/mybooking-plugin-complete.php:45
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:43
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:45
 msgctxt "renting_complete"
 msgid "Name"
 msgstr "Nome"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:776
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:776
 msgctxt "renting_complete"
 msgid "Paypal"
 msgstr "Paypal"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:598
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:152
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:598
 msgctxt "renting_complete"
 msgid "Petrol supplement"
 msgstr "Supplemento benzina"
 
-#: mybooking-templates/mybooking-plugin-complete.php:63
-#: mybooking-templates/mybooking-plugin-complete.php:66
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:63
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:66
 msgctxt "renting_complete"
 msgid "Phone number"
 msgstr "Numero di telefono"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:570
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:570
 msgctxt "renting_complete"
 msgid "Pick-up place supplement"
 msgstr "Supplemento per il luogo di ritiro"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:563
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:563
 msgctxt "renting_complete"
 msgid "Pick-up time supplement"
 msgstr "Supplemento per l'orario di ritiro"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:336
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:353
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:47
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:63
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:336
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:353
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:47
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:63
 msgctxt "renting_complete"
 msgid "Price"
 msgstr "Prezzo"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:338
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:357
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:49
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:65
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:338
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:357
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:49
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:65
 msgctxt "renting_complete"
 msgid "Quantity"
 msgstr "Quantità"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:669
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:715
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:669
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:715
 msgctxt "renting_complete"
 msgid "Request reservation"
 msgstr "Richiedi prenotazione"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:415
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:415
 msgctxt "renting_complete"
 msgid "Reservation summary"
 msgstr "Riepilogo della prenotazione"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:584
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:584
 msgctxt "renting_complete"
 msgid "Return place supplement"
 msgstr "Supplemento restituzione luogo"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:577
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:577
 msgctxt "renting_complete"
 msgid "Return time supplement"
 msgstr "Supplemento restituzione luogo"
 
-#: mybooking-templates/mybooking-plugin-complete.php:48
-#: mybooking-templates/mybooking-plugin-complete.php:50
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:48
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:50
 msgctxt "renting_complete"
 msgid "Surname"
 msgstr "Cognome"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:245
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:288
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:340
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:360
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:608
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:51
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:67
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:245
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:288
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:340
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:360
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:608
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:51
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:67
 msgctxt "renting_complete"
 msgid "Total"
 msgstr "Totale"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:508
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:508
 msgctxt "renting_complete"
 msgid "Total deposit"
 msgstr "Deposito totale"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:794
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:794
 msgctxt "renting_complete"
 msgid ""
 "You will be redirected to <b>Paypal payment platform</b> to make the "
@@ -1988,7 +2071,7 @@ msgstr ""
 "effettuare il pagamento di conferma in modo sicuro. Puoi utilizzare <u>"
 "Paypal</u> o <u>carta di credito</u> per effettuare il pagamento."
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:801
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:801
 msgctxt "renting_complete"
 msgid ""
 "You will be redirected to the <b>credit card payment platform</b> to make "
@@ -1997,7 +2080,7 @@ msgstr ""
 "Verrai reindirizzato alla <b>piattaforma di pagamento con carta di "
 "credito</b> per effettuare il pagamento di conferma in modo sicuro. \n"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:771
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:771
 msgctxt "renting_complete"
 msgid ""
 "You will be redirected to the <b>payment platform</b> to make the "
@@ -2008,23 +2091,23 @@ msgstr ""
 "pagamento di conferma in modo sicuro. Puoi utilizzare <u>Paypal</u> o <u>"
 "carta di credito</u> per effettuare il pagamento."
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:58
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:58
 msgctxt "renting_complete_create_account"
 msgid "Create account and book a reservation"
 msgstr "Crea un account e prenota una prenotazione"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:64
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:64
 msgctxt "renting_complete_create_account"
 msgid "Only book a reservation"
 msgstr "Prenota solo una prenotazione"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:70
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:71
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:70
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:71
 msgctxt "renting_complete_create_account"
 msgid "Password"
 msgstr "Password"
 
-#: mybooking-templates/mybooking-plugin-complete-tmpl.php:72
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:72
 msgctxt "renting_complete_create_account"
 msgid ""
 "Password must contain upper case letter, lower case letter, digit and symbol "
@@ -2033,428 +2116,428 @@ msgstr ""
 "La password deve contenere una lettera maiuscola, una lettera minuscola, una "
 "cifra e un simbolo (@! * - _)"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation.php:19
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-modify-reservation.php:19
 msgctxt "renting_form_modify_reservation"
 msgid "Close"
 msgstr "Vicina"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation.php:18
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-modify-reservation.php:18
 msgctxt "renting_form_modify_reservation"
 msgid "Modify reservation"
 msgstr "Modifica prenotazione"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:20
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:90
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:20
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:90
 msgctxt "renting_form_selector"
 msgid "Pick-up place"
 msgstr "Luogo di ritiro"
 
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:65
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:176
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:65
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:176
 msgctxt "renting_form_selector"
 msgid "Promotion code"
 msgstr "Codice promozionale"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:38
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:108
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:38
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:108
 msgctxt "renting_form_selector"
 msgid "Return place"
 msgstr "Luogo di restituzione"
 
-#: mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:101
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:76
-#: mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:186
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:101
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:76
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:186
 msgctxt "renting_form_selector"
 msgid "Search"
 msgstr "Cercare"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget-tmpl.php:69
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-wizard-widget-tmpl.php:69
 msgctxt "renting_form_selector_wizard"
 msgid "All"
 msgstr "Tutti"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:46
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-wizard-widget.php:46
 msgctxt "renting_form_selector_wizard"
 msgid "Book"
 msgstr "Prenotare"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:31
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-wizard-widget.php:31
 msgctxt "renting_form_selector_wizard"
 msgid "Choose a place"
 msgstr "Scegli un posto"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:37
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-wizard-widget.php:37
 msgctxt "renting_form_selector_wizard"
 msgid "Pick-up date"
 msgstr "Data di ritiro"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:41
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-wizard-widget.php:41
 msgctxt "renting_form_selector_wizard"
 msgid "Return date"
 msgstr "Data di restituzione"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget-tmpl.php:30
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-wizard-widget-tmpl.php:30
 msgctxt "renting_form_selector_wizard"
 msgid "Separator"
 msgstr "Separatore"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:35
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-wizard-widget.php:35
 msgctxt "renting_form_selector_wizard"
 msgid "When?"
 msgstr "Quando?"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-widget.php:29
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-wizard-widget.php:29
 msgctxt "renting_form_selector_wizard"
 msgid "Where?"
 msgstr "Dove?"
 
 #. %s: Product Type (Vehicle, Product, ...)
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:275
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:275
 #, php-format
 msgctxt "renting_my_reservation"
 msgid "%s deposit"
 msgstr "Deposito %s"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:487
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:487
 msgctxt "renting_my_reservation"
 msgid "Additional drivers"
 msgstr "Conducenti addizionali"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:342
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:344
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:342
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:344
 msgctxt "renting_my_reservation"
 msgid "Address"
 msgstr "Indirizzo"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:359
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:361
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:359
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:361
 msgctxt "renting_my_reservation"
 msgid "City"
 msgstr "Città"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:33
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:91
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:33
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:91
 msgctxt "renting_my_reservation"
 msgid "Collection"
 msgstr "Raccogliere"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:604
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:606
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:624
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:626
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:604
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:606
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:624
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:626
 msgctxt "renting_my_reservation"
 msgid "Company"
 msgstr "Azienda"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:354
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:356
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:354
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:356
 msgctxt "renting_my_reservation"
 msgid "Complement"
 msgstr "Complemento"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:378
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:378
 msgctxt "renting_my_reservation"
 msgid "Country"
 msgstr "Paese"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:835
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:835
 msgctxt "renting_my_reservation"
 msgid "Credit or debit card"
 msgstr "Credit or debit card"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:339
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:339
 msgctxt "renting_my_reservation"
 msgid "Customer address"
 msgstr "Indirizzo del cliente"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:304
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:304
 msgctxt "renting_my_reservation"
 msgid "Customer's details"
 msgstr "Dettagli del cliente"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:468
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:468
 msgctxt "renting_my_reservation"
 msgid "Date of birth"
 msgstr "Data di nascita"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:410
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:410
 msgctxt "renting_my_reservation"
 msgid "Date of Issue"
 msgstr "Data di nascita"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:24
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:84
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:24
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:84
 msgctxt "renting_my_reservation"
 msgid "Delivery"
 msgstr "Consegna"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:678
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:680
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:682
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:744
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:746
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:748
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:678
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:680
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:682
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:744
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:746
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:748
 msgctxt "renting_my_reservation"
 msgid "Document ID"
 msgstr "ID documento"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:284
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:284
 msgctxt "renting_my_reservation"
 msgid "Driver age deposit"
 msgstr "Deposito età conducente"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:224
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:224
 msgctxt "renting_my_reservation"
 msgid "Driver's age supplement"
 msgstr "Supplemento età conducente"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:439
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:515
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:571
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:439
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:515
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:571
 msgctxt "renting_my_reservation"
 msgid "Driving license date of issue"
 msgstr "Data di rilascio della patente di guida"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:460
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:534
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:590
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:460
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:534
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:590
 msgctxt "renting_my_reservation"
 msgid "Driving license expedition country"
 msgstr "Paese di spedizione della patente di guida"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:431
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:433
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:507
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:509
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:563
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:565
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:431
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:433
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:507
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:509
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:563
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:565
 msgctxt "renting_my_reservation"
 msgid "Driving license number"
 msgstr "Numero di patente di guida"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:696
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:698
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:700
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:762
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:764
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:766
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:696
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:698
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:700
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:762
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:764
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:766
 msgctxt "renting_my_reservation"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:615
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:617
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:638
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:640
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:615
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:617
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:638
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:640
 msgctxt "renting_my_reservation"
 msgid "Estimated Time"
 msgstr "Ora stimata"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:601
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:601
 msgctxt "renting_my_reservation"
 msgid "Flight"
 msgstr "Volo"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:610
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:612
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:631
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:633
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:610
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:612
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:631
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:633
 msgctxt "renting_my_reservation"
 msgid "Flight Number"
 msgstr "Numero di volo"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:266
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:266
 msgctxt "renting_my_reservation"
 msgid "Guarantee"
 msgstr "Garantia"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:705
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:707
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:709
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:771
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:773
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:775
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:705
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:707
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:709
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:771
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:773
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:775
 msgctxt "renting_my_reservation"
 msgid "Height (cm)"
 msgstr "Altezza (cm)"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:104
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:104
 msgctxt "renting_my_reservation"
 msgid "hour(s)"
 msgstr "Ora/e"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:403
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:405
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:403
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:405
 msgctxt "renting_my_reservation"
 msgid "ID card or passport"
 msgstr "Carta d'identità o passaporto"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:385
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:385
 msgctxt "renting_my_reservation"
 msgid "Main driver"
 msgstr "Conducente principale"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:128
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:128
 msgctxt "renting_my_reservation"
 msgid "My reservation"
 msgstr "La mia prenotazione"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:388
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:390
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:490
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:492
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:546
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:548
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:662
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:664
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:666
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:728
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:730
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:732
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:388
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:390
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:490
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:492
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:546
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:548
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:662
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:664
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:666
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:728
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:730
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:732
 msgctxt "renting_my_reservation"
 msgid "Name"
 msgstr "Nome"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:348
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:350
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:348
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:350
 msgctxt "renting_my_reservation"
 msgid "Number"
 msgstr "Numero"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:248
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:248
 msgctxt "renting_my_reservation"
 msgid "Paid"
 msgstr "Pagato"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:655
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:655
 msgctxt "renting_my_reservation"
 msgid "Participant"
 msgstr "Partecipante"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:657
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:657
 msgctxt "renting_my_reservation"
 msgid "Participants"
 msgstr "Partecipante"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:658
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:658
 msgctxt "renting_my_reservation"
 msgid "Pax 1"
 msgstr "Pax 1"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:725
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:725
 msgctxt "renting_my_reservation"
 msgid "Pax 2"
 msgstr "Pax 2"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:828
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:828
 msgctxt "renting_my_reservation"
 msgid "Paypal"
 msgstr "Paypal"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:253
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:253
 msgctxt "renting_my_reservation"
 msgid "Pending"
 msgstr "In sospeso"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:231
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:231
 msgctxt "renting_my_reservation"
 msgid "Petrol supplement"
 msgstr "Supplemento benzina"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:688
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:690
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:692
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:754
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:756
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:758
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:688
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:690
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:692
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:754
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:756
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:758
 msgctxt "renting_my_reservation"
 msgid "Phone number"
 msgstr "Numero di telefono"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:200
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:200
 msgctxt "renting_my_reservation"
 msgid "Pick-up place supplement"
 msgstr "Supplemento per il luogo di ritiro"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:193
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:193
 msgctxt "renting_my_reservation"
 msgid "Pick-up time supplement"
 msgstr "Supplemento per l'orario di ritiro"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:371
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:373
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:371
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:373
 msgctxt "renting_my_reservation"
 msgid "Postal Code"
 msgstr "Codice postale"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:82
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:82
 msgctxt "renting_my_reservation"
 msgid "Reservation Id"
 msgstr "ID prenotazion"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:621
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:621
 msgctxt "renting_my_reservation"
 msgid "Return flight"
 msgstr "Volo di ritorno"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:215
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:215
 msgctxt "renting_my_reservation"
 msgid "Return place supplement"
 msgstr "Supplemento restituzione luogo"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:208
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:208
 msgctxt "renting_my_reservation"
 msgid "Return time supplement"
 msgstr "Supplemento restituzione luogo"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:365
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:367
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:365
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:367
 msgctxt "renting_my_reservation"
 msgid "State"
 msgstr "Provincia"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:395
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:397
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:497
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:499
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:553
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:555
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:670
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:672
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:674
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:736
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:738
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:740
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:395
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:397
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:497
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:499
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:553
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:555
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:670
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:672
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:674
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:736
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:738
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:740
 msgctxt "renting_my_reservation"
 msgid "Surname"
 msgstr "Cognome"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:242
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:242
 msgctxt "renting_my_reservation"
 msgid "Total"
 msgstr "Totale"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:292
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:292
 msgctxt "renting_my_reservation"
 msgid "Total deposit"
 msgstr "Deposito totale"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:799
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:799
 msgctxt "renting_my_reservation"
 msgid "Update"
 msgstr "Aggiornare"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:715
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:717
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:719
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:781
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:783
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:785
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:715
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:717
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:719
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:781
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:783
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:785
 msgctxt "renting_my_reservation"
 msgid "Weight (kg)"
 msgstr "Peso (kg)"
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:843
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:843
 msgctxt "renting_my_reservation"
 msgid ""
 "You will be redirected to <b>Paypal payment platform</b> to make the "
@@ -2465,7 +2548,7 @@ msgstr ""
 "effettuare il pagamento di conferma in modo sicuro. Puoi utilizzare <u>"
 "Paypal</u> o <u>carta di credito</u> per effettuare il pagamento."
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:855
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:855
 msgctxt "renting_my_reservation"
 msgid ""
 "You will be redirected to the <b>credit card payment platform</b> to make "
@@ -2474,7 +2557,7 @@ msgstr ""
 "Verrai reindirizzato alla <b>piattaforma di pagamento con carta di "
 "credito</b> per effettuare il pagamento di conferma in modo sicuro. "
 
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:823
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:823
 msgctxt "renting_my_reservation"
 msgid ""
 "You will be redirected to the <b>payment platform</b> to make the "
@@ -2485,75 +2568,75 @@ msgstr ""
 "pagamento di conferma in modo sicuro. Puoi utilizzare <u>Paypal</u> o <u>"
 "carta di credito</u> per effettuare il pagamento."
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:133
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:133
 msgctxt "renting_product_calendar"
 msgid "Book"
 msgstr "Prenotare"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:46
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:46
 msgctxt "renting_product_calendar"
 msgid "Collection time"
 msgstr "Ora di ritiro"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:40
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:40
 msgctxt "renting_product_calendar"
 msgid "Delivery time"
 msgstr "Tempo di consegna"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:41
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:47
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:41
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:47
 msgctxt "renting_product_calendar"
 msgid "hh:mm"
 msgstr "hh:mm"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:87
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:87
 msgctxt "renting_product_calendar"
 msgid "hours(s)"
 msgstr "Ora/e"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:109
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:109
 msgctxt "renting_product_calendar"
 msgid "Pick-up place supplement"
 msgstr "Supplemento per il luogo di ritiro"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:104
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:104
 msgctxt "renting_product_calendar"
 msgid "Pick-up time supplement"
 msgstr "Supplemento per l'orario di ritiro"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:77
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:77
 msgctxt "renting_product_calendar"
 msgid "Reservation summary"
 msgstr "Riepilogo della prenotazione"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:119
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:119
 msgctxt "renting_product_calendar"
 msgid "Return place supplement"
 msgstr "Supplemento restituzione luogo"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:114
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:114
 msgctxt "renting_product_calendar"
 msgid "Return time supplement"
 msgstr "Supplemento restituzione luogo"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:17
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:18
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:17
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:18
 msgctxt "renting_product_calendar"
 msgid "Select pick-up place"
 msgstr "Seleziona Immagini"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:25
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:26
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:25
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:26
 msgctxt "renting_product_calendar"
 msgid "Select return place"
 msgstr "Seleziona luogo di restituzione"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:140
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:140
 msgctxt "renting_product_calendar"
 msgid "Sorry, there is no availability during these hours"
 msgstr "Sorry, there is no availability during these hours"
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:146
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:146
 msgctxt "renting_product_calendar"
 msgid ""
 "Sorry, there is no availability for the entire period. The calendar shows "
@@ -2564,300 +2647,300 @@ msgstr ""
 "quei giorni in cui c'è disponibilità, ma potrebbe non essere disponibile per "
 "alcune date consecutive."
 
-#: mybooking-templates/mybooking-plugin-product-widget-tmpl.php:125
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:125
 msgctxt "renting_product_calendar"
 msgid "Total"
 msgstr "Totale"
 
 #. %.2f: Length
-#: mybooking-templates/mybooking-plugin-routes-product.php:65
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-product.php:65
 #, php-format
 msgctxt "renting_product_detail"
 msgid "<b>%.2f</b> m."
 msgstr "<b>%.2f</b> m."
 
-#: mybooking-templates/mybooking-plugin-routes-product.php:83
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-product.php:83
 msgctxt "renting_product_detail"
 msgid "Details"
 msgstr "Dettagli"
 
 #. %s: From price
-#: mybooking-templates/mybooking-plugin-routes-product.php:53
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-product.php:53
 #, php-format
 msgctxt "renting_product_detail"
 msgid "From <b>%s</b>"
 msgstr "A partire dal <b>%s</b>"
 
-#: mybooking-templates/mybooking-plugin-routes-product.php:32
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-product.php:32
 msgctxt "renting_product_detail"
 msgid "Next"
 msgstr "Prossimo"
 
-#: mybooking-templates/mybooking-plugin-routes-product.php:96
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-product.php:96
 msgctxt "renting_product_detail"
 msgid "Please choose your dates in the availability calendar"
 msgstr "Si prega di scegliere le date nel calendario delle disponibilità"
 
-#: mybooking-templates/mybooking-plugin-routes-product.php:28
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-product.php:28
 msgctxt "renting_product_detail"
 msgid "Previous"
 msgstr "Precedente"
 
-#: mybooking-templates/mybooking-plugin-products.php:40
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-products.php:40
 msgctxt "renting_products"
 msgid "More information"
 msgstr "Maggiori informazioni"
 
-#: mybooking-templates/mybooking-plugin-products.php:80
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-products.php:80
 msgctxt "renting_products"
 msgid "Next"
 msgstr "Prossimo"
 
-#: mybooking-templates/mybooking-plugin-products.php:59
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-products.php:59
 msgctxt "renting_products"
 msgid "Previous"
 msgstr "Precedente"
 
-#: mybooking-templates/mybooking-plugin-products.php:53
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-products.php:53
 msgctxt "renting_products_list"
 msgid "Page navigation"
 msgstr "Navigazione tra le pagine"
 
-#: mybooking-templates/mybooking-reservation-steps.php:35
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:35
 msgctxt "renting_reservation_steps"
 msgid "1"
 msgstr "1"
 
-#: mybooking-templates/mybooking-reservation-steps.php:36
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:36
 msgctxt "renting_reservation_steps"
 msgid "2"
 msgstr "2"
 
-#: mybooking-templates/mybooking-reservation-steps.php:37
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:37
 msgctxt "renting_reservation_steps"
 msgid "3"
 msgstr "3"
 
-#: mybooking-templates/mybooking-reservation-steps.php:38
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:38
 msgctxt "renting_reservation_steps"
 msgid "4"
 msgstr "4"
 
 #. %s: Product Type (Vehicle, Product, ...)
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:193
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:193
 #, php-format
 msgctxt "renting_summary"
 msgid "%s deposit"
 msgstr "Deposito %s"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:220
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:220
 msgctxt "renting_summary"
 msgid "Customer's details"
 msgstr "Dettagli del cliente"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:202
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:202
 msgctxt "renting_summary"
 msgid "Driver age deposit"
 msgstr "Deposito età conducente"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:143
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:143
 msgctxt "renting_summary"
 msgid "Driver's age supplement"
 msgstr "Supplemento età conducente"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:229
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:229
 msgctxt "renting_summary"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:225
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:225
 msgctxt "renting_summary"
 msgid "Full name"
 msgstr "Nome e cognome"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:184
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:184
 msgctxt "renting_summary"
 msgid "Guarantee"
 msgstr "Garantia"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:149
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:149
 msgctxt "renting_summary"
 msgid "Petrol supplement"
 msgstr "Supplemento benzina"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:233
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:233
 msgctxt "renting_summary"
 msgid "Phone number"
 msgstr "Numero di telefono"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:121
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:121
 msgctxt "renting_summary"
 msgid "Pick-up place supplement"
 msgstr "Supplemento per il luogo di ritiro"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:114
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:114
 msgctxt "renting_summary"
 msgid "Pick-up time supplement"
 msgstr "Supplemento per l'orario di ritiro"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:16
-#: mybooking-templates/mybooking-plugin-reservation-tmpl.php:19
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:16
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:19
 msgctxt "renting_summary"
 msgid "Reservation Id"
 msgstr "ID prenotazion"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:135
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:135
 msgctxt "renting_summary"
 msgid "Return place supplement"
 msgstr "Supplemento restituzione luogo"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:128
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:128
 msgctxt "renting_summary"
 msgid "Return time supplement"
 msgstr "Supplemento restituzione luogo"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:159
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:159
 msgctxt "renting_summary"
 msgid "Total"
 msgstr "Totale"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:210
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:210
 msgctxt "renting_summary"
 msgid "Total deposit"
 msgstr "Deposito totale"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:164
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:164
 msgctxt "renting_summary"
 msgid "Total paid"
 msgstr "Totale pagato"
 
-#: mybooking-templates/mybooking-plugin-summary-tmpl.php:170
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-summary-tmpl.php:170
 msgctxt "renting_summary"
 msgid "Total pending"
 msgstr "Totale in sospeso"
 
-#: mybooking-templates/mybooking-reservation-steps.php:37
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:37
 msgctxt "reservation_step"
 msgid "Complete reservation"
 msgstr "Completa la prenotazione"
 
-#: mybooking-templates/mybooking-reservation-steps.php:35
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:35
 msgctxt "reservation_step"
 msgid "Place and date"
 msgstr "Place and date"
 
-#: mybooking-templates/mybooking-reservation-steps.php:36
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:36
 msgctxt "reservation_step"
 msgid "Select product"
 msgstr "Seleziona il prodotto"
 
-#: mybooking-templates/mybooking-reservation-steps.php:38
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:38
 msgctxt "reservation_step"
 msgid "Summary"
 msgstr "Sommario"
 
-#: mybooking-parts/site/mybooking-navigation-toggler.php:18
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-parts/site/mybooking-navigation-toggler.php:18
 msgctxt "toggle_navigation"
 msgid "Toggle navigation"
 msgstr "Navigazione mobile"
 
-#: mybooking-templates/mybooking-plugin-selector-wizard-container.php:13
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-wizard-container.php:13
 msgctxt "wizard_container"
 msgid "Close"
 msgstr "Vicino"
 
-#: woocommerce/myaccount/form-login.php:112
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:112
 msgctxt "woocommerce_mybooking"
 msgid "A password will be sent to your email address."
 msgstr "Una password verrà inviata al tuo indirizzo email."
 
-#: woocommerce/myaccount/my-address.php:75
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/my-address.php:75
 msgctxt "woocommerce_mybooking"
 msgid "Add"
 msgstr "Inserisci"
 
-#: woocommerce/myaccount/my-address.php:38
-#: woocommerce/myaccount/my-address.php:47
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/my-address.php:38
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/my-address.php:47
 msgctxt "woocommerce_mybooking"
 msgid "Billing address"
 msgstr "Indirizzo di fatturazione"
 
-#: woocommerce/myaccount/my-address.php:75
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/my-address.php:75
 msgctxt "woocommerce_mybooking"
 msgid "Edit"
 msgstr "Editare"
 
-#: woocommerce/myaccount/form-login.php:99
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:99
 msgctxt "woocommerce_mybooking"
 msgid "Email address"
 msgstr "Indirizzo email"
 
-#: woocommerce/myaccount/form-login.php:67
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:67
 msgctxt "woocommerce_mybooking"
 msgid "Log in"
 msgstr "Accesso"
 
-#: woocommerce/myaccount/form-login.php:45
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:45
 msgctxt "woocommerce_mybooking"
 msgid "Login"
 msgstr "Accesso"
 
-#: woocommerce/myaccount/form-login.php:70
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:70
 msgctxt "woocommerce_mybooking"
 msgid "Lost your password?"
 msgstr "Password dimenticata?"
 
-#: woocommerce/myaccount/form-login.php:56
-#: woocommerce/myaccount/form-login.php:106
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:56
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:106
 msgctxt "woocommerce_mybooking"
 msgid "Password"
 msgstr "Password"
 
-#: woocommerce/myaccount/form-login.php:83
-#: woocommerce/myaccount/form-login.php:120
-#: woocommerce/myaccount/form-login.php:120
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:83
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:120
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:120
 msgctxt "woocommerce_mybooking"
 msgid "Register"
 msgstr "Registrati"
 
-#: woocommerce/myaccount/form-login.php:64
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:64
 msgctxt "woocommerce_mybooking"
 msgid "Remember me"
 msgstr "Ricordati di me"
 
-#: woocommerce/myaccount/my-address.php:39
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/my-address.php:39
 msgctxt "woocommerce_mybooking"
 msgid "Shipping address"
 msgstr "Indirizzo di spedizione"
 
-#: woocommerce/myaccount/my-address.php:58
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/my-address.php:58
 msgctxt "woocommerce_mybooking"
 msgid "The following addresses will be used on the checkout page by default."
 msgstr ""
 "I seguenti indirizzi verranno utilizzati nella pagina di pagamento per "
 "impostazione predefinita."
 
-#: woocommerce/myaccount/form-login.php:92
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:92
 msgctxt "woocommerce_mybooking"
 msgid "Username"
 msgstr "Nome utente"
 
-#: woocommerce/myaccount/form-login.php:52
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/form-login.php:52
 msgctxt "woocommerce_mybooking"
 msgid "Username or email address"
 msgstr "Nome utente o indirizzo email"
 
-#: woocommerce/myaccount/my-address.php:79
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/myaccount/my-address.php:79
 msgctxt "woocommerce_mybooking"
 msgid "You have not set up this type of address yet."
 msgstr "You have not set up this type of address yet."
 
-#: woocommerce/checkout/form-checkout.php:38
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/checkout/form-checkout.php:38
 msgctxt "woocommerce_mybooking"
 msgid "You must be logged in to checkout."
 msgstr "You must be logged in to checkout."
 
-#: woocommerce/checkout/form-checkout.php:66
+#: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/woocommerce/checkout/form-checkout.php:66
 msgctxt "woocommerce_mybooking"
 msgid "Your order"
 msgstr "Il tuo ordine"
