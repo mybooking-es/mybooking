@@ -2101,7 +2101,6 @@ if (!class_exists('MyBookingCustomizer')) {
           'capability'  => 'edit_theme_options',
           'priority'    => 57,
           'panel'        => 'mybooking_settings_panel',
-          'active_callback' => array($this, 'booking_forms_active_callback')
         )
       );
 
