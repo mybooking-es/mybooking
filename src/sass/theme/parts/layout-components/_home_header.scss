@@ -9,7 +9,7 @@
 .home-header {
   position: relative;
   flex-direction: column;
-  background-color: var(--home-header-bg-color);
+  background-color: var(--hero-bg-color);
   z-index: 2;
   overflow-x: hidden;
 }
@@ -59,6 +59,7 @@
   width: 100%;
   object-fit: cover;
   height: var(--home-header-bg-height-sm);
+  filter: brightness(var(--hero-img-brightness));
 }
 
 // Large devices (desktops, 992px and up)

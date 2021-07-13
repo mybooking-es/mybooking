@@ -25183,7 +25183,8 @@ these properties do not need to be edited */
   --toggler-icon-font-size: 1.3rem;
   --toggler-icon-color: var(--gray-900);
   --toggler-icon-mt: 6px;
-  --home-header-bg-color: #fff;
+  --hero-bg-color: #fff;
+  --hero-img-brightness: 70%;
   --home-header-color: var(--white);
   --home-header-bg-height-sm: 300px;
   --home-header-bg-height-lg: 700px;
@@ -26791,7 +26792,7 @@ h2.subtitle-404 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: var(--home-header-bg-color);
+  background-color: var(--hero-bg-color);
   z-index: 2;
   overflow-x: hidden; }
 
@@ -26837,7 +26838,9 @@ h2.subtitle-404 {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: var(--home-header-bg-height-sm); }
+  height: var(--home-header-bg-height-sm);
+  -webkit-filter: brightness(var(--hero-img-brightness));
+          filter: brightness(var(--hero-img-brightness)); }
 
 @media (min-width: 992px) {
   .home-header_background-img,
@@ -27391,14 +27394,15 @@ form.wp-block-search input[type=submit] {
   height: 70vh;
   overflow: hidden;
   z-index: -1;
-  background-color: var(--brand-primary); }
+  background-color: var(--hero-bg-color); }
 
 .page_header img {
   position: relative;
   bottom: 10vh;
-  opacity: 0.7;
   -o-object-fit: cover;
-     object-fit: cover; }
+     object-fit: cover;
+  -webkit-filter: var(--page-header-img-brightness);
+          filter: var(--page-header-img-brightness); }
 
 .mybooking_page {
   background-color: #fff;
@@ -28510,7 +28514,8 @@ table.table-activities th {
   .flex-form-group input.hasDatepicker {
     border-left: none;
     border-top-left-radius: 0;
-    border-bottom-left-radius: 0; }
+    border-bottom-left-radius: 0;
+    max-width: 172px; }
   .flex-form-group label {
     font-size: 0.8rem; }
 
