@@ -51,11 +51,12 @@
   display: none;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   .site-description {
     display: block;
     padding-top: 0.3125rem;
     padding-bottom: 0.3125rem;
+    margin-left: 1rem;
   }
 }
 
