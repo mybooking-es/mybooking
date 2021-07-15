@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2021-07-15 12:00+0000\n"
+"PO-Revision-Date: 2021-07-15 16:20+0000\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -2143,7 +2143,7 @@ msgstr "Rückgabe"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:626
 msgctxt "renting_my_reservation"
 msgid "Company"
-msgstr "Unternehmen"
+msgstr "Fluggesellschaft"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:354
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:356
@@ -2247,7 +2247,7 @@ msgstr "E-Mail-Adresse"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:640
 msgctxt "renting_my_reservation"
 msgid "Estimated Time"
-msgstr "Geschätzte Zeit"
+msgstr "Erwartete Ankunftszeit"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:601
 msgctxt "renting_my_reservation"
