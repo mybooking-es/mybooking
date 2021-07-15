@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2021-06-15 11:22+0000\n"
+"PO-Revision-Date: 2021-07-15 12:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.4.3; wp-5.5.1"
+"X-Loco-Version: 2.5.2; wp-5.6.4"
 
 #: 404.php:27
 msgctxt "404_page"
@@ -2123,7 +2123,7 @@ msgstr "Zusätzliche Fahrer"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:344
 msgctxt "renting_my_reservation"
 msgid "Address"
-msgstr "Adresse"
+msgstr "Straße"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:359
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:361
@@ -2135,7 +2135,7 @@ msgstr "Stadt"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:91
 msgctxt "renting_my_reservation"
 msgid "Collection"
-msgstr "Rückkehr"
+msgstr "Rückgabe"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:604
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:606
@@ -2185,7 +2185,7 @@ msgstr "Geburtsdatum"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:84
 msgctxt "renting_my_reservation"
 msgid "Delivery"
-msgstr "Lieferung"
+msgstr "Übergabe"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:678
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:680
@@ -2318,7 +2318,7 @@ msgstr "Vorname"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:350
 msgctxt "renting_my_reservation"
 msgid "Number"
-msgstr "Nummer"
+msgstr "Hausnummer"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:248
 msgctxt "renting_my_reservation"
@@ -2410,7 +2410,7 @@ msgstr "Rückgabezeitzuschlag"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:367
 msgctxt "renting_my_reservation"
 msgid "State"
-msgstr "Zustand"
+msgstr "Bundesland"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:395
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:397
@@ -2441,7 +2441,7 @@ msgstr "Gesamteinzahlung"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:799
 msgctxt "renting_my_reservation"
 msgid "Update"
-msgstr "Aktualisierung"
+msgstr "Bestätigen"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:715
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:717
