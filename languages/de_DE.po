@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2021-07-15 16:20+0000\n"
+"PO-Revision-Date: 2021-07-16 09:56+0000\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -2247,7 +2247,7 @@ msgstr "E-Mail-Adresse"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:640
 msgctxt "renting_my_reservation"
 msgid "Estimated Time"
-msgstr "Erwartete Ankunftszeit"
+msgstr "Ankunftszeit"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:601
 msgctxt "renting_my_reservation"
@@ -2291,7 +2291,7 @@ msgstr "Personalausweis oder Reisepass"
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:385
 msgctxt "renting_my_reservation"
 msgid "Main driver"
-msgstr "Haupttreiber"
+msgstr "Haupfahrer"
 
 #: mybooking-templates/mybooking-plugin-reservation-tmpl.php:128
 msgctxt "renting_my_reservation"
