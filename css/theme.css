@@ -6373,7 +6373,6 @@ button.bg-dark:focus {
   position: fixed !important; }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important; }
 
 .fixed-top {
@@ -6390,9 +6389,8 @@ button.bg-dark:focus {
   left: 0;
   z-index: 1030; }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020; } }
@@ -25560,7 +25558,9 @@ label {
 
 .form-reservation-error,
 input.form-reservation-error {
-  color: var(--error) !important; }
+  color: var(--error) !important;
+  padding: 5px;
+  font-size: 0.6rem; }
 
 .custom-date-form {
   display: -webkit-box;
@@ -25599,6 +25599,13 @@ select:disabled {
 @media (max-width: 575.98px) {
   .flex-form-group input.hasDatepicker {
     max-width: 145px; } }
+
+.flex-form-item.widget_pickup_place_group,
+.flex-form-item.widget_return_place_group {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 /**
 *   GUTENBERG SUPPORT
@@ -28516,7 +28523,7 @@ table.table-activities th {
     border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    max-width: 172px; }
+    max-width: 50%; }
   .flex-form-group label {
     font-size: 0.8rem; }
 
@@ -28629,9 +28636,6 @@ table.table-activities th {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -28700,6 +28704,14 @@ button.another_return_place_group_close {
   border-bottom-right-radius: 0.3rem; }
   .modal .flex-form label {
     color: var(--modal-selector-label-color); }
+
+#widget_time_from-error,
+#widget_time_to-error {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
 
 .btn-only-dates {
   margin-top: 27px; }

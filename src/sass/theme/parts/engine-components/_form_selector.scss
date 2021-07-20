@@ -136,7 +136,7 @@
     border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    max-width: 172px;
+    max-width: 50%;
   }
   label {
     font-size: 0.8rem;
@@ -252,7 +252,6 @@
 
 .flex-form-sticky {
   display: flex;
-  align-items: end;
   flex-direction: row;
   flex-grow: 1;
   background-color: var(--selector-sticky-bg) !important;
@@ -327,6 +326,13 @@ button.another_return_place_group_close {
   label {
     color: var(--modal-selector-label-color);
   }
+}
+
+// Push Date time label errors to the right
+#widget_time_from-error,
+#widget_time_to-error {
+  display: inline-flex;
+  align-self: flex-end;
 }
 
 //==============================================

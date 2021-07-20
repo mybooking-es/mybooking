@@ -34,7 +34,7 @@ mybooking.carrouselPortada = {
 
 };
 
-/** 
+/**
  *  GO-TOP BUTTON
  *  Go-top button settings and class addition
  */
@@ -88,7 +88,7 @@ mybooking.modalMargin = {
     });
     $("body").on("hidden.bs.modal", function () {
       $(".sticky-top").removeClass("fixModal");
-    });    
+    });
   }
 
 };
@@ -109,8 +109,8 @@ mybooking.modalMargin = {
  * and are only show depending on the content and the configuration.
  * The third one is the navigation menu.
  *
- * Special Cases: 
- * 
+ * Special Cases:
+ *
  * 1 - Mybooking Home Page template on desktop with integrated
  *     navbar
  *
@@ -123,9 +123,9 @@ mybooking.modalMargin = {
  *
  * 2 - Renting reservation process
  *
- * On choose product and complete steps the reservation summary is 
+ * On choose product and complete steps the reservation summary is
  * shown on sticky. Take into to show below the adminbar
- * 
+ *
  *
  */
 mybooking.navBarMenu = {
@@ -135,7 +135,7 @@ mybooking.navBarMenu = {
   init: function() {
 
     var self = this;
-    // Menu Toggler  
+    // Menu Toggler
     $('#navbarNavDropdown').on('shown.bs.collapse', function () {
       self.toggleMenu();
     })
@@ -160,15 +160,15 @@ mybooking.navBarMenu = {
     this.complementsTop();
 
   },
-  
+
   /**
-   * Toggle menu 
-   */ 
+   * Toggle menu
+   */
   toggleMenu: function() {
-      
+
       // Check if the modal menu is shown
       var modalMenuShown = $(".navbar-collapse").hasClass("show");
-      
+
       this.adminBarMargins();
 
       if (modalMenuShown) {
@@ -189,14 +189,14 @@ mybooking.navBarMenu = {
         // Show the topbar
         if ( $('.topbar').length ) {
           $('.topbar').show();
-        }        
+        }
       }
 
       // Manage Scrolling on modal menu
       this.htmlStyle(modalMenuShown);
 
   },
- 
+
   /**
    * Wordpress adminbar margins
    */
@@ -207,8 +207,8 @@ mybooking.navBarMenu = {
 
     if ( adminBar ) {
       // 1 - Navigation bar
-      if ( $('#wrapper-navbar').hasClass('nav-container-absolute') && 
-           $('body').hasClass('home') && $('.home-header').length > 0 ) { 
+      if ( $('#wrapper-navbar').hasClass('nav-container-absolute') &&
+           $('body').hasClass('home') && $('.home-header').length > 0 ) {
         // Navbar integrated CSS rule (.nav-container-absolute on body home class and .home-header)
         var navbarToggleVisible = $('button.navbar-toggler').is(':visible');
         if ( navbarToggleVisible ) {
@@ -249,16 +249,16 @@ mybooking.navBarMenu = {
 
     if ( adminBar ) {
       // 1 - Form Selector
-      if ( $('form[name=widget_search_form]').length > 0 ) { 
+      if ( $('form[name=widget_search_form]').length > 0 ) {
         if ( adminBarAbsolute ) {
           $('form[name=widget_search_form]').css('top', '0');
         }
         else {
           $('form[name=widget_search_form]').css('top', this.getAdminBarHeight()+'px');
         }
-      }      
+      }
       // 2 - Wizard Container
-      if ( $('.wizard-container').length > 0 ) { 
+      if ( $('.wizard-container').length > 0 ) {
         if ( adminBarAbsolute ) {
           $('.wizard-container').css('top', '0');
           $('.wizard-close').css('top', this.wizardCloseTop + 'px');
@@ -269,22 +269,22 @@ mybooking.navBarMenu = {
           $('.wizard-close').css('top', this.getAdminBarHeight() + this.wizardCloseTop + 'px');
           $('.wizard-container').css('padding-top', '');
         }
-      }        
+      }
       // 3 - Reservation detail (choose product)
       if ( $('#reservation_detail.sticky-top').length > 0 ) {
         if ( adminBarAbsolute ) {
           $('#reservation_detail').css('top', '0');
-        }    
-        else {    
+        }
+        else {
           $('#reservation_detail').css('top', this.getAdminBarHeight()+'px');
         }
       }
       // 4 - Reservation detail (complete)
       if ( $('#reservation_detail_sticky.sticky-top').length > 0 ) {
-        if ( adminBarAbsolute ) {        
+        if ( adminBarAbsolute ) {
           $('#reservation_detail_sticky').css('top', '0');
         }
-        else {  
+        else {
           $('#reservation_detail_sticky').css('top', this.getAdminBarHeight()+'px');
         }
       }
@@ -298,7 +298,7 @@ mybooking.navBarMenu = {
    */
   getAdminBarHeight: function(negativeValue) {
 
-      var adminBar = document.getElementById('wpadminbar');    
+      var adminBar = document.getElementById('wpadminbar');
 
       if ( adminBar ) {
         var height = adminBar.getBoundingClientRect().height;
@@ -310,16 +310,16 @@ mybooking.navBarMenu = {
   },
 
   /**
-   * Apply style to HTML 
+   * Apply style to HTML
    *
    * [If modal visible it avoids to scroll on the document]
    *
    */
   htmlStyle: function(modalVisible) {
-    
+
     var properties = {
-                        'overflow-y': 'scroll', 
-                        'position': 'fixed', 
+                        'overflow-y': 'scroll',
+                        'position': 'fixed',
                         'width': '100%',
                         'left': '0'
                      };
@@ -341,14 +341,14 @@ mybooking.navBarMenu = {
       }
     }
 
-  }  
+  }
 
 
 };
 
 /**
  * Multi-level menu
- */ 
+ */
 mybooking.multilevelMenu = {
 
   init: function() {
@@ -378,7 +378,7 @@ mybooking.multilevelMenu = {
       // If mobile
       if (modalMenuShown) {
 
-        if ($('button.navbar-toggler').length > 0 && 
+        if ($('button.navbar-toggler').length > 0 &&
             $('nav.navbar ul.navbar-nav > li.menu-item:last > a').length > 0) {
 
           var first = $('button.navbar-toggler').get(0);
@@ -411,7 +411,7 @@ mybooking.multilevelMenu = {
 
 // -----
 
-/** 
+/**
  * Sticky form selector
  *
  * Manage behaivour of form selector depending viewport
@@ -468,7 +468,7 @@ mybooking.reservationSteps = {
       if ($(this).is(".active")) {
         return false;
       }
-    });    
+    });
   }
 
 };
@@ -485,4 +485,24 @@ $(document).ready(function() {
   mybooking.stickyFormSelector.init();
   mybooking.reservationSteps.init();
 
+});
+
+// jQuery validator
+
+jQuery.validator.setDefaults({
+    highlight: function(element) {
+        jQuery(element).closest('.form-control').addClass('is-invalid');
+    },
+    unhighlight: function(element) {
+        jQuery(element).closest('.form-control').removeClass('is-invalid');
+    },
+    errorElement: 'span',
+    errorClass: 'label label-danger',
+    errorPlacement: function(error, element) {
+        if(element.parent('.input-group').length) {
+            error.insertAfter(element.parent());
+        } else {
+            error.insertAfter(element);
+        }
+    }
 });
