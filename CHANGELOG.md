@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9] 2020-07-20
+
+### Fixed
+
+- MybookingReservationEngine renting templates : my-reservation/summary increased price not shown as offer 
+- MybookingReservationEngine renting templates : my-reservation Deutsch translations
+
 ## [1.0.8] 2020-06-15
 
 ### Added

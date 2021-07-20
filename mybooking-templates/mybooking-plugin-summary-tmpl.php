@@ -62,7 +62,7 @@
             class="product-amount float-right"><%=configuration.formatCurrency(booking.booking_lines[idx].item_cost)%>
           </span>
           <!-- Offer/Promotion Code Appliance -->
-          <% if (booking.booking_lines[idx].item_unit_cost_base != booking.booking_lines[idx].item_unit_cost) { %>
+          <% if (booking.booking_lines[idx].item_unit_cost_base > booking.booking_lines[idx].item_unit_cost) { %>
             <span class="float-right mr-2">
               <!-- Offer -->
               <% if (typeof booking.booking_lines[idx].offer_name !== 'undefined' &&
