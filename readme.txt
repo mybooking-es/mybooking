@@ -4,8 +4,8 @@ Contributors:       hectorasencio, marcelreig, juanmiqueo
 Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
-Tested up to:       5.7
-Stable tag:         1.0.8
+Tested up to:       5.8
+Stable tag:         1.0.9
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,10 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.0.9 =
+* Fixed: MyBooking Reservation Engine : Deutsch translations
+* Fixed: MyBooking reservation Engine : Renting summary and myreservation total amount with increased price
 
 = 1.0.8 =
 * Added: MyBooking Reservation Engine renting templates : Manage branch offices
@@ -214,6 +218,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.9 =
+* Fixed: MyBooking Reservation Engine : Deutsch translations + Renting summary and myreservation total amount
 
 = 1.0.8 =
 * Added: MyBooking Reservation Engine renting templates : Manage branch offices + messages translations
