@@ -97,7 +97,7 @@
           <div id="widget_another_pickup_place_group" style="display: none;">
             <div class="flex-form-item justify-content-between position-relative">
               <input class="w-100 form-control" type="text" id="widget_pickup_place_other" name="pickup_place_other" />
-              <input type="hidden" name="custom_pickup_place" value="false" />
+              <input class="w-100 form-control" type=" hidden" name="custom_pickup_place" value="false" />
               <button type="button" class="widget_another_pickup_place_group_close p-0">
                 <i class="fa fa-times flex-icon-absolute"></i>&nbsp;
               </button>
@@ -131,8 +131,14 @@
       <div class="flex-form-box">
         <label for="widget_date_from"><?php echo esc_html( MyBookingEngineContext::getInstance()->getDeliveryDate() )?></label>
         <div class="flex-form-item">
-          <span><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></span>
+  
+          <span class="w-100">
+          <div class="inputWithIcon">
           <input class="form-control" type="text" id="widget_date_from" name="date_from" readonly="true"/>
+            <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+          </div>
+          </span>
+
           <% if (configuration.timeToFrom) { %>
             <select class="ml-1 form-control" id="widget_time_from" name="time_from">
             </select>
@@ -144,8 +150,12 @@
       <div class="flex-form-box">
         <label for="widget_date_to"><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() ) ?></label>
         <div class="flex-form-item">
-          <span><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></span>
+          <span class="w-100">
+          <div class="inputWithIcon">
           <input class="form-control" type="text" id="widget_date_to" name="date_to" readonly="true"/>
+            <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+          </div>
+          </span>
           <% if (configuration.timeToFrom) { %>
             <select class="ml-1 form-control" id="widget_time_to" name="time_to">
             </select>
@@ -167,7 +177,6 @@
       </div>
     </div>
   <% } %>
-
 
   <% if (configuration.promotionCode) { %>
   <div class="flex-form-group ml-0">
