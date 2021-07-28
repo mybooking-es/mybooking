@@ -2,7 +2,7 @@ Arguments:
   /Users/marcelreig/.nvm/versions/node/v12.17.0/bin/node /Users/marcelreig/.nvm/versions/node/v12.17.0/bin/yarn outdated --json
 
 PATH: 
-  /Users/marcelreig/.rvm/gems/ruby-2.7.0/bin:/Users/marcelreig/.rvm/gems/ruby-2.7.0@global/bin:/Users/marcelreig/.rvm/rubies/ruby-2.7.0/bin:/Users/marcelreig/.nvm/versions/node/v12.17.0/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/marcelreig/.rvm/bin
+  /Users/marcelreig/.rvm/gems/ruby-2.7.0/bin:/Users/marcelreig/.rvm/gems/ruby-2.7.0@global/bin:/Users/marcelreig/.rvm/rubies/ruby-2.7.0/bin:/Users/marcelreig/.nvm/versions/node/v12.17.0/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/marcelreig/.rvm/bin
 
 Yarn version: 
   1.22.10
@@ -687,9 +687,9 @@ Lockfile:
     integrity sha1-MvxLn82vhF/N9+c7uXysImHwqwo=
   
   caniuse-lite@^1.0.30001038, caniuse-lite@^1.0.30001039:
-    version "1.0.30001039"
-    resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001039.tgz#b3814a1c38ffeb23567f8323500c09526a577bbe"
-    integrity sha512-SezbWCTT34eyFoWHgx8UWso7YtvtM7oosmFoXbCkdC6qJzRfBTeTgE9REtKtiuKXuMwWTZEvdnFNGAyVMorv8Q==
+    version "1.0.30001245"
+    resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001245.tgz"
+    integrity sha512-768fM9j1PKXpOCKws6eTo3RHmvTUsG9UrpT4WoREFeZgJBTi4/X9g565azS/rVUGtqb8nt7FjLeF5u4kukERnA==
   
   caseless@~0.12.0:
     version "0.12.0"

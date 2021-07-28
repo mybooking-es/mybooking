@@ -26927,7 +26927,8 @@ h2.subtitle-404 {
           flex-direction: column;
   background-color: var(--hero-bg-color);
   z-index: 2;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  overflow-y: clip; }
 
 .home-header h1,
 .home-header h2,
@@ -26945,7 +26946,8 @@ h2.subtitle-404 {
 .home-header a {
   color: var(--home-header-widget-link); }
   .home-header a:hover {
-    opacity: 0.5; }
+    opacity: 0.5;
+    text-decoration: underline; }
 
 @media (min-width: 768px) {
   .home-header {
@@ -26979,7 +26981,8 @@ h2.subtitle-404 {
   .home-header_background-img,
   .home-header_background-video,
   .home-header_background_carrusel .carrusel-item img {
-    height: var(--home-header-bg-height-lg); } }
+    height: var(--home-header-bg-height-lg);
+    overflow: hidden; } }
 
 .home-header_background-video-container {
   margin-bottom: -6px; }
@@ -27037,11 +27040,28 @@ h2.subtitle-404 {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    min-width: 960px !important;
-    /*margin-top: 50px !important;*/ }
+    min-width: 960px !important; }
   .home-header_content_container_sticky {
     -webkit-transform: none !important;
             transform: none !important; } }
+
+@media (max-width: 991.98px) {
+  .home-header {
+    background-color: #fff; }
+  .home-header h1,
+  .home-header h2,
+  .home-header h3,
+  .home-header h4,
+  .home-header h5,
+  .home-header h6 {
+    color: #424242;
+    text-align: left; }
+  .home-header p {
+    color: #424242;
+    text-align: left; }
+  .home-header a {
+    color: var(--brand-primary);
+    text-decoration: none; } }
 
 .contact-info {
   margin-bottom: 2rem; }
