@@ -204,6 +204,7 @@ if (!class_exists('MyBookingCustomizer')) {
         $header_widget_text_color = get_theme_mod('mybooking_header_widget_text_color', '#FFFFFF');
         $header_widget_link_color = get_theme_mod('mybooking_header_widget_link_color', '#FFFFFF');
         $header_bg_color = get_theme_mod('mybooking_header_bg_color', '#FFF');
+        $header_brightness = get_theme_mod('mybooking_header_brightness', '70%');
 
         $home_selector_background = get_theme_mod('mybooking_home_selector_background', 'rgba(255,255,255,0.5)');
         $home_selector_mobile_background = get_theme_mod('mybooking_home_selector_mobile_background', '#f5f5f5');
@@ -242,6 +243,18 @@ if (!class_exists('MyBookingCustomizer')) {
         // Header color
         $custom_css .= "--font-heading-color: " . $this->slug_sanitize_rgba($header_text_color) . ';';
 
+        // Header
+        $custom_css .= "--home-header-widget-title: " . $this->slug_sanitize_rgba($header_widget_title_color)
+        . ';';
+        $custom_css .= "--home-header-widget-text: " . $this->slug_sanitize_rgba($header_widget_text_color) .
+        ';';
+        $custom_css .= "--home-header-widget-title-align: " . esc_html($header_widget_title_align) . ';';
+        $custom_css .= "--home-header-widget-text-align: " . esc_html($header_widget_text_align) . ';';
+        $custom_css .= "--home-header-widget-link: " . $this->slug_sanitize_rgba($header_widget_link_color) .
+        ';';
+        $custom_css .= "--hero-bg-color: " . $this->slug_sanitize_rgba($header_bg_color) . ';';
+        $custom_css .= "--hero-img-brightness:" . esc_html($header_brightness) . ';';
+
         // Identity
         $custom_css .= "--custom-logo-height: " . esc_html($logo_height) . 'px;';
 
@@ -254,10 +267,6 @@ if (!class_exists('MyBookingCustomizer')) {
         $custom_css .= "--navbar-dropdown-item-active-bg: " . $this->slug_sanitize_rgba($navbar_dropdown_item_active_color) . ';';
         $custom_css .= "--navbar-link-collapse: " . $this->slug_sanitize_rgba($navbar_link_collapse) . ';';
         $custom_css .= "--toggler-icon-color: " . $this->slug_sanitize_rgba($navbar_toggler_icon) . ';';
-
-        // Header
-        $custom_css .= "--home-header-widget-title-align: " . esc_html($header_widget_title_align) . ';';
-        $custom_css .= "--home-header-widget-text-align: " . esc_html($header_widget_text_align) . ';';
 
         // Footer
         $custom_css .= "--footer-bg: " . $this->slug_sanitize_rgba($footer_bg) . ';';
@@ -281,12 +290,6 @@ if (!class_exists('MyBookingCustomizer')) {
           $custom_css .= "--topbar-message-text: " . $this->slug_sanitize_rgba($topbar_message_text) . ';';
           $custom_css .= "--topbar-message-link: " . $this->slug_sanitize_rgba($topbar_message_link) . ';';
           $custom_css .= "--topbar-message-link-hover: " . $this->slug_sanitize_rgba($topbar_message_hover) . ';';
-
-          // Header
-          $custom_css .= "--home-header-widget-title: " . $this->slug_sanitize_rgba($header_widget_title_color) . ';';
-          $custom_css .= "--home-header-widget-text: " . $this->slug_sanitize_rgba($header_widget_text_color) . ';';
-          $custom_css .= "--home-header-widget-link: " . $this->slug_sanitize_rgba($header_widget_link_color) . ';';
-          $custom_css .= "--hero-bg-color: " . $this->slug_sanitize_rgba($header_bg_color) . ';';
 
           // Selector
           $custom_css .= "--home-selector-bg: " . $this->slug_sanitize_rgba($home_selector_background) . ';';
@@ -315,6 +318,8 @@ if (!class_exists('MyBookingCustomizer')) {
         $body_bg = get_theme_mod('mybooking_body_bg', '#FFFFFF');
         $body_color = get_theme_mod('mybooking_body_color', '#212121');
         $header_text_color = get_theme_mod('mybooking_headers_color', '#424242');
+
+        $header_brightness = get_theme_mod('mybooking_header_brightness', '70%');
 
         $custom_css .= ":root {";
 
@@ -1665,6 +1670,28 @@ if (!class_exists('MyBookingCustomizer')) {
           'settings' => 'mybooking_home_header_carrousel_bg',
           'type'     => 'mybooking_carrousel',
         )
+      ));
+
+      // Background brightness
+
+      $wp_customize->add_setting('mybooking_header_brightness', array(
+      'default' => '70%',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_text_field',
+      ));
+
+      $wp_customize->add_control('mybooking_header_brightness', array(
+      'label' => _x('Header brightness', 'customizer_header', 'mybooking'),
+      'description' => esc_html_x('Set a value between 1% and 100%', 'customizer_header', 'mybooking'),
+      'section' => 'mybooking_theme_header_options',
+      'priority' => 10,
+      'type' => 'text',
+      'capability' => 'edit_theme_options',
+      'input_attrs' => array(
+      'class' => 'mybooking-customizer-text',
+      'style' => 'border: 1px solid #999',
+      'placeholder' => _x('Set a value between 1% and 100%', 'customizer_header', 'mybooking'),
+      )
       ));
 
       // --Header Columns
