@@ -2112,7 +2112,7 @@ msgstr "Cerrar"
 #: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-modify-reservation.php:18
 msgctxt "renting_form_modify_reservation"
 msgid "Modify reservation"
-msgstr "Modificar reserva"
+Modificar reservamsgstr ""
 
 #: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:20
 #: Users/marcelreig/Documents/work/mybooking/mybooking-official/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:90

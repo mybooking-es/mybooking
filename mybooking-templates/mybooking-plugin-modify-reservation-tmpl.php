@@ -46,7 +46,7 @@
           <div id="another_return_place_group" style="display: none;">
             <div class="flex-form-item justify-content-between position-relative">
               <input class="w-100 form-control" type="text" id="return_place_other" name="return_place_other" />
-              <input type="hidden form-control" name="custom_return_place" value="false" />
+              <input type="hidden" name="custom_return_place" value="false" />
               <button type="button" class="another_return_place_group_close p-0">
                 <i class="fa fa-times flex-icon-absolute"></i>
               </button>

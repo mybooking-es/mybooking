@@ -28833,8 +28833,14 @@ button.widget_another_return_place_group_close,
 button.another_pickup_place_group_close,
 button.another_return_place_group_close {
   position: absolute;
-  right: 40px;
-  top: 0; }
+  right: 12px;
+  top: 6px;
+  background: transparent; }
+  button.widget_another_pickup_place_group_close i,
+  button.widget_another_return_place_group_close i,
+  button.another_pickup_place_group_close i,
+  button.another_return_place_group_close i {
+    color: var(--gray-600); }
 
 .another_pickup_place_group input {
   border-right: 1px solid var(--error) !important; }
@@ -29705,18 +29711,13 @@ a.magic-button.btn {
   background: var(--product-detail-bg-color); }
 
 .product-detail-container {
-  padding: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+  padding: 30px 15px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   line-height: 1; }
   .product-detail-container h5 {
     font-weight: 700;
@@ -29730,22 +29731,15 @@ a.magic-button.btn {
     line-height: 1; }
 
 .product-detail-container-several-products {
-  padding: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+  padding: 30px 15px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   line-height: 1;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  grid-template-columns: 1fr; }
   .product-detail-container-several-products h5 {
     font-weight: 700;
     line-height: 1.2;
@@ -29758,29 +29752,36 @@ a.magic-button.btn {
     line-height: 1; }
 
 @media (max-width: 767.98px) {
-  .product-detail-container-several-products {
-    padding: 30px;
+  .product-detail-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    padding: 30px 15px;
     margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     line-height: 1;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap; }
+    grid-template-columns: 1fr; }
+    .product-detail-container h5 {
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--product-detail-dates-titles); }
+    .product-detail-container ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      color: var(--product-detail-dates-text);
+      line-height: 1; }
+  .product-detail-container-several-products {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    padding: 30px 15px;
+    margin: 0 auto;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    line-height: 1;
+    grid-template-columns: 1fr; }
     .product-detail-container-several-products h5 {
       font-weight: 700;
       line-height: 1.2;
@@ -29791,15 +29792,6 @@ a.magic-button.btn {
       padding: 0;
       color: var(--product-detail-dates-text);
       line-height: 1; } }
-
-.product-detail-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
 
 .product-detail-image {
   max-width: 100%; }

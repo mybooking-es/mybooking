@@ -161,41 +161,6 @@
   }
 }
 
-// Date icon
-
-// .flex-icon {
-//   display: flex;
-//   align-items: center;
-//   font-size: 1rem;
-//   background-color: var(--white);
-//   padding: 0.6rem;
-//   height: var(--form-control-height);
-//   color: var(--gray-700);
-//   border-top-left-radius: 3px;
-//   border-bottom-left-radius: 3px;
-//   border: 1px solid var(--gray-500);
-//   border-right: none;
-// }
-
-// For modify reservation
-// .flex-icon-absolute {
-//   @extend .flex-icon;
-//   position: absolute;
-//   border-left: none;
-//   border-right: 1px solid var(--gray-500);
-//   border-top-right-radius: 3px;
-//   border-bottom-right-radius: 3px;
-//   border-top-left-radius: 0px;
-//   border-bottom-left-radius: 0px;
-//   width: 40px;
-// }
-// input.modify-dates {
-//   border-left: none;
-//   border-top-left-radius: 0;
-//   border-bottom-left-radius: 0;
-// }
-// new aproach
-
 .inputWithIcon > input[type="text"] {
   padding-left: 40px;
 }
@@ -334,8 +299,12 @@ button.widget_another_return_place_group_close,
 button.another_pickup_place_group_close,
 button.another_return_place_group_close {
   position: absolute;
-  right: 40px;
-  top: 0;
+  right: 12px;
+  top: 6px;
+  background: transparent;
+  i {
+    color: var(--gray-600);
+  }
 }
 
 .another_pickup_place_group input {

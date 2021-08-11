@@ -27,17 +27,21 @@
       <% } %>
 
       <div class="flex-form-group">
-        <div class="flex-form-box mb-0">
-          <label for="widget_date_from"><?php echo esc_html( MyBookingEngineContext::getInstance()->getDeliveryDate() )?></label>
-          <div class="flex-form-item">
-            <span><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></span>
-            <input class="only-dates" type="text" id="widget_date_from" name="date_from" readonly="true" />
-            <% if (configuration.timeToFrom) { %>
-              <select class="ml-1" id="widget_time_from" name="time_from">
-            </select>
-            <% } else { %>
-              <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>" />
-            <% } %>
+          <div class="flex-form-box mb-0">
+            <label for="widget_date_from"><?php echo esc_html( MyBookingEngineContext::getInstance()->getDeliveryDate() )?></label>
+            <div class="flex-form-item">
+              <span class="w-100">
+                <div class="inputWithIcon">
+                  <input class="only-dates" type="text" id="widget_date_from" name="date_from" readonly="true" />
+                  <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+                  <% if (configuration.timeToFrom) { %>
+                  <select class="ml-1" id="widget_time_from" name="time_from">
+                  </select>
+                  <% } else { %>
+                    <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>" />
+                  <% } %>
+                </div>
+              </span>
           </div>
         </div>
       </div>
@@ -46,14 +50,18 @@
         <div class="flex-form-box mb-0">
           <label for="widget_date_to"><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() )?></label>
           <div class="flex-form-item">
-            <span><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></span>
-            <input class="only-dates" type="text" id="widget_date_to" name="date_to" readonly="true" />
-            <% if (configuration.timeToFrom) { %>
-            <select class="ml-1" id="widget_time_to" name="time_to">
-            </select>
-            <% } else { %>
-            <input type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>" />
-            <% } %>
+            <span class="w-100">
+              <div class="inputWithIcon">
+                <input class="only-dates" type="text" id="widget_date_to" name="date_to" readonly="true" />
+                <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+                <% if (configuration.timeToFrom) { %>
+                <select class="ml-1" id="widget_time_to" name="time_to">
+                </select>
+                <% } else { %>
+                <input type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>" />
+                <% } %>
+              </div>
+            </span>
           </div>
         </div>
       </div>
@@ -97,9 +105,9 @@
           <div id="widget_another_pickup_place_group" style="display: none;">
             <div class="flex-form-item justify-content-between position-relative">
               <input class="w-100 form-control" type="text" id="widget_pickup_place_other" name="pickup_place_other" />
-              <input class="w-100 form-control" type=" hidden" name="custom_pickup_place" value="false" />
+              <input class="w-100 form-control" type="hidden" name="custom_pickup_place" value="false" />
               <button type="button" class="widget_another_pickup_place_group_close p-0">
-                <i class="fa fa-times flex-icon-absolute"></i>&nbsp;
+                <i class="fa fa-times flex-icon-absolute"></i>
               </button>
             </div>
           </div>
@@ -117,8 +125,8 @@
             <div class="flex-form-item justify-content-between position-relative">
               <input class="w-100 form-control" type="text" id="widget_return_place_other" name="return_place_other" />
               <input type="hidden" name="custom_return_place" value="false" />
-              <button type="button" class="widget_another_return_place_group_close p-0 form-control">
-                <i class="fa fa-times flex-icon-absolute"></i>&nbsp;
+              <button type="button" class="widget_another_return_place_group_close p-0">
+                <i class="fa fa-times flex-icon-absolute"></i>
               </button>
             </div>
           </div>
