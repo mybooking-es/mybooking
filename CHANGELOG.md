@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.10] 2020-08-X
+
+### Fixed
+
+- MybookingReservationEngine renting templates : Use customer fullname to show customer name
+
 ## [1.0.9] 2020-07-21
 
 ### Fixed

@@ -40,6 +40,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 
 == Changelog ==
 
+= 1.0.10 =
+* Fixed: MyBooking Reservation Engine : Use customer full name to show customer name
+
 = 1.0.9 =
 * Fixed: MyBooking Reservation Engine : Deutsch translations
 * Fixed: MyBooking reservation Engine : Renting summary and myreservation total amount with increased price
@@ -218,6 +221,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.10 =
+* Fixed: MyBooking Reservation Engine : Use customer full name to show customer name
 
 = 1.0.9 =
 * Fixed: MyBooking Reservation Engine : Deutsch translations + Renting summary and myreservation total amount
