@@ -307,7 +307,7 @@
                     <tbody>
                       <tr>
                         <th scope="row"><i class="far fa-user"></i></th>
-                        <td class="text-right"><%=booking.customer_name%> <%=booking.customer_surname%></td>
+                        <td class="text-right"><%=booking.customer_fullname%></td>
                       </tr>
                       <tr>
                         <th scope="row"><i class="far fa-envelope"></i></th>

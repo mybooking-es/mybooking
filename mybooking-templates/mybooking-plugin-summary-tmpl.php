@@ -223,7 +223,7 @@
         <tbody>
           <tr>
             <th scope="row"><?php echo esc_html_x( "Full name", 'renting_summary', 'mybooking') ?>:</th>
-            <td><%=booking.customer_name%> <%=booking.customer_surname%></td>
+            <td><%=booking.customer_fullname%></td>
           </tr>
           <tr>
             <th scope="row"><?php echo esc_html_x( "E-mail", 'renting_summary', 'mybooking') ?>:</th>
@@ -233,6 +233,30 @@
             <th scope="row"><?php echo esc_html_x( "Phone number", 'renting_summary', 'mybooking') ?>:</th>
             <td><%=booking.customer_phone%> <%=booking.customer_mobile_phone%></td>
           </tr>
+          <% if (typeof booking.customer_stock_brand !== 'undefined') { %>
+            <tr>
+              <th scope="row"><?php echo esc_html_x( "Brand", 'renting_summary', 'mybooking') ?>:</th>
+              <td><%=booking.customer_stock_brand%></td>
+            </tr>          
+          <% } %>
+          <% if (typeof booking.customer_stock_model !== 'undefined') { %>
+            <tr>
+              <th scope="row"><?php echo esc_html_x( "Model", 'renting_summary', 'mybooking') ?>:</th>
+              <td><%=booking.customer_stock_model%></td>
+            </tr>          
+          <% } %>
+          <% if (typeof booking.customer_stock_plate !== 'undefined') { %>
+            <tr>
+              <th scope="row"><?php echo esc_html_x( "Stock plate", 'renting_summary', 'mybooking') ?>:</th>
+              <td><%=booking.customer_stock_plate%></td>
+            </tr>          
+          <% } %>
+          <% if (typeof booking.customer_stock_color !== 'undefined') { %>
+            <tr>
+              <th scope="row"><?php echo esc_html_x( "Color", 'renting_summary', 'mybooking') ?>:</th>
+              <td><%=booking.customer_stock_color%></td>
+            </tr>          
+          <% } %>
         </tbody>
       </table>
     </div>
