@@ -116,7 +116,8 @@
 
   <div class="container">
     <div class="row">
-      <div class="col col-md-8 offset-md-2">
+      <div class="col-12 col-md-8 offset-md-2">
+
         <div class="col process-section-box">
           <h4 class="my-3"><?php echo esc_html_x( 'My reservation', 'renting_my_reservation', 'mybooking') ?></h4>
           <!-- Products -->
@@ -291,6 +292,7 @@
           <% } %>
 
         </div>
+
 
         <div class="col process-section-box">
                 <h4 class="my-3">
