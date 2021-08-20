@@ -28343,162 +28343,6 @@ select#cat {
   list-style: none;
   padding: 0; }
 
-.activity-view-card {
-  position: relative;
-  margin: 1.5rem 0;
-  padding-bottom: 12px;
-  border-radius: 5px;
-  background-color: var(--gray-900); }
-
-.activity-card_table {
-  margin: 12px auto;
-  color: var(--white);
-  margin-bottom: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px; }
-  .activity-card_table td {
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-    font-size: 13px; }
-
-.trash-button {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  color: var(--error);
-  cursor: pointer; }
-
-.activity-card__img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  mix-blend-mode: overlay;
-  height: 250px;
-  width: 100%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px; }
-
-.card-img-bg-color {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background-color: var(--white); }
-
-.activity-card__img-text {
-  padding: 20px;
-  height: 250px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), to(transparent));
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent); }
-  .activity-card__img-text h5,
-  .activity-card__img-text p {
-    color: var(--white);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); }
-
-.activity-name {
-  color: var(--white);
-  font-weight: 700;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); }
-
-.activity-description p,
-.activity-description span {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--white) !important;
-  margin: 30px 20px;
-  padding: 20px; }
-
-.activities-shopping-cart-form {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  border-radius: 4px;
-  background-color: var(--white);
-  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06); }
-
-.activities-content__widget-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  height: 100%; }
-
-.activity-content__widget {
-  margin: 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .activity-content__widget label {
-    color: var(--body-color); }
-  .activity-content__widget .flex-form-item-box {
-    margin-left: 0 !important;
-    margin-bottom: 10px !important; }
-  .activity-content__widget .ui-datepicker {
-    min-width: 400px; }
-
-.activity-widget__title {
-  color: var(--body-color);
-  font-weight: 700;
-  margin-bottom: 20px; }
-
-.media {
-  font-size: 0.9rem;
-  background-color: var(--gray-100);
-  margin: 20px;
-  padding: 20px;
-  border-radius: 5px; }
-  .media h5 {
-    color: var(--primary); }
-  .media i {
-    font-size: 3rem;
-    color: var(--primary); }
-
-.media-body {
-  color: var(--body-color); }
-
-.widget-wrapper {
-  margin: 20px;
-  padding: 20px;
-  background-color: #3a3e3e;
-  border-radius: 5px; }
-
-table.table-activities {
-  margin-bottom: 0; }
-
-table.table-activities td,
-table.table-activities th {
-  color: #fff;
-  border-top: 1px solid #424242; }
-
-.activity-card p {
-  margin: 30px 0; }
-
-.activity-card a:visited {
-  color: var(--white); }
-
-.activity-card a:link {
-  color: var(--white); }
-
-.activity-card-title {
-  height: 50px; }
-
 .nav-links {
   margin-top: 2rem; }
 
@@ -28861,6 +28705,10 @@ button.another_return_place_group_close {
   display: inline-flex;
   -ms-flex-item-align: end;
       align-self: flex-end; }
+
+.custom-delivery {
+  background-image: none !important;
+  padding-right: 30px !important; }
 
 .btn-only-dates {
   margin-top: 27px; }
@@ -30551,6 +30399,103 @@ button.mybooking-popup_close {
   top: 15px;
   right: 15px;
   z-index: 45; }
+
+.activity-title {
+  color: var(--font-heading-color); }
+
+.activity-img > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
+  width: 100%;
+  border-radius: 4px; }
+
+.activity-description {
+  padding-top: 1.5rem;
+  font-size: 0.9rem; }
+
+.activity-media-objects {
+  padding: 3rem 0; }
+
+.media {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee; }
+  .media h5,
+  .media i {
+    color: var(--brand-primary); }
+  .media i {
+    font-size: 3rem; }
+
+.media-body {
+  color: var(--body-color);
+  margin-bottom: 2rem; }
+
+/* =============================
+  =====  Activities Shoping Cart
+/* ============================= */
+.shoping-cart-activity {
+  background-color: #fff;
+  margin-bottom: 1.5rem;
+  border-radius: 4px; }
+
+.shoping-cart-activity__img > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+
+.shoping-cart-activity__title {
+  font-size: 1.3rem;
+  margin: 1rem; }
+
+.shoping-cart-activity__dates {
+  color: var(--gray-500);
+  margin-left: 1rem; }
+
+.shoping-cart-activity__data {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  padding: 1rem; }
+  .shoping-cart-activity__data div {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-size: 13px;
+    color: var(--body-color);
+    border-bottom: 1px solid #eee; }
+
+.shoping-cart-activity__trash-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .shoping-cart-activity__trash-button i {
+    height: 30px;
+    width: 30px;
+    color: var(--error);
+    cursor: pointer; }
+
+/* ===========================
+    ======= Activities form
+/* =========================== */
+.activities-shopping-cart-form {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: var(--white);
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06); }
+
+.activity-content__widget label {
+  color: var(--body-color); }
+
+.activity-content__widget .ui-datepicker {
+  min-width: 400px; }
 
 .full-height {
   height: 100%; }

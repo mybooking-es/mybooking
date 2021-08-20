@@ -104,7 +104,7 @@
           <!-- Custom delivery place -->
           <div id="widget_another_pickup_place_group" style="display: none;">
             <div class="flex-form-item justify-content-between position-relative">
-              <input class="w-100 form-control" type="text" id="widget_pickup_place_other" name="pickup_place_other" />
+              <input class="w-100 form-control custom-delivery" type="text" id="widget_pickup_place_other" name="pickup_place_other" />
               <input class="w-100 form-control" type="hidden" name="custom_pickup_place" value="false" />
               <button type="button" class="widget_another_pickup_place_group_close p-0">
                 <i class="fa fa-times flex-icon-absolute"></i>
@@ -123,7 +123,7 @@
           <!-- Custom delivery place -->
           <div id="widget_another_return_place_group" style="display: none;">
             <div class="flex-form-item justify-content-between position-relative">
-              <input class="w-100 form-control" type="text" id="widget_return_place_other" name="return_place_other" />
+              <input class="w-100 form-control custom-delivery" type="text" id="widget_return_place_other" name="return_place_other" />
               <input type="hidden" name="custom_return_place" value="false" />
               <button type="button" class="widget_another_return_place_group_close p-0">
                 <i class="fa fa-times flex-icon-absolute"></i>

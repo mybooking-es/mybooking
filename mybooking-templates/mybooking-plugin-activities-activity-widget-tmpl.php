@@ -66,7 +66,7 @@
           <div id="turns"></div>
           <div id="tickets"></div>
         </form>             
-       
+      
     </script>
 
     <script type="text/tmpl" id="script_cyclic_turns">

@@ -116,14 +116,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-8 order-12 lg-order-lg-1">
-        <div id="reservation_form_container" class="col process-section-box" style="display:none">
-        </div>
-      </div>
-
-      <!-- Sidebar -->
-
-      <div class="col-12 col-lg-4 order-1 order-lg-12">
+      <div class="col col-md-8 offset-md-2">
         <div class="col process-section-box">
           <h4 class="my-3"><?php echo esc_html_x( 'My reservation', 'renting_my_reservation', 'mybooking') ?></h4>
           <!-- Products -->
@@ -325,7 +318,11 @@
         <div id="payment_detail" class="col process-section-box" style="display:none">
         </div>
 
-      </div><!-- /col sidebar -->
+      </div><!-- / reservation -->
+      <!-- Form -->
+      <div class="col col-md-8 offset-md-2">
+        <div id="reservation_form_container" class="col process-section-box" style="display:none"></div>
+      </div>
     </div><!-- /row -->
   </div><!-- /container -->
 
