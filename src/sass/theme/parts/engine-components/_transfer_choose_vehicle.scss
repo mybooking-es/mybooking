@@ -1,0 +1,61 @@
+  .mybooking-transfer_choose .reservation-summary-sticky-wrapper {
+    text-align: left;
+    padding: 1rem;
+    color: white;
+  } 
+
+  @media ( min-width: 575.98px ) {
+    .mybooking-transfer_choose .reservation-summary-sticky-wrapper {
+      padding: 1rem 0;
+    }
+  }
+
+  .mybooking-transfer_choose .reservation-summary-sticky-wrapper ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .mybooking-transfer_choose .reservation-summary-sticky {
+    justify-content: space-between;
+    align-content: center;
+    padding: 0;
+  }
+  .mybooking-transfer_choose .reservation-summary-sticky .modify-button {
+    border-top: 1px solid white;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    padding: .5rem;
+  } 
+
+  @media ( min-width: 575.98px ) {
+    .mybooking-transfer_choose .reservation-summary-sticky .modify-button {
+      width: auto;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+  }
+  
+  .mybooking_transfer_reservation-summary_transfer-type {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.2em;
+    line-height: 1.2rem;
+  } 
+
+  @media ( min-width: 575.98px ) {
+    .mybooking_transfer_reservation-summary_transfer-type {
+      margin-bottom: 0;
+    }
+  }
+  
+  .mybooking_transfer_reservation-summary_transfer-hint {
+    text-transform: uppercase;
+    margin-right: 1rem;
+  }
+  
+  .mybooking-transfer_vehicle-list {
+    margin: 3rem auto;
+  }

@@ -30320,6 +30320,154 @@ ul.summary-modal_prices {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+input[name=date].form-control[readonly],
+input[name=return_date].form-control[readonly] {
+  background-color: #ffffff; }
+
+.mybooking-transfer_choose .reservation-summary-sticky-wrapper {
+  text-align: left;
+  padding: 1rem;
+  color: white; }
+
+@media (min-width: 575.98px) {
+  .mybooking-transfer_choose .reservation-summary-sticky-wrapper {
+    padding: 1rem 0; } }
+
+.mybooking-transfer_choose .reservation-summary-sticky-wrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.mybooking-transfer_choose .reservation-summary-sticky {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 0; }
+
+.mybooking-transfer_choose .reservation-summary-sticky .modify-button {
+  border-top: 1px solid white;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .5rem; }
+
+@media (min-width: 575.98px) {
+  .mybooking-transfer_choose .reservation-summary-sticky .modify-button {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none; } }
+
+.mybooking_transfer_reservation-summary_transfer-type {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.2em;
+  line-height: 1.2rem; }
+
+@media (min-width: 575.98px) {
+  .mybooking_transfer_reservation-summary_transfer-type {
+    margin-bottom: 0; } }
+
+.mybooking_transfer_reservation-summary_transfer-hint {
+  text-transform: uppercase;
+  margin-right: 1rem; }
+
+.mybooking-transfer_vehicle-list {
+  margin: 3rem auto; }
+
+.mybooking-transfer_complete .reservation-summary-sticky-wrapper {
+  text-align: left;
+  padding: 1rem;
+  color: white; }
+
+@media (min-width: 575.98px) {
+  .mybooking-transfer_complete .reservation-summary-sticky-wrapper {
+    padding: 1rem 0; } }
+
+.mybooking-transfer_complete .reservation-summary-sticky-wrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.mybooking-transfer_complete .reservation-summary-sticky {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0; }
+
+.mybooking-transfer_complete .reservation-summary-sticky .modify-button {
+  border-top: 1px solid white;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .5rem; }
+
+@media (min-width: 575.98px) {
+  .mybooking-transfer_complete .reservation-summary-sticky .modify-button {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none; } }
+
+.mybooking_transfer_reservation-summary_transfer-type {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.2em;
+  line-height: 1.2rem; }
+
+@media (min-width: 575.98px) {
+  .mybooking_transfer_reservation-summary_transfer-type {
+    margin-bottom: 0; } }
+
+.mybooking_transfer_reservation-summary_transfer-hint {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 1rem; }
+
+.mybooking_transfer_reservation-summary_cost {
+  display: inline-block;
+  margin-top: 0.5rem; }
+
+.mybooking-transfer_complete .reservation-summary_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.mybooking-transfer_reservation-summary_details {
+  margin-bottom: 1rem; }
+
+.mybooking-transfer_reservation_summary_price {
+  padding: 1rem 0;
+  margin-top: 1rem;
+  border-top: 1px solid #EEE; }
+
+.mybooking-transfer_complete .product-detail-container ul.mb-list {
+  margin-bottom: 1rem !important; }
+
+.mybooking-transfer_complete .product-detail-container ul.mb-list li.mb-list_item {
+  padding: 0.5rem 0 !important;
+  font-size: 1.1em !important;
+  border-bottom: 1px solid #EEE !important;
+  color: #424242 !important; }
+
+.mybooking_transfer_reservation_summary_price {
+  padding: 1rem 0;
+  margin-top: 1rem;
+  border-top: 1px solid #EEE; }
+
 /**
  * Module for product detail page with calendar
  */
