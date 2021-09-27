@@ -41,9 +41,9 @@
             <span><i class="fa fa-map-marker"></i>&nbsp;<%=shopping_cart.destination_point_name%></span>
             <br>
             <span class="mybooking_transfer_reservation-summary_transfer-hint">&#8592;</span>
-            <span><i class="fa fa-calendar"></i>&nbsp;<%=shopping_cart.date%> <%=shopping_cart.time%></span>
-            <span><i class="fa fa-car"></i>&nbsp;<%=shopping_cart.date%> <%=shopping_cart.time%>: <%=shopping_cart.origin_point_name%></span>
-            <span><i class="fa fa-map-marker"></i>&nbsp;<%=shopping_cart.destination_point_name%></span>
+            <span><i class="fa fa-calendar"></i>&nbsp;<%=shopping_cart.return_date%> <%=shopping_cart.return_time%></span>
+            <span><i class="fa fa-car"></i>&nbsp;<%=shopping_cart.return_origin_point_name%></span>
+            <span><i class="fa fa-map-marker"></i>&nbsp;<%=shopping_cart.return_destination_point_name%></span>
           <% } %>
         </div>
         <div class="reservation-summary_block">

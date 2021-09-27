@@ -31,14 +31,34 @@
             </span>
           </h3>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item reservation-summary-card-detail"><i class="fa fa-car"></i>&nbsp;<%=booking.origin_point_name_customer_translation%></li>
-            <li class="list-group-item reservation-summary-card-detail"><i class="fa fa-map-marker"></i>&nbsp;<%=booking.destination_point_name_customer_translation%></li>
-            <li class="list-group-item reservation-summary-card-detail">
-              <i class="fa fa-calendar-o"></i>&nbsp;<%=booking.date%>&nbsp;<%=booking.time%>
-            </li>
+            <% if (booking.round_trip) { %>
+              <li class="list-group-item reservation-summary-card-detail">
+                <b><?php echo esc_html_x( 'Going', 'transfer_summary', 'mybooking' ) ?></b>
+              </li>  
+              <li class="list-group-item reservation-summary-card-detail">
+                <i class="fa fa-calendar-o"></i>&nbsp;<%=booking.date%>&nbsp;<%=booking.time%>
+              </li>
+              <li class="list-group-item reservation-summary-card-detail"><i class="fa fa-car"></i>&nbsp;<%=booking.origin_point_name_customer_translation%></li>
+              <li class="list-group-item reservation-summary-card-detail"><i class="fa fa-map-marker"></i>&nbsp;<%=booking.destination_point_name_customer_translation%></li>
+              <li class="list-group-item reservation-summary-card-detail">
+                <b><?php echo esc_html_x( 'Return', 'transfer_summary', 'mybooking' ) ?></b>
+              </li>  
+              <li class="list-group-item reservation-summary-card-detail">
+                <i class="fa fa-calendar-o"></i>&nbsp;<%=booking.return_date%>&nbsp;<%=booking.return_time%>
+              </li>                
+              <li class="list-group-item reservation-summary-card-detail"><i class="fa fa-car"></i>&nbsp;<%=booking.return_origin_point_name_customer_translation%></li>
+              <li class="list-group-item reservation-summary-card-detail"><i class="fa fa-map-marker"></i>&nbsp;<%=booking.return_destination_point_name_customer_translation%></li>           
+            <% } else { %>
+              <li class="list-group-item reservation-summary-card-detail"><i class="fa fa-car"></i>&nbsp;<%=booking.origin_point_name_customer_translation%></li>
+              <li class="list-group-item reservation-summary-card-detail"><i class="fa fa-map-marker"></i>&nbsp;<%=booking.destination_point_name_customer_translation%></li>
+              <li class="list-group-item reservation-summary-card-detail">
+                <i class="fa fa-calendar-o"></i>&nbsp;<%=booking.date%>&nbsp;<%=booking.time%>
+              </li>
+            <% } %>
             <li class="list-group-item reservation-summary-card-detail">
               <i class="fa fa-user"></i>&nbsp;<%=booking.number_of_adults%>
               <i class="fa fa-child"></i>&nbsp;<%=booking.number_of_children%>
+              <i class="fa fa-baby"></i>&nbsp;<%=booking.number_of_infants%>
             </li>
             <% if (booking.engine_modify_dates) { %>
               <li class="list-group-item">
