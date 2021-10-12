@@ -394,14 +394,14 @@
                    <div class="form-group col-md-12">
                      <label for="payments_paypal_standard">
                       <input type="radio" id="payments_paypal_standard" name="payment_method_select" class="payment_method_select" value="paypal_standard">&nbsp;<?php echo esc_html_x( 'Paypal', 'transfer_checkout', 'mybooking-wp-plugin' ) ?>
-                      <img src="<?php echo esc_url( plugin_dir_url(__DIR__).'/assets/images/pm-paypal.jpg') ?>"/>
+                      <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>"/>
                      </label>
                    </div>
                    <div class="form-group col-md-12">
                      <label for="payments_credit_card">
                       <input type="radio" id="payments_credit_card" name="payment_method_select" class="payment_method_select" value="<%=sales_process.payment_methods.tpv_virtual%>">&nbsp;<?php echo _x( 'Credit or debit card', 'transfer_checkout', 'mybooking-wp-plugin' ) ?>
-                      <img src="<?php echo esc_url( plugin_dir_url(__DIR__).'/assets/images/pm-visa.jpg') ?>"/>
-                      <img src="<?php echo esc_url( plugin_dir_url(__DIR__).'/assets/images/pm-mastercard.jpg') ?>"/>
+                      <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
+                      <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>
                      </label>
                    </div>
                 </div>
@@ -411,16 +411,16 @@
                 <div class="alert alert-secondary" role="alert">
                   <?php echo wp_kses_post( _x( 'You will be redirected to <b>Paypal payment platform</b> to make the confirmation payment securely. You can use <u>Paypal</u> or <u>credit card</u> to make the payment.', 'transfer_checkout', 'mybooking-wp-plugin' ) ) ?>
                 </div>
-                <img src="<?php echo esc_url( plugin_dir_url(__DIR__).'/assets/images/pm-paypal.jpg') ?>"/>
-                <img src="<?php echo esc_url( plugin_dir_url(__DIR__).'/assets/images/pm-visa.jpg') ?>"/>
-                <img src="<?php echo esc_url( plugin_dir_url(__DIR__).'/assets/images/pm-mastercard.jpg') ?>"/>
+                <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>"/>
+                <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png') ?>"/>
+                <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png') ?>"/> 
             <% } else if (sales_process.payment_methods.tpv_virtual) { %>
                 <div class="alert alert-secondary" role="alert">
                   <?php echo wp_kses_post( _x( 'You will be redirected to the <b>credit card payment platform</b> to make the confirmation payment securely.' ,
                     'transfer_checkout', 'mybooking-wp-plugin' )  )?>
                 </div>
-                <img src="<?php echo esc_url( plugin_dir_url(__DIR__).'/assets/images/pm-visa.jpg') ?>"/>
-                <img src="<?php echo esc_url( plugin_dir_url(__DIR__).'/assets/images/pm-mastercard.jpg') ?>"/>
+                <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
+                <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>
             <% } %>
 
             <hr>
