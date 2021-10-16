@@ -10,6 +10,208 @@
    */
 ?>
 
+<!-- Extra representation -->
+<script type="text/template" id="script_transfer_detailed_extra">
+
+  <% if (extras && extras.length > 0) { %>
+    <div class="process-section-box">
+      <h4 class="brand-primary my-3"><?php echo esc_html_x( 'Extras', 'transfer_checkout', 'mybooking') ?></h4>
+      <div class="extras-container">
+        <% for (var idx=0;idx<extras.length;idx++) { %>
+          <% var extra = extras[idx]; %>
+          <div class="extra-wrapper">
+            <div class="extras-left">
+              <div class="extra-title">
+                <% if (extra.photo_url != null) { %>
+                  <img src="<%=extra.photo_url%>" class="card-img js-extra-info-btn" data-extra="<%=extra.id%>" />
+                <% } %>
+                <h6 class="lead"><%=extra.name%></h6>
+              </div>
+              <div class="extras-text"><%=extra.description%></div>
+            </div>
+            <div class="extras-right">
+            <p class="extras-price"><%= configuration.formatCurrency(extra.price)%></p>
+              <% if (extra.max_quantity > 1) { %>
+                <div class="input-group input-group-sm" style="width:100px;">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary btn-minus-extra"
+                        data-value="<%=extra.id%>"
+                        data-max-quantity="<%=extra.max_quantity%>">-</button>
+                    </div>
+                    <% value = (extrasInShoppingCart[extra.id]) ? extrasInShoppingCart[extra.id] : 0; %>
+                    <input type="text" id="extra-<%=extra.id%>-quantity"
+                        class="form-control disabled text-center extra-input" value="<%=value%>" data-extra-code="<%=extra.id%>"/>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary btn-plus-extra"
+                        data-value="<%=extra.id%>"
+                        data-max-quantity="<%=extra.max_quantity%>">+</button>
+                      </div>
+                </div>
+              <% } else { %>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=extra.id%>" data-value="<%=extra.id%>" <% if (extrasInShoppingCart[extra.id] &&  extrasInShoppingCart[extra.id] > 0) { %> checked="checked" <% } %>>
+                  <label class="custom-control-label" for="checkboxl<%=extra.id%>"></label>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  <% } %>
+
+</script>
+
+<!-- Reservation form -->
+<script type="text/tmpl" id="script_transfer_complete_form_tmpl">
+  <div class="form-row customer-component">
+    <div class="form-group customer_component col-md-6">
+      <label for="customer_name"><?php echo esc_html_x( 'Name', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+      <input type="text" class="form-control" name="customer_name" id="customer_name" autocomplete="off" placeholder="<?php echo esc_attr_x( 'Name', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="40">
+    </div>
+
+    <div class="form-group customer_component col-md-6">
+      <label for="customer_surname"><?php echo esc_html_x( 'Surname', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+      <input type="text" class="form-control" name="customer_surname" id="customer_surname" autocomplete="off" placeholder="<?php echo esc_attr_x( 'Surname', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="40">
+    </div>
+
+    <div class="form-group customer_component col-md-6">
+      <label for="customer_email"><?php echo esc_html_x( 'E-mail', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+      <input type="text" class="form-control" name="customer_email" id="customer_email" autocomplete="off" placeholder="<?php echo esc_attr_x( 'E-mail', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="50">
+    </div>
+
+    <div class="form-group customer_component col-md-6">
+      <label for="customer_email"><?php echo esc_html_x( 'Confirm E-mail', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+      <input type="text" class="form-control" name="confirm_customer_email" autocomplete="off" id="confirm_customer_email" placeholder="<?php echo esc_attr_x( 'Confirm E-mail', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="50">
+    </div>
+
+    <div class="form-group customer_component col-md-6">
+        <label for="customer_phone"><?php echo esc_html_x( 'Phone number', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+        <input type="text" class="form-control" name="customer_phone" id="customer_phone" autocomplete="off" placeholder="<?php echo esc_attr_x( 'Phone number', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="15">
+    </div>
+
+    <div class="form-group customer_component col-md-6">
+        <label for="customer_mobile_phone"><?php echo esc_html_x( 'Alternative phone number', 'transfer_checkout', 'mybooking-wp-plugin') ?></label>
+        <input type="text" class="form-control" name="customer_mobile_phone" id="customer_mobile_phone" autocomplete="off" placeholder="<?php echo esc_attr_x( 'Alternative phone number', 'transfer_complete', 'mybooking-wp-plugin') ?>:" maxlength="15">
+    </div>
+    <br>
+  </div>
+
+  <hr>
+
+  <h5 class="mb-4 complete-section-title"><?php echo esc_html_x( "Trip details", 'transfer_checkout', 'mybooking-wp-plugin') ?></h5>
+  
+  <!-- Going Origin -->
+
+  <div class="mb-3"><u><b><?php echo esc_html_x( "Pickup", 'transfer_checkout', 'mybooking-wp-plugin') ?></b> <%= shopping_cart.origin_point_name_customer_translation%></u></div>
+
+  <% if (shopping_cart.origin_point_type === 'location') { %>
+    <div class="form-group">
+      <label for="detailed_origin_address"><?php echo esc_html_x( 'Address or hotel name', 'transfer_checkout', 'mybooking-wp-plugin') ?></label>
+      <textarea class="form-control" name="detailed_origin_address" id="detailed_origin_address" rows="5" placeholder="<?php echo esc_attr_x( 'Address or hotel name', 'transfer_complete', 'mybooking-wp-plugin') ?>"></textarea>
+    </div>
+  <% } else { %>
+    <div class="form-row">
+      <div class="form-group customer_component col-md-6">
+        <label for="detailed_origin_flight_number"><?php echo esc_html_x( 'Flight number', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+        <input type="text" class="form-control" name="detailed_origin_flight_number" id="detailed_origin_flight_number" autocomplete="off" placeholder="<?php echo esc_attr_x( 'Flight number', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="50">
+      </div>
+      <div class="form-group customer_component col-md-6">
+        <label for="detailed_origin_flight_estimated_time"><?php echo esc_html_x( 'Flight estimated time', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+        <input type="text" class="form-control" name="detailed_origin_flight_estimated_time" autocomplete="off" id="detailed_origin_flight_estimated_time" placeholder="<?php echo esc_attr_x( 'Flight estimated time', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="50">
+      </div>
+    </div>
+  <% } %>
+
+  <!-- Going Destination -->
+  
+  <div class="mb-3"><u><b><?php echo esc_html_x( "Drop off", 'transfer_checkout', 'mybooking-wp-plugin') ?></b> <%= shopping_cart.destination_point_name_customer_translation%></u></div>
+
+  <% if (shopping_cart.destination_point_type === 'location') { %>
+    <div class="form-group">
+      <label for="detailed_destination_address"><?php echo esc_html_x( 'Address or hotel name', 'transfer_checkout', 'mybooking-wp-plugin') ?></label>
+      <textarea class="form-control" name="detailed_destination_address" id="detailed_destination_address" rows="5" placeholder="<?php echo esc_attr_x( 'Address or hotel name', 'transfer_complete', 'mybooking-wp-plugin') ?>"></textarea>
+    </div>
+  <% } else { %>
+    <div class="form-row">
+      <div class="form-group customer_component col-md-6">
+        <label for="detailed_destination_flight_number"><?php echo esc_html_x( 'Flight number', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+        <input type="text" class="form-control" name="detailed_destination_flight_number" id="detailed_destination_flight_number" autocomplete="off" placeholder="<?php echo esc_attr_x( 'Flight number', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="50">
+      </div>
+      <div class="form-group customer_component col-md-6">
+        <label for="detailed_destination_flight_estimated_time"><?php echo esc_html_x( 'Flight estimated time', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+        <input type="text" class="form-control" name="detailed_destination_flight_estimated_time" autocomplete="off" id="detailed_destination_flight_estimated_time" placeholder="<?php echo esc_attr_x( 'Flight estimated time', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="50">
+      </div>
+    </div>
+  <% } %>
+
+  <% if (shopping_cart.round_trip) { %>
+    <hr>
+    <h5 class="mb-4 complete-section-title"><?php echo esc_html_x( "Round trip details", 'transfer_complete', 'mybooking-wp-plugin') ?></h5>
+
+  <!-- Return Origin -->
+
+  <div class="mb-3"><u><b><?php echo esc_html_x( "Pickup", 'transfer_checkout', 'mybooking-wp-plugin') ?></b> <%= shopping_cart.return_origin_point_name_customer_translation%></u></div>
+
+  <% if (shopping_cart.return_origin_point_type === 'location') { %>
+    <div class="form-group">
+      <label for="detailed_return_origin_address"><?php echo esc_html_x( 'Address or hotel name', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+      <textarea class="form-control" name="detailed_return_origin_address" id="detailed_return_origin_address" rows="5" placeholder="<?php echo esc_attr_x( 'Address or hotel name', 'transfer_complete', 'mybooking-wp-plugin') ?>"></textarea>
+    </div>
+  <% } else { %>
+    <div class="form-row">
+      <div class="form-group customer_component col-md-6">
+        <label for="detailed_return_origin_flight_number"><?php echo esc_html_x( 'Flight or Vessel number', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+        <input type="text" class="form-control" name="detailed_return_origin_flight_number" id="detailed_return_origin_flight_number" autocomplete="off" placeholder="<?php echo esc_attr_x( 'Flight number', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="50">
+      </div>
+      <div class="form-group customer_component col-md-6">
+        <label for="detailed_return_origin_flight_estimated_time"><?php echo esc_html_x( 'Flight or Vessel estimated time', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+        <input type="text" class="form-control" name="detailed_return_origin_flight_estimated_time" autocomplete="off" id="detailed_return_origin_flight_estimated_time" placeholder="<?php echo esc_attr_x( 'Flight estimated time', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="50">
+      </div>
+    </div>
+  <% } %>
+
+  <!-- Return Destination -->
+  
+  <div class="mb-3"><u><b><?php echo esc_html_x( "Drop off", 'transfer_checkout', 'mybooking-wp-plugin') ?></b> <%= shopping_cart.return_destination_point_name_customer_translation%></u></div>
+
+  <% if (shopping_cart.return_destination_point_type === 'location') { %>
+    <div class="form-group">
+      <label for="detailed_return_destination_address"><?php echo esc_html_x( 'Address or hotel name', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+      <textarea class="form-control" name="detailed_return_destination_address" id="detailed_return_destination_address" rows="5" placeholder="<?php echo esc_attr_x( 'Address or hotel name', 'transfer_complete', 'mybooking-wp-plugin') ?>"></textarea>
+    </div>
+  <% } else { %>
+    <div class="form-row">
+      <div class="form-group customer_component col-md-6">
+        <label for="detailed_return_destination_flight_number"><?php echo esc_html_x( 'Flight or Vessel number', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+        <input type="text" class="form-control" name="detailed_return_destination_flight_number" id="detailed_return_destination_flight_number" autocomplete="off" placeholder="<?php echo esc_attr_x( 'Flight number', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="50">
+      </div>
+      <div class="form-group customer_component col-md-6">
+        <label for="detailed_return_destination_flight_estimated_time"><?php echo esc_html_x( 'Flight or Vessel estimated time', 'transfer_checkout', 'mybooking-wp-plugin') ?>*</label>
+        <input type="text" class="form-control" name="detailed_return_destination_flight_estimated_time" autocomplete="off" id="detailed_return_destination_flight_estimated_time" placeholder="<?php echo esc_attr_x( 'Flight estimated time', 'transfer_complete', 'mybooking-wp-plugin') ?>:*" maxlength="50">
+      </div>
+    </div>
+  <% } %>
+
+  <% } %>
+
+  <hr>
+
+  <h5 class="mb-4 complete-section-title"><?php echo esc_html_x( "Additional information", 'transfer_checkout', 'mybooking-wp-plugin') ?></h5>
+
+  <div class="form-group">
+    <label for="comments"><?php echo esc_html_x( 'Comments', 'transfer_checkout', 'mybooking-wp-plugin') ?></label>
+    <textarea class="form-control" name="comments" id="comments" rows="5" placeholder="<?php echo esc_attr_x( 'Comments', 'renting_complete', 'mybooking-wp-plugin') ?>"></textarea>
+  </div>
+  <br>
+
+  <!-- Reservation : payment (script_payment_detail) -->
+  <div id="mybooking_transfer_payment_detail">
+  </div>
+
+</script>  
+
+
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_transfer_reservation_summary">
 
@@ -138,70 +340,6 @@
       </div>
     </section>
   </div>
-
-</script>
-
-<!-- Extra representation -->
-<script type="text/template" id="script_transfer_detailed_extra">
-
-  <% if (extras && extras.length > 0) {%>
-    <div class="process-section-box">
-      <h4 class="complete-section-title"><?php echo esc_html_x( 'Extras', 'transfer_checkout', 'mybooking-wp-plugin') ?></h4>
-      <div class="extra-wrapper">
-        <% for (var idx=0;idx<extras.length;idx++) { %>
-          <% var extra = extras[idx]; %>
-          <% var value = (extrasInShoppingCart[extra.code]) ? extrasInShoppingCart[extra.code] : 0; %>
-          <% var bg = ((idx % 2 == 0) ? 'bg-light' : ''); %>
-          <div class="row extra-card <%=bg%>" data-extra="<%=extra.code%>">
-            <% if (extra.photo_path) { %>
-              <div class="col-md-2">
-                <img class="extra-img js-extra-info-btn"
-                      src="<%=extra.photo_path%>"
-                      alt="<%=extra.name%>"
-                      data-extra="<%=extra.code%>">
-              </div>
-              <div class="col-md-4">
-                <div class="extra-name"><b><%=extra.name%></b></div>
-              </div>
-            <% } else { %>
-              <div class="col-md-6">
-                <div class="extra-name"><b><%=extra.name%></b></div>
-              </div>
-            <% } %>
-            <div class="col-md-3">
-              <% if (extra.max_quantity > 1) { %>
-                <div class="extra-plus-minus">
-                  <button class="btn btn-primary btn-minus-extra"
-                          data-value="<%=extra.code%>"
-                          data-max-quantity="<%=extra.max_quantity%>">-</button>
-                  <input type="text" id="extra-<%=extra.code%>-quantity"
-                         class="form-control disabled text-center extra-input" value="<%=value%>" data-extra-code="<%=extra.code%>" readonly/>
-                  <button class="btn btn-primary btn-plus-extra"
-                          data-value="<%=extra.code%>"
-                          data-max-quantity="<%=extra.max_quantity%>">+</button>
-                </div>
-              <% } else { %>
-                <div class="extra-check">
-                  <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=extra.code%>" data-value="<%=extra.code%>"
-                    <% if (extrasInShoppingCart[extra.code] &&  extrasInShoppingCart[extra.code] > 0) { %> checked="checked" <% } %>>
-                    <label class="custom-control-label" for="checkboxl<%=extra.code%>"></label>
-                  </div>
-                </div>
-              <% } %>
-            </div>
-            <div class="col-md-3">
-             <p class="extra-price">
-                <b><%= configuration.formatExtraAmount(i18next, extra.one_unit_price, extra.price_calculation,
-                                                       shopping_cart.days, shopping_cart.hours,
-                                                       extra.unit_price)%></b>
-             </p>
-            </div>
-          </div>
-        <% } %>
-      </div>
-    </div>
-  <% } %>
 
 </script>
 
