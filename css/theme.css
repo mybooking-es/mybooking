@@ -28504,11 +28504,12 @@ table.table-activities th {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
-  .flex-form-group input.hasDatepicker {
+          flex-direction: column;
+  /*input.hasDatepicker {
     border-left: none;
     border-top-left-radius: 0;
-    border-bottom-left-radius: 0; }
+    border-bottom-left-radius: 0;
+  }*/ }
   .flex-form-group label {
     font-size: 0.8rem; }
 
