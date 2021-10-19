@@ -62,7 +62,7 @@
             </li>
             <% if (booking.engine_modify_dates) { %>
               <li class="list-group-item">
-                <button id="modify_reservation_button" class="btn btn-primary w-100"><?php echo esc_html_x( 'Edit', 'transfer_summary', 'mybooking-wp-plugin' ) ?></button>
+                <button id="modify_reservation_button" class="btn btn-primary w-100"><?php echo esc_html_x( 'Edit', 'transfer_summary', 'mybooking' ) ?></button>
               </li>
             <% } %>
           </ul>
@@ -94,7 +94,7 @@
 
           <!-- Total -->
           <h3 class="mybooking_transfer_reservation_summary_price">
-            <?php echo esc_html_x( "Total", 'transfer_summary', 'mybooking-wp-plugin' ) ?>
+            <?php echo esc_html_x( "Total", 'transfer_summary', 'mybooking' ) ?>
             <span class="float-right"><%=configuration.formatCurrency(booking.total_cost)%></span>
           </h3>
         </div>

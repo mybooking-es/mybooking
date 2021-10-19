@@ -28,7 +28,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title modal-product-detail-title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo esc_attr_x( 'Close', 'transfer_choose_vehicle', 'mybooking-wp-plugin' ); ?>">
+        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo esc_attr_x( 'Close', 'transfer_choose_vehicle', 'mybooking' ); ?>">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

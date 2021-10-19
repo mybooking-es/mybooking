@@ -22,7 +22,7 @@
         </span>
       <% } else { %>
         <span class="mybooking_transfer_reservation-summary_transfer-type">
-          <?php echo esc_html_x( 'One Way', 'transfer_choose_vehicle', 'mybooking-wp-plugin' ) ?>
+          <?php echo esc_html_x( 'One Way', 'transfer_choose_vehicle', 'mybooking' ) ?>
         </span>
       <% } %>
 
