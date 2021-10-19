@@ -2,7 +2,7 @@
   /**
    * The Template for showing the transfer summary step - JS Microtemplates
    *
-   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-transfer-summary-tmpl.php
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php
    *
    * @phpcs:disable PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound
    * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPOpenTagFound
@@ -19,6 +19,8 @@
   <div class="container">
     <div class="row">
       <div class="col col-md-8 offset-md-2">
+        
+        <!-- Summary -->
         <div class="process-section-box">
 
           <!-- Information -->
@@ -79,6 +81,7 @@
           </h3>
         </div>
 
+        <!-- Customer -->
         <div class="process-section-box">
           <!-- Customer -->
           <h4 class="my-3"><?php echo esc_html_x( "Customer's details", 'renting_summary', 'mybooking') ?></h4>
@@ -100,11 +103,88 @@
               </tbody>
             </table>
           </div>
+        </div>
 
+        <!-- Payment -->
+        <div id="transfer_payment_detail" class="col process-section-box" style="display:none">
         </div>
       </div>
     </div>
   </div>
 
+</script>
+
+<!-- Payment detail -->
+<script type="text/tmpl" id="script_transfer_payment_detail">
+  <h4 class="my-3"><%= i18next.t('myReservation.pay.total_payment', {amount:configuration.formatCurrency(amount) }) %></h4>
+  <% if (booking.total_paid == 0 && booking.status == 'pending_confirmation') {%>
+    <div id="payment_amount_container" class="alert alert-info">
+      <%= i18next.t('myReservation.pay.booking_amount', {amount:configuration.formatCurrency(booking.booking_amount) }) %>
+    </div>
+  <% } else if (booking.total_pending > 0 && booking.status != 'pending_confirmation' && booking.status != 'cancelled') { %>
+    <div id="payment_amount_container" class="alert alert-info">
+      <%= i18next.t('myReservation.pay.pending_amount', {amount:configuration.formatCurrency(booking.total_pending) }) %>
+    </div>      
+  <% } %> 
+  <form name="payment_form">
+    <% if (sales_process.payment_methods.paypal_standard && sales_process.payment_methods.tpv_virtual) { %>
+      <div class="alert alert-secondary" role="alert">
+        <?php echo wp_kses_post( _x( 'You will be redirected to the <b>payment platform</b> to make the payment securely. You can use <u>Paypal account</u> or <u>credit card</u> to make the payment.', 'transfer_my_reservation', 'mybooking' ) )?>
+      </div>     
+      <div class="form-row">
+         <div class="form-group col-md-12">
+           <label for="payments_paypal_standard">
+            <input type="radio" name="payment_method_id" value="paypal_standard">&nbsp;<?php echo esc_html_x( 'Paypal', 'transfer_my_reservation', 'mybooking' ) ?>
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>" />
+           </label>
+         </div>
+         <div class="form-group col-md-12">
+           <label for="payments_paypal_standard">
+            <input type="radio" name="payment_method_id"
+              value="<%=sales_process.payment_methods.tpv_virtual%>">&nbsp;<?php echo esc_html_x( 'Credit or debit card', 'transfer_my_reservation', 'mybooking' ) ?>
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
+            <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>
+           </label>
+         </div>
+      </div>
+    <% } else if (sales_process.payment_methods.paypal_standard) {%>
+      <div class="alert alert-secondary" role="alert">
+        <?php echo wp_kses_post( _x( 'You will be redirected to <b>Paypal payment platform</b> to make the payment securely. You can use <u>Paypal account</u> or <u>credit card</u> to make the payment.', 'transfer_my_reservation', 'mybooking' ) )?>
+      </div>      
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>" />
+          <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
+          <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>          
+        </div>
+      </div>
+      <input type="hidden" name="payment_method_id" value="paypal_standard" data-payment-method="paypal_standard">
+    <% } else if (sales_process.payment_methods.tpv_virtual) {%>
+      <div class="alert alert-secondary" role="alert">
+        <?php echo wp_kses_post( _x( 'You will be redirected to the <b>payment platform</b> to make the payment securely. You can use <u>credit or debit card</u> to make the payment.',
+                                     'transfer_my_reservation', 'mybooking' ) )?>
+      </div>    
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
+          <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>
+        </div>
+      </div>
+
+      <input type="hidden" name="payment_method_id" value="<%=sales_process.payment_methods.tpv_virtual%>"/>
+    <% } %>
+    <% if (sales_process.can_pay_deposit) { %>
+      <input type="hidden" name="payment" value="deposit"/>
+    <% } else if (booking.total_paid == 0) {%>
+      <input type="hidden" name="payment" value="total"/>
+    <% } else { %>
+      <input type="hidden" name="payment" value="pending"/>
+    <% } %>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <button class="btn btn-outline-dark" id="btn_pay" type="submit"><%= i18next.t('myReservation.pay.payment_button', {amount:configuration.formatCurrency(amount) }) %></button>
+      </div>
+    </div>
+  </div>
 
 </script>
