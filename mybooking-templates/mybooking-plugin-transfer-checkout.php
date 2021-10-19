@@ -2,7 +2,7 @@
   /**
    * The Template for showing the renting complete step
    *
-   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-checkout.php
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-transfer-checkout.php
    *
    *   Areas managed by the Reservation engine
    *
@@ -44,7 +44,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title modal-extra-detail-title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo esc_attr_x( 'Close', 'transfer_complete', 'mybooking-wp-plugin' ); ?>">
+        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo esc_attr_x( 'Close', 'transfer_checkout', 'mybooking-wp-plugin' ); ?>">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

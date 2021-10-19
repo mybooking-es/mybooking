@@ -1,8 +1,8 @@
 <?php
   /**
-   * The Template for showing the transfer summary step
+   * The Template for showing the transfer reservation
    *
-   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-reservation.php
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-transfer-reservation.php
    */
 ?>
 

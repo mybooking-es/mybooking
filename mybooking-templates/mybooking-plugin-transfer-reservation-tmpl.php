@@ -1,6 +1,6 @@
 <?php
   /**
-   * The Template for showing the transfer summary step - JS Microtemplates
+   * The Template for showing the transfer reservation - JS Microtemplates
    *
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php
    *
