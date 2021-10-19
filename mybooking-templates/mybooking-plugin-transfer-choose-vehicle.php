@@ -1,6 +1,6 @@
 <?php
   /**
-   * The Template for showing the renting select product step
+   * The Template for showing the transfer select vehicle step
    *
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-transfer-choose-vehicle.php
    *
@@ -28,7 +28,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title modal-product-detail-title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo esc_attr_x( 'Close', 'renting_choose_product', 'mybooking-wp-plugin' ); ?>">
+        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo esc_attr_x( 'Close', 'transfer_choose_vehicle', 'mybooking-wp-plugin' ); ?>">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

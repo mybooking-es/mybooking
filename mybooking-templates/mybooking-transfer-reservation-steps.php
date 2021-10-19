@@ -13,7 +13,7 @@
 *   ------
 *
 *   The wizard container is included in order to be able to show the selection
-*   wizard in the reservation steps (choose product - checkout)
+*   wizard in the reservation steps (choose vehicle - checkout - summary)
 *
 */
 ?>

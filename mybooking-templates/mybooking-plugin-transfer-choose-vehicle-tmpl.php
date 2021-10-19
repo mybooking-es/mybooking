@@ -56,7 +56,7 @@
       <!-- Modify transfer -->
       <button id="mybooking_transfer_modify_reservation_button" class="modify-button">
         <i class="d-none d-md-inline mr-2 fas fa-pen"></i>
-        <?php echo esc_html_x( 'Edit', 'renting_choose_product', 'mybooking' ) ?>
+        <?php echo esc_html_x( 'Edit', 'transfer_choose_vehicle', 'mybooking' ) ?>
       </button>
     </div>
   </div>
@@ -95,7 +95,7 @@
 
           <div class="card-static_body">
             <h2 class="card-static_product-name" style="margin-bottom: 2rem;"><%=product.name%></h2>
-            <button class="btn btn-primary btn-choose-product" data-product="<%=product.id%>"><?php echo _x( 'Book it!', 'renting_choose_product', 'mybooking') ?></button>
+            <button class="btn btn-primary btn-choose-product" data-product="<%=product.id%>"><?php echo _x( 'Book it!', 'transfer_choose_vehicle', 'mybooking') ?></button>
             <!-- Context was transfer_choose_vehicle -->
           </div>
         </div>

@@ -44,7 +44,7 @@
             </li>
             <% if (booking.engine_modify_dates) { %>
               <li class="list-group-item">
-                <button id="modify_reservation_button" class="btn btn-primary w-100"><?php echo esc_html_x( 'Edit', 'transfer_summary', 'mybooking-wp-plugin' ) ?></button>
+                <button id="modify_reservation_button" class="btn btn-primary w-100"><?php echo esc_html_x( 'Edit', 'transfer_my_reservation', 'mybooking-wp-plugin' ) ?></button>
               </li>
             <% } %>
           </ul>
@@ -62,7 +62,7 @@
 
           <!-- Extras -->
           <% if (booking.extras.length > 0) { %>
-            <h4><?php echo esc_html_x( 'Extras', 'transfer_summary', 'mybooking' ) ?></h4>
+            <h4><?php echo esc_html_x( 'Extras', 'transfer_my_reservation', 'mybooking' ) ?></h4>
             <ul class="list-group list-group-flush">
               <% for (var idx=0;idx<booking.extras.length;idx++) { %>
               <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -76,7 +76,7 @@
 
           <!-- Total -->
           <h3 class="mybooking_transfer_reservation_summary_price">
-            <?php echo esc_html_x( "Total", 'transfer_summary', 'mybooking-wp-plugin' ) ?>
+            <?php echo esc_html_x( "Total", 'transfer_my_reservation', 'mybooking-wp-plugin' ) ?>
             <span class="float-right"><%=configuration.formatCurrency(booking.total_cost)%></span>
           </h3>
         </div>
@@ -84,20 +84,20 @@
         <!-- Customer -->
         <div class="process-section-box">
           <!-- Customer -->
-          <h4 class="my-3"><?php echo esc_html_x( "Customer's details", 'renting_summary', 'mybooking') ?></h4>
+          <h4 class="my-3"><?php echo esc_html_x( "Customer's details", 'transfer_my_reservation', 'mybooking') ?></h4>
           <div class="table-responsive">
             <table class="table table-borderless table-striped">
               <tbody>
                 <tr>
-                  <th scope="row"><?php echo esc_html_x( "Full name", 'renting_summary', 'mybooking') ?>:</th>
+                  <th scope="row"><?php echo esc_html_x( "Full name", 'transfer_my_reservation', 'mybooking') ?>:</th>
                   <td><%=booking.customer_name%> <%=booking.customer_surname%></td>
                 </tr>
                 <tr>
-                  <th scope="row"><?php echo esc_html_x( "E-mail", 'renting_summary', 'mybooking') ?>:</th>
+                  <th scope="row"><?php echo esc_html_x( "E-mail", 'transfer_my_reservation', 'mybooking') ?>:</th>
                   <td><%=booking.customer_email%></td>
                 </tr>
                 <tr>
-                  <th scope="row"><?php echo esc_html_x( "Phone number", 'renting_summary', 'mybooking') ?>:</th>
+                  <th scope="row"><?php echo esc_html_x( "Phone number", 'transfer_my_reservation', 'mybooking') ?>:</th>
                   <td><%=booking.customer_phone%> <%=booking.customer_mobile_phone%></td>
                 </tr>
               </tbody>

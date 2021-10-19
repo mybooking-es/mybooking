@@ -257,7 +257,7 @@
 
   <div class="form-group">
     <label for="comments"><?php echo esc_html_x( 'Comments', 'transfer_checkout', 'mybooking-wp-plugin') ?></label>
-    <textarea class="form-control" name="comments" id="comments" rows="5" placeholder="<?php echo esc_attr_x( 'Comments', 'renting_complete', 'mybooking-wp-plugin') ?>"></textarea>
+    <textarea class="form-control" name="comments" id="comments" rows="5" placeholder="<?php echo esc_attr_x( 'Comments', 'transfer_complete', 'mybooking-wp-plugin') ?>"></textarea>
   </div>
   <br>
 

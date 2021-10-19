@@ -101,20 +101,20 @@
 
         <div class="process-section-box">
           <!-- Customer -->
-          <h4 class="my-3"><?php echo esc_html_x( "Customer's details", 'renting_summary', 'mybooking') ?></h4>
+          <h4 class="my-3"><?php echo esc_html_x( "Customer's details", 'transfer_summary', 'mybooking') ?></h4>
           <div class="table-responsive">
             <table class="table table-borderless table-striped">
               <tbody>
                 <tr>
-                  <th scope="row"><?php echo esc_html_x( "Full name", 'renting_summary', 'mybooking') ?>:</th>
+                  <th scope="row"><?php echo esc_html_x( "Full name", 'transfer_summary', 'mybooking') ?>:</th>
                   <td><%=booking.customer_name%> <%=booking.customer_surname%></td>
                 </tr>
                 <tr>
-                  <th scope="row"><?php echo esc_html_x( "E-mail", 'renting_summary', 'mybooking') ?>:</th>
+                  <th scope="row"><?php echo esc_html_x( "E-mail", 'transfer_summary', 'mybooking') ?>:</th>
                   <td><%=booking.customer_email%></td>
                 </tr>
                 <tr>
-                  <th scope="row"><?php echo esc_html_x( "Phone number", 'renting_summary', 'mybooking') ?>:</th>
+                  <th scope="row"><?php echo esc_html_x( "Phone number", 'transfer_summary', 'mybooking') ?>:</th>
                   <td><%=booking.customer_phone%> <%=booking.customer_mobile_phone%></td>
                 </tr>
               </tbody>
