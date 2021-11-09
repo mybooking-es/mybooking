@@ -16,7 +16,8 @@
   </div>
 <?php } else { ?>
   <!-- Activities -->
-  <section class="cards-static-container fleet">
+  <section class="cards-static-container fleet 
+                  <?php if ( array_key_exists('theme_align_width', $args) && $args['theme_align_width'] != '' ) ?><?php echo esc_attr( $args['theme_align_width'] )?><? endif; ?>">
     <?php foreach( $args['data']->data as $mybooking_activity ) { ?>
       <div class="card-static-wrapper">
         <div class="card-static">
