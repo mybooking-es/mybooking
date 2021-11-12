@@ -13,8 +13,8 @@
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"><?php echo esc_html_x( 'Modify reservation', 'renting_form_modify_reservation', 'mybooking-wp-plugin') ?></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo esc_attr_x( 'Close', 'transfer_form_modify_reservation', 'mybooking-wp-plugin' ); ?>">
+        <h5 class="modal-title"><?php echo esc_html_x( 'Modify reservation', 'renting_form_modify_reservation', 'mybooking') ?></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo esc_attr_x( 'Close', 'transfer_form_modify_reservation', 'mybooking' ); ?>">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
