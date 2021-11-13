@@ -2,7 +2,6 @@
 // Base/ forms
 //==============================================
 
-
 /*
 *  VENDOR FORMS
 */
@@ -108,6 +107,8 @@ label {
 .form-reservation-error,
 input.form-reservation-error {
   color: var(--error) !important;
+  padding: 5px;
+  font-size: 0.6rem;
 }
 
 // Form Dates
@@ -152,4 +153,9 @@ select:disabled {
   .flex-form-group input.hasDatepicker {
     max-width: 145px;
   }
+}
+
+.flex-form-item.widget_pickup_place_group,
+.flex-form-item.widget_return_place_group {
+  flex-direction: column;
 }

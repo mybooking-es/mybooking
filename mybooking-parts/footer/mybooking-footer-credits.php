@@ -13,28 +13,30 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="container-fluid copy copy-wrapper">
-  <div class="row">
-    <div class="col text-center">
-      <?php $mybooking_footer_credits = MyBookingCustomizer::getInstance()->get_theme_option("mybooking_global_footer_credits");?>
-      <p class="footer_copyright">
-        <small>
-          <?php           
-            $mybooking_allowed_html = array(
-                      'a' => array(
-                          'href' => array(),
-                          'title' => array(),
-                          'rel' => array(),
-                          'class' => array(),
-                          'target' => array()
-                      ),
-                      'br' => array(),
-                      'em' => array(),
-                      'strong' => array()
-                  ); ?>
-          <?php echo wp_kses( $mybooking_footer_credits, $mybooking_allowed_html )  ?>
-        </small>
-      </p>
+<?php $mybooking_footer_credits = MyBookingCustomizer::getInstance()->get_theme_option("mybooking_global_footer_credits"); ?>
+<?php if ( !empty( $mybooking_footer_credits ) ): ?>
+  <div class="container-fluid copy copy-wrapper">
+    <div class="row">
+      <div class="col text-center">
+        <p class="footer_copyright">
+          <small>
+            <?php           
+              $mybooking_allowed_html = array(
+                  'a' => array(
+                      'href' => array(),
+                      'title' => array(),
+                      'rel' => array(),
+                      'class' => array(),
+                      'target' => array()
+                  ),
+                  'br' => array(),
+                  'em' => array(),
+                  'strong' => array()
+              ); 
+              echo wp_kses( $mybooking_footer_credits, $mybooking_allowed_html )  ?>
+          </small>
+        </p>
+      </div>
     </div>
   </div>
-</div>
+<?php endif; ?>  

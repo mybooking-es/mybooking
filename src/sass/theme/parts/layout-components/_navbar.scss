@@ -39,7 +39,7 @@
 
 .site-title {
   font-weight: 700;
-  color: var(--navbar-branding)!important;
+  color: var(--navbar-branding) !important;
   font-family: var(--font-heading);
 }
 
@@ -51,11 +51,12 @@
   display: none;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   .site-description {
     display: block;
-    padding-top: .3125rem;
-    padding-bottom: .3125rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-left: 1rem;
   }
 }
 
@@ -66,12 +67,13 @@
   width: auto;
 }
 
-.navbar-dark .navbar-brand, .navbar-dark .navbar-brand a {
-  color: var(--navbar-branding)!important;
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-brand a {
+  color: var(--navbar-branding) !important;
 }
 
 .navbar-dark .navbar-brand:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 // Toggler
@@ -108,7 +110,6 @@ button.navbar-toggler > .navbar-toggler-icon > i {
   position: relative;
   top: 5px;
 }
-
 
 // All menu items
 .navbar-dark .navbar-nav .nav-link {
@@ -218,7 +219,6 @@ a.dropdown-item {
     .navbar-dark .navbar-nav .nav-link:focus,
     .navbar-dark .navbar-nav .nav-link:hover {
       color: var(--navbar-link-color-hover);
-      opacity: var(--navbar-link-hover-opacity);
     }
   }
 }

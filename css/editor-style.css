@@ -73,6 +73,28 @@
   line-height: 1.2;
 }
 
+/* --------------- Typography -------------------------------- */
+
+.editor-styles-wrapper .wp-block h2 {
+	font-size: 2rem;
+}
+
+.editor-styles-wrapper .wp-block h3 {
+	font-size: 1.75rem;
+}
+
+.editor-styles-wrapper .wp-block h4 {
+	font-size: 1.5rem;
+}
+
+.editor-styles-wrapper .wp-block h5 {
+	font-size: 1.25rem;
+}
+
+.editor-styles-wrapper .wp-block h6 {
+  font-size: 1rem;
+}
+
 /* --------------- Structure --------------------------------- */
 
 /* Main column width */

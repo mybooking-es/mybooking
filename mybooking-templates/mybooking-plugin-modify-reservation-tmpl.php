@@ -19,14 +19,14 @@
         <div class="flex-form-box">
           <label><?php echo esc_html_x( 'Pick-up place', 'renting_form_selector', 'mybooking') ?></label>
           <div class="flex-form-item pickup_place_group">
-            <label class="form_selector-select_label_wrap mb-0">
-              <select id="pickup_place" name="pickup_place" class="form_selector-select_dropdown"></select>
-            </label>
+            <div class="form_selector-select_label_wrap mb-0">
+              <select id="pickup_place" name="pickup_place" class="form_selector-select_dropdown form-control"></select>
+            </div>
           </div>
           <!-- Custom delivery place -->
           <div id="another_pickup_place_group" style="display: none;">
             <div class="flex-form-item justify-content-between position-relative">
-              <input class="w-100" type="text" id="pickup_place_other" name="pickup_place_other" />
+              <input class="w-100 form-control custom-delivery" type="text" id="pickup_place_other" name="pickup_place_other" />
               <input type="hidden" name="custom_pickup_place" value="false" />
               <button type="button" class="another_pickup_place_group_close p-0">
                 <i class="fa fa-times flex-icon-absolute"></i>
@@ -37,15 +37,15 @@
         <div class="flex-form-box">
           <label><?php echo esc_html_x( 'Return place', 'renting_form_selector', 'mybooking' ) ?></label>
           <div class="flex-form-item return_place_group">
-            <label class="form_selector-select_label_wrap mb-0">
-              <select id="return_place" name="return_place" class="form_selector-select_dropdown">
+            <div class="form_selector-select_label_wrap mb-0">
+              <select id="return_place" name="return_place" class="form_selector-select_dropdown form-control">
               </select>
-            </label>
+            </div>
           </div>
           <!-- Custom delivery place -->
           <div id="another_return_place_group" style="display: none;">
             <div class="flex-form-item justify-content-between position-relative">
-              <input class="w-100" type="text" id="return_place_other" name="return_place_other" />
+              <input class="w-100 form-control custom-delivery" type="text" id="return_place_other" name="return_place_other" />
               <input type="hidden" name="custom_return_place" value="false" />
               <button type="button" class="another_return_place_group_close p-0">
                 <i class="fa fa-times flex-icon-absolute"></i>
@@ -78,27 +78,38 @@
     <div class="flex-form-group">
       <div class="flex-form-box">
         <label><?php echo esc_html( MyBookingEngineContext::getInstance()->getDeliveryDate() ) ?></label>
+
         <div class="flex-form-item">
-          <label class="mb-0" for="date_from"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
-          <input type="text" id="date_from" name="date_from" readonly="true"/>
+          <span class="w-100">
+            <div class="inputWithIcon">
+            <input class="modify-dates form-control" type="text" id="date_from" name="date_from" readonly="true" />
+            <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+            </div>
+          </span>
+
           <% if (configuration.timeToFrom) { %>
             <select class="ml-1" id="time_from" name="time_from">
             </select>
           <% } else { %>
-            <input type="hidden" name="time_from" value="10:00"/>
+            <input class="modify-dates form-control" type="hidden" name="time_from" value="10:00" />
           <% } %>
         </div>
       </div>
       <div class="flex-form-box">
         <label><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() ) ?></label>
         <div class="flex-form-item">
-          <label class="mb-0" for="date_to"><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></label>
-          <input type="text" id="date_to" name="date_to" readonly="true"/>
+        <span class="w-100">
+            <div class="inputWithIcon">
+              <input class="modify-dates form-control" type="text" id="date_to" name="date_to" readonly="true" />
+                <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+            </div>
+        </span>
+
           <% if (configuration.timeToFrom) { %>
             <select class="ml-1" id="time_to" name="time_to">
             </select>
           <% } else { %>
-            <input type="hidden" name="time_to" value="20:00"/>
+            <input class="modify-dates form-control" type="hidden" name="time_to" value="20:00" />
           <% } %>
         </div>
       </div>

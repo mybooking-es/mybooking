@@ -67,12 +67,15 @@
   }
 }
 .home .flex-form {
-  background-color: var(--home-selector-bg);
+  background-color: var(--home-selector-mobile-bg);
 }
 
 // Horizontal Selector on Desktop
 
 @media (min-width: 992px) {
+  .home .flex-form {
+    background-color: var(--home-selector-bg);
+  }
   .home-alone .flex-form {
     // 1 column : Max width 745px
     max-width: 745px;
@@ -163,31 +166,27 @@
   }
 }
 
-// Date icon
-
-.flex-icon {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  background-color: var(--white);
-  padding: 0.6rem;
-  height: var(--form-control-height);
-  color: var(--gray-700);
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border: 1px solid var(--gray-500);
-  border-right: none;
+.inputWithIcon > input[type="text"] {
+  padding-left: 40px;
 }
-.flex-icon-absolute {
-  @extend .flex-icon;
+.inputWithIcon {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+
+.inputWithIcon i {
   position: absolute;
-  border-left: none;
-  border-right: 1px solid var(--gray-500);
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  width: 40px;
+  left: 0;
+  top: 2px;
+  padding: 9px 8px;
+  color: #9e9e9e;
+}
+
+input[name=date_from].form-control[readonly]:not(input[disabled=disabled]),
+input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
+  background-color: #ffffff;
 }
 
 // Select wrapper for showing the arrow
@@ -203,7 +202,6 @@
   -moz-appearance: none;
   appearance: none;
 }
-
 .form_selector-select_label_wrap:after {
   content: "\f078";
   font-family: "Font Awesome 5 Free";
@@ -248,7 +246,6 @@
 
 .flex-form-sticky {
   display: flex;
-  align-items: end;
   flex-direction: row;
   flex-grow: 1;
   background-color: var(--selector-sticky-bg) !important;
@@ -301,6 +298,10 @@
     color: var(--selector-sticky-labels-color);
   }
 }
+.pickup_place_group,
+.return_place_group {
+  flex-direction: column;
+}
 
 // Solves form close button displacement
 button.widget_another_pickup_place_group_close,
@@ -308,8 +309,12 @@ button.widget_another_return_place_group_close,
 button.another_pickup_place_group_close,
 button.another_return_place_group_close {
   position: absolute;
-  right: 40px;
-  top: 0;
+  right: 12px;
+  top: 6px;
+  background: transparent;
+  i {
+    color: var(--gray-600);
+  }
 }
 
 .another_pickup_place_group input {
@@ -323,6 +328,21 @@ button.another_return_place_group_close {
   label {
     color: var(--modal-selector-label-color);
   }
+}
+
+// Push Date time label errors to the right
+#widget_time_from-error,
+#widget_time_to-error,
+#time_from-error,
+#time_to-error {
+  display: inline-flex;
+  align-self: flex-end;
+}
+
+// Custom delivery
+.custom-delivery {
+  background-image: none !important;
+  padding-right: 30px !important;
 }
 
 //==============================================

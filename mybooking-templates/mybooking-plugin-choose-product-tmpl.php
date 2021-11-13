@@ -83,7 +83,7 @@
         <div class="card-static">
 
           <div class="card-static_image-container">
-            <img class="card-static_image" src="<%=product.photo%>">
+            <img class="card-static_image" src="<%=product.full_photo%>">
             <i type="button" class="card-static_info-button fa fa-info-circle js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>"></i>
             <% if (product.highlight_message && product.highlight_message != '') { %>
             <div class="card-static_custom-message"><%=product.highlight_message%></div>

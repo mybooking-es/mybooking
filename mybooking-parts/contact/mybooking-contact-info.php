@@ -3,7 +3,7 @@
 *   CONTACT INFO PARTIAL
 *   --------------------
 *
-* 	@version 0.0.3
+* 	@version 0.0.4
 *   @package WordPress
 *   @subpackage Mybooking WordPress Theme
 *   @since Mybooking WordPress Theme 0.0.1
@@ -14,7 +14,7 @@
 
   <?php $mybooking_company_adress =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_adress"); ?>
   <?php $mybooking_company_phone =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_phone"); ?>
-  <?php $mybooking_company_chat =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_chat"); ?>
+  <?php $mybooking_company_mobile =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_mobile"); ?>
   <?php $mybooking_company_email =  MyBookingCustomizer::getInstance()->get_theme_option("company_info_email"); ?>
 
   <!-- Address -->

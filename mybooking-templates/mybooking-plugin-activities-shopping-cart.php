@@ -16,7 +16,6 @@
           </div>
           <!-- Reservation form -->
           <div class="col-12 col-md-6 col-lg-8">
-            <div class="activities-content__widget-wrapper">
               <div class="activity-content__widget">
                 <form id="form-reservation" name="reservation_form" class="form-delivery activities-shopping-cart-form" method="post"
                   autocomplete="off">
@@ -27,7 +26,6 @@
                   <div id="reservation_error" class="alert alert-danger my-3" style="display:none"></div>
                 </form>
               </div>
-            </div>
           </div>
 
         </div>
