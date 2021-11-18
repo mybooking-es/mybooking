@@ -27007,13 +27007,13 @@ ul.social-links,
     .footer ul li {
       list-style: none; }
 
-.copy {
+.mb-copy {
   color: var(--credits-color);
   background-color: var(--credits-bg);
   padding-top: 1rem; }
-  .copy a {
+  .mb-copy a {
     color: var(--credits-color-link); }
-    .copy a:hover {
+    .mb-copy a:hover {
       color: var(--credits-color-link-hover);
       text-decoration: none; }
 

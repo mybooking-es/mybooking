@@ -102,14 +102,14 @@
   <% if (configuration.transfer_origin_destination_detailed_info_mode === 'only_address') { %>
     <!-- Only Text detailed information -->
     <div class="form-group">
-      <label for="detailed_origin_address"><?php echo esc_html_x( 'Pickup address (hotel, resource, address, terminal)', 'transfer_checkout', 'mybooking') ?>*</label>
-      <textarea class="form-control" name="detailed_origin_address" id="detailed_origin_address" rows="5" placeholder="<?php echo esc_attr_x( 'Pickup address (hotel, resource, address, terminal)', 'transfer_checkout', 'mybooking') ?>"></textarea>
+      <label for="detailed_origin_address"><?php echo esc_html_x( 'Pickup address (hotel, resort, address, terminal)', 'transfer_checkout', 'mybooking') ?>*</label>
+      <textarea class="form-control" name="detailed_origin_address" id="detailed_origin_address" rows="5" placeholder="<?php echo esc_attr_x( 'Pickup address (hotel, resort, address, terminal)', 'transfer_checkout', 'mybooking') ?>"></textarea>
     </div>
 
     <% if (shopping_cart.round_trip) { %>
       <div class="form-group">
-        <label for="detailed_origin_address"><?php echo esc_html_x( 'Dropoff address (hotel, resource, address, terminal)', 'transfer_checkout', 'mybooking') ?>*</label>
-        <textarea class="form-control" name="detailed_return_origin_address" id="detailed_return_origin_address" rows="5" placeholder="<?php echo esc_attr_x( 'Dropoff address (hotel, resource, address, terminal)', 'transfer_checkout', 'mybooking') ?>"></textarea>
+        <label for="detailed_origin_address"><?php echo esc_html_x( 'Dropoff address (hotel, resort, address, terminal)', 'transfer_checkout', 'mybooking') ?>*</label>
+        <textarea class="form-control" name="detailed_return_origin_address" id="detailed_return_origin_address" rows="5" placeholder="<?php echo esc_attr_x( 'Dropoff address (hotel, resort, address, terminal)', 'transfer_checkout', 'mybooking') ?>"></textarea>
       </div>
     <% } %>  
   <% } else if (configuration.transfer_origin_destination_detailed_info_mode === 'flight_address') { %>

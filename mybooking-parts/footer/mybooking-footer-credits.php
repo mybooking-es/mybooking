@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 <?php $mybooking_footer_credits = MyBookingCustomizer::getInstance()->get_theme_option("mybooking_global_footer_credits"); ?>
 <?php if ( !empty( $mybooking_footer_credits ) ): ?>
-  <div class="container-fluid copy copy-wrapper">
+  <div class="container-fluid mb-copy mb-copy-wrapper">
     <div class="row">
       <div class="col text-center">
         <p class="footer_copyright">

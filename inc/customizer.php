@@ -1999,9 +1999,9 @@ if (!class_exists('MyBookingCustomizer')) {
       ));
 
 
-      // == Subfooter setings
+      // == Footer credits setings
 
-      // == Subfooter Footer message
+      // == Footer credits message
 
       $wp_customize->add_setting(
         'mybooking_global_footer_credits',
@@ -2015,7 +2015,7 @@ if (!class_exists('MyBookingCustomizer')) {
       $wp_customize->add_control(
         'mybooking_global_footer_credits',
         array(
-          'label' => _x('Footer message', 'customizer_topbar', 'mybooking'),
+          'label' => _x('Footer credits message', 'customizer_topbar', 'mybooking'),
           'description' => esc_html_x('Footer detailed message', 'customizer_topbar', 'mybooking'),
           'section' => 'mybooking_theme_footer_options',
           'priority' => 10,
@@ -2043,7 +2043,7 @@ if (!class_exists('MyBookingCustomizer')) {
         $wp_customize,
         'subfooter_bg',
         array(
-          'label' => _x('Subfooter background color', 'customizer_footer', 'mybooking'),
+          'label' => _x('Footer credits background color', 'customizer_footer', 'mybooking'),
           'section' => 'mybooking_theme_footer_options',
           'settings' => 'mybooking_subfooter_bg'
         )
@@ -2063,7 +2063,7 @@ if (!class_exists('MyBookingCustomizer')) {
         $wp_customize,
         'subfooter_color',
         array(
-          'label' => _x('Subfooter text color', 'customizer_footer', 'mybooking'),
+          'label' => _x('Footer credits text color', 'customizer_footer', 'mybooking'),
           'section' => 'mybooking_theme_footer_options',
           'settings' => 'mybooking_subfooter_color'
         )
@@ -2083,7 +2083,7 @@ if (!class_exists('MyBookingCustomizer')) {
         $wp_customize,
         'subfooter_link_color',
         array(
-          'label' => _x('Subfooter Link color', 'customizer_footer', 'mybooking'),
+          'label' => _x('Footer credits Link color', 'customizer_footer', 'mybooking'),
           'section' => 'mybooking_theme_footer_options',
           'settings' => 'mybooking_subfooter_link_color'
         )
@@ -2103,7 +2103,7 @@ if (!class_exists('MyBookingCustomizer')) {
         $wp_customize,
         'subfooter_link_hover_color',
         array(
-          'label' => _x('Subfooter Link hover color', 'customizer_footer', 'mybooking'),
+          'label' => _x('Footer credits Link hover color', 'customizer_footer', 'mybooking'),
           'section' => 'mybooking_theme_footer_options',
           'settings' => 'mybooking_subfooter_link_hover_color'
         )
@@ -2145,7 +2145,7 @@ if (!class_exists('MyBookingCustomizer')) {
         'home_selector_background',
         array(
           'label'      => _x('Home Booking Form background', 'customizer_selector', 'mybooking'),
-          'description' => _x('Usefull when the form is placed inside the Header and needs some transparency.', 'customizer_selector', 'mybooking'),
+          'description' => _x('Useful when the form is placed inside the Header and needs some transparency.', 'customizer_selector', 'mybooking'),
 
           'section'    => 'mybooking_theme_selector_options',
           'settings'   => 'mybooking_home_selector_background'
@@ -2168,7 +2168,7 @@ if (!class_exists('MyBookingCustomizer')) {
         array(
           'label' => _x('Home Booking Form Mobile background', 'customizer_selector', 'mybooking'),
           'description' => _x(
-            'Usefull when the form is placed outside the Header and needs some opacity.',
+            'Useful when the form is placed outside the Header and needs some opacity.',
             'customizer_selector',
             'mybooking'
           ),
