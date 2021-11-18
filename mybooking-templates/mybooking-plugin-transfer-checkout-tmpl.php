@@ -515,6 +515,7 @@
                   <?php if ( empty($args['terms_and_conditions']) ) { ?>
                     <?php echo esc_html_x( 'I have read and hereby accept the conditions of transfer', 'transfer_checkout', 'mybooking' ) ?>
                   <?php } else { ?>
+                    <?php /* translators: %s: terms and conditions URL */ ?>
                     <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of transfer',
                                                            'transfer_checkout', 'mybooking' ),
                                                        $args['terms_and_conditions'] ) )?>
@@ -545,6 +546,7 @@
                     <?php if ( empty($args['terms_and_conditions']) ) { ?>
                       <?php echo esc_html_x( 'I have read and hereby accept the conditions of transfer', 'transfer_checkout', 'mybooking' ) ?>
                     <?php } else { ?>
+                      <?php /* translators: %s: terms and conditions URL */ ?>
                       <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of transfer',
                                                              'transfer_checkout', 'mybooking' ),
                                                          $args['terms_and_conditions'] ) ) ?>
@@ -593,7 +595,7 @@
                    </div>
                    <div class="form-group col-md-12">
                      <label for="payments_credit_card">
-                      <input type="radio" id="payments_credit_card" name="payment_method_select" class="payment_method_select" value="<%=sales_process.payment_methods.tpv_virtual%>">&nbsp;<?php echo _x( 'Credit or debit card', 'transfer_checkout', 'mybooking' ) ?>
+                      <input type="radio" id="payments_credit_card" name="payment_method_select" class="payment_method_select" value="<%=sales_process.payment_methods.tpv_virtual%>">&nbsp;<?php echo esc_html_x( 'Credit or debit card', 'transfer_checkout', 'mybooking' ) ?>
                       <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
                       <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>
                      </label>
@@ -625,6 +627,7 @@
                       <?php if ( empty($args['terms_and_conditions']) ) { ?>
                         <?php echo esc_html_x( 'I have read and hereby accept the conditions of transfer', 'transfer_checkout', 'mybooking' ) ?>
                       <?php } else { ?>
+                        <?php /* translators: %s: terms and conditions URL */ ?>
                         <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of transfer',
                                                                'transfer_checkout', 'mybooking' ),
                                                            $args['terms_and_conditions'] ) )?>

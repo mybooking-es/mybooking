@@ -95,7 +95,7 @@
 
           <div class="card-static_body">
             <h2 class="card-static_product-name" style="margin-bottom: 2rem;"><%=product.name%></h2>
-            <button class="btn btn-primary btn-choose-product" data-product="<%=product.id%>"><?php echo _x( 'Book it!', 'transfer_choose_vehicle', 'mybooking') ?></button>
+            <button class="btn btn-primary btn-choose-product" data-product="<%=product.id%>"><?php echo esc_html_x( 'Book it!', 'transfer_choose_vehicle', 'mybooking') ?></button>
             <!-- Context was transfer_choose_vehicle -->
           </div>
         </div>
