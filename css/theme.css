@@ -28517,7 +28517,8 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
-            flex-direction: row !important; }
+            flex-direction: row !important;
+    padding-bottom: 1rem; }
   .flex-form-sticky .flex-form-group {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -28547,6 +28548,9 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   .flex-form-sticky label {
     font-size: 13px;
     color: var(--selector-sticky-labels-color); }
+
+.flex-form-sticky .flex-form-group-wrapper-inline input.hasDatepicker {
+  max-width: inherit; }
 
 .pickup_place_group,
 .return_place_group {

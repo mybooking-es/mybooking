@@ -260,6 +260,7 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   // Form controls wrapper : Force place - date - time in a row
   .flex-form-group-wrapper {
     flex-direction: row !important;
+    padding-bottom: 1rem;
   }
   // Form group
   .flex-form-group {
@@ -298,6 +299,17 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
     color: var(--selector-sticky-labels-color);
   }
 }
+
+// Stick inline search form => no max width for date
+.flex-form-sticky {
+ .flex-form-group-wrapper-inline {
+   // Date input
+   input.hasDatepicker {
+     max-width: inherit;
+   }
+ }
+}
+
 .pickup_place_group,
 .return_place_group {
   flex-direction: column;

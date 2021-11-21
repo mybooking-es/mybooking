@@ -13,7 +13,7 @@
 
   <% if (!configuration.pickupReturnPlace && !configuration.timeToFrom) { %>
 
-    <div class="flex-form-group-wrapper">
+    <div class="flex-form-group-wrapper flex-form-group-wrapper-inline">
 
         <% if (not_hidden_rental_location_code && configuration.selectRentalLocation) { %>
           <div class="flex-form-group widget_rental_location" style="display: none">
@@ -39,14 +39,13 @@
           <div class="flex-form-box mb-0">
             <label for="widget_date_from"><?php echo esc_html( MyBookingEngineContext::getInstance()->getDeliveryDate() )?></label>
             <div class="flex-form-item">
-              <span><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></span>
-              <input class="only-dates" type="text" id="widget_date_from" name="date_from" readonly="true" />
-              <% if (configuration.timeToFrom) { %>
-                <select class="ml-1" id="widget_time_from" name="time_from">
-              </select>
-              <% } else { %>
-                <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>" />
-              <% } %>
+              <span class="w-100">
+                <div class="inputWithIcon">
+                  <input class="form-control" type="text" id="widget_date_from" name="date_from" readonly="true"/>
+                  <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+                </div>
+              </span>
+              <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>" />
             </div>
           </div>
         </div>
@@ -55,14 +54,13 @@
           <div class="flex-form-box mb-0">
             <label for="widget_date_to"><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() )?></label>
             <div class="flex-form-item">
-              <span><i class="fa fa-calendar flex-icon" aria-hidden="true"></i></span>
-              <input class="only-dates" type="text" id="widget_date_to" name="date_to" readonly="true" />
-              <% if (configuration.timeToFrom) { %>
-              <select class="ml-1" id="widget_time_to" name="time_to">
-              </select>
-              <% } else { %>
+              <span class="w-100">
+                <div class="inputWithIcon">
+                  <input class="form-control" type="text" id="widget_date_to" name="date_to" readonly="true"/>
+                  <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+                </div>
+              </span>
               <input type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>" />
-              <% } %>
             </div>
           </div>
         </div>
@@ -160,10 +158,10 @@
         <label for="widget_date_to"><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() ) ?></label>
         <div class="flex-form-item">
           <span class="w-100">
-          <div class="inputWithIcon">
-          <input class="form-control" type="text" id="widget_date_to" name="date_to" readonly="true"/>
-            <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
-          </div>
+            <div class="inputWithIcon">
+              <input class="form-control" type="text" id="widget_date_to" name="date_to" readonly="true"/>
+              <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+            </div>
           </span>
           <% if (configuration.timeToFrom) { %>
             <select class="ml-1 form-control" id="widget_time_to" name="time_to">
