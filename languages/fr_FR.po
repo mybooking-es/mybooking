@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2021-11-22 14:51+0000\n"
+"PO-Revision-Date: 2021-11-23 08:58+0000\n"
 "Last-Translator: \n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.0; wp-5.6.3"
+"X-Loco-Version: 2.5.5; wp-5.8.2"
 
 #: 404.php:27
 msgctxt "404_page"
@@ -810,7 +810,7 @@ msgstr "URL LinkedIn"
 #: inc/customizer.php:630 inc/customizer.php:631 inc/customizer.php:639
 msgctxt "customizer_company"
 msgid "Mobile number"
-msgstr ""
+msgstr "Numéro de portable"
 
 #: inc/customizer.php:608 inc/customizer.php:609 inc/customizer.php:617
 msgctxt "customizer_company"
@@ -841,6 +841,8 @@ msgstr "URL YouTube"
 msgctxt "customizer_footer"
 msgid "Controls footer layout, background and link colors."
 msgstr ""
+"Contrôle la disposition du pied de page, l'arrière-plan et les couleurs des "
+"liens."
 
 #: inc/customizer.php:2027
 msgctxt "customizer_footer"
@@ -865,22 +867,22 @@ msgstr "Couleur de fond du pied de page"
 #: inc/customizer.php:2046
 msgctxt "customizer_footer"
 msgid "Footer credits background color"
-msgstr ""
+msgstr "Couleur d'arrière-plan des crédits de pied de page"
 
 #: inc/customizer.php:2086
 msgctxt "customizer_footer"
 msgid "Footer credits Link color"
-msgstr ""
+msgstr "Crédits de pied de page Couleur du lien"
 
 #: inc/customizer.php:2106
 msgctxt "customizer_footer"
 msgid "Footer credits Link hover color"
-msgstr ""
+msgstr "Crédits de pied de page Couleur de survol du lien"
 
 #: inc/customizer.php:2066
 msgctxt "customizer_footer"
 msgid "Footer credits text color"
-msgstr ""
+msgstr "Couleur du texte des crédits de pied de page"
 
 #: inc/customizer.php:1909
 msgctxt "customizer_footer"
@@ -967,12 +969,12 @@ msgstr ""
 #: inc/customizer.php:1742
 msgctxt "customizer_header"
 msgid "Header background color"
-msgstr ""
+msgstr "Couleur d'arrière-plan de l'en-tête"
 
 #: inc/customizer.php:1684
 msgctxt "customizer_header"
 msgid "Header brightness"
-msgstr ""
+msgstr "Luminosité de l'en-tête"
 
 #: inc/customizer.php:1595
 msgctxt "customizer_header"
@@ -1007,7 +1009,7 @@ msgstr "Disposition"
 #: inc/customizer.php:1685 inc/customizer.php:1693
 msgctxt "customizer_header"
 msgid "Set a value between 1% and 100%"
-msgstr ""
+msgstr "Définir une valeur entre 1% et 100%"
 
 #: inc/customizer.php:1718
 #, php-format
@@ -1217,7 +1219,7 @@ msgstr "Fond de formulaire de réservation à Home"
 #: inc/customizer.php:2169
 msgctxt "customizer_selector"
 msgid "Home Booking Form Mobile background"
-msgstr ""
+msgstr "Accueil Formulaire de réservation Fond d'écran mobile"
 
 #: inc/customizer.php:2216
 msgctxt "customizer_selector"
@@ -1245,6 +1247,8 @@ msgctxt "customizer_selector"
 msgid ""
 "Useful when the form is placed outside the Header and needs some opacity."
 msgstr ""
+"Utile lorsque le formulaire est placé en dehors de l'en-tête et a besoin "
+"d'une certaine opacité."
 
 #: inc/customizer.php:2018
 #| msgid "Footer message"
@@ -2691,12 +2695,12 @@ msgstr "Dépôt %s"
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:238
 msgctxt "renting_summary"
 msgid "Brand"
-msgstr ""
+msgstr "Marque"
 
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:256
 msgctxt "renting_summary"
 msgid "Color"
-msgstr ""
+msgstr "Couleur"
 
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:220
 msgctxt "renting_summary"
@@ -2731,7 +2735,7 @@ msgstr "Garantie"
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:244
 msgctxt "renting_summary"
 msgid "Model"
-msgstr ""
+msgstr "Modèle"
 
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:149
 msgctxt "renting_summary"
@@ -2772,7 +2776,7 @@ msgstr "Supplément de temps de retour"
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:250
 msgctxt "renting_summary"
 msgid "Stock plate"
-msgstr ""
+msgstr "Plaque de crosse"
 
 #: mybooking-templates/mybooking-plugin-summary-tmpl.php:159
 msgctxt "renting_summary"
@@ -2822,13 +2826,13 @@ msgstr "Basculer la navigation"
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:142
 msgctxt "transfer_checkout"
 msgid "Accommodation"
-msgstr ""
+msgstr "Hébergement"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:68
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:256
 msgctxt "transfer_checkout"
 msgid "Additional information"
-msgstr ""
+msgstr "Information additionnelle"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:157
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:158
@@ -2840,88 +2844,88 @@ msgstr ""
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:234
 msgctxt "transfer_checkout"
 msgid "Address or hotel name"
-msgstr ""
+msgstr "Adresse ou nom de l'hôtel"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:63
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:94
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:95
 msgctxt "transfer_checkout"
 msgid "Alternative phone number"
-msgstr ""
+msgstr "Numéro de téléphone alternatif"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:498
 msgctxt "transfer_checkout"
 msgid "Book now and pay now"
-msgstr ""
+msgstr "Réservez maintenant et payez maintenant"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:490
 msgctxt "transfer_checkout"
 msgid "Book now and pay on arrival"
-msgstr ""
+msgstr "Réservez maintenant et payez à l'arrivée"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:92
 msgctxt "transfer_checkout"
 msgid "Close"
-msgstr ""
+msgstr "proche"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:71
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:259
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:260
 msgctxt "transfer_checkout"
 msgid "Comments"
-msgstr ""
+msgstr "Commentaires"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:560
 msgctxt "transfer_checkout"
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmer"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:53
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:84
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:85
 msgctxt "transfer_checkout"
 msgid "Confirm E-mail"
-msgstr ""
+msgstr "Confirmez votre email"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:598
 msgctxt "transfer_checkout"
 msgid "Credit or debit card"
-msgstr ""
+msgstr "Carte de crédit ou de débit"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:34
 msgctxt "transfer_checkout"
 msgid "Customer's details"
-msgstr ""
+msgstr "Coordonnées du client"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:176
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:228
 msgctxt "transfer_checkout"
 msgid "Drop off"
-msgstr ""
+msgstr "Déposer"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:111
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:112
 msgctxt "transfer_checkout"
 msgid "Dropoff address (hotel, resort, address, terminal)"
-msgstr ""
+msgstr "Adresse de dépôt (hôtel, complexe, adresse, terminal)"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:48
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:79
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:80
 msgctxt "transfer_checkout"
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:326
 msgctxt "transfer_checkout"
 msgid "Edit"
-msgstr ""
+msgstr "Éditer"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:18
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:381
 msgctxt "transfer_checkout"
 msgid "Extras"
-msgstr ""
+msgstr "Suppléments"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:126
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:138
@@ -2931,7 +2935,7 @@ msgstr ""
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:244
 msgctxt "transfer_checkout"
 msgid "Flight estimated time"
-msgstr ""
+msgstr "Heure de vol estimée"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:122
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:134
@@ -2941,41 +2945,41 @@ msgstr ""
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:240
 msgctxt "transfer_checkout"
 msgid "Flight number"
-msgstr ""
+msgstr "Numéro de vol"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:137
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:219
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:243
 msgctxt "transfer_checkout"
 msgid "Flight or Vessel estimated time"
-msgstr ""
+msgstr "Heure estimée du vol ou du navire"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:125
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:167
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:191
 msgctxt "transfer_checkout"
 msgid "Flight or vessel estimated time"
-msgstr ""
+msgstr "Heure estimée du vol ou du navire"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:133
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:215
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:239
 msgctxt "transfer_checkout"
 msgid "Flight or Vessel number"
-msgstr ""
+msgstr "Numéro de vol ou de navire"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:121
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:163
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:187
 msgctxt "transfer_checkout"
 msgid "Flight or vessel number"
-msgstr ""
+msgstr "Numéro de vol ou de navire"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:352
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:365
 msgctxt "transfer_checkout"
 msgid "Going"
-msgstr ""
+msgstr "Aller"
 
 #. %s: terms and conditions URL
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:519
@@ -2987,103 +2991,105 @@ msgid ""
 "I have read and hereby accept the <a href=\"%s\" target=\"_blank\">"
 "conditions</a> of transfer"
 msgstr ""
+"J'ai lu et j'accepte les <a href=\"%s\" target=\"_blank\">conditions</a> de "
+"transfert"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:516
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:547
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:628
 msgctxt "transfer_checkout"
 msgid "I have read and hereby accept the conditions of transfer"
-msgstr ""
+msgstr "J'ai lu et j'accepte les conditions de transfert"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:38
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:69
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:70
 msgctxt "transfer_checkout"
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:144
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:145
 msgctxt "transfer_checkout"
 msgid "Name of Hotel / Complex / Villa and address"
-msgstr ""
+msgstr "Nom de l'Hôtel / Complexe / Villa et adresse"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:288
 msgctxt "transfer_checkout"
 msgid "One Way"
-msgstr ""
+msgstr "Sens Unique"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:118
 msgctxt "transfer_checkout"
 msgid "Outward Journey Details"
-msgstr ""
+msgstr "Détails du voyage aller"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:592
 msgctxt "transfer_checkout"
 msgid "Paypal"
-msgstr ""
+msgstr "Paypal"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:58
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:89
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:90
 msgctxt "transfer_checkout"
 msgid "Phone number"
-msgstr ""
+msgstr "Numéro de téléphone"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:152
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:204
 msgctxt "transfer_checkout"
 msgid "Pickup"
-msgstr ""
+msgstr "Ramasser"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:105
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:106
 msgctxt "transfer_checkout"
 msgid "Pickup address (hotel, resort, address, terminal)"
-msgstr ""
+msgstr "Adresse de prise en charge (hôtel, complexe, adresse, terminal)"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:482
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:529
 msgctxt "transfer_checkout"
 msgid "Request reservation"
-msgstr ""
+msgstr "Demande de réservation"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:358
 msgctxt "transfer_checkout"
 msgid "Return"
-msgstr ""
+msgstr "Retour"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:130
 msgctxt "transfer_checkout"
 msgid "Return Journey Details"
-msgstr ""
+msgstr "Détails du trajet de retour"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:280
 msgctxt "transfer_checkout"
 msgid "Round trip"
-msgstr ""
+msgstr "Aller-retour"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:200
 msgctxt "transfer_checkout"
 msgid "Round trip details"
-msgstr ""
+msgstr "Détails de l'aller-retour"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:43
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:74
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:75
 msgctxt "transfer_checkout"
 msgid "Surname"
-msgstr ""
+msgstr "Nom de famille"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:117
 msgctxt "transfer_checkout"
 msgid "Transfer details"
-msgstr ""
+msgstr "Détails du transfert"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:149
 msgctxt "transfer_checkout"
 msgid "Trip details"
-msgstr ""
+msgstr "Détails du voyage"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:608
 msgctxt "transfer_checkout"
@@ -3092,6 +3098,9 @@ msgid ""
 "confirmation payment securely. You can use <u>Paypal</u> or <u>credit "
 "card</u> to make the payment."
 msgstr ""
+"Vous serez redirigé vers la <b>plateforme de paiement Paypal</b> pour "
+"effectuer le paiement de confirmation en toute sécurité. Vous pouvez "
+"utiliser <u>Paypal</u> ou <u>carte de crédit</u> pour effectuer le paiement."
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:615
 msgctxt "transfer_checkout"
@@ -3099,6 +3108,8 @@ msgid ""
 "You will be redirected to the <b>credit card payment platform</b> to make "
 "the confirmation payment securely."
 msgstr ""
+"Vous serez redirigé vers la <b>plateforme de paiement par carte de crédit</b>"
+" pour effectuer le paiement de confirmation en toute sécurité."
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:587
 msgctxt "transfer_checkout"
@@ -3107,153 +3118,156 @@ msgid ""
 "confirmation payment securely. You can use <u>Paypal</u> or <u>credit "
 "card</u> to make the payment."
 msgstr ""
+"Vous serez redirigé vers la <b>plateforme de paiement</b> pour effectuer le "
+"paiement de confirmation en toute sécurité. Vous pouvez utiliser <u>"
+"Paypal</u> ou <u>carte de crédit</u> pour effectuer le paiement."
 
 #: mybooking-templates/mybooking-plugin-transfer-choose-vehicle-tmpl.php:98
 msgctxt "transfer_choose_vehicle"
 msgid "Book it!"
-msgstr ""
+msgstr "Réserver!"
 
 #: mybooking-templates/mybooking-plugin-transfer-choose-vehicle.php:31
 msgctxt "transfer_choose_vehicle"
 msgid "Close"
-msgstr ""
+msgstr "proche"
 
 #: mybooking-templates/mybooking-plugin-transfer-choose-vehicle-tmpl.php:59
 msgctxt "transfer_choose_vehicle"
 msgid "Edit"
-msgstr ""
+msgstr "Éditer"
 
 #: mybooking-templates/mybooking-plugin-transfer-choose-vehicle-tmpl.php:25
 msgctxt "transfer_choose_vehicle"
 msgid "One Way"
-msgstr ""
+msgstr "Sens Unique"
 
 #: mybooking-templates/mybooking-plugin-transfer-choose-vehicle-tmpl.php:21
 msgctxt "transfer_choose_vehicle"
 msgid "Round trip"
-msgstr ""
+msgstr "Aller-retour"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation.php:17
 msgctxt "transfer_form_modify_reservation"
 msgid "Close"
-msgstr ""
+msgstr "proche"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:56
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:56
 msgctxt "transfer_form_selector"
 msgid "Adults"
-msgstr ""
+msgstr "Adultes"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:63
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:63
 msgctxt "transfer_form_selector"
 msgid "Children"
-msgstr ""
+msgstr "Vérifier"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:40
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:40
 msgctxt "transfer_form_selector"
 msgid "Date and time"
-msgstr ""
+msgstr "Date et l'heure"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:29
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:29
 msgctxt "transfer_form_selector"
 msgid "Destination"
-msgstr ""
+msgstr "Destination"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:136
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:136
 msgctxt "transfer_form_selector"
 msgid "Find a transfer"
-msgstr ""
+msgstr "Trouver un transfert"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:70
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:70
 msgctxt "transfer_form_selector"
 msgid "Infants"
-msgstr ""
+msgstr "Nourrissons"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:85
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:85
 msgctxt "transfer_form_selector"
 msgid "One way"
-msgstr ""
+msgstr "Sens Unique"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:21
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:21
 msgctxt "transfer_form_selector"
 msgid "Origin"
-msgstr ""
+msgstr "Origine"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:124
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:124
 msgctxt "transfer_form_selector"
 msgid "Return Date and time"
-msgstr ""
+msgstr "Date et heure de retour"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:113
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:113
 msgctxt "transfer_form_selector"
 msgid "Return Destination"
-msgstr ""
+msgstr "Destination de retour"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:105
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:105
 msgctxt "transfer_form_selector"
 msgid "Return Origin"
-msgstr ""
+msgstr "Retour Origine"
 
 #: mybooking-templates/mybooking-plugin-transfer-modify-reservation-tmpl.php:91
 #: mybooking-templates/mybooking-plugin-transfer-selector-widget-tmpl.php:91
 msgctxt "transfer_form_selector"
 msgid "Round trip"
-msgstr ""
+msgstr "Aller-retour"
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:144
 msgctxt "transfer_my_reservation"
 msgid "Credit or debit card"
-msgstr ""
+msgstr "Carte de crédit ou de débit"
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:87
 msgctxt "transfer_my_reservation"
 msgid "Customer's details"
-msgstr ""
+msgstr "Coordonnées du client"
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:96
 msgctxt "transfer_my_reservation"
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:47
 msgctxt "transfer_my_reservation"
 msgid "Edit"
-msgstr ""
+msgstr "Éditer"
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:65
 msgctxt "transfer_my_reservation"
 msgid "Extras"
-msgstr ""
+msgstr "Suppléments"
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:92
 msgctxt "transfer_my_reservation"
 msgid "Full name"
-msgstr ""
+msgstr "Nom et prénom"
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:137
 msgctxt "transfer_my_reservation"
 msgid "Paypal"
-msgstr ""
+msgstr "Paypal"
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:100
 msgctxt "transfer_my_reservation"
 msgid "Phone number"
-msgstr ""
+msgstr "Numéro de téléphone"
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:79
 msgctxt "transfer_my_reservation"
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:152
 msgctxt "transfer_my_reservation"
@@ -3262,6 +3276,9 @@ msgid ""
 "securely. You can use <u>Paypal account</u> or <u>credit card</u> to make "
 "the payment."
 msgstr ""
+"Vous serez redirigé vers la <b>plateforme de paiement Paypal</b> pour "
+"effectuer le paiement en toute sécurité. Vous pouvez utiliser un <u>compte "
+"Paypal</u> ou une <u>carte de crédit</u> pour effectuer le paiement."
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:164
 msgctxt "transfer_my_reservation"
@@ -3269,6 +3286,9 @@ msgid ""
 "You will be redirected to the <b>payment platform</b> to make the payment "
 "securely. You can use <u>credit or debit card</u> to make the payment."
 msgstr ""
+"Vous serez redirigé vers la <b>plateforme de paiement</b> pour effectuer le "
+"paiement en toute sécurité. Vous pouvez utiliser une <u>carte de crédit ou "
+"de débit</u> pour effectuer le paiement."
 
 #: mybooking-templates/mybooking-plugin-transfer-reservation-tmpl.php:132
 msgctxt "transfer_my_reservation"
@@ -3277,91 +3297,94 @@ msgid ""
 "securely. You can use <u>Paypal account</u> or <u>credit card</u> to make "
 "the payment."
 msgstr ""
+"Vous serez redirigé vers la <b>plateforme de paiement</b> pour effectuer le "
+"paiement en toute sécurité. Vous pouvez utiliser un <u>compte Paypal</u> ou "
+"une <u>carte de crédit</u> pour effectuer le paiement."
 
 #: mybooking-templates/mybooking-transfer-reservation-steps.php:37
 msgctxt "transfer_reservation_step"
 msgid "Checkout"
-msgstr ""
+msgstr "Vérifier"
 
 #: mybooking-templates/mybooking-transfer-reservation-steps.php:35
 msgctxt "transfer_reservation_step"
 msgid "Select dates"
-msgstr ""
+msgstr "Sélectionnez des dates"
 
 #: mybooking-templates/mybooking-transfer-reservation-steps.php:36
 msgctxt "transfer_reservation_step"
 msgid "Select vehicle"
-msgstr ""
+msgstr "Sélectionnez le véhicule"
 
 #: mybooking-templates/mybooking-transfer-reservation-steps.php:38
 msgctxt "transfer_reservation_step"
 msgid "Summary"
-msgstr ""
+msgstr "Sommaire"
 
 #: mybooking-templates/mybooking-transfer-reservation-steps.php:35
 msgctxt "transfer_reservation_steps"
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: mybooking-templates/mybooking-transfer-reservation-steps.php:36
 msgctxt "transfer_reservation_steps"
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: mybooking-templates/mybooking-transfer-reservation-steps.php:37
 msgctxt "transfer_reservation_steps"
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #: mybooking-templates/mybooking-transfer-reservation-steps.php:38
 msgctxt "transfer_reservation_steps"
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: mybooking-templates/mybooking-plugin-transfer-summary-tmpl.php:104
 msgctxt "transfer_summary"
 msgid "Customer's details"
-msgstr ""
+msgstr "Coordonnées du client"
 
 #: mybooking-templates/mybooking-plugin-transfer-summary-tmpl.php:113
 msgctxt "transfer_summary"
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #: mybooking-templates/mybooking-plugin-transfer-summary-tmpl.php:65
 msgctxt "transfer_summary"
 msgid "Edit"
-msgstr ""
+msgstr "Éditer"
 
 #: mybooking-templates/mybooking-plugin-transfer-summary-tmpl.php:83
 msgctxt "transfer_summary"
 msgid "Extras"
-msgstr ""
+msgstr "Suppléments"
 
 #: mybooking-templates/mybooking-plugin-transfer-summary-tmpl.php:109
 msgctxt "transfer_summary"
 msgid "Full name"
-msgstr ""
+msgstr "Nom et prénom"
 
 #: mybooking-templates/mybooking-plugin-transfer-summary-tmpl.php:36
 msgctxt "transfer_summary"
 msgid "Going"
-msgstr ""
+msgstr "Aller"
 
 #: mybooking-templates/mybooking-plugin-transfer-summary-tmpl.php:117
 msgctxt "transfer_summary"
 msgid "Phone number"
-msgstr ""
+msgstr "Numéro de téléphone"
 
 #: mybooking-templates/mybooking-plugin-transfer-summary-tmpl.php:44
 msgctxt "transfer_summary"
 msgid "Return"
-msgstr ""
+msgstr "Retour"
 
 #: mybooking-templates/mybooking-plugin-transfer-summary-tmpl.php:97
 msgctxt "transfer_summary"
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #: mybooking-templates/mybooking-plugin-selector-wizard-container.php:13
 msgctxt "wizard_container"
