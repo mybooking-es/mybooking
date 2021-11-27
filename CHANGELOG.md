@@ -2,9 +2,14 @@
 
 ## [1.0.10] 2020-08-X
 
+### Added
+
+- Transfer templates
+
 ### Fixed
 
 - MybookingReservationEngine renting templates : Use customer fullname to show customer name
+- Renting my reservation page. Show centered if not reservation form and use two columns if reservation form
 
 ## [1.0.9] 2020-07-21
 

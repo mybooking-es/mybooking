@@ -204,7 +204,7 @@ if (!class_exists('MyBookingCustomizer')) {
         $header_widget_text_color = get_theme_mod('mybooking_header_widget_text_color', '#FFFFFF');
         $header_widget_link_color = get_theme_mod('mybooking_header_widget_link_color', '#FFFFFF');
         $header_bg_color = get_theme_mod('mybooking_header_bg_color', '#FFF');
-        $header_brightness = get_theme_mod('mybooking_header_brightness', '70%');
+        $header_brightness = get_theme_mod('mybooking_header_brightness', '100');
 
         $home_selector_background = get_theme_mod('mybooking_home_selector_background', 'rgba(255,255,255,0.5)');
         $home_selector_mobile_background = get_theme_mod('mybooking_home_selector_mobile_background', '#f5f5f5');
@@ -253,8 +253,12 @@ if (!class_exists('MyBookingCustomizer')) {
         $custom_css .= "--home-header-widget-link: " . $this->slug_sanitize_rgba($header_widget_link_color) .
         ';';
         $custom_css .= "--hero-bg-color: " . $this->slug_sanitize_rgba($header_bg_color) . ';';
-        $custom_css .= "--hero-img-brightness:" . esc_html($header_brightness) . ';';
-
+        if ( $header_brightness > 0 ) {
+          $custom_css .= "--hero-img-brightness: " . esc_html($header_brightness). '%' . ';';
+        }
+        else {
+          $custom_css .= "--hero-img-brightness: none;";
+        }
         // Identity
         $custom_css .= "--custom-logo-height: " . esc_html($logo_height) . 'px;';
 
@@ -318,8 +322,6 @@ if (!class_exists('MyBookingCustomizer')) {
         $body_bg = get_theme_mod('mybooking_body_bg', '#FFFFFF');
         $body_color = get_theme_mod('mybooking_body_color', '#212121');
         $header_text_color = get_theme_mod('mybooking_headers_color', '#424242');
-
-        $header_brightness = get_theme_mod('mybooking_header_brightness', '70%');
 
         $custom_css .= ":root {";
 
@@ -1675,14 +1677,14 @@ if (!class_exists('MyBookingCustomizer')) {
       // Background brightness
 
       $wp_customize->add_setting('mybooking_header_brightness', array(
-      'default' => '70%',
+      'default' => '100',
       'transport' => 'refresh',
-      'sanitize_callback' => 'sanitize_text_field',
+      'sanitize_callback' => 'absint',
       ));
 
       $wp_customize->add_control('mybooking_header_brightness', array(
-      'label' => _x('Header brightness', 'customizer_header', 'mybooking'),
-      'description' => esc_html_x('Set a value between 1% and 100%', 'customizer_header', 'mybooking'),
+      'label' => _x('Header image brightness', 'customizer_header', 'mybooking'),
+      'description' => esc_html_x('Set a value between 0 and 400 - 0 or 100 (no changes)', 'customizer_header', 'mybooking'),
       'section' => 'mybooking_theme_header_options',
       'priority' => 10,
       'type' => 'text',
@@ -1690,7 +1692,7 @@ if (!class_exists('MyBookingCustomizer')) {
       'input_attrs' => array(
       'class' => 'mybooking-customizer-text',
       'style' => 'border: 1px solid #999',
-      'placeholder' => _x('Set a value between 1% and 100%', 'customizer_header', 'mybooking'),
+      'placeholder' => _x('Set a value between 0 and 400 - 0 or 100 (no changes)', 'customizer_header', 'mybooking'),
       )
       ));
 

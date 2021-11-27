@@ -13,110 +13,119 @@
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="product-detail-bg-color">
       <% if (configuration.multipleProductsSelection) { %>
-      <div class="product-detail-container-several-products">
-        <div class="">
-          <small class="detail-text">
-            <?php echo esc_html_x( 'Reservation Id', 'renting_summary', 'mybooking') ?>
-          </small>
-          <h3><%=booking.id%></h3>
-        </div>
-        <div>
-            <h5><?php echo esc_html_x('Delivery', 'renting_my_reservation', 'mybooking') ?></h5>
-            <ul>
-              <li><%=booking.date_from_full_format%> <% if (configuration.timeToFrom) { %><%=booking.time_from%><% } %></li>
-              <% if (configuration.pickupReturnPlace) {%>
-                <li><%=booking.pickup_place_customer_translation%></li>
-              <% } %>
-            </ul>
-        </div>
-        <div>
-          <h5><?php echo esc_html_x('Collection', 'renting_my_reservation', 'mybooking') ?></h5>
-          <ul>
-            <li><%=booking.date_to_full_format%> <% if (configuration.timeToFrom) { %><%=booking.time_to%><% } %></li>
-            <% if (configuration.pickupReturnPlace) {%>
-              <li><%=booking.return_place_customer_translation%></li>
-            <% } %>
-          </ul>
-        </div>
-        <div class="table-responsive mt-5">
-          <table class="table product-detail-table table-borderless">
-            <thead>
-              <tr class="bg-gray-100">
-                <th></th>
-                <th scope="col"><?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?></th>
-                <th scope="col" class="text-right"><?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?></th>
-                <th scope="col" class="text-right">
-                  <?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?></th>
-                <th scope="col" class="text-right">
-                  <?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?></th>
-              </tr>
-            </thead>
-            <tbody>
-              <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-              <tr>
-                <td class="text-center text-md-left"><img class="img-fluid" style="max-width: 120px"
-                    src="<%=booking.booking_lines[idx].photo_medium%>"
-                    alt="">
-                </td>
-                <td data-label="<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>"
-                  class="align-middle"><%=booking.booking_lines[idx].item_description_customer_translation%></td>
-                <td data-label="<?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>"
-                  class="align-middle text-right"><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost)%></td>
-                <td data-label="<?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?>"
-                  class="align-middle text-right"><%=booking.booking_lines[idx].quantity%></td>
-                <td data-label="<?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?>"
-                  class="align-middle text-right">
-                  <%=configuration.formatCurrency(booking.booking_lines[idx].item_cost)%></td>
-              </tr>
-              <% } %>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <% } else { %>
-      <div class="product-detail-container">
-        <div class="product-detail-content">
-          <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-            <% var booking_line = booking.booking_lines[idx]; %>
-            <h2 class="product-name mb-3"><%=booking_line.item_description_customer_translation%></h2>
-            <small class="detail-text"><?php echo esc_html_x( 'Reservation Id', 'renting_my_reservation', 'mybooking') ?></small>
-            <h3> <%=booking.id%> </h3>
-            <h5><?php echo esc_html_x('Delivery', 'renting_my_reservation', 'mybooking') ?></h5>
-            <ul>
-              <li><%=booking.date_from_full_format%> <% if (configuration.timeToFrom) { %><%=booking.time_from%><% } %></li>
-              <% if (configuration.pickupReturnPlace) {%>
-                <li><%=booking.pickup_place_customer_translation%></li>
-              <% } %>
-            </ul>
-            <h5 class="mt-3"><?php echo esc_html_x('Collection', 'renting_my_reservation', 'mybooking') ?></h5>
+        <div class="product-detail-container-several-products">
+          <div class="">
+            <small class="detail-text">
+              <?php echo esc_html_x( 'Reservation Id', 'renting_summary', 'mybooking') ?>
+            </small>
+            <h3><%=booking.id%></h3>
+          </div>
+          <div>
+              <h5><?php echo esc_html_x('Delivery', 'renting_my_reservation', 'mybooking') ?></h5>
+              <ul>
+                <li><%=booking.date_from_full_format%> <% if (configuration.timeToFrom) { %><%=booking.time_from%><% } %></li>
+                <% if (configuration.pickupReturnPlace) {%>
+                  <li><%=booking.pickup_place_customer_translation%></li>
+                <% } %>
+              </ul>
+          </div>
+          <div>
+            <h5><?php echo esc_html_x('Collection', 'renting_my_reservation', 'mybooking') ?></h5>
             <ul>
               <li><%=booking.date_to_full_format%> <% if (configuration.timeToFrom) { %><%=booking.time_to%><% } %></li>
               <% if (configuration.pickupReturnPlace) {%>
                 <li><%=booking.return_place_customer_translation%></li>
               <% } %>
             </ul>
-            <% if (booking.days > 0) { %>
-              <p class="detail-text mt-3">
-              <span><%=booking.days%>
-              <?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?></span></p>
-            <% } else if (booking.hours > 0) { %>
-              <p class="detail-text"><span><%=booking.hours%>
-              <?php echo esc_html_x('hour(s)', 'renting_my_reservation', 'mybooking') ?></span></p>
+          </div>
+          <div class="table-responsive mt-5">
+            <table class="table product-detail-table table-borderless">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th></th>
+                  <th scope="col"><?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?></th>
+                  <th scope="col" class="text-right"><?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?></th>
+                  <th scope="col" class="text-right">
+                    <?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?></th>
+                  <th scope="col" class="text-right">
+                    <?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
+                <tr>
+                  <td class="text-center text-md-left"><img class="img-fluid" style="max-width: 120px"
+                      src="<%=booking.booking_lines[idx].photo_medium%>"
+                      alt="">
+                  </td>
+                  <td data-label="<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>"
+                    class="align-middle"><%=booking.booking_lines[idx].item_description_customer_translation%></td>
+                  <td data-label="<?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>"
+                    class="align-middle text-right"><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost)%></td>
+                  <td data-label="<?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?>"
+                    class="align-middle text-right"><%=booking.booking_lines[idx].quantity%></td>
+                  <td data-label="<?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?>"
+                    class="align-middle text-right">
+                    <%=configuration.formatCurrency(booking.booking_lines[idx].item_cost)%></td>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      <% } else { %>
+        <div class="product-detail-container">
+          <div class="product-detail-content">
+            <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
+              <% var booking_line = booking.booking_lines[idx]; %>
+              <h2 class="product-name mb-3"><%=booking_line.item_description_customer_translation%></h2>
+              <small class="detail-text"><?php echo esc_html_x( 'Reservation Id', 'renting_my_reservation', 'mybooking') ?></small>
+              <h3> <%=booking.id%> </h3>
+              <h5><?php echo esc_html_x('Delivery', 'renting_my_reservation', 'mybooking') ?></h5>
+              <ul>
+                <li><%=booking.date_from_full_format%> <% if (configuration.timeToFrom) { %><%=booking.time_from%><% } %></li>
+                <% if (configuration.pickupReturnPlace) {%>
+                  <li><%=booking.pickup_place_customer_translation%></li>
+                <% } %>
+              </ul>
+              <h5 class="mt-3"><?php echo esc_html_x('Collection', 'renting_my_reservation', 'mybooking') ?></h5>
+              <ul>
+                <li><%=booking.date_to_full_format%> <% if (configuration.timeToFrom) { %><%=booking.time_to%><% } %></li>
+                <% if (configuration.pickupReturnPlace) {%>
+                  <li><%=booking.return_place_customer_translation%></li>
+                <% } %>
+              </ul>
+              <% if (booking.days > 0) { %>
+                <p class="detail-text mt-3">
+                <span><%=booking.days%>
+                <?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?></span></p>
+              <% } else if (booking.hours > 0) { %>
+                <p class="detail-text"><span><%=booking.hours%>
+                <?php echo esc_html_x('hour(s)', 'renting_my_reservation', 'mybooking') ?></span></p>
+              <% } %>
             <% } %>
-          <% } %>
+          </div>
+          <div class="product-detail-image">
+            <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
+              <img class="img-fluid" src="<%=booking_line.photo_full%>" alt="">
+            <% } %>
+          </div>
         </div>
-        <div class="product-detail-image">
-          <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-            <img class="img-fluid" src="<%=booking_line.photo_full%>" alt="">
-          <% } %>
-        </div>
-      </div>
       <% } %>
   </div>  
 
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-8 offset-md-2">
+
+      <!-- Form -->
+      <% if (showReservationForm) { %>
+        <div class="col-12 col-md-8">
+          <div id="reservation_form_container" class="col process-section-box" style="display:none"></div>
+        </div>
+      <% } %>
+        
+      <!-- Summary -->
+      <div class="<% if (showReservationForm) { %>col-md-4<%} else { %>col-12 col-md-8 offset-md-2<% } %>">
 
         <div class="col process-section-box">
           <h4 class="my-3"><?php echo esc_html_x( 'My reservation', 'renting_my_reservation', 'mybooking') ?></h4>
@@ -321,10 +330,7 @@
         </div>
 
       </div><!-- / reservation -->
-      <!-- Form -->
-      <div class="col col-md-8 offset-md-2">
-        <div id="reservation_form_container" class="col process-section-box" style="display:none"></div>
-      </div>
+
     </div><!-- /row -->
   </div><!-- /container -->
 
