@@ -374,23 +374,42 @@
               <span><i class="fa fa-baby"></i>&nbsp;<%=shopping_cart.number_of_infants%></span>
             </aside>
 
-              <!-- Extras -->
-              <% if (shopping_cart.extras.length > 0) { %>
-                <div class="card mb-3">
-                  <div class="card-header">
-                    <b><?php echo esc_html_x( 'Extras', 'transfer_checkout', 'mybooking' ) ?></b>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <% for (var idx=0;idx<shopping_cart.extras.length;idx++) { %>
-                    <li class="list-group-item reservation-summary-card-detail">
-                      <span class="extra-name"><b><%=shopping_cart.extras[idx].extra_name_customer_translation%></b></span>
-                      <span class="badge badge-info"><%=shopping_cart.extras[idx].quantity%></span>
-                      <span class="product-amount pull-right"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
-                    </li>
+            <!-- Extras -->
+            <% if (shopping_cart.extras.length > 0) { %>
+              <div class="card mb-3">
+                <div class="card-header">
+                  <b><?php echo esc_html_x( 'Extras', 'transfer_checkout', 'mybooking' ) ?></b>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <% for (var idx=0;idx<shopping_cart.extras.length;idx++) { %>
+                  <li class="list-group-item reservation-summary-card-detail">
+                    <span class="extra-name"><b><%=shopping_cart.extras[idx].extra_name_customer_translation%></b></span>
+                    <span class="badge badge-info"><%=shopping_cart.extras[idx].quantity%></span>
+                    <span class="product-amount pull-right"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
+                  </li>
                   <% } %>
                 </ul>
               </div>
             <% } %>
+
+            <!-- // Supplements -->
+            <% if (shopping_cart.supplements.length > 0) { %>
+              <div class="card mb-3">
+                <div class="card-header">
+                  <b><?php echo esc_html_x( 'Supplements', 'transfer_checkout', 'mybooking' ) ?></b>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <% for (var idx=0;idx<shopping_cart.supplements.length;idx++) { %>
+                  <li class="list-group-item reservation-summary-card-detail">
+                    <span class="extra-name"><b><%=shopping_cart.supplements[idx].supplement_name_customer_translation%></b></span>
+                    <span class="badge badge-info">1</span>
+                    <span class="product-amount pull-right"><%=configuration.formatCurrency(shopping_cart.supplements[idx].supplement_cost)%></span>
+                  </li>
+                  <% } %>
+                </ul>
+              </div>
+            <% } %>
+
           </div>
         </div>
       </div>

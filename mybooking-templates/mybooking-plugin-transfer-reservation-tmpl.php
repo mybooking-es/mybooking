@@ -74,6 +74,20 @@
             </ul>
           <% } %>
 
+          <!-- Supplements -->
+          <% if (booking.supplements.length > 0) { %>
+            <h4><?php echo esc_html_x( 'Supplements', 'transfer_my_reservation', 'mybooking' ) ?></h4>
+            <ul class="list-group list-group-flush">
+              <% for (var idx=0;idx<booking.supplements.length;idx++) { %>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span class="extra-name"><b><%=booking.supplements[idx].supplement_name_customer_translation%></b></span>
+                  <span class="badge badge-primary badge-pill">1</span>
+                  <span class="product-amount float-right"><%=configuration.formatCurrency(booking.supplements[idx].supplement_cost)%></span>
+              </li>
+              <% } %>
+            </ul>
+          <% } %>
+
           <!-- Total -->
           <h3 class="mybooking_transfer_reservation_summary_price">
             <?php echo esc_html_x( "Total", 'transfer_my_reservation', 'mybooking' ) ?>
