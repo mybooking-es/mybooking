@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2021-12-08 11:10+0000\n"
+"PO-Revision-Date: 2021-12-19 17:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -2828,25 +2828,31 @@ msgctxt "toggle_navigation"
 msgid "Toggle navigation"
 msgstr "Navigazione mobile"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:142
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:178
 msgctxt "transfer_checkout"
 msgid "Accommodation"
 msgstr "Struttura ricettiva"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:68
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:256
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:292
 msgctxt "transfer_checkout"
 msgid "Additional information"
 msgstr "Informazioni aggiuntive"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:157
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:158
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:181
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:182
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:209
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:210
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:233
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:234
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:104
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:106
+msgctxt "transfer_checkout"
+msgid "Address"
+msgstr "Indirizzo"
+
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:193
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:194
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:217
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:218
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:245
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:246
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:269
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:270
 msgctxt "transfer_checkout"
 msgid "Address or hotel name"
 msgstr "Indirizzo o nome dell'hotel"
@@ -2858,15 +2864,26 @@ msgctxt "transfer_checkout"
 msgid "Alternative phone number"
 msgstr "Numero di telefono alternativo"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:517
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:101
+msgctxt "transfer_checkout"
+msgid "Billing address"
+msgstr "Indirizzo Di Fatturazione"
+
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:553
 msgctxt "transfer_checkout"
 msgid "Book now and pay now"
 msgstr "Prenota ora e paga ora"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:509
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:545
 msgctxt "transfer_checkout"
 msgid "Book now and pay on arrival"
 msgstr "Prenota ora e paga all'arrivo"
+
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:110
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:112
+msgctxt "transfer_checkout"
+msgid "City"
+msgstr "Città"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:92
 msgctxt "transfer_checkout"
@@ -2874,13 +2891,13 @@ msgid "Close"
 msgstr "Chiudere"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout.php:71
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:259
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:260
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:295
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:296
 msgctxt "transfer_checkout"
 msgid "Comments"
 msgstr "Commenti"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:579
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:615
 msgctxt "transfer_checkout"
 msgid "Confirm"
 msgstr "Confermare"
@@ -2892,7 +2909,12 @@ msgctxt "transfer_checkout"
 msgid "Confirm E-mail"
 msgstr "Conferma email"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:617
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:129
+msgctxt "transfer_checkout"
+msgid "Country"
+msgstr "Nazione"
+
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:653
 msgctxt "transfer_checkout"
 msgid "Credit or debit card"
 msgstr "Carta di credito o di debito"
@@ -2902,14 +2924,14 @@ msgctxt "transfer_checkout"
 msgid "Customer's details"
 msgstr "Dettagli del cliente"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:176
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:228
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:212
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:264
 msgctxt "transfer_checkout"
 msgid "Drop off"
 msgstr "Lasciare"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:111
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:112
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:147
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:148
 msgctxt "transfer_checkout"
 msgid "Dropoff address (hotel, resort, address, terminal)"
 msgstr "Indirizzo di riconsegna (hotel, resort, indirizzo, terminal)"
@@ -2921,75 +2943,75 @@ msgctxt "transfer_checkout"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:326
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:362
 msgctxt "transfer_checkout"
 msgid "Edit"
 msgstr "Modificare"
 
 #: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:18
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:381
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:417
 msgctxt "transfer_checkout"
 msgid "Extras"
 msgstr "Caratteristiche aggiuntive"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:126
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:138
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:168
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:192
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:220
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:244
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:162
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:174
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:204
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:228
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:256
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:280
 msgctxt "transfer_checkout"
 msgid "Flight estimated time"
 msgstr "Ora stimata del volo"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:122
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:134
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:164
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:188
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:216
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:240
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:158
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:170
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:200
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:224
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:252
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:276
 msgctxt "transfer_checkout"
 msgid "Flight number"
 msgstr "Numero di volo"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:137
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:219
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:243
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:173
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:255
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:279
 msgctxt "transfer_checkout"
 msgid "Flight or Vessel estimated time"
 msgstr "Ora stimata del volo o della nave"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:125
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:167
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:191
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:161
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:203
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:227
 msgctxt "transfer_checkout"
 msgid "Flight or vessel estimated time"
 msgstr "Ora stimata del volo o della nave"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:133
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:215
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:239
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:169
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:251
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:275
 msgctxt "transfer_checkout"
 msgid "Flight or Vessel number"
 msgstr "Numero di volo o nave"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:121
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:163
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:187
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:157
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:199
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:223
 msgctxt "transfer_checkout"
 msgid "Flight or vessel number"
 msgstr "Numero di volo o nave"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:352
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:365
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:388
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:401
 msgctxt "transfer_checkout"
 msgid "Going"
 msgstr "Andata"
 
 #. %s: terms and conditions URL
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:538
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:569
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:650
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:574
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:605
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:686
 #, php-format
 msgctxt "transfer_checkout"
 msgid ""
@@ -2999,9 +3021,9 @@ msgstr ""
 "Ho letto e con la presente accetto le <a href=\"%s\" target=\"_blank\">"
 "condizioni</a> di trasferimento"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:535
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:566
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:647
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:571
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:602
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:683
 msgctxt "transfer_checkout"
 msgid "I have read and hereby accept the conditions of transfer"
 msgstr "Ho letto e accetto le condizioni di trasferimento"
@@ -3013,23 +3035,23 @@ msgctxt "transfer_checkout"
 msgid "Name"
 msgstr "Nome"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:144
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:145
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:180
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:181
 msgctxt "transfer_checkout"
 msgid "Name of Hotel / Complex / Villa and address"
 msgstr "Nome dell'Hotel/Complesso/Villa e indirizzo"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:288
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:324
 msgctxt "transfer_checkout"
 msgid "One Way"
 msgstr "Senso Unico"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:118
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:154
 msgctxt "transfer_checkout"
 msgid "Outward Journey Details"
 msgstr "Dettagli del viaggio di andata"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:611
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:647
 msgctxt "transfer_checkout"
 msgid "Paypal"
 msgstr "Paypal"
@@ -3041,45 +3063,57 @@ msgctxt "transfer_checkout"
 msgid "Phone number"
 msgstr "Numero di telefono"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:152
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:204
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:188
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:240
 msgctxt "transfer_checkout"
 msgid "Pickup"
 msgstr "Raccogliere"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:105
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:106
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:141
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:142
 msgctxt "transfer_checkout"
 msgid "Pickup address (hotel, resort, address, terminal)"
 msgstr "Indirizzo di ritiro (hotel, resort, indirizzo, terminal)"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:501
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:548
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:122
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:124
+msgctxt "transfer_checkout"
+msgid "Postal Code"
+msgstr "Codice Postale"
+
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:537
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:584
 msgctxt "transfer_checkout"
 msgid "Request reservation"
 msgstr "Richiedi prenotazione"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:358
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:394
 msgctxt "transfer_checkout"
 msgid "Return"
 msgstr "Ritorno"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:130
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:166
 msgctxt "transfer_checkout"
 msgid "Return Journey Details"
 msgstr "Dettagli del viaggio di ritorno"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:280
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:316
 msgctxt "transfer_checkout"
 msgid "Round trip"
 msgstr "Andata e ritorno"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:200
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:236
 msgctxt "transfer_checkout"
 msgid "Round trip details"
 msgstr "Dettagli del viaggio di andata e ritorno"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:399
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:116
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:118
+msgctxt "transfer_checkout"
+msgid "State"
+msgstr "Provincia"
+
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:435
 msgctxt "transfer_checkout"
 msgid "Supplements"
 msgstr "Supplementi"
@@ -3091,17 +3125,17 @@ msgctxt "transfer_checkout"
 msgid "Surname"
 msgstr "Cognome"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:117
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:153
 msgctxt "transfer_checkout"
 msgid "Transfer details"
 msgstr "Dettagli del trasferimento"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:149
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:185
 msgctxt "transfer_checkout"
 msgid "Trip details"
 msgstr "Dettagli del viaggio"
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:627
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:663
 msgctxt "transfer_checkout"
 msgid ""
 "You will be redirected to <b>Paypal payment platform</b> to make the "
@@ -3112,7 +3146,7 @@ msgstr ""
 "effettuare il pagamento di conferma in modo sicuro. Puoi utilizzare <u>"
 "Paypal</u> o <u>carta di credito</u> per effettuare il pagamento."
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:634
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:670
 msgctxt "transfer_checkout"
 msgid ""
 "You will be redirected to the <b>credit card payment platform</b> to make "
@@ -3121,7 +3155,7 @@ msgstr ""
 "Verrai reindirizzato alla <b>piattaforma di pagamento con carta di "
 "credito</b> per effettuare il pagamento di conferma in modo sicuro."
 
-#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:606
+#: mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:642
 msgctxt "transfer_checkout"
 msgid ""
 "You will be redirected to the <b>payment platform</b> to make the "

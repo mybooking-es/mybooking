@@ -41,7 +41,8 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Changelog ==
 
 = 1.0.11 =
-* Added: MyBooking Reservation Engine : Transfer supplements
+* Added: MyBooking Reservation Engine : Transfer supplements + billing address
+* Fixed: Mybooking Reservation Engine : Transfer my reservation payment
 
 = 1.0.10 =
 * Fixed: MyBooking Reservation Engine : Use customer full name to show customer name
@@ -226,7 +227,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Upgrade Notice ==
 
 = 1.0.11 =
-* Added: MyBooking Reservation Engine : Transfer supplements
+* Added: MyBooking Reservation Engine : Transfer supplements + billing address
 
 = 1.0.10 =
 * Fixed: MyBooking Reservation Engine : Use customer full name to show customer name

@@ -5,7 +5,7 @@
 ### Added
 
 - Transfer supplements
-
+- Transfer billing address
 
 ## [1.0.10] 2021-12-01
 

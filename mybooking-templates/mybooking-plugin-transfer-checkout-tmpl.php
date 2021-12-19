@@ -97,6 +97,42 @@
     <br>
   </div>
 
+  <% if (configuration.transferFormFillBillingAddress) { %>
+    <h5 class="mb-4 complete-section-title"><?php echo esc_html_x( "Billing address", 'transfer_checkout', 'mybooking') ?></h5>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="street"><?php echo esc_html_x( 'Address', 'transfer_checkout', 'mybooking') ?></label>
+        <input class="form-control" id="customer_address_street" name="customer_address_street" type="text"
+          placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x( 'Address', 'transfer_checkout', 'mybooking') ?>")%>" 
+          maxlength="100" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="city"><?php echo esc_html_x( 'City', 'transfer_checkout', 'mybooking') ?></label>
+        <input class="form-control" id="customer_address_city" name="customer_address_city" type="text"
+          placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x( 'City', 'transfer_checkout', 'mybooking') ?>")%>"  
+          maxlength="60" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="state"><?php echo esc_html_x( 'State', 'transfer_checkout', 'mybooking') ?></label>
+        <input class="form-control" id="customer_address_state" name="customer_address_state" type="text"
+          placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x( 'State', 'transfer_checkout', 'mybooking') ?>")%>"  
+          maxlength="60" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="state"><?php echo esc_html_x( 'Postal Code', 'transfer_checkout', 'mybooking') ?></label>
+        <input class="form-control" id="customer_address_zip" name="customer_address_zip" type="text"
+          placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x( 'Postal Code', 'transfer_checkout', 'mybooking') ?>")%>"  
+          maxlength="10" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="full-width"
+          for="country"><?php echo esc_html_x( 'Country', 'transfer_checkout', 'mybooking') ?></label>
+          <select name="customer_address_country" id="customer_address_country" class="form-control" required>
+          </select>
+      </div>
+    </div>
+  <% } %>    
+
   <hr>
 
   <% if (configuration.transfer_origin_destination_detailed_info_mode === 'only_address') { %>

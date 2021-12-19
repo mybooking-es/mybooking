@@ -199,6 +199,6 @@
         <button class="btn btn-outline-dark" id="btn_pay" type="submit"><%= i18next.t('myReservation.pay.payment_button', {amount:configuration.formatCurrency(amount) }) %></button>
       </div>
     </div>
-  </div>
+  </form>
 
 </script>
