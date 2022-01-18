@@ -1,0 +1,27 @@
+/** SELECT2 **/
+.select2-container {
+  font-size:  1em;
+}
+
+.select2-selection__placeholder {
+  font-size: 0.9em;
+}
+
+.select2-container--default .select2-selection--single {
+  height: var(--form-control-height);
+  border: 1px solid var(--gray-500);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: var(--form-control-height);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #000 transparent transparent transparent;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  height: var(--form-control-height);
+  display: flex;
+  align-items: center;
+}

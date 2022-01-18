@@ -42,6 +42,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 
 = 1.0.12 =
 * Added: MyBooking Reservation Engine : Phone dial code
+* Added: Select2 style to match the form
 
 = 1.0.11 =
 * Added: MyBooking Reservation Engine : Transfer supplements + billing address
@@ -230,7 +231,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Upgrade Notice ==
 
 = 1.0.12 =
-* Added: MyBooking Reservation Engine : Phone dial code
+* Added: MyBooking Reservation Engine : Phone dial code and select2 style
 
 = 1.0.11 =
 * Added: MyBooking Reservation Engine : Transfer supplements + billing address

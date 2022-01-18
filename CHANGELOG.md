@@ -5,6 +5,7 @@
 ### Added
 
 - Telephone prefix
+- Select2 styles
 
 ## [1.0.11] 2021-12-18
 

@@ -26755,6 +26755,32 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   margin-bottom: 0;
   padding: 20px; }
 
+/** SELECT2 **/
+.select2-container {
+  font-size: 1em; }
+
+.select2-selection__placeholder {
+  font-size: 0.9em; }
+
+.select2-container--default .select2-selection--single {
+  height: var(--form-control-height);
+  border: 1px solid var(--gray-500); }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: var(--form-control-height); }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #000 transparent transparent transparent; }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  height: var(--form-control-height);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .fw-200 {
   font-weight: 200; }
 
@@ -28309,8 +28335,8 @@ select#cat {
           flex-direction: column;
   background-color: var(--selector-bg);
   padding: 10px; }
-  .flex-form input {
-    border: 1px solid var(--gray-500);
+  .flex-form input, .flex-form select {
+    border: 1px solid var(--gray-500) !important;
     border-radius: 3px; }
   .flex-form label {
     color: var(--selector-label-color); }
