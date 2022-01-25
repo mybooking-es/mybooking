@@ -621,6 +621,24 @@
 <!-- Payment detail -->
 <script type="text/tmpl" id="script_payment_detail">
 
+  <% if (configuration.promotionCode) { %>
+    <hr>
+    <h4 class="reservation-process_title customer_component"><?php echo esc_html_x( 'Promotion code', 'renting_complete', 'mybooking' ) ?></h4>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <input type="text" class="form-control" size="20" maxlength="30"
+               id="promotion_code" placeholder="<?php echo esc_attr_x( 'Promotion code', 'renting_complete', 'mybooking' ) ?>"
+               <%if (shopping_cart.promotion_code){%>value="<%=shopping_cart.promotion_code%>" disabled<%}%>>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <button type="button" class="btn btn-primary mb-2" id="apply_promotion_code_btn"
+                 <%if (shopping_cart.promotion_code){%>disabled<%}%>><?php echo esc_html_x( 'Apply', 'renting_complete', 'mybooking' ) ?></button>
+      </div>
+    </div>
+  <% } %>
+
   <%
       var paymentAmount = 0;
       var selectionOptions = 0;
