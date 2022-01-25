@@ -1,11 +1,12 @@
 # Changelog
 
-## [1.0.12] 2021-12-22
+## [1.0.12] 2022-01-25
 
 ### Added
 
 - Telephone prefix
 - Select2 styles
+- Renting : Promotion code
 
 ## [1.0.11] 2021-12-18
 
