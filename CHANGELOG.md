@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.13] 2022-02-10
+
+### Added
+
+- Renting Selector: Fixed category code
+
 ## [1.0.12] 2022-01-25
 
 ### Added

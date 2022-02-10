@@ -5,7 +5,7 @@ Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
 Tested up to:       5.8
-Stable tag:         1.0.12
+Stable tag:         1.0.13
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,9 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.0.13 =
+* Added: Renting Selector : Fixed category code
 
 = 1.0.12 =
 * Added: MyBooking Reservation Engine : Phone dial code
@@ -230,6 +233,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.13 =
+* Added: Renting Selector : Fixed category code
 
 = 1.0.12 =
 * Added: MyBooking Reservation Engine : Phone dial code + select2 style + renting promotion code in complete form
