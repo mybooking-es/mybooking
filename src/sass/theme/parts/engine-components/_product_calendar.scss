@@ -16,6 +16,10 @@
   color: white !important;
 }
 
+.date-picker-wrapper .month-wrapper {
+  padding: 0;  
+}
+
 .date-picker-wrapper .month-wrapper table .day.real-today {
     background-color: #ffe684;
 }
@@ -27,4 +31,41 @@
 .date-picker-wrapper .month-wrapper table .day.not-selectable-day.real-today,
 .date-picker-wrapper .month-wrapper table .day.invalid.real-today {
     background-color: #eeeeee;
+}
+
+.mybooking-product_calendar-date {
+  padding:0; 
+  font-size: 1.2em;
+  min-width: 42px;
+}
+
+.mybooking-product_calendar-date span {
+  font-weight:bold;
+}
+
+.mybooking-product_calendar-price {
+  opacity:0.8;
+  font-size: 0.6em;
+  margin-top: 0.7em;  
+}
+
+.mybooking-product_calendar-mindays {
+  opacity:  0.6;
+  font-size:  0.6em;
+  margin-top:  0.5em;
+  padding-top: 0.1em;
+}
+
+.mybooking-product_calendar-mindays-data {
+  background: #555555;
+  color: #ffffff; 
+}
+
+@media (min-width: 575.98px) {
+  .mybooking-product_calendar-date {
+    font-size: 1.4em;
+  }
+  .mybooking-product_calendar-price {
+    font-size: 1em;
+  }
 }

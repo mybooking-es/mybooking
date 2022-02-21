@@ -20,20 +20,6 @@
   margin-bottom: 5px !important;
 }
 
-/** Selected date as none **/
-.ui-state-active, ui-state-highlight /*, .ui-state-hover*/ {
-  /*
-  background: transparent !important;
-  color: gray !important;
-  */
-}
-
-a.ui-state-default.ui-state-highlight.ui-state-active {
-  /*
-  background: transparent !important;
-  */
-}
-
 /* Title */
 .ui-datepicker-title {
   position: relative !important;
@@ -60,6 +46,11 @@ a.ui-state-default.ui-state-highlight.ui-state-active {
   height: 100%;
   font-size: 1.1em !important;
   box-shadow: none !important; /* Avoid shadow on cells */
+}
+
+/* Disabled date */
+.ui-datepicker td.ui-state-disabled span {
+  color: #dddddd;
 }
 
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
