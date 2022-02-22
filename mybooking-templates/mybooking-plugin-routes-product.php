@@ -98,8 +98,13 @@
         </div>
       </div>
       <hr>
-      <?php mybooking_engine_get_template('mybooking-plugin-product-widget.php', array( 'code' => $args->code,
-                                                                                        'sales_channel_code' => $args->sales_channel_code ) ) ?>     
+      <?php 
+         $widget_data = array( 'code' => $args->code );
+         if ( isset( $args->sales_channel_code ) ) {
+           $widget_data['sales_channel_code'] = $args->sales_channel_code;
+         }
+      ?>
+      <?php mybooking_engine_get_template('mybooking-plugin-product-widget.php', $widget_data ) ?>
     </div>
   </div>
 </div>
