@@ -35,7 +35,7 @@
 
 .mybooking-product_calendar-date {
   padding:0; 
-  font-size: 1.2em;
+  font-size: 1.4em;
   min-width: 42px;
 }
 
@@ -53,7 +53,8 @@
   opacity:  0.6;
   font-size:  0.6em;
   margin-top:  0.5em;
-  padding-top: 0.1em;
+  padding: 0.1em;
+  display: inline-block;
 }
 
 .mybooking-product_calendar-mindays-data {
@@ -63,9 +64,9 @@
 
 @media (min-width: 575.98px) {
   .mybooking-product_calendar-date {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   .mybooking-product_calendar-price {
-    font-size: 1em;
+    font-size: 0.65em;
   }
 }

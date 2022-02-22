@@ -30409,7 +30409,7 @@ input[name=return_date].form-control[readonly] {
 
 .mybooking-product_calendar-date {
   padding: 0;
-  font-size: 1.2em;
+  font-size: 1.4em;
   min-width: 42px; }
 
 .mybooking-product_calendar-date span {
@@ -30424,7 +30424,8 @@ input[name=return_date].form-control[readonly] {
   opacity: 0.6;
   font-size: 0.6em;
   margin-top: 0.5em;
-  padding-top: 0.1em; }
+  padding: 0.1em;
+  display: inline-block; }
 
 .mybooking-product_calendar-mindays-data {
   background: #555555;
@@ -30432,9 +30433,9 @@ input[name=return_date].form-control[readonly] {
 
 @media (min-width: 575.98px) {
   .mybooking-product_calendar-date {
-    font-size: 1.4em; }
+    font-size: 1.2em; }
   .mybooking-product_calendar-price {
-    font-size: 1em; } }
+    font-size: 0.7em; } }
 
 /**
 *   PROMOTION POPUP
