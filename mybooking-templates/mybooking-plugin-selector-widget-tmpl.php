@@ -88,6 +88,17 @@
 
   <% } else { %>
 
+    <% if (not_hidden_rental_location_code && configuration.selectRentalLocation) { %>
+      <div class="flex-form-group-wrapper">
+        <div class="flex-form-group widget_rental_location" style="display: none">
+          <label for="widget_rental_location_code"><?php echo esc_html( MyBookingEngineContext::getInstance()->getRentalLocation() ) ?></label>
+          <div class="flex-form-item">
+            <select name="rental_location_code" id="widget_rental_location_code" class="form-control"></select>
+          </div>
+        </div>
+      </div>
+    <% } %>
+
   <div class="flex-form-group-wrapper">
 
     <% if (configuration.pickupReturnPlace) { %>

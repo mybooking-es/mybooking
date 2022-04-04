@@ -12,7 +12,10 @@
                            <?php endif; ?>
                            <?php if ( array_key_exists('rental_location_code', $args) && $args['rental_location_code'] != '' ) : ?>
                              data-rental-location-code="<?php echo esc_attr( $args['rental_location_code'] )?>" 
-                           <?php endif; ?> 
+                           <?php endif; ?>
+                           <?php if ( array_key_exists('check_hourly_occupation', $args) && $args['check_hourly_occupation'] == 'yes' ) : ?>
+                             data-check-hourly-occupation="true"
+                           <?php endif; ?>   
 	   class="container">
   <div class="row">
     <div class="col-12">

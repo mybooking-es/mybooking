@@ -54,9 +54,15 @@
           <ul class="pagination">
             <?php $mybooking_disabled_previous = ($args['current_page'] == 1 ? 'disabled' : '') ?>
             <li class="page-item <?php echo esc_attr( $mybooking_disabled_previous ) ?>">
-              <a class="page-link"
-                 href="<?php echo esc_url( $args['url'].'?offsetpage='.($args['current_page']-1).$mybooking_querystring ) ?>">
-                <?php echo esc_html_x('Previous','renting_products','mybooking'); ?></a>
+              <?php if ( $mybooking_disabled_previous ): ?>
+                <span class="page-link">
+                  <?php echo esc_html_x('Previous','renting_products','mybooking'); ?>
+                </span>
+              <?php else: ?>
+                <a class="page-link"
+                   href="<?php echo esc_url( $args['url'].'?offsetpage='.($args['current_page']-1).$mybooking_querystring ) ?>">
+                  <?php echo esc_html_x('Previous','renting_products','mybooking'); ?></a>
+              <?php endif ?>     
             </li>
             <?php foreach ($args['pages'] as $mybooking_page) { ?>
               <?php if ($mybooking_page == $args['current_page']) { ?>
@@ -75,9 +81,15 @@
             <?php } ?>
             <?php $mybooking_disabled_next = ($args['current_page'] == $args['total_pages'] ? 'disabled' : '') ?>
             <li class="page-item <?php echo esc_attr( $mybooking_disabled_next ) ?>">
-              <a class="page-link"
-                 href="<?php echo esc_url( $args['url'].'?offsetpage='.($args['current_page']+1).$mybooking_querystring ) ?>">
-                <?php echo esc_html_x('Next','renting_products','mybooking'); ?></a>
+              <?php if ( $mybooking_disabled_next ): ?>
+                <span class="page-link">
+                  <?php echo esc_html_x('Next','renting_products','mybooking'); ?>
+                </span>
+              <?php else: ?>
+                <a class="page-link"
+                   href="<?php echo esc_url( $args['url'].'?offsetpage='.($args['current_page']+1).$mybooking_querystring ) ?>">
+                  <?php echo esc_html_x('Next','renting_products','mybooking'); ?></a>
+              <?php endif ?> 
             </li>
           </ul>
         </nav>

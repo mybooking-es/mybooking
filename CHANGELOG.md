@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.14] 2022-04-04
+
+### Added
+
+- Renting Calendar Widget: Turns, duration scope, check daily availability
+
 ## [1.0.13] 2022-02-10
 
 ### Added

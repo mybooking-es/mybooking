@@ -10,7 +10,8 @@
    */
 ?>
 <script type="text/tmpl" id="form_calendar_selector_tmpl">
-  <% if (configuration.pickupReturnPlace) { %> 
+  
+      <% if (configuration.pickupReturnPlace) { %> 
         <!-- Pickup Place -->
         <div class="form-group"  class="pickup_place_group">
           <label
@@ -28,26 +29,45 @@
         </div>
       <% } %>
 
-        <!-- Availability calendar -->
-        <div class="form-group">
-          <input id="date" type="hidden" name="date"/>
-          <div id="date-container" class="disabled-picker"></div>
+      <!-- One Journal or multiple journals selector -->
+      <% if (configuration.rentingProductOneJournal && 
+             configuration.rentingProductMultipleJournals) { %>
+        <div class="form-group">        
+          <input type="radio" name="duration_scope" value="in_one_day" checked/>&nbsp;<?php echo esc_html_x('Hours or one full day', 'renting_product_detail', 'mybooking' ) ?><br>
+          <input type="radio" name="duration_scope" value="days"/>&nbsp;<?php echo esc_html_x('Period of dates', 'renting_product_detail', 'mybooking' ) ?>
         </div>
+      <% } else if (configuration.rentingProductOneJournal) { %>
+        <input type="hidden" name="duration_scope" value="in_one_day">
+      <% } else { %>
+        <input type="hidden" name="duration_scope" value="days">
+      <% } %>
 
-      <% if (configuration.timeToFrom) { %>  
+      <!-- Availability calendar -->
+      <div class="form-group">
+        <input id="date" type="hidden" name="date"/>
+        <div id="date-container" class="disabled-picker"></div>
+      </div>
+
+      <% if (configuration.timeToFrom || configuration.timeToFromInOneDay) { %>  
         <!-- Pickup/return time -->
-        <div class="form-group time_selector_container">
+        <div class="form-group time_selector_container js-mybooking-product_calendar-time-hours" style="display: none">
             <label for="time_from"><?php echo esc_html_x( 'Delivery time', 'renting_product_calendar', 'mybooking' ) ?></label>
             <select id="time_from" name="time_from" placeholder="<?php echo esc_attr_x( 'hh:mm', 'renting_product_calendar', 'mybooking' ) ?>" disabled 
                     class="form-control w-100"> </select>
         </div>
 
-        <div class="form-group time_selector_container">
+        <div class="form-group time_selector_container js-mybooking-product_calendar-time-hours" style="display: none">
             <label for="time_to"><?php echo esc_html_x( 'Collection time', 'renting_product_calendar', 'mybooking' ) ?></label>
             <select id="time_to" name="time_to" placeholder="<?php echo esc_attr_x( 'hh:mm', 'renting_product_calendar', 'mybooking' ) ?>" disabled 
                     class="form-control w-100"> </select>
         </div>
-      <% } else { %>
+
+        <div class="form-group js-mybooking-product_calendar-time-ranges" style="display: none">
+          <div id="mb_product_calendar_time_ranges_container" class="form-group col-md-12">
+          </div>
+        </div>  
+
+      <% } else { %>
         <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>"/>
         <input type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>"/>  
       <% } %>  
@@ -151,3 +171,30 @@
   <% } %>  
 
 </script>
+
+<script type="text/tmpl" id="script_daily_occupation">
+  <div class="row">
+    <% for (var idx=0; idx < data.length; idx++) { %>
+      <div class="col-md-3">
+        <div><%= moment(data[idx].date_from).tz(timezone).format(format) %> <%= data[idx].time_from %></div>
+        <div><%= moment(data[idx].date_to).tz(timezone).format(format) %> <%= data[idx].time_to %></div>
+      </div>  
+    <% } %>
+  </div>
+</script>
+
+<script type="text/tmpl" id="form_calendar_selector_turns_tmpl">
+  <% if (turns.length == 0) { %>
+    <div class="alert alert-danger">
+      <?php echo esc_html_x('We are sorry. There are not defined times. Please, configure them at the calendar', 'renting_product_detail', 'mybooking' ) ?>
+    </div>
+  <% } else { %>  
+    <% for (var idx=0; idx<turns.length; idx++) { %>
+      <input type="radio" name="turn" value="<%=turns[idx].time_from%>-<%=turns[idx].time_to%>" <% if (!turns[idx].availability){%>disabled<% } %>
+             class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>">
+        <span class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>"><%=turns[idx].time_from%>-<%=turns[idx].time_to%>&nbsp;
+    <%} %>
+  <% } %>
+
+</script>
+
