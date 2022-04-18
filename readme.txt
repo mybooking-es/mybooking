@@ -41,6 +41,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Changelog ==
 
 = 1.0.14 =
+* Added: Renting Duration : Selector, choose product, complete, summary, my reservation
 * Added: Renting Calendar Widget : Turns, duration scope, check daily availability
 
 = 1.0.13 =
@@ -238,7 +239,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Upgrade Notice ==
 
 = 1.0.14 =
-* Added: Renting Calendar Widget : Turns, duration scope, check daily availability
+* Added: Renting duration and Renting Calendar Widget : Turns, duration scope, check daily availability
 
 = 1.0.13 =
 * Added: Renting Selector : Fixed category code
