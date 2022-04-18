@@ -223,7 +223,10 @@
             <% } %>
           <div class="reservation-summary_pickup_date">
             <span><%=shopping_cart.date_from_short_format%>
-              <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></span>
+            <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
+              <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%>
+            <% } %>  
+            </span>
           </div>
         </div>
         <div class="separator"></div>
@@ -234,8 +237,12 @@
             </span>
           </div>
           <div class="reservation-summary_return_date">
-            <span><%=shopping_cart.date_to_short_format%>
+            <% if (configuration.rentDateSelector === 'date_from_duration') { %>
+              <span><%=shopping_cart.renting_duration_literal%></span>
+            <% } else { %>
+              <span><%=shopping_cart.date_to_short_format%> 
               <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
+            <% } %>
           </div>
         </div>
           <!-- Row for price & buttons  -->
@@ -271,7 +278,10 @@
         <% } %>
         <div class="reservation-summary_pickup_date">
           <span><%=shopping_cart.date_from_short_format%>
-            <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></span>
+          <% if (configuration.rentDateSelector === 'date_from_date_to') { %>  
+            <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%>
+          <% } %>
+          </span>  
         </div>
         <div class="separator"></div>
         <div class="reservation-summary_return_place d-none d-md-flex">
@@ -280,8 +290,12 @@
           </span>
         </div>
         <div class="reservation-summary_return_date">
-          <span><%=shopping_cart.date_to_short_format%>
+          <% if (configuration.rentDateSelector === 'date_from_duration') { %>
+              <span><%=shopping_cart.renting_duration_literal%></span>
+          <% } else { %>
+            <span><%=shopping_cart.date_to_short_format%>
             <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
+          <% } %>  
         </div>
           <!-- Row for price & buttons -->
           <div class="complete-summary-row">
@@ -321,14 +335,33 @@
                 <li><%=shopping_cart.pickup_place_customer_translation%></li>
               </ul>
             </div>  
-            <div>
-              <h5 class=""><?php echo esc_html_x('Collection', 'renting_complete', 'mybooking') ?></h5>
-              <ul>
-                <li><%=shopping_cart.date_to_full_format%>
-                  <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></li>
-                <li><%=shopping_cart.return_place_customer_translation%></li>
-              </ul>
-            </div>  
+            <% if (configuration.rentDateSelector === 'date_from_duration') { %>
+              <div>
+                <h5 class=""><?php echo esc_html_x('Duration', 'renting_complete', 'mybooking') ?></h5>
+                <ul>
+                  <li><%=shopping_cart.renting_duration_literal%>
+                    <% if (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) { %>
+                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
+                      <% } %>
+                  </li>
+                  <% if (configuration.pickupReturnPlace) { %>
+                    <li><%=shopping_cart.return_place_customer_translation%></li>
+                  <% } %>  
+                </ul>
+              </div>  
+            <% } else { %>
+              <div>
+                <h5 class=""><?php echo esc_html_x('Collection', 'renting_complete', 'mybooking') ?></h5>
+                <ul>
+                  <li><%=shopping_cart.date_to_full_format%>
+                      <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%>
+                  </li>
+                  <% if (configuration.pickupReturnPlace) { %>
+                    <li><%=shopping_cart.return_place_customer_translation%></li>
+                  <% } %>  
+                </ul>
+              </div>  
+            <% } %>  
           <div class="table-responsive mt-5">
             <table class="table product-detail-table table-borderless">
                 <thead>
@@ -385,20 +418,31 @@
                     <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></li>
                   <li><%=shopping_cart.pickup_place_customer_translation%></li>
                 </ul>
-                <h5 class="mt-3"><?php echo esc_html_x('Collection', 'renting_complete', 'mybooking') ?></h5>
-                <ul>
-                  <li><%=shopping_cart.date_to_full_format%>
-                    <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></li>
-                  <li><%=shopping_cart.return_place_customer_translation%></li>
-                </ul>
-                <% if (shopping_cart.days > 0) { %>
-                <p class="detail-text mt-3"><span><%=shopping_cart.days%>
-                    <?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?>
-                    </span></p>
-                <% } else if (shopping_cart.hours > 0) { %>
-                <p class="detail-text"><span><%=shopping_cart.hours%>
-                    <?php echo esc_html_x( 'hour(s)', 'renting_complete', 'mybooking' ) ?></span></p>
-                <% } %>
+                <% if (configuration.rentDateSelector === 'date_from_duration') { %>
+                  <h5 class="mt-3"><?php echo esc_html_x('Duration', 'renting_complete', 'mybooking') ?></h5>
+                  <ul>
+                    <li><%=shopping_cart.renting_duration_literal%>
+                      <% if (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) { %>
+                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
+                      <% } %>
+                    </li>
+                  </ul>  
+                <% } else { %>
+                  <h5 class="mt-3"><?php echo esc_html_x('Collection', 'renting_complete', 'mybooking') ?></h5>
+                  <ul>
+                    <li><%=shopping_cart.date_to_full_format%>
+                      <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></li>
+                    <li><%=shopping_cart.return_place_customer_translation%></li>
+                  </ul>
+                  <% if (shopping_cart.days > 0) { %>
+                  <p class="detail-text mt-3"><span><%=shopping_cart.days%>
+                      <?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?>
+                      </span></p>
+                  <% } else if (shopping_cart.hours > 0) { %>
+                  <p class="detail-text"><span><%=shopping_cart.hours%>
+                      <?php echo esc_html_x( 'hour(s)', 'renting_complete', 'mybooking' ) ?></span></p>
+                  <% } %>
+                <% } %>  
             <% } %>
           </div>  
         <div class="product-detail-image">
@@ -422,37 +466,48 @@
           </button>
         </div>
         <div class="modal-body summary-modal">
-        <div class="product-summary-wrapper">
-          <div class="product-summary">
-            <div class="product-summary_separator">
-              <i class="fa fa-long-arrow-right mr-3"></i>
+          <div class="product-summary-wrapper">
+            <div class="product-summary">
+              <div class="product-summary_separator">
+                <i class="fa fa-long-arrow-right mr-3"></i>
+              </div>
+              <%=shopping_cart.date_from_full_format%>
+              <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
+                <% if (configuration.timeToFrom) { %>
+                  <%=shopping_cart.time_from%>
+                <% } %>
+              <% } %>
             </div>
-            <%=shopping_cart.date_from_full_format%>
-            <% if (configuration.timeToFrom) { %>
-            <%=shopping_cart.time_from%>
-            <% } %>
-          </div>
-          <div class="product-summary">
-            <div class="product-summary_separator">
-              <i class="fa fa-long-arrow-left mr-3"></i>
+            <div class="product-summary">
+              <div class="product-summary_separator">
+                <i class="fa fa-long-arrow-left mr-3"></i>
+              </div>
+              <% if (configuration.rentDateSelector === 'date_from_duration') { %>
+                <%=shopping_cart.renting_duration_literal%>
+                <% if (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) { %>
+                  ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
+                <% } %>
+              <% } else { %>
+                <%=shopping_cart.date_to_full_format%>
+                <% if (configuration.timeToFrom) { %>
+                  <%=shopping_cart.time_to%>
+                <% } %>
+              <% } %>  
             </div>
-            <%=shopping_cart.date_to_full_format%>
-            <% if (configuration.timeToFrom) { %>
-            <%=shopping_cart.time_to%>
-            <% } %>
           </div>
-        </div>
-        <!-- Duration -->
-        <div class="rent-duration p-3">
-          <p class="mb-0">
-            <% if (shopping_cart.days > 0) { %>
-            <%=shopping_cart.days%>
-            <?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?></p>
-          <% } else if (shopping_cart.hours > 0) { %>
-            <%=shopping_cart.hours%>
-            <?php echo esc_html_x('hour(s)', 'renting_complete', 'mybooking') ?></p>
-          <% } %>
-        </div>      
+          <!-- Duration -->
+          <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
+            <div class="rent-duration p-3">
+              <p class="mb-0">
+                <% if (shopping_cart.days > 0) { %>
+                <%=shopping_cart.days%>
+                <?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?></p>
+              <% } else if (shopping_cart.hours > 0) { %>
+                <%=shopping_cart.hours%>
+                <?php echo esc_html_x('hour(s)', 'renting_complete', 'mybooking') ?></p>
+              <%} %>
+            </div>
+          <% } %>      
           <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
             <div class="product-view">
               <div class="product-view_image d-none d-sm-block">

@@ -12,7 +12,8 @@
 <script type="text/tmpl" id="widget_form_selector_tmpl">
 
   <% if (!configuration.pickupReturnPlace && !configuration.timeToFrom) { %>
-
+    
+    <!-- Inline selector -->
     <div class="flex-form-group-wrapper flex-form-group-wrapper-inline">
 
         <% if (not_hidden_rental_location_code && configuration.selectRentalLocation) { %>
@@ -45,25 +46,41 @@
                   <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
                 </div>
               </span>
-              <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>" />
+              <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
+                <input type="hidden" name="time_from" value="<%=configuration.defaultTimeStart%>" />
+              <% } %>  
             </div>
           </div>
         </div>
-        
-        <div class="flex-form-group">
-          <div class="flex-form-box mb-0">
-            <label for="widget_date_to"><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() )?></label>
-            <div class="flex-form-item">
-              <span class="w-100">
-                <div class="inputWithIcon">
-                  <input class="form-control" type="text" id="widget_date_to" name="date_to" readonly="true"/>
-                  <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
-                </div>
-              </span>
-              <input type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>" />
+
+        <% if (configuration.rentDateSelector === 'date_from_duration') { %>
+          <div class="flex-form-group">
+            <div class="flex-form-box mb-0">
+              <label for="widget_renting_duration"><?php echo esc_html_x( 'Duration', 'renting_form_selector', 'mybooking' ) ?></label>
+              <div class="flex-form-item">
+                <span class="w-100">
+                  <select class="form-control" id="widget_renting_duration" name="renting_duration">
+                  </select>  
+                </span>
+              </div>
             </div>
           </div>
-        </div>
+        <% } else if (configuration.rentDateSelector === 'date_from_date_to') { %>
+          <div class="flex-form-group">
+            <div class="flex-form-box mb-0">
+              <label for="widget_date_to"><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() )?></label>
+              <div class="flex-form-item">
+                <span class="w-100">
+                  <div class="inputWithIcon">
+                    <input class="form-control" type="text" id="widget_date_to" name="date_to" readonly="true"/>
+                    <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+                  </div>
+                </span>
+                <input type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>" />
+              </div>
+            </div>
+          </div>
+        <% } %>
       
         <% if (configuration.promotionCode) { %>
           <div class="flex-form-group">

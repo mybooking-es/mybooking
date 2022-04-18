@@ -29592,8 +29592,7 @@ a.magic-button.btn {
   padding: 2rem 0; }
 
 .product-detail-list-img {
-  max-width: 175px;
-  max-height: 100px;
+  max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain; }
 
@@ -30435,7 +30434,7 @@ input[name=return_date].form-control[readonly] {
   .mybooking-product_calendar-date {
     font-size: 1.2em; }
   .mybooking-product_calendar-price {
-    font-size: 0.7em; } }
+    font-size: 0.65em; } }
 
 /**
 *   PROMOTION POPUP

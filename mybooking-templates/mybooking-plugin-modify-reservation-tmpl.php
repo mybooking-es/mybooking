@@ -86,33 +86,39 @@
             <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
             </div>
           </span>
-
-          <% if (configuration.timeToFrom) { %>
+          <% if (configuration.rentDateSelector === 'date_from_duration') { %>
+            <select class="ml-1" id="renting_duration" name="renting_duration">
+            </select>
+          <% } else if (configuration.timeToFrom) { %>
             <select class="ml-1" id="time_from" name="time_from">
             </select>
           <% } else { %>
-            <input class="modify-dates form-control" type="hidden" name="time_from" value="10:00" />
+            <input class="modify-dates form-control" type="hidden" name="time_from" />
           <% } %>
         </div>
       </div>
-      <div class="flex-form-box">
-        <label><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() ) ?></label>
-        <div class="flex-form-item">
-        <span class="w-100">
-            <div class="inputWithIcon">
-              <input class="modify-dates form-control" type="text" id="date_to" name="date_to" readonly="true" />
-                <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
-            </div>
-        </span>
 
-          <% if (configuration.timeToFrom) { %>
-            <select class="ml-1" id="time_to" name="time_to">
-            </select>
-          <% } else { %>
-            <input class="modify-dates form-control" type="hidden" name="time_to" value="20:00" />
-          <% } %>
+      <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
+        <!-- Collection date and time -->
+        <div class="flex-form-box">
+          <label><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() ) ?></label>
+          <div class="flex-form-item">
+          <span class="w-100">
+              <div class="inputWithIcon">
+                <input class="modify-dates form-control" type="text" id="date_to" name="date_to" readonly="true" />
+                  <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+              </div>
+          </span>
+
+            <% if (configuration.timeToFrom) { %>
+              <select class="ml-1" id="time_to" name="time_to">
+              </select>
+            <% } else { %>
+              <input class="modify-dates form-control" type="hidden" name="time_to"/>
+            <% } %>
+          </div>
         </div>
-      </div>
+      <% } %>
     </div>
   </div>
 
