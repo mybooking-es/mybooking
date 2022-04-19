@@ -238,7 +238,13 @@
           </div>
           <div class="reservation-summary_return_date">
             <% if (configuration.rentDateSelector === 'date_from_duration') { %>
-              <span><%=shopping_cart.renting_duration_literal%></span>
+              <span><%=shopping_cart.renting_duration_literal%>
+                  <% if (!shopping_cart.renting_duration_literal) { %>
+                    <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
+                      ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
+                    <% } %>
+                  <% } %>  
+              </span>
             <% } else { %>
               <span><%=shopping_cart.date_to_short_format%> 
               <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
@@ -291,7 +297,13 @@
         </div>
         <div class="reservation-summary_return_date">
           <% if (configuration.rentDateSelector === 'date_from_duration') { %>
-              <span><%=shopping_cart.renting_duration_literal%></span>
+              <span><%=shopping_cart.renting_duration_literal%>
+                    <% if (!shopping_cart.renting_duration_literal) { %>
+                      <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
+                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
+                      <% } %>
+                    <% } %>  
+              </span>
           <% } else { %>
             <span><%=shopping_cart.date_to_short_format%>
             <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
@@ -340,7 +352,7 @@
                 <h5 class=""><?php echo esc_html_x('Duration', 'renting_complete', 'mybooking') ?></h5>
                 <ul>
                   <li><%=shopping_cart.renting_duration_literal%>
-                    <% if (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) { %>
+                    <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
                         ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
                       <% } %>
                   </li>
@@ -422,7 +434,7 @@
                   <h5 class="mt-3"><?php echo esc_html_x('Duration', 'renting_complete', 'mybooking') ?></h5>
                   <ul>
                     <li><%=shopping_cart.renting_duration_literal%>
-                      <% if (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) { %>
+                      <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
                         ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
                       <% } %>
                     </li>
@@ -484,7 +496,7 @@
               </div>
               <% if (configuration.rentDateSelector === 'date_from_duration') { %>
                 <%=shopping_cart.renting_duration_literal%>
-                <% if (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) { %>
+                <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
                   ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
                 <% } %>
               <% } else { %>
