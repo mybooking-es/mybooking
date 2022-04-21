@@ -189,11 +189,15 @@
       <?php echo esc_html_x('We are sorry. There are not defined times. Please, configure them at the calendar', 'renting_product_detail', 'mybooking' ) ?>
     </div>
   <% } else { %>  
-    <% for (var idx=0; idx<turns.length; idx++) { %>
-      <input type="radio" name="turn" value="<%=turns[idx].time_from%>-<%=turns[idx].time_to%>" <% if (!turns[idx].availability){%>disabled<% } %>
-             class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>">
-        <span class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>"><%=turns[idx].time_from%>-<%=turns[idx].time_to%>&nbsp;
-    <%} %>
+    <% if (turns.length == 1 && turns[0].full_day) { %>
+      <input type="hidden" name="turn" value="<%=turns[0].time_from%>-<%=turns[0].time_to%>"/>
+    <% } else { %>
+      <% for (var idx=0; idx<turns.length; idx++) { %>
+        <input type="radio" name="turn" value="<%=turns[idx].time_from%>-<%=turns[idx].time_to%>" <% if (!turns[idx].availability){%>disabled<% } %>
+               class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>">
+          <span class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>"><%=turns[idx].time_from%>-<%=turns[idx].time_to%>&nbsp;
+      <%} %>
+    <% } %>
   <% } %>
 
 </script>
