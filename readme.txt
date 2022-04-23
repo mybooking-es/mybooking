@@ -41,7 +41,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Changelog ==
 
 = 1.0.15 =
-* Fixed: Renting My reservation : Paypal + Credit card payment methods
+* Fixed: Renting/Activities My reservation : Both Paypal and Credit card payment methods not working
 
 = 1.0.14 =
 * Added: Renting Duration : Selector, choose product, complete, summary, my reservation
@@ -242,7 +242,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Upgrade Notice ==
 
 = 1.0.15 =
-* Fixed: Renting My reservation : Paypal + Credit card payment methods
+* Fixed: Renting/Activities My reservation : Both Paypal and Credit card payment methods not working
 
 = 1.0.14 =
 * Added: Renting duration and Renting Calendar Widget : Turns, duration scope, check daily availability

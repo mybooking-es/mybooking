@@ -4,7 +4,7 @@
 
 ### Fixed
 
-- Renting My reservation : Paypal + Credit card payment methods
+- Renting/Activities My reservation : Both Paypal and Credit card payment methods not working
 
 ## [1.0.14] 2022-04-19
 

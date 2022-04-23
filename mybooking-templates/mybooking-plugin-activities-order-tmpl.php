@@ -521,7 +521,7 @@
                         <div class="form-row">
                           <div class="form-group col-md-12">
                             <label for="payments_paypal_standard">
-                              <input type="radio" id="payments_paypal_standard" name="payment_method_value"
+                              <input type="radio" id="payments_paypal_standard" name="payment_method_select"
                                 class="payment_method_select"
                                 value="paypal_standard">&nbsp;<?php echo esc_html_x( 'Paypal', 'activity_my_reservation', 'mybooking' ) ?>
                               <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>" />
@@ -529,7 +529,7 @@
                           </div>
                           <div class="form-group col-md-12">
                             <label for="payments_credit_card">
-                              <input type="radio" id="payments_credit_card" name="payment_method_value"
+                              <input type="radio" id="payments_credit_card" name="payment_method_select"
                                 class="payment_method_select"
                                 value="<%=order.payment_methods.tpv_virtual%>">&nbsp;<?php echo esc_html_x( 'Credit or debit card', 'activity_my_reservation', 'mybooking' ) ?>
                               <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
