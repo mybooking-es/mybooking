@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.15] 2022-04-23
+
+### Fixed
+
+- Renting My reservation : Paypal + Credit card payment methods
+
 ## [1.0.14] 2022-04-19
 
 ### Added

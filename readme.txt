@@ -5,7 +5,7 @@ Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
 Tested up to:       5.9
-Stable tag:         1.0.14
+Stable tag:         1.0.15
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,9 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.0.15 =
+* Fixed: Renting My reservation : Paypal + Credit card payment methods
 
 = 1.0.14 =
 * Added: Renting Duration : Selector, choose product, complete, summary, my reservation
@@ -237,6 +240,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.15 =
+* Fixed: Renting My reservation : Paypal + Credit card payment methods
 
 = 1.0.14 =
 * Added: Renting duration and Renting Calendar Widget : Turns, duration scope, check daily availability

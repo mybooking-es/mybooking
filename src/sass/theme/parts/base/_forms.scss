@@ -151,7 +151,7 @@ select:disabled {
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   .flex-form-group input.hasDatepicker {
-    max-width: 145px;
+    max-width: none;
   }
 }
 
