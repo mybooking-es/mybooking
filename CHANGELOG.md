@@ -1,9 +1,10 @@
 # Changelog
 
-## [1.0.15] 2022-04-23
+## [1.0.15] 2022-05-07
 
 ### Fixed
 
+- Renting Calendar Widget : Show not available turns in red 
 - Renting/Activities My reservation : Both Paypal and Credit card payment methods not working
 
 ## [1.0.14] 2022-04-19

@@ -25598,7 +25598,7 @@ select:disabled {
 
 @media (max-width: 575.98px) {
   .flex-form-group input.hasDatepicker {
-    max-width: 145px; } }
+    max-width: none; } }
 
 .flex-form-item.widget_pickup_place_group,
 .flex-form-item.widget_return_place_group {
@@ -30435,6 +30435,9 @@ input[name=return_date].form-control[readonly] {
     font-size: 1.2em; }
   .mybooking-product_calendar-price {
     font-size: 0.65em; } }
+
+input.mybooking-product_calendar-not_available_turn + span.mybooking-product_calendar-not_available_turn {
+  color: var(--error); }
 
 /**
 *   PROMOTION POPUP
