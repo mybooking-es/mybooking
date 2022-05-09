@@ -41,6 +41,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Changelog ==
 
 = 1.0.15 =
+* Fixed: Renting calendar widget: Show not available turns in red
 * Fixed: Renting/Activities My reservation : Both Paypal and Credit card payment methods not working
 
 = 1.0.14 =

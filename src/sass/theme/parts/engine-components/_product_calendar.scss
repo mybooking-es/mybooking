@@ -70,3 +70,7 @@
     font-size: 0.65em;
   }
 }
+
+input.mybooking-product_calendar-not_available_turn + span.mybooking-product_calendar-not_available_turn {
+    color: var(--error);
+}

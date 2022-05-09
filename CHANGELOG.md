@@ -1,5 +1,6 @@
 # Changelog
 
+<<<<<<< HEAD
 ## [1.0.16] 2022-05-9
 
 ### Fixed
@@ -7,9 +8,13 @@
 - _testimonials.scss: cloned styles to match related plugin template structure
 
 ## [1.0.15] 2022-04-23
+=======
+## [1.0.15] 2022-05-07
+>>>>>>> bc6f458c9da4aadc25e1d3a51fa8291aa51ab870
 
 ### Fixed
 
+- Renting Calendar Widget : Show not available turns in red 
 - Renting/Activities My reservation : Both Paypal and Credit card payment methods not working
 
 ## [1.0.14] 2022-04-19
