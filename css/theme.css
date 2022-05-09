@@ -28136,6 +28136,30 @@ a.dropdown-item {
   .mybooking-testimonial_content {
     width: 93%; } }
 
+.mybooking-testimonial_avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+
+@media (min-width: 575.98px) {
+  .mybooking-testimonial_avatar {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 7%; } }
+
+.mybooking-testimonial_avatar img {
+  width: 80px; }
+
+@media (min-width: 575.98px) {
+  .mybooking-testimonial_avatar img {
+    width: 80px;
+    height: 80px; } }
+
 .mybooking-testimonial_text {
   font-size: 1.3em;
   font-weight: 300;
@@ -28161,13 +28185,6 @@ a.dropdown-item {
 .mybooking-testimonial_name:before {
   content: "—";
   margin-right: 1rem; }
-
-.mybooking-testimonial_avatar {
-  width: 30%; }
-
-@media (min-width: 575.98px) {
-  .mybooking-testimonial_avatar {
-    width: 7%; } }
 
 .vehicle_item {
   margin-bottom: 1rem;
