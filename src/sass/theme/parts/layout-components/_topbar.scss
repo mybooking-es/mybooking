@@ -2,21 +2,17 @@
 .topbar {
   font-size: 0.9rem;
   margin-top: 0;
-  //position: relative;
   z-index: 30;
   padding: 0.3rem 2rem 0.3rem 1rem;
   background-color: var(--topbar-bg);
   float: left;
   width: 100%;
   a {
-    color: var(--topbar-link-color);
+    color: var(--topbar-link-color)!important;
     &:hover {
-      color: var(--topbar-link-color-hover);
+      color: var(--topbar-link-color-hover)!important;
       text-decoration: none;
     }
-  }
-  i {
-    color: var(--topbar-icon-color);
   }
   .info_link {
     margin: 0 0 0 1em;
@@ -61,6 +57,7 @@
     padding: 0;
   }
 }
+
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
   .topbar .info_text {

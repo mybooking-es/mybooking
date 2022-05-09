@@ -27629,12 +27629,10 @@ form.wp-block-search input[type=submit] {
   float: left;
   width: 100%; }
   .topbar a {
-    color: var(--topbar-link-color); }
+    color: var(--topbar-link-color) !important; }
     .topbar a:hover {
-      color: var(--topbar-link-color-hover);
+      color: var(--topbar-link-color-hover) !important;
       text-decoration: none; }
-  .topbar i {
-    color: var(--topbar-icon-color); }
   .topbar .info_link {
     margin: 0 0 0 1em; }
   .topbar .topbar_right {
@@ -28153,12 +28151,9 @@ a.dropdown-item {
     width: 7%; } }
 
 .mybooking-testimonial_avatar img {
-  width: 80px; }
-
-@media (min-width: 575.98px) {
-  .mybooking-testimonial_avatar img {
-    width: 80px;
-    height: 80px; } }
+  --mb-testimonial-avatar-dimensions: 70px;
+  width: var(--mb-testimonial-avatar-dimensions);
+  height: var(--mb-testimonial-avatar-dimensions); }
 
 .mybooking-testimonial_text {
   font-size: 1.3em;
