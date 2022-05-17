@@ -1,16 +1,13 @@
 # Changelog
 
-<<<<<<< HEAD
-## [1.0.16] 2022-05-9
+## [1.0.16] 2022-05-17
 
 ### Fixed
 
-- _testimonials.scss: cloned styles to match related plugin template structure
+- testimonial: cloned styles to match related plugin template structure
+- selector widget: pickup/return place + duration
 
-## [1.0.15] 2022-04-23
-=======
 ## [1.0.15] 2022-05-07
->>>>>>> bc6f458c9da4aadc25e1d3a51fa8291aa51ab870
 
 ### Fixed
 

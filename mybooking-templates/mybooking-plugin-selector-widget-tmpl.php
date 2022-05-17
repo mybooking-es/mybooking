@@ -16,6 +16,8 @@
     <!-- Inline selector -->
     <div class="flex-form-group-wrapper flex-form-group-wrapper-inline">
 
+        <!-- Rental location -->
+
         <% if (not_hidden_rental_location_code && configuration.selectRentalLocation) { %>
           <div class="flex-form-group widget_rental_location" style="display: none">
             <label for="widget_rental_location_code"><?php echo esc_html( MyBookingEngineContext::getInstance()->getRentalLocation() ) ?></label>
@@ -24,6 +26,8 @@
             </div>
           </div>
         <% } %>
+
+        <!-- Family -->
 
         <% if (not_hidden_family_id && configuration.selectFamily) { %>
           <div class="flex-form-group widget_family" style="display: none">
@@ -35,6 +39,8 @@
             </div>
           </div>
         <% } %>
+
+        <!-- Delivery date -->
 
         <div class="flex-form-group">
           <div class="flex-form-box mb-0">
@@ -81,7 +87,9 @@
             </div>
           </div>
         <% } %>
-      
+        
+        <!-- Promotion code -->
+
         <% if (configuration.promotionCode) { %>
           <div class="flex-form-group">
             <div class="flex-form-box mb-0">
@@ -182,23 +190,36 @@
           <% } %>
         </div>
       </div>
+
+
       <div class="flex-form-box">
-        <label for="widget_date_to"><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() ) ?></label>
-        <div class="flex-form-item">
-          <span class="w-100">
-            <div class="inputWithIcon">
-              <input class="form-control" type="text" id="widget_date_to" name="date_to" readonly="true"/>
-              <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
-            </div>
-          </span>
-          <% if (configuration.timeToFrom) { %>
-            <select class="ml-1 form-control" id="widget_time_to" name="time_to">
-            </select>
-          <% } else { %>
-            <input class="form-control" type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>"/>
-          <% } %>
-        </div>
+        <% if (configuration.rentDateSelector === 'date_from_duration') { %>
+          <label for="widget_renting_duration"><?php echo esc_html_x( 'Duration', 'renting_form_selector', 'mybooking' ) ?></label>
+          <div class="flex-form-item">
+            <span class="w-100">
+              <select class="form-control" id="widget_renting_duration" name="renting_duration">
+              </select>  
+            </span>
+          </div>
+        <% } else if (configuration.rentDateSelector === 'date_from_date_to') { %>
+          <label for="widget_date_to"><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() ) ?></label>
+          <div class="flex-form-item">
+            <span class="w-100">
+              <div class="inputWithIcon">
+                <input class="form-control" type="text" id="widget_date_to" name="date_to" readonly="true"/>
+                <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
+              </div>
+            </span>
+            <% if (configuration.timeToFrom) { %>
+              <select class="ml-1 form-control" id="widget_time_to" name="time_to">
+              </select>
+            <% } else { %>
+              <input class="form-control" type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>"/>
+            <% } %>
+          </div>
+        <% } %>  
       </div>
+
     </div>
   </div>
 
