@@ -1,6 +1,9 @@
 # Changelog
 
-## [1.0.16] 2022-05-17
+## [1.0.16] 2022-05-26
+
+### Added
+- product calendar : Rental Location Selector
 
 ### Fixed
 

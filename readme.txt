@@ -4,7 +4,7 @@ Contributors:       hectorasencio, marcelreig, juanmiqueo
 Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
-Tested up to:       5.9
+Tested up to:       6.0
 Stable tag:         1.0.16
 Requires PHP:       7.2
 License: GPL-2.0-or-later
@@ -41,6 +41,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Changelog ==
 
 = 1.0.16 =
+* Added: Product Calendar Rental Location Selector
 * Fixed: Testimonial: cloned styles to match related plugin template structure
 * Fixed: Renting Selector widget: pickup/return place + duration
 
@@ -247,7 +248,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Upgrade Notice ==
 
 = 1.0.16 =
-* Fixed: Testimonial styles + Renting Selector widget: pickup/return place + duration
+* Fixed: Testimonial styles + Renting Selector widget: pickup/return place + duration + product calendar rental location
 
 = 1.0.15 =
 * Fixed: Renting/Activities My reservation : Both Paypal and Credit card payment methods not working

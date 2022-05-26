@@ -2,9 +2,15 @@
  * Module for product detail page with calendar
  */
 
+h2.mybooking-product_calendar-date-range {
+  font-size:  1em; 
+  border: 1px solid #cccccc;
+  padding: 5px;  
+}
+
 // Available date
 .date-picker-wrapper .date-available {
-  background-color: #aeecbc;
+  background-color: #3dd992;
   color: black;
 }
 
@@ -25,7 +31,7 @@
 }
 
 .date-picker-wrapper .month-wrapper table .day.real-today {
-    background-color: #aeecbc;
+    background-color: #3dd992;
 }
 
 .date-picker-wrapper .month-wrapper table .day.not-selectable-day.real-today,
