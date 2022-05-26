@@ -33,7 +33,10 @@
       <% if (not_hidden_rental_location_code && configuration.selectRentalLocation) { %>
         <div class="form-group">
           <label
-          for="rental_location"><?php echo wp_kses_post ( sprintf( _x( 'Select %s', 'renting_product_calendar', 'mybooking' ), MyBookingEngineContext::getInstance()->getRentalLocation() ) )?></label>
+          for="rental_location">
+            <?php /* translators: %s: Rental Location type */ ?>
+            <?php echo wp_kses_post ( sprintf( _x( 'Select %s', 'renting_product_calendar', 'mybooking' ), MyBookingEngineContext::getInstance()->getRentalLocation() ) )?>
+          </label>
           <select name="rental_location" id="rental_location" class="form-control w-100" 
                 placeholder="<?php echo esc_attr( MyBookingEngineContext::getInstance()->getRentalLocation() ) ?>"></select>
         </div>
