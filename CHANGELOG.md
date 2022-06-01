@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.17] 2022-06-01
+
+### Added
+- Renting my reservation : Sign contract
+- Renting my reservation : Additional drivers
+
 ## [1.0.16] 2022-05-26
 
 ### Added
