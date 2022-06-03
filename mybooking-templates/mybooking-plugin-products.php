@@ -1,5 +1,5 @@
 <?php
-  /** 
+  /**
    * The Template for showing the index of products
    *
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-products.php
@@ -14,12 +14,12 @@
       <div class="card-static">
         <div class="card-static_image">
           <?php if ( !empty( $mybooking_product->photo_path ) ) { ?>
-            <img src="<?php echo esc_url( $mybooking_product->photo_path ) ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>">
+            <img class="activity-card-img card-img-top" src="<?php echo esc_url( $mybooking_product->photo_path ) ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>">
           <?php } else { ?>
             <div class="text-center no-product-photo pt-3">
               <img class="activity-card-img card-img-top" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image-product.png') ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>"/>
             </div>
-          <?php } ?>          
+          <?php } ?>
         </div>
         <div class="card-static_body">
           <div class="card-static_header-catalog">
@@ -28,13 +28,25 @@
               <h3 class="card-static_product-short-description"><?php echo wp_kses_post( $mybooking_product->short_description ) ?></h3>
             <?php } ?>
           </div>
+
+          <?php if ( isset( $mybooking_product->key_characteristics) && is_array( (array) $mybooking_product->key_characteristics ) && !empty( (array) $mybooking_product->key_characteristics ) ) { ?>
+            <div class="mybooking-product_characteristics mt-3">
+              <?php foreach ( $mybooking_product->key_characteristics as $mybooking_key => $mybooking_value) { ?>
+                <div class="mybooking-product_characteristics-item">
+                  <img class="mybooking-product_characteristics-img" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/key_characteristics/'.$mybooking_key.'.svg' ) ?>" alt="<?php echo esc_attr( MyBookingEngineContext::getInstance()->getKeyCharacteristic( $mybooking_key ) ) ?>"/>
+                  <span class="mybooking-product_characteristics-key"><?php echo esc_html( $mybooking_value ) ?></span>
+                </div>
+              <?php } ?>
+            </div>
+          <?php } ?>
+
           <?php if ( $args['use_detail_pages'] ) { ?>
             <?php  $mybooking_productIdAnchor = $mybooking_product->code;
               if ( !empty( $mybooking_product->slug) ) {
                 $mybooking_productIdAnchor = $mybooking_product->slug;
               }
             ?>
-            <div class="card-static_btn mt-5">
+            <div class="card-static_btn">
               <a href="<?php echo esc_url( $args['url_detail'].'/'.$mybooking_productIdAnchor ) ?>"
                  class="button btn btn-choose-product">
                 <?php echo esc_html_x('More information','renting_products','mybooking'); ?></a>
@@ -62,7 +74,7 @@
                 <a class="page-link"
                    href="<?php echo esc_url( $args['url'].'?offsetpage='.($args['current_page']-1).$mybooking_querystring ) ?>">
                   <?php echo esc_html_x('Previous','renting_products','mybooking'); ?></a>
-              <?php endif ?>     
+              <?php endif ?>
             </li>
             <?php foreach ($args['pages'] as $mybooking_page) { ?>
               <?php if ($mybooking_page == $args['current_page']) { ?>
@@ -89,7 +101,7 @@
                 <a class="page-link"
                    href="<?php echo esc_url( $args['url'].'?offsetpage='.($args['current_page']+1).$mybooking_querystring ) ?>">
                   <?php echo esc_html_x('Next','renting_products','mybooking'); ?></a>
-              <?php endif ?> 
+              <?php endif ?>
             </li>
           </ul>
         </nav>
