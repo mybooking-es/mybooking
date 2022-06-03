@@ -5,7 +5,7 @@ Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
 Tested up to:       6.0
-Stable tag:         1.0.16
+Stable tag:         1.0.17
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,10 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.0.17 =
+* Added: Renting my reservation - Sign contract
+* Added: Renting my reservation - Additional drivers
 
 = 1.0.16 =
 * Added: Product Calendar Rental Location Selector
@@ -246,6 +250,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.17 =
+* Added: Renting my reservation - Sign contract + Additional drivers
 
 = 1.0.16 =
 * Fixed: Testimonial styles + Renting Selector widget: pickup/return place + duration + product calendar rental location
