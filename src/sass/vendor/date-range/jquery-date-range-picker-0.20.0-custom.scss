@@ -139,6 +139,7 @@
   line-height: 14px;
   margin: 0px;
   padding: 0px;
+  border: 1px solid #ccc;
 }
 
 .date-picker-wrapper .month-wrapper table .day {
@@ -208,8 +209,9 @@
 }
 
 .date-picker-wrapper table .caption .next, .date-picker-wrapper table .caption .prev {
-  padding: 0 5px;
+  padding: 20px;
   cursor: pointer;
+  border: 1px solid #eeeeee;
 }
 
 .date-picker-wrapper table .caption .next:hover, .date-picker-wrapper table .caption .prev:hover {
@@ -407,7 +409,7 @@
 }
 
 .date-picker-wrapper .date-available {
-  background-color: #aeecbc;
+  background-color: #3dd992;
   color: black;
 }
 

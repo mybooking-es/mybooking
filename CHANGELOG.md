@@ -1,9 +1,20 @@
 # Changelog
 
-## [1.0.15] 2022-04-23
+## [1.0.16] 2022-05-26
+
+### Added
+- product calendar : Rental Location Selector
 
 ### Fixed
 
+- testimonial: cloned styles to match related plugin template structure
+- selector widget: pickup/return place + duration
+
+## [1.0.15] 2022-05-07
+
+### Fixed
+
+- Renting Calendar Widget : Show not available turns in red 
 - Renting/Activities My reservation : Both Paypal and Credit card payment methods not working
 
 ## [1.0.14] 2022-04-19
@@ -49,7 +60,7 @@
 
 ### Fixed
 
-- MybookingReservationEngine renting templates : my-reservation/summary increased price not shown as offer 
+- MybookingReservationEngine renting templates : my-reservation/summary increased price not shown as offer
 - MybookingReservationEngine renting templates : my-reservation Deutsch translations
 
 ## [1.0.8] 2020-06-15
@@ -112,7 +123,7 @@
 ### Fixed
 - MyBooking reservation engine templates
   - Fixed product calendar colors
-  - Fixed selector widget another places 
+  - Fixed selector widget another places
 
 ## [1.0.3] 2020-02-25
 

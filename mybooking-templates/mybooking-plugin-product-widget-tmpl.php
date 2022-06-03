@@ -29,6 +29,20 @@
         </div>
       <% } %>
 
+      <!-- // Rental location selector -->
+      <% if (not_hidden_rental_location_code && configuration.selectRentalLocation) { %>
+        <div class="form-group">
+          <label
+          for="rental_location">
+            <?php /* translators: %s: Rental Location type */ ?>
+            <?php echo wp_kses_post ( sprintf( _x( 'Select %s', 'renting_product_calendar', 'mybooking' ), MyBookingEngineContext::getInstance()->getRentalLocation() ) )?>
+          </label>
+          <select name="rental_location" id="rental_location" class="form-control w-100" 
+                placeholder="<?php echo esc_attr( MyBookingEngineContext::getInstance()->getRentalLocation() ) ?>"></select>
+        </div>
+      <% } %>
+
+
       <!-- One Journal or multiple journals selector -->
       <% if (configuration.rentingProductOneJournal && 
              configuration.rentingProductMultipleJournals) { %>
@@ -45,6 +59,7 @@
       <!-- Availability calendar -->
       <div class="form-group">
         <input id="date" type="hidden" name="date"/>
+        <div id="mb-date-container-header" style="display:none"></div>
         <div id="date-container" class="disabled-picker"></div>
       </div>
 
@@ -195,7 +210,7 @@
       <% for (var idx=0; idx<turns.length; idx++) { %>
         <input type="radio" name="turn" value="<%=turns[idx].time_from%>-<%=turns[idx].time_to%>" <% if (!turns[idx].availability){%>disabled<% } %>
                class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>">
-          <span class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>"><%=turns[idx].time_from%>-<%=turns[idx].time_to%>&nbsp;
+          <span class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>"><%=turns[idx].time_from%>-<%=turns[idx].time_to%>&nbsp;</span>
       <%} %>
     <% } %>
   <% } %>
