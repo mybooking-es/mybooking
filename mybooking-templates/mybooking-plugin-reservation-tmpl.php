@@ -369,11 +369,9 @@
           <div class="form-row">
             <div class="form-group col-md-12">
               <!-- // Electronic signature --> 
-              <a href="<%=booking.electronic_signature_url%>" target="blank">
-                <button class="btn btn-primary w-100">
-                   <?php echo esc_html_x( 'Sign contract', 'renting_my_reservation', 'mybooking') ?>
-                </button>
-              </a>
+              <button id="js_mb_electronic_signature_link" class="btn btn-primary w-100">
+                 <?php echo esc_html_x( 'Sign contract', 'renting_my_reservation', 'mybooking') ?>
+              </button>
             </div>
           </div>
 
@@ -943,3 +941,19 @@
   </form>
 
 </script>
+
+<!-- Contract block -->
+
+<script type="text/tmpl" id="script_contract_required_data">
+
+  <div class="alert alert-danger" role="alert">
+    <?php echo esc_html_x( 'The contract can not be signed. Please, check the errors.', 'renting_my_reservation', 'mybooking' ) ?>
+  </div>
+
+  <ul>
+  <% for (property in contract_errors) { %>
+    <li><%= contract_errors[property] %></li>
+  <% } %>
+  </ul>
+
+</script>  
