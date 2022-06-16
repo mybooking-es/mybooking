@@ -33,6 +33,7 @@
   flex-grow: 1;
   min-width: 300px;
   max-width: 430px;
+  min-height: 420px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -40,6 +41,7 @@
   align-self: center;
   border-radius: 10px;
   box-shadow: -6px 12px 50px -10px rgb(204, 204, 204);
+  overflow: hidden;
   i {
     position: absolute;
     left: 10px;
@@ -69,7 +71,13 @@
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   background-color: var(--card-image-bg-color);
-  object-fit: var(--card-image-object-fit);
+  overflow: hidden;
+}
+
+.card-static_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .card-static_custom-message {
@@ -175,7 +183,7 @@
 }
 
 .card-static_price_supplement_supplement_1 {
-  margin-top: -5px; 
+  margin-top: -5px;
 }
 
 .card-static_footer {
@@ -214,6 +222,13 @@
   }
 }
 
+.mybooking-product_characteristics-key {
+  font-weight: 700;
+  max-width: 40px;
+  overflow: hidden;
+  height: 1rem;
+} /* This class is for plugin compatibility! */
+
 .card-static_not-available {
   font-size: 12px;
   text-align: center;
@@ -245,7 +260,7 @@
     min-height: 0;
   }
   .card-static_image {
-    height: auto;
+    height: 200px;
   }
 }
 

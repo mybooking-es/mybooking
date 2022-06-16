@@ -14,10 +14,10 @@
       <div class="card-static">
         <div class="card-static_image">
           <?php if ( !empty( $mybooking_product->photo_path ) ) { ?>
-            <img class="activity-card-img card-img-top" src="<?php echo esc_url( $mybooking_product->photo_path ) ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>">
+            <img class="card-static_image-item" src="<?php echo esc_url( $mybooking_product->photo_path ) ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>">
           <?php } else { ?>
             <div class="text-center no-product-photo pt-3">
-              <img class="activity-card-img card-img-top" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image-product.png') ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>"/>
+              <img class="" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image-product.png') ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>"/>
             </div>
           <?php } ?>
         </div>
@@ -28,11 +28,13 @@
               <h3 class="card-static_product-short-description"><?php echo wp_kses_post( $mybooking_product->short_description ) ?></h3>
             <?php } ?>
           </div>
+        </div>
+        <div class="card-static_footer">
 
           <?php if ( isset( $mybooking_product->key_characteristics) && is_array( (array) $mybooking_product->key_characteristics ) && !empty( (array) $mybooking_product->key_characteristics ) ) { ?>
-            <div class="mybooking-product_characteristics mt-3">
+            <div class="mybooking-product_characteristics mt-3 card-static_icons">
               <?php foreach ( $mybooking_product->key_characteristics as $mybooking_key => $mybooking_value) { ?>
-                <div class="mybooking-product_characteristics-item">
+                <div class="mybooking-product_characteristics-item icon">
                   <img class="mybooking-product_characteristics-img" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/key_characteristics/'.$mybooking_key.'.svg' ) ?>" alt="<?php echo esc_attr( MyBookingEngineContext::getInstance()->getKeyCharacteristic( $mybooking_key ) ) ?>"/>
                   <span class="mybooking-product_characteristics-key"><?php echo esc_html( $mybooking_value ) ?></span>
                 </div>

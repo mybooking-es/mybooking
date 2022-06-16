@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.18] 2022-06-16
+
+### Fixed
+- Product catalog cards layout and styles
+
 ## [1.0.17] 2022-06-01
 
 ### Added
@@ -20,7 +25,7 @@
 
 ### Fixed
 
-- Renting Calendar Widget : Show not available turns in red 
+- Renting Calendar Widget : Show not available turns in red
 - Renting/Activities My reservation : Both Paypal and Credit card payment methods not working
 
 ## [1.0.14] 2022-04-19
