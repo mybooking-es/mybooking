@@ -1,12 +1,12 @@
 <?php
-  /** 
+  /**
    * The Template for showing the renting selector wizard widget - JS Microtemplates
    *
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-wizard-plugin-tmpl.php
    *
-   * @phpcs:disable PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   * @phpcs:disable PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound
    * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPOpenTagFound
-   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPShortOpenTagFound   
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPShortOpenTagFound
    */
 ?>
 
@@ -26,7 +26,7 @@
           <div class="wizard-summary_datefrom"><%= summary.dateFrom %> <% if (summary.timeFrom != null) {%><%= summary.timeFrom %><% } %> </div>
         <% } %>
       </div>
-      <img class="wizard-summary_separator" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/right-arrow-icon.png' ) ?>" 
+      <img class="wizard-summary_separator" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/right-arrow-icon.png' ) ?>"
            alt="<?php echo esc_attr_x( 'Separator', 'renting_form_selector_wizard', 'mybooking') ?>">
       <div class="wizard-summary_item col wizard-summary_collection">
         <div class="wizard-summary_return"><%= summary.returnPlaceDescription || summary.returnPlace %></div>
@@ -48,7 +48,7 @@
       <div class="col-md-12">
         <ul class="wizard-place_list">
           <% for (var idx=0; idx<places.length; idx++) { %>
-          <li><a class="wizard-place_item selector_place text-primary" role="button" data-place-id="<%=places[idx].id%>" data-place-name="<%=places[idx].name%>"><%=places[idx].name%></a></li>
+          <li class="wizard-place_item"><button class="wizard-place_button selector_place" data-place-id="<%=places[idx].id%>" data-place-name="<%=places[idx].name%>"><%=places[idx].name%></button></li>
           <% } %>
         </ul>
       </div>
