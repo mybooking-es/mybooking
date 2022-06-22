@@ -13,9 +13,9 @@
 <!-- Summary Sticky -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="reservation-summary-sticky-wrapper">
-        
+
         <% if ( shopping_cart.pickup_place_customer_translation !== shopping_cart.return_place_customer_translation) { %>
-        
+
           <div class="reservation-summary-sticky">
             <div class="sandwitch-wrapper">
               <div class="reservation-summary_pickup_place">
@@ -32,7 +32,7 @@
                   <%=shopping_cart.return_place_customer_translation%>
                 </span>
               </div>
-              
+
               <% if (configuration.rentDateSelector === 'date_from_duration') { %>
                 <!-- Duration -->
                 <div class="reservation-summary_return_date">
@@ -42,8 +42,8 @@
                 <div class="reservation-summary_return_date">
                   <span><%=shopping_cart.date_to_short_format%> <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><% } %></span>
                 </div>
-              <% } %>            
-            
+              <% } %>
+
             </div>
             <div class="modify-button-wrapper push-to-the-right">
               <button id="modify_reservation_button"
@@ -77,14 +77,14 @@
                   <!-- Show the turns -->
                   <form name="mybooking-choose-product_duration-form" class="form-inline">
                     <% for (var idx=0; idx<halfDayTurns.length; idx++) { %>
-                      <input type="radio" class="mybooking-summary-duration-turn" 
-                             name="turn" value="<%=halfDayTurns[idx].time_from%>-<%=halfDayTurns[idx].time_to%>" 
-                        <% if (shopping_cart.time_from === halfDayTurns[idx].time_from && 
+                      <input type="radio" class="mybooking-summary-duration-turn"
+                             name="turn" value="<%=halfDayTurns[idx].time_from%>-<%=halfDayTurns[idx].time_to%>"
+                        <% if (shopping_cart.time_from === halfDayTurns[idx].time_from &&
                                shopping_cart.time_to === halfDayTurns[idx].time_to) {%>checked<%}%>>
                         <%=halfDayTurns[idx].time_from%>-<%=halfDayTurns[idx].time_to%>
                       </input>&nbsp;
                     <% } %>
-                  </form>  
+                  </form>
                 <% } %>
                 &nbsp;
                 <span><%=shopping_cart.renting_duration_literal%></span>
@@ -95,7 +95,7 @@
                 <span><%=shopping_cart.date_to_short_format%> <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
               </div>
             <% } %>
-            
+
             <div class="modify-button-wrapper">
               <button id="modify_reservation_button"
                 class="modify-button"><i class="d-none d-lg-inline mr-2 fas fa-pen"></i>
@@ -118,27 +118,34 @@
         <div class="card-static">
 
           <div class="card-static_image-container">
+            <!-- // Few units warning -->
+            <% if (product.few_available_units) { %>
+              <span class="card-static_low-availability">
+                <?php echo esc_html_x('Few units left!','renting_choose_product','mybooking') ?>
+              </span>
+            <% } %>
+
             <img class="card-static_image" src="<%=product.full_photo%>">
-            <i type="button" class="card-static_info-button fa fa-info-circle js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>"></i>
+
             <% if (product.highlight_message && product.highlight_message != '') { %>
-            <div class="card-static_custom-message"><%=product.highlight_message%></div>
+              <div class="card-static_custom-message"><%=product.highlight_message%></div>
             <% } %>
           </div>
 
           <div class="card-static_header">
             <div class="card-static_price">
-              <!-- Price (single product selection) -->
-              <!-- Added category supplements -->
+              <!-- // Price (single product selection) -->
+              <!-- // Added category supplements -->
               <% if (!product.exceeds_max && !product.be_less_than_min) { %>
                 <% if (!configuration.multipleProductsSelection) { %>
-                  <h2 class="card-static_amount"><%=configuration.formatCurrency(+product.price + 
-                      (+product.category_supplement_1_cost || 0) + 
+                  <h2 class="card-static_amount"><%=configuration.formatCurrency(+product.price +
+                      (+product.category_supplement_1_cost || 0) +
                       (+product.category_supplement_2_cost || 0) +
                       (+product.category_supplement_3_cost || 0))%>
                   </h2>
                 <% } %>
               <% } %>
-              <!-- Taxes included -->
+              <!-- // Taxes included -->
               <?php if ( array_key_exists('show_taxes_included', $args) && ( $args['show_taxes_included'] ) ): ?>
                 <span class="card-static_taxes">
                   <?php echo esc_html_x( 'Taxes included', 'renting_choose_product', 'mybooking') ?>
@@ -146,7 +153,7 @@
               <?php endif; ?>
             </div>
 
-            <!-- Offer (single product selection) -->
+            <!-- // Offer (single product selection) -->
             <% if (!product.exceeds_max && !product.be_less_than_min) { %>
               <% if (!configuration.multipleProductsSelection) { %>
                 <% if (product.price != product.base_price) { %>
@@ -159,7 +166,7 @@
                                 && shoppingCart.promotion_code !== '' &&
                                 (product.promotion_code_discount_type == 'percentage' || product.promotion_code_discount_type == 'amount') ) { %>
                     <span class="card-static_discount">
-                      <span class="card-static_discount-badge badge badge-success"><%=new Number(product.promotion_code_value)%>% <%=shoppingCart.promotion_code%></span>
+                      <span class="card-static_discount-badge badge badge-info"><%=new Number(product.promotion_code_value)%>% <%=shoppingCart.promotion_code%></span>
                       <span class="card-static_original-price"><%= configuration.formatCurrency(product.base_price)%></span>
                     </span>
                   <% } %>
@@ -169,15 +176,20 @@
           </div>
 
           <div class="card-static_body">
-            <!-- Product name and description -->
-            <h2 class="card-static_product-name"><%=product.name%></h2>
-            <h3 class="card-static_product-short-description"><%=product.short_description%></h3>
-            <!-- Few units warning -->
-            <% if (product.few_available_units) { %>
-              <span class="card-static_low-availability">
-                <?php echo esc_html_x('Few units left!','renting_choose_product','mybooking') ?>
+            <!-- // Product name and description -->
+            <h2 class="card-static_product-name">
+              <%=product.name%>
+            </h2>
+            <h3 class="card-static_product-short-description">
+             <%=product.short_description%>
+            </h3>
+
+            <% if (product.description) { %>
+              <span class="mybooking-card_info-button js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>">
+                <span class="dashicons dashicons-plus-alt"></span> INFO
               </span>
             <% } %>
+
             <% if (+product.category_supplement_1_cost > 0) { %>
             <div class="card-static_price_supplement p-b-1">
               <div class="card-static_price_supplement_price">
@@ -185,7 +197,7 @@
               </div>
               <div class="card-static_price_supplement_supplement_1">
                 <small><b><%=configuration.formatCurrency(product.category_supplement_1_cost)%></b>&nbsp;<?php echo esc_html_x( "Petrol supplement", 'renting_complete', 'mybooking' ) ?></small>
-              </div>  
+              </div>
             </div>
             <% } %>
           </div>
@@ -204,20 +216,22 @@
               <% } %>
             </div>
 
-            <!-- Exceeds max duration -->
+            <!-- // Exceeds max duration -->
             <% if (product.exceeds_max) { %>
-              <p class="text-center" style="margin:0">
-                <span class="badge badge-danger w-100 text-center"><%= i18next.t('chooseProduct.max_duration', {duration: i18next.t('common.'+product.price_units, {count: product.max_value, interpolation: {escapeValue: false}} ), interpolation: {escapeValue: false}}) %></span>
-              </p>
-            <!-- Less than min duration -->
+              <div class="mybooking-card_product-availability-msg">
+                <%= i18next.t('chooseProduct.max_duration', {duration: i18next.t('common.'+product.price_units, {count: product.max_value, interpolation: {escapeValue: false}} ), interpolation: {escapeValue: false}}) %>
+              </div>
+
+            <!-- // Less than min duration -->
             <% } else if (product.be_less_than_min) { %>
-              <p class="text-center" style="margin:0">
-                <span class="badge badge-danger w-100 text-center"><%= i18next.t('chooseProduct.min_duration', {duration: i18next.t('common.'+product.price_units, {count: product.min_value, interpolation: {escapeValue: false}} ), interpolation: {escapeValue: false}}) %></span>
-              </p>
-            <!-- Available -->
+              <div class="mybooking-card_product-availability-msg">
+                <%= i18next.t('chooseProduct.min_duration', {duration: i18next.t('common.'+product.price_units, {count: product.min_value, interpolation: {escapeValue: false}} ), interpolation: {escapeValue: false}}) %>
+              </div>
+
+            <!-- // Available -->
             <% } else if (product.availability) { %>
               <% if (configuration.multipleProductsSelection) { %>
-                <!-- Selector -->
+                <!-- // Selector -->
                 <div class="car-listing-selector">
                   <select class="form-control select-choose-product" data-value="<%=product.code%>">
                     <option value="0"><%=i18next.t('chooseProduct.selectUnits')%></option>
@@ -231,17 +245,19 @@
                   </select>
                 </div>
               <% } else { %>
-                <!-- Button -->
+
+                <!-- // Button -->
                   <div class="card-static_btn">
                     <a class="button btn btn-choose-product"
                       data-product="<%=product.code%>"><?php echo esc_html_x('Book it!', 'renting_choose_product', 'mybooking') ?></a>
                   </div>
               <% } %>
-            <!-- Not available -->
+
+            <!-- // Not available -->
             <% } else { %>
-                  <span class="card-static_not-available">
-                  <?php echo esc_html( MyBookingEngineContext::getInstance()->getNotAvailableMessage() ) ?>  
-                  </span>
+              <div class="mybooking-card_product-availability-msg">
+                <?php echo esc_html( MyBookingEngineContext::getInstance()->getNotAvailableMessage() ) ?>
+              </div>
             <% } %>
 
           </div>
@@ -268,7 +284,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="mybooking-modal_image-container col-md-7">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <% for (var idx=0; idx<product.photos.length; idx++) { %>
@@ -286,7 +302,14 @@
             <span class="sr-only">&gt;</span>
           </a>
         </div>
-        <div class="mt-3 text-muted"><%=product.description%></div>
+      </div>
+      <div class="mybooking-modal_info-container col-md-5">
+        <div class="mybooking-modal_product-description">
+          <%=product.short_description%>
+        </div>
+        <div class="mybooking-modal_product-short-description">
+          <%=product.description%>
+        </div>
       </div>
     </div>
   </div>

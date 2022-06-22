@@ -28751,6 +28751,7 @@ button.another_return_place_group_close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -28777,14 +28778,10 @@ button.another_return_place_group_close {
   text-align: center; }
 
 .wizard-close {
-  position: fixed;
+  position: absolute;
   right: 2rem !important;
-  top: 5rem !important;
+  top: 2rem !important;
   cursor: pointer; }
-
-@media (min-width: 991.98px) {
-  .wizard-close {
-    right: 5rem !important; } }
 
 .wizard-close:hover {
   opacity: .5; }
@@ -28794,7 +28791,7 @@ button.another_return_place_group_close {
 
 .wizard-step_title {
   padding-bottom: 1rem;
-  font-size: 28px;
+  font-size: 2em;
   font-weight: 700;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -28904,16 +28901,16 @@ img.wizard-summary_separator {
   width: 100%;
   margin: 5px 0;
   padding: 0.3rem 0.9rem;
-  border: 1px solid #ccc;
-  background-color: white;
-  color: var(--font-heading-color);
+  border: 1px solid var(--brand-primary);
+  border-radius: 5px;
+  background-color: var(--brand-primary);
+  color: white;
   font-size: 1em;
   font-weight: bolder; }
 
 .wizard-time_btn:hover {
-  color: #FFF;
-  background-color: var(--brand-primary);
-  border-color: var(--brand-primary-dark); }
+  color: var(--brand-primary);
+  background-color: white; }
 
 /* Hides scrollbars on wizard's choose time step */
 .wizard-step_container::-webkit-scrollbar {
@@ -28924,39 +28921,53 @@ img.wizard-summary_separator {
   scrollbar-width: none;
   -ms-overflow-style: none; }
 
-.wizard-date_calendar .ui-widget-content {
-  background: transparent !important; }
+.wizard-date_calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
-@media (min-width: 991.98px) {
-  .wizard-date_calendar .ui-datepicker td .ui-state-default {
-    border: 0;
-    background: 0 0;
-    margin-bottom: 0;
-    padding: 1rem;
-    color: gray;
-    text-align: center;
-    -webkit-filter: none;
-    filter: none; } }
+.wizard-date_calendar .ui-datepicker {
+  max-width: 500px;
+  padding: 1rem;
+  border: 1px solid #ccc !important; }
 
-@media (min-width: 1600px) {
+.wizard-date_calendar .ui-datepicker td .ui-state-default {
+  border: 0;
+  background: 0 0;
+  margin-bottom: 0;
+  padding: 0.5rem !important;
+  border-radius: 50px;
+  font-size: 1.5em !important;
+  font-weight: bold;
+  color: var(--success);
+  text-align: center;
+  -webkit-filter: none;
+  filter: none; }
+
+.wizard-date_calendar .ui-datepicker td .ui-state-active {
+  background-color: var(--success);
+  color: white; }
+
+.wizard-date_calendar .ui-datepicker td.ui-state-disabled .ui-state-default {
+  color: var(--brand-secondary-light) !important;
+  opacity: 1 !important; }
+
+@media (min-width: 575.98px) {
   .wizard-date_calendar .ui-datepicker td .ui-state-default {
-    border: 0;
-    background: 0 0;
-    margin-bottom: 0;
-    padding: 2rem;
-    color: gray;
-    text-align: center;
-    -webkit-filter: none;
-    filter: none; } }
+    font-size: 2em !important;
+    padding: 1rem !important; } }
 
 .wizard-date_calendar .ui-datepicker td .ui-state-default:hover {
   background-color: var(--brand-primary);
   color: #FFF;
-  border-radius: 4px; }
+  border-radius: 50px; }
 
 .wizard-date_calendar .ui-datepicker td.ui-state-disabled .ui-state-default:hover {
   background-color: var(--brand-secondary-light);
-  color: #FFF; }
+  color: #FFF !important; }
 
 .wizard-date_calendar .ui-datepicker .ui-datepicker-prev:not(.ui-state-disabled),
 .wizard-date_calendar .ui-datepicker .ui-datepicker-next:not(.ui-state-disabled) {
@@ -29038,11 +29049,6 @@ img.wizard-summary_separator {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   background-color: var(--card-image-bg-color);
-  overflow: hidden; }
-
-.card-static_image img {
-  height: 100%;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover; }
 
@@ -29081,7 +29087,7 @@ img.wizard-summary_separator {
 
 .card-static_amount {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 900;
   color: var(--brand-primary);
   margin: 0; }
@@ -29101,19 +29107,28 @@ img.wizard-summary_separator {
     max-width: 300px; }
 
 .card-static_discount {
-  display: inline-block;
-  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
-  margin: 0; }
+  margin: 0;
+  line-height: 1; }
 
 .card-static_discount-badge {
-  display: inline-block;
   width: auto;
   float: right; }
 
 .card-static_original-price {
-  font-size: 14px;
   color: #999;
+  font-size: 1.2em;
+  font-weight: bolder;
   text-decoration: line-through; }
 
 .card-static_body {
@@ -29129,23 +29144,49 @@ img.wizard-summary_separator {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: 110px;
+  height: 130px;
   padding: 10px 20px 20px 20px;
   background-color: var(--card-body-bg-color); }
 
 .card-static_product-name {
+  width: 280px;
   color: var(--card-product-name-color);
   font-weight: 800;
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
 
 .card-static_product-short-description {
-  color: var(--gray-500);
+  width: 280px;
+  color: #999;
   font-weight: 400;
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.mybooking-card_info-button {
+  color: var(--brand-primary);
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  padding-top: 1rem; }
+
+.mybooking-card_info-button:hover {
+  text-decoration: none !important;
+  color: #999; }
 
 .card-static_low-availability {
-  font-size: 0.8rem;
-  color: red; }
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  padding: 3px 10px;
+  border-radius: 0 15px 15px 0;
+  background-color: var(--error);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold; }
 
 .card-static_price_supplement_supplement_1 {
   margin-top: -5px; }
@@ -29207,10 +29248,16 @@ img.wizard-summary_separator {
   height: 1rem; }
 
 /* This class is for plugin compatibility! */
-.card-static_not-available {
-  font-size: 12px;
+.mybooking-card_product-availability-msg {
+  width: 100%;
+  padding: .7rem .85rem;
+  background-color: transparent;
+  border-radius: 50px;
+  border-color: transparent;
+  font-size: 14px;
+  line-height: 1.1rem;
   text-align: center;
-  color: red; }
+  color: var(--error); }
 
 .card-static_btn {
   width: 100%; }
@@ -29221,6 +29268,8 @@ img.wizard-summary_separator {
     border-radius: 50px;
     background-color: var(--brand-primary);
     border-color: var(--brand-primary);
+    font-size: 1.1rem;
+    font-weight: bold;
     color: white !important; }
     .card-static_btn .btn-choose-product:hover {
       background-color: var(--brand-primary-dark);
@@ -30714,6 +30763,48 @@ button.mybooking-popup_close {
 
 .activity-content__widget .ui-datepicker {
   min-width: 400px; }
+
+.mybooking-modal .modal-dialog {
+  max-width: 700px !important; }
+
+.mybooking-modal .modal-content {
+  border-radius: 8px; }
+
+.mybooking-modal_image-container,
+.mybooking-modal_info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.mybooking-modal_info-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2rem; }
+
+@media (min-width: 575.98px) {
+  .mybooking-modal_info-container {
+    padding-bottom: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; } }
+
+.mybooking-modal_product-description {
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 1.1em;
+  font-weight: bold; }
+
+.mybooking-modal_product-short-description ul {
+  padding-left: 1.2rem; }
 
 .full-height {
   height: 100%; }

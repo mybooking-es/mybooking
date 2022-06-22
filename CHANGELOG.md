@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.19] 2022-06-21
+
+### Fixed
+- Truncated wizard place text
+
+## Added
+- Logo or site title on wizard container
+- Margin and layout arrangements to wizard container
+
+
 ## [1.0.18] 2022-06-16
 
 ### Fixed

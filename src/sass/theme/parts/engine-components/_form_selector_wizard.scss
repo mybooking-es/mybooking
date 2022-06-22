@@ -52,6 +52,7 @@
 
 .mybooking-wizard_body {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   height: 95vh;
@@ -76,14 +77,10 @@
 
 
 .wizard-close {
-  position: fixed;
+  position: absolute;
   right: 2rem !important;
-  top: 5rem !important;
+  top: 2rem !important;
   cursor: pointer;
-} @media ( min-width: 991.98px ) {
-  .wizard-close {
-    right: 5rem !important;
-  }
 }
 
 .wizard-close:hover {
@@ -96,7 +93,7 @@
 
 .wizard-step_title {
   padding-bottom: 1rem;
-  font-size: 28px;
+  font-size: 2em;
   font-weight: 700;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -222,17 +219,17 @@ img.wizard-summary_separator {
   width: 100%;
   margin: 5px 0;
   padding: 0.3rem 0.9rem;
-  border: 1px solid #ccc;
-  background-color: white;
-  color: var(--font-heading-color);
+  border: 1px solid var(--brand-primary);
+  border-radius: 5px;
+  background-color: var(--brand-primary);
+  color: white;
   font-size: 1em;
   font-weight: bolder;
 }
 
 .wizard-time_btn:hover {
-  color: #FFF;
-  background-color: var(--brand-primary);
-  border-color: var(--brand-primary-dark);
+  color: var(--brand-primary);
+  background-color: white;
 }
 
 /* Hides scrollbars on wizard's choose time step */
@@ -251,45 +248,57 @@ img.wizard-summary_separator {
 
 // WIZARD CALENDAR
 
-.wizard-date_calendar .ui-widget-content {
-  background: transparent !important;
+.wizard-date_calendar {
+  display: flex;
+  justify-content: center;
 }
 
-@media ( min-width: 991.98px ) {
-.wizard-date_calendar .ui-datepicker td .ui-state-default {
-    border: 0;
-    background: 0 0;
-    margin-bottom: 0;
-    padding: 1rem;
-    color: gray;
-    text-align: center;
-    -webkit-filter: none;
-    filter: none;
-	}
+.wizard-date_calendar .ui-datepicker {
+  max-width: 500px;
+  padding: 1rem;
+  border: 1px solid #ccc!important;
 }
 
-@media ( min-width: 1600px ) {
 .wizard-date_calendar .ui-datepicker td .ui-state-default {
-    border: 0;
-    background: 0 0;
-    margin-bottom: 0;
-    padding: 2rem;
-    color: gray;
-    text-align: center;
-    -webkit-filter: none;
-    filter: none;
+  border: 0;
+  background: 0 0;
+  margin-bottom: 0;
+  padding: .5rem!important;
+  border-radius: 50px;
+  font-size: 1.5em!important;
+  font-weight: bold;
+  color: var(--success);
+  text-align: center;
+  -webkit-filter: none;
+  filter: none;
+}
+
+.wizard-date_calendar .ui-datepicker td .ui-state-active {
+  background-color: var(--success);
+  color: white;
+}
+
+.wizard-date_calendar .ui-datepicker td.ui-state-disabled .ui-state-default {
+  color: var(--brand-secondary-light)!important;
+  opacity: 1!important;
+}
+
+@media ( min-width: 575.98px ) {
+.wizard-date_calendar .ui-datepicker td .ui-state-default {
+    font-size: 2em!important;
+    padding: 1rem!important;
 	}
 }
 
 .wizard-date_calendar .ui-datepicker td .ui-state-default:hover {
 		background-color: var(--brand-primary);
     color: #FFF;
-	border-radius: 4px;
+	  border-radius: 50px;
 }
 
 .wizard-date_calendar .ui-datepicker td.ui-state-disabled  .ui-state-default:hover {
 		background-color: var(--brand-secondary-light);
-    color: #FFF;
+    color: #FFF!important;
 }
 
 .wizard-date_calendar .ui-datepicker .ui-datepicker-prev:not(.ui-state-disabled),

@@ -82,7 +82,6 @@
             <% if (product.photo_url) { %>
               <img class="card-img-top js-product-info-btn" src="<%=product.photo_url%>" alt="<%=product.name%>" data-product="<%=product.id%>">
             <% } %>
-            <i type="button" class="card-static_info-button fa fa-info-circle js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>"></i>
           </div>
 
           <div class="card-static_header">
@@ -94,9 +93,13 @@
           </div>
 
           <div class="card-static_body">
-            <h2 class="card-static_product-name" style="margin-bottom: 2rem;"><%=product.name%></h2>
-            <button class="btn btn-primary btn-choose-product" data-product="<%=product.id%>"><?php echo esc_html_x( 'Book it!', 'transfer_choose_vehicle', 'mybooking') ?></button>
-            <!-- Context was transfer_choose_vehicle -->
+            <h2 class="card-static_product-name" style="margin-bottom: 2rem;">
+              <%=product.name%>
+            </h2>
+
+            <div class="card-static_btn">
+              <button class="btn btn-primary btn-choose-product" data-product="<%=product.id%>"><?php echo esc_html_x( 'Book it!', 'transfer_choose_vehicle', 'mybooking') ?></button>
+            </div>
           </div>
         </div>
       </div>

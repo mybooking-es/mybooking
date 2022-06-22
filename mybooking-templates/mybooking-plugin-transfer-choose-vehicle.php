@@ -23,7 +23,7 @@
 </section>
 
 <!-- Modal that shows the product detail -->
-<div class="modal modal-mybooking" tabindex="-1" role="dialog" id="modalTransferProductDetail">
+<div class="modal mybooking-modal" tabindex="-1" role="dialog" id="modalTransferProductDetail">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">

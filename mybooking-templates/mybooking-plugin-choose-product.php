@@ -1,5 +1,5 @@
 <?php
-  /** 
+  /**
    * The Template for showing the renting select product step
    *
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-choose-product.php
@@ -18,8 +18,8 @@
 
 </div>
 
-<div class="modal modal-mybooking" tabindex="-1" role="dialog" id="modalProductDetail">
-  <div class="modal-dialog" role="document">
+<div class="modal mybooking-modal" tabindex="-1" role="dialog" id="modalProductDetail">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title modal-product-detail-title"></h5>
