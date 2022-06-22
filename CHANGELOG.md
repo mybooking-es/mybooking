@@ -1,5 +1,6 @@
 # Changelog
 
+<<<<<<< HEAD
 ## [1.0.19] 2022-06-21
 
 ### Fixed
@@ -11,11 +12,12 @@
 
 
 ## [1.0.18] 2022-06-16
+=======
+## [1.0.17] 2022-06-16
+>>>>>>> 640e99146fa90918a1698c393259b49b0692f701
 
 ### Fixed
 - Product catalog cards layout and styles
-
-## [1.0.17] 2022-06-01
 
 ### Added
 - Renting my reservation : Sign contract
