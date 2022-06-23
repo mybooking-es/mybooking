@@ -1,20 +1,24 @@
 # Changelog
 
-<<<<<<< HEAD
 ## [1.0.19] 2022-06-21
 
 ### Fixed
-- Truncated wizard place text
+- Card prices size
+- Card info button and modal position
+- Enhanced layout for cards info modal
+- Card image shrinking
+- Card titles end short description overflow
 
 ## Added
 - Logo or site title on wizard container
 - Margin and layout arrangements to wizard container
 
-
 ## [1.0.18] 2022-06-16
-=======
+
+### Fixed
+- Truncated wizard place text
+
 ## [1.0.17] 2022-06-16
->>>>>>> 640e99146fa90918a1698c393259b49b0692f701
 
 ### Fixed
 - Product catalog cards layout and styles
