@@ -1,5 +1,5 @@
 <?php
-  /** 
+  /**
    * The Template for showing the renting complete step
    *
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-complete.php
@@ -84,15 +84,15 @@
               <div id="payment_detail"></div>
             </form>
           </div>
-        </div>  
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Show extra detail modal -->
-<div class="modal modal-mybooking" tabindex="-1" role="dialog" id="modalExtraDetail">
-  <div class="modal-dialog" role="document">
+<div class="modal mybooking-modal" tabindex="-1" role="dialog" id="modalExtraDetail">
+  <div class="modal-dialog  modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title modal-extra-detail-title"></h5>

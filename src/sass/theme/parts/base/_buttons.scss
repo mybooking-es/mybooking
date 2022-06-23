@@ -4,9 +4,10 @@
 // Overwriting bootstrap styles
 .btn-primary,
 .btn-primary:not(:disabled):not(.disabled):active {
+  padding: var(--btn-padding);
   background-color: var(--btn-bg-color);
   border-color: var(--btn-border-color);
-  letter-spacing: 1px;
+  letter-spacing: var(--btn-text-spacing);
   font-weight: var(--btn-font-w);
   text-transform: var(--btn-text-transform);
   &:hover {
@@ -16,7 +17,7 @@
 }
 .btn {
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: var(--btn-border-radius);
 }
 button,
 [type="button"] {
@@ -25,7 +26,15 @@ button,
 }
 
 .btn-outline-dark {
-  letter-spacing: 1px;
-  font-weight: 600;
-  text-transform: uppercase;
+  color: var(--brand-primary)!important;
+  border: 2px solid var(--btn-border-color);
+  padding: var(--btn-padding);
+  letter-spacing: var(--btn-text-spacing);
+  font-weight: var(--btn-font-w);
+  text-transform: var(--btn-text-transform);
+  &:hover {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: var(--btn-color-hover)!important;
+  }
 }

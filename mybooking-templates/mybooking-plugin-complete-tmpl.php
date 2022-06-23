@@ -1,12 +1,12 @@
 <?php
-  /** 
+  /**
    * The Template for showing the renting complete step - JS microtemplates
    *
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-complete-tmpl.php
    *
-   * @phpcs:disable PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   * @phpcs:disable PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound
    * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPOpenTagFound
-   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPShortOpenTagFound   
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPShortOpenTagFound
    */
 ?>
 
@@ -37,7 +37,7 @@
           <label for="mybooking_login_password"><?php echo esc_html_x( "Password", 'login', 'mybooking') ?></label>
           <input type="password" name="password" class="form-control" id="mybooking_login_password" placeholder="<?php echo esc_html_x( "Password", 'login', 'mybooking') ?>">
       </div>
-      <button type="submit" class="btn btn-primary"><?php echo esc_html_x( "Login", 'login', 'mybooking') ?></button>      
+      <button type="submit" class="btn btn-primary"><?php echo esc_html_x( "Login", 'login', 'mybooking') ?></button>
     </form>
     <hr class="mybooking_login_form_element">
   </div>
@@ -63,7 +63,7 @@
         <label class="form-check-label" for="unregistered_customer">
           <?php echo esc_html_x( "Only book a reservation", 'renting_complete_create_account', 'mybooking') ?>
         </label>
-      </div>    
+      </div>
   </div>
   <div class="form-group mybooking_rent_create_account_fields_container">
       <div class="form-group">
@@ -71,7 +71,7 @@
           <input type="password" class="form-control" name="account_password" id="account_password"  autocomplete="off" placeholder="<?php echo esc_attr_x( 'Password', 'renting_complete_create_account', 'mybooking') ?>:" maxlength="20">
           <small class="form-text text-muted"><?php echo esc_html_x( "Password must contain upper case letter, lower case letter, digit and symbol (@ ! * - _)", 'renting_complete_create_account', 'mybooking') ?></small>
       </div>
-  </div>  
+  </div>
 
 </script>
 
@@ -225,7 +225,7 @@
             <span><%=shopping_cart.date_from_short_format%>
             <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
               <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%>
-            <% } %>  
+            <% } %>
             </span>
           </div>
         </div>
@@ -241,34 +241,35 @@
               <span><%=shopping_cart.renting_duration_literal%>
                   <% if (!shopping_cart.renting_duration_literal) { %>
                     <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                      ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
+                      ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
                     <% } %>
-                  <% } %>  
+                  <% } %>
               </span>
             <% } else { %>
-              <span><%=shopping_cart.date_to_short_format%> 
+              <span><%=shopping_cart.date_to_short_format%>
               <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
             <% } %>
           </div>
         </div>
-          <!-- Row for price & buttons  -->
+          <!-- // Row for price & buttons  -->
           <div class="complete-summary-row">
             <div class="complete-summary-price-wrapper">
               <div class="complete-summary-total-title">
                 <?php echo esc_html_x( "Total", 'renting_complete', 'mybooking' ) ?></div>
-              <div class="complete-summary-total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
+              <div class="complete-summary-total-price">
+                <%=configuration.formatCurrency(shopping_cart.total_cost)%>
               </div>
+              <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
+                <span class="dashicons dashicons-plus-alt mr-2" style="display: inline-block;"></span> <?php echo esc_html_x( 'Info', 'renting_complete', 'mybooking' ) ?>
+              </button>
             </div>
             <div class="complete-buttons-wrapper">
-              <% if (shopping_cart.engine_modify_dates) { %>              
+              <% if (shopping_cart.engine_modify_dates) { %>
                 <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
                   class="complete-button"><i class="fas fa-pen mr-2"></i>
                   <?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
                 </button>
               <% } %>
-              <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
-                <i class="fas fa-info-circle mr-2"></i><?php echo esc_html_x( 'Info', 'renting_complete', 'mybooking' ) ?>
-              </button>
             </div>
           </div>
         </div>
@@ -284,10 +285,10 @@
         <% } %>
         <div class="reservation-summary_pickup_date">
           <span><%=shopping_cart.date_from_short_format%>
-          <% if (configuration.rentDateSelector === 'date_from_date_to') { %>  
+          <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
             <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%>
           <% } %>
-          </span>  
+          </span>
         </div>
         <div class="separator"></div>
         <div class="reservation-summary_return_place d-none d-md-flex">
@@ -300,33 +301,35 @@
               <span><%=shopping_cart.renting_duration_literal%>
                     <% if (!shopping_cart.renting_duration_literal) { %>
                       <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
+                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
                       <% } %>
-                    <% } %>  
+                    <% } %>
               </span>
           <% } else { %>
             <span><%=shopping_cart.date_to_short_format%>
             <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
-          <% } %>  
+          <% } %>
         </div>
-          <!-- Row for price & buttons -->
+          <!-- // Row for price & buttons -->
           <div class="complete-summary-row">
             <div class="complete-summary-price-wrapper">
               <div class="complete-summary-total-title">
                 <?php echo esc_html_x( "Total", 'renting_complete', 'mybooking' ) ?></div>
-              <div class="complete-summary-total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%>
+              <div class="complete-summary-total-price">
+                <%=configuration.formatCurrency(shopping_cart.total_cost)%>
               </div>
+              <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
+                <span class="dashicons dashicons-plus-alt"></span><?php echo esc_html_x('Info', 'renting_complete', 'mybooking') ?>
+              </button>
             </div>
 
             <div class="complete-buttons-wrapper">
               <% if (shopping_cart.engine_modify_dates) { %>
                 <button id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"
-                  class="complete-button"><?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
+                  class="complete-button">
+                  <i class="fas fa-pen mr-2"></i><?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
                 </button>
               <% } %>
-              <button data-toggle="modal" data-target="#viewReservationModal" class="complete-button">
-                <i class="fas fa-info-circle mr-2"></i><?php echo esc_html_x('Info', 'renting_complete', 'mybooking') ?>
-              </button>
             </div>
           </div>
       </div>
@@ -334,6 +337,7 @@
     <% } %>
   </div>
 </script>
+
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="product-detail-bg-color">
@@ -346,21 +350,21 @@
                   <% if (configuration.timeToFrom) { %><%=shopping_cart.time_from%><%}%></li>
                 <li><%=shopping_cart.pickup_place_customer_translation%></li>
               </ul>
-            </div>  
+            </div>
             <% if (configuration.rentDateSelector === 'date_from_duration') { %>
               <div>
                 <h5 class=""><?php echo esc_html_x('Duration', 'renting_complete', 'mybooking') ?></h5>
                 <ul>
                   <li><%=shopping_cart.renting_duration_literal%>
                     <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
+                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
                       <% } %>
                   </li>
                   <% if (configuration.pickupReturnPlace) { %>
                     <li><%=shopping_cart.return_place_customer_translation%></li>
-                  <% } %>  
+                  <% } %>
                 </ul>
-              </div>  
+              </div>
             <% } else { %>
               <div>
                 <h5 class=""><?php echo esc_html_x('Collection', 'renting_complete', 'mybooking') ?></h5>
@@ -370,10 +374,10 @@
                   </li>
                   <% if (configuration.pickupReturnPlace) { %>
                     <li><%=shopping_cart.return_place_customer_translation%></li>
-                  <% } %>  
+                  <% } %>
                 </ul>
-              </div>  
-            <% } %>  
+              </div>
+            <% } %>
           <div class="table-responsive mt-5">
             <table class="table product-detail-table table-borderless">
                 <thead>
@@ -395,7 +399,7 @@
                       <td class="text-center text-md-left"><img class="img-fluid" style="max-width: 120px"
                           src="<%=shopping_cart.items[idx].photo_medium%>" alt="">
                       </td>
-                      <td data-label="<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>" 
+                      <td data-label="<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>"
                         class="align-middle">
                         <%=shopping_cart.items[idx].item_description_customer_translation%>
                       </td>
@@ -411,12 +415,12 @@
                         <%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%>
                       </td>
                     </tr>
-                  <% } %>  
+                  <% } %>
                 </tbody>
             </table>
           </div>
         </div>
-      <% } else { %>  
+      <% } else { %>
         <div class="product-detail-container">
           <div class="product-detail-content">
             <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
@@ -435,10 +439,10 @@
                   <ul>
                     <li><%=shopping_cart.renting_duration_literal%>
                       <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
+                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
                       <% } %>
                     </li>
-                  </ul>  
+                  </ul>
                 <% } else { %>
                   <h5 class="mt-3"><?php echo esc_html_x('Collection', 'renting_complete', 'mybooking') ?></h5>
                   <ul>
@@ -454,17 +458,17 @@
                   <p class="detail-text"><span><%=shopping_cart.hours%>
                       <?php echo esc_html_x( 'hour(s)', 'renting_complete', 'mybooking' ) ?></span></p>
                   <% } %>
-                <% } %>  
+                <% } %>
             <% } %>
-          </div>  
+          </div>
         <div class="product-detail-image">
           <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
             <img class="img-fluid" src="<%=shopping_cart.items[idx].photo_full%>" alt="">
           <% } %>
         </div>
-      </div>    
+      </div>
       <% } %>
-  </div>  
+  </div>
 
   <div class="modal fade" id="viewReservationModal" tabindex="-1" role="dialog"
     aria-labelledby="viewModal"
@@ -497,17 +501,17 @@
               <% if (configuration.rentDateSelector === 'date_from_duration') { %>
                 <%=shopping_cart.renting_duration_literal%>
                 <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                  ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> ) 
+                  ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
                 <% } %>
               <% } else { %>
                 <%=shopping_cart.date_to_full_format%>
                 <% if (configuration.timeToFrom) { %>
                   <%=shopping_cart.time_to%>
                 <% } %>
-              <% } %>  
+              <% } %>
             </div>
           </div>
-          <!-- Duration -->
+          <!-- // Duration -->
           <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
             <div class="rent-duration p-3">
               <p class="mb-0">
@@ -519,7 +523,7 @@
                 <?php echo esc_html_x('hour(s)', 'renting_complete', 'mybooking') ?></p>
               <%} %>
             </div>
-          <% } %>      
+          <% } %>
           <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
             <div class="product-view">
               <div class="product-view_image d-none d-sm-block">
@@ -531,20 +535,20 @@
                   <p class="fw-300 text-muted"><small><%=shopping_cart.items[idx].highlight_message%></small></p>
                 <% } %>
               </div>
-              <!-- Quantity -->
+              <!-- // Quantity -->
               <% if (configuration.multipleProductsSelection) { %>
               <span class="badge badge-info"><%=shopping_cart.items[idx].quantity%></span>
               <% } %>
-              <!-- Price -->
+              <!-- // Price -->
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%></span>
             </div>
           <% } %>
 
-          <!-- Deposit -->
+          <!-- // Deposit -->
           <% if ( shopping_cart.product_guarantee_cost > 0 || shopping_cart.product_deposit_cost > 0 || 
-                 (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0) || 
+                 (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0) ||
                  shopping_cart.total_deposit > 0) { %>
-            <div class="deposit-view">     
+            <div class="deposit-view">
               <ul class="list-group deposit-view_list">
               <% if (shopping_cart.product_guarantee_cost > 0) { %>
                 <li class="list-group-item">
@@ -552,7 +556,7 @@
                     class="deposit-name"><?php echo esc_html_x( "Guarantee", 'renting_complete', 'mybooking' ) ?></span>
                   <span
                     class="deposit-price"><%=configuration.formatCurrency(shopping_cart.product_guarantee_cost)%></span>
-                </li>            
+                </li>
               <% } %>
               <% if (shopping_cart.product_deposit_cost > 0) { %>
                 <li class="list-group-item">
@@ -563,7 +567,7 @@
                   </span>
                   <span
                     class="deposit-price"><%=configuration.formatCurrency(shopping_cart.product_deposit_cost)%></span>
-                </li>             
+                </li>
               <% } %>
               <% if (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0) { %>
                 <li class="list-group-item">
@@ -571,7 +575,7 @@
                     class="deposit-name"><?php echo esc_html_x( "Driver age deposit", 'renting_complete', 'mybooking' ) ?></span>
                   <span
                     class="deposit-price"><%=configuration.formatCurrency(shopping_cart.driver_age_deposit)%></span>
-                </li>               
+                </li>
               <% } %>
               <% if (shopping_cart.total_deposit > 0 && shopping_cart.number_of_deposits > 1) { %>
                 <li class="list-group-item">
@@ -579,14 +583,14 @@
                     class="deposit-name"><?php echo esc_html_x( "Total deposit", 'renting_complete', 'mybooking' ) ?></span>
                   <span
                     class="deposit-price"><%=configuration.formatCurrency(shopping_cart.total_deposit)%></span>
-                </li>                
+                </li>
               <% } %>
               </ul>
             </div>
-          <% } %>  
+          <% } %>
 
           <ul class="list-group  summary-modal_list">
-            <!-- Products -->
+            <!-- // Products -->
             <% for (var idx=0;idx<shopping_cart.items.length;idx++) { %>
               <!-- Offer/Promotion Code Appliance -->
               <% if (shopping_cart.items[idx].item_unit_cost_base != shopping_cart.items[idx].item_unit_cost) { %>
@@ -601,7 +605,7 @@
                         <span class="text-danger"><%=parseInt(shopping_cart.items[idx].offer_value)%>&#37;</span>
                       <% } %>
                     <% } %>
-                    <!-- Promotion Code -->
+                    <!-- // Promotion Code -->
                     <% if (typeof shopping_cart.promotion_code !== 'undefined' && shopping_cart.promotion_code !== '' &&
                           typeof shopping_cart.items[idx].promotion_code_value !== 'undefined' && shopping_cart.items.promotion_code_value !== '' &&
                           shopping_cart.items[idx].promotion_code_value !== '0.0') { %>
@@ -617,17 +621,17 @@
                 </li>
               <% } %>
             <% } %>
-            <!-- Extras -->
+            <!-- // Extras -->
             <% if (shopping_cart.extras.length > 0) { %>
-            <% for (var idx=0; idx<shopping_cart.extras.length; idx++) { %>
-            <li class="list-group-item">
-              <span class="extra-name"><%=shopping_cart.extras[idx].extra_description_customer_translation%></span>
-              <span class="badge badge-primary badge-pill"><%=shopping_cart.extras[idx].quantity%></span>
-              <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
-            </li>
+              <% for (var idx=0; idx<shopping_cart.extras.length; idx++) { %>
+                <li class="list-group-item">
+                  <span class="extra-name"><%=shopping_cart.extras[idx].extra_description_customer_translation%></span>
+                  <span class="badge badge-primary badge-pill"><%=shopping_cart.extras[idx].quantity%></span>
+                  <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
+                </li>
+              <% } %>
             <% } %>
-            <% } %>
-            <!-- Supplements -->
+            <!-- // Supplements -->
             <% if (shopping_cart.time_from_cost > 0) { %>
             <li class="list-group-item">
               <span
@@ -674,7 +678,7 @@
           </ul>
         </div>
         <div class="modal-footer summary-modal_footer">
-          <! -- TOTAL -->
+          <!-- // TOTAL -->
             <span
               class="extra-name fw-700"><?php echo esc_html_x( "Total", 'renting_complete', 'mybooking' ) ?></span>
             <span class="fw-900 brand-primary"><%=configuration.formatCurrency(shopping_cart.total_cost)%></span>
@@ -692,16 +696,15 @@
     <hr>
     <h4 class="reservation-process_title customer_component"><?php echo esc_html_x( 'Promotion code', 'renting_complete', 'mybooking' ) ?></h4>
     <div class="form-row">
-      <div class="form-group col-md-12">
+      <div class="form-group col-md-10">
         <input type="text" class="form-control" size="20" maxlength="30"
                id="promotion_code" placeholder="<?php echo esc_attr_x( 'Promotion code', 'renting_complete', 'mybooking' ) ?>"
                <%if (shopping_cart.promotion_code){%>value="<%=shopping_cart.promotion_code%>" disabled<%}%>>
       </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <button type="button" class="btn btn-primary mb-2" id="apply_promotion_code_btn"
-                 <%if (shopping_cart.promotion_code){%>disabled<%}%>><?php echo esc_html_x( 'Apply', 'renting_complete', 'mybooking' ) ?></button>
+      <div class="form-group col-md-2">
+        <a role="button" class="btn btn-outline-dark mb-2" id="apply_promotion_code_btn"
+          <%if (shopping_cart.promotion_code){%>disabled<%}%>><?php echo esc_html_x( 'Apply', 'renting_complete', 'mybooking' ) ?>
+        </a>
       </div>
     </div>
   <% } %>
@@ -729,7 +732,7 @@
       }
   %>
 
-    <!-- Payment -->
+    <!-- // Payment -->
 
     <% if (sales_process.can_pay) { %>
       <% if (sales_process.payment_methods.paypal_standard && sales_process.payment_methods.tpv_virtual) { %>
@@ -746,7 +749,7 @@
       <input type="hidden" name="payment" value="none">
     <% } %>
 
-    <!-- More than one option : request / pay on delivery / pay -->
+    <!-- // More than one option : request / pay on delivery / pay -->
 
     <% if (selectionOptions > 1) { %>
       <hr>
@@ -778,7 +781,7 @@
       </div>
     <% } %>
 
-    <!-- Request reservation -->
+    <!-- // Request reservation -->
 
     <% if (sales_process.can_request) { %>
       <div id="request_reservation_container" <% if (selectionOptions > 1 || !sales_process.can_request) { %>style="display:none"<%}%>>
@@ -800,7 +803,7 @@
 
             <div class="form-row">
               <div class="form-group col-md-12">
-                <button type="submit" class="btn btn-outline-dark">
+                <button type="submit" class="btn btn-primary">
                   <?php echo esc_html_x( 'Request reservation', 'renting_complete', 'mybooking' ) ?>
                 </button>
               </div>
@@ -884,12 +887,12 @@
                     </div>
                     <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>"/>
                     <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png') ?>"/>
-                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png') ?>"/>                     
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png') ?>"/>
                 <% } else if (sales_process.payment_methods.tpv_virtual) { %>
                     <div class="alert alert-secondary" role="alert">
                       <?php echo wp_kses_post( _x( 'You will be redirected to the <b>credit card payment platform</b> to make the confirmation payment securely.' ,
                         'renting_complete', 'mybooking' )  )?>
-                    </div>                
+                    </div>
                     <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
                     <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>
                 <% } %>

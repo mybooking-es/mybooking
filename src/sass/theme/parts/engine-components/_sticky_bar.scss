@@ -230,15 +230,19 @@
   font-size: 1rem;
   line-height: 0.8;
 }
+
 .complete-summary-total-title {
   display: none;
 }
+
 .complete-summary-total-price {
   color: var(--sticky-bar-price-color);
 }
+
 .complete-buttons-wrapper {
   display: flex;
 }
+
 .complete-button {
   height: 50px;
   display: flex;
@@ -250,11 +254,15 @@
   text-transform: uppercase;
   background-color: transparent;
   color: var(--sticky-bar-link-color);
-  border-left: 1px solid var(--gray-500);
   &:hover {
     color: var(--sticky-bar-link-color-hover);
   }
 }
+
+.complete-button .dashicons {
+  margin-right: 5px!important;
+}
+
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
@@ -265,7 +273,7 @@
   }
   .complete-summary-total-title {
     display: flex;
-    color: var(--gray-500);
+    color: var(--success);
     font-weight: 700;
     text-align: left;
     text-transform: uppercase;

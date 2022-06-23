@@ -25349,14 +25349,17 @@ these properties do not need to be edited */
   --selector-sticky-labels-color: var(--white);
   --modal-selector-label-color: var(--body-color);
   --modal-selector-bg: var(--gray-200);
+  --btn-padding: .4rem 1.5rem;
   --btn-bg-color: var(--brand-primary);
   --btn-bg-color-hover: var(--brand-primary-dark);
   --btn-border-color: var(--brand-primary);
   --btn-border-color-hover: var(--brand-primary-dark);
+  --btn-border-radius: 50px;
   --btn-color: var(--white);
   --btn-color-hover: var(--white);
-  --btn-font-w: 600;
+  --btn-font-w: 700;
   --btn-text-transform: uppercase;
+  --btn-text-spacing: 1px;
   --steps-wrapper-bg-color: var(--gray-100);
   --step-title-color: var(--brand-primary-dark);
   --step-circle-text-color: var(--gray-700);
@@ -25384,7 +25387,7 @@ these properties do not need to be edited */
   --sticky-bar-icons-color-hover: var(--brand-primary-light);
   --sticky-bar-color: var(--white);
   --sticky-bar-arrow-icon-color: var(--gray-400);
-  --sticky-bar-price-color: var(--white);
+  --sticky-bar-price-color: var(--success);
   --sticky-bar-link-color: var(--white);
   --sticky-bar-link-color-hover: var(--brand-primary-light);
   --card-image-bg-color: var(--white);
@@ -25569,9 +25572,10 @@ blockquote {
 
 .btn-primary,
 .btn-primary:not(:disabled):not(.disabled):active {
+  padding: var(--btn-padding);
   background-color: var(--btn-bg-color);
   border-color: var(--btn-border-color);
-  letter-spacing: 1px;
+  letter-spacing: var(--btn-text-spacing);
   font-weight: var(--btn-font-w);
   text-transform: var(--btn-text-transform); }
   .btn-primary:hover,
@@ -25581,7 +25585,7 @@ blockquote {
 
 .btn {
   cursor: pointer;
-  border-radius: 3px; }
+  border-radius: var(--btn-border-radius); }
 
 button,
 [type="button"] {
@@ -25589,9 +25593,16 @@ button,
   border: none; }
 
 .btn-outline-dark {
-  letter-spacing: 1px;
-  font-weight: 600;
-  text-transform: uppercase; }
+  color: var(--brand-primary) !important;
+  border: 2px solid var(--btn-border-color);
+  padding: var(--btn-padding);
+  letter-spacing: var(--btn-text-spacing);
+  font-weight: var(--btn-font-w);
+  text-transform: var(--btn-text-transform); }
+  .btn-outline-dark:hover {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: var(--btn-color-hover) !important; }
 
 /*
 *  VENDOR FORMS
@@ -29057,12 +29068,12 @@ img.wizard-summary_separator {
   color: white;
   font-weight: 700;
   letter-spacing: 1px;
-  background-color: var(--brand-primary);
+  background-color: var(--brand-secondary);
   text-align: center;
   padding: 13px;
   position: absolute;
   left: 0;
-  top: 265px;
+  top: 230px;
   width: 100%; }
 
 .card-static_header, .card-static_header-catalog {
@@ -30258,10 +30269,12 @@ a.magic-button.btn {
   font-weight: 300;
   text-transform: uppercase;
   background-color: transparent;
-  color: var(--sticky-bar-link-color);
-  border-left: 1px solid var(--gray-500); }
+  color: var(--sticky-bar-link-color); }
   .complete-button:hover {
     color: var(--sticky-bar-link-color-hover); }
+
+.complete-button .dashicons {
+  margin-right: 5px !important; }
 
 @media (min-width: 768px) {
   .complete-sticky .sandwitch-wrapper {
@@ -30270,7 +30283,7 @@ a.magic-button.btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    color: var(--gray-500);
+    color: var(--success);
     font-weight: 700;
     text-align: left;
     text-transform: uppercase;

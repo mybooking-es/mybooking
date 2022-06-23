@@ -141,14 +141,17 @@ these properties do not need to be edited */
   --modal-selector-label-color: var(--body-color);
   --modal-selector-bg: var(--gray-200);
   // Buttons
+  --btn-padding: .4rem 1.5rem;
   --btn-bg-color: var(--brand-primary);
   --btn-bg-color-hover: var(--brand-primary-dark);
   --btn-border-color: var(--brand-primary);
   --btn-border-color-hover: var(--brand-primary-dark);
+  --btn-border-radius: 50px;
   --btn-color: var(--white);
   --btn-color-hover: var(--white);
-  --btn-font-w: 600;
+  --btn-font-w: 700;
   --btn-text-transform: uppercase;
+  --btn-text-spacing: 1px;
   // Steps
   --steps-wrapper-bg-color: var(--gray-100);
   --step-title-color: var(--brand-primary-dark);
@@ -180,7 +183,7 @@ these properties do not need to be edited */
   --sticky-bar-icons-color-hover: var(--brand-primary-light);
   --sticky-bar-color: var(--white);
   --sticky-bar-arrow-icon-color: var(--gray-400);
-  --sticky-bar-price-color: var(--white);
+  --sticky-bar-price-color: var(--success);
   --sticky-bar-link-color: var(--white);
   --sticky-bar-link-color-hover: var(--brand-primary-light);
   // Card static
