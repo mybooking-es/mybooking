@@ -3,6 +3,7 @@
 ## [1.0.19] 2022-06-21
 
 ### Fixed
+- Renting : Additional drivers
 - Card prices size
 - Card info button and modal position
 - Enhanced layout for cards info modal

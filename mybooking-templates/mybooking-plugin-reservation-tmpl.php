@@ -540,8 +540,8 @@
             <input type="hidden" name="driver_date_of_birth" id="driver_date_of_birth"></input>
           </div>
         </div>
-        <% if (configuration.renting_form_fill_data_additional_driver_1 || 
-               configuration.renting_form_fill_data_additional_driver_2) { %>
+        <% if (configuration.rentingFormFillDataAdditionalDriver1 || 
+               configuration.rentingFormFillDataAdditionalDriver2) { %>
           <!-- Additional drivers -->
           <h4 class="my-3"><?php echo esc_html_x('Additional drivers', 'renting_my_reservation', 'mybooking') ?></h4>
           <div class="form-row">
@@ -598,7 +598,7 @@
               
             </div>
           </div>
-          <% if (configuration.renting_form_fill_data_additional_driver_2) { %>
+          <% if (configuration.rentingFormFillDataAdditionalDriver2) { %>
             <!-- Additional driver 2 -->
             <hr>
             <div class="form-row">
