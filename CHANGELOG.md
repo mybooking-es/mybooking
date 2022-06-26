@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.19] 2022-06-21
+## [1.1.0] 2022-06-26
 
 ### Fixed
 - Renting : Additional drivers
@@ -9,22 +9,12 @@
 - Enhanced layout for cards info modal
 - Card image shrinking
 - Card titles end short description overflow
+- Truncated wizard place text
+- Product catalog cards layout and styles
 
 ## Added
 - Logo or site title on wizard container
 - Margin and layout arrangements to wizard container
-
-## [1.0.18] 2022-06-16
-
-### Fixed
-- Truncated wizard place text
-
-## [1.0.17] 2022-06-16
-
-### Fixed
-- Product catalog cards layout and styles
-
-### Added
 - Renting my reservation : Sign contract
 - Renting my reservation : Additional drivers
 
