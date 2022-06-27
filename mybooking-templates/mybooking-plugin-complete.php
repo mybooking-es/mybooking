@@ -72,7 +72,26 @@
                     placeholder="<?php echo esc_attr_x( 'Alternative phone number', 'renting_complete', 'mybooking') ?>" maxlength="15">
                 </div>
               </div>
+
               <h4 class="brand-primary my-3"><?php echo esc_html_x( "Additional information", 'renting_complete', 'mybooking') ?></h4>
+
+              <div class="form-row js-mb-delivery-slot-skipper-container" style="display: none">
+                <div class="form-group col-md-6 js-mb-delivery-slot" style="display: none">
+                  <label
+                    for="slot_time_from"><?php echo esc_html_x( 'Select the schedule that suits your needs', 'renting_complete', 'mybooking') ?></label>
+                  <select class="form-control" id="slot_time_from" name="slot_time_from"></select>
+                </div>
+                <div class="form-group col-md-6 js-mb-optional-external-driver" style="display: none">
+                  <label
+                    for="slot_time_from"><?php echo esc_html_x( 'Will you need a skipper?', 'renting_complete', 'mybooking') ?></label>
+                  <select class="form-control" id="with_optional_external_driver" name="with_optional_external_driver">
+                    <option value=""></option>
+                    <option value="false"><?php echo esc_html_x( 'No', 'renting_complete', 'mybooking') ?></option>
+                    <option value="true"><?php echo esc_html_x( 'Yes', 'renting_complete', 'mybooking') ?></option>
+                  </select>
+                </div>
+              </div>
+
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="comments"><?php echo esc_html_x( 'Comments', 'renting_complete', 'mybooking') ?></label>
