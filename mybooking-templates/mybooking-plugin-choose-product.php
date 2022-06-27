@@ -14,7 +14,10 @@
   <!-- Reservation : Pickup/Return information -->
 
   <div id="reservation_detail" class="sticky-top"></div>
-  <div id="product_listing"></div>
+  <div id="product_listing" 
+       <?php if ( array_key_exists('use_renting_detail_page', $args) && $args['use_renting_detail_page'] == 'true' ) : ?>
+       data-use-renting-detail-page="true" 
+       <?php endif; ?>></div>
 
 </div>
 
