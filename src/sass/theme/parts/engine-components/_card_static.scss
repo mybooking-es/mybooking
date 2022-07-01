@@ -306,6 +306,7 @@
   }
   .card-static-wrapper {
     flex-basis: 100%;
+    width: 100%;
     flex-grow: 0;
   }
 }
@@ -313,6 +314,7 @@
 @media (min-width: 768px) {
   .card-static-wrapper {
     flex-basis: 50%;
+    width: 50%;
     flex-grow: 0;
   }
 }
@@ -321,6 +323,7 @@
   .card-static-wrapper {
     padding: 16px;
     flex-basis: 45%;
+    width: 45%;
     flex-grow: 0;
   }
 }
@@ -331,6 +334,7 @@
   }
   .card-static-wrapper {
     flex-basis: 33%;
+    width: 33%;
     flex-grow: 0;
   }
 }
