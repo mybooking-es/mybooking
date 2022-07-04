@@ -43,6 +43,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 = 1.1.0 =
 * Fixed: Rent Cards + My reservation additional drivers
 * Fixed: Rent Selector wizard Text on Mobile
+* Added: Renting complete - Slot and skipper
 * Added: Renting my reservation - Sign contract
 * Added: Renting my reservation - Additional drivers
 
