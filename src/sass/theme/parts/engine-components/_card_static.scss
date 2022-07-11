@@ -61,7 +61,7 @@
 
 .card-static_image-container {
   width: 100%;
-  height: 265px;
+  height: 245px;
 }
 
 .card-static_image {
@@ -84,7 +84,7 @@
   padding: 13px;
   position: absolute;
   left: 0;
-  top: 230px;
+  top: 210px;
   width: 100%;
 }
 
@@ -120,8 +120,6 @@
 }
 
 .card-static_header-catalog {
-  @extend .card-static_header;
-  width: 100%;
   h2.card-static_product-name {
     max-width: 300px;
   }
@@ -153,11 +151,9 @@
 .card-static_body {
   justify-content: flex-start;
   position: relative;
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  height: 130px;
-  padding: 10px 20px 20px 20px;
+  height: fit-content !important;
+  padding: 20px;
   background-color: var(--card-body-bg-color);
 }
 

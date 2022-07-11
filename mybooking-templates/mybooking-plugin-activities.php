@@ -16,19 +16,19 @@
   </div>
 <?php } else { ?>
   <!-- Activities -->
-  <section class="cards-static-container fleet">
+  <section class="cards-static-container">
     <?php foreach( $args['data']->data as $mybooking_activity ) { ?>
       <div class="card-static-wrapper">
         <div class="card-static">
-
-          <?php if ( !empty( $mybooking_activity->photo_url_full ) ) { ?>
-            <img class="activity-card-img card-img-top" src="<?php echo esc_url( $mybooking_activity->photo_url_full ) ?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>">
-          <?php } else { ?>
-            <div class="text-center no-product-photo pt-3">
-              <img class="activity-card-img card-img-top" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image-product.png') ?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>"/>
-            </div>
-          <?php } ?>
-
+          <div class="card-static_image-container">
+            <?php if ( !empty( $mybooking_activity->photo_url_full ) ) { ?>
+              <img class="card-static_image" src="<?php echo esc_url( $mybooking_activity->photo_url_full ) ?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>">
+            <?php } else { ?>
+              <div class="no-product-photo">
+                <img class="card-static_image" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image-product.png') ?>" alt="<?php echo esc_attr( $mybooking_activity->name )?>"/>
+              </div>
+            <?php } ?>
+          </div>
           <div class="card-static_body">
             <div class="card-static_header-catalog">
               <h2 class="card-static_product-name "><?php echo esc_html( $mybooking_activity->name ) ?></h2>

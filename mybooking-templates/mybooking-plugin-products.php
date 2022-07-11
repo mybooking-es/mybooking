@@ -6,18 +6,18 @@
    *
    */
 ?>
-<section class="cards-static-container fleet">
+<section class="cards-static-container">
   <!-- Products -->
   <?php foreach( $args['data']->data as $mybooking_product ) { ?>
 
     <div class="card-static-wrapper">
       <div class="card-static">
-        <div class="card-static_image">
+        <div class="card-static_image-container">
           <?php if ( !empty( $mybooking_product->full_photo_path ) ) { ?>
-            <img class="card-static_image-item" src="<?php echo esc_url( $mybooking_product->full_photo_path ) ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>">
+            <img class="card-static_image" src="<?php echo esc_url( $mybooking_product->full_photo_path ) ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>">
           <?php } else { ?>
-            <div class="text-center no-product-photo pt-3">
-              <img class="" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image-product.png') ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>"/>
+            <div class="no-product-photo">
+              <img class="card-static_image" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/default-image-product.png') ?>" alt="<?php echo esc_attr( $mybooking_product->name )?>"/>
             </div>
           <?php } ?>
         </div>
