@@ -6,7 +6,7 @@
    *
    */
 ?>
-<section class="cards-static-container">
+<section class="cards-static-container mybooking-catalog">
   <!-- Products -->
   <?php foreach( $args['data']->data as $mybooking_product ) { ?>
 
@@ -22,7 +22,7 @@
           <?php } ?>
         </div>
         <div class="card-static_body">
-          <div class="card-static_header-catalog">
+          <div class="mybooking-catalog_header">
             <h2 class="card-static_product-name"><?php echo esc_html( $mybooking_product->name ) ?></h2>
             <?php if ( !empty( $mybooking_product->short_description ) ) { ?>
               <h3 class="card-static_product-short-description"><?php echo wp_kses_post( $mybooking_product->short_description ) ?></h3>

@@ -16,7 +16,7 @@
   </div>
 <?php } else { ?>
   <!-- Activities -->
-  <section class="cards-static-container">
+  <section class="cards-static-container mybooking-catalog">
     <?php foreach( $args['data']->data as $mybooking_activity ) { ?>
       <div class="card-static-wrapper">
         <div class="card-static">
@@ -30,7 +30,7 @@
             <?php } ?>
           </div>
           <div class="card-static_body">
-            <div class="card-static_header-catalog">
+            <div class="mybooking-catalog_header">
               <h2 class="card-static_product-name "><?php echo esc_html( $mybooking_activity->name ) ?></h2>
 
               <?php if ( isset( $mybooking_activity->address) ) { ?>
@@ -40,12 +40,12 @@
               <?php } ?>
 
               <?php if ( $mybooking_activity->use_rates ) { ?>
-              <p>
-                <span
-                  class="text-muted"><small><?php echo esc_html_x( 'From', 'activities_list', 'mybooking' ) ?></small></span>
-                <span class="h5 mt-10 color-brand-primary">
-                  <strong><?php echo esc_html( $mybooking_activity->from_price_formatted ) ?></strong></span>
-              </p>
+                <span class="text-muted">
+                  <small><?php echo esc_html_x( 'From', 'activities_list', 'mybooking' ) ?></small>
+                </span>
+                <span class="h5">
+                  <strong><?php echo esc_html( $mybooking_activity->from_price_formatted ) ?></strong>
+                </span>
               <?php } ?>
             </div>
 

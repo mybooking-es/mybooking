@@ -56,9 +56,12 @@
   }
 }
 
+
 // ELEMENTS
 // ---------------------------------------------------
 
+
+// Card image
 .card-static_image-container {
   width: 100%;
   height: 245px;
@@ -74,6 +77,7 @@
   object-fit: cover;
 }
 
+// Custom message
 .card-static_custom-message {
   font-size: 9px;
   color: white;
@@ -88,108 +92,7 @@
   width: 100%;
 }
 
-.card-static_header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  padding: 10px 20px;
-  background: #f4f0ec;
-  height: 70px;
-  border: 1px solid var(--process-container-bg);
-}
-
-.card-static_price {
-  width: 100%;
-}
-
-.card-static_amount {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 900;
-  color: var(--brand-primary);
-  margin: 0;
-}
-
-.card-static_taxes {
-  width: auto;
-  text-align: right;
-  line-height: 1.5;
-  float: right;
-  font-size: 14px;
-}
-
-.card-static_header-catalog {
-  h2.card-static_product-name {
-    max-width: 300px;
-  }
-  background-color: transparent;
-  border: none;
-}
-
-.card-static_discount {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0;
-  line-height: 1;
-}
-
-.card-static_discount-badge {
-  width: auto;
-  float: right;
-}
-
-.card-static_original-price {
-  color: #999;
-  font-size: 1.2em;
-  font-weight: bolder;
-  text-decoration: line-through;
-}
-
-.card-static_body {
-  justify-content: flex-start;
-  position: relative;
-  width: 100%;
-  height: fit-content !important;
-  padding: 20px;
-  background-color: var(--card-body-bg-color);
-}
-
-.card-static_product-name {
-  width: 280px;
-  color: var(--card-product-name-color);
-  font-weight: 800;
-  font-size: 1.1rem;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.card-static_product-short-description {
-  width: 280px;
-  color: #999;
-  font-weight: 400;
-  font-size: 0.9rem;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.mybooking-card_info-button {
-  color: var(--brand-primary);
-  font-size: 0.9em;
-  font-weight: bold;
-  cursor: pointer;
-  padding-top: 1rem;
-}
-
-.mybooking-card_info-button:hover {
-  text-decoration: none!important;
-  color: #999;
-}
-
+// Low availability message
 .card-static_low-availability {
   position: absolute;
   top: 20px;
@@ -202,10 +105,109 @@
   font-weight: bold;
 }
 
-.card-static_price_supplement_supplement_1 {
-  margin-top: -5px;
+// Card header
+.card-static_header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 20px;
+  background: #f4f0ec;
+  height: 70px;
+  border: 1px solid var(--process-container-bg);
 }
 
+  .card-static_price {
+    width: 100%;
+  }
+
+  .card-static_amount {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--brand-primary);
+    margin: 0;
+  }
+
+  .card-static_taxes {
+    width: auto;
+    text-align: right;
+    line-height: 1.5;
+    float: right;
+    font-size: 14px;
+  }
+
+  .card-static_discount {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .card-static_discount-badge {
+    width: auto;
+    float: right;
+  }
+
+  .card-static_original-price {
+    color: #999;
+    font-size: 1.2em;
+    font-weight: bolder;
+    text-decoration: line-through;
+  }
+
+// Card body
+.card-static_body {
+  justify-content: center;
+  align-content: space-between;
+  position: relative;
+  width: 100%;
+  height: fit-content !important;
+  padding: 20px;
+  background-color: var(--card-body-bg-color);
+}
+
+.mybooking-catalog .card-static_body {
+  text-align: center;
+}
+
+  // Product details
+  .card-static_product-name {
+    width: 280px;
+    color: var(--card-product-name-color);
+    font-weight: 800;
+    font-size: 1.1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .mybooking-catalog_header {
+    h2.card-static_product-name {
+      max-width: 300px;
+      text-align: center;
+    }
+    background-color: transparent;
+    border: none;
+  }
+
+  .card-static_product-short-description {
+    width: 280px;
+    color: #999;
+    font-weight: 400;
+    font-size: 0.9rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .card-static_price_supplement_supplement_1 {
+    margin-top: -5px;
+  }
+
+// Card footer
 .card-static_footer {
   justify-content: flex-end;
   position: relative;
@@ -220,77 +222,81 @@
   border-top-right-radius: 0;
 }
 
-.card-static_icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-  .icon {
+  .card-static_icons {
     display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin-bottom: 20px;
-    align-items: center;
-    text-align: center;
-    span {
-      font-size: 13px;
-      color: var(--card-key-characteristics-text-color);
-    }
-    img {
-      height: 30px;
-      width: 30px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    .icon {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin-bottom: 20px;
+      align-items: center;
+      text-align: center;
+      span {
+        font-size: 13px;
+        color: var(--card-key-characteristics-text-color);
+      }
+      img {
+        height: 30px;
+        width: 30px;
+      }
     }
   }
-}
 
-.mybooking-product_characteristics-key {
-  font-weight: 700;
-  max-width: 40px;
-  overflow: hidden;
-  height: 1rem;
-} /* This class is for plugin compatibility! */
+  .mybooking-product_characteristics-key {
+    font-weight: 700;
+    max-width: 40px;
+    height: 1rem;
+  } /* This class is for plugin compatibility! */
 
-.mybooking-card_product-availability-msg {
-  width: 100%;
-  padding: .7rem .85rem;
-  background-color: transparent;
-  border-radius: 50px;
-  border-color: transparent;
-  font-size: 14px;
-  line-height: 1.1rem;
-  text-align: center;
-  color: var(--error);
-}
-
-.card-static_btn {
-  width: 100%;
-  .btn-choose-product {
+  .mybooking-card_product-availability-msg {
     width: 100%;
-    transition: ease-in-out 0.15s;
+    padding: .7rem .85rem;
+    background-color: transparent;
     border-radius: 50px;
-    background-color: var(--brand-primary);
-    border-color: var(--brand-primary);
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: white !important;
-    &:hover {
-      background-color: var(--brand-primary-dark);
-      border-color: var(--brand-primary-dark);
-      color: var(--white) !important;
-      cursor: pointer;
+    border-color: transparent;
+    font-size: 14px;
+    line-height: 1.1rem;
+    text-align: center;
+    color: var(--error);
+  }
+
+  // Card button
+  .card-static_btn {
+    width: 100%;
+    .btn-choose-product {
+      width: 100%;
+      transition: ease-in-out 0.15s;
+      border-radius: 50px;
+      background-color: var(--brand-primary);
+      border-color: var(--brand-primary);
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white !important;
+      &:hover {
+        background-color: var(--brand-primary-dark);
+        border-color: var(--brand-primary-dark);
+        color: var(--white) !important;
+        cursor: pointer;
+      }
     }
   }
-}
 
-// Cards in Fleet page
-.cards-static-container.fleet {
-  .card-static_body {
-    height: fit-content !important;
-    min-height: 0;
+  // Catalog card button
+  .mybooking-card_info-button {
+    color: var(--brand-primary);
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    padding-top: 1rem;
   }
-  .card-static_image {
-    height: 200px;
+
+  .mybooking-card_info-button:hover {
+    text-decoration: none!important;
+    color: #999;
   }
-}
+
 
 // RESPONSIVE
 // ---------------------------------------------------
