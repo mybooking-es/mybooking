@@ -1,6 +1,14 @@
 # Changelog
 
-## [1.1.0] 2022-07-04
+## [1.0.24] 2022-07-13
+
+## Added
+- Titles and steps for product widget on detail pages
+
+## Fixed
+- Padding on detail pages info container
+
+## [1.0.23] 2022-07-04
 
 ### Fixed
 - Renting : Additional drivers
