@@ -11,14 +11,14 @@
 <div class="container product-container">
   <div class="row">
     <div class="col-md-8">
-      <div class="mybooking-product-page_info-container shadow mb-5 bg-white rounded">
+      <div class="mybooking-product-page_info-container">
           <!-- The photo -->
           <?php if (!empty( $args->photos ) && count( $args->photos ) > 1) { ?>
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <?php foreach( $args->photos as $mybooking_key => $mybooking_photo ) { ?>
               <div class="carousel-item <?php if ($mybooking_key == key($args->photos)) { ?>active<?php } ?>">
-                <img class="d-block w-100" src="<?php echo esc_url ( $mybooking_photo->full_photo_path ) ?>"
+                <img class="mybooking-product-page_image" src="<?php echo esc_url ( $mybooking_photo->full_photo_path ) ?>"
                      alt="<?php echo esc_attr( $args->name )?>">
               </div>
               <?php } ?>
@@ -33,7 +33,7 @@
             </a>
           </div>
           <?php } else if (count($args->photos) == 1) { ?>
-            <img class="d-block product-photo" src="<?php echo esc_url ( $args->photos[0]->full_photo_path ) ?>"
+            <img class="mybooking-product-page_image product-photo" src="<?php echo esc_url ( $args->photos[0]->full_photo_path ) ?>"
                  alt="<?php echo esc_attr( $args->name )?>">
           <?php } else { ?>
               <div class="text-center no-product-photo pt-3"><i class="fa fa-camera" aria-hidden="true"></i></div>
@@ -54,8 +54,8 @@
             <?php } ?>
             <!-- Key characteristics -->
             <?php if ( isset( $args->key_characteristics) && !empty( $args->key_characteristics ) ) { ?>
-            <div class="card-body  key-characteristics">
-              <ul class="icon-list-items card-static_icons">
+            <div class="mybooking-product-page_characteristics key-characteristics">
+              <ul class="icon-list-items card-static_icons" style="padding:0;">
                 <?php if ( isset( $args->characteristic_length ) && !empty( $args->characteristic_length ) ) { ?>
                   <li class="icon-list-item icon">
                       <span class="icon-list-icon">

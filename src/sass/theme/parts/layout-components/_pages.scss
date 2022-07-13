@@ -39,6 +39,17 @@
 
 .mybooking-product-page_info-container {
   padding: 2rem;
+  border-radius: 8px;
+}
+
+.mybooking-product-page_image {
+  min-width: 100%;
+}
+
+.mybooking-product-page_characteristics {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(0,0,0,.1);
 }
 
 // Mybooking Landing template
