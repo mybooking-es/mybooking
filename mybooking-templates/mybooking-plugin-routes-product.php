@@ -1,5 +1,5 @@
 <?php
-  /** 
+  /**
    * The Template for showing the renting product detail page
    *
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-routes-product.php
@@ -11,14 +11,14 @@
 <div class="container product-container">
   <div class="row">
     <div class="col-md-8">
-      <div class="shadow mb-5 bg-white rounded">
+      <div class="mybooking-product-page_info-container shadow mb-5 bg-white rounded">
           <!-- The photo -->
           <?php if (!empty( $args->photos ) && count( $args->photos ) > 1) { ?>
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <?php foreach( $args->photos as $mybooking_key => $mybooking_photo ) { ?>
               <div class="carousel-item <?php if ($mybooking_key == key($args->photos)) { ?>active<?php } ?>">
-                <img class="d-block w-100" src="<?php echo esc_url ( $mybooking_photo->full_photo_path ) ?>" 
+                <img class="d-block w-100" src="<?php echo esc_url ( $mybooking_photo->full_photo_path ) ?>"
                      alt="<?php echo esc_attr( $args->name )?>">
               </div>
               <?php } ?>
@@ -33,7 +33,7 @@
             </a>
           </div>
           <?php } else if (count($args->photos) == 1) { ?>
-            <img class="d-block product-photo" src="<?php echo esc_url ( $args->photos[0]->full_photo_path ) ?>" 
+            <img class="d-block product-photo" src="<?php echo esc_url ( $args->photos[0]->full_photo_path ) ?>"
                  alt="<?php echo esc_attr( $args->name )?>">
           <?php } else { ?>
               <div class="text-center no-product-photo pt-3"><i class="fa fa-camera" aria-hidden="true"></i></div>
@@ -49,7 +49,7 @@
             <?php } ?>
             <!-- From price -->
             <?php if ($args->from_price > 0) { ?>
-            <?php /* translators: %s: From price */ ?>  
+            <?php /* translators: %s: From price */ ?>
               <h2 class="h4 mt-3 text-danger font-weight-normal"><?php echo wp_kses_post( sprintf( _x('From <b>%s</b>', 'renting_product_detail', 'mybooking' ), number_format_i18n( $args->from_price ) ) )?>€</h2>
             <?php } ?>
             <!-- Key characteristics -->
@@ -64,7 +64,7 @@
                       <?php /* translators: %.2f: Length */ ?>
                       <span class="icon-list-text text-muted"><?php echo wp_kses_post( sprintf( _x('<b>%.2f</b> m.', 'renting_product_detail', 'mybooking' ), $args->characteristic_length ) ) ?></span>
                   </li>
-                <?php } ?>  
+                <?php } ?>
                 <?php foreach ( $args->key_characteristics as $mybooking_key => $value) { ?>
                 <li class="icon-list-item icon">
                     <span class="icon-list-icon">
@@ -74,7 +74,7 @@
                 </li>
                 <?php } ?>
               </ul>
-            </div>  
+            </div>
             <?php } ?>
             <!-- Description -->
             <?php if ( !empty( $args->description ) ) { ?>
@@ -87,7 +87,7 @@
 
           </div>
       </div>
-    </div>  
+    </div>
     <div class="col-md-4">
       <div class="container">
         <div class="row">
@@ -98,7 +98,7 @@
         </div>
       </div>
       <hr>
-      <?php 
+      <?php
          $widget_data = array( 'code' => $args->code );
          if ( isset( $args->sales_channel_code ) ) {
            $widget_data['sales_channel_code'] = $args->sales_channel_code;
