@@ -90,7 +90,7 @@
                 <span><%=shopping_cart.renting_duration_literal%></span>
               </div>
             <% } else { %>
-              <!-- Date/Time to -->
+              <!-- // Date/Time to -->
               <div class="reservation-summary_return_date">
                 <span><%=shopping_cart.date_to_short_format%> <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></span>
               </div>
@@ -184,11 +184,9 @@
              <%=product.short_description%>
             </h3>
 
-            <% if (product.description) { %>
-              <span class="mybooking-card_info-button js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>">
-                <span class="dashicons dashicons-plus-alt"></span> INFO
-              </span>
-            <% } %>
+            <span class="mybooking-card_info-button js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>">
+              <span class="dashicons dashicons-plus-alt"></span> INFO
+            </span>
 
             <% if (+product.category_supplement_1_cost > 0) { %>
             <div class="card-static_price_supplement p-b-1">

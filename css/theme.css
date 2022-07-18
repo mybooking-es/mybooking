@@ -27569,9 +27569,15 @@ form.wp-block-search input[type=submit] {
   .page .page_content {
     padding: 2rem 1rem; } }
 
+.mybooking-product-page {
+  padding: 1rem; }
+
+@media (min-width: 575.98px) {
+  .mybooking-product-page {
+    padding: 4rem 1rem; } }
+
 .mybooking-product-page_info-container {
-  padding: 2rem;
-  border-radius: 8px; }
+  padding-bottom: 2rem; }
 
 .mybooking-product-page_image {
   min-width: 100%; }
@@ -30814,7 +30820,7 @@ button.mybooking-popup_close {
   min-width: 400px; }
 
 .mybooking-modal .modal-dialog {
-  max-width: 700px !important; }
+  max-width: 1140px !important; }
 
 .mybooking-modal .modal-content {
   border-radius: 8px; }

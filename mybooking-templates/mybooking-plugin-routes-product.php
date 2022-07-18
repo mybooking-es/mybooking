@@ -8,7 +8,7 @@
 ?>
 <?php get_header();?>
 <br>
-<div class="container product-container">
+<div class="container mybooking-product-page product-container">
   <div class="row">
     <div class="col-md-8">
       <div class="mybooking-product-page_info-container">
@@ -40,7 +40,7 @@
           <?php } ?>
           <div class="p-3">
             <!-- Name -->
-            <h1 class="h2 mt-3"><b><?php echo esc_html( $args->name ) ?></b></h1>
+            <h1><strong><?php echo esc_html( $args->name ) ?></strong></h1>
             <!-- Short description -->
             <?php if ( !empty( $args->short_description) ) { ?>
               <div class="text-muted mt-1">
@@ -92,8 +92,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="h2"><b><?php echo esc_html( $args->name ) ?></b></h2>
-            <p class="mt-3 text-muted"><?php echo esc_html_x('Please choose your dates in the availability calendar', 'renting_product_detail', 'mybooking' ) ?>
+            <h2><strong><?php echo esc_html_x('Reservar online', 'renting_product_detail', 'mybooking' ) ?></strong></h2>
           </div>
         </div>
       </div>
