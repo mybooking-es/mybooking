@@ -38,3 +38,13 @@
 .mybooking-modal_product-short-description ul {
   padding-left: 1.2rem;
 }
+
+// Bootstrap tweaks
+
+.mybooking-modal .carousel-control-next-icon,
+.mybooking-modal .carousel-control-prev-icon {
+  padding: 20px;
+  background-size: 20px;
+  background-color: var(--brand-primary);
+  border-radius: 50px;
+}
