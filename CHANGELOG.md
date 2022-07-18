@@ -4,9 +4,12 @@
 
 ## Added
 - Titles and steps for product widget on detail pages
+- Cards info buttons now are shown ever
 
 ## Fixed
 - Padding on detail pages info container
+- Make modal carousel arrows visible
+- Min width of 1140px for info modal on Chosse product
 
 ## [1.0.23] 2022-07-04
 
