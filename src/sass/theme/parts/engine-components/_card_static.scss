@@ -64,7 +64,7 @@
 // Card image
 .card-static_image-container {
   width: 100%;
-  height: 245px;
+  height: var(--card-image-container-height);
 }
 
 .card-static_image {
@@ -74,7 +74,8 @@
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   background-color: var(--card-image-bg-color);
-  object-fit: cover;
+  object-fit: var(--card-image-object-fit);
+  padding: var(--card-image-padding);
 }
 
 // Custom message
@@ -88,7 +89,7 @@
   padding: 13px;
   position: absolute;
   left: 0;
-  top: 210px;
+  top: var(--card-custom-message-top);
   width: 100%;
 }
 
@@ -214,7 +215,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 130px;
+  /*height: 130px;*/
   padding: 20px 20px 20px 20px;
   background-color: var(--card-body-bg-color);
   border-radius: 10px;
@@ -223,7 +224,7 @@
 }
 
   .card-static_icons {
-    display: flex;
+    display: var(--card-list-key-show);
     justify-content: center;
     flex-wrap: nowrap;
     .icon {

@@ -391,6 +391,8 @@
                       <?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?></th>
                     <th scope="col" class="text-right">
                       <?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?></th>
+                    <th scope="col" class="text-right">
+                      <?php echo esc_html_x( 'Deposit', 'renting_complete', 'mybooking' ) ?></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -413,6 +415,10 @@
                       <td data-label="<?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?>"
                         class="align-middle text-right">
                         <%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%>
+                      </td>
+                      <td data-label="<?php echo esc_html_x( 'Deposit', 'renting_complete', 'mybooking' ) ?>"
+                        class="align-middle text-right">
+                        <%=configuration.formatCurrency(shopping_cart.items[idx].product_deposit_cost)%>
                       </td>
                     </tr>
                   <% } %>

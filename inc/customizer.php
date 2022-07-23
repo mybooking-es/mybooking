@@ -105,6 +105,7 @@ if (!class_exists('MyBookingCustomizer')) {
       $this->customize_header_section($wp_customize);
       $this->customize_footer_section($wp_customize);
       $this->customize_selector_section($wp_customize);
+      $this->customize_card_section($wp_customize);
       $this->customize_identity_section($wp_customize);
       $this->customize_company($wp_customize);
     }
@@ -212,6 +213,10 @@ if (!class_exists('MyBookingCustomizer')) {
         $sticky_selector_background = get_theme_mod('mybooking_sticky_selector_background', '#2193F2');
         $sticky_selector_labels = get_theme_mod('mybooking_sticky_selector_labels', '#212121');
 
+        // Card image background (transparent or not)
+        $card_image_bg = get_theme_mod('mybooking_card_image_bg', 'transparent');
+        // Card show characteristics
+        $card_show_characteristics = get_theme_mod('mybooking_card_show_key_characteristics', 'show');
 
         // == Build the css-properties
         $custom_css .= ":root {";
@@ -284,26 +289,52 @@ if (!class_exists('MyBookingCustomizer')) {
         $custom_css .= "--credits-color-link: " . $this->slug_sanitize_rgba($subfooter_link_color) . ';';
         $custom_css .= "--credits-color-link-hover: " . $this->slug_sanitize_rgba($subfooter_link_hover_color) . ';';
 
-          // Top bar
-          $custom_css .= "--home-topbar-bg: " . $this->slug_sanitize_rgba($home_topbar_bg) . ';';
-          $custom_css .= "--topbar-bg: " . $this->slug_sanitize_rgba($topbar_bg) . ';';
-          $custom_css .= "--topbar-color: " . $this->slug_sanitize_rgba($topbar_color) . ';';
-          $custom_css .= "--topbar-link-color: " . $this->slug_sanitize_rgba($topbar_link_color) . ';';
-          $custom_css .= "--topbar-link-color-hover: " . $this->slug_sanitize_rgba($topbar_link_hover_color) . ';';
-          $custom_css .= "--topbar-message-bg: " . $this->slug_sanitize_rgba($topbar_message_bg) . ';';
-          $custom_css .= "--topbar-message-text: " . $this->slug_sanitize_rgba($topbar_message_text) . ';';
-          $custom_css .= "--topbar-message-link: " . $this->slug_sanitize_rgba($topbar_message_link) . ';';
-          $custom_css .= "--topbar-message-link-hover: " . $this->slug_sanitize_rgba($topbar_message_hover) . ';';
+        // Top bar
+        $custom_css .= "--home-topbar-bg: " . $this->slug_sanitize_rgba($home_topbar_bg) . ';';
+        $custom_css .= "--topbar-bg: " . $this->slug_sanitize_rgba($topbar_bg) . ';';
+        $custom_css .= "--topbar-color: " . $this->slug_sanitize_rgba($topbar_color) . ';';
+        $custom_css .= "--topbar-link-color: " . $this->slug_sanitize_rgba($topbar_link_color) . ';';
+        $custom_css .= "--topbar-link-color-hover: " . $this->slug_sanitize_rgba($topbar_link_hover_color) . ';';
+        $custom_css .= "--topbar-message-bg: " . $this->slug_sanitize_rgba($topbar_message_bg) . ';';
+        $custom_css .= "--topbar-message-text: " . $this->slug_sanitize_rgba($topbar_message_text) . ';';
+        $custom_css .= "--topbar-message-link: " . $this->slug_sanitize_rgba($topbar_message_link) . ';';
+        $custom_css .= "--topbar-message-link-hover: " . $this->slug_sanitize_rgba($topbar_message_hover) . ';';
 
-          // Selector
-          $custom_css .= "--home-selector-bg: " . $this->slug_sanitize_rgba($home_selector_background) . ';';
-          $custom_css .= "--home-selector-mobile-bg: " . $this->slug_sanitize_rgba(
-            $home_selector_mobile_background
-          ) . ';';
-          $custom_css .= "--selector-label-color: " . $this->slug_sanitize_rgba($home_selector_labels) . ';';
-          $custom_css .= "--selector-sticky-bg: " . $this->slug_sanitize_rgba($sticky_selector_background) . ';';
-          $custom_css .= "--selector-sticky-labels-color: " . $this->slug_sanitize_rgba($sticky_selector_labels) . ';';
+        // Selector
+        $custom_css .= "--home-selector-bg: " . $this->slug_sanitize_rgba($home_selector_background) . ';';
+        $custom_css .= "--home-selector-mobile-bg: " . $this->slug_sanitize_rgba(
+          $home_selector_mobile_background
+        ) . ';';
+        $custom_css .= "--selector-label-color: " . $this->slug_sanitize_rgba($home_selector_labels) . ';';
+        $custom_css .= "--selector-sticky-bg: " . $this->slug_sanitize_rgba($sticky_selector_background) . ';';
+        $custom_css .= "--selector-sticky-labels-color: " . $this->slug_sanitize_rgba($sticky_selector_labels) . ';';
 
+        // Card Image Background
+        if (!empty($card_image_bg)) {
+          if ( $card_image_bg == 'transparent' ) {
+            $custom_css .= "--card-image-object-fit: contain;";
+            $custom_css .= "--card-image-padding: 20px;";
+            $custom_css .= "--card-image-container-height: 300px;";
+            $custom_css .= "--card-custom-message-top: 260px;";
+          }
+          else {
+            $custom_css .= "--card-image-object-fit: cover;";
+            $custom_css .= "--card-image-padding: 0px;";
+            $custom_css .= "--card-image-container-height: 260px;";
+            $custom_css .= "--card-custom-message-top: 220px;";
+          }
+        }  
+
+        // Card Key characteristics
+        if (!empty($card_show_characteristics)) {
+          if ( $card_show_characteristics == 'show' ) {
+            $custom_css .= "--card-list-key-show: flex;";
+          }
+          else {
+            $custom_css .= "--card-list-key-show: none;";
+          }
+        }          
+        
         $custom_css .= "}";
       } else if ($type == 'block-editor') {
 
@@ -2242,6 +2273,95 @@ if (!class_exists('MyBookingCustomizer')) {
           'settings'   => 'mybooking_sticky_selector_labels'
         )
       ));
+    }
+
+    /**
+     *  Customize Card
+     *  ------------------
+     *
+     */
+    private function customize_card_section($wp_customize)
+    {
+      // == Section
+      $wp_customize->add_section(
+        'mybooking_theme_card_options',
+        array(
+          'title'       => _x('Booking Card', 'customizer_product_card', 'mybooking'),
+          'description' => _x('Controls the booking card apperance.', 'customizer_product_card', 'mybooking'),
+          'capability'  => 'edit_theme_options',
+          'priority'    => 57,
+          'panel'        => 'mybooking_settings_panel',
+        )
+      );
+
+      // -- Card background
+
+      // Setting
+      $wp_customize->add_setting(
+        'mybooking_card_image_bg',
+        array(
+          'default'           => 'transparent',
+          'type'              => 'theme_mod',
+          'sanitize_callback' => array($this, 'slug_sanitize_select'),
+          'capability'        => 'edit_theme_options',
+        )
+      );
+
+      // Control
+      $wp_customize->add_control(
+        new WP_Customize_Control(
+          $wp_customize,
+          'mybooking_card_image_bg',
+          array(
+            'label'       => _x('Card background', 'customizer_product_card', 'mybooking-wp-plugin'),
+            'description' => _x('Choose depending on the images that you are using for your products', 
+                                'customizer_product_card', 
+                                'mybooking'),
+            'section'     => 'mybooking_theme_card_options',
+            'settings'    => 'mybooking_card_image_bg',
+            'type'        => 'select',
+            'choices'     => array(
+              'transparent' => _x('Transparent background', 'customizer_product_card', 'mybooking-wp-plugin'),
+              'background'  => _x('Photo', 'customizer_product_catalog', 'mybooking-wp-plugin')
+            ),
+          )
+        )
+      );
+
+      // -- Key characteristics
+
+      // Setting
+      $wp_customize->add_setting(
+        'mybooking_card_show_key_characteristics',
+        array(
+          'default'           => 'show',
+          'type'              => 'theme_mod',
+          'sanitize_callback' => array($this, 'slug_sanitize_select'),
+          'capability'        => 'edit_theme_options',
+        )
+      );
+
+      // Control
+      $wp_customize->add_control(
+        new WP_Customize_Control(
+          $wp_customize,
+          'mybooking_card_show_key_characteristics',
+          array(
+            'label'       => _x('Card show characteristics', 'customizer_product_card', 'mybooking'),
+            'description' => _x('Card caracteritics icons', 
+                                'customizer_product_card', 'mybooking'),
+            'section'     => 'mybooking_theme_card_options',
+            'settings'    => 'mybooking_card_show_key_characteristics',
+            'type'        => 'select',
+            'choices'     => array(
+              'show' => _x('Yes', 'customizer_product_card', 'mybooking'),
+              'hide' => _x('No', 'customizer_product_card', 'mybooking')
+            ),
+          )
+        )
+      );
+
+
     }
 
     /**

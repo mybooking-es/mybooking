@@ -83,7 +83,7 @@
                 </div>
                 <div class="form-group col-md-6 js-mb-optional-external-driver" style="display: none">
                   <label
-                    for="slot_time_from"><?php echo esc_html_x( 'Will you need a skipper?', 'renting_complete', 'mybooking') ?></label>
+                    for="slot_time_from"><?php echo esc_html_x( 'Will you need a skipper? (Indicate it and we will confirm availability)', 'renting_complete', 'mybooking') ?></label>
                   <select class="form-control" id="with_optional_external_driver" name="with_optional_external_driver">
                     <option value=""></option>
                     <option value="false"><?php echo esc_html_x( 'No', 'renting_complete', 'mybooking') ?></option>

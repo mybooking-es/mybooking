@@ -193,8 +193,13 @@ these properties do not need to be edited */
   --card-info-icon-color-hover: var(--gray-400);
   --card-product-name-color: var(--gray-900);
   --card-short-description-color: var(--gray-500);
+  --card-image-container-height: 300px; // Card image container height 
+  --card-custom-message-top: 260px; // Custom message top
   --card-image-object-fit: contain; // For background transparent images use contain otherwise use cover
   --card-key-characteristics-text-color: var(--gray-900);
+  --card-image-object-fit: contain;
+  --card-image-padding: 0px;
+  --card-list-key-show: flex;
   // Product detail
   --product-detail-bg-color: var(--white);
   --product-detail-dates-titles: var(--gray-900);

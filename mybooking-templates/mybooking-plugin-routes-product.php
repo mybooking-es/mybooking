@@ -92,7 +92,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2><strong><?php echo esc_html_x('Reservar online', 'renting_product_detail', 'mybooking' ) ?></strong></h2>
+            <h2><strong><?php echo esc_html_x('Online booking', 'renting_product_detail', 'mybooking' ) ?></strong></h2>
           </div>
         </div>
       </div>

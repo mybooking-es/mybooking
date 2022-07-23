@@ -137,7 +137,7 @@
               <!-- // Price (single product selection) -->
               <!-- // Added category supplements -->
               <% if (!product.exceeds_max && !product.be_less_than_min) { %>
-                <% if (!configuration.multipleProductsSelection) { %>
+                <% if (!configuration.multipleProductsSelection && product.availability) { %>
                   <h2 class="card-static_amount"><%=configuration.formatCurrency(+product.price +
                       (+product.category_supplement_1_cost || 0) +
                       (+product.category_supplement_2_cost || 0) +
