@@ -25,31 +25,36 @@
         </div>
         <h1 class="shoping-cart-activity__title"><%=shopping_cart.items[idx].item_description_customer_translation%></h1>
         <p class="shoping-cart-activity__dates"><%= configuration.formatDate(shopping_cart.items[idx].date) %> <%= shopping_cart.items[idx].time %></p>
+        <br>
 
-        <div class="shoping-cart-activity__data">
-            <% for (var x=0; x<shopping_cart.items[idx]['items'].length; x++) { %>
+        <% if (shopping_cart.use_rates) { %>
+          <div class="shoping-cart-activity__data">
+              <% for (var x=0; x<shopping_cart.items[idx]['items'].length; x++) { %>
+                  <div>
+                    <%=shopping_cart.items[idx]['items'][x].quantity %>
+                    <%=shopping_cart.items[idx]['items'][x].item_price_description %> x
+                    <%=configuration.formatCurrency(shopping_cart.items[idx]['items'][x].item_unit_cost) %>
+                  </div>
+                  <div class="text-right">
+                        <%=configuration.formatCurrency(shopping_cart.items[idx]['items'][x].item_cost) %>
+                  </div>
+              <% } %>  
                 <div>
-                  <%=shopping_cart.items[idx]['items'][x].quantity %>
-                  <%=shopping_cart.items[idx]['items'][x].item_price_description %> x
-                  <%=configuration.formatCurrency(shopping_cart.items[idx]['items'][x].item_unit_cost) %>
+                  <?php echo esc_html_x( 'Total', 'activity_shopping_cart', 'mybooking' ) ?>
                 </div>
-                <div class="text-right">
-                      <%=configuration.formatCurrency(shopping_cart.items[idx]['items'][x].item_cost) %>
+                <div class="text-right fw-800"><%=configuration.formatCurrency(shopping_cart.items[idx]['total'])%>
                 </div>
-            <% } %>  
-              <div>
-                <?php echo esc_html_x( 'Total', 'activity_shopping_cart', 'mybooking' ) ?>
-              </div>
-              <div class="text-right fw-800"><%=configuration.formatCurrency(shopping_cart.items[idx]['total'])%>
-              </div>
-        </div>
+          </div>
+        <% } %>
 
-        <div class="shoping-cart-activity__trash-button btn-delete-shopping-cart-item"
-            data-item-id="<%=shopping_cart.items[idx].item_id%>"
-            data-date="<%=shopping_cart.items[idx].date%>"
-            data-time="<%=shopping_cart.items[idx].time%>">
-            <i class="fas fa-trash-alt"></i>
-        </div>
+        <% if (configuration.activityReservationMultipleItems) { %>
+          <div class="shoping-cart-activity__trash-button btn-delete-shopping-cart-item"
+              data-item-id="<%=shopping_cart.items[idx].item_id%>"
+              data-date="<%=shopping_cart.items[idx].date%>"
+              data-time="<%=shopping_cart.items[idx].time%>">
+              <i class="fas fa-trash-alt"></i>
+          </div>
+        <% } %>
     </div><!-- /shoping-cart-activity-card -->
   <% } %>
 </script>
@@ -58,12 +63,16 @@
 
 <script type="text/tmpl" id="script_reservation_form">
   <input type="hidden" name="customer_language" value="<%=language%>"/>
+
+    <h4 class="brand-primary my-3 customer_component">
+              <?php echo esc_html_x( "Customer", 'activity_shopping_cart', 'mybooking') ?></h4>
+
     <div class="row">
       <div class="col-12 col-lg-6">
         <div class="form-group">
           <label
             for="customer_name"><?php echo esc_html_x( 'Name', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
-          <input name="customer_name" id="customer_name" type="text" class="w-100"
+          <input name="customer_name" id="customer_name" type="text" class="form-control w-100"
             placeholder="<?php echo esc_attr_x( 'Name', 'activity_shopping_cart', 'mybooking' ) ?>*">
         </div>
       </div>
@@ -71,7 +80,7 @@
         <div class="form-group">
           <label
             for="customer_surname"><?php echo esc_html_x( 'Surname', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
-          <input name="customer_surname" id="customer_surname" type="text" class="w-100"
+          <input name="customer_surname" id="customer_surname" type="text" class="form-control w-100"
             placeholder="<?php echo esc_attr_x( 'Surname', 'activity_shopping_cart', 'mybooking' ) ?>*">
         </div>
       </div>
@@ -81,7 +90,7 @@
           <div class="form-group">
             <label
               for="customer_email"><?php echo esc_html_x( 'E-mail', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
-            <input name="customer_email" id="customer_email" type="text" class="w-100"
+            <input name="customer_email" id="customer_email" type="text" class="form-control w-100"
               placeholder="<?php echo esc_attr_x( 'E-mail', 'activity_shopping_cart', 'mybooking' ) ?>*">
           </div>
         </div>
@@ -89,7 +98,7 @@
           <div class="form-group">
             <label
               for="confirm_customer_email"><?php echo esc_html_x( 'Confirm E-mail', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
-            <input name="confirm_customer_email" id="confirm_customer_email" class="w-100" type="text"
+            <input name="confirm_customer_email" id="confirm_customer_email" class="form-control w-100" type="text"
               placeholder="<?php echo esc_attr_x( 'Confirm E-mail', 'activity_shopping_cart', 'mybooking' ) ?>*"
               maxlength="50">
           </div>
@@ -100,7 +109,7 @@
           <div class="form-group">
             <label
               for="customer_phone"><?php echo esc_html_x( 'Phone number', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
-            <input name="customer_phone" id="customer_phone" type="text" class="w-100"
+            <input name="customer_phone" id="customer_phone" type="text" class="form-control w-100"
               placeholder="<?php echo esc_attr_x( 'Phone number', 'activity_shopping_cart', 'mybooking' ) ?>*"
               maxlength="15">
           </div>
@@ -115,6 +124,57 @@
           </div>
         </div>
       </div>
+
+      <% if (configuration.activityCustomerVehicle) { %>
+
+        <hr>
+        <h4 class="brand-primary my-3 customer_component">
+              <?php echo esc_html_x( "Vehicle", 'activity_shopping_cart', 'mybooking') ?></h4>
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+              <label
+                for="customer_stock_brand"><?php echo esc_html_x( 'Brand', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
+              <input name="customer_stock_brand" id="customer_stock_brand" type="text" class="form-control w-100"
+                placeholder="<?php echo esc_attr_x( 'Brand', 'activity_shopping_cart', 'mybooking' ) ?>*"
+                maxlength="100" required>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+              <label
+                for="customer_stock_model"><?php echo esc_html_x( 'Model', 'activity_shopping_cart', 'mybooking') ?>*</label>
+              <input class="form-control w-100" id="customer_stock_model" name="customer_stock_model" type="text"
+                placeholder="<?php echo esc_attr_x( 'Model', 'activity_shopping_cart', 'mybooking') ?>*"
+                maxlength="100" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+              <label
+                for="customer_stock_plate"><?php echo esc_html_x( 'Stock plate', 'activity_shopping_cart', 'mybooking' ) ?>*</label>
+              <input name="customer_stock_plate" id="customer_stock_plate" type="text" class="form-control w-100"
+                placeholder="<?php echo esc_attr_x( 'Stock plate', 'activity_shopping_cart', 'mybooking' ) ?>*"
+                maxlength="100" required>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="form-group">
+              <label
+                for="customer_stock_color"><?php echo esc_html_x( 'Color', 'activity_shopping_cart', 'mybooking') ?></label>
+              <input class="form-control w-100" id="customer_stock_color" name="customer_stock_color" type="text"
+                placeholder="<?php echo esc_attr_x( 'Color', 'activity_shopping_cart', 'mybooking') ?>"
+                maxlength="100">
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+      <% } %>
       <div class="row">
         <div class="col">
           <div class="form-group">

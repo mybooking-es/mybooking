@@ -106,6 +106,24 @@
                   <li class="list-group-item"><%=order.customer_name%> <%=order.customer_surname%></li>
                   <li class="list-group-item"><%=order.customer_email%></li>
                   <li class="list-group-item"><%=order.customer_phone%></li>
+
+                  <% if (configuration.activityCustomerVehicle) { %>
+                    <li class="list-group-item">
+                      <% if (order.customer_stock_brand && order.customer_stock_brand != '') { %>
+                        <%=order.customer_stock_brand%>
+                      <% } %>  
+                      <% if (order.customer_stock_model && order.customer_stock_model != '') { %>
+                        <%=order.customer_stock_model%>
+                      <% } %>  
+                      <% if (order.customer_stock_plate && order.customer_stock_plate != '') { %>  
+                        <%=order.customer_stock_plate%>
+                      <% } %>  
+                      <% if (order.customer_stock_color && order.customer_stock_color != '') { %>
+                        <%=order.customer_stock_color%>
+                      <% } %>
+                    </li>
+                  <% } %>
+
                 </ul>
               </div>
 

@@ -2313,7 +2313,7 @@ if (!class_exists('MyBookingCustomizer')) {
           $wp_customize,
           'mybooking_card_image_bg',
           array(
-            'label'       => _x('Card background', 'customizer_product_card', 'mybooking-wp-plugin'),
+            'label'       => _x('Card background', 'customizer_product_card', 'mybooking'),
             'description' => _x('Choose depending on the images that you are using for your products', 
                                 'customizer_product_card', 
                                 'mybooking'),
@@ -2321,8 +2321,8 @@ if (!class_exists('MyBookingCustomizer')) {
             'settings'    => 'mybooking_card_image_bg',
             'type'        => 'select',
             'choices'     => array(
-              'transparent' => _x('Transparent background', 'customizer_product_card', 'mybooking-wp-plugin'),
-              'background'  => _x('Photo', 'customizer_product_catalog', 'mybooking-wp-plugin')
+              'transparent' => _x('Transparent background', 'customizer_product_card', 'mybooking'),
+              'background'  => _x('Photo', 'customizer_product_catalog', 'mybooking')
             ),
           )
         )
