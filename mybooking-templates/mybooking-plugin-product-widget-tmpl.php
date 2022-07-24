@@ -16,7 +16,7 @@
       <% if (configuration.pickupReturnPlace) { %>
 
         <li class="mybooking-product_calendar-step">
-          <?php echo esc_html_x('Choose delivery and return places', 'renting_product_detail', 'mybooking-wp-plugin' ) ?>
+          <?php echo esc_html_x('Choose delivery and return places', 'renting_product_detail', 'mybooking' ) ?>
         </li>
 
         <!-- // Pickup Place -->
@@ -53,7 +53,7 @@
       <!-- // One Journal or multiple journals selector -->
 
       <li class="mybooking-product_calendar-step">
-        <?php echo esc_html_x('Select delivery and return dates', 'renting_product_detail', 'mybooking-wp-plugin' ) ?>
+        <?php echo esc_html_x('Select delivery and return dates', 'renting_product_detail', 'mybooking' ) ?>
       </li>
 
       <% if (configuration.rentingProductOneJournal &&

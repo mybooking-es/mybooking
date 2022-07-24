@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2022-07-24 17:04+0000\n"
+"PO-Revision-Date: 2022-07-24 17:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: Spanish (Spain)\n"
 "Language: es_ES\n"
@@ -2813,6 +2813,11 @@ msgctxt "renting_product_detail"
 msgid "<b>%.2f</b> m."
 msgstr "<b>%.2f</b> m."
 
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:19
+msgctxt "renting_product_detail"
+msgid "Choose delivery and return places"
+msgstr "Elige los lugares de entrega y devolución"
+
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-routes-product.php:83
 msgctxt "renting_product_detail"
 msgid "Details"
@@ -2849,6 +2854,11 @@ msgstr "Varios días"
 msgctxt "renting_product_detail"
 msgid "Previous"
 msgstr "Previo"
+
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:56
+msgctxt "renting_product_detail"
+msgid "Select delivery and return dates"
+msgstr "Elige las fechas de entrega y devolución"
 
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:220
 msgctxt "renting_product_detail"
