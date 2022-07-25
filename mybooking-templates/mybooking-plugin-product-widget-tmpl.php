@@ -226,7 +226,14 @@
       <% for (var idx=0; idx<turns.length; idx++) { %>
         <input type="radio" name="turn" value="<%=turns[idx].time_from%>-<%=turns[idx].time_to%>" <% if (!turns[idx].availability){%>disabled<% } %>
                class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>">
-          <span class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>"><%=turns[idx].time_from%>-<%=turns[idx].time_to%>&nbsp;</span>
+
+          <span class="<% if (turns[idx].availability){%>mybooking-product_calendar-available_turn<% } else {%>mybooking-product_calendar-not_available_turn<% } %>">
+            <% if ( typeof turns[idx].name !== 'undefined' && turns[idx].name !== null && turns[idx].name !== '') { %>
+              <%=turns[idx].name%>
+            <% } else { %>
+              <%=turns[idx].time_from%>-<%=turns[idx].time_to%>&nbsp;
+            <% } %>
+          </span>
       <%} %>
     <% } %>
   <% } %>

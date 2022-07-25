@@ -241,7 +241,7 @@
               <span><%=shopping_cart.renting_duration_literal%>
                   <% if (!shopping_cart.renting_duration_literal) { %>
                     <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                      <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== '') { %>
+                      <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== null && shopping_cart.turn_description !== '') { %>
                         - <%= shopping_cart.turn_description %> 
                       <% } else { %>
                         ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
@@ -305,7 +305,7 @@
               <span><%=shopping_cart.renting_duration_literal%>
                     <% if (!shopping_cart.renting_duration_literal) { %>
                       <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                        <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== '') { %>
+                        <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== null && shopping_cart.turn_description !== '') { %>
                           - <%= shopping_cart.turn_description %> 
                         <% } else { %>
                           ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
@@ -365,7 +365,7 @@
                 <ul>
                   <li><%=shopping_cart.renting_duration_literal%>
                     <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                      <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== '') { %>
+                      <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== null && shopping_cart.turn_description !== '') { %>
                         - <%= shopping_cart.turn_description %> 
                       <% } else { %>
                         ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
@@ -457,7 +457,7 @@
                   <ul>
                     <li><%=shopping_cart.renting_duration_literal%>
                       <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                        <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== '') { %>
+                        <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== null && shopping_cart.turn_description !== '') { %>
                           - <%= shopping_cart.turn_description %> 
                         <% } else { %>
                           ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
@@ -523,7 +523,7 @@
               <% if (configuration.rentDateSelector === 'date_from_duration') { %>
                 <%=shopping_cart.renting_duration_literal%>
                 <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                  <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== '') { %>
+                  <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== null && shopping_cart.turn_description !== '') { %>
                     - <%= shopping_cart.turn_description %> 
                   <% } else { %>
                     ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
