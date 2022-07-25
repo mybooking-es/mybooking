@@ -81,7 +81,11 @@
                              name="turn" value="<%=halfDayTurns[idx].time_from%>-<%=halfDayTurns[idx].time_to%>"
                         <% if (shopping_cart.time_from === halfDayTurns[idx].time_from &&
                                shopping_cart.time_to === halfDayTurns[idx].time_to) {%>checked<%}%>>
-                        <%=halfDayTurns[idx].time_from%>-<%=halfDayTurns[idx].time_to%>
+                        <% if (halfDayTurns[idx].name && halfDayTurns[idx].name !== '') { %>
+                          &nbsp;<%=halfDayTurns[idx].name%>
+                        <% } else { %> 
+                          <%=halfDayTurns[idx].time_from%>-<%=halfDayTurns[idx].time_to%>
+                        <% } %>
                       </input>&nbsp;
                     <% } %>
                   </form>

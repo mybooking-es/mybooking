@@ -241,7 +241,11 @@
               <span><%=shopping_cart.renting_duration_literal%>
                   <% if (!shopping_cart.renting_duration_literal) { %>
                     <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                      ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
+                      <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== '') { %>
+                        - <%= shopping_cart.turn_description %> 
+                      <% } else { %>
+                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
+                      <% } %>
                     <% } %>
                   <% } %>
               </span>
@@ -301,7 +305,11 @@
               <span><%=shopping_cart.renting_duration_literal%>
                     <% if (!shopping_cart.renting_duration_literal) { %>
                       <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
+                        <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== '') { %>
+                          - <%= shopping_cart.turn_description %> 
+                        <% } else { %>
+                          ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
+                        <% } %>
                       <% } %>
                     <% } %>
               </span>
@@ -357,8 +365,12 @@
                 <ul>
                   <li><%=shopping_cart.renting_duration_literal%>
                     <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
+                      <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== '') { %>
+                        - <%= shopping_cart.turn_description %> 
+                      <% } else { %>
                         ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
-                      <% } %>
+                      <% } %>  
+                    <% } %>
                   </li>
                   <% if (configuration.pickupReturnPlace) { %>
                     <li><%=shopping_cart.return_place_customer_translation%></li>
@@ -445,7 +457,11 @@
                   <ul>
                     <li><%=shopping_cart.renting_duration_literal%>
                       <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                        ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
+                        <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== '') { %>
+                          - <%= shopping_cart.turn_description %> 
+                        <% } else { %>
+                          ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
+                        <% } %>
                       <% } %>
                     </li>
                   </ul>
@@ -507,7 +523,11 @@
               <% if (configuration.rentDateSelector === 'date_from_duration') { %>
                 <%=shopping_cart.renting_duration_literal%>
                 <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                  ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
+                  <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== '') { %>
+                    - <%= shopping_cart.turn_description %> 
+                  <% } else { %>
+                    ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
+                  <% } %>
                 <% } %>
               <% } else { %>
                 <%=shopping_cart.date_to_full_format%>
