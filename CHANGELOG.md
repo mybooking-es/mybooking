@@ -1,8 +1,12 @@
 # Changelog
 
-## [1.0.24] 2022-07-13
+## [1.1.0] 2022-07-30
 
 ## Added
+- Logo or site title on wizard container
+- Margin and layout arrangements to wizard container
+- Renting my reservation : Sign contract
+- Renting my reservation : Additional drivers
 - Titles and steps for product widget on detail pages
 - Cards info buttons now are shown ever
 
@@ -10,10 +14,6 @@
 - Padding on detail pages info container
 - Make modal carousel arrows visible
 - Min width of 1140px for info modal on Chosse product
-
-## [1.0.23] 2022-07-04
-
-### Fixed
 - Renting : Additional drivers
 - Card prices size
 - Card info button and modal position
@@ -22,12 +22,6 @@
 - Card titles end short description overflow
 - Truncated wizard place text
 - Product catalog cards layout and styles
-
-## Added
-- Logo or site title on wizard container
-- Margin and layout arrangements to wizard container
-- Renting my reservation : Sign contract
-- Renting my reservation : Additional drivers
 
 ## [1.0.16] 2022-05-26
 
