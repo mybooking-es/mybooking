@@ -5,7 +5,7 @@ Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
 Tested up to:       6.0
-Stable tag:         1.1.0
+Stable tag:         1.1.1
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,9 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.1.1 =
+* Added: Renting select product - Hide price if not available control
 
 = 1.1.0 =
 * Fixed: Rent Cards + My reservation additional drivers
@@ -253,6 +256,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+* Added: Renting select product - Hide price if not available control
 
 = 1.1.0 =
 * Fixed: Rent Cards + My reservation additional drivers + Selector Wizard on Mobile

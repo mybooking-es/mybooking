@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.1] 2022-08-20
+
+## Added
+- Renting select product - Hide price if not available control
+
 ## [1.1.0] 2022-07-30
 
 ## Added

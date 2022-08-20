@@ -141,7 +141,7 @@
               <!-- // Price (single product selection) -->
               <!-- // Added category supplements -->
               <% if (!product.exceeds_max && !product.be_less_than_min) { %>
-                <% if (!configuration.multipleProductsSelection && product.availability) { %>
+                <% if (!configuration.multipleProductsSelection && (product.availability || !configuration.hidePriceIfNotAvailable)) { %>
                   <h2 class="card-static_amount"><%=configuration.formatCurrency(+product.price +
                       (+product.category_supplement_1_cost || 0) +
                       (+product.category_supplement_2_cost || 0) +
@@ -159,7 +159,7 @@
 
             <!-- // Offer (single product selection) -->
             <% if (!product.exceeds_max && !product.be_less_than_min) { %>
-              <% if (!configuration.multipleProductsSelection) { %>
+              <% if (!configuration.multipleProductsSelection && (product.availability || !configuration.hidePriceIfNotAvailable) ) { %>
                 <% if (product.price != product.base_price) { %>
                   <% if (product.offer_discount_type == 'percentage' || product.offer_discount_type == 'amount') { %>
                     <span class="card-static_discount">
