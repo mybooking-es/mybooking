@@ -78,13 +78,13 @@
       <% if (configuration.timeToFrom || configuration.timeToFromInOneDay) { %>
         <!-- // Pickup/return time -->
         <div class="form-group time_selector_container js-mybooking-product_calendar-time-hours" style="display: none">
-            <label for="time_from"><?php echo esc_html_x( 'Delivery time', 'renting_product_calendar', 'mybooking' ) ?></label>
+            <label for="time_from"><?php echo esc_html( MyBookingEngineContext::getInstance()->getDeliveryDate() ) ?></label>
             <select id="time_from" name="time_from" placeholder="<?php echo esc_attr_x( 'hh:mm', 'renting_product_calendar', 'mybooking' ) ?>" disabled
                     class="form-control w-100"> </select>
         </div>
 
         <div class="form-group time_selector_container js-mybooking-product_calendar-time-hours" style="display: none">
-            <label for="time_to"><?php echo esc_html_x( 'Collection time', 'renting_product_calendar', 'mybooking' ) ?></label>
+            <label for="time_to"><?php echo esc_html( MyBookingEngineContext::getInstance()->getCollectionDate() ) ?></label>
             <select id="time_to" name="time_to" placeholder="<?php echo esc_attr_x( 'hh:mm', 'renting_product_calendar', 'mybooking' ) ?>" disabled
                     class="form-control w-100"> </select>
         </div>
@@ -139,8 +139,10 @@
     <% } %>
 
     <!-- // Product -->
-    <h5><?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?></h5>
-    <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
+    <% if (!configuration.hidePriceIfZero || shopping_cart.item_cost > 0) { %>
+      <h5><?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?></h5>
+      <p class="color-gray-600"><%=configuration.formatCurrency(shopping_cart.item_cost)%></p>
+    <% } %>
 
     <!-- // Extras -->
     <% if (shopping_cart.extras.length > 0) { %>
@@ -172,11 +174,12 @@
     <% } %>
 
     <!-- // Total -->
-    <h4 class="color-brand-primary my-3">
-    <?php echo esc_html_x( 'Total', 'renting_product_calendar', 'mybooking' ) ?>
-    </h4>
-    <p class="total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
-
+    <% if (!configuration.hidePriceIfZero || shopping_cart.total_cost > 0) { %>
+      <h4 class="color-brand-primary my-3">
+      <?php echo esc_html_x( 'Total', 'renting_product_calendar', 'mybooking' ) ?>
+      </h4>
+      <p class="total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></p>
+    <% } %>  
     <hr>
 
     <div class="form-row">
