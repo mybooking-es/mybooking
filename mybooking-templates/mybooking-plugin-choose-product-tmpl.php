@@ -128,6 +128,10 @@
                 <?php echo esc_html_x('Few units left!','renting_choose_product','mybooking') ?>
               </span>
             <% } %>
+            
+            <span class="mybooking-card_info-button js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>">
+              <span class="dashicons dashicons-plus-alt"></span> INFO
+            </span>
 
             <img class="card-static_image" src="<%=product.full_photo%>">
 
@@ -188,10 +192,6 @@
              <%=product.short_description%>
             </h3>
 
-            <span class="mybooking-card_info-button js-product-info-btn" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>">
-              <span class="dashicons dashicons-plus-alt"></span> INFO
-            </span>
-
             <% if (+product.category_supplement_1_cost > 0) { %>
             <div class="card-static_price_supplement p-b-1">
               <div class="card-static_price_supplement_price">
@@ -232,27 +232,35 @@
 
             <!-- // Available -->
             <% } else if (product.availability) { %>
-              <% if (configuration.multipleProductsSelection) { %>
-                <!-- // Selector -->
-                <div class="car-listing-selector">
-                  <select class="form-control select-choose-product" data-value="<%=product.code%>">
-                    <option value="0"><%=i18next.t('chooseProduct.selectUnits')%></option>
-                    <% for (var idx2=1;idx2<=(product.available);idx2++) { %>
-                    <option value="<%=idx2%>"
-                      <% if (shoppingCartProductQuantities[product.code] && idx2 == shoppingCartProductQuantities[product.code]) { %>
-                      selected="selected" <%}%>
-                      ><%=i18next.t('chooseProduct.units', {count: idx2})%>
-                      (<%= configuration.formatCurrency(product.price * idx2) %>) </option>
-                    <% } %>
-                  </select>
+              <% if (product.is_variant) { %>
+                <div id="product-variant-resume"></div>
+                <br>
+                <!-- // Button -->
+                <div class="card-static_btn">
+                  <a class="button btn btn-choose-variant" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>"><?php echo esc_html_x('Select units', 'renting_choose_variant', 'mybooking') ?></a>
                 </div>
               <% } else { %>
-
-                <!-- // Button -->
+                <% if (configuration.multipleProductsSelection) { %>
+                  <!-- // Selector -->
+                  <div class="car-listing-selector">
+                    <select class="form-control select-choose-product" data-value="<%=product.code%>">
+                      <option value="0"><%=i18next.t('chooseProduct.selectUnits')%></option>
+                      <% for (var idx2=1;idx2<=(product.available);idx2++) { %>
+                      <option value="<%=idx2%>"
+                        <% if (shoppingCartProductQuantities[product.code] && idx2 == shoppingCartProductQuantities[product.code]) { %>
+                        selected="selected" <%}%>
+                        ><%=i18next.t('chooseProduct.units', {count: idx2})%>
+                        (<%= configuration.formatCurrency(product.price * idx2) %>) </option>
+                      <% } %>
+                    </select>
+                  </div>
+                <% } else { %>
+                  <!-- // Button -->
                   <div class="card-static_btn">
                     <a class="button btn btn-choose-product"
                       data-product="<%=product.code%>"><?php echo esc_html_x('Book it!', 'renting_choose_product', 'mybooking') ?></a>
                   </div>
+                <% } %>
               <% } %>
 
             <!-- // Not available -->
@@ -316,4 +324,38 @@
     </div>
   </div>
 
+</script>
+<!-- Script that shows the product variant selection -->   
+<script type="text/tpml" id="script_variant_product">
+  <form name="variant_product_form" data-product-code="<%= productCode %>">
+    <div id="variant_product_selectors" class="row">
+      <% for (var idxV=0;idxV<variants.length;idxV++) { %>
+        <% var variant = variants[idxV]; %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="form-group">
+            <label for="<%= variant.code %>">
+              <%= variant.variant_name %>
+            </label>
+            <select name="<%= variant.code %>" id="<%= variant.code %>" <% if  (variant.available < 1) { %>disabled<% } %> class="form-control variant_product_selector" data-variant-unit-price="<%= variant.unit_price %>">
+              <option value="0">Seleccionar unidades</option>
+              <% for (var idxVO=1;idxVO<=variant.available;idxVO++) { %>
+                <option value="<%= idxVO %>"><%= idxVO %> <% if  (idxVO > 1) { %>unidades<% } else { %>unidad<% } %> - <%= variant.unit_price * idxVO %> €</option>
+              <% } %>
+              </select>
+          </div>
+        </div>
+      <% } %>
+    </div>
+    <hr>
+    <div class="row">
+      <h4 class="col-xs-12 col-sm-6">Total</h4>
+      <h4 id="variant_product_total" class="col-xs-12 col-sm-6 text-right">
+        <span id="variant_product_total_quantity">0</span>
+        &nbsp;
+        €
+      </h4>
+    </div>
+    <hr>
+    <button type="submit" class="close" data-dismiss="modal" class="button is-primary pull-right">Actualizar</button>
+  </form>
 </script>

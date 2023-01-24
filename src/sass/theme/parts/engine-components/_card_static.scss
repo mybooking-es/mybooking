@@ -65,6 +65,8 @@
 .card-static_image-container {
   width: 100%;
   height: var(--card-image-container-height);
+  position: relative;
+  z-index: 0;
 }
 
 .card-static_image {
@@ -266,7 +268,8 @@
   // Card button
   .card-static_btn {
     width: 100%;
-    .btn-choose-product {
+    .btn-choose-product,
+    .btn-choose-variant {
       width: 100%;
       transition: ease-in-out 0.15s;
       border-radius: 50px;
@@ -286,16 +289,22 @@
 
   // Catalog card button
   .mybooking-card_info-button {
-    color: var(--brand-primary);
+    color: white;
     font-size: 0.9em;
     font-weight: bold;
     cursor: pointer;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #999;
+    padding: 0.5rem;
+    z-index: 1;
   }
 
   .mybooking-card_info-button:hover {
     text-decoration: none!important;
-    color: #999;
+    background: var(--brand-primary);
   }
 
 

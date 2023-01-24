@@ -14,7 +14,7 @@ theme, so we can fully customize it.
 **Theme URI:** https://github.com/mybooking-es/mybooking  
 **Contributors:** MyBooking Team - hectorasencio marcelreig juanmiqueo 
 **Requires at least:** WordPress 5.2  
-**Version:** 1.1.1  
+**Version:** 1.1.2  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** e-commerce
@@ -139,9 +139,15 @@ customize the aspect of the website.
 
 ## Developing with NPM, Gulp, SASS and Browser Sync
 
+### Dependencies
+
+- node v.12.13.0
+- gulp v.4.0.2
+- yarn v.1.22.19
+
 ### Installing dependencies
 
-- Make sure you have installed Node.js and Gulp on your computer globally
+- Make sure you have installed Node.js and Gulp and Yarn on your computer globally
 - Open your terminal and browse to the location of the Mybooking WordPress Theme
 - Run `$ yarn`
 

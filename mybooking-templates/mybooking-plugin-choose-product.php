@@ -35,3 +35,17 @@
     </div>
   </div>
 </div>
+
+<div class="modal mybooking-modal" tabindex="-1" role="dialog" id="modalVariantSelector">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="variant-product-title" class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo esc_attr_x( 'Close', 'renting_choose_product', 'mybooking' ); ?>">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="variant-product-content" class="modal-body"></div>
+    </div>
+  </div>
+</div>
