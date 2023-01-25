@@ -356,6 +356,6 @@
       </h4>
     </div>
     <hr>
-    <button type="submit" class="close" data-dismiss="modal" class="button is-primary pull-right">Actualizar</button>
+    <button id="variant_product_form_button" class="btn btn-primary float-right">Actualizar</button>
   </form>
 </script>
