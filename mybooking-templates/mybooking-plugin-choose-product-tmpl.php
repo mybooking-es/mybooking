@@ -232,7 +232,7 @@
 
             <!-- // Available -->
             <% } else if (product.availability) { %>
-              <% if (product.is_variant) { %>
+              <% if (product.variants_enabled) { %>
                 <div id="product-variant-resume"></div>
                 <br>
                 <!-- // Button -->
