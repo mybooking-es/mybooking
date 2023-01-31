@@ -1885,6 +1885,16 @@ msgctxt "renting_choose_product"
 msgid "Few units left!"
 msgstr "¡Quedan pocas unidades!"
 
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:239
+msgctxt "renting_choose_variant"
+msgid "Select units'"
+msgstr "Selecciona unidades"
+
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:239
+msgctxt "renting_choose_variant"
+msgid "Select variants'"
+msgstr "Selecciona variantes"
+
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:272
 msgctxt "renting_choose_product"
 msgid "Next"

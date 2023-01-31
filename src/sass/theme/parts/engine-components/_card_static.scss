@@ -212,6 +212,33 @@
     margin-top: -5px;
   }
 
+  /* Card static Variant styles */
+  .card-static_variant_resume {
+    &__container {
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      margin: 0 -0.5rem;
+      &_inside {
+        margin-top: -3px;
+      }
+    }
+    &__box {
+      display: inline-block; 
+      margin-right: 0.2rem; 
+      border-radius: 2px; 
+      border: 1px solid lightgray; 
+      font-size: 12px;
+      &_inside {
+        display: inline-block;  
+        padding: 2px;
+        &:last-child {
+          background-color: lightgray;
+        }
+      }
+    }
+  }
+
 // Card footer
 .card-static_footer {
   justify-content: flex-end;
@@ -225,7 +252,7 @@
   border-radius: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  height: 100%;
+  height: inherit;
 }
 
   .card-static_icons {
@@ -298,8 +325,8 @@
     cursor: pointer;
     /* padding-top: 1rem; */
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 0;
+    right: 0;
     background: #999;
     padding: 0.5rem;
     z-index: 1;
