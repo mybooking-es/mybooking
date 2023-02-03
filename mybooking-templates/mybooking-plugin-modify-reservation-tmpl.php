@@ -13,6 +13,7 @@
 
   <div class="flex-form-group-wrapper">
 
+    <!-- Pickup / Return place or location -->
     <% if (configuration.pickupReturnPlace) { %> 
       <!-- Pickup / Return place -->
       <div class="flex-form-group">
@@ -86,15 +87,13 @@
             <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
             </div>
           </span>
-          <% if (configuration.rentDateSelector === 'date_from_duration') { %>
-            <select class="ml-1" id="renting_duration" name="renting_duration">
-            </select>
-          <% } else if (configuration.timeToFrom) { %>
-            <select class="ml-1" id="time_from" name="time_from">
-            </select>
+
+          <% if (configuration.timeToFrom) { %>
+            <select class="ml-1" id="time_from" name="time_from"></select>
           <% } else { %>
             <input class="modify-dates form-control" type="hidden" name="time_from" />
           <% } %>
+
         </div>
       </div>
 
@@ -109,15 +108,16 @@
                   <i class="fa fa-calendar flex-icon" aria-hidden="true"></i>
               </div>
           </span>
-
-            <% if (configuration.timeToFrom) { %>
-              <select class="ml-1" id="time_to" name="time_to">
-              </select>
-            <% } else { %>
-              <input class="modify-dates form-control" type="hidden" name="time_to"/>
-            <% } %>
-          </div>
+          <% if (configuration.timeToFrom) { %>
+            <select class="ml-1" id="time_to" name="time_to"></select>
+          <% } else { %>
+            <input class="modify-dates form-control" type="hidden" name="time_to"/>
+          <% } %>
         </div>
+        </div>
+      <% } else if (configuration.rentDateSelector === 'date_from_duration') { %>
+        <select class="ml-1" id="renting_duration" name="renting_duration">
+        </select>
       <% } %>
     </div>
   </div>

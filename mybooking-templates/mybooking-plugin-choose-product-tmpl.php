@@ -236,7 +236,7 @@
                 <div class="product-variant-resume" data-product-code="<%=product.code%>" style="margin: 0.5rem; 0"></div>
                 <!-- // Button -->
                 <div class="card-static_btn">
-                  <a class="button btn btn-choose-variant" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>"><% if (configuration.multipleProductsSelection) { %><?php echo esc_html_x('Select units', 'renting_choose_variant', 'mybooking') ?><% } else { %><?php echo esc_html_x('Select variants', 'renting_choose_variant', 'mybooking') ?><% } %></a>
+                  <a class="button btn btn-choose-variant" data-toggle="modal" data-target="#infoModal" data-product="<%=product.code%>"><% if (configuration.multipleProductsSelection) { %><?php echo esc_html_x('Select units', 'renting_choose_product', 'mybooking') ?><% } else { %><?php echo esc_html_x('Select options', 'renting_choose_product', 'mybooking') ?><% } %></a>
                 </div>
               <% } else { %>
                 <% if (configuration.multipleProductsSelection) { %>
@@ -332,7 +332,9 @@
         <div class="card-static_variant_resume__box"><span class="card-static_variant_resume__box_inside"><%= variantsSelected[idxV]['quantity'] %></span> <span class="card-static_variant_resume__box_inside"><%= variantsSelected[idxV]['name'] %></span></div>
       <% } %>
     </div>
+    <% if (total > 0) { %>
     <strong><span class="float-right"><%=configuration.formatCurrency(total)%></span></strong>
+    <% } %>
   </div>
 </script>
 <script type="text/tpml" id="script_variant_product">

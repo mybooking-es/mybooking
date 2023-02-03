@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-25 16:51+0000\n"
-"PO-Revision-Date: 2022-07-24 17:28+0000\n"
+"PO-Revision-Date: 2023-02-03 22:56+0000\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -1863,40 +1863,51 @@ msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:250
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:260
 msgctxt "renting_choose_product"
 msgid "Book it!"
 msgstr "Забронировать!"
 
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation.php:21
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product.php:29
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product.php:44
 msgctxt "renting_choose_product"
 msgid "Close"
 msgstr "Закрыть"
 
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:52
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:102
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:106
 msgctxt "renting_choose_product"
 msgid "Edit"
 msgstr "Редактировать"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:124
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:128
 msgctxt "renting_choose_product"
 msgid "Few units left!"
 msgstr "Осталось всего немного!"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:272
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:283
 msgctxt "renting_choose_product"
 msgid "Next"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:151
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:239
+msgctxt "renting_choose_product"
+msgid "Select options"
+msgstr "Выберите параметры"
+
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:239
+msgctxt "renting_choose_product"
+msgid "Select units"
+msgstr "Выберите единицы измерения"
+
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:159
 msgctxt "renting_choose_product"
 msgid "Taxes included"
 msgstr "Включенны налоги"
 
 #. %s: Product Type (Vehicle, Product, ...)
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:572
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:592
 #, php-format
 msgctxt "renting_complete"
 msgid "%s deposit"
@@ -1914,29 +1925,29 @@ msgctxt "renting_complete"
 msgid "Alternative phone number"
 msgstr "Альтернативный номер телефона"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:712
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:732
 msgctxt "renting_complete"
 msgid "Apply"
 msgstr "Применять"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:783
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:803
 msgctxt "renting_complete"
 msgid "Book now and pay now"
 msgstr "Забронируйте сейчас и заплатите сейчас"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:775
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:795
 msgctxt "renting_complete"
 msgid "Book now and pay on arrival"
 msgstr "Забронируйте сейчас и оплатите по прибытии"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:486
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:502
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete.php:118
 msgctxt "renting_complete"
 msgid "Close"
 msgstr "Закрыть"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:370
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:453
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:382
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:469
 msgctxt "renting_complete"
 msgid "Collection"
 msgstr "Коллекция"
@@ -1948,7 +1959,7 @@ msgctxt "renting_complete"
 msgid "Comments"
 msgstr "Комментарии"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:842
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:862
 msgctxt "renting_complete"
 msgid "Confirm"
 msgstr "Подтвердить"
@@ -1965,7 +1976,7 @@ msgctxt "renting_complete"
 msgid "Coverage"
 msgstr "Покрытие"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:882
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:902
 msgctxt "renting_complete"
 msgid "Credit or debit card"
 msgstr "Кредитная или дебетовая карта"
@@ -1975,30 +1986,30 @@ msgctxt "renting_complete"
 msgid "Customer's details"
 msgstr "Реквизиты клиента"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:347
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:437
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:355
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:449
 msgctxt "renting_complete"
 msgid "Delivery"
 msgstr "Доставка"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:395
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:419
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:407
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:431
 msgctxt "renting_complete"
 msgid "Deposit"
 msgstr "Депозит"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:581
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:601
 msgctxt "renting_complete"
 msgid "Driver age deposit"
 msgstr "Залог за возраст водителя"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:672
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:692
 msgctxt "renting_complete"
 msgid "Driver's age supplement"
 msgstr "Доплата за возраст водителя"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:356
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:444
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:364
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:456
 msgctxt "renting_complete"
 msgid "Duration"
 msgstr "продолжительность"
@@ -2010,8 +2021,8 @@ msgctxt "renting_complete"
 msgid "E-mail"
 msgstr "Электронная почта"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:270
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:330
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:274
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:338
 msgctxt "renting_complete"
 msgid "Edit"
 msgstr "Редактировать"
@@ -2021,21 +2032,21 @@ msgctxt "renting_complete"
 msgid "Extras"
 msgstr "Дополнения"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:562
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:582
 msgctxt "renting_complete"
 msgid "Guarantee"
 msgstr "Гарантия"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:465
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:529
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:481
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:549
 msgctxt "renting_complete"
 msgid "hour(s)"
 msgstr "час (ы)"
 
 #. %s: terms and conditions URL
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:804
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:835
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:915
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:824
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:855
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:935
 #, php-format
 msgctxt "renting_complete"
 msgid ""
@@ -2044,15 +2055,15 @@ msgid ""
 msgstr ""
 "<a href=\"%s\" target=\"_blank\">Я прочитал и принимаю условия аренды</a>"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:801
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:832
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:912
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:821
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:852
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:932
 msgctxt "renting_complete"
 msgid "I have read and hereby accept the conditions of rental"
 msgstr "Я прочитал и принимаю условия аренды"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:263
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:322
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:267
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:330
 msgctxt "renting_complete"
 msgid "Info"
 msgstr "Информация"
@@ -2069,13 +2080,13 @@ msgctxt "renting_complete"
 msgid "No"
 msgstr "Нет"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:874
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:894
 msgctxt "renting_complete"
 msgid "Paypal"
 msgstr "Paypal"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:197
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:679
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product-tmpl.php:201
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:699
 msgctxt "renting_complete"
 msgid "Petrol supplement"
 msgstr "Бензиновая добавка"
@@ -2087,55 +2098,55 @@ msgctxt "renting_complete"
 msgid "Phone number"
 msgstr "Телефонный номер"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:651
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:671
 msgctxt "renting_complete"
 msgid "Pick-up place supplement"
 msgstr "Доплата за место получения"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:644
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:664
 msgctxt "renting_complete"
 msgid "Pick-up time supplement"
 msgstr "Доплата за время получения"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:389
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:408
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:401
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:420
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:62
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:78
 msgctxt "renting_complete"
 msgid "Price"
 msgstr "Цена"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:703
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:707
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:723
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:727
 msgctxt "renting_complete"
 msgid "Promotion code"
 msgstr "Промо-Код"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:391
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:412
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:403
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:424
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:64
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:80
 msgctxt "renting_complete"
 msgid "Quantity"
 msgstr "Количество"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:767
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:813
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:787
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:833
 msgctxt "renting_complete"
 msgid "Request reservation"
 msgstr "Запросить бронирование"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:485
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:501
 msgctxt "renting_complete"
 msgid "Reservation summary"
 msgstr "Резюме бронирования"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:665
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:685
 msgctxt "renting_complete"
 msgid "Return place supplement"
 msgstr "Доплата за место возврата"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:658
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:678
 msgctxt "renting_complete"
 msgid "Return time supplement"
 msgstr "Доплата за время возврата"
@@ -2152,18 +2163,18 @@ msgctxt "renting_complete"
 msgid "Surname"
 msgstr "Фамилия"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:258
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:317
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:393
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:415
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:689
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:262
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:325
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:405
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:427
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:709
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:66
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation-tmpl.php:82
 msgctxt "renting_complete"
 msgid "Total"
 msgstr "Общее"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:589
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:609
 msgctxt "renting_complete"
 msgid "Total deposit"
 msgstr "Общий депозит"
@@ -2178,7 +2189,7 @@ msgctxt "renting_complete"
 msgid "Yes"
 msgstr "Да"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:892
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:912
 msgctxt "renting_complete"
 msgid ""
 "You will be redirected to <b>Paypal payment platform</b> to make the "
@@ -2190,7 +2201,7 @@ msgstr ""
 "учетную запись Paypal </u> или <u> кредитную карту </u> для совершения "
 "платежа."
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:899
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:919
 msgctxt "renting_complete"
 msgid ""
 "You will be redirected to the <b>credit card payment platform</b> to make "
@@ -2199,7 +2210,7 @@ msgstr ""
 "Вы будете перенаправлены на <b> платформу оплаты кредитной картой </b>, "
 "чтобы безопасно произвести подтверждающий платеж."
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:869
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:889
 msgctxt "renting_complete"
 msgid ""
 "You will be redirected to the <b>payment platform</b> to make the "
@@ -2252,7 +2263,7 @@ msgctxt "renting_form_selector"
 msgid "Duration"
 msgstr "продолжительность"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:20
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:21
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:133
 msgctxt "renting_form_selector"
 msgid "Pick-up place"
@@ -2264,7 +2275,7 @@ msgctxt "renting_form_selector"
 msgid "Promotion code"
 msgstr "Промо-Код"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:38
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-modify-reservation-tmpl.php:39
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-selector-widget-tmpl.php:151
 msgctxt "renting_form_selector"
 msgid "Return place"
@@ -2714,20 +2725,10 @@ msgstr ""
 "совершения платежа. Вы можете использовать <u> учетную запись Paypal </u> "
 "или <u> кредитную карту </u> для совершения платежа."
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:184
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:187
 msgctxt "renting_product_calendar"
 msgid "Book"
 msgstr "Книга"
-
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:87
-msgctxt "renting_product_calendar"
-msgid "Collection time"
-msgstr "Время сбора"
-
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:81
-msgctxt "renting_product_calendar"
-msgid "Delivery time"
-msgstr "Срок поставки"
 
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:82
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:88
@@ -2740,12 +2741,12 @@ msgctxt "renting_product_calendar"
 msgid "hours(s)"
 msgstr "часы"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:160
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:162
 msgctxt "renting_product_calendar"
 msgid "Pick-up place supplement"
 msgstr "Доплата за место получения"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:155
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:157
 msgctxt "renting_product_calendar"
 msgid "Pick-up time supplement"
 msgstr "Доплата за время получения"
@@ -2755,12 +2756,12 @@ msgctxt "renting_product_calendar"
 msgid "Reservation summary"
 msgstr "Резюме бронирования"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:170
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:172
 msgctxt "renting_product_calendar"
 msgid "Return place supplement"
 msgstr "Доплата за место возврата"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:165
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:167
 msgctxt "renting_product_calendar"
 msgid "Return time supplement"
 msgstr "Доплата за время возврата"
@@ -2784,12 +2785,12 @@ msgctxt "renting_product_calendar"
 msgid "Select return place"
 msgstr "Выберите место возврата"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:191
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:194
 msgctxt "renting_product_calendar"
 msgid "Sorry, there is no availability during these hours"
 msgstr "Извините, в эти часы нет свободных мест"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:197
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:200
 msgctxt "renting_product_calendar"
 msgid ""
 "Sorry, there is no availability for the entire period. The calendar shows "
@@ -2800,7 +2801,7 @@ msgstr ""
 "когда есть свободные места, но они могут быть недоступны для определенных "
 "дат подряд."
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:176
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:179
 msgctxt "renting_product_calendar"
 msgid "Total"
 msgstr "Общее"
@@ -2859,7 +2860,7 @@ msgctxt "renting_product_detail"
 msgid "Select delivery and return dates"
 msgstr "Выберите даты доставки и возврата"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:220
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-product-widget-tmpl.php:223
 msgctxt "renting_product_detail"
 msgid ""
 "We are sorry. There are not defined times. Please, configure them at the "
