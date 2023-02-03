@@ -4,7 +4,7 @@ Contributors:       hectorasencio, marcelreig, juanmiqueo
 Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
-Tested up to:       6.0
+Tested up to:       6.1
 Stable tag:         1.1.1
 Requires PHP:       7.2
 License: GPL-2.0-or-later
@@ -39,6 +39,10 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.2.0 =
+* Added: Renting - Product variants
+* Fixed: Renting - Modify reservation dates when duration time_from was not showing
 
 = 1.1.1 =
 * Added: Renting select product - Hide price if not available control
@@ -256,6 +260,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+* Added: Renting - Product variants + Fixed Modify reservation dates when duration time_from was not showing 
 
 = 1.1.1 =
 * Added: Renting select product - Hide price if not available control
