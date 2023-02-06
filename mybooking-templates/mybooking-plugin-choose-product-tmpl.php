@@ -204,7 +204,7 @@
             <% } %>
           </div>
 
-          <div class="card-static_footer">
+          <div class="card-static_footer <% if (product.availability && product.variants_enabled) { %>mybooking-product_variant_footer<% } %>">
             <!-- Key characteristics -->
             <div class="card-static_icons">
               <% if (product.key_characteristics) { %>

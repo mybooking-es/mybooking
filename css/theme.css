@@ -25403,6 +25403,7 @@ these properties do not need to be edited */
   --card-image-object-fit: contain;
   --card-image-padding: 0px;
   --card-list-key-show: flex;
+  --card-footer-height: 77px;
   --product-detail-bg-color: var(--white);
   --product-detail-dates-titles: var(--gray-900);
   --product-detail-dates-text: var(--gray-500);
@@ -29014,10 +29015,7 @@ img.wizard-summary_separator {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 1140px;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch; }
+  max-width: 1140px; }
 
 .cards-static-container:first-child {
   padding-top: 2rem; }
@@ -29062,8 +29060,7 @@ img.wizard-summary_separator {
   border-radius: 10px;
   -webkit-box-shadow: -6px 12px 50px -10px #cccccc;
           box-shadow: -6px 12px 50px -10px #cccccc;
-  overflow: hidden;
-  height: 100%; }
+  overflow: hidden; }
   .card-static i {
     position: absolute;
     left: 10px;
@@ -29266,8 +29263,10 @@ img.wizard-summary_separator {
   background-color: var(--card-body-bg-color);
   border-radius: 10px;
   border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  height: inherit; }
+  border-top-right-radius: 0; }
+
+.mybooking-product_variant_footer {
+  height: var(--card-footer-height); }
 
 .card-static_icons {
   display: var(--card-list-key-show);

@@ -10,7 +10,6 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 1140px;
-  align-items: stretch;
 }
 
 .cards-static-container:first-child {
@@ -43,7 +42,6 @@
   border-radius: 10px;
   box-shadow: -6px 12px 50px -10px rgb(204, 204, 204);
   overflow: hidden;
-  height: 100%;
   i {
     position: absolute;
     left: 10px;
@@ -252,7 +250,9 @@
   border-radius: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  height: inherit;
+}
+.mybooking-product_variant_footer {
+  height:    var(--card-footer-height);
 }
 
   .card-static_icons {
