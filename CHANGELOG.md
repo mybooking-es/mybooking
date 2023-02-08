@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.1] - 2023.02.08
+
+### Fixed
+
+- Renting product card with highlight message
+
 ## [1.2.0] - 2023.02.03
 
 ### Added
