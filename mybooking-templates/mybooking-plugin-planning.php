@@ -11,7 +11,7 @@
   <form class="mybooking-planning-head">
     <div class="field">
       <label  class="label">
-        <?php echo esc_html_x( 'Date', 'planning', 'mybooking-wp-plugin' ) ?>
+        <?php echo esc_html_x( 'Date', 'planning', 'mybooking' ) ?>
       </label>
       <div class="control">
         <input type="text" name="date"  />
@@ -40,7 +40,7 @@
         <div class="select">
           <select name="category" style="min-width: 300px;">
             <option value="all">
-              <?php echo esc_html_x( 'All', 'planning', 'mybooking-wp-plugin' ) ?>
+              <?php echo esc_html_x( 'All', 'planning', 'mybooking' ) ?>
             </option>
           </select>
         </div>

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2023-02-03 22:55+0000\n"
+"PO-Revision-Date: 2023-03-20 10:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -1851,6 +1851,16 @@ msgctxt "pagination"
 msgid "Posts navigation"
 msgstr "Navigation des articles"
 
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-planning.php:43
+msgctxt "planning"
+msgid "All"
+msgstr "Tout"
+
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-planning.php:14
+msgctxt "planning"
+msgid "Date"
+msgstr "Date"
+
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/inc/post-functions.php:40
 msgctxt "post-meta"
 msgid "by"
@@ -1874,6 +1884,7 @@ msgstr "Réserver!"
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-reservation.php:21
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product.php:29
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-choose-product.php:44
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-planning.php:68
 msgctxt "renting_choose_product"
 msgid "Close"
 msgstr "Proche"
