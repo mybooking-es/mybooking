@@ -1,3 +1,14 @@
+<?php
+  /**
+   * The Template for the planning
+   *
+   * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-planning.php
+   *
+   * @phpcs:disable PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPOpenTagFound
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPShortOpenTagFound
+   */
+?>
 <div class="mybooking-planning-content" 
   data-family-code="<?php echo isset($args['family']) ? esc_attr( $args['family'] ) : '' ?>" 
   data-category-code="<?php echo isset($args['category']) ? esc_attr( $args['category']) : '' ?>" 
