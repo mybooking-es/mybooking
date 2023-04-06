@@ -42,6 +42,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 
 = 1.2.2 =
 * Added: Renting - Planning modal template
+* Added: Renting - Passengers
 
 = 1.2.1 =
 * Fixed: Renting - Product card with highlight message hid the price
@@ -268,7 +269,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Upgrade Notice ==
 
 = 1.2.2 =
-* Added: Renting - Planning modal template
+* Added: Renting - Planning modal template + My reservation passengers
 
 = 1.2.1 =
 * Fixed: Renting - Product card with highlight message hid the price
