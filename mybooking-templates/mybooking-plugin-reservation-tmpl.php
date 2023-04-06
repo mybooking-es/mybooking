@@ -158,17 +158,18 @@
       <% if (showReservationForm) { %>
         <div class="col-12 col-md-8">
           <div id="reservation_form_container" class="col process-section-box" style="display:none"></div>
-
-          <!-- Passengers -->
-          <div id="passengers_container" class="col process-section-box" style="display:none">
-            <h4 class="my-3">
-              <?php echo esc_html_x('Passengers', 'renting_my_reservation', 'mybooking') ?>
-            </h4>
-            
-            <div id="passengers_table_container"></div>
-            <div id="passengers_form_container"></div>
-          </div>
-          <!-- End passengers -->
+          <% if (configuration.guests) { %>
+            <!-- Passengers -->
+            <div id="passengers_container" class="col process-section-box" style="display:none">
+              <h4 class="my-3">
+                <?php echo esc_html_x('Passengers', 'renting_my_reservation', 'mybooking') ?>
+              </h4>
+              
+              <div id="passengers_table_container"></div>
+              <div id="passengers_form_container"></div>
+            </div>
+            <!-- End passengers -->
+          <% } %>
         </div>
       <% } %>
         
