@@ -4,7 +4,7 @@ Contributors:       hectorasencio, marcelreig, juanmiqueo
 Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
-Tested up to:       6.1
+Tested up to:       6.2
 Stable tag:         1.2.2
 Requires PHP:       7.2
 License: GPL-2.0-or-later
