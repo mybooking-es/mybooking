@@ -158,6 +158,17 @@
       <% if (showReservationForm) { %>
         <div class="col-12 col-md-8">
           <div id="reservation_form_container" class="col process-section-box" style="display:none"></div>
+
+          <!-- Passengers -->
+          <div id="passengers_container" class="col process-section-box" style="display:none">
+            <h4 class="my-3">
+              <?php echo esc_html_x('Passengers', 'renting_my_reservation', 'mybooking') ?>
+            </h4>
+            
+            <div id="passengers_table_container"></div>
+            <div id="passengers_form_container"></div>
+          </div>
+          <!-- End passengers -->
         </div>
       <% } %>
         
@@ -295,7 +306,7 @@
             </li>
           </ul> 
 
-          <% if ( booking.product_guarantee_cost > 0 || booking.product_deposit_cost > 0 || 
+          <% if ( booking.product_guarantee_cost > 0 || booking.product_deposit_cost > 0 || 
                  (typeof booking.driver_age_deposit !== 'undefined' && booking.driver_age_deposit > 0) || 
                  booking.total_deposit > 0) { %>
            <ul class="list-group border-0 list-group-flush mt-3"> 
@@ -318,7 +329,7 @@
                     class="product-amount pull-right"><%=configuration.formatCurrency(booking.product_deposit_cost)%></span>
                 </li>             
               <% } %>
-              <% if (typeof booking.driver_age_deposit !== 'undefined' && booking.driver_age_deposit > 0) { %>
+              <% if (typeof booking.driver_age_deposit !== 'undefined' && booking.driver_age_deposit > 0) { %>
                 <li class="border-0 list-group-item d-flex justify-content-between align-items-center">
                   <span
                     class="extra-name"><?php echo esc_html_x( "Driver age deposit", 'renting_my_reservation', 'mybooking' ) ?></span>
@@ -957,3 +968,171 @@
   </ul>
 
 </script>  
+
+<!-- Passengers block -->
+<script type="text/tmpl" id="script_passengers_table">
+  <div id="passengers_list">
+    <div id="passengers_list__not_data" style="display:none">
+      <?php echo esc_html_x("No passengers found in reservation", 'renting_my_reservation_passenger', 'mybooking') ?>
+    </div>
+    <div id="passengers_list__content">
+    </div>
+    
+</script>
+
+<script type="text/tmpl" id="script_passengers_form">
+  <br />
+  <form id="booking_passengers_form" name="booking_passengers_form"> 
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="passenger_name">
+          <?php echo esc_html_x("Name", 'renting_my_reservation_passenger', 'mybooking') ?>
+        </label>
+        <input class="form-control" id="passenger_name" name="passenger_name" type="text"
+          placeholder="<%=configuration.escapeHtml(" <?php echo esc_attr_x("Name", 'renting_my_reservation_passenger', 'mybooking') ?>")%>"
+        value=""
+        maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="">
+          <?php echo esc_html_x("Surname", 'renting_my_reservation_passenger', 'mybooking') ?>
+        </label>
+        <input class="form-control" id="passenger_surname" name="passenger_surname" type="text"
+          placeholder="<%=configuration.escapeHtml(" <?php echo esc_attr_x("Surname", 'renting_my_reservation_passenger', 'mybooking') ?>")%>" value=""
+        maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="passenger_document_id">
+          <?php echo esc_html_x("ID card or passport", 'renting_my_reservation_passenger', 'mybooking') ?>
+        </label>
+        <input class="form-control" id="passenger_document_id" name="passenger_document_id" type="text"
+          placeholder="<%=configuration.escapeHtml(" <?php echo esc_attr_x("ID card or passport", 'renting_my_reservation_passenger', 'mybooking') ?>")%>" value=""
+        maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
+      </div>
+      <!-- <div class="form-group col-md-6">
+        <label for="passenger_document_id_date">
+          <?php echo esc_html_x('Date of Issue', 'renting_my_reservation_passenger', 'mybooking') ?>
+        </label>
+        <div class="custom-date-form">
+          <div class="custom-date-item">
+            <select name="passenger_document_id_date_day" id="passenger_document_id_date_day" class="form-control" <% if
+              (!booking.can_edit_online){%>disabled<%}%>></select>
+          </div>
+          <div class="custom-date-item">
+            <select name="passenger_document_id_date_month" id="passenger_document_id_date_month" class="form-control" <%
+              if (!booking.can_edit_online){%>disabled<%}%>></select>
+          </div>
+          <div class="custom-date-item">
+            <select name="passenger_document_id_date_year" id="passenger_document_id_date_year" class="form-control" <% if
+              (!booking.can_edit_online){%>disabled<%}%>></select>
+          </div>
+        </div>
+        <input type="hidden" name="passenger_document_id_date" id="passenger_document_id_date"></input>
+      </div> -->
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="passenger_email">
+          <?php echo esc_html_x('Email address', 'renting_my_reservation_passenger', 'mybooking') ?>
+        </label>
+        <input class="form-control" id="passenger_email" name="passenger_email" type="text"
+          placeholder="<%=configuration.escapeHtml(" <?php echo esc_attr_x('Email address', 'renting_my_reservation_passenger', 'mybooking') ?>")%>"
+        value=""
+        maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="passenger_phone_number">
+          <?php echo esc_html_x('Phone number', 'renting_my_reservation_passenger', 'mybooking') ?>
+        </label>
+        <input class="form-control" id="passenger_phone_number" name="passenger_phone_number" type="text"
+          placeholder="<%=configuration.escapeHtml(" <?php echo esc_attr_x('Phone number', 'renting_my_reservation_passenger', 'mybooking') ?>")%>"
+        value=""
+        maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="passenger_notes">
+          <?php echo esc_html_x('Notes', 'renting_my_reservation_passenger', 'mybooking') ?>
+        </label>
+        <input class="form-control" id="passenger_notes" name="passenger_notes" type="text"
+          placeholder="<%=configuration.escapeHtml(" <?php echo esc_attr_x('Notes', 'renting_my_reservation_passenger', 'mybooking') ?>")%>"
+        value=""
+        maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
+      </div>
+    </div>
+
+    <hr />
+
+    <div id="booking_passengers_form_errors" class="alert alert-danger" style="display:none"></div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <button class="btn btn-outline-dark" id="btn_add_passenger" <% if (!booking.can_edit_online){%>disabled<%}%>>
+          <?php echo esc_html_x('Add a new passenger', 'renting_my_reservation_passenger', 'mybooking') ?>
+        </button>
+      </div>
+    </div>
+  </form>
+</script>
+
+<script type="text/tmpl" id="script_passengers_list__item">
+  <div style="padding: 0.5rem 0; font-size: 14px;">
+    <div class="form-row" style="align-items: center">
+      <div class="form-group col-xs-1" style="width: 5%;">
+        <span class="badge badge-info" style="position: relative; top: -0.1rem;"><%= index %></span>
+      </div>
+      <div class="form-group col-xs-9" style="width: 85%;">
+        <h6 style="margin: 0;">
+          <%= passenger.name %> <%= passenger.surname %> 
+        </h6>
+      </div>
+      <div class="form-group col-xs-2" style="width: 10%;">
+        <button class="btn float-right" id="btn_remove_passenger" title="<?php echo esc_attr_x("Remove", 'renting_my_reservation_passenger', 'mybooking') ?>" data-id="<%= passenger.id %>">
+          <i class="fa fa-trash"></i>
+        </button>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-sm-4">
+        <b>
+          <?php echo esc_html_x("ID card or passport", 'renting_my_reservation_passenger', 'mybooking') ?>
+        </b>
+        <br />
+        <%= passenger.document_id %>
+      </div>
+      <!-- <div class="form-group col-sm-4">
+        <b>
+          <?php echo esc_html_x('Date of Issue', 'renting_my_reservation_passenger', 'mybooking') ?>
+        </b>
+        <br />
+      </div> -->
+      <div class="form-group col-sm-4">
+        <b>
+          <?php echo esc_html_x('Email address', 'renting_my_reservation_passenger', 'mybooking') ?>
+        </b>
+        <br />
+        <%= passenger.email %>
+      </div>
+      <div class="form-group col-sm-4">
+        <b>
+          <?php echo esc_html_x('Phone number', 'renting_my_reservation_passenger', 'mybooking') ?>
+        </b>
+        <br />
+        <%= passenger.phone_number %>
+      </div>
+      <div class="form-group col-sm-12" style="margin-bottom: 0;">
+        <b>
+          <?php echo esc_html_x('Notes', 'renting_my_reservation_passenger', 'mybooking') ?>
+        </b>
+        <br />
+        <%= passenger.notes %>
+      </div>
+    </div>
+
+    <hr />
+    </div>
+  </div>
+</script>

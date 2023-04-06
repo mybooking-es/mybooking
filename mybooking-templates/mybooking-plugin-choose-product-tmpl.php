@@ -344,7 +344,7 @@
         <div class="col-xs-12 col-sm-4">
           <div class="form-group">
             <select name="<%= product.code %>" id="<%= product.code %>" class="form-control variant_product_selector">
-              <option value="0">Seleccionar variante</option>
+              <option value="0"><?php echo esc_html_x( 'Select', 'renting_choose_product', 'mybooking') ?></option>
               <% for (var idxV=0;idxV<variants.length;idxV++) { %>
                 <% var variant = variants[idxV]; %>
                 <option value="<%= variant.code %>" <% if  (variantsSelected[variant.code]) { %>selected<% } %>><%= variant.variant_name %> - <%=configuration.formatCurrency(variant.unit_price)%></option>
@@ -361,9 +361,9 @@
                 <%= variant.variant_name %>
               </label>
               <select name="<%= variant.code %>" id="<%= variant.code %>" <% if  (variant.available < 1) { %>disabled<% } %> class="form-control variant_product_selector">
-                <option value="0">Seleccionar unidades</option>
+                <option value="0"><?php echo esc_html_x( 'Select units', 'renting_choose_product', 'mybooking') ?></option>
                 <% for (var idxVO=1;idxVO<=variant.available;idxVO++) { %>
-                  <option value="<%= idxVO %>"  <% if  (variantsSelected[variant.code] && variantsSelected[variant.code] === idxVO) { %>selected<% } %>><%= idxVO %> <% if  (idxVO > 1) { %>unidades<% } else { %>unidad<% } %> - <%=configuration.formatCurrency(variant.unit_price * idxVO)%></option>
+                  <option value="<%= idxVO %>"  <% if  (variantsSelected[variant.code] && variantsSelected[variant.code] === idxVO) { %>selected<% } %>><%= idxVO %> <% if  (idxVO > 1) { %><?php echo esc_html_x( 'units', 'renting_choose_product', 'mybooking') ?><% } else { %><?php echo esc_html_x( 'unit', 'renting_choose_product', 'mybooking') ?><% } %> - <%=configuration.formatCurrency(variant.unit_price * idxVO)%></option>
                 <% } %>
                 </select>
             </div>
