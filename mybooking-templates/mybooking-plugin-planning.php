@@ -31,10 +31,21 @@
     </div>
     <div class="field" style="display: none;">
       <label  class="label">
+        <?php echo esc_html( MyBookingEngineContext::getInstance()->getRentalLocation() ) ?>
+      </label>
+      <div class="control">
+        <div class="select" data-default="<?php echo esc_attr( 'All', 'planning', 'mybooking' ) ?>">
+          <select name="rentalLocation" style="min-width: 300px;">
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="field" style="display: none;">
+      <label  class="label">
         <?php echo esc_html( MyBookingEngineContext::getInstance()->getFamily() ) ?>
       </label>
       <div class="control">
-        <div class="select">
+        <div class="select" data-default="<?php echo esc_attr( 'All', 'planning', 'mybooking' ) ?>">
           <select name="family" style="min-width: 300px;">
           </select>
         </div>
@@ -45,11 +56,8 @@
         <?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>
       </label>
       <div class="control">
-        <div class="select">
+        <div class="select" data-default="<?php echo esc_attr( 'All', 'planning', 'mybooking' ) ?>">
           <select name="category" style="min-width: 300px;">
-            <option value="all">
-              <?php echo esc_html_x( 'All', 'planning', 'mybooking' ) ?>
-            </option>
           </select>
         </div>
       </div>
