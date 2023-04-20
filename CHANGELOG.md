@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3] - 2023.04.20
+
+### Fixed
+
+- Variants - Selection of variants shows unit price instead of price
+
+
 ## [1.2.2] - 2023.04.06
 
 ### Added
