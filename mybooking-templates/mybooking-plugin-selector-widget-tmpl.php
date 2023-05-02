@@ -16,6 +16,18 @@
     <!-- Inline selector -->
     <div class="flex-form-group-wrapper flex-form-group-wrapper-inline">
 
+        <!-- Simple location -->
+        <% if (configuration.simpleLocation) { %>
+          <div class="flex-form-group">
+            <div class="flex-form-box mb-0">
+              <label for="widget_simple_location_id"><?php echo esc_html_x( 'Where', 'renting_form_selector', 'mybooking' ) ?></label>
+              <div class="flex-form-item">
+                <select name="simple_location_id" id="widget_simple_location_id" class="form-control"></select>
+              </div>
+            </div>
+          </div>
+        <% } %>
+
         <!-- Rental location -->
 
         <% if (not_hidden_rental_location_code && configuration.selectRentalLocation) { %>
