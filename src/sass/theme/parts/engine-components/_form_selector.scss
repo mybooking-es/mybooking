@@ -96,6 +96,10 @@
     .page-template-mybooking-pages .flex-form-group:nth-child(3n) {
       margin-left: 0px; // 1 column avoid margin between place and date
     }
+    .flex-form-group:last-child,
+    .page-template-mybooking-pages .flex-form-group:last-child {
+      margin-left: 0px;
+    }
   }
 }
 
@@ -126,6 +130,10 @@
   margin-left: 0px; // 1 column avoid margin between place and date
 }
 
+.page-template-mybooking-landing .flex-form-group:last-child {
+  margin-left: 0px;
+}
+
 // == Form group (acts as columns -high resolutions- or rows -low resolutions- )
 
 .flex-form-group {
@@ -146,6 +154,9 @@
 
 @media (min-width: 576px) {
   .flex-form-group:nth-child(2n) {
+    margin-left: 10px;
+  }
+  .flex-form-group:last-child {
     margin-left: 10px;
   }
 }
@@ -271,7 +282,7 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   }
   // Search button container
   .flex-form-box:last-child {
-    margin-left: 5px;
+    margin-left: 10px;
     flex-grow: 1;
   }
   // Flex-form-sticky > Search button

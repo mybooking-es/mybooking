@@ -13,6 +13,22 @@
 
   <div class="flex-form-group-wrapper">
 
+      <!-- Simple location -->
+        <% if (configuration.simpleLocation) { %>
+          <div class="flex-form-group">
+            <div class="flex-form-box">
+              <label for="simple_location_id">
+                <?php echo esc_html_x( 'Where', 'renting_form_selector', 'mybooking' ) ?>
+              </label>
+              <input type="text" disabled readonly class="form-control" style="opacity: 0; height: 0; margin: 0; padding: 0; border: none !important; margin-left: 20px;" /><!-- This is a input fake for width , TODO revise this -->
+              <div class="flex-form-item">
+                <select name="simple_location_id" id="simple_location_id" class="form-control"></select>
+              </div>
+            </div>
+          </div>
+        <% } %>
+        <!-- END Simple location -->
+
     <!-- Pickup / Return place or location -->
     <% if (configuration.pickupReturnPlace) { %> 
       <!-- Pickup / Return place -->
