@@ -983,11 +983,13 @@
 
 <script type="text/tmpl" id="script_passengers_form">
   <br />
+  <div id="passengers_error" class="alert alert-danger" style="display: none;"></div>
   <form id="booking_passengers_form" name="booking_passengers_form"> 
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="passenger_name">
           <?php echo esc_html_x("Name", 'renting_my_reservation_passenger', 'mybooking') ?>
+          *
         </label>
         <input class="form-control" id="passenger_name" name="passenger_name" type="text"
           placeholder="<%=configuration.escapeHtml(" <?php echo esc_attr_x("Name", 'renting_my_reservation_passenger', 'mybooking') ?>")%>"
@@ -997,6 +999,7 @@
       <div class="form-group col-md-6">
         <label for="">
           <?php echo esc_html_x("Surname", 'renting_my_reservation_passenger', 'mybooking') ?>
+          *
         </label>
         <input class="form-control" id="passenger_surname" name="passenger_surname" type="text"
           placeholder="<%=configuration.escapeHtml(" <?php echo esc_attr_x("Surname", 'renting_my_reservation_passenger', 'mybooking') ?>")%>" value=""
@@ -1007,6 +1010,7 @@
       <div class="form-group col-md-12">
         <label for="passenger_document_id">
           <?php echo esc_html_x("ID card or passport", 'renting_my_reservation_passenger', 'mybooking') ?>
+          *
         </label>
         <input class="form-control" id="passenger_document_id" name="passenger_document_id" type="text"
           placeholder="<%=configuration.escapeHtml(" <?php echo esc_attr_x("ID card or passport", 'renting_my_reservation_passenger', 'mybooking') ?>")%>" value=""
