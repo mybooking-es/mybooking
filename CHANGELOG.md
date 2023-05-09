@@ -1,11 +1,15 @@
 # Changelog
 
-## [1.2.3] - 2023.04.20
+## [1.2.3] - 2023.05.08
+
+### Added
+
+- Renting : Simple location
 
 ### Fixed
 
-- Variants - Selection of variants shows unit price instead of price
-
+- Renting - Variants - Selection of variants shows unit price instead of price
+- Renting - Planning
 
 ## [1.2.2] - 2023.04.06
 

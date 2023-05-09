@@ -41,7 +41,10 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Changelog ==
 
 = 1.2.3 =
+* Added: Renting - Simple location
 * Fixed: Renting - Variants choose product price
+* Fixed: Renting/Activities - Update my reservation data
+* Fixed: Renting - Planning improvements
 
 = 1.2.2 =
 * Added: Renting - Planning modal template
@@ -272,7 +275,7 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 == Upgrade Notice ==
 
 = 1.2.3 =
-* Fixed: Renting - Variants choose product price
+* Fixed: Variants, simple location, passengers, planning
 
 = 1.2.2 =
 * Added: Renting - Planning modal template + My reservation passengers
