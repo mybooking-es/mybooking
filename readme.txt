@@ -43,7 +43,8 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 = 1.2.3 =
 * Added: Renting - Simple location
 * Fixed: Renting - Variants choose product price
-* Fixed: Renting/Activities - Update my reservation data
+* Fixed: Renting - Update my reservation data
+* Fixed: Activities - Update my reservation data
 * Fixed: Renting - Planning improvements
 
 = 1.2.2 =

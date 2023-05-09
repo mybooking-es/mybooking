@@ -10,6 +10,8 @@
 
 - Renting - Variants - Selection of variants shows unit price instead of price
 - Renting - Planning
+- Renting - Update my reservation data
+- Activities - Update my reservation data
 
 ## [1.2.2] - 2023.04.06
 
