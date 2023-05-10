@@ -30,52 +30,47 @@
           </div>
 
           <!-- Characteristics -->
-          <?php if ($mybooking_product->characteristic_length != 0 ||
-                    $mybooking_product->characteristic_width != 0 ||
-                    $mybooking_product->characteristic_height != 0 || 
-                    $mybooking_product->optional_external_driver != '') { ?>
-            <div class="mybooking-product_detailed_characteristics">
-              <!-- Length -->
-              <?php if ($mybooking_product->characteristic_length != 0) { ?>
-                <span class="characteristics-text"><small>Eslora <?php echo number_format_i18n($mybooking_product->characteristic_length, 2)?> m.</small></span>
-              <?php } ?>
-              <!-- Width -->
-              <?php if ($mybooking_product->characteristic_width != 0) { ?>
-                <span class="characteristics-text"><small>Manga <?php echo number_format_i18n($mybooking_product->characteristic_width, 2)?> m.</small></span>
-              <?php } ?>
-              <!-- Height -->
-              <?php if ($mybooking_product->characteristic_height != 0) { ?>
-                <span class="characteristics-text"><small>Calado <?php echo number_format_i18n($mybooking_product->characteristic_height,2) ?> m.</small></span>
-              <?php } ?>
-              <?php if ($mybooking_product->optional_external_driver != '' || $mybooking_product->driving_license_type_name != '') { ?>
-                <br>
-              <?php } ?>
-              <!-- Optional external driver (skipper) -->
-              <?php if ($mybooking_product->optional_external_driver != '') { ?>
-                <img class="characteristics-img" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/key_characteristics/skipper.svg' ) ?>">
-                <span class="characteristics-text"><small><?php echo $mybooking_product->optional_external_driver_name ?></small></span>
-              <?php } ?>
-              <!-- Driving license -->
-              <?php if ($mybooking_product->optional_external_driver != 'required' && $mybooking_product->driving_license_type_name != '') { ?>
-                <img class="characteristics-img" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/key_characteristics/boat_license.svg' ) ?>">
-                <span class="characteristics-text"><small><?php echo $mybooking_product->driving_license_type_name ?></small></span>
-              <?php } ?>
-            </div>
+          <?php if (($mybooking_product->characteristic_length &&$mybooking_product->characteristic_length != 0) ||
+                    ($mybooking_product->characteristic_width && $mybooking_product->characteristic_width != 0) ||
+                    ($mybooking_product->characteristic_height && $mybooking_product->characteristic_height != 0) || 
+                    ($mybooking_product->optional_external_driver && $mybooking_product->optional_external_driver != '')) { ?>
+          <div class="mybooking-product_detailed_characteristics">
+            <!-- Length Eslora-->
+            <?php if ($mybooking_product->characteristic_length &&$mybooking_product->characteristic_length != 0) { ?>
+              <span class="characteristics-text"><small><?php echo esc_html_x('Length','renting_choose_product','mybooking') ?> <?php echo number_format_i18n($mybooking_product->characteristic_length, 2)?> m.</small></span>
+            <?php } ?>
+            <!-- Width Manga -->
+            <?php if ($mybooking_product->characteristic_width && $mybooking_product->characteristic_width != 0) { ?>
+              <span class="characteristics-text"><small><?php echo esc_html_x('Sleeve','renting_choose_product','mybooking') ?> <?php echo number_format_i18n($mybooking_product->characteristic_width, 2)?> m.</small></span>
+            <?php } ?>
+            <!-- Height Calado -->
+            <?php if ($mybooking_product->characteristic_height && $mybooking_product->characteristic_height != 0) { ?>
+              <span class="characteristics-text"><small><?php echo esc_html_x('Draft','renting_choose_product','mybooking') ?> <?php echo number_format_i18n($mybooking_product->characteristic_height,2) ?> m.</small></span>
+            <?php } ?>
+          </div>
+          <div class="mybooking-product_detailed_characteristics">
+            <!-- Optional external driver (skipper) -->
+            <?php if ($mybooking_product->optional_external_driver && $mybooking_product->optional_external_driver != '') { ?>
+              <span class="characteristics-text badge badge-secondary"><?php echo $mybooking_product->optional_external_driver_name ?></span>
+            <?php } ?>
+            <!-- Driving license -->
+            <?php if ($mybooking_product->optional_external_driver && $mybooking_product->optional_external_driver != '' || $mybooking_product->driving_license_type_name != null && $mybooking_product->driving_license_type_name != '') { ?>
+              <span class="characteristics-text badge badge-secondary"><?php echo esc_html_x('Nav. license','renting_choose_product','mybooking') ?> <?php echo $mybooking_product->driving_license_type_name ?></span>
+            <?php } ?>
+          </div>
           <?php } ?>
-
         </div>
         <div class="card-static_footer">
-
+        <div class="mybooking-product_characteristics mt-3 card-static_icons">
           <?php if ( isset( $mybooking_product->key_characteristics) && is_array( (array) $mybooking_product->key_characteristics ) && !empty( (array) $mybooking_product->key_characteristics ) ) { ?>
-            <div class="mybooking-product_characteristics mt-3 card-static_icons">
-              <?php foreach ( $mybooking_product->key_characteristics as $mybooking_key => $mybooking_value) { ?>
-                <div class="mybooking-product_characteristics-item icon">
-                  <img class="mybooking-product_characteristics-img" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/key_characteristics/'.$mybooking_key.'.svg' ) ?>" alt="<?php echo esc_attr( MyBookingEngineContext::getInstance()->getKeyCharacteristic( $mybooking_key ) ) ?>"/>
-                  <span class="mybooking-product_characteristics-key"><?php echo esc_html( $mybooking_value ) ?></span>
-                </div>
-              <?php } ?>
-            </div>
+            <?php foreach ( $mybooking_product->key_characteristics as $mybooking_key => $mybooking_value) { ?>
+              <div class="mybooking-product_characteristics-item icon">
+                <img class="mybooking-product_characteristics-img" src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/key_characteristics/'.$mybooking_key.'.svg' ) ?>" alt="<?php echo esc_attr( MyBookingEngineContext::getInstance()->getKeyCharacteristic( $mybooking_key ) ) ?>"/>
+                <span class="characteristics-text"><?php echo esc_html( $mybooking_value ) ?></span>
+              </div>
+            <?php } ?>
           <?php } ?>
+        </div>
 
           <?php if ( $args['use_detail_pages'] ) { ?>
             <?php  $mybooking_productIdAnchor = $mybooking_product->code;
