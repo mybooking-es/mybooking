@@ -202,6 +202,44 @@
               </div>
             </div>
             <% } %>
+
+            <% if ((product.characteristic_length && product.characteristic_length != 0) ||
+                (product.characteristic_width && product.characteristic_width != 0) ||
+                (product.characteristic_height && product.characteristic_height != 0) || 
+                (product.optional_external_driver && product.optional_external_driver != '')) { %>
+                <div class="mybooking-product_detailed_characteristics">
+                  <!-- Length Eslora -->
+                  <% if (product.characteristic_length && product.characteristic_length != 0) { %>
+                    <span class="characteristics-text">
+                      <small><?php echo esc_html_x('Length','renting_choose_product','mybooking') ?> <%=product.characteristic_length%> m.</small>
+                    </span>
+                  <% } %>
+                  <!-- Width Manga -->
+                  <% if (product.characteristic_width && product.characteristic_width != 0) { %>
+                    <span class="characteristics-text"><small><?php echo esc_html_x('Sleeve','renting_choose_product','mybooking') ?> <%=product.characteristic_width%> m.</small></span>
+                  <% } %>
+                  <!-- Height Calado -->
+                  <% if (product.characteristic_height && product.characteristic_height != 0) { %>
+                    <span class="characteristics-text"><small><?php echo esc_html_x('Draft','renting_choose_product','mybooking') ?> <%=product.characteristic_height%> m.</small></span>
+                  <% } %>
+                </div>
+                <div class="mybooking-product_detailed_characteristics">
+                  <!-- Optional external driver (skipper) -->
+                  <% if (product.optional_external_driver && product.optional_external_driver != '') { %>
+                    <span class="characteristics-text badge badge-secondary">
+                      <%=product.optional_external_driver_name%>
+                  </span>
+                  <% } %>
+                  <!-- Driving license -->
+                  <% if (product.optional_external_driver && product.optional_external_driver != '' || product.driving_license_type_name != null && product.driving_license_type_name != '') { %>
+                    <span class="characteristics-text badge badge-secondary">
+                      <?php echo esc_html_x('Nav. license','renting_choose_product','mybooking') ?>
+                      &nbsp;
+                      <%=product.driving_license_type_name%>
+                    </span>
+                  <% } %>
+                </div>
+            <% } %>
           </div>
 
           <div class="card-static_footer <% if (product.availability && product.variants_enabled) { %>mybooking-product_variant_footer<% } %>">

@@ -29301,7 +29301,11 @@ img.wizard-summary_separator {
     text-align: center; }
     .card-static_icons .icon span {
       font-size: 13px;
-      color: var(--card-key-characteristics-text-color); }
+      color: var(--card-key-characteristics-text-color);
+      line-height: 1;
+      text-overflow: ellipsis;
+      word-break: keep-all;
+      overflow: hidden; }
     .card-static_icons .icon img {
       height: 30px;
       width: 30px; }

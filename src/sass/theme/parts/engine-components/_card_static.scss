@@ -269,6 +269,10 @@
       span {
         font-size: 13px;
         color: var(--card-key-characteristics-text-color);
+        line-height: 1;
+        text-overflow: ellipsis;
+        word-break: keep-all;
+        overflow: hidden;
       }
       img {
         height: 30px;
