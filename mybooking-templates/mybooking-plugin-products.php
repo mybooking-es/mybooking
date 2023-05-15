@@ -37,25 +37,26 @@
             <div class="mybooking-product_detailed_characteristics">
               <!-- Length Eslora-->
               <?php if ($mybooking_product->characteristic_length &&$mybooking_product->characteristic_length != 0) { ?>
-                <span class="characteristics-text"><small><?php echo esc_html_x('Length','renting_choose_product','mybooking') ?> <?php echo esc_html( number_format_i18n($mybooking_product->characteristic_length, 2) ) ?> m.</small></span>
+                <span class="characteristics-text"><small><?php echo esc_html( MyBookingEngineContext::getInstance()->getLength() ) ?> <?php echo esc_html( number_format_i18n($mybooking_product->characteristic_length, 2) ) ?> m.</small></span>
               <?php } ?>
               <!-- Width Manga -->
               <?php if ($mybooking_product->characteristic_width && $mybooking_product->characteristic_width != 0) { ?>
-                <span class="characteristics-text"><small><?php echo esc_html_x('Sleeve','renting_choose_product','mybooking') ?> <?php echo esc_html( number_format_i18n($mybooking_product->characteristic_width, 2) )?> m.</small></span>
+                <span class="characteristics-text"><small><?php echo esc_html( MyBookingEngineContext::getInstance()->getWidth() ) ?> <?php echo esc_html( number_format_i18n($mybooking_product->characteristic_width, 2) )?> m.</small></span>
               <?php } ?>
               <!-- Height Calado -->
               <?php if ($mybooking_product->characteristic_height && $mybooking_product->characteristic_height != 0) { ?>
-                <span class="characteristics-text"><small><?php echo esc_html_x('Draft','renting_choose_product','mybooking') ?> <?php echo esc_html( number_format_i18n($mybooking_product->characteristic_height,2) ) ?> m.</small></span>
+                <span class="characteristics-text"><small><?php echo esc_html( MyBookingEngineContext::getInstance()->getHeight() ) ?> <?php echo esc_html( number_format_i18n($mybooking_product->characteristic_height,2) ) ?> m.</small></span>
               <?php } ?>
             </div>
             <div class="mybooking-product_detailed_characteristics">
               <!-- Optional external driver (skipper) -->
-              <?php if ($mybooking_product->optional_external_driver && $mybooking_product->optional_external_driver != '') { ?>
+              <?php if ( !empty( $mybooking_product->optional_external_driver ) ) { ?>
                 <span class="characteristics-text badge badge-secondary"><?php echo esc_html( $mybooking_product->optional_external_driver_name ) ?></span>
               <?php } ?>
               <!-- Driving license -->
-              <?php if ($mybooking_product->optional_external_driver && $mybooking_product->optional_external_driver != '' || $mybooking_product->driving_license_type_name != null && $mybooking_product->driving_license_type_name != '') { ?>
-                <span class="characteristics-text badge badge-secondary"><?php echo esc_html_x('Nav. license','renting_choose_product','mybooking') ?> <?php echo esc_html( $mybooking_product->driving_license_type_name ) ?></span>
+              <?php if ( $mybooking_product->optional_external_driver != 'required' && 
+                         !empty( $mybooking_product->driving_license_type_name ) ) { ?>
+                <span class="characteristics-text badge badge-secondary"><?php echo esc_html( $mybooking_product->driving_license_type_name ) ?></span>
               <?php } ?>
             </div>
           <?php } ?>
