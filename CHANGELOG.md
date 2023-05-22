@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.4] - 2023.05.XX
+
+### Fixed
+
+- Renting: Modify reservation - Default time_from and time_to where not times
+
 ## [1.2.3] - 2023.05.08
 
 ### Added

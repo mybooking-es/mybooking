@@ -107,7 +107,7 @@
           <% if (configuration.timeToFrom) { %>
             <select class="ml-1" id="time_from" name="time_from"></select>
           <% } else { %>
-            <input class="modify-dates form-control" type="hidden" name="time_from" />
+            <input class="modify-dates form-control" type="hidden" name="time_from"  value="<%=configuration.defaultTimeStart%>"/>
           <% } %>
 
         </div>
@@ -127,7 +127,7 @@
           <% if (configuration.timeToFrom) { %>
             <select class="ml-1" id="time_to" name="time_to"></select>
           <% } else { %>
-            <input class="modify-dates form-control" type="hidden" name="time_to"/>
+            <input class="modify-dates form-control" type="hidden" name="time_to" value="<%=configuration.defaultTimeEnd%>"/>
           <% } %>
         </div>
         </div>
