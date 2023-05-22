@@ -11,7 +11,7 @@
 ?>
 <script type="text/tmpl" id="form_calendar_selector_tmpl">
 
-<ol class="mybooking-product_calendar-step-list">
+  <ol class="mybooking-product_calendar-step-list">
 
       <% if (configuration.pickupReturnPlace) { %>
 
@@ -136,6 +136,10 @@
     <p class="color-gray-600">
       <span><%=shopping_cart.hours%>
         <?php echo esc_html_x( 'hours(s)', 'renting_product_calendar', 'mybooking' ) ?></span></p>
+    <% } else if (shopping_cart.hours > 0) { %>
+    <p class="color-gray-600">
+      <span><%=shopping_cart.minutes%>
+        <?php echo esc_html_x( 'minutes(s)', 'renting_product_calendar', 'mybooking' ) ?></span></p>
     <% } %>
 
     <!-- // Product -->
