@@ -1,6 +1,10 @@
 # Changelog
 
-## [1.2.4] - 2023.05.XX
+## [1.2.4] - 2023.05.25
+
+### Added
+
+- Renting: Skipper + Navigation license management
 
 ### Fixed
 

@@ -5,7 +5,7 @@ Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
 Tested up to:       6.2
-Stable tag:         1.2.3
+Stable tag:         1.2.4
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,10 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.2.4 =
+* Added: Renting - Skipper + Navigation license management
+* Fixed: Renting - Modify reservation - Default time_from and time_to where not times
 
 = 1.2.3 =
 * Added: Renting - Simple location
@@ -274,6 +278,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.2.4 =
+* Added: Renting - Skipper + Navigation license management
 
 = 1.2.3 =
 * Fixed: Variants, simple location, passengers, planning
