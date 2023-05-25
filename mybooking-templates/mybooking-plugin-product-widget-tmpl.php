@@ -139,7 +139,7 @@
     <% } else if (shopping_cart.hours > 0) { %>
     <p class="color-gray-600">
       <span><%=shopping_cart.minutes%>
-        <?php echo esc_html_x( 'minutes(s)', 'renting_product_calendar', 'mybooking' ) ?></span></p>
+        <?php echo esc_html_x( 'minutes', 'renting_product_calendar', 'mybooking' ) ?></span></p>
     <% } %>
 
     <!-- // Product -->

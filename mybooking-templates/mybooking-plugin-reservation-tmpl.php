@@ -94,6 +94,26 @@
             <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
               <% var booking_line = booking.booking_lines[idx]; %>
               <h2 class="product-name mb-3"><%=booking_line.item_description_customer_translation%></h2>
+              <!-- Optional external driver + driving license -->
+              <% if ((typeof booking.optional_external_driver !== '' &&
+                     booking.optional_external_driver) ||
+                    (typeof booking.item_driving_license_type_name !== '' &&
+                     booking.item_driving_license_type_name) ) { %>
+                <% if (typeof booking.optional_external_driver !== '' &&
+                      booking.optional_external_driver) { %>
+                  <span class="badge badge-secondary"><%=booking.optional_external_driver%></span>    
+                <% } %>
+                <% if (typeof booking.item_driving_license_type_name !== '' &&
+                      booking.item_driving_license_type_name) { %>
+                  <span class="badge badge-secondary"><%=booking.item_driving_license_type_name%></span>    
+                <% } %>
+              <% } %>
+
+              <% if (typeof booking.item_hired_info !== '' &&
+                      booking.item_hired_info) { %>
+                <p class="text-muted mt-2"><%=booking.item_hired_info%></p>
+              <% } %>
+
               <small class="detail-text"><?php echo esc_html_x( 'Reservation Id', 'renting_my_reservation', 'mybooking') ?></small>
               <h3> <%=booking.id%> </h3>
 
@@ -450,192 +470,59 @@
         </div>
       </div>
       <!-- Driver information -->
-      <% if (configuration.rentingFormFillDataDriverDetail) { %>
-        <h4 class="my-3"><?php echo esc_html_x('Main driver', 'renting_my_reservation', 'mybooking') ?></h4>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="driver_name"><?php echo esc_html_x("Name", 'renting_my_reservation', 'mybooking') ?></label>
-            <input class="form-control" id="driver_name" name="driver_name" type="text"
-              placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Name", 'renting_my_reservation', 'mybooking') ?>")%>"
-              value="<%=booking.driver_name%>"
-              maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
-          </div>
-          <div class="form-group col-md-6">
-            <label for=""><?php echo esc_html_x("Surname", 'renting_my_reservation', 'mybooking') ?></label>
-            <input class="form-control" id="driver_surname" name="driver_surname" type="text"
-              placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Surname", 'renting_my_reservation', 'mybooking') ?>")%>" value="<%=booking.driver_surname%>"
-              maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="driver_document_id"><?php echo esc_html_x("ID card or passport", 'renting_my_reservation', 'mybooking') ?></label>
-            <input class="form-control" id="driver_document_id" name="driver_document_id" type="text"
-              placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("ID card or passport", 'renting_my_reservation', 'mybooking') ?>")%>" value="<%=booking.driver_document_id%>"
-              maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
-          </div>
-          <div class="form-group col-md-6">
-            <label
-              for="driver_document_id_date"><?php echo esc_html_x('Date of Issue', 'renting_my_reservation', 'mybooking') ?></label>
-            <div class="custom-date-form">
-              <div class="custom-date-item">
-                <select name="driver_document_id_date_day" id="driver_document_id_date_day"
-                  class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-              </div>
-              <div class="custom-date-item">
-                <select name="driver_document_id_date_month" id="driver_document_id_date_month"
-                  class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-              </div>
-              <div class="custom-date-item">
-                <select name="driver_document_id_date_year" id="driver_document_id_date_year"
-                  class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-              </div>
-            </div>
-            <input type="hidden" name="driver_document_id_date" id="driver_document_id_date"></input>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label
-              for="driver_driving_license_number"><?php echo  esc_html_x('Driving license number', 'renting_my_reservation', 'mybooking') ?></label>
-            <input class="form-control" id="driver_driving_license_number" name="driver_driving_license_number"
-              type="text" placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x('Driving license number', 'renting_my_reservation', 'mybooking') ?>")%>"
-              value="<%=booking.driver_driving_license_number%>"
-              maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
-          </div>
-          <div class="form-group col-md-6">
-            <label
-              for="driver_driving_license_date"><?php echo esc_html_x('Driving license date of issue', 'renting_my_reservation', 'mybooking') ?></label>
-            <div class="custom-date-form">
-              <div class="custom-date-item">
-                <select name="driver_driving_license_date_day" id="driver_driving_license_date_day"
-                  class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-              </div>
-              <div class="custom-date-item">
-                <select name="driver_driving_license_date_month" id="driver_driving_license_date_month"
-                  class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-              </div>
-              <div class="custom-date-item">
-                <select name="driver_driving_license_date_year" id="driver_driving_license_date_year"
-                  class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-              </div>
-            </div>
-            <input type="hidden" name="driver_driving_license_date" id="driver_driving_license_date"></input>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label class="w-100"
-              for="driver_driving_license_country"><?php echo esc_html_x('Driving license expedition country', 'renting_my_reservation', 'mybooking') ?>
-              </label>
-              <select name="driver_driving_license_country" id="driver_driving_license_country"
-                class="form-control mt-0" <% if (!booking.can_edit_online){%>disabled<%}%>>
-              </select>
-          </div>
-          <div class="form-group col-md-6">
-            <label
-              for="driver_date_of_birth"><?php echo esc_html_x('Date of birth', 'renting_my_reservation', 'mybooking') ?></label>
-            <div class="custom-date-form">
-              <div class="custom-date-item">
-                <select name="driver_date_of_birth_day" id="driver_date_of_birth_day"
-                  class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-              </div>
-              <div class="custom-date-item">
-                <select name="driver_date_of_birth_month" id="driver_date_of_birth_month"
-                  class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-              </div>
-              <div class="custom-date-item">
-                <select name="driver_date_of_birth_year" id="driver_date_of_birth_year"
-                  class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-              </div>
-            </div>
-            <input type="hidden" name="driver_date_of_birth" id="driver_date_of_birth"></input>
-          </div>
-        </div>
-        <% if (configuration.rentingFormFillDataAdditionalDriver1 || 
-               configuration.rentingFormFillDataAdditionalDriver2) { %>
-          <!-- Additional drivers -->
-          <h4 class="my-3"><?php echo esc_html_x('Additional drivers', 'renting_my_reservation', 'mybooking') ?></h4>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="driver_name"><?php echo esc_html_x("Name", 'renting_my_reservation', 'mybooking') ?></label>
-              <input class="form-control" id="additional_driver_1_name" name="additional_driver_1_name" type="text"
-                placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Name", 'renting_my_reservation', 'mybooking') ?>")%>"
-                value="<%=booking.additional_driver_1_name%>"
-                maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
-            </div>
-            <div class="form-group col-md-6">
-              <label for=""><?php echo esc_html_x("Surname", 'renting_my_reservation', 'mybooking') ?></label>
-              <input class="form-control" id="additional_driver_1_surname" name="additional_driver_1_surname" type="text"
-                placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Surname", 'renting_my_reservation', 'mybooking') ?>")%>"
-                value="<%=booking.additional_driver_1_surname%>"
-                maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label
-                for="driver_driving_license_number"><?php echo esc_html_x('Driving license number', 'renting_my_reservation', 'mybooking') ?></label>
-              <input class="form-control" id="additional_driver_1_driving_license_number" name="additional_driver_1_driving_license_number"
-                type="text" placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x('Driving license number', 'renting_my_reservation', 'mybooking') ?>")%>"
-                value="<%=booking.additional_driver_1_driving_license_number%>"
-                maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
-            </div>
-            <div class="form-group col-md-6">
-              <label
-                for="driver_driving_license_date"><?php echo esc_html_x('Driving license date of issue', 'renting_my_reservation', 'mybooking') ?></label>
-              <div class="custom-date-form">
-                <div class="custom-date-item">
-                  <select name="additional_driver_1_driving_license_date_day" id="additional_driver_1_driving_license_date_day"
-                    class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-                </div>
-                <div class="custom-date-item">
-                  <select name="additional_driver_1_driving_license_date_month" id="additional_driver_1_driving_license_date_month"
-                    class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-                </div>
-                <div class="custom-date-item">
-                  <select name="additional_driver_1_driving_license_date_year" id="additional_driver_1_driving_license_date_year"
-                    class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
-                </div>
-              </div>
-              <input type="hidden" name="additional_driver_1_driving_license_date" id="additional_driver_1_driving_license_date"></input>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="driver_driving_license_country">
-                <?php echo esc_html_x('Driving license expedition country', 'renting_my_reservation', 'mybooking') ?>
-                </label>
-                <select name="additional_driver_1_driving_license_country" id="additional_driver_1_driving_license_country"
-                  class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>>
-                </select>
-              
-            </div>
-          </div>
-          <% if (configuration.rentingFormFillDataAdditionalDriver2) { %>
-            <!-- Additional driver 2 -->
-            <hr>
+      <% if (!booking.has_optional_external_driver) { %>
+        <% if (configuration.rentingFormFillDataDriverDetail) { %>
+          <h4 class="my-3"><?php echo esc_html( MyBookingEngineContext::getInstance()->getDriver() ) ?></h4>
+          <% if (booking.driver_type === 'driver') { %>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="driver_name"><?php echo esc_html_x("Name", 'renting_my_reservation', 'mybooking') ?></label>
-                <input class="form-control" id="additional_driver_2_name" name="additional_driver_2_name" type="text"
+                <input class="form-control" id="driver_name" name="driver_name" type="text"
                   placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Name", 'renting_my_reservation', 'mybooking') ?>")%>"
-                  value="<%=booking.additional_driver_2_name%>"
+                  value="<%=booking.driver_name%>"
                   maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
               </div>
               <div class="form-group col-md-6">
                 <label for=""><?php echo esc_html_x("Surname", 'renting_my_reservation', 'mybooking') ?></label>
-                <input class="form-control" id="additional_driver_2_surname" name="additional_driver_2_surname" type="text"
-                  placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Surname", 'renting_my_reservation', 'mybooking') ?>")%>"
-                  value="<%=booking.additional_driver_2_surname%>"
+                <input class="form-control" id="driver_surname" name="driver_surname" type="text"
+                  placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Surname", 'renting_my_reservation', 'mybooking') ?>")%>" value="<%=booking.driver_surname%>"
                   maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="driver_document_id"><?php echo esc_html_x("ID card or passport", 'renting_my_reservation', 'mybooking') ?></label>
+                <input class="form-control" id="driver_document_id" name="driver_document_id" type="text"
+                  placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("ID card or passport", 'renting_my_reservation', 'mybooking') ?>")%>" value="<%=booking.driver_document_id%>"
+                  maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
+              </div>
+              <div class="form-group col-md-6">
+                <label
+                  for="driver_document_id_date"><?php echo esc_html_x('Date of Issue', 'renting_my_reservation', 'mybooking') ?></label>
+                <div class="custom-date-form">
+                  <div class="custom-date-item">
+                    <select name="driver_document_id_date_day" id="driver_document_id_date_day"
+                      class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                  </div>
+                  <div class="custom-date-item">
+                    <select name="driver_document_id_date_month" id="driver_document_id_date_month"
+                      class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                  </div>
+                  <div class="custom-date-item">
+                    <select name="driver_document_id_date_year" id="driver_document_id_date_year"
+                      class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                  </div>
+                </div>
+                <input type="hidden" name="driver_document_id_date" id="driver_document_id_date"></input>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label
-                  for="driver_driving_license_number"><?php echo esc_html_x('Driving license number', 'renting_my_reservation', 'mybooking') ?></label>
-                <input class="form-control" id="additional_driver_2_driving_license_number" name="additional_driver_2_driving_license_number"
+                  for="driver_driving_license_number"><?php echo  esc_html_x('Driving license number', 'renting_my_reservation', 'mybooking') ?></label>
+                <input class="form-control" id="driver_driving_license_number" name="driver_driving_license_number"
                   type="text" placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x('Driving license number', 'renting_my_reservation', 'mybooking') ?>")%>"
-                  value="<%=booking.additional_driver_2_driving_license_number%>"
+                  value="<%=booking.driver_driving_license_number%>"
                   maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
               </div>
               <div class="form-group col-md-6">
@@ -643,33 +530,212 @@
                   for="driver_driving_license_date"><?php echo esc_html_x('Driving license date of issue', 'renting_my_reservation', 'mybooking') ?></label>
                 <div class="custom-date-form">
                   <div class="custom-date-item">
-                    <select name="additional_driver_2_driving_license_date_day" id="additional_driver_2_driving_license_date_day"
+                    <select name="driver_driving_license_date_day" id="driver_driving_license_date_day"
                       class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
                   </div>
                   <div class="custom-date-item">
-                    <select name="additional_driver_2_driving_license_date_month" id="additional_driver_2_driving_license_date_month"
+                    <select name="driver_driving_license_date_month" id="driver_driving_license_date_month"
                       class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
                   </div>
                   <div class="custom-date-item">
-                    <select name="additional_driver_2_driving_license_date_year" id="additional_driver_2_driving_license_date_year"
+                    <select name="driver_driving_license_date_year" id="driver_driving_license_date_year"
                       class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
                   </div>
                 </div>
-                <input type="hidden" name="additional_driver_2_driving_license_date" id="additional_driver_2_driving_license_date"></input>
+                <input type="hidden" name="driver_driving_license_date" id="driver_driving_license_date"></input>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label class="w-100"
+                  for="driver_driving_license_country"><?php echo esc_html_x('Driving license expedition country', 'renting_my_reservation', 'mybooking') ?>
+                  </label>
+                  <select name="driver_driving_license_country" id="driver_driving_license_country"
+                    class="form-control mt-0" <% if (!booking.can_edit_online){%>disabled<%}%>>
+                  </select>
               </div>
               <div class="form-group col-md-6">
                 <label
-                  for="driver_driving_license_country"><?php echo esc_html_x('Driving license expedition country', 'renting_my_reservation', 'mybooking') ?>
-                      </label>
-                  <select name="additional_driver_2_driving_license_country" id="additional_driver_2_driving_license_country"
-                    class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>>
-                  </select>
-            
+                  for="driver_date_of_birth"><?php echo esc_html_x('Date of birth', 'renting_my_reservation', 'mybooking') ?></label>
+                <div class="custom-date-form">
+                  <div class="custom-date-item">
+                    <select name="driver_date_of_birth_day" id="driver_date_of_birth_day"
+                      class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                  </div>
+                  <div class="custom-date-item">
+                    <select name="driver_date_of_birth_month" id="driver_date_of_birth_month"
+                      class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                  </div>
+                  <div class="custom-date-item">
+                    <select name="driver_date_of_birth_year" id="driver_date_of_birth_year"
+                      class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                  </div>
+                </div>
+                <input type="hidden" name="driver_date_of_birth" id="driver_date_of_birth"></input>
+              </div>
+            </div>
+            <% if (configuration.rentingFormFillDataAdditionalDriver1 || 
+                   configuration.rentingFormFillDataAdditionalDriver2) { %>
+              <!-- Additional drivers -->
+              <h4 class="my-3"><?php echo esc_html_x('Additional drivers', 'renting_my_reservation', 'mybooking') ?></h4>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="driver_name"><?php echo esc_html_x("Name", 'renting_my_reservation', 'mybooking') ?></label>
+                  <input class="form-control" id="additional_driver_1_name" name="additional_driver_1_name" type="text"
+                    placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Name", 'renting_my_reservation', 'mybooking') ?>")%>"
+                    value="<%=booking.additional_driver_1_name%>"
+                    maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for=""><?php echo esc_html_x("Surname", 'renting_my_reservation', 'mybooking') ?></label>
+                  <input class="form-control" id="additional_driver_1_surname" name="additional_driver_1_surname" type="text"
+                    placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Surname", 'renting_my_reservation', 'mybooking') ?>")%>"
+                    value="<%=booking.additional_driver_1_surname%>"
+                    maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label
+                    for="driver_driving_license_number"><?php echo esc_html_x('Driving license number', 'renting_my_reservation', 'mybooking') ?></label>
+                  <input class="form-control" id="additional_driver_1_driving_license_number" name="additional_driver_1_driving_license_number"
+                    type="text" placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x('Driving license number', 'renting_my_reservation', 'mybooking') ?>")%>"
+                    value="<%=booking.additional_driver_1_driving_license_number%>"
+                    maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
+                </div>
+                <div class="form-group col-md-6">
+                  <label
+                    for="driver_driving_license_date"><?php echo esc_html_x('Driving license date of issue', 'renting_my_reservation', 'mybooking') ?></label>
+                  <div class="custom-date-form">
+                    <div class="custom-date-item">
+                      <select name="additional_driver_1_driving_license_date_day" id="additional_driver_1_driving_license_date_day"
+                        class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                    </div>
+                    <div class="custom-date-item">
+                      <select name="additional_driver_1_driving_license_date_month" id="additional_driver_1_driving_license_date_month"
+                        class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                    </div>
+                    <div class="custom-date-item">
+                      <select name="additional_driver_1_driving_license_date_year" id="additional_driver_1_driving_license_date_year"
+                        class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                    </div>
+                  </div>
+                  <input type="hidden" name="additional_driver_1_driving_license_date" id="additional_driver_1_driving_license_date"></input>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="driver_driving_license_country">
+                    <?php echo esc_html_x('Driving license expedition country', 'renting_my_reservation', 'mybooking') ?>
+                    </label>
+                    <select name="additional_driver_1_driving_license_country" id="additional_driver_1_driving_license_country"
+                      class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>>
+                    </select>
+                  
+                </div>
+              </div>
+              <% if (configuration.rentingFormFillDataAdditionalDriver2) { %>
+                <!-- Additional driver 2 -->
+                <hr>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="driver_name"><?php echo esc_html_x("Name", 'renting_my_reservation', 'mybooking') ?></label>
+                    <input class="form-control" id="additional_driver_2_name" name="additional_driver_2_name" type="text"
+                      placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Name", 'renting_my_reservation', 'mybooking') ?>")%>"
+                      value="<%=booking.additional_driver_2_name%>"
+                      maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for=""><?php echo esc_html_x("Surname", 'renting_my_reservation', 'mybooking') ?></label>
+                    <input class="form-control" id="additional_driver_2_surname" name="additional_driver_2_surname" type="text"
+                      placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Surname", 'renting_my_reservation', 'mybooking') ?>")%>"
+                      value="<%=booking.additional_driver_2_surname%>"
+                      maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label
+                      for="driver_driving_license_number"><?php echo esc_html_x('Driving license number', 'renting_my_reservation', 'mybooking') ?></label>
+                    <input class="form-control" id="additional_driver_2_driving_license_number" name="additional_driver_2_driving_license_number"
+                      type="text" placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x('Driving license number', 'renting_my_reservation', 'mybooking') ?>")%>"
+                      value="<%=booking.additional_driver_2_driving_license_number%>"
+                      maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label
+                      for="driver_driving_license_date"><?php echo esc_html_x('Driving license date of issue', 'renting_my_reservation', 'mybooking') ?></label>
+                    <div class="custom-date-form">
+                      <div class="custom-date-item">
+                        <select name="additional_driver_2_driving_license_date_day" id="additional_driver_2_driving_license_date_day"
+                          class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                      </div>
+                      <div class="custom-date-item">
+                        <select name="additional_driver_2_driving_license_date_month" id="additional_driver_2_driving_license_date_month"
+                          class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                      </div>
+                      <div class="custom-date-item">
+                        <select name="additional_driver_2_driving_license_date_year" id="additional_driver_2_driving_license_date_year"
+                          class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>></select>
+                      </div>
+                    </div>
+                    <input type="hidden" name="additional_driver_2_driving_license_date" id="additional_driver_2_driving_license_date"></input>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label
+                      for="driver_driving_license_country"><?php echo esc_html_x('Driving license expedition country', 'renting_my_reservation', 'mybooking') ?>
+                          </label>
+                      <select name="additional_driver_2_driving_license_country" id="additional_driver_2_driving_license_country"
+                        class="form-control" <% if (!booking.can_edit_online){%>disabled<%}%>>
+                      </select>
+                
+                  </div>
+                </div>
+              <% } %>
+            <% } %>  
+          <% } else if (booking.driver_type === 'skipper') { %>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="driver_name"><?php echo esc_html_x("Name", 'renting_my_reservation', 'mybooking') ?></label>
+                <input class="form-control" id="driver_name" name="driver_name" type="text"
+                  placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Name", 'renting_my_reservation', 'mybooking') ?>")%>"
+                  value="<%=booking.driver_name%>"
+                  maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
+              </div>
+              <div class="form-group col-md-6">
+                <label for=""><?php echo esc_html_x("Surname", 'renting_my_reservation', 'mybooking') ?></label>
+                <input class="form-control" id="driver_surname" name="driver_surname" type="text"
+                  placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("Surname", 'renting_my_reservation', 'mybooking') ?>")%>" value="<%=booking.driver_surname%>"
+                  maxlength="40" <% if (!booking.can_edit_online){%>disabled<%}%>>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="driver_document_id"><?php echo esc_html_x("ID card or passport", 'renting_my_reservation', 'mybooking') ?></label>
+                <input class="form-control" id="driver_document_id" name="driver_document_id" type="text"
+                  placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x("ID card or passport", 'renting_my_reservation', 'mybooking') ?>")%>" value="<%=booking.driver_document_id%>"
+                  maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
+              </div>
+            </div>
+            <div class="form-row">  
+              <div class="form-group col-md-6">
+                <label
+                  for="driver_driving_license_number"><?php echo  esc_html_x('Navigation permission type', 'renting_my_reservation', 'mybooking') ?></label>
+                <input class="form-control" id="driver_driving_license_type" name="driver_driving_license_type"
+                  type="text" placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x('Navigation permission type', 'renting_my_reservation', 'mybooking') ?>")%>"
+                  value="<%=booking.driver_driving_license_type%>"
+                  maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
+              </div>
+              <div class="form-group col-md-6">
+                <label
+                  for="driver_driving_license_number"><?php echo  esc_html_x('Navigation license number', 'renting_my_reservation', 'mybooking') ?></label>
+                <input class="form-control" id="driver_driving_license_number" name="driver_driving_license_number"
+                  type="text" placeholder="<%=configuration.escapeHtml("<?php echo esc_attr_x('Navigation license number', 'renting_my_reservation', 'mybooking') ?>")%>"
+                  value="<%=booking.driver_driving_license_number%>"
+                  maxlength="50" <% if (!booking.can_edit_online){%>disabled<%}%>>
               </div>
             </div>
           <% } %>
-        <% } %>  
-      <% } %> 
+        <% } %> 
+      <% } %>
       <!-- Flight information -->
       <% if (configuration.rentingFromFillDataFlight) { %>    
         <h4 class="my-3"><?php echo esc_html_x('Flight', 'renting_my_reservation', 'mybooking') ?></h4>
