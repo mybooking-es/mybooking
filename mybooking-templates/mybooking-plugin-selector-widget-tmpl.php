@@ -103,9 +103,20 @@
             </div>
           </div>
         <% } %>
+
+        <!-- Age code selector -->
+        <div class="flex-form-group ml-0 driver_age_rule" style="display: none">
+          <div class="flex-form-box">
+            <label for="driver_age_rule_id" >
+              <?php echo esc_html_x( 'Age selector', 'renting_form_selector', 'mybooking' ) ?>
+            </label>
+            <div class="flex-form-horizontal-item">
+              <select name="driver_age_rule_id" id="driver_age_rule_id" class="form-control"></select>
+            </div>
+          </div>
+        </div>
         
         <!-- Promotion code -->
-
         <% if (configuration.promotionCode) { %>
           <div class="flex-form-group">
             <div class="flex-form-box mb-0">
@@ -249,6 +260,18 @@
         </div>
       </div>
     <% } %>
+
+    <!-- Age code selector -->
+    <div class="flex-form-group ml-0 driver_age_rule" style="display: none">
+      <div class="flex-form-box">
+        <label for="driver_age_rule_id" >
+          <?php echo esc_html_x( 'Age selector', 'renting_form_selector', 'mybooking' ) ?>
+        </label>
+        <div class="flex-form-horizontal-item">
+          <select name="driver_age_rule_id" id="driver_age_rule_id" class="form-control"></select>
+        </div>
+      </div>
+    </div>
 
     <% if (configuration.promotionCode) { %>
       <div class="flex-form-group ml-0">
