@@ -735,6 +735,18 @@
 <!-- Payment detail -->
 <script type="text/tmpl" id="script_payment_detail">
 
+  <!-- Age rule applicate  -->
+  <% if (shopping_cart.driver_age_rule_description && shopping_cart.driver_age_rule_description !== '') { %>
+    <h4 class="reservation-process_title customer_component">
+      <?php echo esc_html_x( 'Age description', 'renting_complete', 'mybooking' ) ?>
+    </h4>
+    <div class="form-row">
+      <div class="form-group col-md-10">
+        <%= shopping_cart.driver_age_rule_description %>
+      </div>
+    </div>
+  <% } %>
+
   <% if (configuration.promotionCode) { %>
     <hr>
     <h4 class="reservation-process_title customer_component"><?php echo esc_html_x( 'Promotion code', 'renting_complete', 'mybooking' ) ?></h4>
