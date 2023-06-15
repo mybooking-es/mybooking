@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.5] - 2023.06.15
+
+### Added
+
+- Renting: Selector - Driver age
+- Renting: My reservation - Expiration dates
+
 ## [1.2.4] - 2023.05.25
 
 ### Added

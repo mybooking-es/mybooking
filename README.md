@@ -14,7 +14,7 @@ theme, so we can fully customize it.
 **Theme URI:** https://github.com/mybooking-es/mybooking  
 **Contributors:** MyBooking Team - hectorasencio marcelreig juanmiqueo 
 **Requires at least:** WordPress 5.2  
-**Version:** 1.2.4  
+**Version:** 1.2.5  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** e-commerce
