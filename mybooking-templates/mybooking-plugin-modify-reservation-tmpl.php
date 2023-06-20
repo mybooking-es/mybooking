@@ -72,7 +72,7 @@
         </div>
       </div>
     <% } else { %>
-      <% if (configuration.selectRentalLocation) { %>
+      <% if (configuration.selectorRentalLocation) { %>
         <% if (not_hidden_rental_location_code) { %>
           <div class="flex-form-group rental_location" style="display: none">
             <div class="flex-form-box">
