@@ -34,7 +34,7 @@
 
         <!-- Rental location -->
 
-        <% if (not_hidden_rental_location_code && configuration.selectRentalLocation) { %>
+        <% if (not_hidden_rental_location_code && configuration.selectorRentalLocation) { %>
           <div class="flex-form-group widget_rental_location" style="display: none">
             <label for="widget_rental_location_code"><?php echo esc_html( MyBookingEngineContext::getInstance()->getRentalLocation() ) ?></label>
             <div class="flex-form-item">
@@ -140,7 +140,7 @@
 
   <% } else { %>
 
-    <% if (not_hidden_rental_location_code && configuration.selectRentalLocation) { %>
+    <% if (not_hidden_rental_location_code && configuration.selectorRentalLocation) { %>
       <div class="flex-form-group-wrapper">
         <div class="flex-form-group widget_rental_location" style="display: none">
           <label for="widget_rental_location_code"><?php echo esc_html( MyBookingEngineContext::getInstance()->getRentalLocation() ) ?></label>
