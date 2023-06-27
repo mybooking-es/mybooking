@@ -124,3 +124,18 @@
   </div>
 
 </script>
+
+<!-- Select age micro-template -->
+<script id="select_age_tmpl" type="txt/tmpl">
+      <!-- Age code selector -->
+      <div class="row">
+        <div class="col">
+          <% for (var idx=0; idx<ages.length; idx++) { %>
+            <button class="btn btn-light age-selector" data-age-id="<%=ages[idx]['id']%>" style="width: 100%">
+              <%=ages[idx]['description']%>
+            </button>
+            <br/><br/>
+          <% } %>
+        </div>
+      </div>
+    </script>
