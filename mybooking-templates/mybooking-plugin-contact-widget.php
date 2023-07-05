@@ -62,6 +62,26 @@
             </div>
           </div>
 
+          <?php
+            $mybooking_engine_privacy_page = get_privacy_policy_url();
+          ?>
+
+          <!-- Privacy -->
+          <div class="field">
+            <label class="label" for="privacy_read">
+              <input type="checkbox" id="privacy_read" name="privacy_read"  class="control" style="width: auto">
+              &nbsp;
+              <?php if ( empty($mybooking_engine_privacy_page) ) { ?>
+                <?php echo esc_html_x( 'I have read and accept the privacy policy', 'contact_form', 'mybooking' ) ?>
+              <?php } else { ?>
+                <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'contact_form', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
+              <?php } ?>
+            </label>
+          </div>
+        </div>
+
+        <br/>
+
           <div class="field">
               <div class="message is-danger" id="contact_form_errors" style="display: none">
                </div>
