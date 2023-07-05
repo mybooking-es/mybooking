@@ -561,11 +561,11 @@
 
     <% if (sales_process.can_request) { %>
       <div id="request_reservation_container" <% if (selectionOptions > 1 || !sales_process.can_request) { %>style="display:none"<%}%>>
-
           <div class="border p-4">
+            <!-- Conditions -->
             <div class="form-row">
               <div class="form-group col-md-12">
-                <label for="payments_paypal_standard">
+                <label for="conditions_read_request_reservation">
                   <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;
                   <?php if ( empty($args['terms_and_conditions']) ) { ?>
                     <?php echo esc_html_x( 'I have read and hereby accept the conditions of transfer', 'transfer_checkout', 'mybooking' ) ?>
@@ -578,6 +578,27 @@
                 </label>
               </div>
             </div>
+
+            <br/>
+
+            <?php
+              $mybooking_engine_privacy_page = get_privacy_policy_url();
+            ?>
+
+            <!-- Privacy -->
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="privacy_read_request_reservation">
+                  <input type="checkbox" id="privacy_read_request_reservation" name="privacy_read_request_reservation">
+                  &nbsp;
+
+                  <?php if ( empty($mybooking_engine_privacy_page) ) { ?>
+                    <?php echo esc_html_x( 'I have read and accept the privacy policy', 'renting_complete', 'mybooking' ) ?>
+                  <?php } else { ?>
+                    <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
+                  <?php } ?>
+                </label>
+              </div>
 
             <div class="form-row">
               <div class="form-group col-md-12">
@@ -594,6 +615,7 @@
       <div id="payment_on_delivery_container" <% if (selectionOptions > 1 || !sales_process.can_pay_on_delivery) { %>style="display:none"<%}%>>
 
           <div class="border p-4">
+              <!-- Conditions -->
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="conditions_read_payment_on_delivery">
@@ -608,6 +630,22 @@
                     <?php } ?>
                   </label>
                 </div>
+              </div>
+
+              <br/>
+
+              <!-- Privacy -->
+              <div class="form-group col-md-12">
+                <label for="privacy_read_payment_on_delivery">
+                  <input type="checkbox" id="privacy_read_payment_on_delivery" name="privacy_read_payment_on_delivery">
+                  &nbsp;
+
+                  <?php if ( empty($mybooking_engine_privacy_page) ) { ?>
+                    <?php echo esc_html_x( 'I have read and accept the privacy policy', 'renting_complete', 'mybooking' ) ?>
+                  <?php } else { ?>
+                    <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
+                  <?php } ?>
+                </label>
               </div>
 
               <div class="form-row">
@@ -675,9 +713,11 @@
             <% } %>
 
             <hr>
+
+            <!-- Conditions -->
             <div class="form-row">
               <div class="form-group col-md-12">
-                <label for="payments_paypal_standard">
+                <label for="conditions_read_pay_now">
                   <input type="checkbox" id="conditions_read_pay_now" name="conditions_read_pay_now">&nbsp;
                       <?php if ( empty($args['terms_and_conditions']) ) { ?>
                         <?php echo esc_html_x( 'I have read and hereby accept the conditions of transfer', 'transfer_checkout', 'mybooking' ) ?>
@@ -687,6 +727,24 @@
                                                                'transfer_checkout', 'mybooking' ),
                                                            $args['terms_and_conditions'] ) )?>
                       <?php } ?>
+                </label>
+              </div>
+            </div>
+
+            <br/>
+
+            <!-- Privacy -->
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="privacy_read_pay_now">
+                  <input type="checkbox" id="privacy_read_pay_now" name="privacy_read_pay_now">
+                  &nbsp;
+
+                  <?php if ( empty($mybooking_engine_privacy_page) ) { ?>
+                    <?php echo esc_html_x( 'I have read and accept the privacy policy', 'renting_complete', 'mybooking' ) ?>
+                  <?php } else { ?>
+                    <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
+                  <?php } ?>
                 </label>
               </div>
             </div>

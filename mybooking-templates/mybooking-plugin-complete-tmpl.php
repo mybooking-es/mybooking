@@ -857,6 +857,8 @@
               </div>
             </div>
 
+            <br/>
+
             <?php
               $mybooking_engine_privacy_page = get_privacy_policy_url();
             ?>
@@ -1006,6 +1008,8 @@
                     </label>
                   </div>
                 </div>
+
+                <br/>
 
                 <!-- Privacy -->
                 <div class="form-row">

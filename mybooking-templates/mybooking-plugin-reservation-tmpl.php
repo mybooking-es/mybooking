@@ -1023,26 +1023,6 @@
       <% } %>
       <% if (booking.can_edit_online) { %>    
         <hr>
-
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <?php
-              $mybooking_engine_privacy_page = get_privacy_policy_url();
-            ?>
-
-            <!-- Privacy -->
-            <label for="privacy_read">
-              <input type="checkbox" id="privacy_read" name="privacy_read">
-              &nbsp;
-              <?php if ( empty($mybooking_engine_privacy_page) ) { ?>
-                <?php echo esc_html_x( 'I have read and accept the privacy policy', 'renting_my_reservation', 'mybooking' ) ?>
-              <?php } else { ?>
-                <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_my_reservation', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
-              <?php } ?>
-            </label>
-          </div>
-        </div>
-        
         <div class="form-row">
           <div class="form-group col-md-12">
             <button class="btn btn-outline-dark" id="btn_update_reservation">
@@ -1123,7 +1103,6 @@
     <% } else { %>
       <input type="hidden" name="payment" value="pending"/>
     <% } %>
-
     <div class="form-row">
       <div class="form-group col-md-12">
         <button class="btn btn-outline-dark" id="btn_pay" type="submit"><%= i18next.t('myReservation.pay.payment_button', {amount:configuration.formatCurrency(amount) }) %></button>
