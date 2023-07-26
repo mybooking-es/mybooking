@@ -579,8 +579,6 @@
               </div>
             </div>
 
-            <br/>
-
             <?php
               $mybooking_engine_privacy_page = get_privacy_policy_url();
             ?>
@@ -599,7 +597,8 @@
                   <?php } ?>
                 </label>
               </div>
-
+            </div>
+              
             <div class="form-row">
               <div class="form-group col-md-12">
                 <button type="submit" class="btn btn-primary"><?php echo esc_html_x( 'Request reservation', 'transfer_checkout', 'mybooking' ) ?></button>
@@ -631,8 +630,6 @@
                   </label>
                 </div>
               </div>
-
-              <br/>
 
               <!-- Privacy -->
               <div class="form-group col-md-12">
@@ -730,8 +727,6 @@
                 </label>
               </div>
             </div>
-
-            <br/>
 
             <!-- Privacy -->
             <div class="form-row">
