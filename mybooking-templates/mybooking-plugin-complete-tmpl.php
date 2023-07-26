@@ -806,6 +806,10 @@
 
     <!-- // More than one option : request / pay on delivery / pay -->
 
+    <?php
+      $mybooking_engine_privacy_page = get_privacy_policy_url();
+    ?>
+
     <% if (selectionOptions > 1) { %>
       <hr>
       <div class="form-row">
@@ -857,12 +861,6 @@
               </div>
             </div>
 
-            <br/>
-
-            <?php
-              $mybooking_engine_privacy_page = get_privacy_policy_url();
-            ?>
-
             <!-- Privacy -->
             <div class="form-row">
               <div class="form-group col-md-12">
@@ -908,8 +906,6 @@
                   <?php } ?>
                 </label>
               </div>
-
-              <br/>
 
               <!-- Privacy -->
               <div class="form-group col-md-12">
@@ -1008,8 +1004,6 @@
                     </label>
                   </div>
                 </div>
-
-                <br/>
 
                 <!-- Privacy -->
                 <div class="form-row">
