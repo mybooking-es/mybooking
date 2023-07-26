@@ -28870,12 +28870,14 @@ button.another_return_place_group_close {
 .wizard-multi-place_info {
   padding: 0 1rem; }
 
-.wizard-place_title {
+.wizard-place_title,
+.wizard-age_title {
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase; }
 
-.wizard-place_list {
+.wizard-place_list,
+.wizard-age_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28891,10 +28893,12 @@ button.another_return_place_group_close {
   text-align: center;
   list-style-type: none; }
 
-.wizard-place_item {
+.wizard-place_item,
+.wizard-age_item {
   padding: .1rem 0; }
 
-.wizard-place_button {
+.wizard-place_button,
+.wizard-age_button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -28910,7 +28914,8 @@ button.another_return_place_group_close {
   line-height: 1.2rem;
   letter-spacing: 1px;
   cursor: pointer; }
-  .wizard-place_button:hover {
+  .wizard-place_button:hover,
+  .wizard-age_button:hover {
     background-color: transparent;
     color: var(--brand-primary) !important; }
 
