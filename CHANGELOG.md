@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.6] - 2023.07.31
+
+### Added
+
+- Renting: Selector wizard - Driver age
+- Checkout and contact: Privacy policy acceptance
+
 ## [1.2.5] - 2023.06.15
 
 ### Added

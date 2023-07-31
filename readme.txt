@@ -5,7 +5,7 @@ Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
 Tested up to:       6.2
-Stable tag:         1.2.5
+Stable tag:         1.2.6
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,11 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 1.2.6 =
+* Added: Renting - Selector wizard driver age
+* Added: Contact - Privacy policy
+* Added: Checkout - Privacy policy
 
 = 1.2.5 =
 * Added: Renting - Selector driver age
@@ -282,6 +287,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.2.6 =
+* Added: Renting - Selector wizard driver age + Use Privacy police
 
 = 1.2.5 =
 * Added: Renting - Selector driver age + My reservation expiration dates
