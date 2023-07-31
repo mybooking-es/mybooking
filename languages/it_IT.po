@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Mybooking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 14:11+0000\n"
-"PO-Revision-Date: 2023-06-15 09:24+0000\n"
+"PO-Revision-Date: 2023-07-31 15:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -438,7 +438,7 @@ msgctxt "activity_shopping_cart"
 msgid "Confirm E-mail"
 msgstr "Conferma email"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:291
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:308
 msgctxt "activity_shopping_cart"
 msgid "Credit or debit card"
 msgstr "Credit or debit card"
@@ -454,9 +454,27 @@ msgctxt "activity_shopping_cart"
 msgid "E-mail"
 msgstr "E-mail"
 
+#. %s: privacy policy URL
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:270
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:351
+#, php-format
+msgctxt "activity_shopping_cart"
+msgid ""
+"I have read and accept the <a href=\"%s\" target=\"_blank\">privacy "
+"policy</a>"
+msgstr ""
+"Ho letto e accetto la <a href=\"%s\" target=\"_blank\">informativa sulla "
+"privacy</a>"
+
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:267
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:349
+msgctxt "activity_shopping_cart"
+msgid "I have read and accept the privacy policy"
+msgstr "Ho letto e accetto l'informativa sulla privacy"
+
 #. %s: terms and conditions URL
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:248
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:317
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:249
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:335
 #, php-format
 msgctxt "activity_shopping_cart"
 msgid ""
@@ -466,8 +484,8 @@ msgstr ""
 "Ho letto e con la presente accetto i <a href=\"%s\" target=\"_blank\"> "
 "termini e condizioni </a>"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:245
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:314
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:246
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:332
 msgctxt "activity_shopping_cart"
 msgid "I have read and hereby accept the terms and conditions"
 msgstr "Ho letto e accetto i termini e le condizioni"
@@ -489,7 +507,7 @@ msgctxt "activity_shopping_cart"
 msgid "Pay now"
 msgstr "Paga ora"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:285
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:302
 msgctxt "activity_shopping_cart"
 msgid "Paypal"
 msgstr "Paypal"
@@ -501,7 +519,7 @@ msgid "Phone number"
 msgstr "Numero di telefono"
 
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:221
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:259
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-activities-shopping-cart-tmpl.php:276
 msgctxt "activity_shopping_cart"
 msgid "Request reservation"
 msgstr "Richiedi prenotazione"
@@ -671,6 +689,22 @@ msgctxt "contact_form"
 msgid "E-mail"
 msgstr "E-mail"
 
+#. %s: privacy policy URL
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:78
+#, php-format
+msgctxt "contact_form"
+msgid ""
+"I have read and accept the <a href=\"%s\" target=\"_blank\">privacy "
+"policy</a>"
+msgstr ""
+"Ho letto e accetto la <a href=\"%s\" target=\"_blank\">informativa sulla "
+"privacy</a>"
+
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:75
+msgctxt "contact_form"
+msgid "I have read and accept the privacy policy"
+msgstr "Ho letto e accetto l'informativa sulla privacy"
+
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:59
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:61
 msgctxt "contact_form"
@@ -689,7 +723,7 @@ msgctxt "contact_form"
 msgid "Phone number"
 msgstr "Numero di telefono"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:76
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-contact-widget.php:97
 msgctxt "contact_form"
 msgid "Send"
 msgstr "Spedire"
@@ -1960,12 +1994,12 @@ msgctxt "renting_complete"
 msgid "Apply"
 msgstr "Applicare"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:832
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:836
 msgctxt "renting_complete"
 msgid "Book now and pay now"
 msgstr "Prenota ora e paga ora"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:824
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:828
 msgctxt "renting_complete"
 msgid "Book now and pay on arrival"
 msgstr "Prenota ora e paga all&#39;arrivo"
@@ -1989,7 +2023,7 @@ msgctxt "renting_complete"
 msgid "Comments"
 msgstr "Commenti"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:891
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:928
 msgctxt "renting_complete"
 msgid "Confirm"
 msgstr "Conferma"
@@ -2006,7 +2040,7 @@ msgctxt "renting_complete"
 msgid "Coverage"
 msgstr "Copertura"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:931
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:968
 msgctxt "renting_complete"
 msgid "Credit or debit card"
 msgstr "Credit or debit card"
@@ -2078,10 +2112,36 @@ msgctxt "renting_complete"
 msgid "hour(s)"
 msgstr "Ora/e"
 
+#. %s: privacy policy URL
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:875
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:920
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:1019
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:597
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:644
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:742
+#, php-format
+msgctxt "renting_complete"
+msgid ""
+"I have read and accept the <a href=\"%s\" target=\"_blank\">privacy "
+"policy</a>"
+msgstr ""
+"Ho letto e accetto la <a href=\"%s\" target=\"_blank\">informativa sulla "
+"privacy</a>"
+
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:872
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:918
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:1017
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:594
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:642
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:740
+msgctxt "renting_complete"
+msgid "I have read and accept the privacy policy"
+msgstr "Ho letto e accetto l'informativa sulla privacy"
+
 #. %s: terms and conditions URL
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:853
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:884
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:964
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:858
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:906
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:1003
 #, php-format
 msgctxt "renting_complete"
 msgid ""
@@ -2091,9 +2151,9 @@ msgstr ""
 "Ho letto e con la presente accetto le <a href=\"%s\" target=\"_blank\"> "
 "condizioni </a> di noleggio"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:850
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:881
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:961
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:855
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:903
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:1000
 msgctxt "renting_complete"
 msgid "I have read and hereby accept the conditions of rental"
 msgstr "Ho letto e accetto le condizioni di noleggio"
@@ -2116,7 +2176,7 @@ msgctxt "renting_complete"
 msgid "No"
 msgstr "No"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:923
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:960
 msgctxt "renting_complete"
 msgid "Paypal"
 msgstr "Paypal"
@@ -2166,8 +2226,8 @@ msgctxt "renting_complete"
 msgid "Quantity"
 msgstr "Quantità"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:816
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:862
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:820
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:884
 msgctxt "renting_complete"
 msgid "Request reservation"
 msgstr "Richiedi prenotazione"
@@ -2226,7 +2286,7 @@ msgctxt "renting_complete"
 msgid "Yes"
 msgstr "Sì"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:941
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:978
 msgctxt "renting_complete"
 msgid ""
 "You will be redirected to <b>Paypal payment platform</b> to make the "
@@ -2237,7 +2297,7 @@ msgstr ""
 "effettuare il pagamento di conferma in modo sicuro. Puoi utilizzare <u>"
 "Paypal</u> o <u>carta di credito</u> per effettuare il pagamento."
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:948
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:985
 msgctxt "renting_complete"
 msgid ""
 "You will be redirected to the <b>credit card payment platform</b> to make "
@@ -2246,7 +2306,7 @@ msgstr ""
 "Verrai reindirizzato alla <b>piattaforma di pagamento con carta di "
 "credito</b> per effettuare il pagamento di conferma in modo sicuro. \n"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:918
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-complete-tmpl.php:955
 msgctxt "renting_complete"
 msgid ""
 "You will be redirected to the <b>payment platform</b> to make the "
@@ -3028,22 +3088,22 @@ msgctxt "renting_products_list"
 msgid "Page navigation"
 msgstr "Navigazione tra le pagine"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:35
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:37
 msgctxt "renting_reservation_steps"
 msgid "1"
 msgstr "1"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:36
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:38
 msgctxt "renting_reservation_steps"
 msgid "2"
 msgstr "2"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:37
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:39
 msgctxt "renting_reservation_steps"
 msgid "3"
 msgstr "3"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:38
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:40
 msgctxt "renting_reservation_steps"
 msgid "4"
 msgstr "4"
@@ -3161,22 +3221,22 @@ msgctxt "renting_summary"
 msgid "Total pending"
 msgstr "Totale in sospeso"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:37
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:39
 msgctxt "reservation_step"
 msgid "Complete reservation"
 msgstr "Completa la prenotazione"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:35
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:37
 msgctxt "reservation_step"
 msgid "Place and date"
 msgstr "Place and date"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:36
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:38
 msgctxt "reservation_step"
 msgid "Select product"
 msgstr "Seleziona il prodotto"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:38
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-reservation-steps.php:40
 msgctxt "reservation_step"
 msgid "Summary"
 msgstr "Sommario"
@@ -3255,7 +3315,7 @@ msgctxt "transfer_checkout"
 msgid "Comments"
 msgstr "Commenti"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:615
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:651
 msgctxt "transfer_checkout"
 msgid "Confirm"
 msgstr "Confermare"
@@ -3272,7 +3332,7 @@ msgctxt "transfer_checkout"
 msgid "Country"
 msgstr "Nazione"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:653
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:689
 msgctxt "transfer_checkout"
 msgid "Credit or debit card"
 msgstr "Carta di credito o di debito"
@@ -3368,8 +3428,8 @@ msgstr "Andata"
 
 #. %s: terms and conditions URL
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:574
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:605
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:686
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:627
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:724
 #, php-format
 msgctxt "transfer_checkout"
 msgid ""
@@ -3380,8 +3440,8 @@ msgstr ""
 "condizioni</a> di trasferimento"
 
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:571
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:602
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:683
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:624
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:721
 msgctxt "transfer_checkout"
 msgid "I have read and hereby accept the conditions of transfer"
 msgstr "Ho letto e accetto le condizioni di trasferimento"
@@ -3409,7 +3469,7 @@ msgctxt "transfer_checkout"
 msgid "Outward Journey Details"
 msgstr "Dettagli del viaggio di andata"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:647
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:683
 msgctxt "transfer_checkout"
 msgid "Paypal"
 msgstr "Paypal"
@@ -3440,7 +3500,7 @@ msgid "Postal Code"
 msgstr "Codice Postale"
 
 #: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:537
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:584
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:605
 msgctxt "transfer_checkout"
 msgid "Request reservation"
 msgstr "Richiedi prenotazione"
@@ -3493,7 +3553,7 @@ msgctxt "transfer_checkout"
 msgid "Trip details"
 msgstr "Dettagli del viaggio"
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:663
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:699
 msgctxt "transfer_checkout"
 msgid ""
 "You will be redirected to <b>Paypal payment platform</b> to make the "
@@ -3504,7 +3564,7 @@ msgstr ""
 "effettuare il pagamento di conferma in modo sicuro. Puoi utilizzare <u>"
 "Paypal</u> o <u>carta di credito</u> per effettuare il pagamento."
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:670
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:706
 msgctxt "transfer_checkout"
 msgid ""
 "You will be redirected to the <b>credit card payment platform</b> to make "
@@ -3513,7 +3573,7 @@ msgstr ""
 "Verrai reindirizzato alla <b>piattaforma di pagamento con carta di "
 "credito</b> per effettuare il pagamento di conferma in modo sicuro."
 
-#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:642
+#: ../../../../../../../proyectos/yurak/mybooking-wp-theme/mybooking-templates/mybooking-plugin-transfer-checkout-tmpl.php:678
 msgctxt "transfer_checkout"
 msgid ""
 "You will be redirected to the <b>payment platform</b> to make the "

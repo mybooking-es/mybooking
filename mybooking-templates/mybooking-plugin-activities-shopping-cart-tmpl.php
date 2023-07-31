@@ -266,6 +266,7 @@
             <?php if ( empty($mybooking_engine_privacy_page) ) { ?>
               <?php echo esc_html_x( 'I have read and accept the privacy policy', 'activity_shopping_cart', 'mybooking' ) ?>
             <?php } else { ?>
+              <?php /* translators: %s: privacy policy URL */ ?>
               <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'activity_shopping_cart', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
             <?php } ?>
           </label>
