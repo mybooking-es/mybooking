@@ -83,7 +83,7 @@
         <br/>
 
           <div class="field">
-              <div class="message is-danger" id="contact_form_errors" style="display: none">
+              <div class="alert alert-danger message is-danger" id="contact_form_errors" style="display: none">
                </div>
           </div>
 
