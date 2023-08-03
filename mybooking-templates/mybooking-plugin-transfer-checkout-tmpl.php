@@ -487,6 +487,11 @@
 
 <!-- Payment detail -->
 <script type="text/tmpl" id="script_transfer_payment_detail">
+
+    <?php
+      $mybooking_engine_privacy_page = get_privacy_policy_url();
+    ?>
+
     <%
        var paymentAmount = 0;
        var selectionOptions = 0;
@@ -579,27 +584,20 @@
               </div>
             </div>
 
-            <?php
-              $mybooking_engine_privacy_page = get_privacy_policy_url();
-            ?>
-
-            <!-- Privacy -->
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label for="privacy_read_request_reservation">
-                  <input type="checkbox" id="privacy_read_request_reservation" name="privacy_read_request_reservation">
-                  &nbsp;
-
-                  <?php if ( empty($mybooking_engine_privacy_page) ) { ?>
-                    <?php echo esc_html_x( 'I have read and accept the privacy policy', 'renting_complete', 'mybooking' ) ?>
-                  <?php } else { ?>
-                    <?php /* translators: %s: privacy policy URL */ ?>
-                    <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
-                  <?php } ?>
-                </label>
+            <?php if ( !empty($mybooking_engine_privacy_page) ) { ?>
+              <!-- Privacy -->
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="privacy_read_request_reservation">
+                    <input type="checkbox" id="privacy_read_request_reservation" name="privacy_read_request_reservation">
+                    &nbsp;
+                      <?php /* translators: %s: privacy policy URL */ ?>
+                      <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
+                  </label>
+                </div>
               </div>
-            </div>
-              
+            <?php } ?>
+
             <div class="form-row">
               <div class="form-group col-md-12">
                 <button type="submit" class="btn btn-primary"><?php echo esc_html_x( 'Request reservation', 'transfer_checkout', 'mybooking' ) ?></button>
@@ -632,19 +630,18 @@
                 </div>
               </div>
 
-              <!-- Privacy -->
-              <div class="form-group col-md-12">
-                <label for="privacy_read_payment_on_delivery">
-                  <input type="checkbox" id="privacy_read_payment_on_delivery" name="privacy_read_payment_on_delivery">
-                  &nbsp;
-
-                  <?php if ( empty($mybooking_engine_privacy_page) ) { ?>
-                    <?php echo esc_html_x( 'I have read and accept the privacy policy', 'renting_complete', 'mybooking' ) ?>
-                  <?php } else { ?>
-                    <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
-                  <?php } ?>
-                </label>
-              </div>
+              <?php if ( !empty($mybooking_engine_privacy_page) ) { ?>
+                <!-- Privacy -->
+                <div class="form-group col-md-12">
+                  <label for="privacy_read_payment_on_delivery">
+                    <input type="checkbox" id="privacy_read_payment_on_delivery" name="privacy_read_payment_on_delivery">
+                    &nbsp;
+                      <?php echo esc_html_x( 'I have read and accept the privacy policy', 'renting_complete', 'mybooking' ) ?>
+                    <?php } else { ?>
+                      <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
+                  </label>
+                </div>
+              <?php } ?>
 
               <div class="form-row">
                 <div class="form-group col-md-12">
@@ -729,21 +726,18 @@
               </div>
             </div>
 
-            <!-- Privacy -->
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label for="privacy_read_pay_now">
-                  <input type="checkbox" id="privacy_read_pay_now" name="privacy_read_pay_now">
-                  &nbsp;
-
-                  <?php if ( empty($mybooking_engine_privacy_page) ) { ?>
-                    <?php echo esc_html_x( 'I have read and accept the privacy policy', 'renting_complete', 'mybooking' ) ?>
-                  <?php } else { ?>
+            <?php if ( !empty($mybooking_engine_privacy_page) ) { ?>
+              <!-- Privacy -->
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="privacy_read_pay_now">
+                    <input type="checkbox" id="privacy_read_pay_now" name="privacy_read_pay_now">
+                    &nbsp;
                     <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
-                  <?php } ?>
-                </label>
+                  </label>
+                </div>
               </div>
-            </div>
+            <?php } ?>
 
             <div class="form-row">
               <div class="form-group col-md-12">
