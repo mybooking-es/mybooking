@@ -867,7 +867,6 @@
                 <div class="form-group col-md-12">
                   <label for="privacy_read_request_reservation">
                     <input type="checkbox" id="privacy_read_request_reservation" name="privacy_read_request_reservation">
-                    &nbsp;
                       <?php /* translators: %s: privacy policy URL */ ?>
                       <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
                   </label>
@@ -910,7 +909,7 @@
                 <div class="form-group col-md-12">
                   <label for="privacy_read_payment_on_delivery">
                     <input type="checkbox" id="privacy_read_payment_on_delivery" name="privacy_read_payment_on_delivery">
-                    &nbsp;
+                      <?php /* translators: %s: privacy policy URL */ ?>
                       <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
                   </label>
                 </div>
@@ -1007,7 +1006,7 @@
                     <div class="form-group col-md-12">
                       <label for="privacy_read_pay_now">
                         <input type="checkbox" id="privacy_read_pay_now" name="privacy_read_pay_now">
-                        &nbsp;
+                          <?php /* translators: %s: privacy policy URL */ ?>
                           <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
                       </label>
                     </div>

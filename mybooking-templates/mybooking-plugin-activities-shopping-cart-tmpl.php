@@ -342,7 +342,7 @@
                   <!-- Privacy -->
                   <label for="privacy_read_pay_now">
                     <input type="checkbox" id="privacy_read_pay_now" name="privacy_read_pay_now">
-                      <?php echo esc_html_x( 'I have read and accept the privacy policy', 'activity_shopping_cart', 'mybooking' ) ?>
+                      <?php /* translators: %s: privacy policy URL */ ?>
                       <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'activity_shopping_cart', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
                   </label>
                 <?php } ?>
