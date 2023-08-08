@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.7] - 2023.08.08
+
+### Fixed
+
+- Renting : Extras availability
+
 ## [1.2.6] - 2023.07.31
 
 ### Added
