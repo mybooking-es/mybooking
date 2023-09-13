@@ -106,7 +106,7 @@
                     <div class="input-group-prepend">
                       <button class="btn btn-outline-secondary btn-minus-extra"
                         data-value="<%=coverage.code%>"
-                        data-max-quantity="<%=coverage.max_quantity%>">-</button>
+                        data-max-quantity="<%=coverage.max_sellable_quantity%>">-</button>
                     </div>
                     <% value = (extrasInShoppingCart[coverage.code]) ? extrasInShoppingCart[coverage.code] : 0; %>
                     <input type="text" id="extra-<%=coverage.code%>-quantity"
@@ -114,7 +114,7 @@
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary btn-plus-extra"
                         data-value="<%=coverage.code%>"
-                        data-max-quantity="<%=coverage.max_quantity%>">+</button>
+                        data-max-quantity="<%=coverage.max_sellable_quantity%>">+</button>
                       </div>
                 </div>
               <% } else { %>
@@ -129,48 +129,53 @@
       </div>
     </div>
   <% } %>
-  <% if (extras && extras.length > 0) { %>
+  <!-- Check for available extras -->
+  <% if (extras && extras.length > 0 && extras.filter((theExtra) => theExtra.available).length > 0) { %>
     <div class="process-section-box">
       <h4 class="brand-primary my-3"><?php echo esc_html_x( 'Extras', 'renting_complete', 'mybooking') ?></h4>
       <div class="extras-container">
         <% for (var idx=0;idx<extras.length;idx++) { %>
           <% var extra = extras[idx]; %>
-          <div class="extra-wrapper">
-            <div class="extras-left">
-              <div class="extra-title">
-                <% if (extra.photo_path != null) { %>
-                  <img src="<%=extra.photo_path%>" class="card-img js-extra-info-btn" data-extra="<%=extra.code%>" />
-                <% } %>
-                <h6 class="lead"><%=extra.name%></h6>
+          <% if (extra.available) { %>
+            <div class="extra-wrapper">
+              <div class="extras-left">
+                <div class="extra-title">
+                  <% if (extra.photo_path != null) { %>
+                    <img src="<%=extra.photo_path%>" class="card-img js-extra-info-btn" data-extra="<%=extra.code%>" />
+                  <% } %>
+                  <h6 class="lead"><%=extra.name%></h6>
+                </div>
+                <div class="extras-text"><%=extra.description%></div>
               </div>
-              <div class="extras-text"><%=extra.description%></div>
-            </div>
-            <div class="extras-right">
-            <p class="extras-price"><%= configuration.formatCurrency(extra.unit_price)%></p>
-              <% if (extra.max_quantity > 1) { %>
-                <div class="input-group input-group-sm" style="width:100px;">
-                    <div class="input-group-prepend">
-                      <button class="btn btn-outline-secondary btn-minus-extra"
-                        data-value="<%=extra.code%>"
-                        data-max-quantity="<%=extra.max_quantity%>">-</button>
+              <div class="extras-right">
+                <p class="extras-price"><%= configuration.formatCurrency(extra.unit_price)%></p>
+                <% if (extra.available) { %>
+                  <% if (extra.max_quantity > 1) { %>
+                    <div class="input-group input-group-sm" style="width:100px;">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary btn-minus-extra"
+                            data-value="<%=extra.code%>"
+                            data-max-quantity="<%=extra.max_sellable_quantity%>">-</button>
+                        </div>
+                        <% value = (extrasInShoppingCart[extra.code]) ? extrasInShoppingCart[extra.code] : 0; %>
+                        <input type="text" id="extra-<%=extra.code%>-quantity"
+                            class="form-control disabled text-center extra-input" value="<%=value%>" data-extra-code="<%=extra.code%>"/>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-plus-extra"
+                            data-value="<%=extra.code%>"
+                            data-max-quantity="<%=extra.max_sellable_quantity%>">+</button>
+                          </div>
                     </div>
-                    <% value = (extrasInShoppingCart[extra.code]) ? extrasInShoppingCart[extra.code] : 0; %>
-                    <input type="text" id="extra-<%=extra.code%>-quantity"
-                        class="form-control disabled text-center extra-input" value="<%=value%>" data-extra-code="<%=extra.code%>"/>
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary btn-plus-extra"
-                        data-value="<%=extra.code%>"
-                        data-max-quantity="<%=extra.max_quantity%>">+</button>
-                      </div>
-                </div>
-              <% } else { %>
-                <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=extra.code%>" data-value="<%=extra.code%>" <% if (extrasInShoppingCart[extra.code] &&  extrasInShoppingCart[extra.code] > 0) { %> checked="checked" <% } %>>
-                  <label class="custom-control-label" for="checkboxl<%=extra.code%>"></label>
-                </div>
-              <% } %>
+                  <% } else { %>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input extra-checkbox" id="checkboxl<%=extra.code%>" data-value="<%=extra.code%>" <% if (extrasInShoppingCart[extra.code] &&  extrasInShoppingCart[extra.code] > 0) { %> checked="checked" <% } %>>
+                      <label class="custom-control-label" for="checkboxl<%=extra.code%>"></label>
+                    </div>
+                  <% } %>
+                <% } %>
+              </div>
             </div>
-          </div>
+          <% } %>
         <% } %>
       </div>
     </div>
@@ -349,6 +354,9 @@
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="product-detail-bg-color">
+
+      <!-- MULTIPLE PRODUCT DETAILS -->
+
       <% if (configuration.multipleProductsSelection) { %>
         <div class="product-detail-container-several-products">
             <div>
@@ -438,8 +446,16 @@
             </table>
           </div>
         </div>
+      
+      <!-- SINGLE PRODUCT DETAILS -->
+      
       <% } else { %>
         <div class="product-detail-container">
+          <div class="product-detail-image">
+            <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
+              <img class="img-fluid" src="<%=shopping_cart.items[idx].photo_full%>" alt="">
+            <% } %>
+          </div>
           <div class="product-detail-content">
             <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
                 <h2 class="product-name"><%=shopping_cart.items[idx].item_description_customer_translation%></h2>
@@ -459,10 +475,12 @@
                    <% } %>
                    <br><br>
                 <% } %>
-
+                
+                <!-- Highlight Message -->
                 <% if (shopping_cart.items[idx].highlight_message && shopping_cart.items[idx].highlight_message != '') { %>
                   <h3 class="h6 text-muted"><%=shopping_cart.items[idx].highlight_message%></h3>
                 <% } %>
+
                 <h5 class="mt-3"><?php echo esc_html_x('Delivery', 'renting_complete', 'mybooking') ?></h5>
                 <ul>
                   <li><%=shopping_cart.date_from_full_format%>
@@ -489,6 +507,8 @@
                       <% if (configuration.timeToFrom) { %><%=shopping_cart.time_to%><%}%></li>
                     <li><%=shopping_cart.return_place_customer_translation%></li>
                   </ul>
+
+                  <!-- Duration -->
                   <% if (shopping_cart.days > 0) { %>
                   <p class="detail-text mt-3"><span><%=shopping_cart.days%>
                       <?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?>
@@ -499,219 +519,133 @@
                   <% } %>
                 <% } %>
             <% } %>
-          </div>
-        <div class="product-detail-image">
-          <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-            <img class="img-fluid" src="<%=shopping_cart.items[idx].photo_full%>" alt="">
-          <% } %>
-        </div>
-      </div>
-      <% } %>
-  </div>
 
-  <div class="modal fade" id="viewReservationModal" tabindex="-1" role="dialog"
-    aria-labelledby="viewModal"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="viewModal"><?php echo esc_html_x( 'Reservation summary', 'renting_complete', 'mybooking') ?></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo esc_attr_x( 'Close', 'renting_complete', 'mybooking' ); ?>">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body summary-modal">
-          <div class="product-summary-wrapper">
-            <div class="product-summary">
-              <div class="product-summary_separator">
-                <i class="fa fa-long-arrow-right mr-3"></i>
-              </div>
-              <%=shopping_cart.date_from_full_format%>
-              <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
-                <% if (configuration.timeToFrom) { %>
-                  <%=shopping_cart.time_from%>
-                <% } %>
-              <% } %>
-            </div>
-            <div class="product-summary">
-              <div class="product-summary_separator">
-                <i class="fa fa-long-arrow-left mr-3"></i>
-              </div>
-              <% if (configuration.rentDateSelector === 'date_from_duration') { %>
-                <%=shopping_cart.renting_duration_literal%>
-                <% if ( (typeof shopping_cart.half_day !== 'undefined' && shopping_cart.half_day) || (shopping_cart.days == 0) ) { %>
-                  <% if ( typeof shopping_cart.turn_description !== 'undefined' && shopping_cart.turn_description !== null && shopping_cart.turn_description !== '') { %>
-                    - <%= shopping_cart.turn_description %> 
-                  <% } else { %>
-                    ( <%= shopping_cart.time_from %> - <%= shopping_cart.time_to %> )
-                  <% } %>
-                <% } %>
-              <% } else { %>
-                <%=shopping_cart.date_to_full_format%>
-                <% if (configuration.timeToFrom) { %>
-                  <%=shopping_cart.time_to%>
-                <% } %>
-              <% } %>
-            </div>
-          </div>
-          <!-- // Duration -->
-          <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
-            <div class="rent-duration p-3">
-              <p class="mb-0">
-                <% if (shopping_cart.days > 0) { %>
-                <%=shopping_cart.days%>
-                <?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?></p>
-              <% } else if (shopping_cart.hours > 0) { %>
-                <%=shopping_cart.hours%>
-                <?php echo esc_html_x('hour(s)', 'renting_complete', 'mybooking') ?></p>
-              <%} %>
-            </div>
-          <% } %>
-          <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-            <div class="product-view">
-              <div class="product-view_image d-none d-sm-block">
-                <img class="img-fluid" src="<%= shopping_cart.items[idx].photo_medium%>">
-              </div>
-              <div class="product-view_text">
-                <p class="fw-700"><%=shopping_cart.items[idx].item_description_customer_translation%></p>
-                <% if (shopping_cart.items[idx].highlight_message && shopping_cart.items[idx].highlight_message != '') { %>
-                  <p class="fw-300 text-muted"><small><%=shopping_cart.items[idx].highlight_message%></small></p>
-                <% } %>
-              </div>
-              <!-- // Quantity -->
-              <% if (configuration.multipleProductsSelection) { %>
-              <span class="badge badge-info"><%=shopping_cart.items[idx].quantity%></span>
-              <% } %>
-              <!-- // Price -->
-              <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%></span>
-            </div>
-          <% } %>
+            <!-- Product Price -->
 
-          <!-- // Deposit -->
-          <% if ( shopping_cart.product_guarantee_cost > 0 || shopping_cart.product_deposit_cost > 0 || 
-                 (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0) ||
-                 shopping_cart.total_deposit > 0) { %>
-            <div class="deposit-view">
-              <ul class="list-group deposit-view_list">
-              <% if (shopping_cart.product_guarantee_cost > 0) { %>
-                <li class="list-group-item">
-                  <span
-                    class="deposit-name"><?php echo esc_html_x( "Guarantee", 'renting_complete', 'mybooking' ) ?></span>
-                  <span
-                    class="deposit-price"><%=configuration.formatCurrency(shopping_cart.product_guarantee_cost)%></span>
-                </li>
-              <% } %>
-              <% if (shopping_cart.product_deposit_cost > 0) { %>
-                <li class="list-group-item">
-                  <span
-                    class="deposit-name">
-                    <?php /* translators: %s: Product Type (Vehicle, Product, ...) */ ?>
-                    <?php echo wp_kses_post( sprintf( _x( "%s deposit", 'renting_complete', 'mybooking' ), MyBookingEngineContext::getInstance()->getProduct() ) ) ?>
-                  </span>
-                  <span
-                    class="deposit-price"><%=configuration.formatCurrency(shopping_cart.product_deposit_cost)%></span>
-                </li>
-              <% } %>
-              <% if (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0) { %>
-                <li class="list-group-item">
-                  <span
-                    class="deposit-name"><?php echo esc_html_x( "Driver age deposit", 'renting_complete', 'mybooking' ) ?></span>
-                  <span
-                    class="deposit-price"><%=configuration.formatCurrency(shopping_cart.driver_age_deposit)%></span>
-                </li>
-              <% } %>
-              <% if (shopping_cart.total_deposit > 0 && shopping_cart.number_of_deposits > 1) { %>
-                <li class="list-group-item">
-                  <span
-                    class="deposit-name"><?php echo esc_html_x( "Total deposit", 'renting_complete', 'mybooking' ) ?></span>
-                  <span
-                    class="deposit-price"><%=configuration.formatCurrency(shopping_cart.total_deposit)%></span>
-                </li>
-              <% } %>
-              </ul>
-            </div>
-          <% } %>
-
-          <ul class="list-group  summary-modal_list">
-            <!-- // Products -->
+            <!-- Offer/Promotion Code Appliance -->
             <% for (var idx=0;idx<shopping_cart.items.length;idx++) { %>
-              <!-- Offer/Promotion Code Appliance -->
               <% if (shopping_cart.items[idx].item_unit_cost_base != shopping_cart.items[idx].item_unit_cost) { %>
-                <li class="list-group-item">
-                  <span class="extra-name"><%=shopping_cart.items[idx].item_description_customer_translation%></span>
-                  <span class="extra-price">
-                    <!-- Offer -->
-                    <% if (typeof shopping_cart.items[idx].offer_name !== 'undefined' &&
-                          shopping_cart.items[idx].offer_name !== null && shopping_cart.items[idx].offer_name !== '') { %>
+                <span class="mybooking-detail_promotion-item">
+                  <!-- Offer -->
+                  <span>
+                    <% if (typeof shopping_cart.items[idx].offer_name !== 'undefined' && shopping_cart.items[idx].offer_name !== null && shopping_cart.items[idx].offer_name !== '') { %>
                       <span class="badge badge-info"><%=shopping_cart.items[idx].offer_name%></span>
                       <% if (shopping_cart.items[idx].offer_discount_type === 'percentage' && shopping_cart.items[idx].offer_value !== '') {%>
                         <span class="text-danger"><%=parseInt(shopping_cart.items[idx].offer_value)%>&#37;</span>
                       <% } %>
                     <% } %>
-                    <!-- // Promotion Code -->
-                    <% if (typeof shopping_cart.promotion_code !== 'undefined' && shopping_cart.promotion_code !== '' &&
-                          typeof shopping_cart.items[idx].promotion_code_value !== 'undefined' && shopping_cart.items.promotion_code_value !== '' &&
-                          shopping_cart.items[idx].promotion_code_value !== '0.0') { %>
+                  </span>
+
+                  <!-- Promotion Code -->
+                  <span>
+                    <% if (typeof shopping_cart.promotion_code !== 'undefined' && shopping_cart.promotion_code !== '' && typeof shopping_cart.items[idx].promotion_code_value !== 'undefined' && shopping_cart.items.promotion_code_value !== '' && shopping_cart.items[idx].promotion_code_value !== '0.0') { %>
                       <span class="badge badge-success"><%=shopping_cart.promotion_code%></span>
                       <% if (shopping_cart.items[idx].promotion_code_discount_type === 'percentage' && shopping_cart.items[idx].promotion_code !== '') {%>
                         <span class="text-danger"><%=parseInt(shopping_cart.items[idx].promotion_code_value)%>&#37;</span>
                       <% } %>
                     <% } %>
-                    <span class="text-muted">
-                      <del><%=configuration.formatCurrency(shopping_cart.items[idx].item_unit_cost_base * shopping_cart.items[idx].quantity)%></del>
-                    </span>
                   </span>
-                </li>
+
+                  <del><%=configuration.formatCurrency(shopping_cart.items[idx].item_unit_cost_base * shopping_cart.items[idx].quantity)%></del>
+                </span>
               <% } %>
             <% } %>
+
+            <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>       
+              <!-- // Product Price -->
+              <div class="mybooking-detail_product-price"><%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%></div>
+            <% } %>
+
+            <!-- Extras and suplements -->
+
+            <!-- // Deposit -->
+          <% if ( shopping_cart.product_guarantee_cost > 0 || shopping_cart.product_deposit_cost > 0 || (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0) || shopping_cart.total_deposit > 0) { %>
+            <div class="deposit-view">
+              <ul class="list-group deposit-view_list">
+                <% if (shopping_cart.product_guarantee_cost > 0) { %>
+                  <li class="list-group-item">
+                    <span
+                      class="deposit-name"><?php echo esc_html_x( "Guarantee", 'renting_complete', 'mybooking' ) ?></span>
+                    <span
+                      class="deposit-price"><%=configuration.formatCurrency(shopping_cart.product_guarantee_cost)%></span>
+                  </li>
+                <% } %>
+                <% if (shopping_cart.product_deposit_cost > 0) { %>
+                  <li class="list-group-item">
+                    <span class="deposit-name">
+                      <?php /* translators: %s: Product Type (Vehicle, Product, ...) */ ?>
+                      <?php echo wp_kses_post( sprintf( _x( "%s deposit", 'renting_complete', 'mybooking' ), MyBookingEngineContext::getInstance()->getProduct() ) ) ?>
+                    </span>
+                    <span class="deposit-price"><%=configuration.formatCurrency(shopping_cart.product_deposit_cost)%></span>
+                  </li>
+                <% } %>
+                <% if (typeof shopping_cart.driver_age_deposit !== 'undefined' && shopping_cart.driver_age_deposit > 0) { %>
+                  <li class="list-group-item">
+                    <span class="deposit-name"><?php echo esc_html_x( "Driver age deposit", 'renting_complete', 'mybooking' ) ?></span>
+                    <span class="deposit-price"><%=configuration.formatCurrency(shopping_cart.driver_age_deposit)%></span>
+                  </li>
+                <% } %>
+                <% if (shopping_cart.total_deposit > 0 && shopping_cart.number_of_deposits > 1) { %>
+                  <li class="list-group-item">
+                    <span class="deposit-name"><?php echo esc_html_x( "Total deposit", 'renting_complete', 'mybooking' ) ?></span>
+                    <span class="deposit-price"><%=configuration.formatCurrency(shopping_cart.total_deposit)%></span>
+                  </li>
+                <% } %>
+              </ul>
+            </div>
+          <% } %>
+
+          <ul class="list-group  summary-modal_list">
             <!-- // Extras -->
             <% if (shopping_cart.extras.length > 0) { %>
               <% for (var idx=0; idx<shopping_cart.extras.length; idx++) { %>
-                <li class="list-group-item">
-                  <span class="extra-name"><%=shopping_cart.extras[idx].extra_description_customer_translation%></span>
-                  <span class="badge badge-primary badge-pill"><%=shopping_cart.extras[idx].quantity%></span>
-                  <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
+                <li class="mybooking-detail_list-item">
+                  <span>
+                    <span class="badge badge-primary badge-pill"><%=shopping_cart.extras[idx].quantity%></span>
+                    <span class="mybooking-detail_extra-name"><%=shopping_cart.extras[idx].extra_description_customer_translation%></span>
+                  </span>
+                  <span class="mybooking-detail_extra-price"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
                 </li>
               <% } %>
             <% } %>
             <!-- // Supplements -->
             <% if (shopping_cart.time_from_cost > 0) { %>
-            <li class="list-group-item">
+            <li class="mybooking-detail_list-item">
               <span
                 class="extra-name"><?php echo esc_html_x( 'Pick-up time supplement', 'renting_complete', 'mybooking' ) ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.time_from_cost)%></span>
             </li>
             <% } %>
             <% if (shopping_cart.pickup_place_cost > 0) { %>
-            <li class="list-group-item">
+            <li class="mybooking-detail_list-item">
               <span
                 class="extra-name"><?php echo esc_html_x( 'Pick-up place supplement', 'renting_complete', 'mybooking' ) ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.pickup_place_cost)%></span>
             </li>
             <% } %>
             <% if (shopping_cart.time_to_cost > 0) { %>
-            <li class="list-group-item">
+            <li class="mybooking-detail_list-item">
               <span
                 class="extra-name"><?php echo esc_html_x( 'Return time supplement', 'renting_complete', 'mybooking' ) ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.time_to_cost)%></span>
             </li>
             <% } %>
             <% if (shopping_cart.return_place_cost > 0) { %>
-            <li class="list-group-item">
+            <li class="mybooking-detail_list-item">
               <span
                 class="extra-name"><?php echo esc_html_x( 'Return place supplement', 'renting_complete', 'mybooking' ) ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.return_place_cost)%></span>
             </li>
             <% } %>
             <% if (shopping_cart.driver_age_cost > 0) { %>
-            <li class="list-group-item">
+            <li class="mybooking-detail_list-item">
               <span
                 class="extra-name"><?php echo esc_html_x( "Driver's age supplement", 'renting_complete', 'mybooking' ) ?></span>
               <span class="extra-price"><%=configuration.formatCurrency(shopping_cart.driver_age_cost)%></span>
             </li>
             <% } %>
             <% if (shopping_cart.category_supplement_1_cost > 0) { %>
-            <li class="list-group-item">
+            <li class="mybooking-detail_list-item">
               <span
                 class="extra-name"><?php echo esc_html_x( "Petrol supplement", 'renting_complete', 'mybooking' ) ?></span>
               <span
@@ -719,17 +653,17 @@
             </li>
             <% } %>
           </ul>
-        </div>
-        <div class="modal-footer summary-modal_footer">
-          <!-- // TOTAL -->
-            <span
-              class="extra-name fw-700"><?php echo esc_html_x( "Total", 'renting_complete', 'mybooking' ) ?></span>
-            <span class="fw-900 brand-primary"><%=configuration.formatCurrency(shopping_cart.total_cost)%></span>
-        </div>
-      </div>
-    </div>
-  </div>
 
+          <!-- // TOTAL -->
+          <div class="mybooking-detail_total-box">
+            <span class="mybooking-detail_total-text"><?php echo esc_html_x( "Total", 'renting_complete', 'mybooking' ) ?></span>
+            <span class="mybooking-detail_total-price"><%=configuration.formatCurrency(shopping_cart.total_cost)%></span>
+          </div>
+
+          </div>
+        </div>
+      <% } %>
+  </div>
 </script>
 
 <!-- Payment detail -->
@@ -812,45 +746,177 @@
 
     <% if (selectionOptions > 1) { %>
       <hr>
-      <div class="form-row">
+
+      <!-- // Request reservation -->
+
+      <div class="mybooking-payment_option">
         <% if (sales_process.can_request) { %>
-          <div class="form-group col-md-12">
-            <label for="complete_action_request_reservation">
-              <input type="radio" id="complete_action_request_reservation" name="complete_action" value="request_reservation" class="complete_action">&nbsp;
-              <?php echo esc_html_x( 'Request reservation', 'renting_complete', 'mybooking' ) ?>
-            </label>
+          <label class="mybooking-payment_option-item" for="complete_action_request_reservation">
+            <input type="radio" id="complete_action_request_reservation" name="complete_action" value="request_reservation" class="complete_action">&nbsp;
+            <?php echo esc_html_x( 'Request reservation', 'renting_complete', 'mybooking' ) ?>
+          </label>
+        <% } %>
+
+        <% if (sales_process.can_request) { %>
+          <div id="request_reservation_container" <% if (selectionOptions > 1 || !sales_process.can_request) { %>style="display:none"<%}%>>
+
+            <!-- Conditions -->
+            <div class="border p-4">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="conditions_read_request_reservation">
+                    <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;
+                    <?php if ( empty($args['terms_and_conditions']) ) { ?>
+                      <?php echo esc_html_x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking' ) ?>
+                    <?php } else { ?>
+                      <?php /* translators: %s: terms and conditions URL */ ?>
+                      <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ) ?>
+                    <?php } ?>
+                  </label>
+                </div>
+              </div>
+
+              <?php if ( !empty($mybooking_engine_privacy_page) ) { ?>
+                <!-- Privacy -->
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="privacy_read_request_reservation">
+                      <input type="checkbox" id="privacy_read_request_reservation" name="privacy_read_request_reservation">
+                        <?php /* translators: %s: privacy policy URL */ ?>
+                        <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
+                    </label>
+                  </div>
+                </div>
+              <?php } ?>
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <button type="submit" class="btn btn-primary">
+                    <?php echo esc_html_x( 'Request reservation', 'renting_complete', 'mybooking' ) ?>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         <% } %>
+
+        <!-- // Pay on delivery -->
+                
         <% if (sales_process.can_pay_on_delivery) { %>
-          <div class="form-group col-md-12">
-            <label for="complete_action_pay_on_delivery">
-              <input type="radio" id="complete_action_pay_on_delivery" name="complete_action" value="pay_on_delivery" class="complete_action">&nbsp;
-              <?php echo esc_html_x( 'Book now and pay on arrival', 'renting_complete', 'mybooking' ) ?>
-            </label>
+          <label class="mybooking-payment_option-item" for="complete_action_pay_on_delivery">
+            <input type="radio" id="complete_action_pay_on_delivery" name="complete_action" value="pay_on_delivery" class="complete_action">&nbsp;
+            <?php echo esc_html_x( 'Book now and pay on arrival', 'renting_complete', 'mybooking' ) ?>
+          </label>
+        <% } %>
+        
+        <% if (sales_process.can_pay_on_delivery) { %>
+          <div id="payment_on_delivery_container" <% if (selectionOptions > 1 || !sales_process.can_pay_on_delivery) { %>style="display:none"<%}%>>
+            
+          <!-- Conditions -->
+            <div class="border p-4">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="conditions_read_payment_on_delivery">
+                    <input type="checkbox" id="conditions_read_payment_on_delivery" name="conditions_read_payment_on_delivery">&nbsp;
+                    <?php if ( empty($args['terms_and_conditions']) ) { ?>
+                      <?php echo esc_html_x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking' ) ?>
+                    <?php } else { ?>
+                      <?php /* translators: %s: terms and conditions URL */ ?>
+                      <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ) ?>
+                    <?php } ?>
+                  </label>
+                </div>
+
+                <?php if ( !empty($mybooking_engine_privacy_page) ) { ?>
+                  <!-- Privacy -->
+                  <div class="form-group col-md-12">
+                    <label for="privacy_read_payment_on_delivery">
+                      <input type="checkbox" id="privacy_read_payment_on_delivery" name="privacy_read_payment_on_delivery">
+                        <?php /* translators: %s: privacy policy URL */ ?>
+                        <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
+                    </label>
+                  </div>
+                <?php } ?>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <button type="submit" class="btn btn-outline-dark"><?php echo esc_html_x( 'Confirm', 'renting_complete', 'mybooking' ) ?></button>
+                </div>
+              </div>
+            </div>
           </div>
         <% } %>
+
+        <!-- // Pay now -->
+        
         <% if (sales_process.can_pay) { %>
-        <div class="form-group col-md-12">
-          <label for="complete_action_pay_now">
+          <label class="mybooking-payment_option-item" for="complete_action_pay_now">
             <input type="radio" id="complete_action_pay_now" name="complete_action" value="pay_now" class="complete_action">&nbsp;
             <?php echo esc_html_x( 'Book now and pay now', 'renting_complete', 'mybooking' ) ?>
           </label>
-        </div>
         <% } %>
       </div>
     <% } %>
 
-    <!-- // Request reservation -->
+    <% if (sales_process.can_pay) { %>
+      <div id="payment_now_container" <% if (selectionOptions > 1 || !sales_process.can_pay) { %>style="display:none"<%}%>>
+        <div class="border p-4">
+            <h4><%=i18next.t('complete.reservationForm.total_payment', {amount: configuration.formatCurrency(paymentAmount)})%></h4>
+            <br>
+            
+            <!-- Payment amount -->
+            <div class="alert alert-info">
+              <p><%=i18next.t('complete.reservationForm.booking_amount',{amount: configuration.formatCurrency(paymentAmount)})%></p>
+            </div>
 
-    <% if (sales_process.can_request) { %>
-      <div id="request_reservation_container" <% if (selectionOptions > 1 || !sales_process.can_request) { %>style="display:none"<%}%>>
+            <% if (sales_process.payment_methods.paypal_standard &&
+                  sales_process.payment_methods.tpv_virtual) { %>
+                <div class="alert alert-secondary" role="alert">
+                  <?php echo wp_kses_post( _x( 'You will be redirected to the <b>payment platform</b> to make the confirmation payment securely. You can use <u>Paypal account</u> or <u>credit card</u> to make the payment.', 'renting_complete', 'mybooking' ) )?>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="payments_paypal_standard">
+                    <input type="radio" id="payments_paypal_standard" name="payment_method_select" class="payment_method_select" value="paypal_standard">&nbsp;<?php echo esc_html_x( 'Paypal', 'renting_complete', 'mybooking' ) ?>
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>"/>
+                    </label>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="payments_credit_card">
+                    <input type="radio" id="payments_credit_card" name="payment_method_select"
+                      class="payment_method_select"
+                      value="<%=sales_process.payment_methods.tpv_virtual%>">&nbsp;<?php echo esc_html_x( 'Credit or debit card', 'renting_complete', 'mybooking' ) ?>
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>
+                    </label>
+                  </div>
+                </div>
+                <div id="payment_method_select_error" class="form-row">
+                </div>
+            <% } else if (sales_process.payment_methods.paypal_standard) { %>
+                <div class="alert alert-secondary" role="alert">
+                  <?php echo wp_kses_post( _x( 'You will be redirected to <b>Paypal payment platform</b> to make the confirmation payment securely. You can use <u>Paypal</u> or <u>credit card</u> to make the payment.', 'renting_complete', 'mybooking' ) ) ?>
+                </div>
+                <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>"/>
+                <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png') ?>"/>
+                <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png') ?>"/>
+            <% } else if (sales_process.payment_methods.tpv_virtual) { %>
+                <div class="alert alert-secondary" role="alert">
+                  <?php echo wp_kses_post( _x( 'You will be redirected to the <b>credit card payment platform</b> to make the confirmation payment securely.' ,
+                    'renting_complete', 'mybooking' )  )?>
+                </div>
+                <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
+                <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>
+            <% } %>
 
-          <!-- Conditions -->
-          <div class="border p-4">
+            <hr>
+
+            <!-- Conditions -->
             <div class="form-row">
               <div class="form-group col-md-12">
-                <label for="conditions_read_request_reservation">
-                  <input type="checkbox" id="conditions_read_request_reservation" name="conditions_read_request_reservation">&nbsp;
+                <label for="conditions_read_pay_now">
+                  <input type="checkbox" id="conditions_read_pay_now" name="conditions_read_pay_now">&nbsp;
                   <?php if ( empty($args['terms_and_conditions']) ) { ?>
                     <?php echo esc_html_x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking' ) ?>
                   <?php } else { ?>
@@ -865,8 +931,8 @@
               <!-- Privacy -->
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label for="privacy_read_request_reservation">
-                    <input type="checkbox" id="privacy_read_request_reservation" name="privacy_read_request_reservation">
+                  <label for="privacy_read_pay_now">
+                    <input type="checkbox" id="privacy_read_pay_now" name="privacy_read_pay_now">
                       <?php /* translators: %s: privacy policy URL */ ?>
                       <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
                   </label>
@@ -876,150 +942,10 @@
 
             <div class="form-row">
               <div class="form-group col-md-12">
-                <button type="submit" class="btn btn-primary">
-                  <?php echo esc_html_x( 'Request reservation', 'renting_complete', 'mybooking' ) ?>
-                </button>
+                <button type="submit" class="btn btn-outline-dark"><%=i18next.t('complete.reservationForm.payment_button',{amount: configuration.formatCurrency(paymentAmount)})%></a>
               </div>
             </div>
-          </div>
-
-      </div>
-    <% } %>
-
-    <% if (sales_process.can_pay_on_delivery) { %>
-      <!-- Pay on delivery -->
-      <div id="payment_on_delivery_container" <% if (selectionOptions > 1 || !sales_process.can_pay_on_delivery) { %>style="display:none"<%}%>>
-          <!-- Conditions -->
-          <div class="border p-4">
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label for="conditions_read_payment_on_delivery">
-                  <input type="checkbox" id="conditions_read_payment_on_delivery" name="conditions_read_payment_on_delivery">&nbsp;
-                  <?php if ( empty($args['terms_and_conditions']) ) { ?>
-                    <?php echo esc_html_x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking' ) ?>
-                  <?php } else { ?>
-                    <?php /* translators: %s: terms and conditions URL */ ?>
-                    <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ) ?>
-                  <?php } ?>
-                </label>
-              </div>
-
-              <?php if ( !empty($mybooking_engine_privacy_page) ) { ?>
-                <!-- Privacy -->
-                <div class="form-group col-md-12">
-                  <label for="privacy_read_payment_on_delivery">
-                    <input type="checkbox" id="privacy_read_payment_on_delivery" name="privacy_read_payment_on_delivery">
-                      <?php /* translators: %s: privacy policy URL */ ?>
-                      <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
-                  </label>
-                </div>
-              <?php } ?>
-
-            </div>
-
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <button type="submit" class="btn btn-outline-dark"><?php echo esc_html_x( 'Confirm', 'renting_complete', 'mybooking' ) ?></button>
-              </div>
-            </div>
-          </div>
-
-      </div>
-    <% } %>
-
-    <% if (sales_process.can_pay) { %>
-
-        <!-- Pay now -->
-
-        <div id="payment_now_container" <% if (selectionOptions > 1 || !sales_process.can_pay) { %>style="display:none"<%}%>>
-
-            <div class="border p-4">
-                <h4><%=i18next.t('complete.reservationForm.total_payment', {amount: configuration.formatCurrency(paymentAmount)})%></h4>
-                <br>
-
-                <!-- Payment amount -->
-
-                <div class="alert alert-info">
-                  <p><%=i18next.t('complete.reservationForm.booking_amount',{amount: configuration.formatCurrency(paymentAmount)})%></p>
-                </div>
-
-                <% if (sales_process.payment_methods.paypal_standard &&
-                      sales_process.payment_methods.tpv_virtual) { %>
-                    <div class="alert alert-secondary" role="alert">
-                      <?php echo wp_kses_post( _x( 'You will be redirected to the <b>payment platform</b> to make the confirmation payment securely. You can use <u>Paypal account</u> or <u>credit card</u> to make the payment.', 'renting_complete', 'mybooking' ) )?>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-12">
-                        <label for="payments_paypal_standard">
-                        <input type="radio" id="payments_paypal_standard" name="payment_method_select" class="payment_method_select" value="paypal_standard">&nbsp;<?php echo esc_html_x( 'Paypal', 'renting_complete', 'mybooking' ) ?>
-                        <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>"/>
-                        </label>
-                      </div>
-                      <div class="form-group col-md-12">
-                        <label for="payments_credit_card">
-                        <input type="radio" id="payments_credit_card" name="payment_method_select"
-                          class="payment_method_select"
-                          value="<%=sales_process.payment_methods.tpv_virtual%>">&nbsp;<?php echo esc_html_x( 'Credit or debit card', 'renting_complete', 'mybooking' ) ?>
-                        <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
-                        <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>
-                        </label>
-                      </div>
-                    </div>
-                    <div id="payment_method_select_error" class="form-row">
-                    </div>
-                <% } else if (sales_process.payment_methods.paypal_standard) { %>
-                    <div class="alert alert-secondary" role="alert">
-                      <?php echo wp_kses_post( _x( 'You will be redirected to <b>Paypal payment platform</b> to make the confirmation payment securely. You can use <u>Paypal</u> or <u>credit card</u> to make the payment.', 'renting_complete', 'mybooking' ) ) ?>
-                    </div>
-                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/paypal.png' ) ?>"/>
-                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png') ?>"/>
-                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png') ?>"/>
-                <% } else if (sales_process.payment_methods.tpv_virtual) { %>
-                    <div class="alert alert-secondary" role="alert">
-                      <?php echo wp_kses_post( _x( 'You will be redirected to the <b>credit card payment platform</b> to make the confirmation payment securely.' ,
-                        'renting_complete', 'mybooking' )  )?>
-                    </div>
-                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/visa.png' ) ?>"/>
-                    <img src="<?php echo esc_url( get_stylesheet_directory_uri().'/images/mastercard.png' ) ?>"/>
-                <% } %>
-
-                <hr>
-
-                <!-- Conditions -->
-                <div class="form-row">
-                  <div class="form-group col-md-12">
-                    <label for="conditions_read_pay_now">
-                      <input type="checkbox" id="conditions_read_pay_now" name="conditions_read_pay_now">&nbsp;
-                      <?php if ( empty($args['terms_and_conditions']) ) { ?>
-                        <?php echo esc_html_x( 'I have read and hereby accept the conditions of rental', 'renting_complete', 'mybooking' ) ?>
-                      <?php } else { ?>
-                        <?php /* translators: %s: terms and conditions URL */ ?>
-                        <?php echo wp_kses_post ( sprintf( _x( 'I have read and hereby accept the <a href="%s" target="_blank">conditions</a> of rental', 'renting_complete', 'mybooking' ), $args['terms_and_conditions'] ) ) ?>
-                      <?php } ?>
-                    </label>
-                  </div>
-                </div>
-
-                <?php if ( !empty($mybooking_engine_privacy_page) ) { ?>
-                  <!-- Privacy -->
-                  <div class="form-row">
-                    <div class="form-group col-md-12">
-                      <label for="privacy_read_pay_now">
-                        <input type="checkbox" id="privacy_read_pay_now" name="privacy_read_pay_now">
-                          <?php /* translators: %s: privacy policy URL */ ?>
-                          <?php echo wp_kses_post ( sprintf( _x( 'I have read and accept the <a href="%s" target="_blank">privacy policy</a>', 'renting_complete', 'mybooking' ), $mybooking_engine_privacy_page ) )?>
-                      </label>
-                    </div>
-                  </div>
-                <?php } ?>
-
-                <div class="form-row">
-                  <div class="form-group col-md-12">
-                    <button type="submit" class="btn btn-outline-dark"><%=i18next.t('complete.reservationForm.payment_button',{amount: configuration.formatCurrency(paymentAmount)})%></a>
-                  </div>
-                </div>
-            </div>
-
         </div>
+      </div>
     <% } %>
 </script>
