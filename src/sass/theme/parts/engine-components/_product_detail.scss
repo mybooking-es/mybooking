@@ -6,7 +6,7 @@
 @mixin product-detail-container-mixin() {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 30px;
+  /*grid-gap: 30px;*/
   padding: 30px;
   margin: 0 auto;
   align-content: center;
@@ -24,7 +24,7 @@
   }
 }
 
-// Product detail for complete, mi reserva and summary
+// Product detail for complete
 .mybooking-reservation_detail {
   background: var(--product-detail-bg-color);
   margin-top: 15px;
@@ -35,9 +35,29 @@
   @include product-detail-container-mixin();
 }
 
+.mybooking-reservation_product-item--multi {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
 // Reservation Summary
+.mybooking-reservation_detail-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .mybooking-reservation_product-image {
   max-width: 100%;
+}
+
+.mybooking-reservation_product-image--multi {
+  width: 35%;
+}
+
+.mybooking-reservation_detail-info--multi {
+  width: 65%;
 }
 
 .mybooking-reservation_product-name {
@@ -52,6 +72,13 @@
   font-weight: 400!important;
   margin-top: 1.2rem;
   font-size: 1em;
+}
+
+.mybooking-reservation_product--multi {
+  line-height: 1;
+  font-weight: 900;
+  margin-top: 1.2rem;
+  font-size: 1.2em;
 }
 
 .mybooking-reservation_detail-date {
@@ -80,6 +107,13 @@
   margin-bottom: 1rem;
 }
 
+.mybooking-detail_product-item--multi {
+  display: flex;
+  justify-content: space-between;
+  padding: .3rem 0;
+  border-bottom: 1px solid #eee;
+}
+
 .mybooking-detail_product-price {
   display: flex;
   justify-content: flex-end;
@@ -89,6 +123,21 @@
   min-width: 50%;
 }
 
+.mybooking-detail_product-price--multi {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1em;
+  font-weight: 900;
+  color: var(--brand-primary);
+  min-width: 50%;
+}
+
+.mybooking-detail_product-info {
+  display: flex;
+  justify-content: space-between;
+  padding: .3rem 0;
+}
+
 .mybooking-detail_promotion-item {
   display: flex;
   justify-content: space-between;
@@ -96,6 +145,7 @@
   margin-bottom: 0.5rem;
 }
 
+// Detail Extras
 .mybooking-detail_extra-item {
   position: relative;
   display: flex;
@@ -152,6 +202,18 @@
   .mybooking-detail_deposit-price {
     font-weight: 900;
   }  
+}
+
+.mybooking-detail_deposit-item--multi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 14px;
+  font-weight: 700;
+  .mybooking-detail_deposit-name {
+    width: 60%; 
+  }
 }
 
 .mybooking-detail_deposit-item:last-of-type {

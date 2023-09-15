@@ -29748,7 +29748,7 @@ a.magic-button.btn {
 .mybooking-reservation_detail-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 30px;
+  /*grid-gap: 30px;*/
   padding: 30px;
   margin: 0 auto;
   -ms-flex-line-pack: center;
@@ -29764,8 +29764,28 @@ a.magic-button.btn {
     padding: 0;
     line-height: 1.4; }
 
+.mybooking-reservation_product-item--multi {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem; }
+
+.mybooking-reservation_detail-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem; }
+
 .mybooking-reservation_product-image {
   max-width: 100%; }
+
+.mybooking-reservation_product-image--multi {
+  width: 35%; }
+
+.mybooking-reservation_detail-info--multi {
+  width: 65%; }
 
 .mybooking-reservation_product-name {
   font-size: 1.8rem;
@@ -29778,6 +29798,12 @@ a.magic-button.btn {
   font-weight: 400 !important;
   margin-top: 1.2rem;
   font-size: 1em; }
+
+.mybooking-reservation_product--multi {
+  line-height: 1;
+  font-weight: 900;
+  margin-top: 1.2rem;
+  font-size: 1.2em; }
 
 .mybooking-reservation_detail-date {
   font-weight: 900;
@@ -29806,6 +29832,16 @@ a.magic-button.btn {
   border-bottom: 1px solid #eee;
   margin-bottom: 1rem; }
 
+.mybooking-detail_product-item--multi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .3rem 0;
+  border-bottom: 1px solid #eee; }
+
 .mybooking-detail_product-price {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29817,6 +29853,27 @@ a.magic-button.btn {
   font-weight: 900;
   color: var(--brand-primary);
   min-width: 50%; }
+
+.mybooking-detail_product-price--multi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1em;
+  font-weight: 900;
+  color: var(--brand-primary);
+  min-width: 50%; }
+
+.mybooking-detail_product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .3rem 0; }
 
 .mybooking-detail_promotion-item {
   display: -webkit-box;
@@ -29890,6 +29947,22 @@ a.magic-button.btn {
     font-weight: 400; }
   .mybooking-detail_deposit-item .mybooking-detail_deposit-price {
     font-weight: 900; }
+
+.mybooking-detail_deposit-item--multi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0;
+  font-size: 14px;
+  font-weight: 700; }
+  .mybooking-detail_deposit-item--multi .mybooking-detail_deposit-name {
+    width: 60%; }
 
 .mybooking-detail_deposit-item:last-of-type {
   border: none; }

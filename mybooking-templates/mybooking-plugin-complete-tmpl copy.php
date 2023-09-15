@@ -384,50 +384,54 @@
     <% if (configuration.multipleProductsSelection) { %>
       <div class="mybooking-reservation_detail-container">
 
-        <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
-          <div class="mybooking-reservation_product-item--multi">
-
-            <div class="mybooking-reservation_title--multi" data-label="<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>">
-              <span class="mybooking-reservation_name--multi">
-                <h2 class="mybooking-reservation_product-name">
-                  <%=shopping_cart.items[idx].item_description_customer_translation%>
-                </h2>
-              </span>
-            </div>
-
-            <div class="mybooking-reservation_detail-content">
-              <img class="mybooking-reservation_product-image--multi" src="<%=shopping_cart.items[idx].photo_medium%>" alt="Product image">
-              <span class="mybooking-reservation_detail-info--multi">
-                <div class="mybooking-detail_product-item--multi" data-label="<?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>">
-                  <span class="mybooking-detail_product-name--multi">
-                    <?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>
-                  </span>
-                  <span class="mybooking-detail_product-price--multi">
-                    <%=shopping_cart.items[idx].quantity%>x
+        <div class="table-responsive mt-5">
+          <table class="table product-detail-table table-borderless">
+            <thead>
+              <tr class="bg-gray-100">
+                <th></th>
+                <th scope="col">
+                  <?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() )?>
+                </th>
+                <th scope="col" class="text-right">
+                  <?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>
+                </th>
+                <th scope="col" class="text-right">
+                  <?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?>
+                </th>
+                <th scope="col" class="text-right">
+                  <?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?>
+                </th>
+                <th scope="col" class="text-right">
+                  <?php echo esc_html_x( 'Deposit', 'renting_complete', 'mybooking' ) ?>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
+                <tr>
+                  <td class="text-center text-md-left">
+                    <img class="img-fluid" style="max-width: 120px" src="<%=shopping_cart.items[idx].photo_medium%>" alt="Product image">
+                  </td>
+                  <td data-label="<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>" class="align-middle">
+                    <%=shopping_cart.items[idx].item_description_customer_translation%>
+                  </td>
+                  <td data-label="<?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>" class="align-middle text-right">
                     <%=configuration.formatCurrency(shopping_cart.items[idx].item_unit_cost)%>
-                  </span>
-                </div>
-                <div class="mybooking-detail_product-item--multi" data-label="<?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?>">
-                  <span class="mybooking-detail_product-name--multi">
-                    <?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?>
-                  </span>
-                  <span class="mybooking-detail_product-price--multi">
+                  </td>
+                  <td data-label="<?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?>" class="align-middle text-right">
+                    <%=shopping_cart.items[idx].quantity%>
+                  </td>
+                  <td data-label="<?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?>" class="align-middle text-right">
                     <%=configuration.formatCurrency(shopping_cart.items[idx].item_cost)%>
-                  </span>
-                </div>
-
-                <div class="mybooking-detail_deposit-item--multi" data-label="<?php echo esc_html_x( 'Deposit', 'renting_complete', 'mybooking' ) ?>">
-                  <span class="mybooking-detail_deposit-name">
-                    <?php echo esc_html_x( 'Deposit', 'renting_complete', 'mybooking' ) ?>
-                  </span>
-                  <span class="mybooking-detail_deposit-price">
+                  </td>
+                  <td data-label="<?php echo esc_html_x( 'Deposit', 'renting_complete', 'mybooking' ) ?>" class="align-middle text-right">
                     <%=configuration.formatCurrency(shopping_cart.items[idx].product_deposit_cost)%>
-                  </span>
-                </div>
-              </span>
-            </div>
-          </div>
-        <% } %>
+                  </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
 
         <div>
           <h5 class="mybooking-reservation_detail-title"><?php echo esc_html_x('Delivery', 'renting_complete', 'mybooking') ?></h5>
@@ -476,61 +480,6 @@
             </ul>
           </div>
         <% } %>
-
-        <!-- Extras and suplements -->
-
-        <ul class="mybooking-detail_extra-list">
-          <hr>
-          <!-- // Extras -->
-          <% if (shopping_cart.extras.length > 0) { %>
-            <% for (var idx=0; idx<shopping_cart.extras.length; idx++) { %>
-              <li class="mybooking-detail_extra-item">
-                <span>
-                  <span class="badge badge-primary badge-pill"><%=shopping_cart.extras[idx].quantity%></span>
-                  <span class="mybooking-detail_extra-name"><%=shopping_cart.extras[idx].extra_description_customer_translation%></span>
-                </span>
-                <span class="mybooking-detail_extra-price"><%=configuration.formatCurrency(shopping_cart.extras[idx].extra_cost)%></span>
-              </li>
-            <% } %>
-          <% } %>
-          <!-- // Suplements -->
-          <% if (shopping_cart.time_from_cost > 0) { %>
-          <li class="mybooking-detail_extra-item">
-            <span class="mybooking-detail_extra-name"><?php echo esc_html_x( 'Pick-up time supplement', 'renting_complete', 'mybooking' ) ?></span>
-            <span class="mybooking-detail_extra-price"><%=configuration.formatCurrency(shopping_cart.time_from_cost)%></span>
-          </li>
-          <% } %>
-          <% if (shopping_cart.pickup_place_cost > 0) { %>
-          <li class="mybooking-detail_extra-item">
-            <span class="mybooking-detail_extra-name"><?php echo esc_html_x( 'Pick-up place supplement', 'renting_complete', 'mybooking' ) ?></span>
-            <span class="mybooking-detail_extra-price"><%=configuration.formatCurrency(shopping_cart.pickup_place_cost)%></span>
-          </li>
-          <% } %>
-          <% if (shopping_cart.time_to_cost > 0) { %>
-          <li class="mybooking-detail_extra-item">
-            <span class="mybooking-detail_extra-name"><?php echo esc_html_x( 'Return time supplement', 'renting_complete', 'mybooking' ) ?></span>
-            <span class="mybooking-detail_extra-price"><%=configuration.formatCurrency(shopping_cart.time_to_cost)%></span>
-          </li>
-          <% } %>
-          <% if (shopping_cart.return_place_cost > 0) { %>
-          <li class="mybooking-detail_extra-item">
-            <span class="mybooking-detail_extra-name"><?php echo esc_html_x( 'Return place supplement', 'renting_complete', 'mybooking' ) ?></span>
-            <span class="mybooking-detail_extra-price"><%=configuration.formatCurrency(shopping_cart.return_place_cost)%></span>
-          </li>
-          <% } %>
-          <% if (shopping_cart.driver_age_cost > 0) { %>
-          <li class="mybooking-detail_extra-item">
-            <span class="mybooking-detail_extra-name"><?php echo esc_html_x( "Driver's age supplement", 'renting_complete', 'mybooking' ) ?></span>
-            <span class="mybooking-detail_extra-price"><%=configuration.formatCurrency(shopping_cart.driver_age_cost)%></span>
-          </li>
-          <% } %>
-          <% if (shopping_cart.category_supplement_1_cost > 0) { %>
-          <li class="mybooking-detail_extra-item">
-            <span class="mybooking-detail_extra-name"><?php echo esc_html_x( "Petrol supplement", 'renting_complete', 'mybooking' ) ?></span>
-            <span class="mybooking-detail_extra-price"><%=configuration.formatCurrency(shopping_cart.category_supplement_1_cost)%></span>
-          </li>
-          <% } %>
-        </ul>
       </div>
     
     <!-- SINGLE PRODUCT DETAILS -->
