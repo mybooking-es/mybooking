@@ -22,8 +22,7 @@
 <div class="reservation-step process-container reservation-step-complete custom-form">
 
   <!-- Reservation Summary sticky -->
-  <div id="reservation_detail_sticky" class="sticky-top"></div>
-
+  <div class="sticky-top" id="reservation_detail_sticky"></div>
   <div class="container">
     <div class="row">
 
@@ -34,14 +33,17 @@
       <!-- RESERVATION FORM -->
 
       <div class="col-md-8">
+
         <!-- Reservation : Extras -->
-        <div id="extras_listing" class="extras"></div>
+        <div class="extras" id="extras_listing"></div>
+
         <!-- Reservation complete -->
         <div class="reservation_form_container">
           <div class="process-section-box">
-            <form id="form-reservation" name="reservation_form" class="">
-              <h4 class="brand-primary my-3 customer_component">
-              <?php echo esc_html_x( "Customer's details", 'renting_complete', 'mybooking') ?></h4>
+            <form class="mybooking-complete_form" id="form-reservation" name="reservation_form">
+              <h4 class="brand-primary customer_component">
+                <?php echo esc_html_x( "Customer's details", 'renting_complete', 'mybooking') ?>
+              </h4>
               <div class="form-row customer_component">
                 <div class="form-group col-md-6">
                   <label for="name"><?php echo esc_html_x( 'Name', 'renting_complete', 'mybooking') ?> *</label>
@@ -70,8 +72,7 @@
                     placeholder="<?php echo esc_attr_x( 'Phone number', 'renting_complete', 'mybooking') ?>" maxlength="15">
                 </div>
                 <div class="form-group col-md-6">
-                  <label
-                    for="customer_mobile_phone"><?php echo esc_html_x( 'Alternative phone number', 'renting_complete', 'mybooking') ?></label>
+                  <label for="customer_mobile_phone"><?php echo esc_html_x( 'Alternative phone number', 'renting_complete', 'mybooking') ?></label>
                   <input class="form-control" id="customer_mobile_phone" name="customer_mobile_phone" type="text"
                     placeholder="<?php echo esc_attr_x( 'Alternative phone number', 'renting_complete', 'mybooking') ?>" maxlength="15">
                 </div>
@@ -81,13 +82,11 @@
 
               <div class="form-row js-mb-delivery-slot-skipper-container" style="display: none">
                 <div class="form-group col-md-6 js-mb-delivery-slot" style="display: none">
-                  <label
-                    for="slot_time_from"><?php echo esc_html_x( 'Select the schedule that suits your needs', 'renting_complete', 'mybooking') ?></label>
+                  <label for="slot_time_from"><?php echo esc_html_x( 'Select the schedule that suits your needs', 'renting_complete', 'mybooking') ?></label>
                   <select class="form-control" id="slot_time_from" name="slot_time_from"></select>
                 </div>
                 <div class="form-group col-md-6 js-mb-optional-external-driver" style="display: none">
-                  <label
-                    for="slot_time_from"><?php echo esc_html_x( 'Will you need a skipper? (Indicate it and we will confirm availability)', 'renting_complete', 'mybooking') ?></label>
+                  <label for="slot_time_from"><?php echo esc_html_x( 'Will you need a skipper? (Indicate it and we will confirm availability)', 'renting_complete', 'mybooking') ?></label>
                   <select class="form-control" id="with_optional_external_driver" name="with_optional_external_driver">
                     <option value=""></option>
                     <option value="false"><?php echo esc_html_x( 'No', 'renting_complete', 'mybooking') ?></option>
@@ -99,10 +98,10 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="comments"><?php echo esc_html_x( 'Comments', 'renting_complete', 'mybooking') ?></label>
-                  <textarea name="comments" id="comments" placeholder="<?php echo esc_attr_x( 'Comments', 'renting_complete', 'mybooking') ?>"
-                    style="width: 100%; height: 100px; padding: 0.8rem;"></textarea>
+                  <textarea name="comments" id="comments" placeholder="<?php echo esc_attr_x( 'Comments', 'renting_complete', 'mybooking') ?>" style="width: 100%; height: 100px; padding: 0.8rem;"></textarea>
                 </div>
               </div>
+
               <!-- Reservation : payment -->
               <div id="payment_detail"></div>
             </form>

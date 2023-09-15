@@ -4,6 +4,7 @@
 
 // sticky bar choose product & complete
 // common clases for pickup == return & special clases for pickup != return inside sandwitch-wrapper
+
 .sticky-top {
   max-width: 100%;
   z-index: 25;
@@ -40,22 +41,21 @@
   color: var(--sticky-bar-color);
   display: flex;
   flex-wrap: nowrap;
-  font-weight: 300;
+  font-weight: 400;
   padding-left: 10px;
   padding-top: 10px;
-
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .reservation-summary_return_date {
   color: var(--sticky-bar-color);
   display: flex;
   flex-wrap: nowrap;
-  font-weight: 300;
+  font-weight: 400;
   justify-content: flex-end;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .overflow-ellipsis {
   text-overflow: ellipsis;
@@ -214,13 +214,13 @@
 // =======================
 
 .complete-summary-row {
-  border-top: 1px solid var(--gray-500);
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding-left: 10px;
+  padding: 10px;
   align-items: center;
   margin-top: 10px;
+  background-color: rgba( 0,0,0,0.2 );
 }
 
 .complete-summary-price-wrapper {
@@ -237,6 +237,8 @@
 
 .complete-summary-total-price {
   color: var(--sticky-bar-price-color);
+  font-size: 1.3rem;
+  font-weight: 900;
 }
 
 .complete-buttons-wrapper {
@@ -244,14 +246,11 @@
 }
 
 .complete-button {
-  height: 50px;
   display: flex;
   font-size: 0.8rem;
-  padding: 0 15px;
   align-self: flex-end;
   align-items: center;
   font-weight: 300;
-  text-transform: uppercase;
   background-color: transparent;
   color: var(--sticky-bar-link-color);
   &:hover {
@@ -273,20 +272,18 @@
   }
   .complete-summary-total-title {
     display: flex;
-    color: var(--success);
+    color: white;
     font-weight: 700;
     text-align: left;
     text-transform: uppercase;
     line-height: 1;
     margin-right: 1rem;
   }
-  .complete-summary-total-price {
-    font-size: 1.3rem;
-  }
   .complete-summary-row {
     border-top: none;
     padding: 10px 0 0 10px;
     margin-top: 0;
+    background-color: var(--brand-primary);
   }
   .complete-button {
     border-left: none;

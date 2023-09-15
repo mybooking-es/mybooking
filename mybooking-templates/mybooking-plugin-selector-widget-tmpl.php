@@ -131,7 +131,9 @@
 
         <div class="flex-form-group">
           <div class="flex-form-box mb-0">
-            <input type="submit" class="btn btn-primary btn-only-dates"
+            <input 
+              type="submit" 
+              class="btn btn-primary btn-only-dates mybooking-search-button"
               value="<?php echo esc_html_x( 'Search', 'renting_form_selector', 'mybooking') ?>" />
           </div>
         </div>
@@ -286,7 +288,9 @@
     <% } %>
 
     <div class="flex-form-box">
-      <input type="submit" class="btn btn-primary mt-3"
+      <input 
+        type="submit" 
+        class="btn btn-primary mt-3 mybooking-search-button"
         value="<?php echo esc_html_x( 'Search', 'renting_form_selector', 'mybooking') ?>" />
     </div>
 
