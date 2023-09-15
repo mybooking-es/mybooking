@@ -29769,7 +29769,7 @@ a.magic-button.btn {
   border-bottom: 1px solid #eee;
   margin-bottom: 1rem; }
 
-.mybooking-reservation_detail-content {
+.mybooking-reservation_detail-content--multi {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29789,6 +29789,12 @@ a.magic-button.btn {
 
 .mybooking-reservation_product-name {
   font-size: 1.8rem;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--product-detail-group-name); }
+
+.mybooking-reservation_product-name--multi {
+  font-size: 1.4rem;
   line-height: 1;
   font-weight: 900;
   color: var(--product-detail-group-name); }

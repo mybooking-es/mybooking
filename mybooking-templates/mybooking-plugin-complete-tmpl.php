@@ -387,15 +387,11 @@
         <% for (var idx=0; idx<shopping_cart.items.length; idx++) { %>
           <div class="mybooking-reservation_product-item--multi">
 
-            <div class="mybooking-reservation_title--multi" data-label="<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>">
-              <span class="mybooking-reservation_name--multi">
-                <h2 class="mybooking-reservation_product-name">
-                  <%=shopping_cart.items[idx].item_description_customer_translation%>
-                </h2>
-              </span>
-            </div>
+            <h2 class="mybooking-reservation_product-name--multi" data-label="<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>">
+              <%=shopping_cart.items[idx].item_description_customer_translation%>
+            </h2>
 
-            <div class="mybooking-reservation_detail-content">
+            <div class="mybooking-reservation_detail-content--multi">
               <img class="mybooking-reservation_product-image--multi" src="<%=shopping_cart.items[idx].photo_medium%>" alt="Product image">
               <span class="mybooking-reservation_detail-info--multi">
                 <div class="mybooking-detail_product-item--multi" data-label="<?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>">
