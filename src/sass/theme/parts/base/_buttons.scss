@@ -2,27 +2,52 @@
 // Module/buttons
 //==============================================
 // Overwriting bootstrap styles
-.btn-primary,
-.btn-primary:not(:disabled):not(.disabled):active {
+
+.btn {
   padding: var(--btn-padding);
-  background-color: var(--btn-bg-color);
-  border-color: var(--btn-border-color);
+  border-radius: var(--btn-border-radius);
+  color: var(--white);
   letter-spacing: var(--btn-text-spacing);
   font-weight: var(--btn-font-w);
   text-transform: var(--btn-text-transform);
+  cursor: pointer;
+}
+
+button,
+[type="button"] {
+  -webkit-appearance: none;
+  border: none;
+}
+
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: var(--btn-bg-color);
+  border-color: var(--btn-border-color);
   &:hover {
     background-color: var(--btn-bg-color-hover);
     border-color: var(--btn-border-color-hover);
   }
 }
-.btn {
-  cursor: pointer;
-  border-radius: var(--btn-border-radius);
+
+.btn-secondary,
+.btn-secondary:not(:disabled):not(.disabled):active {
+  background-color: transparent;
+  border-color: transparent!important;
+  color: var(--brand-primary)!important;
+  &:hover {
+    background-color: var(--gray-200);
+    border-color: transparent!important;
+  }
 }
-button,
-[type="button"] {
-  -webkit-appearance: none;
-  border: none;
+
+.btn-outline-secondary {
+  color: #333!important;
+  border-color: var(--form-control-border-color);
+  &:hover {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: var(--btn-color-hover)!important;
+  }
 }
 
 .btn-outline-dark {

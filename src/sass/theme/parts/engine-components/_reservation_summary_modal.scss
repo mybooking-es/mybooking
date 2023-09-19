@@ -33,29 +33,6 @@
     margin-bottom: 0;
   }
 }
-.deposit-view {
-  padding: 1rem 0;
-  background-color: var(--gray-50);
-  border-bottom: 1px solid #dee2e6;  
-}
-.deposit-view_list li {
-  background-color: transparent;
-  border: none;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; 
-
-  .deposit-name {
-    width: 60%;
-  }
-  .deposit-price {
-    color: var(--gray-600);
-  }  
-}
 
 .product-summary-wrapper {
   padding: 1rem;

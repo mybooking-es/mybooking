@@ -1,12 +1,13 @@
-// Product detail for complete, mi reserva and summary
-.product-detail-bg-color {
-  background: var(--product-detail-bg-color);
-}
+//==============================================
+// Module/Reservation details
+//==============================================
+// Reservation summary and details on Complete
+
 @mixin product-detail-container-mixin() {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 30px;
-  padding: 30px 15px;
+  grid-template-columns: 1fr;
+  /*grid-gap: 30px;*/
+  padding: 30px;
   margin: 0 auto;
   align-content: center;
   line-height: 1;
@@ -19,44 +20,245 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    color: var(--product-detail-dates-text);
-    line-height: 1;
+    line-height: 1.4;
   }
 }
-.product-detail-container {
+
+// Product detail for complete
+.mybooking-reservation_detail {
+  background: var(--product-detail-bg-color);
+  margin-top: 15px;
+  border-radius: 10px 10px 0 0;
+}
+
+.mybooking-reservation_detail-container {
   @include product-detail-container-mixin();
 }
-.product-detail-container-several-products {
-  @include product-detail-container-mixin();
-  grid-template-columns: 1fr;
+
+.mybooking-reservation_product-item--multi {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
 }
-@media (max-width: 767.98px) {
-  .product-detail-container {
-    @include product-detail-container-mixin();
-    grid-template-columns: 1fr;
-  }
-  .product-detail-container-several-products {
-    @include product-detail-container-mixin();
-    grid-template-columns: 1fr;
-  }
+
+// Reservation Summary
+.mybooking-reservation_detail-content--multi {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
-.product-detail-image {
+
+.mybooking-reservation_product-image {
   max-width: 100%;
 }
-.detail-text {
-  font-weight: 200;
-  line-height: 1.2;
-  color: var(--product-detail-duration-text);
+
+.mybooking-reservation_product-image--multi {
+  width: 35%;
 }
-.product-name {
-  font-size: 3rem;
+
+.mybooking-reservation_detail-info--multi {
+  width: 65%;
+}
+
+.mybooking-reservation_product-name {
+  font-size: 1.8rem;
   line-height: 1;
   font-weight: 900;
   color: var(--product-detail-group-name);
 }
 
-// Product detail inside list in summary
+.mybooking-reservation_product-name--multi {
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--product-detail-group-name);
+}
 
+.mybooking-reservation_detail-title {
+  text-transform: uppercase;
+  font-weight: 400!important;
+  margin-top: 1.2rem;
+  font-size: 1em;
+}
+
+.mybooking-reservation_product--multi {
+  line-height: 1;
+  font-weight: 900;
+  margin-top: 1.2rem;
+  font-size: 1.2em;
+}
+
+.mybooking-reservation_detail-date {
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.mybooking-reservation_detail-duration {
+  font-size: 1.4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  margin: 1rem 0 2rem 0;
+}
+
+
+// Reservation Details
+.mybooking-detail_product-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
+.mybooking-detail_product-item--multi {
+  display: flex;
+  justify-content: space-between;
+  padding: .3rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.mybooking-detail_product-price {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.3em;
+  font-weight: 900;
+  color: var(--brand-primary);
+  min-width: 50%;
+}
+
+.mybooking-detail_product-price--multi {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1em;
+  font-weight: 900;
+  color: var(--brand-primary);
+  min-width: 50%;
+}
+
+.mybooking-detail_product-info {
+  display: flex;
+  justify-content: space-between;
+  padding: .3rem 0;
+}
+
+.mybooking-detail_promotion-item {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+// Detail Extras
+.mybooking-detail_extra-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: .3rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.mybooking-detail_extra-item:last-child {
+  border: none;
+}
+
+.mybooking-detail_extra-name {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.mybooking-detail_extra-price {
+  font-weight: 900;
+  color: var(--brand-primary);
+}
+
+.mybooking-detail_total-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  color: var(--brand-primary);
+  background-color: rgba(50, 110, 68, 0.2);
+  border-radius: 0 0 10px 10px;
+  font-size: 1.8em;
+  font-weight: 900;
+  box-shadow: 0 2px 0 rgba(0,0,0,.06);
+}
+
+// Deposit and Guaranty
+.mybooking-detail_deposit-view {
+  margin: 1rem 0 2rem 0;
+}
+
+.mybooking-detail_deposit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0;
+  margin: 0 1rem;
+  color: #666;
+  background-color: transparent;
+  border-bottom: 1px solid #ddd;
+  list-style: none;
+  .mybooking-detail_deposit-name {
+    width: 70%;
+    font-weight: 400;
+  }
+  .mybooking-detail_deposit-price {
+    font-weight: 900;
+  }  
+}
+
+.mybooking-detail_deposit-item--multi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 14px;
+  font-weight: 700;
+  .mybooking-detail_deposit-name {
+    width: 60%; 
+  }
+}
+
+.mybooking-detail_deposit-item:last-of-type {
+  border: none;
+  .mybooking-detail_deposit-name,
+  .mybooking-detail_deposit-price {
+    font-size: 1.2em;
+    color: #333;
+  }  
+}
+
+
+// Reservation Payment
+label.mybooking-payment_option-item {
+  display: block;
+  padding: 1rem;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  background-color: var(--brand-primary);
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+label.mybooking-payment_option-item:hover {
+  background-color: #333;
+}
+
+label.mybooking-payment_option-item input {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+
+// Product detail inside list in summary
 .product-detail_separator {
   i {
     color: var(--brand-primary);
@@ -64,6 +266,7 @@
     margin-top: 5px;
   }
 }
+
 // Product detail summary
 .product-detail-summary-dates {
   background-color: var(--gray-50);
