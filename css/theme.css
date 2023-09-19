@@ -29814,7 +29814,7 @@ a.magic-button.btn {
 .mybooking-reservation_detail-date {
   font-weight: 900;
   font-size: 14px;
-  margin-bottom: 2px; }
+  margin-bottom: 5px; }
 
 .mybooking-reservation_detail-duration {
   font-size: 1.4em;
@@ -29834,9 +29834,7 @@ a.magic-button.btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 1rem; }
+  margin-bottom: 2rem; }
 
 .mybooking-detail_product-item--multi {
   display: -webkit-box;
@@ -29949,10 +29947,9 @@ a.magic-button.btn {
   border-bottom: 1px solid #ddd;
   list-style: none; }
   .mybooking-detail_deposit-item .mybooking-detail_deposit-name {
-    width: 70%;
     font-weight: 400; }
   .mybooking-detail_deposit-item .mybooking-detail_deposit-price {
-    font-weight: 900; }
+    font-weight: 400; }
 
 .mybooking-detail_deposit-item--multi {
   display: -webkit-box;
@@ -29966,16 +29963,20 @@ a.magic-button.btn {
           align-items: center;
   padding: 0.5rem 0;
   font-size: 14px;
-  font-weight: 700; }
-  .mybooking-detail_deposit-item--multi .mybooking-detail_deposit-name {
-    width: 60%; }
+  font-weight: 700;
+  /*
+  .mybooking-detail_deposit-name {
+    width: 60%; 
+  }
+  */ }
 
 .mybooking-detail_deposit-item:last-of-type {
   border: none; }
   .mybooking-detail_deposit-item:last-of-type .mybooking-detail_deposit-name,
   .mybooking-detail_deposit-item:last-of-type .mybooking-detail_deposit-price {
-    font-size: 1.2em;
-    color: #333; }
+    font-size: 1em;
+    color: #333;
+    font-weight: 900; }
 
 label.mybooking-payment_option-item {
   display: block;
@@ -30145,7 +30146,9 @@ label.mybooking-payment_option-item input {
       -ms-flex-pack: start;
           justify-content: flex-start; }
   .mybooking-complete_extra-right .mybooking-complete_extra-price {
-    font-weight: 700; }
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--brand-primary); }
   .mybooking-complete_extra-right .counter .center {
     width: 150px;
     margin: 40px auto; }

@@ -91,7 +91,7 @@
 .mybooking-reservation_detail-date {
   font-weight: 900;
   font-size: 14px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 
 .mybooking-reservation_detail-duration {
@@ -109,9 +109,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .mybooking-detail_product-item--multi {
@@ -203,11 +201,10 @@
   border-bottom: 1px solid #ddd;
   list-style: none;
   .mybooking-detail_deposit-name {
-    width: 70%;
     font-weight: 400;
   }
   .mybooking-detail_deposit-price {
-    font-weight: 900;
+    font-weight: 400;
   }  
 }
 
@@ -218,17 +215,20 @@
   padding: 0.5rem 0;
   font-size: 14px;
   font-weight: 700;
+  /*
   .mybooking-detail_deposit-name {
     width: 60%; 
   }
+  */
 }
 
 .mybooking-detail_deposit-item:last-of-type {
   border: none;
   .mybooking-detail_deposit-name,
   .mybooking-detail_deposit-price {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #333;
+    font-weight: 900;
   }  
 }
 

@@ -292,7 +292,7 @@
                 <div class="mybooking-complete_extra-text"><%=extra.description%></div>
               </div>
               <div class="mybooking-complete_extra-right">
-                <p class="extras-price"><%= configuration.formatCurrency(extra.unit_price)%></p>
+                <p class="mybooking-complete_extra-price"><%= configuration.formatCurrency(extra.unit_price)%></p>
                 <% if (extra.available) { %>
                   <% if (extra.max_quantity > 1) { %>
                     <div class="input-group input-group-sm" style="width:100px;">
