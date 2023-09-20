@@ -141,9 +141,13 @@
   <% if (configuration.selectFamily) { %>
     <% if (not_hidden_family_id) { %>
       <div class="flex-form-horizontal-box family" style="display: none">
-        <label class="mb-0" for="family_id"><?php echo esc_html( MyBookingEngineContext::getInstance()->getFamily() ) ?></label>
-        <div class="flex-form-horizontal-item">
-          <select name="family_id" id="family_id" class="form-control"></select>
+        <div class="flex-form-group ml-0">
+          <div class="flex-form-box">
+            <label for="family_id"><?php echo esc_html( MyBookingEngineContext::getInstance()->getFamily() ) ?></label>
+            <div class="flex-form-horizontal-item">
+              <select name="family_id" id="family_id" class="form-control"></select>
+            </div>
+          </div>
         </div>
       </div>
     <% } else { %>

@@ -25632,7 +25632,7 @@ button,
 /*
 *  VENDOR FORMS
 */
-.flex-form-group-wrapper select {
+.flex-form-group-wrapper select, .flex-form-group select {
   border-radius: var(--flex-form-control-border-radius);
   padding: 0 0.8rem;
   text-indent: 1px;
@@ -25644,7 +25644,7 @@ button,
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none; }
-  .flex-form-group-wrapper select:focus {
+  .flex-form-group-wrapper select:focus, .flex-form-group select:focus {
     outline: none;
     -webkit-box-shadow: none;
             box-shadow: none;

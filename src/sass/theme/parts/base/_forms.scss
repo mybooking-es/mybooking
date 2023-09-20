@@ -7,7 +7,7 @@
 */
 
 // Flex-form we use them in form selector and in modify forms
-.flex-form-group-wrapper {
+.flex-form-group-wrapper, .flex-form-group {
   select {
     border-radius: var(--flex-form-control-border-radius);
     padding: 0 0.8rem;

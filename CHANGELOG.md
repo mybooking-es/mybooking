@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.8] - 2023.09.20
+
+### New
+
+- Renting : Complete - show summary in sidebar
+
+### Fixed
+
+- Contact : Fixed html with extra div that breaks designs
+
 ## [1.2.7] - 2023.08.08
 
 ### Fixed

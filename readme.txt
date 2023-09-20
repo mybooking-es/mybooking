@@ -40,6 +40,10 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 
 == Changelog ==
 
+= 1.2.8 =
+* Added: Renting - Complete step summary sidebar
+* Fixed: Contact - HTML breaks designs
+
 = 1.2.7 =
 * Fixed: Renting - Extras availability
 
@@ -290,6 +294,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 1.2.8 =
+* Added: Renting - Complete step summary sidebar + Fixed contact HTML
 
 = 1.2.7 =
 * Fixed: Renting - Extras availability
