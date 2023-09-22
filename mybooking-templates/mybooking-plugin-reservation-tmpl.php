@@ -11,166 +11,6 @@
 ?>
 <!-- Reservation summary -->
 <script type="text/tmpl" id="script_reservation_summary">
-  <div class="product-detail-bg-color">
-      <% if (configuration.multipleProductsSelection) { %>
-        <div class="product-detail-container-several-products">
-          <div class="">
-            <small class="detail-text">
-              <?php echo esc_html_x( 'Reservation Id', 'renting_summary', 'mybooking') ?>
-            </small>
-            <h3><%=booking.id%></h3>
-          </div>
-          <!-- Delivery -->
-          <div>
-              <h5><?php echo esc_html_x('Delivery', 'renting_my_reservation', 'mybooking') ?></h5>
-              <ul>
-                <li><%=booking.date_from_full_format%> 
-                    <% if (configuration.rentDateSelector === 'date_from_duration' && booking.days == 0) { %>
-                       (<%=booking.time_from%> - <%=booking.time_to%>)
-                    <% } else if (configuration.timeToFrom) { %>
-                       <%=booking.time_from%>
-                    <% } %>
-                </li>
-                <% if (configuration.pickupReturnPlace) {%>
-                  <li><%=booking.pickup_place_customer_translation%></li>
-                <% } %>
-              </ul>
-          </div>
-          <!-- Collection -->
-          <% if (configuration.rentDateSelector === 'date_from_date_to' || configuration.pickupReturnPlace) { %>
-            <div>
-              <h5><?php echo esc_html_x('Collection', 'renting_my_reservation', 'mybooking') ?></h5>
-              <ul>
-                <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
-                  <li><%=booking.date_to_full_format%> 
-                    <% if (configuration.timeToFrom) { %><%=booking.time_to%><% } %>
-                  </li>
-                <% } %>  
-                <% if (configuration.pickupReturnPlace) {%>
-                  <li><%=booking.return_place_customer_translation%></li>
-                <% } %>
-              </ul>
-            </div>
-          <% } %>
-          
-          <div class="table-responsive mt-5">
-            <table class="table product-detail-table table-borderless">
-              <thead>
-                <tr class="bg-gray-100">
-                  <th></th>
-                  <th scope="col"><?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?></th>
-                  <th scope="col" class="text-right"><?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?></th>
-                  <th scope="col" class="text-right">
-                    <?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?></th>
-                  <th scope="col" class="text-right">
-                    <?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?></th>
-                </tr>
-              </thead>
-              <tbody>
-                <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-                <tr>
-                  <td class="text-center text-md-left"><img class="img-fluid" style="max-width: 120px"
-                      src="<%=booking.booking_lines[idx].photo_medium%>"
-                      alt="">
-                  </td>
-                  <td data-label="<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>"
-                    class="align-middle"><%=booking.booking_lines[idx].item_description_customer_translation%></td>
-                  <td data-label="<?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>"
-                    class="align-middle text-right"><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost)%></td>
-                  <td data-label="<?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?>"
-                    class="align-middle text-right"><%=booking.booking_lines[idx].quantity%></td>
-                  <td data-label="<?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?>"
-                    class="align-middle text-right">
-                    <%=configuration.formatCurrency(booking.booking_lines[idx].item_cost)%></td>
-                </tr>
-                <% } %>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      <% } else { %>
-        <div class="product-detail-container">
-          <div class="product-detail-content">
-            <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-              <% var booking_line = booking.booking_lines[idx]; %>
-              <h2 class="product-name mb-3"><%=booking_line.item_description_customer_translation%></h2>
-              <!-- Optional external driver + driving license -->
-              <% if ((typeof booking.optional_external_driver !== '' &&
-                     booking.optional_external_driver) ||
-                    (typeof booking.item_driving_license_type_name !== '' &&
-                     booking.item_driving_license_type_name) ) { %>
-                <% if (typeof booking.optional_external_driver !== '' &&
-                      booking.optional_external_driver) { %>
-                  <span class="badge badge-secondary"><%=booking.optional_external_driver%></span>    
-                <% } %>
-                <% if (typeof booking.item_driving_license_type_name !== '' &&
-                      booking.item_driving_license_type_name) { %>
-                  <span class="badge badge-secondary"><%=booking.item_driving_license_type_name%></span>    
-                <% } %>
-              <% } %>
-
-              <% if (typeof booking.item_hired_info !== '' &&
-                      booking.item_hired_info) { %>
-                <p class="text-muted mt-2"><%=booking.item_hired_info%></p>
-              <% } %>
-
-              <small class="detail-text"><?php echo esc_html_x( 'Reservation Id', 'renting_my_reservation', 'mybooking') ?></small>
-              <h3> <%=booking.id%> </h3>
-
-              <!-- Delivery -->  
-              <% if (configuration.rentDateSelector === 'date_from_date_to' || configuration.pickupReturnPlace) { %>
-                <h5><?php echo esc_html_x('Delivery', 'renting_my_reservation', 'mybooking') ?></h5>
-              <% } %>
-              <ul>
-                <li>
-                    <%=booking.date_from_full_format%> 
-                    <% if (configuration.rentDateSelector === 'date_from_duration' && booking.days == 0) { %>
-                       (<%=booking.time_from%> - <%=booking.time_to%>)
-                    <% } else if (configuration.timeToFrom) { %>
-                       <%=booking.time_from%><% } %>
-                </li>
-                <% if (configuration.pickupReturnPlace) {%>
-                  <li><%=booking.pickup_place_customer_translation%></li>
-                <% } %>
-              </ul>
-
-              <!-- Collection -->
-              <% if (configuration.rentDateSelector === 'date_from_date_to' || configuration.pickupReturnPlace) { %>
-                <h5 class="mt-3"><?php echo esc_html_x('Collection', 'renting_my_reservation', 'mybooking') ?></h5>
-                <ul>
-                  <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
-                    <li><%=booking.date_to_full_format%> 
-                        <% if (configuration.timeToFrom) { %><%=booking.time_to%><% } %>
-                    </li>
-                  <% } %>
-                  <% if (configuration.pickupReturnPlace) {%>
-                    <li><%=booking.return_place_customer_translation%></li>
-                  <% } %>
-                </ul>
-              <% } %>  
-
-              <!-- Duration -->  
-              <% if (booking.days > 0) { %>
-                <p class="detail-text mt-2">
-                  <i class="fas fa-clock mr-1"></i><span><%=booking.days%>&nbsp;<?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?></span>
-                </p>
-              <% } else if (booking.hours > 0) { %>
-                <p class="detail-text mt-2">
-                  <i class="fas fa-clock mr-1"></i><span><%=booking.hours%>&nbsp;<?php echo esc_html_x('hour(s)', 'renting_my_reservation', 'mybooking') ?></span>
-                </p>
-              <% } %>
-
-            <% } %>
-          </div>
-          <div class="product-detail-image">
-            <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
-              <img class="img-fluid" src="<%=booking_line.photo_full%>" alt="">
-            <% } %>
-          </div>
-        </div>
-      <% } %>
-  </div>  
-
   <div class="container">
     <div class="row">
 
@@ -195,9 +35,171 @@
         
       <!-- Summary -->
       <div class="<% if (showReservationForm) { %>col-md-4<%} else { %>col-12 col-md-8 offset-md-2<% } %>">
-
         <div class="col process-section-box">
-          <h4 class="my-3"><?php echo esc_html_x( 'My reservation', 'renting_my_reservation', 'mybooking') ?></h4>
+
+          <% if (configuration.multipleProductsSelection) { %>
+            <div class="product-detail-container-several-products">
+              <div class="">
+                <small class="detail-text">
+                  <?php echo esc_html_x( 'Reservation Id', 'renting_summary', 'mybooking') ?>
+                </small>
+                <h3><%=booking.id%></h3>
+              </div>
+
+              <!-- Delivery -->
+              <div>
+                  <h5><?php echo esc_html_x('Delivery', 'renting_my_reservation', 'mybooking') ?></h5>
+                  <ul>
+                    <li><%=booking.date_from_full_format%> 
+                        <% if (configuration.rentDateSelector === 'date_from_duration' && booking.days == 0) { %>
+                          (<%=booking.time_from%> - <%=booking.time_to%>)
+                        <% } else if (configuration.timeToFrom) { %>
+                          <%=booking.time_from%>
+                        <% } %>
+                    </li>
+                    <% if (configuration.pickupReturnPlace) {%>
+                      <li><%=booking.pickup_place_customer_translation%></li>
+                    <% } %>
+                  </ul>
+              </div>
+
+              <!-- Collection -->
+              <% if (configuration.rentDateSelector === 'date_from_date_to' || configuration.pickupReturnPlace) { %>
+                <div>
+                  <h5><?php echo esc_html_x('Collection', 'renting_my_reservation', 'mybooking') ?></h5>
+                  <ul>
+                    <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
+                      <li><%=booking.date_to_full_format%> 
+                        <% if (configuration.timeToFrom) { %><%=booking.time_to%><% } %>
+                      </li>
+                    <% } %>  
+                    <% if (configuration.pickupReturnPlace) {%>
+                      <li><%=booking.return_place_customer_translation%></li>
+                    <% } %>
+                  </ul>
+                </div>
+              <% } %>
+              
+              <div class="table-responsive mt-5">
+                <table class="table product-detail-table table-borderless">
+                  <thead>
+                    <tr class="bg-gray-100">
+                      <th></th>
+                      <th scope="col"><?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?></th>
+                      <th scope="col" class="text-right"><?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?></th>
+                      <th scope="col" class="text-right">
+                        <?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?></th>
+                      <th scope="col" class="text-right">
+                        <?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
+                    <tr>
+                      <td class="text-center text-md-left"><img class="img-fluid" style="max-width: 120px"
+                          src="<%=booking.booking_lines[idx].photo_medium%>"
+                          alt="">
+                      </td>
+                      <td data-label="<?php echo esc_html( MyBookingEngineContext::getInstance()->getProduct() ) ?>"
+                        class="align-middle"><%=booking.booking_lines[idx].item_description_customer_translation%></td>
+                      <td data-label="<?php echo esc_html_x( 'Price', 'renting_complete', 'mybooking' ) ?>"
+                        class="align-middle text-right"><%=configuration.formatCurrency(booking.booking_lines[idx].item_unit_cost)%></td>
+                      <td data-label="<?php echo esc_html_x( 'Quantity', 'renting_complete', 'mybooking' ) ?>"
+                        class="align-middle text-right"><%=booking.booking_lines[idx].quantity%></td>
+                      <td data-label="<?php echo esc_html_x( 'Total', 'renting_complete', 'mybooking' ) ?>"
+                        class="align-middle text-right">
+                        <%=configuration.formatCurrency(booking.booking_lines[idx].item_cost)%></td>
+                    </tr>
+                    <% } %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          <% } else { %>
+
+            <div class="product-detail-container">
+              <div class="product-detail-content">
+                <% for (var idx=0; idx<booking.booking_lines.length; idx++) { %>
+                  <% var booking_line = booking.booking_lines[idx]; %>
+                  <img class="img-fluid" src="<%=booking_line.photo_full%>" alt="">
+                  <h2 class="product-name mb-3"><%=booking_line.item_description_customer_translation%></h2>
+                  <!-- Optional external driver + driving license -->
+                  <% if ((typeof booking.optional_external_driver !== '' &&
+                        booking.optional_external_driver) ||
+                        (typeof booking.item_driving_license_type_name !== '' &&
+                        booking.item_driving_license_type_name) ) { %>
+                    <% if (typeof booking.optional_external_driver !== '' &&
+                          booking.optional_external_driver) { %>
+                      <span class="badge badge-secondary"><%=booking.optional_external_driver%></span>    
+                    <% } %>
+                    <% if (typeof booking.item_driving_license_type_name !== '' &&
+                          booking.item_driving_license_type_name) { %>
+                      <span class="badge badge-secondary"><%=booking.item_driving_license_type_name%></span>    
+                    <% } %>
+                  <% } %>
+
+                  <% if (typeof booking.item_hired_info !== '' &&
+                          booking.item_hired_info) { %>
+                    <p class="text-muted mt-2"><%=booking.item_hired_info%></p>
+                  <% } %>
+
+                  <small class="detail-text"><?php echo esc_html_x( 'Reservation Id', 'renting_my_reservation', 'mybooking') ?></small>
+                  <h3> <%=booking.id%> </h3>
+
+                  <!-- Delivery -->  
+                  <% if (configuration.rentDateSelector === 'date_from_date_to' || configuration.pickupReturnPlace) { %>
+                    <h5><?php echo esc_html_x('Delivery', 'renting_my_reservation', 'mybooking') ?></h5>
+                  <% } %>
+                  <ul>
+                    <li>
+                        <%=booking.date_from_full_format%> 
+                        <% if (configuration.rentDateSelector === 'date_from_duration' && booking.days == 0) { %>
+                          (<%=booking.time_from%> - <%=booking.time_to%>)
+                        <% } else if (configuration.timeToFrom) { %>
+                          <%=booking.time_from%><% } %>
+                    </li>
+                    <% if (configuration.pickupReturnPlace) {%>
+                      <li><%=booking.pickup_place_customer_translation%></li>
+                    <% } %>
+                  </ul>
+
+                  <!-- Collection -->
+                  <% if (configuration.rentDateSelector === 'date_from_date_to' || configuration.pickupReturnPlace) { %>
+                    <h5 class="mt-3"><?php echo esc_html_x('Collection', 'renting_my_reservation', 'mybooking') ?></h5>
+                    <ul>
+                      <% if (configuration.rentDateSelector === 'date_from_date_to') { %>
+                        <li><%=booking.date_to_full_format%> 
+                            <% if (configuration.timeToFrom) { %><%=booking.time_to%><% } %>
+                        </li>
+                      <% } %>
+                      <% if (configuration.pickupReturnPlace) {%>
+                        <li><%=booking.return_place_customer_translation%></li>
+                      <% } %>
+                    </ul>
+                  <% } %>  
+
+                  <!-- Duration -->  
+                  <% if (booking.days > 0) { %>
+                    <p class="detail-text mt-2">
+                      <i class="fas fa-clock mr-1"></i><span><%=booking.days%>&nbsp;<?php echo esc_html( MyBookingEngineContext::getInstance()->getDuration() ) ?></span>
+                    </p>
+                  <% } else if (booking.hours > 0) { %>
+                    <p class="detail-text mt-2">
+                      <i class="fas fa-clock mr-1"></i><span><%=booking.hours%>&nbsp;<?php echo esc_html_x('hour(s)', 'renting_my_reservation', 'mybooking') ?></span>
+                    </p>
+                  <% } %>
+                <% } %>
+              </div>
+            </div>
+          <% } %>
+
+          <hr>
+
+          <h4 class="ml-3">
+            <?php echo esc_html_x( 'My reservation', 'renting_my_reservation', 'mybooking') ?>
+          </h4>
+
           <!-- Products -->
           <ul class="list-group list-group-flush">
             <% for (var idx=0;idx<booking.booking_lines.length;idx++) { %>
