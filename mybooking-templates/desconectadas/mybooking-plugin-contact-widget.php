@@ -6,6 +6,7 @@
    *
    */
 ?>
+
 <section class="widget widget_mybooking_engine_contact">
   <form id="widget_contact_form" name="widget_contact_form" autocomplete="off">
 
