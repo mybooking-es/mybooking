@@ -28548,8 +28548,6 @@ select#cat {
 
 @media (min-width: 576px) {
   .flex-form-group:nth-child(2n) {
-    margin-left: 10px; }
-  .flex-form-group:last-child {
     margin-left: 10px; } }
 
 .flex-form-item {
