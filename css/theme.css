@@ -31106,3 +31106,70 @@ a.btn.btn-secondary.mybooking-read-more-link {
   background-color: var(--white);
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06); }
+
+:root {
+  /* Color palette */
+  --mb-info-color: var(--brand-primary);
+  /* Theme compat */
+  /* Structure */
+  --mb-process-page-background: var(--process-container-bg);
+  /* Theme compat */
+  --mb-page-container-max-width: 1140px;
+  /* Theme compat */
+  /* Buttons - Gets third party theme colors and reset for Mybooking theme compatibility */
+  --mb-button-bg-color: var(--btn-bg-color);
+  /* Theme compat */
+  --mb-button-border-color: var(--btn-border-color);
+  /* Theme compat */
+  --mb-button-bg-color-hover: var(--btn-bg-color-hover);
+  /* Theme compat */
+  --mb-button-border-color-hover: var(--btn-border-color-hover);
+  /* Theme compat */
+  --mb-button-color: var(--white);
+  /* Theme compat */
+  /* Selector form */
+  --mb-selector-label-color: var(--selector-label-color);
+  /* Theme compat */
+  --mb-selector-background: var(--home-selector-bg);
+  /* Theme compat */
+  --mb-selector-border-color: none;
+  /* Theme compat */
+  --mb-selector-button-bg-color: var(--selector-btn-bg-color);
+  /* Theme compat */
+  --mb-selector-button-border-color: var(--selector-btn-bg-color);
+  /* Theme compat */
+  --mb-selector-button-bg-color-hover: var(--selector-btn-hover-bg-color);
+  /* Theme compat */
+  --mb-selector-button-color-hover: var(--white);
+  /* Theme compat */
+  --mb-selector-button-border-color-hover: var( --selector-btn-hover-border-color);
+  /* Theme compat */ }
+
+.mybooking-selector form label {
+  margin-bottom: 0.5rem;
+  /* Theme compat */ }
+
+.mybooking-selector_vertical .mybooking-selector_button,
+.mybooking-selector_button {
+  border: 1px solid var(--mb-selector-button-border-color);
+  /* Theme compat */
+  background-color: var(--mb-selector-button-bg-color) !important;
+  /* Theme compat */ }
+
+.mybooking-selector_vertical .mybooking-selector_button:hover,
+.mybooking-selector_button:hover {
+  background-color: var(--mb-selector-button-bg-color-hover) !important;
+  /* Theme compat */
+  color: var(--mb-selector-button-color-hover) !important;
+  /* Theme compat */
+  border-color: var(--mb-selector-button-border-color-hover) !important;
+  /* Theme compat */ }
+
+.mb-button:not(.icon) {
+  background-color: var(--mb-button-bg-color);
+  border-color: var(--mb-button-border-color);
+  color: var(--mb-button-color); }
+
+.mb-button:hover:not(.icon) {
+  background-color: var(--mb-button-bg-color-hover);
+  border-color: var(--mb-button-border-color-hover); }
