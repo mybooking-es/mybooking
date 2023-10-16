@@ -5,6 +5,7 @@
    * This template can be overridden by copying it to yourtheme/mybooking-templates/mybooking-plugin-wizard-widget.php
    */
 ?>
+
 <!-- Search form -->
 <section class="section">
   <div class="wizard-selector container">
