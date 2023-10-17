@@ -25,7 +25,8 @@ $mybooking_includes = array(
   '/inc/post-functions.php',                        // Custom Post functions.
   '/inc/site-functions.php',                        // Custom Site functions.
   '/inc/comments.php',                              // Custom Comment functions.
-  '/inc/typography.php'                             // Typography
+  '/inc/typography.php',                            // Typography
+  '/inc/mybooking-engine-hooks.php'
 );
 
 foreach ( $mybooking_includes as $mybooking_file ) {
