@@ -28744,9 +28744,7 @@ button.another_return_place_group_close {
 #time_to-error {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end; }
+  display: inline-flex; }
 
 .custom-delivery {
   background-image: none !important;
@@ -31131,6 +31129,8 @@ a.btn.btn-secondary.mybooking-read-more-link {
   --mb-selector-label-color: var(--selector-label-color);
   /* Theme compat */
   --mb-selector-background: var(--home-selector-bg);
+  /* Theme compat */
+  --mb-selector-button-color: var(--selector-btn-color);
   /* Theme compat */
   --mb-selector-border-color: none;
   /* Theme compat */
