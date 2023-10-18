@@ -31145,6 +31145,9 @@ a.btn.btn-secondary.mybooking-read-more-link {
   --mb-selector-button-border-color-hover: var( --selector-btn-hover-border-color);
   /* Theme compat */ }
 
+.mybooking-page-container {
+  padding-top: 0; }
+
 .mybooking-selector form label {
   margin-bottom: 0.5rem;
   /* Theme compat */ }
