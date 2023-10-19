@@ -31146,7 +31146,7 @@ a.btn.btn-secondary.mybooking-read-more-link {
   /* Theme compat */ }
 
 .mybooking-page-container {
-  padding-top: 0; }
+  padding-top: 0.2rem; }
 
 .mybooking-selector form label {
   margin-bottom: 0.5rem;
