@@ -1,4 +1,8 @@
-<!-- Summary Sticky -->
+<?php
+  /** 
+   * The Template for showing the sticky bar in renting choose product
+   */
+?>
 <script type="text/tmpl" id="script_reservation_summary">
   <div class="reservation-summary-sticky-wrapper">
 
