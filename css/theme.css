@@ -28162,7 +28162,8 @@ a.dropdown-item {
     left: 10px;
     border-radius: 3px;
     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); } }
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: block; } }
 
 .mybooking-testimonial_container {
   display: -webkit-box;
