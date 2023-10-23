@@ -28189,7 +28189,7 @@ a.dropdown-item {
 
 @media (min-width: 575.98px) {
   .mybooking-testimonial_content {
-    width: 93%; } }
+    width: 90%; } }
 
 .mybooking-testimonial_text {
   font-size: 1.3em;
@@ -28218,11 +28218,11 @@ a.dropdown-item {
   margin-right: 1rem; }
 
 .mybooking-testimonial_avatar {
-  width: 30%; }
+  width: 100%; }
 
 @media (min-width: 575.98px) {
   .mybooking-testimonial_avatar {
-    width: 7%; } }
+    width: 10%; } }
 
 .vehicle_item {
   margin-bottom: 1rem;
