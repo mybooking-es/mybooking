@@ -46,7 +46,7 @@
       </div>
 
       <!-- Modify transfer -->
-      <button id="mybooking_transfer_modify_reservation_button" class="modify-button">
+      <button id="mybooking_transfer_modify_reservation_button" class="modify-button js-modify-reservation-button">
         <i class="d-none d-md-inline mr-2 fas fa-pen"></i>
         <?php echo esc_html_x( 'Edit', 'transfer_choose_vehicle', 'mybooking' ) ?>
       </button>

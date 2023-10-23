@@ -57,7 +57,7 @@
         <div class="complete-summary-row">
           <div class="complete-buttons-wrapper">
             <% if (shopping_cart.engine_modify_dates) { %>
-              <button class="complete-button" id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"><i class="fas fa-pen mr-2"></i>
+              <button class="complete-button js-modify-reservation-button" id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal"><i class="fas fa-pen mr-2"></i>
                 <?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
               </button>
             <% } %>
@@ -117,7 +117,7 @@
           <div class="complete-summary-row">
             <div class="complete-buttons-wrapper">
               <% if (shopping_cart.engine_modify_dates) { %>
-                <button class="complete-button" id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal">
+                <button class="complete-button js-modify-reservation-button" id="modify_reservation_button" data-toggle="modal" data-target="#modify_reservation_modal">
                   <i class="fas fa-pen mr-2"></i><?php echo esc_html_x( 'Edit', 'renting_complete', 'mybooking' ) ?>
                 </button>
               <% } %>
