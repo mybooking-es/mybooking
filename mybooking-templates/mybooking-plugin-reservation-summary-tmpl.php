@@ -39,7 +39,7 @@
             </div>
             <div class="modify-button-wrapper push-to-the-right">
               <button id="modify_reservation_button"
-                class="modify-button"><i
+                class="modify-button js-modify-reservation-button"><i
                   class="d-none d-md-inline mr-2 fas fa-pen"></i>
                   <?php echo esc_html_x( 'Edit', 'renting_choose_product', 'mybooking' ) ?>
               </button>
@@ -94,7 +94,7 @@
 
             <div class="modify-button-wrapper">
               <button id="modify_reservation_button"
-                class="modify-button"><i class="d-none d-lg-inline mr-2 fas fa-pen"></i>
+                class="modify-button js-modify-reservation-button"><i class="d-none d-lg-inline mr-2 fas fa-pen"></i>
                 <?php echo esc_html_x( 'Edit', 'renting_choose_product', 'mybooking' ) ?>
               </button>
             </div>
