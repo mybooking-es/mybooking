@@ -454,15 +454,6 @@ pre {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
-  @media (min-width: 576px) {
-    .container {
-      max-width: 540px; } }
-  @media (min-width: 768px) {
-    .container {
-      max-width: 720px; } }
-  @media (min-width: 992px) {
-    .container {
-      max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px; } }
@@ -31018,7 +31009,7 @@ a.btn.btn-secondary.mybooking-read-more-link {
   background-color: var(--white);
   border: 1px solid var(--brand-primary); }
   a.btn.btn-secondary.mybooking-read-more-link:hover {
-    color: var(--white);
+    color: var(--white) !important;
     background-color: var(--brand-primary-dark);
     border: 1px solid var(--brand-primary-dark); }
 
