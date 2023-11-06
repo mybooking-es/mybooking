@@ -30554,7 +30554,7 @@ input[name=return_date].form-control[readonly] {
 
 @media (min-width: 575.98px) {
   .mybooking-transfer_choose .reservation-summary-sticky-wrapper {
-    padding: 1rem 0; } }
+    padding: 1rem 0.5rem; } }
 
 .mybooking-transfer_choose .reservation-summary-sticky-wrapper ul {
   padding: 0;
