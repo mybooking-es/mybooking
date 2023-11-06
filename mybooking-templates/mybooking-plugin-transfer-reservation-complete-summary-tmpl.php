@@ -53,13 +53,6 @@
           <span><i class="fa fa-baby"></i>&nbsp;<%=shopping_cart.number_of_infants%></span>
         </div>
       </div>
-
-      <!-- Modify transfer -->
-      <button id="mybooking_transfer_modify_reservation_button" class="modify-button js-modify-reservation-button">
-        <i class="d-none d-md-inline mr-2 fas fa-pen"></i>
-        <?php echo esc_html_x( 'Edit', 'transfer_checkout', 'mybooking' ) ?>
-      </button>
-
     </div>
   </div>
 </script>
