@@ -450,8 +450,8 @@ pre {
 
 .container {
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 1200px) {
@@ -460,8 +460,8 @@ pre {
 
 .container-fluid {
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
 
@@ -471,8 +471,8 @@ pre {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -10px;
-  margin-left: -10px; }
+  margin-right: -15px;
+  margin-left: -15px; }
 
 .no-gutters {
   margin-right: 0;
@@ -490,8 +490,8 @@ pre {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 15px;
+  padding-left: 15px; }
 
 .col {
   -ms-flex-preferred-size: 0;
@@ -3845,15 +3845,15 @@ input[type="button"].btn-block {
       -ms-flex-direction: column;
           flex-direction: column; }
   .card-deck .card {
-    margin-bottom: 10px; }
+    margin-bottom: 15px; }
   @media (min-width: 576px) {
     .card-deck {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
               flex-flow: row wrap;
-      margin-right: -10px;
-      margin-left: -10px; }
+      margin-right: -15px;
+      margin-left: -15px; }
       .card-deck .card {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3865,9 +3865,9 @@ input[type="button"].btn-block {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        margin-right: 10px;
+        margin-right: 15px;
         margin-bottom: 0;
-        margin-left: 10px; } }
+        margin-left: 15px; } }
 
 .card-group {
   display: -webkit-box;
@@ -3878,7 +3878,7 @@ input[type="button"].btn-block {
       -ms-flex-direction: column;
           flex-direction: column; }
   .card-group > .card {
-    margin-bottom: 10px; }
+    margin-bottom: 15px; }
   @media (min-width: 576px) {
     .card-group {
       -webkit-box-orient: horizontal;
@@ -8070,7 +8070,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 .wrapper {
-  padding: 20px 0; }
+  padding: 30px 0; }
 
 #wrapper-hero {
   padding: 0px !important; }
@@ -27566,7 +27566,7 @@ form.wp-block-search input[type=submit] {
   width: 100%; }
 
 .page_content {
-  padding: 3rem 0; }
+  padding: 3rem 1rem; }
 
 .home .page_content {
   padding: 0; }
@@ -27637,7 +27637,7 @@ form.wp-block-search input[type=submit] {
   position: absolute;
   top: -10rem; }
 
-.page_sidebar {
+.page_sidebar .page_inside {
   padding: 1rem;
   background-color: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 20px 0;
@@ -27663,7 +27663,14 @@ form.wp-block-search input[type=submit] {
     max-width: 100% !important;
     float: none;
     margin-top: -30vh;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem; } }
+
+@media (max-width: 992px) and (max-width: 575.98px) {
+  .mybooking_page .page_sidebar {
+    padding-left: 0;
+    padding-right: 0; } }
+
+@media (max-width: 992px) {
   .page_body {
     padding: 0; } }
 

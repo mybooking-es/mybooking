@@ -28,12 +28,12 @@ get_header(); ?>
         <div class="container" tabindex="-1">
           <div class="row">
             <div class="col-md-5 order-md-last order-sm-first page_sidebar">
-
-              <h1 class="page_title"><?php the_title(); ?></h1>
-              <?php if ( is_active_sidebar( 'mybooking_page_sidebar' ) ) : ?>
-                <?php dynamic_sidebar( 'mybooking_page_sidebar' ); ?>
-              <?php endif; ?>
-
+              <div class="page_inside">
+                <h1 class="page_title"><?php the_title(); ?></h1>
+                <?php if ( is_active_sidebar( 'mybooking_page_sidebar' ) ) : ?>
+                  <?php dynamic_sidebar( 'mybooking_page_sidebar' ); ?>
+                <?php endif; ?>
+              </div>
             </div>
             <div class="col-md-6 page_body">
 
