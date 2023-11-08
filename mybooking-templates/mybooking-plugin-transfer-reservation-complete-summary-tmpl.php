@@ -53,6 +53,8 @@
           <span><i class="fa fa-baby"></i>&nbsp;<%=shopping_cart.number_of_infants%></span>
         </div>
       </div>
+
+      <div></div>
     </div>
   </div>
 </script>
