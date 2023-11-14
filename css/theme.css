@@ -30256,7 +30256,8 @@ label.mybooking-payment_option-item input {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 1140px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 1rem; }
 
 .reservation-summary_pickup_place {
   color: var(--sticky-bar-color);
