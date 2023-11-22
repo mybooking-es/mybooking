@@ -42,7 +42,7 @@
 }
 
 /* Mybooking Contact Widget */
-.widget_mybooking_engine_contact input {
+.widget_mybooking_engine_contact input:not([type=checkbox]):not([type=radio]):not([type=submit]) {
 	width: 100%;
 	margin-bottom: 10px;
 }

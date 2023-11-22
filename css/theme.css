@@ -28286,7 +28286,7 @@ a.dropdown-item {
   border: 1px solid #ccc; }
 
 /* Mybooking Contact Widget */
-.widget_mybooking_engine_contact input {
+.widget_mybooking_engine_contact input:not([type=checkbox]):not([type=radio]):not([type=submit]) {
   width: 100%;
   margin-bottom: 10px; }
 
@@ -31015,7 +31015,8 @@ button.mybooking-popup_close {
 a.btn.btn-secondary.mybooking-read-more-link {
   color: var(--brand-primary);
   background-color: var(--white);
-  border: 1px solid var(--brand-primary); }
+  border: 1px solid var(--brand-primary);
+  border-color: var(--brand-primary) !important; }
   a.btn.btn-secondary.mybooking-read-more-link:hover {
     color: var(--white) !important;
     background-color: var(--brand-primary-dark);

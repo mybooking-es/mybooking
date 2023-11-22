@@ -33,6 +33,7 @@ a.btn.btn-secondary.mybooking-read-more-link {
   color: var(--brand-primary);
   background-color: var(--white);
   border: 1px solid var(--brand-primary);
+  border-color: var(--brand-primary)!important;
   &:hover {
     color: var(--white)!important;
     background-color: var(--brand-primary-dark);
