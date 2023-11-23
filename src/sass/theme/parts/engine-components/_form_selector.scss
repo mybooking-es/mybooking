@@ -260,31 +260,24 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
+  gap: 0.5rem;
   background-color: var(--selector-sticky-bg) !important;
+  border-radius: 10px;
   position: fixed;
-  padding: 10px 10px 0 10px;
+  padding: 1rem;
   z-index: 10000;
   min-width: 100% !important; // Force always 100%
   max-width: 100% !important; // Force always 100%
   width: 100% !important; // Force always 100%
   left: 0;
   top: 0;
-  // Form controls wrapper : Force place - date - time in a row
-  .flex-form-group-wrapper {
-    flex-direction: row !important;
-    padding-bottom: 1rem;
-  }
   // Form group
-  .flex-form-group {
+  .mybooking-selector_group {
     flex-direction: row;
   }
-  .flex-form-group:nth-child(2n) {
-    margin-left: 10px !important;
-  }
-  // Search button container
-  .flex-form-box:last-child {
-    margin-left: 10px;
-    flex-grow: 1;
+
+  .mybooking-selector_button-box label {
+    display: block;
   }
   // Flex-form-sticky > Search button
   .btn {
@@ -301,25 +294,11 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
     }
   }
 
-  // Date input
-  input.hasDatepicker {
-    max-width: 130px;
-  }
   // Labels
   label {
     font-size: 13px;
     color: var(--selector-sticky-labels-color);
   }
-}
-
-// Stick inline search form => no max width for date
-.flex-form-sticky {
- .flex-form-group-wrapper-inline {
-   // Date input
-   input.hasDatepicker {
-     max-width: inherit;
-   }
- }
 }
 
 .pickup_place_group,
