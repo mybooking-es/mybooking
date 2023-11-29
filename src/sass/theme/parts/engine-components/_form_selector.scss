@@ -306,20 +306,6 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   flex-direction: column;
 }
 
-// Solves form close button displacement
-button.widget_another_pickup_place_group_close,
-button.widget_another_return_place_group_close,
-button.another_pickup_place_group_close,
-button.another_return_place_group_close {
-  position: absolute;
-  right: 12px;
-  top: 6px;
-  background: transparent;
-  i {
-    color: var(--gray-600);
-  }
-}
-
 .another_pickup_place_group input {
   border-right: 1px solid var(--error) !important  ;
 }
