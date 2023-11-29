@@ -28663,10 +28663,9 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   border-radius: 10px;
   position: fixed;
   padding: 1rem;
+  margin: 1rem;
   z-index: 10000;
-  min-width: 100% !important;
   max-width: 100% !important;
-  width: 100% !important;
   left: 0;
   top: 0; }
   .flex-form-sticky .mybooking-selector_group {
@@ -28691,6 +28690,11 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   .flex-form-sticky label {
     font-size: 13px;
     color: var(--selector-sticky-labels-color); }
+
+.flex-form-sticky .mybooking-selector_family,
+.flex-form-sticky .mybooking-selector_driver_age,
+.flex-form-sticky .mybooking-selector_promo {
+  display: none; }
 
 .pickup_place_group,
 .return_place_group {

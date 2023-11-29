@@ -265,10 +265,9 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   border-radius: 10px;
   position: fixed;
   padding: 1rem;
+  margin: 1rem;
   z-index: 10000;
-  min-width: 100% !important; // Force always 100%
   max-width: 100% !important; // Force always 100%
-  width: 100% !important; // Force always 100%
   left: 0;
   top: 0;
   // Form group
@@ -299,6 +298,13 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
     font-size: 13px;
     color: var(--selector-sticky-labels-color);
   }
+}
+
+// Remove footer row fields from sticky selector
+.flex-form-sticky .mybooking-selector_family,
+.flex-form-sticky .mybooking-selector_driver_age,
+.flex-form-sticky .mybooking-selector_promo {
+  display: none;
 }
 
 .pickup_place_group,
