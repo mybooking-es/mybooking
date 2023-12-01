@@ -11514,7 +11514,7 @@ mybooking.stickyFormSelector = {
             $("#home-header_content_container").removeClass(
               "home-header_content_container_sticky"
             );
-          } else if ($(window).scrollTop() > height) {
+          } else if ($(window).scrollTop() > height && $('#driver_age_rule_id').length === 0) {
             $("#form-selector").addClass("flex-form-sticky");
             $("#home-header_content_container").addClass(
               "home-header_content_container_sticky"

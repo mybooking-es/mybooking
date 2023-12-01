@@ -259,7 +259,8 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
 .flex-form-sticky {
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
+  align-items: flex-start;
+  justify-content: center;
   gap: 0.5rem;
   background-color: var(--selector-sticky-bg) !important;
   border-radius: 10px;
@@ -267,12 +268,13 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   padding: 1rem;
   margin: 1rem;
   z-index: 10000;
-  max-width: 100% !important; // Force always 100%
   left: 0;
+  right: 0;
   top: 0;
   // Form group
   .mybooking-selector_group {
     flex-direction: row;
+    width: 100%;
   }
 
   .mybooking-selector_button-box label {
@@ -302,7 +304,6 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
 
 // Remove footer row fields from sticky selector
 .flex-form-sticky .mybooking-selector_family,
-.flex-form-sticky .mybooking-selector_driver_age,
 .flex-form-sticky .mybooking-selector_promo {
   display: none;
 }
