@@ -1,6 +1,10 @@
 <?php
   /** 
    * The Template for showing the sticky bar in transfer choose product
+   * 
+   * @phpcs:disable PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPOpenTagFound
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPShortOpenTagFound 
    */
 ?>
 <script type="text/tmpl" id="script_transfer_reservation_summary">
