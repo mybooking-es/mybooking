@@ -3,6 +3,10 @@
    * The Template for showing the sticky bar in transfer complete
    * It can not reuse mybooking-plugin-transfer-reservation-summary-tmpl.php because of the
    * script Id that is different.
+   * 
+   * @phpcs:disable PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPOpenTagFound
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPShortOpenTagFound 
    */
 ?>
 <script type="text/tmpl" id="script_transfer_reservation_summary_sticky">

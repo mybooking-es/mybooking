@@ -3,6 +3,10 @@
    * The Template for showing the sticky bar in renting complete
    * It can not reuse mybooking-plugin-reservation-summary-tmpl.php because of the
    * script Id that is different.
+   * 
+   * @phpcs:disable PHPCompatibility.Miscellaneous.RemovedAlternativePHPTags.MaybeASPOpenTagFound 
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPOpenTagFound
+   * @phpcs:disable Generic.PHP.DisallowAlternativePHPTags.MaybeASPShortOpenTagFound   
    */
 ?>
 <script type="text/tmpl" id="script_reservation_summary_sticky">
