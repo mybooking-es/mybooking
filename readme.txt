@@ -4,8 +4,8 @@ Contributors:       hectorasencio, marcelreig, juanmiqueo
 Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
-Tested up to:       6.2
-Stable tag:         1.2.8
+Tested up to:       6.4
+Stable tag:         2.0.0.rc1
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,9 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 2.0.0 =
+* Fixed: Removed plugin overriden templates
 
 = 1.2.8 =
 * Added: Renting - Complete step summary sidebar
@@ -294,6 +297,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 2.0.0 =
+* Fixed: Removed plugin overriden templates
 
 = 1.2.8 =
 * Added: Renting - Complete step summary sidebar + Fixed contact HTML

@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0] - 2023.12.20
+
+### Fixed
+
+- Remove the plugin overriden templates
+
 ## [1.2.8] - 2023.09.20
 
 ### New
