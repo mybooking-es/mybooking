@@ -184,6 +184,7 @@ textarea.form-control {
 .form-row {
   display: flex;
   flex-wrap: wrap;
+  min-width: 100%;
   margin-right: -$form-grid-gutter-width / 2;
   margin-left: -$form-grid-gutter-width / 2;
 
@@ -194,6 +195,10 @@ textarea.form-control {
   }
 }
 
+.form-row > .form-row {
+  margin-right: 0;
+  margin-left: 0;
+}
 
 // Checkboxes and radios
 //

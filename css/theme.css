@@ -1707,12 +1707,17 @@ textarea.form-control {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  min-width: 100%;
   margin-right: -5px;
   margin-left: -5px; }
   .form-row > .col,
   .form-row > [class*="col-"] {
     padding-right: 5px;
     padding-left: 5px; }
+
+.form-row > .form-row {
+  margin-right: 0;
+  margin-left: 0; }
 
 .form-check {
   position: relative;
