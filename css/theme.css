@@ -28671,7 +28671,7 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   left: 0;
   right: 0;
   top: 0; }
-  .flex-form-sticky .mybooking-selector_group {
+  .flex-form-sticky .mybooking-selector_group:not(.mybooking-selector_footer) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -30459,8 +30459,7 @@ label.mybooking-payment_option-item input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 10px;
-  background-color: rgba(0, 0, 0, 0.2); }
+  margin-top: 10px; }
 
 .complete-summary-price-wrapper {
   display: -webkit-box;
@@ -30521,8 +30520,7 @@ label.mybooking-payment_option-item input {
   .complete-summary-row {
     border-top: none;
     padding: 10px 0 0 10px;
-    margin-top: 0;
-    background-color: var(--brand-primary); }
+    margin-top: 0; }
   .complete-button {
     border-left: none;
     height: auto;

@@ -272,7 +272,7 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   right: 0;
   top: 0;
   // Form group
-  .mybooking-selector_group {
+  .mybooking-selector_group:not(.mybooking-selector_footer) {
     flex-direction: row;
     width: 100%;
   }
