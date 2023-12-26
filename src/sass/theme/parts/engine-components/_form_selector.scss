@@ -272,7 +272,7 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   right: 0;
   top: 0;
   // Form group
-  .mybooking-selector_group:not(.mybooking-selector_footer) {
+  .mybooking-selector_group {
     flex-direction: row;
     width: 100%;
   }
@@ -299,6 +299,10 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   label {
     font-size: 13px;
     color: var(--selector-sticky-labels-color);
+  }
+} @media (max-width: 1200px) {
+  .flex-form-sticky:has(:nth-child(5)) {
+    display: none;
   }
 }
 
