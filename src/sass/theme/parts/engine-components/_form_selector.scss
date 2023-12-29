@@ -274,7 +274,7 @@ input[name=date_to].form-control[readonly]:not(input[disabled=disabled]) {
   // Form group
   .mybooking-selector_group {
     flex-direction: row;
-    width: 100%;
+    width: auto;
   }
 
   .mybooking-selector_button-box label {
