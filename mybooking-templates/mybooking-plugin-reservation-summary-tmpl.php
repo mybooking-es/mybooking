@@ -19,13 +19,11 @@
                           shopping_cart.simple_location_name  )  { %>
                 <div class="reservation-summary_pickup_place">
                   <span class="overflow-ellipsis">
-                    <% if ( shopping_cart.rental_location_name ) { %>
-                      <%=shopping_cart.rental_location_name%>
-                    <% } %>
                     <% if ( shopping_cart.pickup_place_customer_translation ) { %>
                       <%=shopping_cart.pickup_place_customer_translation%>
-                    <% } %>
-                    <% if ( shopping_cart.simple_location_name ) { %>
+                    <% } else if ( shopping_cart.rental_location_name ) { %>
+                      <%=shopping_cart.rental_location_name%>
+                    <% } else if ( shopping_cart.simple_location_name ) { %>
                       <%=shopping_cart.simple_location_name%>
                     <% } %>
                   </span>
@@ -72,13 +70,11 @@
                         shopping_cart.simple_location_name  )  { %>
               <div class="reservation-summary_pickup_place">
                 <span class="overflow-ellipsis">
-                  <% if ( shopping_cart.rental_location_name ) { %>
-                    <%=shopping_cart.rental_location_name%>
-                  <% } %>
                   <% if ( shopping_cart.pickup_place_customer_translation ) { %>
                     <%=shopping_cart.pickup_place_customer_translation%>
-                  <% } %>
-                  <% if ( shopping_cart.simple_location_name ) { %>
+                  <% } else if ( shopping_cart.rental_location_name ) { %>
+                    <%=shopping_cart.rental_location_name%>
+                  <% } else if ( shopping_cart.simple_location_name ) { %>
                     <%=shopping_cart.simple_location_name%>
                   <% } %>
                 </span>
