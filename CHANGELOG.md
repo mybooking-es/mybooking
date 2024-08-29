@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.1] - 2024.08.29
+
+### Fixed
+
+- Form label error style
+
 ## [2.0.0] - 2023.12.20
 
 ### Fixed
