@@ -1,0 +1,40 @@
+/**
+*   TARIFF SELECTOR
+*   ---------------
+*
+* 	@version 0.0.1
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 2.0.2
+*/
+
+.mybooking-tariff-card {
+  border: 2px solid var(--mb-border-color);
+  background: var(--body-bg);
+}
+
+.mybooking-tariff-card:hover {
+  border-color: var(--brand-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.mybooking-tariff-card--active {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.mybooking-tariff-card__name {
+  color: var(--brand-primary);
+}
+
+.mybooking-tariff-card__description {
+  color: var(--body-color);
+}
+
+.mybooking-tariff-details-modal__title {
+  color: var(--brand-primary);
+}
+
+.mybooking-tariff-selector--mode-compact .mybooking-tariff-card__name {
+  color: var(--body-color);
+}

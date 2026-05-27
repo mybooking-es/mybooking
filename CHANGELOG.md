@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.2] - 2026.05.25
+
+### Added
+
+- Styles for detailed prices in calendar widget
+
 ## [2.0.1] - 2024.08.29
 
 ### Fixed

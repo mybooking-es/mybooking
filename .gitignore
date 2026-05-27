@@ -20,3 +20,9 @@ languages/*.pot~
 .DS_Store
 **/.DS_Store
 gulpenv.json
+
+# Agent interaction files (local context only — do not push to shared repo)
+CLAUDE.md
+docs/
+memory/
+.vscode/

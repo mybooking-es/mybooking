@@ -25097,10 +25097,13 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   width: 100%; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -30754,6 +30757,41 @@ h2.mybooking-product_calendar-date-range {
 
 input.mybooking-product_calendar-not_available_turn + span.mybooking-product_calendar-not_available_turn {
   color: var(--error); }
+
+/**
+*   TARIFF SELECTOR
+*   ---------------
+*
+* 	@version 0.0.1
+*   @package WordPress
+*   @subpackage Mybooking WordPress Theme
+*   @since Mybooking WordPress Theme 2.0.2
+*/
+.mybooking-tariff-card {
+  border: 2px solid var(--mb-border-color);
+  background: var(--body-bg); }
+
+.mybooking-tariff-card:hover {
+  border-color: var(--brand-primary);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+
+.mybooking-tariff-card--active {
+  border-color: var(--brand-primary);
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); }
+
+.mybooking-tariff-card__name {
+  color: var(--brand-primary); }
+
+.mybooking-tariff-card__description {
+  color: var(--body-color); }
+
+.mybooking-tariff-details-modal__title {
+  color: var(--brand-primary); }
+
+.mybooking-tariff-selector--mode-compact .mybooking-tariff-card__name {
+  color: var(--body-color); }
 
 /**
 *   PROMOTION POPUP
