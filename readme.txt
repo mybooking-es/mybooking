@@ -4,8 +4,8 @@ Contributors:       hectorasencio, marcelreig, juanmiqueo
 Donate link:        https://mybooking.es/
 Tags:               e-commerce
 Requires at least:  5.2
-Tested up to:       6.6
-Stable tag:         2.0.1
+Tested up to:       7.0
+Stable tag:         2.0.2
 Requires PHP:       7.2
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -39,6 +39,9 @@ Characteristics:
 All of the theme settings are managed via the WordPress Customizer in the MyBooking Theme Settings.
 
 == Changelog ==
+
+= 2.0.2 =
+* Added : Styles for detailed prices in calendar widget 
 
 = 2.0.1 =
 * Fixed: Form label error style
@@ -300,6 +303,9 @@ All of the theme settings are managed via the WordPress Customizer in the MyBook
 * First release
 
 == Upgrade Notice ==
+
+= 2.0.2 =
+* Added : Styles for detailed prices in calendar widget 
 
 = 2.0.1 =
 * Fixed: Form label error style
